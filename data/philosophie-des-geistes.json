@@ -2,7 +2,7 @@
   "topic": {
     "id": "philosophie-des-geistes",
     "title": "Philosophie des Geistes",
-    "subtitle": "Was ist Bewusstsein? Von Descartes' Dualismus bis zum Hard Problem.",
+    "subtitle": "Vom Gespenst in der Maschine zur Architektur des Selbst.",
     "theme": {
       "accent": "oklch(0.44 0.13 240)",
       "accentSoft": "oklch(0.44 0.13 240 / 0.15)"
@@ -46,11 +46,19 @@
       "labelDir": "NW"
     },
     {
+      "id": "sprachanalytische-philosophie",
+      "label": "Sprachanalytische Philosophie",
+      "color": "oklch(0.38 0.09 215)",
+      "glyph": "§",
+      "gx": -315, "gy": -240,
+      "labelDir": "W"
+    },
+    {
       "id": "funktionalismus",
       "label": "Funktionalismus",
-      "color": "oklch(0.40 0.12 180)",
+      "color": "oklch(0.40 0.12 175)",
       "glyph": "⟳",
-      "gx": -200, "gy": -120,
+      "gx": -205, "gy": -70,
       "labelDir": "W"
     },
     {
@@ -58,7 +66,7 @@
       "label": "Qualia-Realismus",
       "color": "oklch(0.38 0.14 300)",
       "glyph": "◉",
-      "gx": 200, "gy": -220,
+      "gx": 205, "gy": -215,
       "labelDir": "NE"
     },
     {
@@ -126,6 +134,14 @@
       "labelDir": "S"
     },
     {
+      "id": "iit-theorie",
+      "label": "Integrierte Informationstheorie",
+      "color": "oklch(0.42 0.12 58)",
+      "glyph": "Φ",
+      "gx": 265, "gy": 165,
+      "labelDir": "SE"
+    },
+    {
       "id": "predictive-processing",
       "label": "Predictive Processing",
       "color": "oklch(0.42 0.10 90)",
@@ -143,9 +159,9 @@
       "schoolId": "substanzdualismus",
       "x": 88, "y": 75,
       "versions": {
-        "1": "Geist und Körper sind zwei völlig verschiedene Dinge. Das Denken beweist meine Existenz — Cogito ergo sum.",
-        "3": "Descartes trennt res cogitans (Geist) und res extensa (Materie) als zwei unabhängige Substanzen. Das Leib-Seele-Problem — wie interagieren sie? — entstand hier.",
-        "5": "Der kartesische Dualismus prägt die Intuition, dass subjektives Erleben kategorial verschieden von physischer Materie ist. Sein Interaktionsproblem (Zirbeldrüse als Kontaktstelle) bleibt das Urproblem der Philosophie des Geistes."
+        "1": "Begründer der modernen Geistphilosophie. Substanzdualismus: Geist (res cogitans) und Körper (res extensa) sind fundamental getrennte Substanzen. Das Cogito beweist meine Existenz selbst im radikalen Zweifel.",
+        "3": "Substanzdualismus trennt res cogitans (denkender, unausgedehnter Geist) und res extensa (ausgedehnter Körper). Das Cogito ist eine performative Einsicht: Selbst im Zweifel bleibt der Akt des Zweifelns als Denken bestehen. Die Q4-Zuordnung ist retrospektiv: Substanzdualismus ist keine Position auf der Reduktionismus-Achse, sondern eine ontologische Kategorie davor.",
+        "5": "Descartes' Dualismus ist der genetische Ausgangsort der gesamten Debatte. Jede materialistische Position der Folgegeneration positioniert sich ex negativo gegen ihn. Das Interaktionsproblem — wie interagieren zwei kategorial verschiedene Substanzen? — bleibt ungelöst und kehrt als 'Hard Problem' wieder."
       }
     },
     {
@@ -156,21 +172,22 @@
       "schoolId": "logischer-behaviorismus",
       "x": 18, "y": 65,
       "versions": {
-        "1": "Der Geist ist kein unsichtbarer Bewohner im Körper. Mentale Begriffe beschreiben Verhaltensweisen und Dispositionen, nicht innere Zustände.",
-        "3": "In 'The Concept of Mind' (1949) bezeichnet Ryle Descartes' Dualismus als Kategorienfehler — den 'Ghost in the Machine'. Mentale Sprache beschreibt Verhalten, nicht Seelenprozesse.",
-        "5": "Ryles Behaviorismus scheitert an phänomenalen Zuständen (qualia), die nicht restlos in Verhaltensdispositionen aufgehen. Dennoch beendete er den naiven Dualismus in der analytischen Philosophie."
+        "1": "Prägt die Formel vom 'Ghost in the Machine': Cartesianische Innenwelten sind Kategorienfehler. Mentale Begriffe bezeichnen Verhaltensdispositionen, keine inneren Zustände.",
+        "3": "'The Concept of Mind' (1949): Ryle entlarvt Descartes' Dualismus als kategorialen Fehler. Ordinary-language-Tradition in engem Wirkungszusammenhang mit Wittgenstein — Behaviorismus erbt vom Privatsprachenargument die Skepsis gegenüber Innenperspektivität.",
+        "5": "Ryles Behaviorismus scheitert an phänomenalen Zuständen (qualia), die sich nicht restlos in Verhaltensdispositionen auflösen lassen. Dennoch ist seine Wirkung bleibend: Er beendete den naiven Dualismus in der analytischen Philosophie und bereitete Dennetts Heterophänomenologie vor."
       }
     },
     {
-      "id": "putnam",
-      "name": "Hilary Putnam",
-      "lifespan": "1926–2016",
-      "firstLevel": 2,
-      "schoolId": "funktionalismus",
-      "x": 32, "y": 55,
+      "id": "wittgenstein",
+      "name": "Ludwig Wittgenstein",
+      "lifespan": "1889–1951",
+      "firstLevel": 1,
+      "schoolId": "sprachanalytische-philosophie",
+      "x": 12, "y": 75,
       "versions": {
-        "2": "Der Geist verhält sich zum Gehirn wie Software zur Hardware — Bewusstsein ist ein funktionales Muster, nicht an ein spezifisches Material gebunden.",
-        "4": "Putnams Multirealisierbarkeitsthese: Mentale Zustände können in verschiedenen physischen Systemen realisiert sein. Das ermöglichte KI-Theorie und Kognitionswissenschaft — später distanzierte er sich vom Funktionalismus selbst."
+        "1": "Das Privatsprachenargument: Eine notwendig private Sprache über innere Zustände ist begrifflich unmöglich — korrekter Gebrauch setzt öffentliche Kriterien voraus.",
+        "3": "Philosophische Untersuchungen §§243ff. Das Privatsprachenargument ist das sprachphilosophische Scharnier zwischen Cartesianismus und analytischer Geistphilosophie: Es zeigt, dass mentale Begriffe nicht auf private Innenzustände referieren können. Wittgensteins Position ist achsen-orthogonal — er bestreitet, dass sich Geist im Idiom von Reduktion vs. Irreduzibilität sinnvoll diskutieren lässt.",
+        "5": "Wittgensteins Haupterbe in der Geistphilosophie (Ryle, McDowell, Hacker) operiert primär auf der Reduktionismus-Seite, aber seine eigene Diagnose ist keine reduktive: Er unterläuft die gesamte Debatte sprachkritisch, nicht materialistisch. Tieferer Schlag gegen den Cartesianismus als Ryles Polemik, weil sprachphilosophisch fundiert."
       }
     },
     {
@@ -179,10 +196,22 @@
       "lifespan": "1937–",
       "firstLevel": 2,
       "schoolId": "qualia-realismus",
-      "x": 78, "y": 82,
+      "x": 78, "y": 84,
       "versions": {
-        "2": "Es gibt etwas, 'wie es ist', eine Fledermaus zu sein. Subjektives Erleben lässt sich nicht aus objektiver Sicht erklären.",
-        "4": "Nagels Aufsatz 'What Is It Like to Be a Bat?' (1974) etablierte phänomenales Bewusstsein (qualia) als irreduzibles Explanandum. Die Erste-Person-Perspektive widersteht jeder Dritten-Person-Beschreibung."
+        "2": "Mit 'What is it like to be a bat?' (1974): Subjektivität — das Wie-es-ist, etwas zu sein — entzieht sich jeder Beschreibung aus der Dritten-Person-Perspektive.",
+        "4": "Nicht antiwissenschaftlich, aber wissenschaftsskeptisch hinsichtlich der Reichweite objektivierender Methoden. Nagels epistemische Grenze (die Erste-Person-Perspektive ist irreduzibel) wird bei Chalmers zur ontologischen Diagnose: das Hard Problem."
+      }
+    },
+    {
+      "id": "davidson",
+      "name": "Donald Davidson",
+      "lifespan": "1917–2003",
+      "firstLevel": 2,
+      "schoolId": "funktionalismus",
+      "x": 30, "y": 47,
+      "versions": {
+        "2": "Anomaler Monismus (1970): Mentale Ereignisse sind token-identisch mit physischen Ereignissen, aber es gibt keine streng-gesetzlichen psychophysischen Brückengesetze — Type-Identität wird verworfen.",
+        "4": "Nicht-reduktiver Physikalismus mit mentaler Verursachung. Brückenposition zwischen Reduktionismus und Dualismus. Auslöser der Supervenienzdebatte und des Kim'schen Exklusionsarguments: Wie kann das Mentale kausal wirksam sein, wenn das Physische bereits kausal geschlossen ist?"
       }
     },
     {
@@ -193,8 +222,8 @@
       "schoolId": "heterophaenomenologie",
       "x": 12, "y": 38,
       "versions": {
-        "3": "Bewusstsein ist eine Nutzertäuschung — das Gehirn erzeugt die Illusion eines einheitlichen Erlebers. Es gibt keinen zentralen 'Ort' des Bewusstseins.",
-        "5": "Dennetts Heterophänomenologie: Berichte über Erleben werden als Daten ernst genommen, ohne als wahr akzeptiert zu werden. In 'Consciousness Explained' (1991) entwickelt er das Multiple Drafts Model — kein Cartesisches Theater."
+        "3": "Radikaler Materialist. 'Multiple Drafts'-Modell ersetzt das cartesianische Theater: Es gibt keinen zentralen Ort des Bewusstseins. Bewusstsein ist Nutzerillusion eines komplexen Informationsverarbeitungssystems.",
+        "5": "Heterophänomenologie: Berichte über Erleben werden ethnographisch-distanziert ausgewertet — ernst genommen als Daten, ohne ontologisches Commitment auf das Berichtete. 'Consciousness Explained' (1991). Frankishs Illusionismus radikalisiert diese Linie: Phänomenales Bewusstsein ist nicht nur schwer zu erklären, sondern eine Fehlkategorie."
       }
     },
     {
@@ -205,8 +234,8 @@
       "schoolId": "property-dualismus",
       "x": 72, "y": 70,
       "versions": {
-        "3": "Das 'Hard Problem': Warum fühlt sich etwas überhaupt nach etwas an? Selbst eine vollständige Neurobiologie könnte subjektives Erleben nicht erklären.",
-        "5": "Chalmers unterscheidet Easy Problems (kognitive Funktionen) vom Hard Problem (phänomenales Bewusstsein). Das Zombie-Argument: Ein physisches Doppelgänger ohne Erleben ist logisch denkbar — Bewusstsein ist nicht physisch reduzierbar."
+        "3": "Formuliert das 'Hard Problem of Consciousness': Selbst eine vollständige funktionale Erklärung lässt offen, warum es überhaupt Erleben gibt.",
+        "5": "Property-Dualist und Zombie-Argument-Architekt. Zentraler Gegenspieler Dennetts und intellektueller Katalysator der Bewusstseinsdebatte seit 1995. Operiert wesentlich mit Blocks Unterscheidung zwischen phenomenal und access consciousness — strukturiert die gesamte Gegenwartsphilosophie des Geistes."
       }
     },
     {
@@ -215,10 +244,22 @@
       "lifespan": "1932–",
       "firstLevel": 3,
       "schoolId": "biologischer-naturalismus",
-      "x": 58, "y": 35,
+      "x": 60, "y": 32,
       "versions": {
-        "3": "Das 'Chinesische Zimmer': Ein Mensch folgt perfekt Regeln um Chinesisch zu simulieren — ohne es zu verstehen. Syntax ist keine Semantik, Algorithmen haben kein echtes Verstehen.",
-        "5": "Searle argumentiert für biologischen Naturalismus: Bewusstsein ist eine kausal emergente Eigenschaft des Gehirns — real, aber nicht auf neuronale Prozesse reduzierbar. Kritik: Die Grenzziehung zum Funktionalismus bleibt unscharf."
+        "3": "Biologischer Naturalist. Das 'Chinesische Zimmer' (1980): Symbolmanipulation erzeugt keine Intentionalität. Syntax ist keine Semantik — Algorithmen haben kein echtes Verstehen.",
+        "5": "Bewusstsein ist ein irreduzibles biologisches Phänomen, kausal vom Gehirn erzeugt, ontologisch subjektiv, aber Gegenstand einer Third-Person-Wissenschaft. Q3-Verortung markiert die Kombination aus methodischem Naturalismus und ontologischer Irreduzibilität. Kritik: Die Grenzziehung bleibt unscharf."
+      }
+    },
+    {
+      "id": "jackson",
+      "name": "Frank Jackson",
+      "lifespan": "1943–",
+      "firstLevel": 3,
+      "schoolId": "qualia-realismus",
+      "x": 68, "y": 74,
+      "versions": {
+        "3": "Wissensargument (Mary's Room, 1982): Mary, perfekte Farbwissenschaftlerin ohne Farberfahrung, lernt etwas Neues, wenn sie erstmals Rot sieht — das vollständige physikalische Wissen war also unvollständig.",
+        "5": "Drittes klassisches Anti-Physikalismus-Argument neben Nagels Fledermaus und Chalmers' Zombies. Seltener Fall der akademischen Selbstrevision: Jackson widerruft seine eigene Anti-Physikalismus-Position später und verteidigt Physikalismus — die Debatte über seine Gründe dafür ist eigenständig wertvoll."
       }
     },
     {
@@ -228,8 +269,8 @@
       "schoolId": "eliminativer-materialismus",
       "x": 8, "y": 15,
       "versions": {
-        "4": "Alltagsbegriffe wie 'Überzeugung' oder 'Schmerz' sind fehlerhafte Theorien (Folk Psychology) — sie werden durch Neurobiologie restlos ersetzt, wie Phlogiston durch Oxidation.",
-        "5": "Der eliminative Materialismus ist der radikale Schlussstrich: Propositionale Einstellungen sind schlicht falsche Kategorien. Patricia Churchland verbindet das mit konkreter Neurowissenschaft (Neurophilosophie)."
+        "4": "Eliminativer Materialismus: Die Alltagspsychologie von Überzeugungen, Wünschen und Qualia ist eine theoretisch unzureichende Konzeption, die durch reife Neurowissenschaft ersetzt wird — wie Phlogiston durch Oxidation.",
+        "5": "Eine der konsequentesten reduktiven Positionen der zeitgenössischen Debatte. Patricia Churchland verbindet das mit konkreter Neurowissenschaft (Neurophilosophie). Bündnis mit Dennett im Anti-Cartesianismus; Dissens über die Methode: Churchland eliminiert, Dennett deutet um."
       }
     },
     {
@@ -240,8 +281,8 @@
       "schoolId": "phaenomenologie",
       "x": 68, "y": 92,
       "versions": {
-        "4": "Phänomenologie: Rückkehr zu den Sachen selbst — genaue Beschreibung der Bewusstseinsstrukturen vor jeder naturwissenschaftlichen Deutung. Intentionalität: Bewusstsein ist immer Bewusstsein von etwas.",
-        "5": "Husserls Epoché (Einklammerung der Welt) legt apriorische Strukturen des Bewusstseins frei. Kernbegriffe: Noesis (Bewusstseinsakt), Noema (intentionaler Gehalt), Zeitbewusstsein. Fundament für Heidegger, Merleau-Ponty und Varela."
+        "4": "Begründer der Phänomenologie als strenger Wissenschaft, in direkter Erbschaft von Brentanos Intentionalitätsthese. Die Epoché — Einklammerung der natürlichen Einstellung — legt Strukturen des Bewusstseins frei: Intentionalität, Zeitlichkeit, intersubjektive Konstitution.",
+        "5": "Methodisches Fundament jeder ernsthaften First-Person-Wissenschaft. Husserls Programm wird von Varela/Thompson empirisch operationalisiert (Neurophänomenologie), von Heidegger existenzial gewendet, von Merleau-Ponty verkörpert. Dennetts Heterophänomenologie ist sein direkter methodologischer Antipode."
       }
     },
     {
@@ -249,10 +290,10 @@
       "name": "Francisco Varela & Evan Thompson",
       "firstLevel": 4,
       "schoolId": "enaktivismus",
-      "x": 52, "y": 80,
+      "x": 52, "y": 82,
       "versions": {
-        "4": "Geist entsteht nicht im Kopf, sondern im Vollzug — durch die Interaktion eines verkörperten Organismus mit seiner Umwelt. Phänomenologie und Biologie werden verbunden.",
-        "5": "In 'The Embodied Mind' (1991) schlagen Varela, Thompson und Rosch einen Mittelweg: weder Kognitivismus noch eliminativer Materialismus. Autopoiese (Selbstorganisation) als Grundlage des Geistes; Neurophänomenologie als Methode."
+        "4": "Begründer von Enaktivismus und Neurophänomenologie. These der Lebens-Geist-Kontinuität: Sinnstiftung ist irreduzible Eigenschaft autopoietischer Systeme. Verbinden Husserls First-Person-Methodik mit Biologie und dynamischen Systemen.",
+        "5": "'The Embodied Mind' (1991): Kein Reduktionsprogramm, sondern Gleichberechtigung der Perspektiven. Geist entsteht nicht im Kopf, sondern im Vollzug — durch die Interaktion eines verkörperten Organismus mit seiner Umwelt. Direkter Gegenentwurf zu Metzingers Repräsentationalismus und Clarks Funktionalismus."
       }
     },
     {
@@ -263,7 +304,7 @@
       "schoolId": "panpsychismus",
       "x": 90, "y": 50,
       "versions": {
-        "5": "Wenn Materialismus wahr ist und phänomenales Erleben real ist, muss Erfahrung eine fundamentale Eigenschaft der Materie sein — Panpsychismus ist die konsequenteste materialistische Position. 'Realistic Monism' (2006)."
+        "5": "Realistischer Monist und führender zeitgenössischer Panpsychist; Position an der Q2/Q3-Grenze. Argument: Wenn Materialismus wahr ist und Bewusstsein real — dann muss Erfahrung protomental in der physischen Grundausstattung der Welt angelegt sein. Naturalismus konsequent zu Ende gedacht führt nicht zur Eliminierung, sondern zur Universalisierung des Mentalen. 'Realistic Monism' (2006)."
       }
     },
     {
@@ -274,7 +315,18 @@
       "schoolId": "selbstmodell-theorie",
       "x": 28, "y": 20,
       "versions": {
-        "5": "Es gibt kein 'Selbst' — nur ein transparentes phänomenales Selbstmodell (PSM), das das Gehirn als Werkzeug nutzt. Der Ego-Tunnel: Wir erleben uns als Zentrum, obwohl das Selbst eine Simulation ist. 'Being No One' (2003)."
+        "5": "Selbstmodell-Theorie der Subjektivität (SMT). Das phänomenale Selbst ist transparente Repräsentation — ein Modell, das sich nicht als Modell erkennt. Nimmt First-Person-Phänomene (Mineness, Perspektivität) maximal ernst und reduziert sie repräsentationalistisch: Reduktion durch, nicht gegen Phänomenologie. 'Being No One' (2003)."
+      }
+    },
+    {
+      "id": "tononi",
+      "name": "Giulio Tononi",
+      "lifespan": "1960–",
+      "firstLevel": 5,
+      "schoolId": "iit-theorie",
+      "x": 80, "y": 20,
+      "versions": {
+        "5": "Integrated Information Theory (IIT). Bewusstsein ist mathematisch identisch mit integrierter Information (Φ): Ein System ist genau dann und in dem Maße bewusst, wie es ein Maximum an irreduzibel kausal vernetzter Information realisiert. Postuliert Bewusstsein als fundamentale Eigenschaft strukturierter Systeme — irreduzibel auf Funktion (gegen Funktionalismus) und Third-Person zugänglich (gegen Dualismus)."
       }
     },
     {
@@ -283,47 +335,252 @@
       "lifespan": "1957–",
       "firstLevel": 5,
       "schoolId": "predictive-processing",
-      "x": 20, "y": 30,
+      "x": 18, "y": 28,
       "versions": {
-        "5": "Das Gehirn ist eine Vorhersagemaschine: Es minimiert kontinuierlich den Vorhersagefehler zwischen Erwartung und Eingabe. Kognition erstreckt sich über Schädel und Haut hinaus — Werkzeuge und Umwelt sind Teil des kognitiven Systems (Extended Mind)."
+        "5": "Predictive Processing als einheitliche Theorie der Kognition: Das Gehirn minimiert kontinuierlich Vorhersagefehler zwischen erwarteten und eintreffenden Signalen — Wahrnehmung ist aktive Inferenz, keine passive Aufnahme. Extended Mind: Kognition endet nicht am Schädel, sondern bezieht Werkzeuge und Umwelt mit ein — funktionalistisch-repräsentationalistisch, im Gegensatz zu Varelas Enaktivismus. PP ist die zeitgenössische Erbin des klassischen Funktionalismus: bayesianische Architektur statt diskreter Module, aber substratunabhängiger Reduktionsanspruch bleibt."
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "id": "cogito",
+      "name": "Cogito ergo sum",
+      "type": "axiom",
+      "firstLevel": 1,
+      "schoolId": "substanzdualismus",
+      "x": 85, "y": 88,
+      "versions": {
+        "1": "Ich denke, also bin ich. Selbst im radikalen Zweifel bleibt der Akt des Zweifelns als Denken bestehen — und beweist die Existenz des denkenden Subjekts.",
+        "3": "Performative Einsicht (nach Hintikka) statt rein inferentiellem Schluss. Etabliert die Erste-Person-Perspektive als unhintergehbaren epistemischen Ankerpunkt der Moderne. Fundament des Substanzdualismus: Das denkende Ich ist kategorial verschieden von allem Körperlichen."
+      }
+    },
+    {
+      "id": "kategorienfehler",
+      "name": "Kategorienfehler",
+      "type": "concept",
+      "firstLevel": 1,
+      "schoolId": "logischer-behaviorismus",
+      "x": 15, "y": 68,
+      "labelOffset": { "dx": 12, "dy": 0, "anchor": "start" },
+      "versions": {
+        "1": "Ryles Diagnose: Wer nach dem Geist sucht wie nach einer zweiten Sorte Ding neben dem Körper, macht denselben Fehler wie jemand, der nach der Universität fragt, nachdem er alle Gebäude besichtigt hat.",
+        "3": "Cartesianismus behandelt mentale Begriffe, als bezeichneten sie Entitäten einer zweiten ontologischen Sorte. Tatsächlich gehören sie einer anderen logischen Kategorie an — Dispositionen, keine Zustände. Diagnostisches Grundmuster für die gesamte ordinary-language-Tradition."
+      }
+    },
+    {
+      "id": "privatsprachenargument",
+      "name": "Privatsprachenargument",
+      "type": "axiom",
+      "firstLevel": 1,
+      "schoolId": "sprachanalytische-philosophie",
+      "x": 10, "y": 80,
+      "labelOffset": { "dx": 12, "dy": 0, "anchor": "start" },
+      "versions": {
+        "1": "Wittgenstein: Eine Sprache, deren Wörter sich notwendig auf privat zugängliche innere Zustände beziehen, ist unmöglich — korrekter Gebrauch setzt öffentliche Kriterien voraus.",
+        "3": "Philosophische Untersuchungen §§243ff. Zentrale Quelle des Behaviorismus und der ordinary-language-Tradition. Unterläuft die cartesianische Innenwelt nicht durch Materialismus, sondern durch Sprachkritik: Wenn keine private Sprache möglich ist, kann auch das, was sie beschreiben sollte, nicht der Ankerpunkt mentaler Begriffe sein."
+      }
+    },
+    {
+      "id": "intentionalitaet",
+      "name": "Intentionalität",
+      "type": "concept",
+      "firstLevel": 1,
+      "schoolId": "phaenomenologie",
+      "x": 60, "y": 85,
+      "labelOffset": { "dx": -12, "dy": 0, "anchor": "end" },
+      "versions": {
+        "1": "Brentanos These: Mentale Phänomene sind durch Bezogenheit auf einen Inhalt charakterisiert — Bewusstsein ist immer Bewusstsein von etwas.",
+        "3": "Wurzelbegriff sowohl der Phänomenologie (Husserl) als auch ihrer analytischen Kritik (Searle, Dennett). Streitpunkt: Ist Intentionalität ein irreduzibles Merkmal des Geistigen oder lässt sie sich naturalisieren — auf Kausal-, Funktions- oder Repräsentationsbeziehungen reduzieren?"
+      }
+    },
+    {
+      "id": "funktionalismus",
+      "name": "Funktionalismus",
+      "type": "theory",
+      "firstLevel": 2,
+      "x": 22, "y": 50,
+      "versions": {
+        "2": "Mentale Zustände sind durch ihre funktionale Rolle innerhalb eines kausalen Netzwerks von Inputs, Outputs und anderen mentalen Zuständen definiert. Substratunabhängigkeit (Multirealisierbarkeit) ist die zentrale These.",
+        "4": "Theoretisches Rückgrat der kognitiven Wissenschaft und der starken KI-These. Hauptverbreitung 1960–1975 (Putnam, Lewis, Fodor). Drei große Kritiken: Nagels Fledermaus (epistemische Grenze), Searles Chinesisches Zimmer (Syntax ≠ Semantik), Tononis IIT (Φ ≠ Funktion)."
+      }
+    },
+    {
+      "id": "anomaler-monismus",
+      "name": "Anomaler Monismus",
+      "type": "theory",
+      "firstLevel": 2,
+      "schoolId": "funktionalismus",
+      "x": 32, "y": 44,
+      "labelOffset": { "dx": 12, "dy": 8, "anchor": "start" },
+      "versions": {
+        "2": "Davidsons Position (1970): Token-Identität ohne Type-Identität. Jedes mentale Ereignis ist mit einem physischen identisch, aber es gibt keine strengen psychophysischen Gesetze.",
+        "4": "Verbindet ontologischen Monismus mit konzeptionellem Pluralismus. Auslöser der Supervenienzdebatte und des Kim'schen Exklusionsarguments: Wie kann das Mentale kausal wirksam sein, wenn das Physische bereits kausal geschlossen ist? Anomaler Monismus gibt keine befriedigende Antwort."
+      }
+    },
+    {
+      "id": "qualia",
+      "name": "Qualia",
+      "type": "concept",
+      "firstLevel": 2,
+      "schoolId": "qualia-realismus",
+      "x": 74, "y": 78,
+      "labelOffset": { "dx": 12, "dy": 0, "anchor": "start" },
+      "versions": {
+        "2": "Theoretischer Terminus für die qualitativen, subjektiven Eigenschaften des Erlebens — das Rot des Rots, der Schmerz des Schmerzes.",
+        "4": "Streitobjekt des Feldes: Realisten halten sie für irreduzible Explananda (Nagel, Chalmers, Jackson), Eliminativisten für theoretische Fiktionen (Churchland), Repräsentationalisten für analysierbare Strukturen (Metzinger). Der ontologische Status des Begriffs ist selbst Gegenstand der Kontroverse."
+      }
+    },
+    {
+      "id": "wissensargument",
+      "name": "Wissensargument (Mary's Room)",
+      "type": "phenomenon",
+      "firstLevel": 3,
+      "schoolId": "qualia-realismus",
+      "x": 68, "y": 70,
+      "labelOffset": { "dx": -12, "dy": 0, "anchor": "end" },
+      "versions": {
+        "3": "Jacksons Szenario (1982): Mary, perfekte Farbwissenschaftlerin, kennt alle physikalischen Fakten über Farbwahrnehmung, hat aber zeitlebens nur Schwarz-Weiß gesehen. Wenn sie erstmals Rot sieht — lernt sie etwas Neues? Falls ja, war das physikalische Wissen unvollständig.",
+        "5": "Epistemisches Anti-Physikalismus-Argument, parallel zu Chalmers' ontologischem Zombie-Argument. Beide zielen auf denselben 'explanatory gap'. Jacksons spätere Selbstrevision: Er akzeptiert Physikalismus und deutet die neue Erkenntnis als Erwerb einer Fähigkeit (ability hypothesis), nicht als neues Faktenwissen."
+      }
+    },
+    {
+      "id": "hard-problem",
+      "name": "Hard Problem of Consciousness",
+      "type": "phenomenon",
+      "firstLevel": 3,
+      "schoolId": "property-dualismus",
+      "x": 80, "y": 66,
+      "labelOffset": { "dx": 12, "dy": 8, "anchor": "start" },
+      "versions": {
+        "3": "Chalmers' Unterscheidung: Die 'easy problems' (Diskrimination, Integration, Verhalten) sind im Prinzip naturwissenschaftlich lösbar. Das 'hard problem' — warum kognitive Prozesse von Erleben begleitet sind — bleibt selbst nach vollständiger funktionaler Erklärung offen.",
+        "5": "Definiert die Tagesordnung der Bewusstseinsphilosophie seit 1995. Metzinger: Das Hard Problem ist kein ontologisches Datum, sondern Symptom struktureller Transparenz der Selbstmodellierung. Dennett: Das Hard Problem existiert nicht — es ist begriffliche Verwirrung. Tononi: Es löst sich, wenn man Bewusstsein mit Φ identifiziert."
+      }
+    },
+    {
+      "id": "chinesisches-zimmer",
+      "name": "Chinesisches Zimmer",
+      "type": "phenomenon",
+      "firstLevel": 3,
+      "schoolId": "biologischer-naturalismus",
+      "x": 62, "y": 30,
+      "versions": {
+        "3": "Searles Gedankenexperiment (1980): Ein Mensch ohne Chinesischkenntnisse manipuliert Zeichen nach syntaktischen Regeln und produziert sinnvolle Antworten — ohne irgendetwas zu verstehen. Argument: Symbolverarbeitung allein erzeugt keine Intentionalität oder Bewusstsein.",
+        "5": "Direkte Widerlegung der computationalistischen Variante des Funktionalismus. Systemantwort (die korrekte Antwort liegt beim Gesamtsystem) ist Searles Hauptgegner. Tononis IIT bestätigt die Richtung: Funktion allein reicht nicht, integrierte kausale Struktur ist entscheidend."
+      }
+    },
+    {
+      "id": "heterophaenomenologie",
+      "name": "Heterophänomenologie",
+      "type": "method",
+      "firstLevel": 3,
+      "schoolId": "heterophaenomenologie",
+      "x": 14, "y": 35,
+      "labelOffset": { "dx": 12, "dy": 0, "anchor": "start" },
+      "versions": {
+        "3": "Dennetts methodologischer Vorschlag: Berichte über Erleben werden wie ethnographische Texte behandelt — ernst genommen als Daten, ohne ontologisches Commitment auf das Berichtete. Third-Person-Wissenschaft, die First-Person-Daten verarbeitet.",
+        "5": "Direkter Antipode zur Husserlschen Epoché: Während die Epoché First-Person-Berichten konstitutive Autorität zugesteht, nimmt die Heterophänomenologie ihnen diese Autorität — sie sind Symptome zu erklären, keine Evidenz zu akzeptieren."
+      }
+    },
+    {
+      "id": "pc-vs-ac",
+      "name": "Phenomenal vs. Access Consciousness",
+      "type": "concept",
+      "firstLevel": 3,
+      "x": 52, "y": 60,
+      "versions": {
+        "3": "Ned Blocks Distinktion (1995): Phänomenales Bewusstsein (das qualitative Erleben) und Zugangsbewusstsein (Verfügbarkeit für Schlussfolgern, Bericht, Verhaltenssteuerung) müssen begrifflich getrennt werden.",
+        "5": "Strukturiert die gesamte Bewusstseinsdebatte nach Chalmers. Dennett erklärt access consciousness — und bestreitet, dass phenomenal consciousness ein eigenständiges Explanandum ist. Chalmers: Genau das ist das Hard Problem. IIT und Global Workspace Theory verorten sich in dieser Distinktion."
+      }
+    },
+    {
+      "id": "epoche",
+      "name": "Epoché",
+      "type": "method",
+      "firstLevel": 4,
+      "schoolId": "phaenomenologie",
+      "x": 65, "y": 92,
+      "labelOffset": { "dx": 0, "dy": -12, "anchor": "middle" },
+      "versions": {
+        "4": "Husserls methodischer Kerngriff: Einklammerung der natürlichen Einstellung — aller ontologischen Annahmen über die Existenz der Welt — um die Strukturen des reinen Bewusstseins freizulegen. Nicht skeptisch gemeint, sondern als Bedingung einer strengen Wissenschaft des Erlebens.",
+        "5": "Varela/Thompson operationalisieren die Epoché als trainierbare Methode zur Erzeugung präziser First-Person-Daten, kreuzbar mit Neurobiologie (Neurophänomenologie). Diametral zur Heterophänomenologie: Epoché erkennt First-Person-Berichten konstitutive Autorität zu, Heterophänomenologie nimmt sie ihnen."
+      }
+    },
+    {
+      "id": "lebens-geist-kontinuitaet",
+      "name": "Lebens-Geist-Kontinuität",
+      "type": "theory",
+      "firstLevel": 4,
+      "schoolId": "enaktivismus",
+      "x": 50, "y": 83,
+      "labelOffset": { "dx": -12, "dy": 0, "anchor": "end" },
+      "versions": {
+        "4": "These des Enaktivismus: Sinnstiftung beginnt nicht erst mit dem Gehirn, sondern mit dem Leben — mit der ersten autopoietischen Schließung, die einen intrinsischen Standpunkt erzeugt. Direkter Gegenentwurf zu Metzingers Selbstmodell-Theorie.",
+        "5": "In 'The Embodied Mind' (1991) verknüpft mit der Madhyamaka-buddhistischen Tradition als Quelle des Anti-Repräsentationalismus. Konstitutive Verflechtung von Subjekt und Welt, nicht nur kausale Interaktion. Gegen Clarks Extended Mind: Nicht Erweiterung eines internen Systems, sondern Auflösung der Innen/Außen-Grenze."
+      }
+    },
+    {
+      "id": "predictive-processing",
+      "name": "Predictive Processing",
+      "type": "theory",
+      "firstLevel": 5,
+      "schoolId": "predictive-processing",
+      "x": 18, "y": 25,
+      "labelOffset": { "dx": 12, "dy": 0, "anchor": "start" },
+      "versions": {
+        "5": "Bayesianisches Rahmenmodell: Das Gehirn minimiert kontinuierlich Vorhersagefehler zwischen erwarteten und eintreffenden Signalen über alle hierarchischen Ebenen hinweg. Wahrnehmung ist aktive Inferenz. Vereint Kognition, Handlung, Affekt. Zeitgenössische Erbin des Funktionalismus: bayesianische Architektur statt diskreter Module, substratunabhängiger Reduktionsanspruch bleibt."
+      }
+    },
+    {
+      "id": "selbstmodell",
+      "name": "Phänomenales Selbstmodell",
+      "type": "theory",
+      "firstLevel": 5,
+      "schoolId": "selbstmodell-theorie",
+      "x": 28, "y": 20,
+      "labelOffset": { "dx": 12, "dy": 8, "anchor": "start" },
+      "versions": {
+        "5": "Metzingers Kernkonstrukt: Das Selbst ist kein Ding, sondern ein Repräsentationsprozess, dessen Transparenz dazu führt, dass das System sich selbst nicht als Modell erkennt. Wir leben im 'Ego-Tunnel'. Qualia verschwinden nicht, sondern erscheinen neu: als Eigenschaften eines Selbstmodells, das seine eigene Modellnatur nicht introspizieren kann."
+      }
+    },
+    {
+      "id": "iit",
+      "name": "Integrated Information Theory",
+      "type": "theory",
+      "firstLevel": 5,
+      "schoolId": "iit-theorie",
+      "x": 80, "y": 20,
+      "labelOffset": { "dx": -12, "dy": 0, "anchor": "end" },
+      "versions": {
+        "5": "Tononis formal-empirische Bewusstseinstheorie: Ein System ist bewusst genau dann und in dem Maße, wie es integrierte Information (Φ) realisiert — ein mathematisch definiertes Maß für irreduzible kausale Verbundenheit. Weist Substratunabhängigkeit zurück: Zwei Systeme können dasselbe leisten und dennoch unterschiedliches Φ haben — eines wäre bewusst, das andere nicht."
       }
     }
   ],
   "influences": [
     {
-      "from": "descartes",
-      "to": "ryle",
+      "from": "ryle",
+      "to": "descartes",
       "type": "critique",
       "firstLevel": 1,
       "versions": {
-        "1": "Ryle demontiert Descartes' Substanzdualismus als den ultimativen Kategorienfehler — den 'Ghost in the Machine'."
+        "1": "Ryle attackiert das cartesianische Bild des 'Ghost in the Machine' als kategorialen Fehler: Geist und Körper sind keine zwei Entitäten, sondern zwei logische Kategorien — wer das nicht sieht, fragt nach der Universität, nachdem er alle Gebäude besichtigt hat."
       }
     },
     {
-      "from": "ryle",
-      "to": "dennett",
-      "type": "student-of",
-      "firstLevel": 3,
-      "versions": {
-        "3": "Dennett ist Ryles direkter intellektueller Erbe und radikalisiert dessen behavioristischen Ansatz zur Heterophänomenologie."
-      }
-    },
-    {
-      "from": "putnam",
-      "to": "searle",
+      "from": "wittgenstein",
+      "to": "descartes",
       "type": "critique",
-      "firstLevel": 3,
+      "firstLevel": 1,
       "versions": {
-        "3": "Searles Chinesisches Zimmer greift direkt die Kernprämisse von Putnams computationalem Funktionalismus an."
+        "1": "Das Privatsprachenargument unterminiert die cartesianische Innenwelt tiefergehend als Ryles Polemik: Wenn keine notwendig private Sprache über innere Zustände möglich ist, kann auch das, was sie beschreiben sollte, nicht der Ankerpunkt mentaler Begriffe sein."
       }
     },
     {
-      "from": "putnam",
-      "to": "churchland",
-      "type": "rejection",
-      "firstLevel": 4,
+      "from": "wittgenstein",
+      "to": "ryle",
+      "type": "influence",
+      "firstLevel": 1,
       "versions": {
-        "4": "Die Churchlands verwerfen die funktionale Multirealisierbarkeit und fordern die harte neuronale Reduktion."
+        "1": "Ryles 'Concept of Mind' überträgt Wittgensteins Sprachanalyse in eine systematische Geistphilosophie. Der Behaviorismus erbt vom Privatsprachenargument die Skepsis gegenüber Innenperspektivität und formuliert sie als positive Theorie über Verhaltensdispositionen."
       }
     },
     {
@@ -332,16 +589,34 @@
       "type": "influence",
       "firstLevel": 3,
       "versions": {
-        "3": "Nagels subjektive Fledermaus-Perspektive legt das Fundament für Chalmers' formales Hard Problem."
+        "3": "Chalmers überführt Nagels essayistische Intuition in ein technisch präzises Argument: Was bei Nagel epistemische Grenze war — die Erste-Person-Perspektive entzieht sich der Dritten-Person-Beschreibung — wird bei Chalmers zur ontologischen Diagnose: Hard Problem, Zombie-Argument, Property-Dualismus."
+      }
+    },
+    {
+      "from": "jackson",
+      "to": "chalmers",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Wissensargument und Hard Problem sind parallele Anti-Physikalismus-Strategien: Jackson argumentiert epistemisch (Mary lernt etwas Neues, also war das physikalische Wissen unvollständig), Chalmers ontologisch (Zombies sind denkbar, also ist Bewusstsein nicht reduzierbar). Beide zielen auf denselben 'explanatory gap' als Kerneinwand gegen reduktive Programme."
       }
     },
     {
       "from": "dennett",
       "to": "chalmers",
-      "type": "rejection",
+      "type": "critique",
       "firstLevel": 3,
       "versions": {
-        "3": "Dennett erklärt das Hard Problem zur Illusion; Chalmers hält Dennetts Theorie für eine Erklärung von Zombies, nicht von Bewusstsein."
+        "3": "Die zentrale Streitachse der zeitgenössischen Bewusstseinsphilosophie: Dennett bestreitet, dass es ein Hard Problem überhaupt gibt. Zombies sind begrifflich inkohärent; Qualia sind Artefakte schlechter Introspektion. Was Chalmers als irreduzibles Explanandum auszeichnet, ist für Dennett eine begriffliche Verwirrung, die Heterophänomenologie auflöst."
+      }
+    },
+    {
+      "from": "churchland",
+      "to": "dennett",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Eliminativer Materialismus und Heterophänomenologie sind parallele Radikalisierungen unterschiedlicher Materialismus-Stränge — kein Entwicklungsverhältnis (Churchland 1981 vor Dennett 1991). Bündnis im Anti-Cartesianismus, Dissens über die Methode: Churchland eliminiert Alltagsbegriffe ersatzlos, Dennett deutet sie hetero-phänomenologisch um."
       }
     },
     {
@@ -350,36 +625,89 @@
       "type": "influence",
       "firstLevel": 4,
       "versions": {
-        "4": "Varela naturalisiert Husserls Epoché und integriert sie als Neurophänomenologie in die Biologie."
+        "4": "Varela naturalisiert Husserls Epoché: Nicht als kontemplative Übung, sondern als trainierbare Methode zur Erzeugung präziser First-Person-Daten, die mit Neurobiologie kreuzbar sind. Husserls Programm wird empirisch operationalisiert — ohne reduziert zu werden."
       }
     },
     {
-      "from": "chalmers",
+      "from": "husserl",
+      "to": "dennett",
+      "type": "critique",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Epoché und Heterophänomenologie sind diametrale Methodologien für denselben Datentyp: Husserl verfeinert First-Person-Berichte methodisch und erkennt ihnen konstitutive Autorität zu; Dennett verarbeitet sie distanziert-ethnographisch ohne ontologisches Commitment auf das Berichtete. Kern des Q4-vs-Q1-Konflikts: ob Innenperspektive Fundament oder Datum ist."
+      }
+    },
+    {
+      "from": "varela",
       "to": "strawson",
-      "type": "influence",
+      "type": "parallel",
       "firstLevel": 5,
       "versions": {
-        "5": "Strawsons Panpsychismus ist der Versuch, Chalmers' Hard Problem streng naturalistisch zu lösen."
+        "5": "Beide diagnostizieren dasselbe Erklärungsdefizit: Bewusstsein lässt sich nicht aus bewusstloser Materie emergieren — tote Physik kann kein Erleben hervorbringen. Aber die Lösungen divergieren: Strawson universalisiert das Mentale (es war immer schon protomental in der Materie angelegt); Varela/Thompson biologisieren es (Erleben beginnt mit der ersten autopoietischen Schließung, dem Auftauchen eines intrinsischen Standpunkts im Leben). Keine Synthese — konkurrierende Antworten auf dasselbe Problem."
+      }
+    },
+    {
+      "from": "metzinger",
+      "to": "varela",
+      "type": "critique",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Metzinger nimmt die phänomenologischen Explananda (Mineness, Perspektivität) so ernst wie der Enaktivismus, lehnt aber dessen Anti-Repräsentationalismus ab. Selbstmodell-Theorie zeigt: First-Person-Strukturen sind reduktiv erklärbar, ohne wegerklärt zu werden — Repräsentationalismus durch Phänomenologie, nicht gegen sie."
+      }
+    },
+    {
+      "from": "varela",
+      "to": "metzinger",
+      "type": "critique",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Thompsons 'Mind in Life' enthält explizite Repräsentationalismus-Kritik: Metzingers Selbstmodell-Theorie zerlegt Subjektivität in subpersonale Repräsentationen und verfehlt die enaktivistische Pointe, dass Sinnstiftung intrinsisch zur Lebensaktivität gehört und nicht aus Repräsentationen rekonstruiert werden kann. Bidirektionalität dieser Achse ist konstitutiv."
+      }
+    },
+    {
+      "from": "metzinger",
+      "to": "chalmers",
+      "type": "critique",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Metzinger löst das Hard Problem nicht, sondern diagnostiziert es: Was Chalmers als irreduzibles Explanandum auszeichnet — das qualitative Erleben, das Wie-es-ist — ist die phänomenale Signatur eines transparenten Repräsentationsmediums. Qualia verschwinden dabei nicht wie bei den Churchlands; sie erscheinen neu als Eigenschaften eines Selbstmodells, das sich nicht als Modell erkennt. Was sich wie rohes Erleben anfühlt, ist die introspektive Untererreichbarkeit der darunterliegenden Repräsentationsebene. Das Hard Problem ist Symptom dieser Transparenz — keine ontologische Grenze, sondern eine strukturelle Eigenschaft der Selbstmodellierung."
+      }
+    },
+    {
+      "from": "tononi",
+      "to": "searle",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Beide diagnostizieren: Bewusstsein ist empirisch zugänglich und dennoch ontologisch irreduzibel — weder eliminierbar noch durch Funktion allein erklärt. Searle leitet die Irreduzibilität aus der biologischen Kausalstruktur des Gehirns ab; Tononi formalisiert sie mathematisch als integrierte Information (Φ). Dabei widerlegt IIT Searles Biologismus von innen: Bewusstsein haftet nicht am Biologischen, sondern an jedem System mit ausreichend hohem Φ — ein neuronales Netz könnte bewusster sein als ein Gehirn, ein Herz nicht."
+      }
+    },
+    {
+      "from": "tononi",
+      "to": "metzinger",
+      "type": "critique",
+      "firstLevel": 5,
+      "versions": {
+        "5": "IIT und Selbstmodell-Theorie sind konkurrierende Q3-Positionen an entgegengesetzten Polen: Tononi ist substrat-realistisch (Bewusstsein ist die intrinsische Eigenschaft eines kausalen Systems, gemessen als Φ), Metzinger modellbasiert (Bewusstsein ist transparent gewordenes Selbstmodellieren). Streitpunkt: Lässt sich Bewusstsein an Information selbst festmachen, oder erst am Modellieren von Etwas?"
       }
     },
     {
       "from": "clark",
       "to": "metzinger",
-      "type": "parallel",
+      "type": "influence",
       "firstLevel": 5,
       "versions": {
-        "5": "Beide nutzen Predictive Processing: Clark zur Erklärung der Kognition (außen), Metzinger zur Erklärung des phänomenalen Erlebens (innen)."
+        "5": "Predictive Processing liefert die mechanische Architektur, die Metzingers Selbstmodell-Theorie phänomenologisch interpretiert: Das Gehirn als hierarchische Vorhersagemaschine erklärt, wie ein System ein transparentes Modell von sich selbst unterhält, ohne es als Modell zu erkennen. Konvergenz von funktionalistischer Mechanik (Clark) und reduktiver Phänomenologie (Metzinger) — ausgearbeitete theoretische Anschlussfähigkeit, keine zufällige Verwandtschaft."
       }
     },
     {
-      "from": "metzinger",
-      "to": "dennett",
+      "from": "clark",
+      "to": "varela",
       "type": "critique",
       "firstLevel": 5,
       "versions": {
-        "5": "Metzinger teilt Dennetts Illusionismus, kritisiert aber dessen Weigerung, die First-Person-Phänomenologie als echtes Explanandum ernst zu nehmen."
+        "5": "Konkurrierende Externalismen: Clark und Varela teilen die Prämisse, dass Kognition über den Schädel hinausgeht, ziehen aber gegensätzliche Lehren. Clark bleibt funktionalistisch-repräsentationalistisch (Werkzeuge und Umwelt als kognitive Ressourcen, Vorhersagefehler-Minimierung als Mechanik); Varela denkt Verkörperung anti-repräsentationalistisch und phänomenologisch radikal. Inkompatible Externalismen, keine bloß parallelen."
       }
     }
-  ],
-  "concepts": []
+  ]
 }
