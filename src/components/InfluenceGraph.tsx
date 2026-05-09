@@ -388,7 +388,7 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
   const detail = (() => {
     if (activeNode) {
       const t = thinkers.find(x => x.id === activeNode)
-      if (t) return { eyebrow: 'Denker', name: t.name, desc: t.description }
+      if (t) return { eyebrow: schoolLabels[t.schoolId] ?? 'Denker', name: t.name, lifespan: t.lifespan, desc: t.description }
     }
     if (activeEdge) {
       const a = thinkers.find(x => x.id === activeEdge.from)
@@ -454,6 +454,10 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
     return { pos, color, label, tw, ty, tx }
   })()
 
+  const outgoingInfluences = activeNode ? influences.filter(i => i.from === activeNode) : []
+  const incomingInfluences = activeNode ? influences.filter(i => i.to   === activeNode) : []
+  const thinkerMap = Object.fromEntries(thinkers.map(t => [t.id, t]))
+
   return (
     <div className="tab-content">
 
@@ -464,12 +468,15 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
         </span>
       </div>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4">
+
+        {/* Graph stage + side panel */}
+        <div className="flex items-stretch">
 
         {/* Graph stage */}
         <div
           ref={containerRef}
-          className="relative overflow-hidden border border-[--hairline] bg-[--bg-sunk]"
+          className="relative overflow-hidden border border-[--hairline] bg-[--bg-sunk] flex-1 min-w-0"
           style={{
             height:      'clamp(320px, 60dvh, 650px)',
             cursor:      'grab',
@@ -680,116 +687,195 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
           <MapZoomControls onZoomIn={zoomIn} onZoomOut={zoomOut} onReset={reset} />
         </div>
 
-        {/* Detail card + filter legend */}
-        <div className="grid grid-cols-1 sm:grid-cols-[1fr_256px] gap-6 items-start">
+        {/* Side panel (desktop) */}
+        {detail && (
+          <aside
+            className="hidden sm:flex w-[320px] shrink-0 flex-col border border-[--hairline] border-l-0 bg-[--bg-raised] overflow-y-auto"
+            style={{ maxHeight: 'clamp(320px, 60dvh, 650px)' }}
+          >
+            {/* Panel header */}
+            <div className="flex items-start justify-between gap-3 p-4 border-b border-[--hairline] shrink-0">
+              <div className="flex flex-col gap-0.5 min-w-0">
+                <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint]">{detail.eyebrow}</p>
+                <p className="font-display text-[16px] tracking-[0.08em] text-[--fg] leading-tight">{detail.name}</p>
+                {detail.lifespan && (
+                  <p className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-dim] mt-0.5">{detail.lifespan}</p>
+                )}
+              </div>
+              <button
+                onClick={clear}
+                aria-label="Schliessen"
+                className="mt-0.5 shrink-0 text-[--fg-faint] hover:text-[--fg] transition-colors"
+              >
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                  <line x1="1" y1="1" x2="11" y2="11" /><line x1="11" y1="1" x2="1" y2="11" />
+                </svg>
+              </button>
+            </div>
 
-          <div className="border border-[--hairline] p-5 bg-[--bg-raised] min-h-[100px]">
-            {detail ? (
-              <>
-                <p className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-[--fg-faint] mb-2">
-                  {detail.eyebrow}
-                </p>
-                <p className="font-display text-[18px] tracking-[0.10em] text-[--fg] mb-3">
-                  {detail.name}
-                </p>
-                <p className="font-prose text-[15px] leading-relaxed text-[--fg-muted]">
-                  {detail.desc}
-                </p>
-              </>
-            ) : (
-              <p className="font-body italic text-[14px] text-[--fg-dim]">
-                Wähle einen Denker oder eine Verbindung, um mehr zu erfahren.
-              </p>
+            {/* Description */}
+            <div className="p-4 border-b border-[--hairline]">
+              <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">{detail.desc}</p>
+            </div>
+
+            {/* Outgoing influences */}
+            {activeNode && outgoingInfluences.length > 0 && (
+              <div className="p-4 border-b border-[--hairline]">
+                <p className="section-label mb-2.5">Ausgehende Einflüsse</p>
+                <div className="flex flex-col gap-1.5">
+                  {outgoingInfluences.map(inf => {
+                    const target = thinkerMap[inf.to]
+                    return (
+                      <button key={inf.to} onClick={() => clickNode(inf.to)}
+                        className="flex items-start gap-2 text-left group">
+                        <span className="text-[12px] mt-0.5 shrink-0" style={{ color: INFLUENCE_COLOR[inf.type] }}>→</span>
+                        <div className="min-w-0">
+                          <span className="font-ui text-[12px] text-[--fg-muted] group-hover:text-[--fg] transition-colors">
+                            {target?.name ?? inf.to}
+                          </span>
+                          <span className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] ml-1.5">
+                            {INFLUENCE_LABEL[inf.type]}
+                          </span>
+                        </div>
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
             )}
-          </div>
 
-          <div className="border border-[--hairline] p-5 bg-[--bg-raised] flex flex-col gap-5">
-
-            <div>
-              <div className="flex items-center justify-between mb-2.5">
-                <p className="section-label">Schulen</p>
-                <div className="flex gap-3">
-                  <button onClick={() => setHiddenSchools(new Set())}
-                    className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] hover:text-[--fg-muted] transition-colors">
-                    Alle
-                  </button>
-                  <button onClick={() => setHiddenSchools(new Set(visibleSchools.map(s => s.id)))}
-                    className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] hover:text-[--fg-muted] transition-colors">
-                    Keine
-                  </button>
+            {/* Incoming influences */}
+            {activeNode && incomingInfluences.length > 0 && (
+              <div className="p-4">
+                <p className="section-label mb-2.5">Eingehende Einflüsse</p>
+                <div className="flex flex-col gap-1.5">
+                  {incomingInfluences.map(inf => {
+                    const source = thinkerMap[inf.from]
+                    return (
+                      <button key={inf.from} onClick={() => clickNode(inf.from)}
+                        className="flex items-start gap-2 text-left group">
+                        <span className="text-[12px] mt-0.5 shrink-0 inline-block"
+                          style={{ color: INFLUENCE_COLOR[inf.type], transform: 'rotate(180deg)' }}>→</span>
+                        <div className="min-w-0">
+                          <span className="font-ui text-[12px] text-[--fg-muted] group-hover:text-[--fg] transition-colors">
+                            {source?.name ?? inf.from}
+                          </span>
+                          <span className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] ml-1.5">
+                            {INFLUENCE_LABEL[inf.type]}
+                          </span>
+                        </div>
+                      </button>
+                    )
+                  })}
                 </div>
               </div>
-              <div className="flex flex-col gap-1.5 max-h-[200px] overflow-y-auto pr-1">
-                {visibleSchools.map(s => {
-                  const hidden = hiddenSchools.has(s.id)
-                  return (
-                    <button
-                      key={s.id}
-                      onClick={() => toggleSchool(s.id)}
-                      onMouseEnter={() => { if (!hidden) setHoveredSchool(s.id) }}
-                      onMouseLeave={() => setHoveredSchool(null)}
-                      className="flex items-center gap-2 font-ui text-[11px] text-left w-full transition-opacity"
-                      style={{ opacity: hidden ? 0.28 : 1, color: 'var(--fg-faint)' }}
-                    >
-                      <span className="w-2 h-2 rounded-full shrink-0" style={{ background: s.color }} />
-                      <span style={{ textDecoration: hidden ? 'line-through' : 'none' }}>{s.label}</span>
-                    </button>
-                  )
-                })}
+            )}
+          </aside>
+        )}
+        </div>{/* end flex row: canvas + panel */}
+
+        {/* Mobile detail card */}
+        <div className="sm:hidden border border-[--hairline] p-4 bg-[--bg-raised]">
+          {detail ? (
+            <>
+              <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint] mb-1.5">{detail.eyebrow}</p>
+              <p className="font-display text-[17px] tracking-[0.08em] text-[--fg] mb-2.5">{detail.name}</p>
+              <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">{detail.desc}</p>
+            </>
+          ) : (
+            <p className="font-body italic text-[13px] text-[--fg-dim]">
+              Denker oder Verbindung antippen für Details.
+            </p>
+          )}
+        </div>
+
+        {/* Filter legend */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
+
+          {/* Schools filter */}
+          <div className="border border-[--hairline] p-4 bg-[--bg-raised] flex flex-col gap-3">
+            <div className="flex items-center justify-between">
+              <p className="section-label">Schulen</p>
+              <div className="flex gap-3">
+                <button onClick={() => setHiddenSchools(new Set())}
+                  className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] hover:text-[--fg-muted] transition-colors">
+                  Alle
+                </button>
+                <button onClick={() => setHiddenSchools(new Set(visibleSchools.map(s => s.id)))}
+                  className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] hover:text-[--fg-muted] transition-colors">
+                  Keine
+                </button>
               </div>
             </div>
-
-            <div className="border-t border-[--hairline]" />
-
-            <div>
-              <div className="flex items-center justify-between mb-2.5">
-                <p className="section-label">Einfluss-Typ</p>
-                <div className="flex gap-3">
-                  <button onClick={() => setHiddenTypes(new Set())}
-                    className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] hover:text-[--fg-muted] transition-colors">
-                    Alle
+            <div className="flex flex-col gap-1.5 max-h-[180px] overflow-y-auto pr-1">
+              {visibleSchools.map(s => {
+                const hidden = hiddenSchools.has(s.id)
+                return (
+                  <button
+                    key={s.id}
+                    onClick={() => toggleSchool(s.id)}
+                    onMouseEnter={() => { if (!hidden) setHoveredSchool(s.id) }}
+                    onMouseLeave={() => setHoveredSchool(null)}
+                    className="flex items-center gap-2 font-ui text-[11px] text-left w-full transition-opacity"
+                    style={{ opacity: hidden ? 0.28 : 1, color: 'var(--fg-faint)' }}
+                  >
+                    <span className="w-2 h-2 rounded-full shrink-0" style={{ background: s.color }} />
+                    <span style={{ textDecoration: hidden ? 'line-through' : 'none' }}>{s.label}</span>
                   </button>
-                  <button onClick={() => setHiddenTypes(new Set(Object.keys(INFLUENCE_LABEL) as InfluenceType[]))}
-                    className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] hover:text-[--fg-muted] transition-colors">
-                    Keine
-                  </button>
-                </div>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Influence type filter */}
+          <div className="border border-[--hairline] p-4 bg-[--bg-raised] flex flex-col gap-3">
+            <div className="flex items-center justify-between">
+              <p className="section-label">Einfluss-Typ</p>
+              <div className="flex gap-3">
+                <button onClick={() => setHiddenTypes(new Set())}
+                  className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] hover:text-[--fg-muted] transition-colors">
+                  Alle
+                </button>
+                <button onClick={() => setHiddenTypes(new Set(Object.keys(INFLUENCE_LABEL) as InfluenceType[]))}
+                  className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] hover:text-[--fg-muted] transition-colors">
+                  Keine
+                </button>
               </div>
-              <div className="flex flex-col gap-2">
-                {(Object.entries(INFLUENCE_LABEL) as [InfluenceType, string][]).map(([type, label]) => {
-                  const style = EDGE_STYLE[type]
-                  const hidden = hiddenTypes.has(type)
-                  return (
-                    <button
-                      key={type}
-                      onClick={() => toggleType(type)}
-                      className="flex items-center gap-3 font-ui text-[11px] text-left transition-opacity"
-                      style={{ opacity: hidden ? 0.28 : 1, color: 'var(--fg-faint)' }}
-                    >
-                      <svg width="28" height="12" className="flex-shrink-0">
-                        {style.double ? (
-                          <>
-                            <line x1="0" y1="6" x2="28" y2="6"
-                              stroke={INFLUENCE_COLOR[type]} strokeWidth="3" strokeOpacity="0.8" />
-                            <line x1="0" y1="6" x2="28" y2="6"
-                              stroke={STAGE_BG} strokeWidth="1.2" />
-                          </>
-                        ) : (
+            </div>
+            <div className="flex flex-col gap-2">
+              {(Object.entries(INFLUENCE_LABEL) as [InfluenceType, string][]).map(([type, label]) => {
+                const style = EDGE_STYLE[type]
+                const hidden = hiddenTypes.has(type)
+                return (
+                  <button
+                    key={type}
+                    onClick={() => toggleType(type)}
+                    className="flex items-center gap-3 font-ui text-[11px] text-left transition-opacity"
+                    style={{ opacity: hidden ? 0.28 : 1, color: 'var(--fg-faint)' }}
+                  >
+                    <svg width="28" height="12" className="flex-shrink-0">
+                      {style.double ? (
+                        <>
                           <line x1="0" y1="6" x2="28" y2="6"
-                            stroke={INFLUENCE_COLOR[type]} strokeWidth="1.5"
-                            strokeDasharray={style.dashArray}
-                            strokeLinecap={style.lineCap ?? 'round'}
-                            strokeOpacity="0.85" />
-                        )}
-                      </svg>
-                      <span style={{ textDecoration: hidden ? 'line-through' : 'none' }}>{label}</span>
-                    </button>
-                  )
-                })}
-              </div>
+                            stroke={INFLUENCE_COLOR[type]} strokeWidth="3" strokeOpacity="0.8" />
+                          <line x1="0" y1="6" x2="28" y2="6"
+                            stroke={STAGE_BG} strokeWidth="1.2" />
+                        </>
+                      ) : (
+                        <line x1="0" y1="6" x2="28" y2="6"
+                          stroke={INFLUENCE_COLOR[type]} strokeWidth="1.5"
+                          strokeDasharray={style.dashArray}
+                          strokeLinecap={style.lineCap ?? 'round'}
+                          strokeOpacity="0.85" />
+                      )}
+                    </svg>
+                    <span style={{ textDecoration: hidden ? 'line-through' : 'none' }}>{label}</span>
+                  </button>
+                )
+              })}
             </div>
-
           </div>
+
         </div>
       </div>
     </div>

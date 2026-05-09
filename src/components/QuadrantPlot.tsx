@@ -92,14 +92,16 @@ export default function QuadrantPlot({
         </span>
       </div>
 
+      {/* Plot stage + side panel */}
+      <div className="flex items-stretch">
+
       {/* Plot stage */}
       <div
         ref={containerRef}
-        className="relative overflow-hidden border border-[--hairline] bg-[--bg-sunk]"
+        className="relative overflow-hidden border border-[--hairline] bg-[--bg-sunk] flex-1 min-w-0"
         style={{
           aspectRatio: `${W}/${H}`,
           maxHeight:   `${H}px`,
-          maxWidth:    '100%',
           cursor:      'grab',
           touchAction: 'none',
           userSelect:  'none',
@@ -272,60 +274,88 @@ export default function QuadrantPlot({
         <MapZoomControls onZoomIn={zoomIn} onZoomOut={zoomOut} onReset={reset} />
       </div>
 
-      {/* Detail card + legend */}
-      <div className="grid grid-cols-1 sm:grid-cols-[1fr_220px] gap-4 items-start">
+      {/* Side panel (desktop) */}
+      {selected && (
+        <aside
+          className="hidden sm:flex w-[300px] shrink-0 flex-col border border-[--hairline] border-l-0 bg-[--bg-raised] overflow-y-auto"
+          style={{ maxHeight: `${H}px` }}
+        >
+          {/* Panel header */}
+          <div className="flex items-start justify-between gap-3 p-4 border-b border-[--hairline] shrink-0">
+            <div className="flex flex-col gap-0.5 min-w-0">
+              <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint]">
+                <span className="mr-1.5 opacity-70">{CONCEPT_GLYPH[selected.type]}</span>
+                {CONCEPT_LABEL[selected.type] ?? 'Konzept'}
+              </p>
+              <p className="font-display text-[16px] tracking-[0.08em] text-[--fg] leading-tight">
+                {selected.name}
+              </p>
+            </div>
+            <button
+              onClick={() => setSelected(null)}
+              aria-label="Schliessen"
+              className="mt-0.5 shrink-0 text-[--fg-faint] hover:text-[--fg] transition-colors"
+            >
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                <line x1="1" y1="1" x2="11" y2="11" /><line x1="11" y1="1" x2="1" y2="11" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Description */}
+          <div className="p-4 border-b border-[--hairline]">
+            <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">
+              {selected.description}
+            </p>
+          </div>
+
+          {/* Thinkers from same school */}
+          {authorsOf.length > 0 && (
+            <div className="p-4">
+              <p className="section-label mb-2.5">Aus dieser Schule</p>
+              <div className="flex flex-col gap-1">
+                {authorsOf.map(t => (
+                  <span key={t.id} className="font-ui text-[12px] text-[--fg-muted]">{t.name}</span>
+                ))}
+              </div>
+            </div>
+          )}
+        </aside>
+      )}
+      </div>{/* end flex row: canvas + panel */}
+
+      {/* Mobile detail card */}
+      <div className="sm:hidden border border-[--hairline] p-4 bg-[--bg-raised]">
         {selected ? (
-          <div className="border border-[--hairline] p-5 bg-[--bg-raised] min-h-[100px]">
-            <p className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-[--fg-faint] mb-2">
+          <>
+            <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint] mb-1.5">
               <span className="mr-1.5 opacity-70">{CONCEPT_GLYPH[selected.type]}</span>
               {CONCEPT_LABEL[selected.type] ?? 'Konzept'}
             </p>
-            <p className="font-display text-[18px] tracking-[0.10em] text-[--fg] mb-3">
-              {selected.name}
-            </p>
-            <p className="font-prose text-[15px] leading-relaxed text-[--fg-muted]">
-              {selected.description}
-            </p>
-            {authorsOf.length > 0 && (
-              <div className="mt-4 pt-4 border-t border-[--hairline]">
-                <p className="font-ui text-[10px] tracking-[0.18em] uppercase text-[--fg-faint] mb-2.5">
-                  Aus dieser Schule
-                </p>
-                <div className="flex flex-wrap gap-x-3 gap-y-1">
-                  {authorsOf.map(t => (
-                    <span key={t.id} className="font-ui text-[12px] text-[--fg-muted]">
-                      {t.name}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
+            <p className="font-display text-[16px] tracking-[0.08em] text-[--fg] mb-2.5">{selected.name}</p>
+            <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">{selected.description}</p>
+          </>
         ) : (
-          <div className="border border-[--hairline] p-5 bg-[--bg-raised] min-h-[100px]">
-            <p className="font-body italic text-[14px] text-[--fg-dim]">
-              Wähle ein Konzept im Quadranten, um mehr zu erfahren.
-            </p>
-          </div>
+          <p className="font-body italic text-[13px] text-[--fg-dim]">
+            Konzept antippen für Details.
+          </p>
         )}
+      </div>
 
-        <div className="border border-[--hairline] p-5 bg-[--bg-raised]">
-          <p className="section-label mb-3">Legende</p>
-          <div className="flex flex-col gap-2.5">
-            {(Object.entries(CONCEPT_LABEL) as [ConceptType, string][]).map(([type, label]) => (
-              <div key={type} className="flex items-center gap-3 font-ui text-[11px] text-[--fg-faint]">
-                <span className="w-5 text-center text-[--gold] opacity-75 text-xs">
-                  {CONCEPT_GLYPH[type]}
-                </span>
-                <span>{label}</span>
-              </div>
-            ))}
-            <MapHiddenCounter
-              hidden={hidden}
-              noun={{ singular: 'Konzept', plural: 'Konzepte' }}
-              className="font-body italic text-xs text-[--fg-dim] mt-2 border-t border-[--hairline] pt-2"
-            />
-          </div>
+      {/* Legend */}
+      <div className="border border-[--hairline] p-4 bg-[--bg-raised]">
+        <div className="flex flex-wrap gap-x-6 gap-y-2">
+          {(Object.entries(CONCEPT_LABEL) as [ConceptType, string][]).map(([type, label]) => (
+            <div key={type} className="flex items-center gap-2 font-ui text-[11px] text-[--fg-faint]">
+              <span className="text-[--gold] opacity-75 text-xs">{CONCEPT_GLYPH[type]}</span>
+              <span>{label}</span>
+            </div>
+          ))}
+          <MapHiddenCounter
+            hidden={hidden}
+            noun={{ singular: 'Konzept', plural: 'Konzepte' }}
+            className="font-body italic text-xs text-[--fg-dim]"
+          />
         </div>
       </div>
 
