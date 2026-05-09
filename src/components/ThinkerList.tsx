@@ -127,7 +127,7 @@ export default function ThinkerList({
               }}
             >
               <span className="w-[6px] h-[6px] rounded-full" style={{ background: s.color }} />
-              {s.name}
+              {s.label}
               <span className="opacity-60">{count}</span>
             </button>
           )
@@ -163,7 +163,7 @@ export default function ThinkerList({
                     )}
                     {school && (
                       <span className="font-ui text-[9px] tracking-[0.16em] uppercase" style={{ color }}>
-                        {school.name}
+                        {school.label}
                       </span>
                     )}
                   </div>
@@ -210,7 +210,7 @@ function GroupedList({
                 className="font-ui text-[11px] font-medium tracking-[0.20em] uppercase"
                 style={{ color: s.color }}
               >
-                {s.name}
+                {s.label}
               </span>
               <span className="font-ui text-[11px] tracking-[0.08em] ml-auto" style={{ color: s.color, opacity: 0.5 }}>
                 {group.length}

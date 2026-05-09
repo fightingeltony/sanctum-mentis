@@ -325,7 +325,7 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
   }, [thinkers, schools, topic.graphLayout])
 
   const schoolLabels = useMemo(
-    () => Object.fromEntries(schools.map(s => [s.id, s.name])),
+    () => Object.fromEntries(schools.map(s => [s.id, s.label])),
     [schools],
   )
   const schoolColors = useMemo(
@@ -732,7 +732,7 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
                       style={{ opacity: hidden ? 0.28 : 1, color: 'var(--fg-faint)' }}
                     >
                       <span className="w-2 h-2 rounded-full shrink-0" style={{ background: s.color }} />
-                      <span style={{ textDecoration: hidden ? 'line-through' : 'none' }}>{s.name}</span>
+                      <span style={{ textDecoration: hidden ? 'line-through' : 'none' }}>{s.label}</span>
                     </button>
                   )
                 })}

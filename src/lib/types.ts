@@ -38,7 +38,7 @@ export interface Level {
 /** Eine philosophische Schule / Strömung */
 export interface School {
   id: string;
-  name: string;
+  label: string;
   color: string;       // direkt verwendbar (oklch / hex)
   glyph: string;       // Symbol für die Liste, z.B. "◈"
   motto?: string;

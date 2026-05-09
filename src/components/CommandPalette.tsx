@@ -91,7 +91,7 @@ export default function CommandPalette({ open, onClose, thinkers, schools, onSel
                           className="font-ui text-[9px] tracking-[0.14em] uppercase shrink-0"
                           style={{ color }}
                         >
-                          {school.name}
+                          {school.label}
                         </span>
                       )}
                     </div>
