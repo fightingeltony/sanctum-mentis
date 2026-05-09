@@ -12,13 +12,14 @@ export default function LandingPage() {
         className="font-prose font-medium text-[36px] md:text-[52px] leading-[1.1] text-[--fg] mb-8"
         style={{ textWrap: 'balance' } as React.CSSProperties}
       >
-        Lerne Philosophie auf deinem Tempo.
+        Komplexe Ideen. Endlich klar verortet.
       </h1>
 
       <p className="font-body text-[18px] md:text-[20px] text-[--fg-muted] leading-relaxed mb-10 max-w-[60ch]">
-        Ein Komplexitäts-Slider steuert, wie tief jede Antwort ausfällt — von der
-        Einsteigerkurzfassung bis zur fachlichen Synthese. Denker, Einflüsse und
-        die zentralen Konzepte werden so freigeschaltet, wie du bereit bist.
+        Klassische Sachbücher und Enzyklopädien erschlagen uns oft mit Details.
+        Sanctum Mentis ist das erste interaktive Navigationssystem für Philosophie
+        und Psychologie. Entdecke die klügsten Konzepte der Geschichte ohne kognitive
+        Überlastung – und sieh auf einen Blick, wie sie zusammenhängen.
       </p>
 
       <div className="flex flex-wrap gap-4 mb-16">
@@ -47,18 +48,18 @@ export default function LandingPage() {
         {[
           {
             num: 'I',
-            title: 'Slider statt Suche',
-            text: 'Stell ein, wie tief du gehen willst — der Inhalt passt sich an, nicht umgekehrt.',
+            title: 'Komplexität auf Abruf',
+            text: 'Du bestimmst die Tiefe. Statt dich sofort mit Fachjargon zu überladen, wächst der Inhalt mit deinem Verständnis mit – vom einfachen Einstiegs-Überblick bis zur tiefen akademischen Synthese.',
           },
           {
             num: 'II',
-            title: 'Einflüsse als Karte',
-            text: 'Wer kritisierte wen? Wer war Schüler von wem? Im Graph wird der Streit sichtbar.',
+            title: 'Die Debatte im Fokus',
+            text: 'Ideen entstehen durch Reibung. Erkenne sofort, wer auf wem aufbaut und wo Weltanschauungen hart aufeinanderprallen. Der abstrakte Streit der Denker wird visuell greifbar.',
           },
           {
             num: 'III',
-            title: 'Konzepte verortet',
-            text: 'Jeder Begriff bekommt eine Position im Quadranten-Raum — du siehst auf einen Blick, wo er steht.',
+            title: 'Wissen räumlich verankert',
+            text: 'Konzepte schweben nicht länger im luftleeren Raum. Jede Idee erhält einen logischen Platz im Koordinatensystem, damit dein Gehirn das "Big Picture" intuitiv abspeichern kann.',
           },
         ].map(item => (
           <div key={item.num} className="flex flex-col gap-2">

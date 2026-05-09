@@ -10,6 +10,16 @@
     "tags": ["Empirismus", "Rationalismus", "Skeptizismus"]
   },
   {
+    "id": "das-selbst",
+    "title": "Die Landkarte des Selbst",
+    "subtitle": "Was ist das Ich? Von antiker Essenz bis zur neurokognitiven Simulation.",
+    "era": "Antike – Gegenwart",
+    "themeColor": "oklch(0.42 0.12 295)",
+    "status": "available",
+    "desc": "Von Vedanta bis Karl Friston — wie 3000 Jahre Denken das Ich als Essenz, Struktur, Simulation oder Fluss begreifen.",
+    "tags": ["Identität", "Bewusstsein", "Neurowissenschaft", "Spiritualität"]
+  },
+  {
     "id": "ethik",
     "title": "Ethik",
     "subtitle": "Was sollen wir tun?",

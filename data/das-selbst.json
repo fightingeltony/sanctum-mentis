@@ -1,0 +1,475 @@
+{
+  "topic": {
+    "id": "das-selbst",
+    "title": "Die Landkarte des Selbst",
+    "subtitle": "Was ist das Ich? Von antiker Essenz bis zur neurokognitiven Simulation.",
+    "theme": {
+      "accent": "oklch(0.42 0.12 295)",
+      "accentSoft": "oklch(0.42 0.12 295 / 0.15)"
+    },
+    "complexityLevels": 5,
+    "quadrants": {
+      "axisX": {
+        "label": "Natur des Selbst",
+        "left": "Substanz & Konstanz",
+        "right": "Prozess & Fluidität"
+      },
+      "axisY": {
+        "label": "Erkenntnisrahmen",
+        "top": "Spirituell & Transpersonal",
+        "bottom": "Wissenschaftlich & Psychologisch"
+      }
+    }
+  },
+  "levels": [
+    {
+      "id": 1,
+      "label": "Einstieg",
+      "short": "L1"
+    },
+    {
+      "id": 2,
+      "label": "Grundlagen",
+      "short": "L2"
+    },
+    {
+      "id": 3,
+      "label": "Vertiefung",
+      "short": "L3"
+    },
+    {
+      "id": 4,
+      "label": "Analyse",
+      "short": "L4"
+    },
+    {
+      "id": 5,
+      "label": "Synthese",
+      "short": "L5"
+    }
+  ],
+  "thinkers": [
+    {
+      "id": "vedanta",
+      "name": "Vedanta",
+      "lifespan": "~800 v. Chr. –",
+      "firstLevel": 1,
+      "schoolId": "vedanta",
+      "x": 12,
+      "y": 88,
+      "versions": {
+        "1": "Das wahre Selbst (Atman) ist ein unzerstörbarer, ewiger Kern, der mit dem Kosmos identisch ist und gefunden werden muss."
+      }
+    },
+    {
+      "id": "buddhismus",
+      "name": "Buddhismus",
+      "lifespan": "~500 v. Chr. –",
+      "firstLevel": 1,
+      "schoolId": "buddhismus",
+      "x": 88,
+      "y": 82,
+      "versions": {
+        "1": "Die Lehre der Leerheit (Anatta). Was wir als 'Ich' empfinden, ist nur ein ständiger, dynamischer Fluss von Sinneseindrücken. Es gibt keinen festen Kern."
+      }
+    },
+    {
+      "id": "jung",
+      "name": "C.G. Jung",
+      "lifespan": "1875–1961",
+      "firstLevel": 2,
+      "schoolId": "analytische-psychologie",
+      "x": 28,
+      "y": 42,
+      "versions": {
+        "2": "Das Selbst ist eine psychische Organisation, das Zentrum der Persönlichkeit, das durch den Prozess der Individuation gebaut und integriert wird."
+      }
+    },
+    {
+      "id": "metzinger",
+      "name": "Thomas Metzinger",
+      "lifespan": "1958–",
+      "firstLevel": 3,
+      "schoolId": "neurophilosophie",
+      "x": 72,
+      "y": 22,
+      "versions": {
+        "3": "Das Ego-Tunnel-Modell. Niemand war je ein Selbst. Das 'Ich' ist lediglich ein nützliches Datenformat, eine Simulation unseres Gehirns."
+      }
+    },
+    {
+      "id": "barrett",
+      "name": "Lisa Feldman Barrett",
+      "lifespan": "1963–",
+      "firstLevel": 3,
+      "schoolId": "konstruktive-neurowissenschaft",
+      "x": 65,
+      "y": 18,
+      "versions": {
+        "3": "Emotionen und das erlebte Selbst sind keine festen Instanzen im Gehirn, sondern werden im Bruchteil einer Sekunde konstruiert, um Energie effizient zu steuern."
+      }
+    },
+    {
+      "id": "ifs",
+      "name": "Internal Family Systems",
+      "lifespan": "1990er –",
+      "firstLevel": 4,
+      "schoolId": "integrative-psychotherapie",
+      "x": 22,
+      "y": 65,
+      "versions": {
+        "4": "Therapeutisches Modell von Dick Schwartz. Wir bestehen aus vielen 'Teilen', besitzen aber im Kern ein unzerstörbares, heiles 'Selbst', das Führung übernehmen kann."
+      }
+    },
+    {
+      "id": "friston",
+      "name": "Karl Friston",
+      "lifespan": "1959–",
+      "firstLevel": 4,
+      "schoolId": "neurophilosophie",
+      "x": 78,
+      "y": 15,
+      "versions": {
+        "4": "Das Inferenz-Modell (Free Energy Principle). Das Selbst ist ein mathematischer Imperativ des Gehirns, um Überraschungen zu minimieren und das Überleben zu sichern."
+      }
+    },
+    {
+      "id": "rohr",
+      "name": "Richard Rohr",
+      "lifespan": "1943–",
+      "firstLevel": 5,
+      "schoolId": "christliche-mystik",
+      "x": 18,
+      "y": 92,
+      "versions": {
+        "5": "Das 'Wahre Selbst' ist unser objektiver Anteil an Gott, verborgen unter dem falschen Selbst unserer Ego-Strukturen."
+      }
+    },
+    {
+      "id": "prozesstheologie",
+      "name": "Prozess-Theologie",
+      "lifespan": "Whitehead / Keller",
+      "firstLevel": 5,
+      "schoolId": "prozesstheologie",
+      "x": 82,
+      "y": 88,
+      "versions": {
+        "5": "Das Selbst und selbst das Göttliche (Whitehead/Keller) sind keine statischen Substanzen, sondern heilige Ereignisse, die sich in ständiger Beziehung zu anderen ereignen."
+      }
+    },
+    {
+      "id": "almaas",
+      "name": "A.H. Almaas",
+      "lifespan": "1944–",
+      "firstLevel": 4,
+      "schoolId": "essentielle-psychologie",
+      "x": 16,
+      "y": 76,
+      "versions": {
+        "4": "Begründer des Diamond Approach: Das wahre Selbst ist eine lebendige, multidimensionale Essenz — nicht abstrakt wie Atman, sondern direkt als Qualität (Liebe, Stärke, Frieden) erfahrbar."
+      }
+    },
+    {
+      "id": "kohut",
+      "name": "Heinz Kohut",
+      "lifespan": "1913–1981",
+      "firstLevel": 3,
+      "schoolId": "selbstpsychologie",
+      "x": 32,
+      "y": 28,
+      "versions": {
+        "3": "Begründer der Selbstpsychologie. Das Selbst braucht 'Selbstobjekte' — spiegelnde und idealisierbare Bezugspersonen — um sich kohärent zu entwickeln. Trauma fragmentiert es."
+      }
+    },
+    {
+      "id": "rogers",
+      "name": "Carl Rogers",
+      "lifespan": "1902–1987",
+      "firstLevel": 3,
+      "schoolId": "humanistische-psychologie",
+      "x": 18,
+      "y": 38,
+      "versions": {
+        "3": "Das Selbst entsteht aus der Übereinstimmung zwischen dem erlebten Organismus und dem Selbstbild. Diskrepanz erzeugt Leid; bedingungslose Akzeptanz ermöglicht Heilung."
+      }
+    },
+    {
+      "id": "adler",
+      "name": "Alfred Adler",
+      "lifespan": "1870–1937",
+      "firstLevel": 3,
+      "schoolId": "individualpsychologie",
+      "x": 40,
+      "y": 22,
+      "versions": {
+        "3": "Jeder Mensch entwickelt einen einzigartigen Lebensstil als Kompensation für erlebte Minderwertigkeit. Das Selbst ist kein Innenraum, sondern eine soziale Bewegungsrichtung."
+      }
+    },
+    {
+      "id": "hood",
+      "name": "Bruce Hood",
+      "lifespan": "1962–",
+      "firstLevel": 3,
+      "schoolId": "neurophilosophie",
+      "x": 60,
+      "y": 28,
+      "versions": {
+        "3": "Das Gehirn konstruiert ein kohärentes Ich-Narrativ aus fragmentierten Erfahrungen — ein nützlicher Trick der Evolution, keine ontologische Wahrheit. (The Self Illusion, 2012)"
+      }
+    },
+    {
+      "id": "ferrer",
+      "name": "Jorge Ferrer",
+      "lifespan": "1968–",
+      "firstLevel": 4,
+      "schoolId": "transpersonale-psychologie",
+      "x": 75,
+      "y": 72,
+      "versions": {
+        "4": "Partizipative Spiritualität: Spirituelle Erfahrungen entstehen nicht im isolierten Individuum, sondern durch aktive Ko-Kreation zwischen Mensch, Gemeinschaft und dem kosmischen Feld."
+      }
+    }
+  ],
+  "schools": [
+    {
+      "id": "vedanta",
+      "label": "Vedanta",
+      "color": "oklch(0.48 0.13 55)"
+    },
+    {
+      "id": "buddhismus",
+      "label": "Buddhismus",
+      "color": "oklch(0.44 0.11 75)"
+    },
+    {
+      "id": "analytische-psychologie",
+      "label": "Analytische Psychologie",
+      "color": "oklch(0.40 0.09 200)"
+    },
+    {
+      "id": "neurophilosophie",
+      "label": "Neurophilosophie",
+      "color": "oklch(0.38 0.10 240)"
+    },
+    {
+      "id": "konstruktive-neurowissenschaft",
+      "label": "Konstruktive Neurowissenschaft",
+      "color": "oklch(0.36 0.09 230)"
+    },
+    {
+      "id": "integrative-psychotherapie",
+      "label": "Integrative Psychotherapie",
+      "color": "oklch(0.42 0.10 150)"
+    },
+    {
+      "id": "christliche-mystik",
+      "label": "Christliche Mystik",
+      "color": "oklch(0.42 0.09 350)"
+    },
+    {
+      "id": "prozesstheologie",
+      "label": "Prozess-Theologie",
+      "color": "oklch(0.40 0.11 290)"
+    },
+    {
+      "id": "essentielle-psychologie",
+      "label": "Essentielle Psychologie",
+      "color": "oklch(0.46 0.12 48)"
+    },
+    {
+      "id": "selbstpsychologie",
+      "label": "Selbstpsychologie",
+      "color": "oklch(0.42 0.08 330)"
+    },
+    {
+      "id": "humanistische-psychologie",
+      "label": "Humanistische Psychologie",
+      "color": "oklch(0.44 0.10 135)"
+    },
+    {
+      "id": "individualpsychologie",
+      "label": "Individualpsychologie",
+      "color": "oklch(0.46 0.11 65)"
+    },
+    {
+      "id": "transpersonale-psychologie",
+      "label": "Transpersonale Psychologie",
+      "color": "oklch(0.38 0.12 295)"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "atman",
+      "name": "Atman (Das ewige Selbst)",
+      "type": "axiom",
+      "firstLevel": 1,
+      "x": 10,
+      "y": 88,
+      "versions": {
+        "1": "Das unveränderliche, ewige Selbst im Vedanta — identisch mit Brahman, dem universellen Bewusstsein."
+      }
+    },
+    {
+      "id": "anatta",
+      "name": "Anatta (Das Nicht-Selbst)",
+      "type": "axiom",
+      "firstLevel": 1,
+      "x": 88,
+      "y": 78,
+      "versions": {
+        "1": "Die buddhistische Leerheit des Ich: Was wir 'Selbst' nennen, ist ein flüchtiger Strom aus fünf Skandhas — kein fester Kern."
+      }
+    },
+    {
+      "id": "individuation",
+      "name": "Individuation & Archetypen",
+      "type": "theory",
+      "firstLevel": 2,
+      "x": 25,
+      "y": 35,
+      "versions": {
+        "2": "Jungs Lebensprozess der psychischen Reifung: Integration der Archetypen (Schatten, Anima/Animus, Selbst) zum vollständigen Individuum."
+      }
+    },
+    {
+      "id": "ego-tunnel",
+      "name": "Der Ego-Tunnel",
+      "type": "theory",
+      "firstLevel": 3,
+      "x": 70,
+      "y": 22,
+      "versions": {
+        "3": "Metzingers Kernthese: Das Gehirn erzeugt ein Selbstmodell — einen phänomenalen Tunnel — den wir fälschlicherweise als 'Ich' erleben."
+      }
+    },
+    {
+      "id": "free-energy",
+      "name": "Free Energy Principle",
+      "type": "theory",
+      "firstLevel": 4,
+      "x": 80,
+      "y": 10,
+      "versions": {
+        "4": "Fristons mathematisches Prinzip: Das Gehirn minimiert die Differenz zwischen Vorhersage und Realität. Das Selbst ist das Vorhersagemodell."
+      }
+    },
+    {
+      "id": "wahres-selbst",
+      "name": "Das Wahre Selbst",
+      "type": "axiom",
+      "firstLevel": 5,
+      "x": 14,
+      "y": 80,
+      "versions": {
+        "5": "Rohrs Begriff: Das Wahre Selbst ist das, was übrigbleibt, wenn wir alle aufgebauten Identitäten ablegen — das unzerstörbare Wesen, das Gott in uns kennt."
+      }
+    },
+    {
+      "id": "nukleares-selbst",
+      "name": "Nukleares Selbst",
+      "type": "concept",
+      "firstLevel": 3,
+      "x": 33,
+      "y": 30,
+      "versions": {
+        "3": "Kohuts Kernbegriff: Das nukleare Selbst ist das Zentrum von Ehrgeiz, Werten und Talenten — kohärent, wenn frühe Selbstobjekte gut genug spiegelten; fragmentiert bei Trauma."
+      }
+    },
+    {
+      "id": "organismisches-ich",
+      "name": "Organismisches Ich",
+      "type": "concept",
+      "firstLevel": 3,
+      "x": 18,
+      "y": 42,
+      "versions": {
+        "3": "Rogers' Fundament: Der Organismus weiß instinktiv, was er braucht. Gesundheit entsteht, wenn das Selbstkonzept dem organischen Erleben entspricht — nicht umgekehrt."
+      }
+    },
+    {
+      "id": "lebensstil",
+      "name": "Lebensstil",
+      "type": "concept",
+      "firstLevel": 3,
+      "x": 40,
+      "y": 24,
+      "versions": {
+        "3": "Adlers Schlüsselbegriff: Der individuelle Lebensstil ist die einmalige, unbewusste Strategie eines Menschen, um Minderwertigkeitsgefühle zu kompensieren und Zugehörigkeit zu gewinnen."
+      }
+    },
+    {
+      "id": "illusion-des-selbst",
+      "name": "Die Illusion des Selbst",
+      "type": "theory",
+      "firstLevel": 3,
+      "x": 62,
+      "y": 30,
+      "versions": {
+        "3": "Hoods These: Das erlebte Ich ist eine Fiktion des Gehirns — konstruiert aus Erinnerungen, Erwartungen und sozialen Rollen, um Handlungen zu koordinieren."
+      }
+    },
+    {
+      "id": "partizipation",
+      "name": "Partizipation",
+      "type": "concept",
+      "firstLevel": 4,
+      "x": 72,
+      "y": 70,
+      "versions": {
+        "4": "Ferrers Kernkonzept: Spirituelle Wahrheit entsteht partizipativ — durch verkörperten Kontakt mit der Wirklichkeit in Gemeinschaft, nicht durch einsame innere Erfahrung."
+      }
+    }
+  ],
+  "influences": [
+    {
+      "id": "vedanta-buddhismus",
+      "from": "vedanta",
+      "to": "buddhismus",
+      "type": "critique",
+      "firstLevel": 1,
+      "versions": {
+        "1": "Der absolute Gegensatz. Atman (ewiger Kern) vs. Anatta (Leerheit)."
+      }
+    },
+    {
+      "id": "buddhismus-jung",
+      "from": "buddhismus",
+      "to": "jung",
+      "type": "rejection",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Jung sucht den wahren Kern (das Selbst), den der Buddhismus als Ursache von Leid dekonstruiert."
+      }
+    },
+    {
+      "id": "jung-metzinger",
+      "from": "jung",
+      "to": "metzinger",
+      "type": "critique",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Metzinger reduziert Jungs tiefes, psychisches Zentrum auf eine reine Rechenleistung des Gehirns."
+      }
+    },
+    {
+      "id": "buddhismus-barrett",
+      "from": "buddhismus",
+      "to": "barrett",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Moderne wissenschaftliche Bestätigung der buddhistischen These: Das Ich ist ein Konstrukt aus Momenten (Skandhas)."
+      }
+    },
+    {
+      "id": "jung-ifs",
+      "from": "jung",
+      "to": "ifs",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "IFS baut auf Jungs Arbeit der Teilpersönlichkeiten (Komplexe) auf, setzt aber eine spirituelle Essenz ins Zentrum."
+      }
+    }
+  ]
+}

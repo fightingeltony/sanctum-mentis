@@ -21,8 +21,9 @@ interface Props {
   quadrants: Quadrants
 }
 
-const W = 700, H = 700
-const PAD = 60
+const W = 980, H = 700
+const PAD_X = 200  // wider horizontal margin to fit axis labels outside the frame
+const PAD_Y = 60
 const PIN_COLOR     = 'oklch(0.32 0.09 42)'  // dark sienna
 const PIN_SELECTED  = 'oklch(0.26 0.10 42)'
 const AXIS_COL      = 'oklch(0.35 0.022 65 / 0.55)'
@@ -30,8 +31,8 @@ const AXIS_LABEL    = 'oklch(0.28 0.022 65 / 0.85)'
 const AXIS_HINT     = 'oklch(0.40 0.022 65 / 0.55)'
 
 // Convert normalized 0-100 (math convention: y=0 bottom) into SVG coords (y=0 top).
-function mapX(x: number) { return PAD + (x / 100) * (W - 2 * PAD) }
-function mapY(y: number) { return H - PAD - (y / 100) * (H - 2 * PAD) }
+function mapX(x: number) { return PAD_X + (x / 100) * (W - 2 * PAD_X) }
+function mapY(y: number) { return H - PAD_Y - (y / 100) * (H - 2 * PAD_Y) }
 
 export default function QuadrantPlot({
   concepts, totalConcepts, thinkers = [], levelId, currentLevel, quadrants,
@@ -98,7 +99,7 @@ export default function QuadrantPlot({
         style={{
           aspectRatio: `${W}/${H}`,
           maxHeight:   `${H}px`,
-          maxWidth:    `${W}px`,
+          maxWidth:    '100%',
           cursor:      'grab',
           touchAction: 'none',
           userSelect:  'none',
@@ -124,31 +125,31 @@ export default function QuadrantPlot({
           >
             {/* ── Background grid lines ── */}
             {[0.25, 0.75].map(t => {
-              const x = PAD + t * (W - 2 * PAD)
-              const y = PAD + t * (H - 2 * PAD)
+              const x = PAD_X + t * (W - 2 * PAD_X)
+              const y = PAD_Y + t * (H - 2 * PAD_Y)
               return (
                 <g key={t} pointerEvents="none">
-                  <line x1={x} y1={PAD} x2={x} y2={H - PAD}
+                  <line x1={x} y1={PAD_Y} x2={x} y2={H - PAD_Y}
                     stroke={AXIS_COL} strokeOpacity={0.18} strokeDasharray="2 4" />
-                  <line x1={PAD} y1={y} x2={W - PAD} y2={y}
+                  <line x1={PAD_X} y1={y} x2={W - PAD_X} y2={y}
                     stroke={AXIS_COL} strokeOpacity={0.18} strokeDasharray="2 4" />
                 </g>
               )
             })}
 
             {/* ── Plot border frame ── */}
-            <rect x={PAD} y={PAD} width={W - 2 * PAD} height={H - 2 * PAD}
+            <rect x={PAD_X} y={PAD_Y} width={W - 2 * PAD_X} height={H - 2 * PAD_Y}
               fill="none" stroke={AXIS_COL} strokeOpacity={0.35} strokeWidth={0.75}
               pointerEvents="none" />
 
             {/* ── Axis cross (heavier strokes through middle) ── */}
-            <line x1={W / 2} y1={PAD} x2={W / 2} y2={H - PAD}
+            <line x1={W / 2} y1={PAD_Y} x2={W / 2} y2={H - PAD_Y}
               stroke={AXIS_COL} strokeOpacity={0.55} strokeWidth={1} pointerEvents="none" />
-            <line x1={PAD} y1={H / 2} x2={W - PAD} y2={H / 2}
+            <line x1={PAD_X} y1={H / 2} x2={W - PAD_X} y2={H / 2}
               stroke={AXIS_COL} strokeOpacity={0.55} strokeWidth={1} pointerEvents="none" />
 
-            {/* ── Axis labels (X axis) ── */}
-            <text x={PAD - 8} y={H / 2}
+            {/* ── Axis labels (X axis) — outside the frame ── */}
+            <text x={PAD_X - 12} y={H / 2}
               textAnchor="end" dominantBaseline="middle"
               fontFamily="'Marcellus SC', serif"
               fontWeight="bold" fontSize={11} letterSpacing="0.18em"
@@ -157,7 +158,7 @@ export default function QuadrantPlot({
             >
               {quadrants.axisX.left.toUpperCase()}
             </text>
-            <text x={W - PAD + 8} y={H / 2}
+            <text x={W - PAD_X + 12} y={H / 2}
               textAnchor="start" dominantBaseline="middle"
               fontFamily="'Marcellus SC', serif"
               fontWeight="bold" fontSize={11} letterSpacing="0.18em"
@@ -166,7 +167,7 @@ export default function QuadrantPlot({
             >
               {quadrants.axisX.right.toUpperCase()}
             </text>
-            <text x={W / 2} y={H - PAD / 2.2}
+            <text x={W / 2} y={H - PAD_Y / 2}
               textAnchor="middle" dominantBaseline="middle"
               fontFamily="'Inter', system-ui, sans-serif"
               fontStyle="italic" fontSize={10} letterSpacing="0.08em"
@@ -176,8 +177,8 @@ export default function QuadrantPlot({
               ← {quadrants.axisX.label} →
             </text>
 
-            {/* ── Axis labels (Y axis) ── */}
-            <text x={W / 2} y={PAD - 14}
+            {/* ── Axis labels (Y axis) — outside the frame ── */}
+            <text x={W / 2} y={PAD_Y - 14}
               textAnchor="middle" dominantBaseline="middle"
               fontFamily="'Marcellus SC', serif"
               fontWeight="bold" fontSize={11} letterSpacing="0.18em"
@@ -186,7 +187,7 @@ export default function QuadrantPlot({
             >
               {quadrants.axisY.top.toUpperCase()}
             </text>
-            <text x={W / 2} y={H - PAD + 18}
+            <text x={W / 2} y={H - PAD_Y + 18}
               textAnchor="middle" dominantBaseline="middle"
               fontFamily="'Marcellus SC', serif"
               fontWeight="bold" fontSize={11} letterSpacing="0.18em"
@@ -195,17 +196,6 @@ export default function QuadrantPlot({
             >
               {quadrants.axisY.bottom.toUpperCase()}
             </text>
-            <text
-              transform={`translate(${PAD / 2.2} ${H / 2}) rotate(-90)`}
-              textAnchor="middle" dominantBaseline="middle"
-              fontFamily="'Inter', system-ui, sans-serif"
-              fontStyle="italic" fontSize={10} letterSpacing="0.08em"
-              fill={AXIS_HINT}
-              pointerEvents="none"
-            >
-              ← {quadrants.axisY.label} →
-            </text>
-
             {/* ── Concept markers ── */}
             {concepts.map(concept => {
               const isSelected = selected?.id === concept.id

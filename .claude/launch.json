@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "carta-librorum",
+      "runtimeExecutable": "cmd",
+      "runtimeArgs": ["/c", ".claude\\start-server.bat"],
+      "port": 3000
+    }
+  ]
+}

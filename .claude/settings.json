@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "Write-Output '{\"systemMessage\": \"Session-Ende: Bitte backlog.md aktualisieren - neue Ideen, erledigte Tasks, geaenderte Prios?\"}'",
+            "shell": "powershell"
+          }
+        ]
+      }
+    ]
+  }
+}

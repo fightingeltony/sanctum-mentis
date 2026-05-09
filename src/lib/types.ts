@@ -86,11 +86,11 @@ export interface Influence extends Versioned {
 
 /** Konzept-Kategorien für Filterung im QuadrantPlot */
 export type ConceptType =
-  | 'principle'    // Grundprinzip ("Cogito ergo sum")
-  | 'method'       // Methode (Dialektik, Phänomenologie)
-  | 'argument'     // Argument (Gottesbeweis, Trolley-Problem)
-  | 'distinction'  // Unterscheidung (a priori / a posteriori)
-  | 'school'       // Strömung/Position als Knoten
+  | 'axiom'        // Unumstößliches Fundament, nicht weiter ableitbar (Atman, Cogito)
+  | 'theory'       // Komplexes Erklärungsgebäude oder Modell (Ego-Tunnel, Individuation)
+  | 'concept'      // Spezifischer Begriff / Bauelement innerhalb einer Theorie (Tabula rasa)
+  | 'phenomenon'   // Beobachtung oder beschreibbarer Zustand (Induktionsproblem, Flow)
+  | 'method'       // Erkenntnisweg oder anwendbare Praxis (Falsifikation, Meditation)
 
 /** Ein Konzept im Quadranten-Raum */
 export interface Concept extends Versioned {
