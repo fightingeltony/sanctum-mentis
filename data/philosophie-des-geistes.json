@@ -1,0 +1,385 @@
+{
+  "topic": {
+    "id": "philosophie-des-geistes",
+    "title": "Philosophie des Geistes",
+    "subtitle": "Was ist Bewusstsein? Von Descartes' Dualismus bis zum Hard Problem.",
+    "theme": {
+      "accent": "oklch(0.44 0.13 240)",
+      "accentSoft": "oklch(0.44 0.13 240 / 0.15)"
+    },
+    "complexityLevels": 5,
+    "quadrants": {
+      "axisX": {
+        "label": "Ontologie des Mentalen",
+        "left": "Reduktionismus",
+        "right": "Irreduzibilität"
+      },
+      "axisY": {
+        "label": "Erkenntnisquelle",
+        "top": "First-Person",
+        "bottom": "Third-Person"
+      }
+    }
+  },
+  "levels": [
+    { "id": 1, "label": "Einstieg",   "short": "L1", "filled": false },
+    { "id": 2, "label": "Grundlagen", "short": "L2", "filled": false },
+    { "id": 3, "label": "Vertiefung", "short": "L3", "filled": false },
+    { "id": 4, "label": "Analyse",    "short": "L4", "filled": false },
+    { "id": 5, "label": "Synthese",   "short": "L5", "filled": false }
+  ],
+  "schools": [
+    {
+      "id": "substanzdualismus",
+      "label": "Substanzdualismus",
+      "color": "oklch(0.42 0.12 30)",
+      "glyph": "Ψ",
+      "gx": 290, "gy": -230,
+      "labelDir": "NE"
+    },
+    {
+      "id": "logischer-behaviorismus",
+      "label": "Logischer Behaviorismus",
+      "color": "oklch(0.40 0.10 200)",
+      "glyph": "◻",
+      "gx": -290, "gy": -200,
+      "labelDir": "NW"
+    },
+    {
+      "id": "funktionalismus",
+      "label": "Funktionalismus",
+      "color": "oklch(0.40 0.12 180)",
+      "glyph": "⟳",
+      "gx": -200, "gy": -120,
+      "labelDir": "W"
+    },
+    {
+      "id": "qualia-realismus",
+      "label": "Qualia-Realismus",
+      "color": "oklch(0.38 0.14 300)",
+      "glyph": "◉",
+      "gx": 200, "gy": -220,
+      "labelDir": "NE"
+    },
+    {
+      "id": "heterophaenomenologie",
+      "label": "Heterophänomenologie",
+      "color": "oklch(0.40 0.11 160)",
+      "glyph": "⊕",
+      "gx": -260, "gy": -30,
+      "labelDir": "W"
+    },
+    {
+      "id": "property-dualismus",
+      "label": "Property-Dualismus",
+      "color": "oklch(0.38 0.15 280)",
+      "glyph": "⟁",
+      "gx": 210, "gy": -60,
+      "labelDir": "E"
+    },
+    {
+      "id": "biologischer-naturalismus",
+      "label": "Biologischer Naturalismus",
+      "color": "oklch(0.42 0.10 240)",
+      "glyph": "⊗",
+      "gx": 90, "gy": 40,
+      "labelDir": "SE"
+    },
+    {
+      "id": "eliminativer-materialismus",
+      "label": "Eliminativer Materialismus",
+      "color": "oklch(0.38 0.10 210)",
+      "glyph": "∅",
+      "gx": -270, "gy": 200,
+      "labelDir": "SW"
+    },
+    {
+      "id": "phaenomenologie",
+      "label": "Phänomenologie",
+      "color": "oklch(0.40 0.13 350)",
+      "glyph": "❂",
+      "gx": 270, "gy": -250,
+      "labelDir": "N"
+    },
+    {
+      "id": "enaktivismus",
+      "label": "Enaktivismus",
+      "color": "oklch(0.42 0.12 140)",
+      "glyph": "⬡",
+      "gx": 140, "gy": -160,
+      "labelDir": "NE"
+    },
+    {
+      "id": "panpsychismus",
+      "label": "Panpsychismus",
+      "color": "oklch(0.38 0.15 310)",
+      "glyph": "∞",
+      "gx": 300, "gy": 80,
+      "labelDir": "E"
+    },
+    {
+      "id": "selbstmodell-theorie",
+      "label": "Selbstmodell-Theorie",
+      "color": "oklch(0.40 0.12 250)",
+      "glyph": "◈",
+      "gx": -140, "gy": 210,
+      "labelDir": "S"
+    },
+    {
+      "id": "predictive-processing",
+      "label": "Predictive Processing",
+      "color": "oklch(0.42 0.10 90)",
+      "glyph": "△",
+      "gx": -190, "gy": 60,
+      "labelDir": "W"
+    }
+  ],
+  "thinkers": [
+    {
+      "id": "descartes",
+      "name": "René Descartes",
+      "lifespan": "1596–1650",
+      "firstLevel": 1,
+      "schoolId": "substanzdualismus",
+      "x": 88, "y": 75,
+      "versions": {
+        "1": "Geist und Körper sind zwei völlig verschiedene Dinge. Das Denken beweist meine Existenz — Cogito ergo sum.",
+        "3": "Descartes trennt res cogitans (Geist) und res extensa (Materie) als zwei unabhängige Substanzen. Das Leib-Seele-Problem — wie interagieren sie? — entstand hier.",
+        "5": "Der kartesische Dualismus prägt die Intuition, dass subjektives Erleben kategorial verschieden von physischer Materie ist. Sein Interaktionsproblem (Zirbeldrüse als Kontaktstelle) bleibt das Urproblem der Philosophie des Geistes."
+      }
+    },
+    {
+      "id": "ryle",
+      "name": "Gilbert Ryle",
+      "lifespan": "1900–1976",
+      "firstLevel": 1,
+      "schoolId": "logischer-behaviorismus",
+      "x": 18, "y": 65,
+      "versions": {
+        "1": "Der Geist ist kein unsichtbarer Bewohner im Körper. Mentale Begriffe beschreiben Verhaltensweisen und Dispositionen, nicht innere Zustände.",
+        "3": "In 'The Concept of Mind' (1949) bezeichnet Ryle Descartes' Dualismus als Kategorienfehler — den 'Ghost in the Machine'. Mentale Sprache beschreibt Verhalten, nicht Seelenprozesse.",
+        "5": "Ryles Behaviorismus scheitert an phänomenalen Zuständen (qualia), die nicht restlos in Verhaltensdispositionen aufgehen. Dennoch beendete er den naiven Dualismus in der analytischen Philosophie."
+      }
+    },
+    {
+      "id": "putnam",
+      "name": "Hilary Putnam",
+      "lifespan": "1926–2016",
+      "firstLevel": 2,
+      "schoolId": "funktionalismus",
+      "x": 32, "y": 55,
+      "versions": {
+        "2": "Der Geist verhält sich zum Gehirn wie Software zur Hardware — Bewusstsein ist ein funktionales Muster, nicht an ein spezifisches Material gebunden.",
+        "4": "Putnams Multirealisierbarkeitsthese: Mentale Zustände können in verschiedenen physischen Systemen realisiert sein. Das ermöglichte KI-Theorie und Kognitionswissenschaft — später distanzierte er sich vom Funktionalismus selbst."
+      }
+    },
+    {
+      "id": "nagel",
+      "name": "Thomas Nagel",
+      "lifespan": "1937–",
+      "firstLevel": 2,
+      "schoolId": "qualia-realismus",
+      "x": 78, "y": 82,
+      "versions": {
+        "2": "Es gibt etwas, 'wie es ist', eine Fledermaus zu sein. Subjektives Erleben lässt sich nicht aus objektiver Sicht erklären.",
+        "4": "Nagels Aufsatz 'What Is It Like to Be a Bat?' (1974) etablierte phänomenales Bewusstsein (qualia) als irreduzibles Explanandum. Die Erste-Person-Perspektive widersteht jeder Dritten-Person-Beschreibung."
+      }
+    },
+    {
+      "id": "dennett",
+      "name": "Daniel Dennett",
+      "lifespan": "1942–2024",
+      "firstLevel": 3,
+      "schoolId": "heterophaenomenologie",
+      "x": 12, "y": 38,
+      "versions": {
+        "3": "Bewusstsein ist eine Nutzertäuschung — das Gehirn erzeugt die Illusion eines einheitlichen Erlebers. Es gibt keinen zentralen 'Ort' des Bewusstseins.",
+        "5": "Dennetts Heterophänomenologie: Berichte über Erleben werden als Daten ernst genommen, ohne als wahr akzeptiert zu werden. In 'Consciousness Explained' (1991) entwickelt er das Multiple Drafts Model — kein Cartesisches Theater."
+      }
+    },
+    {
+      "id": "chalmers",
+      "name": "David Chalmers",
+      "lifespan": "1966–",
+      "firstLevel": 3,
+      "schoolId": "property-dualismus",
+      "x": 72, "y": 70,
+      "versions": {
+        "3": "Das 'Hard Problem': Warum fühlt sich etwas überhaupt nach etwas an? Selbst eine vollständige Neurobiologie könnte subjektives Erleben nicht erklären.",
+        "5": "Chalmers unterscheidet Easy Problems (kognitive Funktionen) vom Hard Problem (phänomenales Bewusstsein). Das Zombie-Argument: Ein physisches Doppelgänger ohne Erleben ist logisch denkbar — Bewusstsein ist nicht physisch reduzierbar."
+      }
+    },
+    {
+      "id": "searle",
+      "name": "John Searle",
+      "lifespan": "1932–",
+      "firstLevel": 3,
+      "schoolId": "biologischer-naturalismus",
+      "x": 58, "y": 35,
+      "versions": {
+        "3": "Das 'Chinesische Zimmer': Ein Mensch folgt perfekt Regeln um Chinesisch zu simulieren — ohne es zu verstehen. Syntax ist keine Semantik, Algorithmen haben kein echtes Verstehen.",
+        "5": "Searle argumentiert für biologischen Naturalismus: Bewusstsein ist eine kausal emergente Eigenschaft des Gehirns — real, aber nicht auf neuronale Prozesse reduzierbar. Kritik: Die Grenzziehung zum Funktionalismus bleibt unscharf."
+      }
+    },
+    {
+      "id": "churchland",
+      "name": "Paul & Patricia Churchland",
+      "firstLevel": 4,
+      "schoolId": "eliminativer-materialismus",
+      "x": 8, "y": 15,
+      "versions": {
+        "4": "Alltagsbegriffe wie 'Überzeugung' oder 'Schmerz' sind fehlerhafte Theorien (Folk Psychology) — sie werden durch Neurobiologie restlos ersetzt, wie Phlogiston durch Oxidation.",
+        "5": "Der eliminative Materialismus ist der radikale Schlussstrich: Propositionale Einstellungen sind schlicht falsche Kategorien. Patricia Churchland verbindet das mit konkreter Neurowissenschaft (Neurophilosophie)."
+      }
+    },
+    {
+      "id": "husserl",
+      "name": "Edmund Husserl",
+      "lifespan": "1859–1938",
+      "firstLevel": 4,
+      "schoolId": "phaenomenologie",
+      "x": 68, "y": 92,
+      "versions": {
+        "4": "Phänomenologie: Rückkehr zu den Sachen selbst — genaue Beschreibung der Bewusstseinsstrukturen vor jeder naturwissenschaftlichen Deutung. Intentionalität: Bewusstsein ist immer Bewusstsein von etwas.",
+        "5": "Husserls Epoché (Einklammerung der Welt) legt apriorische Strukturen des Bewusstseins frei. Kernbegriffe: Noesis (Bewusstseinsakt), Noema (intentionaler Gehalt), Zeitbewusstsein. Fundament für Heidegger, Merleau-Ponty und Varela."
+      }
+    },
+    {
+      "id": "varela",
+      "name": "Francisco Varela & Evan Thompson",
+      "firstLevel": 4,
+      "schoolId": "enaktivismus",
+      "x": 52, "y": 80,
+      "versions": {
+        "4": "Geist entsteht nicht im Kopf, sondern im Vollzug — durch die Interaktion eines verkörperten Organismus mit seiner Umwelt. Phänomenologie und Biologie werden verbunden.",
+        "5": "In 'The Embodied Mind' (1991) schlagen Varela, Thompson und Rosch einen Mittelweg: weder Kognitivismus noch eliminativer Materialismus. Autopoiese (Selbstorganisation) als Grundlage des Geistes; Neurophänomenologie als Methode."
+      }
+    },
+    {
+      "id": "strawson",
+      "name": "Galen Strawson",
+      "lifespan": "1952–",
+      "firstLevel": 5,
+      "schoolId": "panpsychismus",
+      "x": 90, "y": 50,
+      "versions": {
+        "5": "Wenn Materialismus wahr ist und phänomenales Erleben real ist, muss Erfahrung eine fundamentale Eigenschaft der Materie sein — Panpsychismus ist die konsequenteste materialistische Position. 'Realistic Monism' (2006)."
+      }
+    },
+    {
+      "id": "metzinger",
+      "name": "Thomas Metzinger",
+      "lifespan": "1958–",
+      "firstLevel": 5,
+      "schoolId": "selbstmodell-theorie",
+      "x": 28, "y": 20,
+      "versions": {
+        "5": "Es gibt kein 'Selbst' — nur ein transparentes phänomenales Selbstmodell (PSM), das das Gehirn als Werkzeug nutzt. Der Ego-Tunnel: Wir erleben uns als Zentrum, obwohl das Selbst eine Simulation ist. 'Being No One' (2003)."
+      }
+    },
+    {
+      "id": "clark",
+      "name": "Andy Clark",
+      "lifespan": "1957–",
+      "firstLevel": 5,
+      "schoolId": "predictive-processing",
+      "x": 20, "y": 30,
+      "versions": {
+        "5": "Das Gehirn ist eine Vorhersagemaschine: Es minimiert kontinuierlich den Vorhersagefehler zwischen Erwartung und Eingabe. Kognition erstreckt sich über Schädel und Haut hinaus — Werkzeuge und Umwelt sind Teil des kognitiven Systems (Extended Mind)."
+      }
+    }
+  ],
+  "influences": [
+    {
+      "from": "descartes",
+      "to": "ryle",
+      "type": "critique",
+      "firstLevel": 1,
+      "versions": {
+        "1": "Ryle demontiert Descartes' Substanzdualismus als den ultimativen Kategorienfehler — den 'Ghost in the Machine'."
+      }
+    },
+    {
+      "from": "ryle",
+      "to": "dennett",
+      "type": "student-of",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Dennett ist Ryles direkter intellektueller Erbe und radikalisiert dessen behavioristischen Ansatz zur Heterophänomenologie."
+      }
+    },
+    {
+      "from": "putnam",
+      "to": "searle",
+      "type": "critique",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Searles Chinesisches Zimmer greift direkt die Kernprämisse von Putnams computationalem Funktionalismus an."
+      }
+    },
+    {
+      "from": "putnam",
+      "to": "churchland",
+      "type": "rejection",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Die Churchlands verwerfen die funktionale Multirealisierbarkeit und fordern die harte neuronale Reduktion."
+      }
+    },
+    {
+      "from": "nagel",
+      "to": "chalmers",
+      "type": "influence",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Nagels subjektive Fledermaus-Perspektive legt das Fundament für Chalmers' formales Hard Problem."
+      }
+    },
+    {
+      "from": "dennett",
+      "to": "chalmers",
+      "type": "rejection",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Dennett erklärt das Hard Problem zur Illusion; Chalmers hält Dennetts Theorie für eine Erklärung von Zombies, nicht von Bewusstsein."
+      }
+    },
+    {
+      "from": "husserl",
+      "to": "varela",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Varela naturalisiert Husserls Epoché und integriert sie als Neurophänomenologie in die Biologie."
+      }
+    },
+    {
+      "from": "chalmers",
+      "to": "strawson",
+      "type": "influence",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Strawsons Panpsychismus ist der Versuch, Chalmers' Hard Problem streng naturalistisch zu lösen."
+      }
+    },
+    {
+      "from": "clark",
+      "to": "metzinger",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Beide nutzen Predictive Processing: Clark zur Erklärung der Kognition (außen), Metzinger zur Erklärung des phänomenalen Erlebens (innen)."
+      }
+    },
+    {
+      "from": "metzinger",
+      "to": "dennett",
+      "type": "critique",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Metzinger teilt Dennetts Illusionismus, kritisiert aber dessen Weigerung, die First-Person-Phänomenologie als echtes Explanandum ernst zu nehmen."
+      }
+    }
+  ],
+  "concepts": []
+}

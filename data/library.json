@@ -20,6 +20,16 @@
     "tags": ["Identität", "Bewusstsein", "Neurowissenschaft", "Spiritualität"]
   },
   {
+    "id": "philosophie-des-geistes",
+    "title": "Philosophie des Geistes",
+    "subtitle": "Was ist Bewusstsein? Von Descartes' Dualismus bis zum Hard Problem.",
+    "era": "17. Jh. – Gegenwart",
+    "themeColor": "oklch(0.44 0.13 240)",
+    "status": "available",
+    "desc": "Von Descartes' Ghost in the Machine bis Chalmers' Hard Problem — die zentralen Positionen zur Frage, ob und wie Materie denkt und fühlt.",
+    "tags": ["Bewusstsein", "Qualia", "Dualismus", "Kognitionswissenschaft"]
+  },
+  {
     "id": "ethik",
     "title": "Ethik",
     "subtitle": "Was sollen wir tun?",
