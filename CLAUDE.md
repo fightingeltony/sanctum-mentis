@@ -1,0 +1,122 @@
+# Sanctum Mentis — Dokumentation für Claude
+
+## Was ist dieses Projekt?
+Lern-Companion für Philosophie und verwandte Disziplinen: Denker-Liste, Einfluss-Graph und 4-Quadranten-Konzeptkarte — alles gefiltert nach dem aktuellen Komplexitäts-Level. Kernidee: ein Slider (1–5) steuert, wie tief jede Antwort ausfällt.
+
+Geklont aus Carta Librorum (spoilerfreier Buch-Companion). Die Engine ist identisch — der Slider war dort der Lesestand, hier ist es das Lern-Level. Beide Projekte sind getrennte Codebases.
+
+## Tech-Stack
+- **Framework:** Next.js 16 (App Router) + TypeScript
+- **Styling:** Tailwind CSS v4
+- **Fonts:** Marcellus SC (Display, 400), Inter (Body/UI, 400/500/600) — Google Fonts via `next/font`
+- **Hosting:** Vercel via GitHub
+- **Daten:** JSON-Dateien pro Themengebiet in `data/`
+
+## Design-Prinzipien
+- Einheitliches Pergament-Theme (hell) — warmes Beige, Sienna/Gold-Akzente, dunkelbraune Schrift
+- Modern-minimal als Basis — klare Hierarchie, viel Luft
+- Akademisch-zurückhaltend in Akzenten: Typografie, Farbtöne, Quadranten-Achsen
+- Per-Thema-Akzentfarbe via inline CSS Custom Properties auf dem Wrapper (`--accent`, `--accent-soft`)
+- Kein Dark Mode — alle Themen nutzen `:root`-Tokens
+- Kein "Lehrbuch-aus-den-90ern"-Look
+
+## Kern-Logik (unveränderlich)
+```typescript
+// Gibt die neueste Beschreibung zurück, die auf diesem Komplexitäts-Level freigeschaltet ist
+function getVersion(item: { versions: Record<number, string> }, level: number): string | null {
+  const keys = Object.keys(item.versions).map(Number).filter(k => k <= level).sort((a,b) => b-a);
+  return keys.length ? item.versions[keys[0]] : null;
+}
+```
+Dieses Pattern gilt für Denker, Konzepte UND Einflüsse gleichermaßen.
+
+## Daten-Modell
+
+| Domain-Begriff   | Variable     | Bedeutung                                            |
+|------------------|--------------|------------------------------------------------------|
+| Themengebiet     | `Topic`      | Z.B. Erkenntnistheorie, Ethik                        |
+| Komplexitäts-Level | `Level`    | 1 (Einstieg) … 5 (Forschung)                         |
+| Denker           | `Thinker`    | Philosoph, Theoretiker — gehört zu einer Schule      |
+| Schule           | `School`     | Strömung mit Farbe und Glyph (Empirismus, …)         |
+| Konzept          | `Concept`    | Prinzip, Methode, Argument, Unterscheidung — verortet im Quadranten-Raum |
+| Einfluss         | `Influence`  | Beziehung zwischen Denkern (influence/critique/student-of/parallel/rejection) |
+
+## Feature-Prioritäten
+1. **Denker-Liste** mit Level-Slider und Schul-Filter
+2. **Einfluss-Graph** — visuell, interaktiv, hover-highlight
+3. **4-Quadranten-Konzeptkarte** — SVG mit Achsenkreuz, Quadranten-Labels aus Topic-JSON
+
+## Quadranten-Konvention
+Jedes Topic definiert seine eigenen Achsen unter `topic.quadrants`:
+```jsonc
+{
+  "axisX": { "label": "Erkenntnisquelle", "left": "Empirisch", "right": "Rationalistisch" },
+  "axisY": { "label": "Geltungsbereich",  "top":  "Universell", "bottom": "Kontextuell"   }
+}
+```
+Konzept-Positionen `x`/`y` sind 0–100, mathematische Konvention (y=0 unten, y=100 oben).
+
+## Wichtige Dateien
+- `data/library.json` — Liste aller Themengebiete (für die Bibliothek)
+- `data/erkenntnistheorie.json` — Beispiel-Themengebiet
+- `src/lib/types.ts` — Datenmodell
+- `src/lib/complexityEngine.ts` — Kern-Logik (Versioned/getVersion)
+- `src/lib/data.ts` — Topic-Loader
+- `src/components/TopicViewer.tsx` — Top-Level-Container
+- `src/components/QuadrantPlot.tsx` — 4-Quadranten-SVG-Karte (basierend auf WesterosMap-Muster)
+- `src/components/InfluenceGraph.tsx` — Beziehungs-Graph (kann auto/manual layout)
+
+## Mobile Layout — Verbindliche CSS-Regeln (geerbt von Carta Librorum)
+
+### 1. `.shell { overflow-x: clip }`
+`clip` statt `hidden` — schneidet überlaufenden Inhalt ab, ohne einen Scroll-Container zu erzeugen. Nur `clip` erhält `position: sticky` für `.mobile-bar`. `hidden` würde sticky brechen.
+
+### 2. `.mobile-bar { min-width: 0 }`
+`position: sticky` Flex-Container als CSS-Grid-Kind haben standardmäßig `min-width: auto`. Das löst die automatische Mindestgröße aus der Flex-Content-Breite → Grid-Track bläht sich auf die Content-Breite auf. Ohne `min-width: 0` überschreitet der Grid-Track die Viewport-Breite auf Mobile.
+
+### 3. `.tab-content { max-width: 100% }`
+Verhindert, dass Tab-Inhalt über das Parent-Element hinauswächst.
+
+### 4. `html, body { overflow-x: hidden }`
+Sicherheitsnetz auf oberster Ebene — verhindert horizontales Scrollen der gesamten Seite.
+
+### Checkliste neues Themengebiet
+- [ ] JSON in `data/` anlegen, in `library.json` registrieren, in `src/lib/data.ts` importieren
+- [ ] Quadranten-Achsen im `topic.quadrants` definieren — sie steuern den QuadrantPlot
+- [ ] Schul-Farben direkt als `school.color` (oklch) — keine globalen CSS-Variablen mehr nötig
+- [ ] Karten-Pulsanimation (`wm-pulse-ring`) ist global vorhanden — gilt automatisch
+
+## Animationen & Accessibility
+
+### Pflichtregeln
+- **`prefers-reduced-motion`**: Jede CSS-Animation muss eine Reduced-Motion-Variante haben.
+  Inhalte dürfen dabei nicht unsichtbar werden — die Animation entfällt, der Inhalt bleibt sichtbar.
+- **Hover-States**: Nur auf `(hover: hover)`-Geräten — auf Touch via `:active` auslösen.
+- **Fokus-States**: Jede interaktive Komponente braucht einen sichtbaren `:focus-visible`-State.
+- **Tastaturnavigation**: Tab-Reihenfolge muss logisch sein. Kein `tabIndex` > 0 einsetzen.
+
+### Timing-Vorgaben
+- Feedback-Animationen (Hover, Click): 150–300ms
+- Übergänge (Panels, Sheets): 300–500ms
+- Easing Default: `cubic-bezier(0.22, 1, 0.36, 1)` (ease-out-quart)
+- Niemals länger als 500ms ohne expliziten Grund
+
+### Was NICHT tun
+- Keine Cursor-Custom-Effekte, die Standard-Bedienung kapern
+- Kein Scroll-Hijacking
+- Keine Auto-Play-Animationen ohne Stopp-Möglichkeit
+
+## QuadrantPlot — Render-Konvention
+
+- Stage: 700×700 SVG mit `PAD = 60` Margin
+- Achsenkreuz horizontal+vertikal durch die Mitte
+- Konzept-Positionen 0–100, y mathematisch (y=100 = oben)
+- Marker-Glyph aus `CONCEPT_GLYPH[type]` (Diamond, Symbol etc.), Farbe immer dunkles Sienna
+- Labels in `Marcellus SC bold 0.08em letter-spacing` mit Pergament-Halo (textShadow)
+- `usePanZoom` Hook für Pan/Pinch/Wheel — generisch verwendet von InfluenceGraph + QuadrantPlot
+
+## Was der Agent NICHT tun soll
+- Carta Librorum (`../carta-librorum/`) anfassen — getrenntes Projekt
+- Features bauen die nicht abgesprochen sind, ohne Rückfrage
+- Commits pushen ohne explizite Aufforderung
+- Leaflet wieder einführen (wurde bewusst entfernt — SVG reicht für Quadranten-Plots)

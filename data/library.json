@@ -1,0 +1,32 @@
+[
+  {
+    "id": "erkenntnistheorie",
+    "title": "Erkenntnistheorie",
+    "subtitle": "Wie wissen wir, was wir wissen?",
+    "era": "Antike – 21. Jh.",
+    "themeColor": "oklch(0.45 0.10 250)",
+    "status": "available",
+    "desc": "Von Platons Höhle bis Quines Holismus — die zentralen Positionen zur Frage nach gerechtfertigter Erkenntnis.",
+    "tags": ["Empirismus", "Rationalismus", "Skeptizismus"]
+  },
+  {
+    "id": "ethik",
+    "title": "Ethik",
+    "subtitle": "Was sollen wir tun?",
+    "era": "Antike – Gegenwart",
+    "themeColor": "oklch(0.45 0.12 30)",
+    "status": "coming",
+    "desc": "Tugendethik, Deontologie, Konsequentialismus — und ihre modernen Varianten.",
+    "tags": ["Tugend", "Pflicht", "Folgen"]
+  },
+  {
+    "id": "politische-philosophie",
+    "title": "Politische Philosophie",
+    "subtitle": "Wie wollen wir zusammenleben?",
+    "era": "Antike – Gegenwart",
+    "themeColor": "oklch(0.40 0.10 145)",
+    "status": "coming",
+    "desc": "Vom Gesellschaftsvertrag bis zum modernen Liberalismus.",
+    "tags": ["Vertrag", "Gerechtigkeit", "Freiheit"]
+  }
+]

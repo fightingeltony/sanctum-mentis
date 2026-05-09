@@ -1,0 +1,203 @@
+{
+  "topic": {
+    "id": "erkenntnistheorie",
+    "title": "Erkenntnistheorie",
+    "subtitle": "Wie wissen wir, was wir wissen?",
+    "era": "Antike – 21. Jh.",
+    "theme": {
+      "accent":     "oklch(0.45 0.10 250)",
+      "accentSoft": "oklch(0.45 0.10 250 / 0.18)"
+    },
+    "complexityLevels": 5,
+    "quadrants": {
+      "axisX": { "label": "Erkenntnisquelle", "left": "Empirisch",  "right": "Rationalistisch" },
+      "axisY": { "label": "Geltungsbereich",  "top":  "Universell", "bottom": "Kontextuell"   }
+    },
+    "graphLayout": "auto",
+    "thinkerListStyle": "grouped"
+  },
+
+  "levels": [
+    { "id": 1, "label": "Einstieg",        "short": "L1", "filled": true,
+      "description": "Die zwei großen Lager: Empirismus vs. Rationalismus." },
+    { "id": 2, "label": "Vertiefung",      "short": "L2", "filled": true,
+      "description": "Skeptizismus und der transzendentale Ausweg." },
+    { "id": 3, "label": "Synthese",        "short": "L3", "filled": true,
+      "description": "Wie die großen Linien sich gegenseitig formten." },
+    { "id": 4, "label": "Spezialisierung", "short": "L4", "filled": true,
+      "description": "Methodische Werkzeuge der Erkenntnistheorie." },
+    { "id": 5, "label": "Forschung",       "short": "L5", "filled": true,
+      "description": "Aktuelle Debatten und feinkörnige Begriffsanalyse." }
+  ],
+
+  "schools": [
+    { "id": "rationalismus",    "name": "Rationalismus",            "color": "oklch(0.50 0.13 280)", "glyph": "◆",
+      "motto": "Die Vernunft ist Quelle wahrer Erkenntnis.",
+      "gx": 240, "gy": -160, "labelDir": "NE" },
+    { "id": "empirismus",       "name": "Empirismus",                "color": "oklch(0.48 0.12 60)",  "glyph": "◇",
+      "motto": "Nichts ist im Verstand, was nicht zuvor in den Sinnen war.",
+      "gx": -240, "gy": 100, "labelDir": "SW" },
+    { "id": "transzendental",   "name": "Transzendentalphilosophie", "color": "oklch(0.42 0.14 320)", "glyph": "◈",
+      "motto": "Gedanken ohne Inhalt sind leer, Anschauungen ohne Begriffe blind.",
+      "gx": 0, "gy": 0, "labelDir": "S" },
+    { "id": "skeptizismus",     "name": "Skeptizismus",              "color": "oklch(0.40 0.06 30)",  "glyph": "◉",
+      "motto": "Wir wissen weniger, als wir glauben.",
+      "gx": -180, "gy": -180, "labelDir": "NW" },
+    { "id": "krit-rationalismus","name": "Kritischer Rationalismus", "color": "oklch(0.45 0.11 145)", "glyph": "◊",
+      "motto": "Eine Theorie ist erst wissenschaftlich, wenn sie scheitern kann.",
+      "gx": 200, "gy": 200, "labelDir": "SE" }
+  ],
+
+  "thinkers": [
+    {
+      "id": "platon", "name": "Platon", "schoolId": "rationalismus", "lifespan": "428–348 v. Chr.",
+      "firstLevel": 1, "graphX": 870, "graphY": 240,
+      "versions": {
+        "1": "Wahre Erkenntnis liegt jenseits der sinnlichen Welt — bei den ewigen Ideen.",
+        "3": "Die Sinne zeigen nur Schatten; der Philosoph muss zur Schau der Ideen aufsteigen (Höhlengleichnis).",
+        "5": "Anamnesis-Lehre: Lernen ist Wiedererinnerung an vorgeburtliches Wissen, das die Seele beim Erblicken der Idee 'wieder-erkennt'."
+      }
+    },
+    {
+      "id": "descartes", "name": "René Descartes", "schoolId": "rationalismus", "lifespan": "1596–1650",
+      "firstLevel": 1, "graphX": 800, "graphY": 380,
+      "versions": {
+        "1": "Setzt mit dem methodischen Zweifel neu an: nur was klar und deutlich erkannt wird, ist wahr.",
+        "3": "Das Cogito (Ich denke, also bin ich) ist der archimedische Punkt — der einzige Satz, an dem auch ein böser Geist nicht rütteln kann.",
+        "5": "Aus dem Cogito leitet er via Gottesidee die Verlässlichkeit der klaren Vorstellungen — ein 'Cartesianischer Zirkel', den die Empiristen massiv kritisierten."
+      }
+    },
+    {
+      "id": "locke", "name": "John Locke", "schoolId": "empirismus", "lifespan": "1632–1704",
+      "firstLevel": 2, "graphX": 220, "graphY": 480,
+      "versions": {
+        "2": "Der Geist ist bei Geburt eine 'tabula rasa' — alle Ideen entstammen der Erfahrung.",
+        "4": "Unterscheidet primäre (objektive: Form, Zahl) von sekundären Qualitäten (subjektiv: Farbe, Geruch).",
+        "5": "Empirismus mit Maßhalten: gewisse moralische und mathematische Sätze gelten ihm als demonstrativ sicher — kein radikaler Skeptizismus."
+      }
+    },
+    {
+      "id": "hume", "name": "David Hume", "schoolId": "empirismus", "lifespan": "1711–1776",
+      "firstLevel": 2, "graphX": 320, "graphY": 600,
+      "versions": {
+        "2": "Treibt den Empirismus konsequent zu Ende: Kausalität ist nur gewohnte Verknüpfung, nicht beobachtbares Band.",
+        "3": "Induktionsproblem: dass die Sonne morgen aufgeht, lässt sich aus keiner endlichen Beobachtungsreihe logisch ableiten.",
+        "5": "Bündel-Theorie des Selbst: kein 'Ich' jenseits der Wahrnehmungsbündel — radikale Konsequenz, die Kant aus dem Schlummer riss."
+      }
+    },
+    {
+      "id": "kant", "name": "Immanuel Kant", "schoolId": "transzendental", "lifespan": "1724–1804",
+      "firstLevel": 2, "graphX": 540, "graphY": 380,
+      "versions": {
+        "2": "Synthese aus Empirismus und Rationalismus: Erfahrung ja, aber strukturiert durch apriorische Formen.",
+        "3": "Raum, Zeit und Kategorien (Substanz, Kausalität …) liegen vor jeder Erfahrung im Subjekt — sie machen Erfahrung erst möglich.",
+        "5": "Kopernikanische Wende: nicht das Erkennen richtet sich nach den Gegenständen, sondern die Gegenstände nach unseren Erkenntnisformen — das 'Ding an sich' bleibt unerkennbar."
+      }
+    },
+    {
+      "id": "aristoteles", "name": "Aristoteles", "schoolId": "empirismus", "lifespan": "384–322 v. Chr.",
+      "firstLevel": 3, "graphX": 130, "graphY": 360,
+      "versions": {
+        "3": "Bricht mit Platons Ideenlehre: das Allgemeine existiert nicht losgelöst, sondern in den Einzeldingen.",
+        "5": "Begründet die Syllogistik als formale Logik und entwickelt eine Erkenntnislehre, die bei der Sinneswahrnehmung beginnt und zur Wesenseinsicht (Epagoge, Nous) aufsteigt."
+      }
+    },
+    {
+      "id": "popper", "name": "Karl Popper", "schoolId": "krit-rationalismus", "lifespan": "1902–1994",
+      "firstLevel": 3, "graphX": 870, "graphY": 600,
+      "versions": {
+        "3": "Wissen wächst nicht durch Bestätigung, sondern durch Widerlegung von Theorien (Falsifikationismus).",
+        "5": "Demarkationskriterium gegen Pseudowissenschaft: eine Theorie ist nur dann empirisch gehaltvoll, wenn sie spezifische Beobachtungen ausschließt — sonst ist sie unbestreitbar, aber leer."
+      }
+    }
+  ],
+
+  "influences": [
+    {
+      "from": "platon", "to": "aristoteles", "type": "student-of", "firstLevel": 3,
+      "versions": { "3": "Aristoteles war zwanzig Jahre Schüler an Platons Akademie — und entwickelte sich zu seinem produktivsten Kritiker." }
+    },
+    {
+      "from": "locke", "to": "hume", "type": "influence", "firstLevel": 2,
+      "versions": { "2": "Hume radikalisierte Lockes Empirismus — wo Locke noch sicheres Wissen ließ, stellte Hume es konsequent in Frage." }
+    },
+    {
+      "from": "hume", "to": "kant", "type": "critique", "firstLevel": 2,
+      "versions": {
+        "2": "Hume weckte Kant aus dem 'dogmatischen Schlummer' — sein Skeptizismus war die Provokation für die Kritik der reinen Vernunft.",
+        "5": "Konkret: Humes Zweifel an der Kausalität zwang Kant, eine apriorische Struktur des Verstands zu rekonstruieren, die Kausalurteile überhaupt erst möglich macht."
+      }
+    },
+    {
+      "from": "descartes", "to": "kant", "type": "influence", "firstLevel": 3,
+      "versions": { "3": "Kant übernimmt Descartes' Selbstbewusstsein als Ausgangspunkt — denkt es aber als 'transzendentale Apperzeption' funktional, nicht substantiell." }
+    },
+    {
+      "from": "aristoteles", "to": "popper", "type": "parallel", "firstLevel": 4,
+      "versions": { "4": "Beide misstrauen rein deduktiver Spekulation und verankern Erkenntnis im prüfbaren Einzelfall — Aristoteles in der Beobachtung, Popper im Falsifikationsversuch." }
+    },
+    {
+      "from": "popper", "to": "kant", "type": "critique", "firstLevel": 5,
+      "versions": { "5": "Popper bestreitet Kants synthetische Urteile a priori als allgemein gültig — er sieht in ihnen kühne Hypothesen, nicht notwendige Strukturen." }
+    }
+  ],
+
+  "concepts": [
+    {
+      "id": "hoehlengleichnis", "name": "Höhlengleichnis", "type": "argument",
+      "schoolId": "rationalismus", "firstLevel": 1, "x": 78, "y": 86,
+      "versions": {
+        "1": "Platons Bild: Menschen sehen nur Schatten an einer Höhlenwand — die Sinneswelt ist nicht die wahre Wirklichkeit.",
+        "3": "Der Aufstieg aus der Höhle steht für die philosophische Bildung: vom Meinen über das Bezweifeln zur Schau der Idee."
+      }
+    },
+    {
+      "id": "cogito", "name": "Cogito ergo sum", "type": "principle",
+      "schoolId": "rationalismus", "firstLevel": 1, "x": 84, "y": 70,
+      "versions": {
+        "1": "Descartes' Fundament: Selbst wenn alles bezweifelbar ist — dass ich gerade zweifle, bezweifle ich nicht.",
+        "5": "Das Cogito ist kein Schluss (deshalb 'sum' statt 'esse'), sondern eine performative Selbstvergewisserung im Vollzug des Denkens."
+      }
+    },
+    {
+      "id": "tabula-rasa", "name": "Tabula rasa", "type": "principle",
+      "schoolId": "empirismus", "firstLevel": 2, "x": 18, "y": 32,
+      "versions": {
+        "2": "Lockes These: Der Geist ist bei Geburt ein unbeschriebenes Blatt — Wissen entsteht erst durch Erfahrung.",
+        "4": "Empirismus-Programm: jede Idee muss letztlich auf Sinneseindrücke zurückgeführt werden können — sonst ist sie verdächtig."
+      }
+    },
+    {
+      "id": "induktionsproblem", "name": "Induktionsproblem", "type": "argument",
+      "schoolId": "empirismus", "firstLevel": 3, "x": 28, "y": 22,
+      "versions": {
+        "3": "Hume zeigt: aus 'die Sonne ging bisher immer auf' folgt logisch nicht 'sie wird morgen aufgehen' — die Verallgemeinerung ist Gewohnheit, nicht Beweis.",
+        "5": "Modern: Goodman verschärft mit dem 'grue'-Paradox — selbst die Wahl der zu verallgemeinernden Eigenschaft ist nicht durch Erfahrung allein gedeckt."
+      }
+    },
+    {
+      "id": "apriori", "name": "A priori / a posteriori", "type": "distinction",
+      "schoolId": "transzendental", "firstLevel": 3, "x": 56, "y": 60,
+      "versions": {
+        "3": "Kants Unterscheidung: 'a priori' = vor aller Erfahrung gültig (z.B. mathematische Sätze); 'a posteriori' = aus Erfahrung gewonnen.",
+        "5": "Kants Pointe sind die synthetischen Urteile a priori (z.B. '7+5=12'): erweitern Wissen, sind aber nicht aus Erfahrung gewonnen — Möglichkeit dieser Urteile = Hauptthema der Kritik der reinen Vernunft."
+      }
+    },
+    {
+      "id": "falsifikation", "name": "Falsifikationsprinzip", "type": "method",
+      "schoolId": "krit-rationalismus", "firstLevel": 4, "x": 64, "y": 28,
+      "versions": {
+        "4": "Popper: Eine Theorie ist nur dann wissenschaftlich, wenn man angeben kann, welche Beobachtung sie widerlegen würde.",
+        "5": "Asymmetrie zwischen Bestätigung und Widerlegung: 1000 weiße Schwäne bestätigen 'alle Schwäne sind weiß' nicht — ein einziger schwarzer widerlegt sie."
+      }
+    }
+  ],
+
+  "contextByLevel": {
+    "1": "Wir starten mit der ältesten Streitfrage: kommt sicheres Wissen aus dem reinen Denken oder aus der Erfahrung?",
+    "2": "Hume zeigt, dass beide Lager allein nicht reichen — Kant baut die Brücke.",
+    "3": "Erst die historische Linie macht sichtbar, wie sich die Positionen aneinander schärften.",
+    "4": "Methodische Werkzeuge treten in den Vordergrund: Was zählt als guter Beleg?",
+    "5": "Die feinen Linien — wo heute noch gerungen wird."
+  }
+}
