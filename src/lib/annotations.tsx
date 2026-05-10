@@ -8,13 +8,13 @@ import React from 'react'
 export function Annotated({ text, level }: { text: string; level: number }) {
   if (level > 1) {
     const stripped = text
-      .replace(/\s*\[\[.*?\]\]/gs, '')
+      .replace(/\s*\[\[.*?\]\]/g, '')
       .replace(/\s{2,}/g, ' ')
       .trim()
     return <>{stripped}</>
   }
 
-  const parts = text.split(/(\[\[.*?\]\])/gs)
+  const parts = text.split(/(\[\[.*?\]\])/g)
   return (
     <>
       {parts.map((part, i) => {
