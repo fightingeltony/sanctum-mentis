@@ -261,6 +261,7 @@ export default function TopicViewer({ data }: Props) {
             levelId={levelId}
             currentLevel={state.level}
             quadrants={data.topic.quadrants}
+            onThinkerClick={(id) => { setTab('denker'); setHighlightId(id) }}
           />
         )}
       </main>

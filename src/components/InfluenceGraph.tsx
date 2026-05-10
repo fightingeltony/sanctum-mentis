@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import type { Thinker, Influence, School, InfluenceType, Level, Topic } from '@/lib/types'
 import { usePanZoom } from '@/hooks/usePanZoom'
 import { MapZoomControls } from './map/MapZoomControls'
+import { Annotated } from '@/lib/annotations'
 
 interface ThinkerWithDesc extends Thinker { description: string }
 interface InfluenceWithDesc extends Influence { description: string }
@@ -715,7 +716,9 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
 
             {/* Description */}
             <div className="p-4 border-b border-[--hairline]">
-              <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">{detail.desc}</p>
+              <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">
+                <Annotated text={detail.desc} level={currentLevel.id} />
+              </p>
             </div>
 
             {/* Outgoing influences */}
@@ -780,7 +783,9 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
             <>
               <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint] mb-1.5">{detail.eyebrow}</p>
               <p className="font-display text-[17px] tracking-[0.08em] text-[--fg] mb-2.5">{detail.name}</p>
-              <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">{detail.desc}</p>
+              <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">
+                <Annotated text={detail.desc} level={currentLevel.id} />
+              </p>
             </>
           ) : (
             <p className="font-body italic text-[13px] text-[--fg-dim]">

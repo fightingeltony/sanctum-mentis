@@ -6,6 +6,7 @@ import { CONCEPT_GLYPH, CONCEPT_LABEL } from '@/lib/conceptTypes'
 import { MapHiddenCounter } from './map/MapHiddenCounter'
 import { MapZoomControls } from './map/MapZoomControls'
 import { usePanZoom } from '@/hooks/usePanZoom'
+import { Annotated } from '@/lib/annotations'
 
 interface ConceptWithDesc extends Concept {
   description: string
@@ -19,6 +20,7 @@ interface Props {
   levelId: number
   currentLevel: Level
   quadrants: Quadrants
+  onThinkerClick?: (id: string) => void
 }
 
 const W = 980, H = 700
@@ -35,7 +37,7 @@ function mapX(x: number) { return PAD_X + (x / 100) * (W - 2 * PAD_X) }
 function mapY(y: number) { return H - PAD_Y - (y / 100) * (H - 2 * PAD_Y) }
 
 export default function QuadrantPlot({
-  concepts, totalConcepts, thinkers = [], levelId, currentLevel, quadrants,
+  concepts, totalConcepts, thinkers = [], levelId, currentLevel, quadrants, onThinkerClick,
 }: Props) {
   const [selected, setSelected] = useState<ConceptWithDesc | null>(null)
   const [hovered, setHovered]   = useState<string | null>(null)
@@ -305,7 +307,7 @@ export default function QuadrantPlot({
           {/* Description */}
           <div className="p-4 border-b border-[--hairline]">
             <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">
-              {selected.description}
+              <Annotated text={selected.description} level={levelId} />
             </p>
           </div>
 
@@ -315,7 +317,17 @@ export default function QuadrantPlot({
               <p className="section-label mb-2.5">Aus dieser Schule</p>
               <div className="flex flex-col gap-1">
                 {authorsOf.map(t => (
-                  <span key={t.id} className="font-ui text-[12px] text-[--fg-muted]">{t.name}</span>
+                  onThinkerClick ? (
+                    <button
+                      key={t.id}
+                      onClick={() => onThinkerClick(t.id)}
+                      className="font-ui text-[12px] text-left text-[--fg-muted] hover:text-[--gold] transition-colors"
+                    >
+                      {t.name}
+                    </button>
+                  ) : (
+                    <span key={t.id} className="font-ui text-[12px] text-[--fg-muted]">{t.name}</span>
+                  )
                 ))}
               </div>
             </div>
@@ -333,7 +345,9 @@ export default function QuadrantPlot({
               {CONCEPT_LABEL[selected.type] ?? 'Konzept'}
             </p>
             <p className="font-display text-[16px] tracking-[0.08em] text-[--fg] mb-2.5">{selected.name}</p>
-            <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">{selected.description}</p>
+            <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">
+              <Annotated text={selected.description} level={levelId} />
+            </p>
           </>
         ) : (
           <p className="font-body italic text-[13px] text-[--fg-dim]">

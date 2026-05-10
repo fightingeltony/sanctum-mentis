@@ -20,17 +20,18 @@
 
 ## Konzeptionelle Erweiterungen
 
-### [ ] Glossar-Modus auf L1
-**Status:** diskutiert 10.5.26, nicht entschieden
-**Kontext:** Auch auf L1 enthalten Summaries Begriffe wie "Substanzdualismus", "Kategorienfehler", "Privatsprachenargument", die ein Einsteiger nicht aus dem Alltag kennt. Ein 4-Satz-Summary kann sie nicht nebenbei erklären, ohne sich selbst zu sprengen.
-**Optionen:**
-- A) Glossar als eigene Seite (alphabetisch, über Sidebar erreichbar) — bricht den Fluss
-- B) Hover-Tooltips auf markierten Begriffen — Mobile-Problem
-- C) Inline-Annotationen, die nur auf L1 sichtbar sind — der Slider regelt nicht nur welche Knoten sichtbar sind, sondern auch wie tief die Erklärung reicht
+### [x] Glossar-Modus auf L1
+**Status:** entschieden 10.5.26
+**Entscheidung:** Inline-Annotationen im `summary`-Feld via `[[doppelte eckige Klammern]]`.
+- Ein `summary`-Feld pro Knoten — keine Duplikate
+- Annotationen in `[[...]]` eingebettet
+- Frontend L1: Annotationen sichtbar rendern (klein, kursiv)
+- Frontend L2+: Annotationen per Regex entfernen (`/\[\[.*?\]\]/g` → leer)
+- Skaliert über alle Tableaus ohne Pflegekosten
 
-**Tendenz:** Option C
-**Schema-Implikation bei C:** Entweder `summary_l1` + `summary_default`, oder ein `summary` mit eingebetteten Annotationen, die das Frontend levelabhängig ausblendet.
-**Nächster Schritt:** Entscheidung treffen vor nächstem Tableau-Bau, damit Schema konsistent bleibt.
+**Abgegrenzt:** `summary_l1` + `summary_default` abgelehnt — 33 Paare in Geistphilosophie allein, skaliert nicht.
+Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lectio-Modus, nicht des summary-Feldes.
+**Nächster Schritt:** Schema und Frontend umsetzen beim nächsten Tableau-Bau.
 
 ---
 

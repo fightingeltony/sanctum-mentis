@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import type { Thinker, School, Level } from '@/lib/types'
+import { Annotated } from '@/lib/annotations'
 
 interface ThinkerWithDesc extends Thinker {
   description: string
@@ -139,7 +140,7 @@ export default function ThinkerList({
           Auf diesem Komplexitäts-Level sind noch keine Denker freigeschaltet.
         </p>
       ) : listStyle === 'grouped' ? (
-        <GroupedList thinkers={filtered} schools={visibleSchools} cardRefs={cardRefs} />
+        <GroupedList thinkers={filtered} schools={visibleSchools} cardRefs={cardRefs} level={currentLevel.id} />
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {sorted.map(t => {
@@ -174,7 +175,7 @@ export default function ThinkerList({
                   </span>
                 )}
                 <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]" style={{ textWrap: 'pretty' } as React.CSSProperties}>
-                  {t.description}
+                  <Annotated text={t.description} level={currentLevel.id} />
                 </p>
               </div>
             )
@@ -186,11 +187,12 @@ export default function ThinkerList({
 }
 
 function GroupedList({
-  thinkers, schools, cardRefs,
+  thinkers, schools, cardRefs, level,
 }: {
   thinkers: ThinkerWithDesc[]
   schools: School[]
   cardRefs: React.MutableRefObject<Map<string, HTMLElement>>
+  level: number
 }) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10 items-start">
@@ -245,7 +247,7 @@ function GroupedList({
                     className="font-ui text-[13px] leading-relaxed text-[--fg-muted]"
                     style={{ textWrap: 'pretty' } as React.CSSProperties}
                   >
-                    {t.description}
+                    <Annotated text={t.description} level={level} />
                   </p>
                 </div>
               ))}
