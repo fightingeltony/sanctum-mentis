@@ -2,6 +2,14 @@
 
 ## Zuletzt abgeschlossen
 
+### Session 2026-05-10
+- [x] **Mobile Dark-Mode Fix:** `color-scheme: light` in globals.css + Next.js Viewport API — verhindert Chrome Android "Force Dark Mode"
+- [x] **Glossar-Modus `[[Annotationen]]`:** `src/lib/annotations.tsx` neu, `Annotated`-Renderer in InfluenceGraph, QuadrantPlot, ThinkerList verdrahtet
+- [x] **QuadrantPlot → Denker-Navigation:** `onThinkerClick`-Callback — Klick auf Denker im Konzept-Panel wechselt direkt zum Denker-Tab mit Highlight
+- [x] **Content-Erweiterung Philosophie des Geistes:** Alle 16 Denker + 17 Konzept-Beschreibungen auf 4–6 Sätze ausgebaut, L1-Annotationen für Fachbegriffe eingefügt
+- [x] **Das Selbst — 10 neue Einfluss-Kanten (L2–L5):** Auflösung der drei parallelen Cluster (Spiritualität / Psychotherapie / Neurowissenschaft); 13 von 15 Denkern jetzt vernetzt
+- [x] **Build-Fix:** `s`-Flag aus Regex in annotations.tsx entfernt (ES2018-Inkompatibilität im TypeScript-Target)
+
 ### Session 2025-05-09
 - [x] **Deployment:** Vercel + GitHub live (sanctum-mentis)
 - [x] **Philosophie des Geistes v2:** 16 Denker, 15 Schulen, 17 Konzepte, 17 Einfluss-Kanten
@@ -35,17 +43,15 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] Side-Panel "Tiefenbohrung" — Stufe 1
-**Status:** diskutiert 10.5.26, priorisiert
-**Kontext:** Aktuelles Info-Feld unten links zeigt 3 Zeilen pro Klick. Das ist eine Karteikarte, kein Lehrstück. Gedankenexperimente wie Mary's Room oder das Chinesische Zimmer brauchen schrittweise Entfaltung, um zu wirken. Der Begriff "Lern-Companion" in der Sidebar ist ein Versprechen, das die aktuelle Tooltip-Lösung nicht einlöst.
-**Stufe 1 Umfang:**
-- Klick auf Knoten → Map shrinkt links auf 60%, Panel öffnet rechts auf 40%
-- Panel zeigt: Titel, Kategorie/Quadrant, längeres Summary (4–6 Sätze statt 3 Zeilen), Liste eingehender und ausgehender Influences mit Links zu deren Knoten
-- Keine knotentyp-spezifische Strukturierung — alle Knoten teilen ein Layout
-- Schließbar (X), navigierbar zwischen verwandten Knoten
-
-**Aufwand:** ~1 Tag Frontend + 1 Nachmittag Content-Erweiterung pro Tableau
-**Nächster Schritt:** Stufe 1 bauen, validieren, dann zweites Thema bauen, dann über Stufe 2 entscheiden.
+### [x] Side-Panel "Tiefenbohrung" — Stufe 1
+**Status:** abgeschlossen 10.5.26
+**Umgesetzt:**
+- InfluenceGraph: 320px-Panel rechts, Canvas schrumpft; ausgehende + eingehende Kanten als klickbare Links mit Navigation zwischen Knoten
+- QuadrantPlot: 300px-Panel rechts; Konzept-Typ-Badge + "Aus dieser Schule" mit `onThinkerClick`-Navigation zum Denker-Tab
+- `Annotated`-Renderer in allen drei Komponenten verdrahtet (ThinkerList, InfluenceGraph, QuadrantPlot)
+- Content-Erweiterung Philosophie des Geistes: 4–6 Sätze pro Knoten, L1-Annotationen für Fachbegriffe
+- Mobile: Detail-Karte unterhalb Canvas (`sm:hidden`) — bewusste Entscheidung, bleibt so
+**Nächster Schritt:** Zweites Tableau (Das Selbst) mit gleicher Tiefe ausbauen, dann über Stufe 2 entscheiden.
 
 ---
 
