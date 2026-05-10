@@ -7,7 +7,7 @@
 - [x] **Glossar-Modus `[[Annotationen]]`:** `src/lib/annotations.tsx` neu, `Annotated`-Renderer in InfluenceGraph, QuadrantPlot, ThinkerList verdrahtet
 - [x] **QuadrantPlot → Denker-Navigation:** `onThinkerClick`-Callback — Klick auf Denker im Konzept-Panel wechselt direkt zum Denker-Tab mit Highlight
 - [x] **Content-Erweiterung Philosophie des Geistes:** Alle 16 Denker + 17 Konzept-Beschreibungen auf 4–6 Sätze ausgebaut, L1-Annotationen für Fachbegriffe eingefügt
-- [x] **Das Selbst — 10 neue Einfluss-Kanten (L2–L5):** Auflösung der drei parallelen Cluster (Spiritualität / Psychotherapie / Neurowissenschaft); 13 von 15 Denkern jetzt vernetzt
+- [x] **Das Selbst — 10 neue Einfluss-Kanten (L2–L5):** Auflösung der drei parallelen Cluster (Spiritualität / Psychotherapie / Neurowissenschaft); 13 von 15 Denkern jetzt vernetzt. Meditative Stimme explizit erhalten — kein Inquisitor-Lauf, gezielte Anreicherung. Erste Anwendung des Prinzips "Anreicherung statt Erweiterung".
 - [x] **Build-Fix:** `s`-Flag aus Regex in annotations.tsx entfernt (ES2018-Inkompatibilität im TypeScript-Target)
 
 ### Session 2025-05-09
@@ -17,6 +17,7 @@
   - Entfernt: Putnam
   - Konzept↔Konzept-Kanten in Denker-Kanten integriert (nicht separat modelliert)
   - Einfluss-Mapping: development/opposition/shared_diagnosis → influence/critique/parallel
+  - *Retrospektive: Volle Inquisitor-Schleife hat Vollständigkeit über Verstehbarkeit gestellt — bei zukünftigen Tableaus bewusster prüfen, ob die volle Schleife wirklich passt.*
 - [x] **Bug:** `school.name` → `school.label` in InfluenceGraph, ThinkerList, CommandPalette, types.ts
 - [x] **library.json:** Subtitle Philosophie des Geistes aktualisiert
 - [x] **Stufe 1 — Side-Panel (Frontend):**
@@ -55,8 +56,25 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
+### [ ] Synthese-Texte auf L5 einführen
+**Status:** vorgeschlagen 10.5.26, dringend
+**Kontext:** Aktuelle Tableaus zeigen auf L5 alle Knoten und Spannungen, aber ohne expliziten Erkenntnis-Landungs-Moment. Die Sanctum-Vision ("Wissen zur Ruhe kommen lassen") verlangt einen Ort, an dem der Bogen sichtbar geschlossen wird. Der Slider-Zustand "Synthese" suggeriert das, aber liefert es nicht.
+**Schema:** Neues Feld `synthesis` im topic-Block, drei bis fünf Sätze, sichtbar nur auf L5. Nicht ein neues Summary, sondern eine kuratorische Einordnung — *"Hier ist die Spannung, die du jetzt verstehst."*
+**Aufwand:** Pro Tableau eine halbe Stunde Schreibarbeit. Frontend: minimal.
+**Nächster Schritt:** Bei beiden Bestandstableaus retroaktiv ergänzen, dann als Standard für neue Tableaus.
+
+---
+
+### [ ] Lebensweltliche Eingangs-Anker prüfen
+**Status:** vorgeschlagen 10.5.26
+**Kontext:** Tableau-Subtitles sind teilweise akademisch formuliert. Die Sanctum-Vision verlangt lebensweltliche Anker, die einen Nutzer bei einer Frage abholen, die er selbst hat. *Lebensfragen sind die kraftvollste Form von "Ein Thema zu Ende denken"*.
+**Beispiel:** Geistphilosophie könnte statt "Vom Gespenst in der Maschine zur Architektur des Selbst" etwas wie "Wenn ich Schmerz fühle — was passiert da eigentlich?" tragen. (Beispiel, nicht festgelegt.)
+**Nächster Schritt:** Bestandstableaus prüfen, gegebenenfalls Subtitle überarbeiten.
+
+---
+
 ### [ ] Side-Panel "Tiefenbohrung" — Stufe 2
-**Status:** diskutiert 10.5.26, abhängig von Stufe 1
+**Status:** diskutiert 10.5.26, abhängig von Stufe 1 + zweitem Tableau
 **Kontext:** Knotentyp-spezifische Layouts. Gedankenexperimente brauchen Schritt-für-Schritt-Reveal (Setup → Frage → Antwort → Schluss); Theorien brauchen Kernthese + Hauptargument + Hauptkritik; Methoden brauchen Ziel + Schritte + Limitationen.
 **Schema-Implikation:** Optionale Felder `argument_structure`, `kernthese`, `kritik` zusätzlich zu `summary`.
 **Aufwand:** 2–3 Tage Frontend + retrospektive Content-Pflege aller bisherigen Tableaus.
@@ -65,24 +83,48 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 ---
 
 ### [ ] Modi-System für Tableau-Produktion
-**Status:** konzeptionell verstanden 10.5.26, nicht codifiziert
+**Status:** konzeptionell verstanden 10.5.26, nicht codifiziert — Mild neuer Default
 **Kontext:** Nicht jedes Thema braucht die volle Architekt-Inquisitor-Schleife. Manche Themen verlieren durch akademische Vollständigkeit ihre Stimme (Beispiel: Landkarte des Selbst hat meditativen Charakter, der durch Inquisitor-Lauf zerstört würde). Andere Themen verlangen sie (Geistphilosophie, Erkenntnistheorie).
+**Retrospektive:** Die Erweiterung von 13 auf 16 Denker in Geistphilosophie hat den Datensatz vollständiger gemacht, aber nicht abschlussfähiger — bei zukünftigen Tableaus bewusst vorprüfen, ob die volle Schleife wirklich passt.
 **Drei Modi:**
 - Solo-Architekt: 8–12 Knoten, ohne kritische Revision, schnell und intuitiv
-- Mild: Architekt baut, eine Runde milde Selbstprüfung, ohne vollen Vollständigkeitsanspruch
-- Volle Schleife: Architekt → Inquisitor → Architekt, akademische Reife, 16+ Knoten
+- Mild: Architekt baut, eine Runde milde Selbstprüfung, ohne vollen Vollständigkeitsanspruch — **neuer Default**
+- Volle Schleife: Architekt → Inquisitor → Architekt, akademische Reife, 16+ Knoten — bewusste Ausnahme
 
 **Implikation für Library:** `complexity_mode`-Feld im `meta`-Block jedes Tableaus, plus `intended_audience`. Macht die Verschiedenheit der Tableaus zu einem Feature, nicht zu einer Inkonsistenz.
 **Nächster Schritt:** In zukünftigen Tableau-Prompts den gewünschten Modus explizit nennen. Meta-Felder bei nächster Schema-Erweiterung mit aufnehmen.
 
 ---
 
-### [ ] Lectio-Modus (geführte Tour)
-**Status:** Idee, neu am 10.5.26
-**Kontext:** Statt offene Karte für Einsteiger eine geführte Tour: "Wir beginnen bei Descartes. Er sagte… Das warf das Problem auf, dass… Darauf antwortete Ryle mit…" Knoten für Knoten, mit Übergangstexten, in didaktisch sinnvoller Reihenfolge.
+### [ ] Lectio-Modus — von Nice-to-Have zu Kernfeature
+**Status:** Priorität erhöht 10.5.26
+**Kontext:** Geführte Tour durchs Tableau (zeitliche Sequenz statt räumlicher Karte) war Nice-to-Have. Mit der Sanctum-Linse ("Punkte setzen, Erkenntnisse landen lassen") wird sie zum Kernmechanismus für Verstehen-Abschließen. Die offene Karte zeigt das Big Picture — gut für Verstehen. Die Tour führt durch das Big Picture — gut für Abschließen. Beide gehören zusammen.
 **Verhältnis zu Side-Panel:** Komplementär — Side-Panel ist räumlich strukturiert (Knoten in Beziehung), Lectio temporal (Knoten in Lernreihenfolge).
 **Schema-Implikation:** Eine `lectio_path`-Liste pro Tableau, die eine empfohlene Reihenfolge von Knoten plus Übergangstexte definiert.
-**Nächster Schritt:** Erst nach Side-Panel Stufe 1 in Erwägung ziehen — könnte sich als wichtiger erweisen als Stufe 2.
+**Nächster Schritt:** Side-Panel Stufe 1 hat Vorrang; danach Lectio parallel zu oder vor Stufe 2 — nicht mehr danach.
+
+---
+
+### [ ] Frage-Architektur (Sanctum Quaestiones)
+**Status:** Idee 10.5.26, nicht jetzt umsetzen
+**Kontext:** Lebensfragen ("Was ist Liebe?", "Wie gehe ich mit Verlust um?", "Wie finde ich zu mir selbst?") als Anker, der Knoten aus mehreren Tableaus quer zusammenzieht. Andere Architektur als die Feld-orientierten Tableaus — *horizontal* statt *vertikal*. Nicht ein anderes Projekt, sondern eine zweite Sicht auf denselben Datenkern.
+**Verhältnis zu Lectio:** Lectio-Modus ist die natürliche technische Form dafür — geführter Pfad durch Knoten, nur Tableau-übergreifend.
+**Persona:** Coach (eigene Buch-Arbeit zu Transformationsprozess, Psychologie + Spiritualität + Mythologie) — Menschen, die selbst an inneren Synthesen arbeiten, sind die natürliche Nutzergruppe.
+**Voraussetzung:** Mindestens fünf bis sieben Tableaus mit lebensweltlich relevanten Knoten.
+**Nächster Schritt:** Im Hinterkopf behalten; beim Tableau-Aufbau bewusst Knoten produzieren, die später für Frage-Architektur nutzbar sind (lebensweltliche Konzepte, ethische Implikationen, praktische Anwendungen).
+
+---
+
+### [ ] Bibliotheks-Architektur strukturieren
+**Status:** vorgeschlagen 10.5.26, mittelfristig
+**Kontext:** Aktuell zwei Tableaus, flache Struktur. Ab fünf bis zehn Tableaus wird Strukturierung nötig.
+**Optionen:**
+- A) Flache Liste mit Tags ("Philosophie", "Psychologie", "Spiritualität") — flexibel, aber bei vielen Tableaus unübersichtlich
+- B) Kategorien als Hauptebene, Tableaus darin — klar navigierbar, aber Mehrfach-Zugehörigkeit schwierig
+- C) Kuratierte Pfade plus Bibliothek — lädt zum Eintauchen ein, höherer Pflegeaufwand
+
+**Tendenz:** Pragmatisch B implementieren, langfristig zu C entwickeln. Landingpage "Ideengeschichte" als Oberbegriff einführen — breit genug für Ethik, Politische Theorie, kontemplative Traditionen.
+**Nächster Schritt:** Sobald drittes Tableau existiert, B implementieren.
 
 ---
 
@@ -112,9 +154,64 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ### [ ] Schools-Schema: Konsistenzprinzip
 **Status:** Beobachtung 10.5.26, kein konkretes Item
-**Kontext:** Bei Geistphilosophie-Implementierung wurde sichtbar, dass `schools` als 1:1 zu Denkern befüllt war (Implementierungsmuster aus Landkarte des Selbst, kein konzeptuelles Prinzip). Korrigiert auf "Schulen sind Denker-Traditionen, denen mehrere Denker angehören können."
+**Kontext:** Bei Geistphilosophie-Implementierung wurde sichtbar, dass `schools` als 1:1 zu Denkern befüllt war (Implementierungsmuster aus Landkarte des Selbst, kein konzeptuelles Prinzip). Korrigiert auf Prinzip: "Schulen sind Denker-Traditionen, denen mehrere Denker angehören können — nicht umetikettierte Personen."
 **Implikation:** Bei künftigen Tableaus bewusst prüfen — sind die Schulen tatsächlich Traditionen oder umetikettierte Personen?
 **Nächster Schritt:** Beim nächsten Tableau-Bau aktiv beachten. Eventuell beide Bestandstableaus retrospektiv prüfen.
+
+---
+
+## Landingpage
+
+### [ ] Vision-Klammer ergänzen
+**Status:** vorgeschlagen 10.5.26, dringend
+**Kontext:** Aktuelle Landingpage hat drei klar formulierte Feature-Sektionen (Komplexität auf Abruf / Debatte im Fokus / Wissen räumlich verankert), aber keine Vision-Sektion. Die Diagnose, die Sanctum eigentlich bewegt — *"Wir haben alles Wissen der Welt zur Hand, was uns fehlt ist Kontext, die Möglichkeit ein Thema zu Ende zu verstehen"* — taucht nirgends auf.
+**Tonart-Beispiel:**
+> *Wir leben in einer Zeit, in der alles Wissen der Welt zur Hand ist. Bücher, Suchmaschinen, KI. Was uns fehlt, ist Kontext. Die Möglichkeit, ein Thema einmal zu Ende zu verstehen — Punkte zu setzen, Erkenntnisse landen zu lassen. Sanctum Mentis macht aus dem Gewirr eine Karte.*
+
+**Nächster Schritt:** Tonart-Beispiel als Ausgangspunkt nehmen, eigene Formulierung finden, dann implementieren.
+
+---
+
+### [ ] "Erste interaktive..."-Behauptung zurücknehmen
+**Status:** vorgeschlagen 10.5.26
+**Kontext:** Die Behauptung *"Sanctum Mentis ist das erste interaktive Navigationssystem für Philosophie und Psychologie"* ist faktisch angreifbar — es gibt mehrere akademische Vorgängerprojekte (Phaidra, PhilPapers-Mapping). Ein vorgebildeter Nutzer verliert sofort Vertrauen.
+**Mögliche Varianten:**
+- *"Sanctum Mentis kartiert die klügsten Konzepte der Geschichte..."*
+- *"Sanctum Mentis ist ein neues Navigationssystem für die Ideengeschichte..."*
+- *"Sanctum Mentis verbindet Philosophie und Psychologie zu einer interaktiven Landkarte..."*
+
+**Nächster Schritt:** Eine der Varianten wählen oder eigene formulieren.
+
+---
+
+### [ ] "Philosophie und Psychologie" thematisch öffnen
+**Status:** vorgeschlagen 10.5.26
+**Kontext:** Aktuelle Landingpage definiert Sanctum als *"Navigationssystem für Philosophie und Psychologie"*. Das zementiert das Produkt zu früh — Sanctum kann legitim auch Tableaus zu Ethik, Politischer Theorie, Wissenschaftstheorie, kontemplativen Traditionen produzieren.
+**Vorschlag:** *"Ideengeschichte"* als Oberbegriff einführen — breit genug für alles, was Sanctum jemals tun wird, ohne abstrakt zu werden.
+**Nächster Schritt:** Gemeinsam mit Vision-Klammer überarbeiten.
+
+---
+
+### [ ] Sektion III "Wissen räumlich verankert" — Tonbruch beheben
+**Status:** vorgeschlagen 10.5.26
+**Kontext:** Aktueller Erklärtext: *"...damit dein Gehirn das 'Big Picture' intuitiv abspeichern kann."* Speicher-Metapher bricht den Ton; *"Big Picture"* in Anführungszeichen wirkt unsicher; bricht aus dem Du-Du-Muster der anderen Sektionen aus.
+**Vorschlag:**
+> *"Konzepte schweben nicht länger im luftleeren Raum. Jede Idee findet ihren Platz im Koordinatensystem — und du siehst, wie sie zusammenhängt mit den anderen. Erst dort, im Zusammenhang, lässt sich Wissen zu Ende denken."*
+
+**Nächster Schritt:** Erklärtext überarbeiten.
+
+---
+
+### [ ] "Direkt zur Erkenntnistheorie"-Button anpassen
+**Status:** vorgeschlagen 10.5.26
+**Kontext:** Button verweist auf Erkenntnistheorie, die noch nicht existiert. Klick → sofortiger Vertrauensverlust.
+**Optionen:**
+- A) Button auf existierendes Tableau zeigen — *"Direkt zur Philosophie des Geistes"* — jetzt
+- B) Button entfernen bis Erkenntnistheorie existiert
+- C) Allgemeineres *"Empfohlener Einstieg"* mit kuratiertem Tableau — dauerhaft
+
+**Empfehlung:** A jetzt, C sobald mehrere Tableaus existieren.
+**Nächster Schritt:** Button-Text auf existierendes Tableau anpassen.
 
 ---
 
@@ -128,7 +225,7 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 - Y: Empirie/Welt ↔ Sprache/Kategorien (Quelle der Erkenntnis)
 
 **Mögliche Denker:** Aristoteles, Locke, Berkeley, Kant, Russell, James, Dewey, Goodman, Putnam (Realismus-Phase + Spätphase als interne Spannung), Rorty, Latour, Searle, Boghossian, Gabriel, Ferraris
-**Modus:** Volle Schleife (klassisches erkenntnistheoretisches Schwergewicht)
+**Modus:** zu prüfen — vor dem Bauen entscheiden, ob volle Schleife nötig oder Mild genügt
 **Nächster Schritt:** Als nächstes Tableau erwägen, wenn Side-Panel Stufe 1 steht. Vorher: Anker prüfen — was treibt mich konkret an dem Thema?
 
 ---
@@ -137,7 +234,7 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Status:** Idee, früher in Konversation erwähnt
 **Anker:** unklar
 **Achsen-Skizze:** noch nicht entwickelt
-**Modus:** vermutlich Mild (Tradition mit klaren Klassikern, aber Wert liegt in Klarheit der Lebensphilosophie, nicht in akademischer Vollständigkeit)
+**Modus:** vermutlich Mild oder Solo (Tradition mit klaren Klassikern, aber Wert liegt in Klarheit der Lebensphilosophie, nicht in akademischer Vollständigkeit)
 **Nächster Schritt:** Anker prüfen, bevor Bau begonnen wird.
 
 ---
@@ -150,21 +247,51 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
+## Offene Grundsatzfragen
+
+### Kopf-Herz-Bauch
+**Status:** beobachten, nicht jetzt entscheiden
+**Kontext:** Aktuelle Sanctum-Architektur ist kopflastig. Tableaus organisieren Wissen, Lectio führt durch Wissen — beides kognitive Modi. Die persönliche Bewegung des Kurators (Wissen muss vom Kopf über das Herz in den Bauch wandern) ist im Tool nicht abgebildet.
+**Drei mögliche Antworten:**
+- A) Herz/Bauch als Tableau-Ebenen (vermutlich überladen)
+- B) Herz/Bauch als zusätzliche Eintritte in die Bibliothek (Frage-Architektur deckt das teilweise ab)
+- C) Herz/Bauch im Lectio-Modus integrieren (geführte Tour als Brücke vom Verstehen zum Verkörpern)
+
+**Tendenz:** C, weil Lectio sowieso geplant ist und die natürliche Stelle für diese Bewegung wäre.
+**Nächster Schritt:** Beobachten, ob die Frage wiederkommt.
+
+---
+
 ## Kuratorische Prinzipien
 
-Sammlung der Prinzipien, die sich beim Bauen herausgeschält haben — keine ToDo-Items, sondern Leitlinien.
+Sammlung der Prinzipien, die sich beim Bauen herausgeschält haben — keine ToDo-Items, sondern Leitlinien für jede Entscheidung.
 
-- **Größencheck für neue Themen:** Wenn man nicht spontan zwei Achsen formulieren kann, die das Thema produktiv aufspannen, ist es zu schmal für ein Tableau.
-- **Reifecheck für neue Themen:** Tableaus brauchen historische Sedimentierung — klare Vorläufer, Klassiker, zeitgenössische Erben. Aktuelle Bewegungen ohne stabilisierte Form eignen sich schlecht.
-- **Persönlicher Resonanzcheck:** Bevor ein Thema gebaut wird, prüfen — was treibt mich? Reaktive Themen ("hab heute davon gelesen") sind dünner als gewachsene ("beschäftigt mich seit Monaten").
-- **Modus-Bewusstheit:** Nicht jedes Tableau muss durch die volle Architekt-Inquisitor-Schleife. Die Library wird stärker, wenn Verschiedenheit der Tableaus kuratiert ist statt zufällig.
-- **Datensatz vs. Produkt:** Ein guter Datensatz ist nicht gleich ein gutes Produkt. Side-Panel und Glossar entscheiden, ob die Datensatzqualität auch im Frontend ankommt.
+### Verstehen-Abschließen als Maßstab
+Sanctum hilft Nutzern, Themen *zu Ende zu denken*, nicht alle möglichen Positionen zu kennen. Prüffrage für jede Datensatz-Entscheidung: *Hilft diese Erweiterung beim Abschließen, oder hält sie nur Spannungen offen?* Vollständigkeit ist nicht das Ziel — Verstehbarkeit ist es.
+
+### Größencheck für neue Themen
+Wenn man nicht spontan zwei Achsen formulieren kann, die das Thema produktiv aufspannen, ist es zu schmal für ein Tableau. Strömungen und Schulen sind Knoten, keine Tableau-Themen.
+
+### Reifecheck für neue Themen
+Tableaus brauchen historische Sedimentierung — klare Vorläufer, Klassiker, zeitgenössische Erben. Aktuelle Bewegungen ohne stabilisierte Form eignen sich schlecht.
+
+### Persönlicher Resonanzcheck
+Bevor ein Thema gebaut wird, prüfen — was treibt mich? Reaktive Themen ("hab heute davon gelesen") sind dünner als gewachsene ("beschäftigt mich seit Monaten").
+
+### Modus-Bewusstheit
+Nicht jedes Tableau muss durch die volle Architekt-Inquisitor-Schleife. Die Library wird stärker, wenn Verschiedenheit der Tableaus *kuratiert* ist statt zufällig.
+
+### Anreicherung statt Erweiterung
+Manche Datensätze brauchen mehr Beziehungen, nicht mehr Knoten. Die Operation "Influence-Anreicherung" ist additiv, schmal und stilerhaltend — geeignet für Datensätze, deren Stimme stimmt, aber deren Netz dünn ist.
+
+### Datensatz vs. Produkt
+Ein guter Datensatz ist nicht gleich ein gutes Produkt. Side-Panel, Glossar und Synthese-Texte entscheiden, ob die Datensatzqualität auch im Frontend ankommt.
 
 ---
 
 ## Format für neue Items aus Diskussionen
 
-Bei Bedarf am Ende eines Diskussions-Chats Claude bitten: "Fass mir die Backlog-relevanten Punkte aus diesem Chat zusammen, im Format meiner backlog.md."
+Bei Bedarf am Ende eines Diskussions-Chats Claude bitten: *"Fass mir die Backlog-relevanten Punkte aus diesem Chat zusammen, im Format meiner backlog.md."*
 
 **Item-Vorlage:**
 ```
@@ -175,3 +302,11 @@ Bei Bedarf am Ende eines Diskussions-Chats Claude bitten: "Fass mir die Backlog-
 **Tendenz/Entscheidung:** [wenn vorhanden]
 **Nächster Schritt:** [konkret oder "warten auf X"]
 ```
+
+## Anmerkung zum Übergabe-Workflow
+
+Diese Datei ist als *Übergabe-Dokument* an Claude Code gedacht, nicht als paralleles Backlog. Claude Code pflegt das eigentliche Backlog im Repo. Der typische Übergabe-Prompt:
+
+> *"Hier ist ein aktualisierter Backlog-Stand aus einer Diskussion. Gleiche das mit unserer bestehenden Backlog-Datei ab. Neue Items aufnehmen, bestehende ergänzen wo der zusätzliche Kontext hilfreich ist, Duplikate ignorieren. Bei Konflikten frag mich. Zeig mir den Diff vor dem Speichern."*
+
+Damit bleibt die Wahrheit im Repo, und die Konversations-Datei ist nur das Vehikel.
