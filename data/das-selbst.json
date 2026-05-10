@@ -470,6 +470,106 @@
       "versions": {
         "4": "IFS baut auf Jungs Arbeit der Teilpersönlichkeiten (Komplexe) auf, setzt aber eine spirituelle Essenz ins Zentrum."
       }
+    },
+    {
+      "id": "vedanta-jung",
+      "from": "vedanta",
+      "to": "jung",
+      "type": "influence",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Jung war zeitlebens fasziniert von östlichen Lehren. Sein Selbst-Konzept hat eine eingestandene Nähe zur Atman-Idee: ein tieferer, transpersonaler Kern, der durch psychische Reifung zugänglich wird. Anders als Vedanta sieht Jung diesen Kern aber als Ergebnis eines Entwicklungsprozesses (Individuation), nicht als ewig Vorhandenes."
+      }
+    },
+    {
+      "id": "metzinger-hood",
+      "from": "metzinger",
+      "to": "hood",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Zwei Stimmen derselben neurowissenschaftlichen Diagnose: Das Selbst ist Konstruktion, nicht Substanz. Metzinger formuliert es philosophisch (Ego-Tunnel als Repräsentation), Hood populär-empirisch (Ich-Narrativ als evolutionärer Trick). Gemeinsame Pointe: Es gibt niemanden, der den Tunnel bewohnt."
+      }
+    },
+    {
+      "id": "metzinger-barrett",
+      "from": "metzinger",
+      "to": "barrett",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Geteilter Konstruktivismus. Metzinger zeigt: das Selbst ist ein Modell. Barrett zeigt: auch Emotionen sind Konstruktionen, nicht Entdeckungen. Beide räumen mit der Vorstellung auf, dass es im Gehirn 'Dinge' gibt, die einfach nur abgerufen werden — alles ist aktive Konstruktion in Echtzeit."
+      }
+    },
+    {
+      "id": "jung-kohut",
+      "from": "jung",
+      "to": "kohut",
+      "type": "influence",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Kohut erbt von Jung (und Freud) die Idee einer tiefen Selbst-Struktur, verschiebt aber den Fokus: Nicht innere Archetypen-Integration, sondern relationale Spiegelung durch Selbstobjekte konstituiert das Selbst. Das nukleare Selbst entsteht zwischen den Menschen, nicht in der Psyche."
+      }
+    },
+    {
+      "id": "jung-rogers",
+      "from": "jung",
+      "to": "rogers",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Trotz verschiedener Schulen — Tiefenpsychologie und humanistische Psychologie — teilen beide eine Grundintuition: Im Menschen wirkt eine organische Tendenz zur Ganzheit. Bei Jung heißt sie Individuation, bei Rogers Aktualisierungstendenz. Beide vertrauen auf einen gesunden Kern, der sich unter den richtigen Bedingungen entfaltet."
+      }
+    },
+    {
+      "id": "friston-metzinger",
+      "from": "friston",
+      "to": "metzinger",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Das Free Energy Principle liefert die mathematische Mechanik, die Metzingers Ego-Tunnel theoretisch braucht: Wenn das Gehirn ein Vorhersagemodell der Welt ist, dann ist das Selbstmodell die Vorhersage über den eigenen Zustand. Fristons Formalismus, Metzingers Phänomenologie."
+      }
+    },
+    {
+      "id": "vedanta-almaas",
+      "from": "vedanta",
+      "to": "almaas",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Almaas' Diamond Approach hat explizit östliche Wurzeln. Die wahre Essenz als unzerstörbarer Kern unter dem Ego ist Vedanta-nah, wird aber pluralisiert: Statt eines einzigen Atman erscheint die Essenz als Vielzahl konkreter Qualitäten (Liebe, Stärke, Frieden), die direkt erfahrbar sind."
+      }
+    },
+    {
+      "id": "rohr-almaas",
+      "from": "rohr",
+      "to": "almaas",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Christliche Mystik und Diamond Approach treffen sich in einer gemeinsamen Diagnose: Unter dem aufgebauten Ego liegt etwas Ursprünglicheres — bei Rohr das Wahre Selbst als Anteil an Gott, bei Almaas die Essenz als lebendige spirituelle Substanz. Verschiedene Sprachen, verwandte Topologie."
+      }
+    },
+    {
+      "id": "buddhismus-prozesstheologie",
+      "from": "buddhismus",
+      "to": "prozesstheologie",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Östliche Leerheitslehre und westliche Prozessmetaphysik treffen sich in einer geteilten ontologischen Pointe: Es gibt keine statischen Substanzen — weder Selbst noch Gott. Was existiert, sind Ereignisse in Beziehung. Die L1-Eingangsthese (Anatta) findet auf L5 ihren westlichen Echoraum."
+      }
+    },
+    {
+      "id": "ifs-almaas",
+      "from": "ifs",
+      "to": "almaas",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Therapeutisches Modell und spirituelle Tradition treffen sich strukturell: Beide setzen einen unzerstörbaren Kern unter die Teil-Persönlichkeiten oder Ego-Strukturen. Bei IFS heißt er 'Self', bei Almaas 'Essenz'. Die strukturelle Ähnlichkeit zeigt: dieselbe Intuition über die Topologie der Person, in zwei verschiedenen Idiomen."
+      }
     }
   ]
 }
