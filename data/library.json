@@ -1,15 +1,5 @@
 [
   {
-    "id": "erkenntnistheorie",
-    "title": "Erkenntnistheorie",
-    "subtitle": "Wie wissen wir, was wir wissen?",
-    "era": "Antike – 21. Jh.",
-    "themeColor": "oklch(0.45 0.10 250)",
-    "status": "available",
-    "desc": "Von Platons Höhle bis Quines Holismus — die zentralen Positionen zur Frage nach gerechtfertigter Erkenntnis.",
-    "tags": ["Empirismus", "Rationalismus", "Skeptizismus"]
-  },
-  {
     "id": "das-selbst",
     "title": "Die Landkarte des Selbst",
     "subtitle": "Was ist das Ich? Von antiker Essenz bis zur neurokognitiven Simulation.",

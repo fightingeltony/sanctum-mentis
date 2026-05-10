@@ -36,11 +36,11 @@ export default function LandingPage() {
           <span aria-hidden>→</span>
         </Link>
         <Link
-          href="/thema/erkenntnistheorie"
+          href="/thema/philosophie-des-geistes"
           className="inline-flex items-center gap-2 px-5 py-3 border border-[--hairline] font-ui text-[12px] tracking-[0.18em] uppercase
             text-[--fg-muted] hover:text-[--fg] no-underline transition-colors"
         >
-          Direkt zur Erkenntnistheorie
+          Direkt zur Philosophie des Geistes
         </Link>
       </div>
 

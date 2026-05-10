@@ -24,11 +24,11 @@ npm install
 npm run dev
 ```
 
-Dann auf http://localhost:3000 öffnen. Direkter Link zum Beispiel-Themengebiet: http://localhost:3000/thema/erkenntnistheorie
+Dann auf http://localhost:5000 öffnen. Direkter Link zum Beispiel-Themengebiet: http://localhost:5000/thema/das-selbst
 
 ## Neues Themengebiet anlegen
 
-1. JSON-Datei in `data/` anlegen (Vorlage: `data/erkenntnistheorie.json`)
+1. JSON-Datei in `data/` anlegen (Vorlage: `data/das-selbst.json`)
 2. In `data/library.json` einen Eintrag mit `id`, `title`, `status` ergänzen
 3. In `src/lib/data.ts` importieren und in der `TOPICS`-Map registrieren
 

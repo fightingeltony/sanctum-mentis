@@ -94,7 +94,7 @@ Konzept-Positionen `x`/`y` sind 0–100, mathematische Konvention (y=0 unten, y=
 
 ## Wichtige Dateien
 - `data/library.json` — Liste aller Themengebiete (für die Bibliothek)
-- `data/erkenntnistheorie.json` — Beispiel-Themengebiet
+- `data/das-selbst.json` — Beispiel-Themengebiet (Mild-Modus)
 - `src/lib/types.ts` — Datenmodell
 - `src/lib/complexityEngine.ts` — Kern-Logik (Versioned/getVersion)
 - `src/lib/data.ts` — Topic-Loader

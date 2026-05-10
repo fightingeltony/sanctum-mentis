@@ -1,11 +1,9 @@
 import type { TopicData } from './types'
-import erkenntnistheorieRaw      from '../../data/erkenntnistheorie.json'
 import dasSelbstRaw              from '../../data/das-selbst.json'
 import philosophieDesGeistesRaw  from '../../data/philosophie-des-geistes.json'
 import libraryRaw                from '../../data/library.json'
 
 const TOPICS: Record<string, TopicData> = {
-  erkenntnistheorie:          erkenntnistheorieRaw     as unknown as TopicData,
   'das-selbst':               dasSelbstRaw             as unknown as TopicData,
   'philosophie-des-geistes':  philosophieDesGeistesRaw as unknown as TopicData,
 }
