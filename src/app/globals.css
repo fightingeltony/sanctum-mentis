@@ -50,6 +50,7 @@
 
 html {
   overflow-x: hidden;
+  color-scheme: light; /* prevent browser forced-dark / prefers-color-scheme overrides */
 }
 
 body {
