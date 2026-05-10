@@ -5,6 +5,10 @@ Lern-Companion für Philosophie und verwandte Disziplinen: Denker-Liste, Einflus
 
 Geklont aus Carta Librorum (spoilerfreier Buch-Companion). Die Engine ist identisch — der Slider war dort der Lesestand, hier ist es das Lern-Level. Beide Projekte sind getrennte Codebases.
 
+## Kuratorische Grundlinie
+
+Sanctum ist ein Lern-Companion, der Nutzern hilft, Themen *zu Ende zu denken*. Vollständigkeit ist nicht das Ziel — Verstehbarkeit ist es. Dies prägt die Richtung von Inhaltsentscheidungen, ist aber keine harte Code-Regel.
+
 ## Tech-Stack
 - **Framework:** Next.js 16 (App Router) + TypeScript
 - **Styling:** Tailwind CSS v4
@@ -30,6 +34,22 @@ function getVersion(item: { versions: Record<number, string> }, level: number): 
 ```
 Dieses Pattern gilt für Denker, Konzepte UND Einflüsse gleichermaßen.
 
+## L1-Glossar-Konvention
+
+Summaries (in `versions[1]`) können Inline-Annotationen für schwierige Begriffe enthalten, in doppelten eckigen Klammern:
+
+```
+"Substanzdualismus [[Lehre, dass Geist und Körper zwei grundverschiedene Arten von Dingen sind]] zwischen res cogitans [[denkender Geist]] ..."
+```
+
+Frontend-Verhalten:
+- Auf L1: Annotationen sichtbar gerendert (klein, kursiv)
+- Auf L2+: Annotationen entfernt (Regex-Strip beim Rendern)
+
+Diese Konvention gilt nur für L1-Versions. Höhere Levels verwenden weiterhin reine Summaries ohne Annotationen.
+
+Begründung: Auch auf L1 enthalten Summaries Fachbegriffe, die ein Einsteiger nicht aus dem Alltag kennt (Substanzdualismus, Kategorienfehler, Privatsprachenargument). Inline-Annotationen lösen das ohne doppelte Summary-Pflege.
+
 ## Daten-Modell
 
 | Domain-Begriff   | Variable     | Bedeutung                                            |
@@ -40,6 +60,22 @@ Dieses Pattern gilt für Denker, Konzepte UND Einflüsse gleichermaßen.
 | Schule           | `School`     | Strömung mit Farbe und Glyph (Empirismus, …)         |
 | Konzept          | `Concept`    | Prinzip, Methode, Argument, Unterscheidung — verortet im Quadranten-Raum |
 | Einfluss         | `Influence`  | Beziehung zwischen Denkern (influence/critique/student-of/parallel/rejection) |
+
+## Schools-Konvention
+
+Schulen sind Denker-Traditionen, denen mehrere Denker angehören können — *nicht* umetikettierte Personen.
+
+Anti-Muster (zu vermeiden):
+- school "wissensargument" mit 1 Denker (Jackson) → Argument als Schule getarnt
+- school "selbstmodell-theorie" mit 1 Denker (Metzinger) → Einzelposition als Schule
+
+Richtig:
+- school "qualia-realismus" mit Nagel und Jackson → echte Tradition mit mehreren Vertretern
+- school "phaenomenologie" mit Husserl, Varela/Thompson → klassische Tradition
+
+Regel: Wenn eine Schule nur einen Denker hat und keine absehbaren weiteren Vertreter zeigt, gehört das Konzept dahinter in den Konzept-Bereich, nicht in den Schools-Bereich. Schulen filtern und gruppieren — sie sind nur sinnvoll, wenn dabei tatsächlich gruppiert wird.
+
+Ausnahmen sind möglich, sollten aber bewusste Entscheidungen sein, die im `topic.meta` dokumentiert werden.
 
 ## Feature-Prioritäten
 1. **Denker-Liste** mit Level-Slider und Schul-Filter
