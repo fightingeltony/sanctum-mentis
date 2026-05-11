@@ -9,6 +9,8 @@
 - [x] **Content-Erweiterung Philosophie des Geistes:** Alle 16 Denker + 17 Konzept-Beschreibungen auf 4–6 Sätze ausgebaut, L1-Annotationen für Fachbegriffe eingefügt
 - [x] **Das Selbst — 10 neue Einfluss-Kanten (L2–L5):** Auflösung der drei parallelen Cluster (Spiritualität / Psychotherapie / Neurowissenschaft); 13 von 15 Denkern jetzt vernetzt. Meditative Stimme explizit erhalten — kein Inquisitor-Lauf, gezielte Anreicherung. Erste Anwendung des Prinzips "Anreicherung statt Erweiterung".
 - [x] **Build-Fix:** `s`-Flag aus Regex in annotations.tsx entfernt (ES2018-Inkompatibilität im TypeScript-Target)
+- [x] **CLAUDE.md:** Drei neue Konventions-Sektionen ergänzt — Kuratorische Grundlinie, L1-Glossar-Konvention, Schools-Konvention
+- [x] **Repo-Aufräumarbeiten:** Karteileiche `data/erkenntnistheorie.json` gelöscht; README.md Vorlage-Referenz auf `data/das-selbst.json` umgestellt
 
 ### Session 2025-05-09
 - [x] **Deployment:** Vercel + GitHub live (sanctum-mentis)
@@ -202,16 +204,27 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] "Direkt zur Erkenntnistheorie"-Button anpassen
-**Status:** vorgeschlagen 10.5.26
-**Kontext:** Button verweist auf Erkenntnistheorie, die noch nicht existiert. Klick → sofortiger Vertrauensverlust.
-**Optionen:**
-- A) Button auf existierendes Tableau zeigen — *"Direkt zur Philosophie des Geistes"* — jetzt
-- B) Button entfernen bis Erkenntnistheorie existiert
-- C) Allgemeineres *"Empfohlener Einstieg"* mit kuratiertem Tableau — dauerhaft
+### [x] "Direkt zur Erkenntnistheorie"-Button anpassen
+**Status:** erledigt 10.5.26
+**Umgesetzt:** Option A — Button zeigt jetzt auf "Philosophie des Geistes".
+**Nächster Schritt:** Option C (*"Empfohlener Einstieg"*) sobald mehrere Tableaus existieren.
 
-**Empfehlung:** A jetzt, C sobald mehrere Tableaus existieren.
-**Nächster Schritt:** Button-Text auf existierendes Tableau anpassen.
+---
+
+## Architektur-Ideen für Cross-Domain-Verbindungen
+
+### [ ] Cross-App-Verkörperung (Sanctum × Carta Librorum)
+**Status:** Idee 10.5.26, langfristig
+**Kontext:** Charaktere aus Carta-Librorum-Büchern (Game of Thrones, Herr der Ringe, Ken Follett) bekommen archetypische/psychologische Lesart, die auf Sanctum-Knoten verweist. Verbindet beide Apps zu einem Wissens-Netzwerk, in dem Theorie und Erzählung als gleichwertige Knoten aufeinander beziehbar sind.
+**Drei Implementierungs-Tiefen:**
+- A) Tag (Charakter verweist auf Sanctum-Knoten)
+- B) Sub-Layer (eigener "Archetypische Lesart"-Tab pro Charakter)
+- C) Bidirektionale Brücke
+
+**Risiken:** Reduktionismus-Falle, Auswahlproblem (welche Linse?), Spoiler-Logik, Charakter-Mismatch.
+**Voraussetzung:** Sanctum hat ein Tableau zu Archetypen oder mythologischen Strukturen.
+**Strategischer Wert:** Hoch — validiert die Engine als Cross-Domain-Werkzeug.
+**Nächster Schritt:** Im Hinterkopf behalten. Konkret werden, sobald ein Sanctum-Tableau zu Archetypen existiert.
 
 ---
 
@@ -236,6 +249,36 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Achsen-Skizze:** noch nicht entwickelt
 **Modus:** vermutlich Mild oder Solo (Tradition mit klaren Klassikern, aber Wert liegt in Klarheit der Lebensphilosophie, nicht in akademischer Vollständigkeit)
 **Nächster Schritt:** Anker prüfen, bevor Bau begonnen wird.
+
+---
+
+### [ ] Typologien
+**Status:** Idee 10.5.26
+**Anker:** Persönlichkeitstypologien als verschiedene Theorien dessen, was Persönlichkeit *ist* — nicht als kommerzielle Test-Werkzeuge.
+**Achsen-Skizze:**
+- X: Statisch (Typ als Wesensmerkmal) ↔ Prozessual (Typ als Entwicklungsdynamik)
+- Y: Empirisch-deskriptiv ↔ Phänomenologisch-erfahrungsnah
+
+**Mögliche Knoten:** Jung, Briggs/Myers, Costa/McCrae (Big Five), Ichazo, Naranjo, Riso/Hudson (Enneagramm), Galen, Hippokrates; ggf. ayurvedische und chinesische Traditionen.
+**Modus:** Volle Schleife — kuratorisch riskant, braucht Inquisitor-Sorgfalt.
+**Lebensweltlichkeit:** Sehr hoch.
+**Risiken:** Kommerzialisiertes Feld, Wissenschaftlichkeitsstreit, Identifikations-Falle.
+**Voraussetzung:** Eigene Position klären — was ist überhaupt ein "Persönlichkeitstyp"? Werkzeug oder Wesen?
+**Verhältnis zu Landkarte des Selbst:** Verwandt, aber andere Frage (taxonomisch vs. ontologisch).
+**Nächster Schritt:** Anker prüfen, Voraussetzungs-Frage beantworten.
+
+---
+
+### Weitere Themen-Kandidaten (notiert, nicht ausgearbeitet)
+- **Religions- und Theologiegeschichte** — höchste strukturelle Passung
+- **Theorien der Liebe / Beziehungsmodelle** — massentauglich
+- **Modelle der Aufmerksamkeit / Achtsamkeit** — zeitgemäß
+- **Architekturkritik / Stadtplanung** — Anschluss an Alltag
+- **Schulen der Psychotherapie** — Anschluss an Landkarte des Selbst
+- **Wissenschaftstheorie** — verbindet sich gut mit Geistphilosophie
+- **Ethik** — klassisches Tableau-Material
+- **Politische Theorie** — klassisch, aber politisch aufgeladen
+- **Archetypen oder mythologische Strukturen** — Voraussetzung für Cross-App-Verkörperung
 
 ---
 
