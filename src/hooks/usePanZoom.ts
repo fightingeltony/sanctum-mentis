@@ -72,6 +72,7 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
   }, [svgW, svgH]) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
+    if (containerRef.current) containerRef.current.style.touchAction = 'none'
     fitToContainer()
     const ro = new ResizeObserver(fitToContainer)
     if (containerRef.current) ro.observe(containerRef.current)
@@ -165,9 +166,10 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
 
       const factor   = dist / pinchState.current.dist
       const newScale = Math.min(Math.max(scale * factor, minScale), maxScale)
-      // Zoom towards pinch midpoint + pan by midpoint delta
-      const newTx    = mx - (pinchState.current.mx - tx) * (newScale / scale) - (pinchState.current.mx - mx)
-      const newTy    = my - (pinchState.current.my - ty) * (newScale / scale) - (pinchState.current.my - my)
+      // Zoom towards pinch midpoint — keep the content point under oldMx/oldMy
+      // anchored to the new midpoint mx/my. Formula: newT = newMid - (oldMid - t) * f
+      const newTx    = mx - (pinchState.current.mx - tx) * (newScale / scale)
+      const newTy    = my - (pinchState.current.my - ty) * (newScale / scale)
 
       applyDom(clamp(newTx, newTy, newScale))
       pinchState.current = { dist, mx, my }
