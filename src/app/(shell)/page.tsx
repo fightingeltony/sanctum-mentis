@@ -16,16 +16,16 @@ export default function LandingPage() {
       </h1>
 
     <p className="font-body text-[18px] md:text-[20px] text-[--fg-muted] leading-relaxed mb-5 max-w-[60ch]">
-+        Bücher, Suchmaschinen, KI — alles Wissen der Welt ist heute zur Hand.
-+        Was uns fehlt, ist Kontext. Die Möglichkeit, ein Thema einmal zu Ende
-+        zu verstehen — Punkte zu setzen, Erkenntnisse landen zu lassen.
-+      </p>
-+      <p className="font-body text-[18px] md:text-[20px] text-[--fg-muted] leading-relaxed mb-10 max-w-[60ch]">
-+        Sanctum Mentis macht aus dem Gewirr eine Karte. Jedes Thema der
-+        Ideengeschichte wird zu einer interaktiven Landschaft, in der Denker,
-+        Konzepte und ihre Konflikte sichtbar werden. Du wählst die Tiefe —
-+        vom Einstieg bis zur Synthese.
-+      </p>
+        Bücher, Suchmaschinen, KI — alles Wissen der Welt ist heute zur Hand.
+        Was uns fehlt, ist Kontext. Die Möglichkeit, ein Thema einmal zu Ende
+        zu verstehen — Punkte zu setzen, Erkenntnisse landen zu lassen.
+      </p>
+      <p className="font-body text-[18px] md:text-[20px] text-[--fg-muted] leading-relaxed mb-10 max-w-[60ch]">
+        Sanctum Mentis macht aus dem Gewirr eine Karte. Jedes Thema der
+        Ideengeschichte wird zu einer interaktiven Landschaft, in der Denker,
+        Konzepte und ihre Konflikte sichtbar werden. Du wählst die Tiefe —
+        vom Einstieg bis zur Synthese.
+      </p>
 
       <div className="flex flex-wrap gap-4 mb-16">
         <Link
