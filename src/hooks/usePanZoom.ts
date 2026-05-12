@@ -12,12 +12,10 @@ interface Options {
 export interface PanZoomHandle {
   containerRef: React.RefObject<HTMLDivElement | null>
   wrapperRef:   React.RefObject<HTMLDivElement | null>
-  /** True while pointer is being dragged — check before handling click/tap on children */
   suppressClick: React.MutableRefObject<boolean>
   reset:   () => void
   zoomIn:  () => void
   zoomOut: () => void
-  /** Spread onto the container div */
   handlers: {
     onPointerDown:   (e: React.PointerEvent) => void
     onPointerMove:   (e: React.PointerEvent) => void
@@ -29,11 +27,10 @@ export interface PanZoomHandle {
 export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZoomHandle {
   const { minScale = 0.25, maxScale = 5 } = opts
 
-  const containerRef = useRef<HTMLDivElement>(null)
-  const wrapperRef   = useRef<HTMLDivElement>(null)
+  const containerRef  = useRef<HTMLDivElement>(null)
+  const wrapperRef    = useRef<HTMLDivElement>(null)
   const suppressClick = useRef(false)
 
-  // Live transform state — kept in a ref so event handlers don't need stale closures
   const pz = useRef<PanZoom>({ tx: 0, ty: 0, scale: 1 })
 
   // ── DOM helpers ────────────────────────────────────────────────────────────
@@ -49,8 +46,8 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
     const el = containerRef.current
     if (!el) return { tx, ty, scale }
     const { width, height } = el.getBoundingClientRect()
-    const s  = Math.min(Math.max(scale, minScale), maxScale)
-    const pad = 80 // minimum px of map that must stay visible
+    const s   = Math.min(Math.max(scale, minScale), maxScale)
+    const pad = 80
     return {
       tx:    Math.min(Math.max(tx,  pad - svgW * s),  width  - pad),
       ty:    Math.min(Math.max(ty,  pad - svgH * s),  height - pad),
@@ -58,7 +55,7 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
     }
   }
 
-  // ── Fit to container (initial + reset) ───────────────────────────────────
+  // ── Fit to container ──────────────────────────────────────────────────────
 
   const fitToContainer = useCallback(() => {
     const el = containerRef.current
@@ -79,7 +76,7 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
     return () => ro.disconnect()
   }, [fitToContainer])
 
-  // ── Wheel (must be non-passive to preventDefault) ─────────────────────────
+  // ── Wheel ─────────────────────────────────────────────────────────────────
 
   useEffect(() => {
     const el = containerRef.current
@@ -90,15 +87,12 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
       const mx   = e.clientX - rect.left
       const my   = e.clientY - rect.top
       const { tx, ty, scale } = pz.current
-      const factor    = e.deltaY < 0 ? 1.12 : 0.88
-      const newScale  = Math.min(Math.max(scale * factor, minScale), maxScale)
-      const newTx     = mx - (mx - tx) * (newScale / scale)
-      const newTy     = my - (my - ty) * (newScale / scale)
-      applyDom(clamp(newTx, newTy, newScale))
+      const factor   = e.deltaY < 0 ? 1.12 : 0.88
+      const newScale = Math.min(Math.max(scale * factor, minScale), maxScale)
+      applyDom(clamp(mx - (mx - tx) * (newScale / scale), my - (my - ty) * (newScale / scale), newScale))
     }
-    // Prevent iOS from stealing multi-touch gestures before pointer events fire.
-    // Without this, Safari fires pointercancel on the first finger when the
-    // second finger touches, causing a jump into single-finger pan mode.
+    // Prevent iOS from stealing multi-touch before pointer events fire,
+    // which would trigger pointercancel on the first finger and cause a jump.
     function onTouchStart(e: TouchEvent) {
       if (e.touches.length > 1) e.preventDefault()
     }
@@ -112,11 +106,13 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
 
   // ── Pointer tracking ──────────────────────────────────────────────────────
 
-  const ptrs       = useRef(new Map<number, { x: number; y: number }>())
-  const dragStart  = useRef({ x: 0, y: 0, tx: 0, ty: 0 })
-  const pinchState = useRef({ dist: 0, mx: 0, my: 0 })
-  const didMove    = useRef(false)
-  const lastTap    = useRef(0)
+  const ptrs      = useRef(new Map<number, { x: number; y: number }>())
+  const dragStart = useRef({ x: 0, y: 0, tx: 0, ty: 0 })
+  // Pinch start state — absolute, never updated mid-gesture.
+  // Each frame computes directly from here to avoid floating-point drift.
+  const pinchStart = useRef({ dist: 0, mx: 0, my: 0, tx: 0, ty: 0, scale: 1 })
+  const didMove   = useRef(false)
+  const lastTap   = useRef(0)
 
   function clientToContainer(e: React.PointerEvent) {
     const r = containerRef.current!.getBoundingClientRect()
@@ -133,12 +129,14 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
     }
     if (ptrs.current.size === 2) {
       const [a, b] = [...ptrs.current.values()]
-      pinchState.current = {
-        dist: Math.hypot(b.x - a.x, b.y - a.y),
-        mx:   (a.x + b.x) / 2,
-        my:   (a.y + b.y) / 2,
+      const { tx, ty, scale } = pz.current
+      pinchStart.current = {
+        dist:  Math.hypot(b.x - a.x, b.y - a.y),
+        mx:    (a.x + b.x) / 2,
+        my:    (a.y + b.y) / 2,
+        tx, ty, scale,
       }
-      // Capture immediately so the browser stops handling this as a page gesture.
+      // Capture immediately so the browser stops treating this as a page gesture.
       containerRef.current?.setPointerCapture(e.pointerId)
     }
   }
@@ -155,7 +153,6 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
       const dy = pos.y - dragStart.current.y
       if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
         if (!didMove.current) {
-          // Capture pointer only once we're sure it's a drag, not a tap.
           containerRef.current?.setPointerCapture(e.pointerId)
           if (containerRef.current) containerRef.current.style.cursor = 'grabbing'
         }
@@ -167,19 +164,19 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
     } else if (ptrs.current.size === 2) {
       didMove.current = true
       const [a, b] = [...ptrs.current.values()]
-      const dist = Math.hypot(b.x - a.x, b.y - a.y)
-      const mx   = (a.x + b.x) / 2
-      const my   = (a.y + b.y) / 2
+      const dist   = Math.hypot(b.x - a.x, b.y - a.y)
+      const mx     = (a.x + b.x) / 2
+      const my     = (a.y + b.y) / 2
 
-      const factor   = dist / pinchState.current.dist
-      const newScale = Math.min(Math.max(scale * factor, minScale), maxScale)
-      // Keep the content point under the old midpoint anchored to the new midpoint.
-      // Formula: newT = newMid - (oldMid - t) * f
-      const newTx    = mx - (pinchState.current.mx - tx) * (newScale / scale)
-      const newTy    = my - (pinchState.current.my - ty) * (newScale / scale)
+      // Absolute computation from pinch-start state — no frame-to-frame
+      // accumulation, no floating-point drift.
+      const { dist: d0, mx: mx0, my: my0, tx: tx0, ty: ty0, scale: s0 } = pinchStart.current
+      const factor   = dist / d0
+      const newScale = Math.min(Math.max(s0 * factor, minScale), maxScale)
+      const newTx    = mx - (mx0 - tx0) * factor
+      const newTy    = my - (my0 - ty0) * factor
 
       applyDom(clamp(newTx, newTy, newScale))
-      pinchState.current = { dist, mx, my }
     }
   }
 
@@ -187,11 +184,19 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
     const wasSingleTap = ptrs.current.size === 1 && !didMove.current
     ptrs.current.delete(e.pointerId)
 
+    // 2→1 transition: reinitialize single-pan from the remaining finger's
+    // current position. Without this, dragStart still points to where the
+    // first finger was at gesture start → wrong dx/dy → jump.
+    if (ptrs.current.size === 1) {
+      const [remaining] = [...ptrs.current.values()]
+      dragStart.current = { x: remaining.x, y: remaining.y, tx: pz.current.tx, ty: pz.current.ty }
+      didMove.current = false
+    }
+
     if (ptrs.current.size === 0) {
       if (containerRef.current) containerRef.current.style.cursor = 'grab'
     }
 
-    // Clamp after drag ends
     applyDom(clamp(pz.current.tx, pz.current.ty, pz.current.scale))
 
     if (didMove.current) {
@@ -199,7 +204,6 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
       setTimeout(() => { suppressClick.current = false }, 0)
     }
 
-    // Double-tap to zoom in / reset
     if (wasSingleTap) {
       const now = Date.now()
       if (now - lastTap.current < 320) {
@@ -210,9 +214,7 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
           fitToContainer()
         } else {
           const newScale = Math.min(2.5, maxScale)
-          const newTx    = pos.x - (pos.x - tx) * (newScale / scale)
-          const newTy    = pos.y - (pos.y - ty) * (newScale / scale)
-          applyDom(clamp(newTx, newTy, newScale))
+          applyDom(clamp(pos.x - (pos.x - tx) * (newScale / scale), pos.y - (pos.y - ty) * (newScale / scale), newScale))
         }
         suppressClick.current = true
         setTimeout(() => { suppressClick.current = false }, 0)
@@ -222,8 +224,8 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
     }
   }
 
-  // When the browser cancels a pointer (e.g. iOS stealing a multi-touch gesture),
-  // reinitialize single-pan state for the remaining finger to avoid a jump.
+  // When iOS cancels a pointer (e.g. after stealing the gesture despite our
+  // preventions), reinitialize cleanly for the remaining finger.
   function onPointerCancel(e: React.PointerEvent) {
     ptrs.current.delete(e.pointerId)
     if (ptrs.current.size === 1) {
