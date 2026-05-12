@@ -96,8 +96,18 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
       const newTy     = my - (my - ty) * (newScale / scale)
       applyDom(clamp(newTx, newTy, newScale))
     }
+    // Prevent iOS from stealing multi-touch gestures before pointer events fire.
+    // Without this, Safari fires pointercancel on the first finger when the
+    // second finger touches, causing a jump into single-finger pan mode.
+    function onTouchStart(e: TouchEvent) {
+      if (e.touches.length > 1) e.preventDefault()
+    }
     el.addEventListener('wheel', onWheel, { passive: false })
-    return () => el.removeEventListener('wheel', onWheel)
+    el.addEventListener('touchstart', onTouchStart, { passive: false })
+    return () => {
+      el.removeEventListener('wheel', onWheel)
+      el.removeEventListener('touchstart', onTouchStart)
+    }
   }, [minScale, maxScale]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // ── Pointer tracking ──────────────────────────────────────────────────────
@@ -114,9 +124,6 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
   }
 
   function onPointerDown(e: React.PointerEvent) {
-    // Capture is deferred until actual movement starts — see onPointerMove.
-    // Capturing immediately would redirect the browser's `click` event to the
-    // container div, preventing child SVG elements' onClick from firing.
     const pos = clientToContainer(e)
     ptrs.current.set(e.pointerId, pos)
     didMove.current = false
@@ -131,8 +138,9 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
         mx:   (a.x + b.x) / 2,
         my:   (a.y + b.y) / 2,
       }
+      // Capture immediately so the browser stops handling this as a page gesture.
+      containerRef.current?.setPointerCapture(e.pointerId)
     }
-    // cursor is set to 'grabbing' only once actual drag movement is detected (see onPointerMove)
   }
 
   function onPointerMove(e: React.PointerEvent) {
@@ -157,7 +165,6 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
       applyDom(clamp(dragStart.current.tx + dx, dragStart.current.ty + dy, scale))
 
     } else if (ptrs.current.size === 2) {
-      if (!didMove.current) containerRef.current?.setPointerCapture(e.pointerId)
       didMove.current = true
       const [a, b] = [...ptrs.current.values()]
       const dist = Math.hypot(b.x - a.x, b.y - a.y)
@@ -166,8 +173,8 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
 
       const factor   = dist / pinchState.current.dist
       const newScale = Math.min(Math.max(scale * factor, minScale), maxScale)
-      // Zoom towards pinch midpoint — keep the content point under oldMx/oldMy
-      // anchored to the new midpoint mx/my. Formula: newT = newMid - (oldMid - t) * f
+      // Keep the content point under the old midpoint anchored to the new midpoint.
+      // Formula: newT = newMid - (oldMid - t) * f
       const newTx    = mx - (pinchState.current.mx - tx) * (newScale / scale)
       const newTy    = my - (pinchState.current.my - ty) * (newScale / scale)
 
@@ -189,7 +196,6 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
 
     if (didMove.current) {
       suppressClick.current = true
-      // Let the browser's click event fire, then clear the flag
       setTimeout(() => { suppressClick.current = false }, 0)
     }
 
@@ -216,6 +222,20 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
     }
   }
 
+  // When the browser cancels a pointer (e.g. iOS stealing a multi-touch gesture),
+  // reinitialize single-pan state for the remaining finger to avoid a jump.
+  function onPointerCancel(e: React.PointerEvent) {
+    ptrs.current.delete(e.pointerId)
+    if (ptrs.current.size === 1) {
+      const [remaining] = [...ptrs.current.values()]
+      dragStart.current = { x: remaining.x, y: remaining.y, tx: pz.current.tx, ty: pz.current.ty }
+      didMove.current = false
+    }
+    if (ptrs.current.size === 0) {
+      if (containerRef.current) containerRef.current.style.cursor = 'grab'
+    }
+  }
+
   // ── Zoom controls ─────────────────────────────────────────────────────────
 
   function zoomAt(factor: number) {
@@ -235,6 +255,6 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
     reset:   fitToContainer,
     zoomIn:  () => zoomAt(1.5),
     zoomOut: () => zoomAt(1 / 1.5),
-    handlers: { onPointerDown, onPointerMove, onPointerUp, onPointerCancel: onPointerUp },
+    handlers: { onPointerDown, onPointerMove, onPointerUp, onPointerCancel },
   }
 }
