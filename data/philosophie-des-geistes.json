@@ -19,7 +19,8 @@
         "top": "First-Person",
         "bottom": "Third-Person"
       }
-    }
+    },
+    "synthesis": "Das Hard Problem of Consciousness ist der ungelöste Kern dieses Tableaus: Warum gibt es überhaupt subjektives Erleben — ein Wie-es-sich-anfühlt — und nicht nur Informationsverarbeitung im Dunkeln? Reduktionisten wie Dennett antworten: Es gibt kein Problem, nur ein Missverständnis. Irreduzibilisten wie Nagel und Jackson antworten: Die erste Person lässt sich nicht verlustfrei in die dritte übersetzen. Predictive Processing und IIT sind die neuesten Brückenbauversuche — produktiv, aber noch unvollständig. Was du hier mitnehmen kannst: nicht die Lösung, sondern ein Gefühl dafür, warum diese Frage es verdient, schwer zu sein."
   },
   "levels": [
     { "id": 1, "label": "Einstieg",   "short": "L1", "filled": false },

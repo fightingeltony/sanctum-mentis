@@ -15,7 +15,7 @@ export default function LandingPage() {
         Komplexe Ideen. Endlich klar verortet.
       </h1>
 
-    <p className="font-body text-[18px] md:text-[20px] text-[--fg-muted] leading-relaxed mb-5 max-w-[60ch]">
+      <p className="font-body text-[18px] md:text-[20px] text-[--fg-muted] leading-relaxed mb-5 max-w-[60ch]">
         Bücher, Suchmaschinen, KI — alles Wissen der Welt ist heute zur Hand.
         Was uns fehlt, ist Kontext. Die Möglichkeit, ein Thema einmal zu Ende
         zu verstehen — Punkte zu setzen, Erkenntnisse landen zu lassen.

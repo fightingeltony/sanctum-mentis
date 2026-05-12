@@ -19,34 +19,15 @@
         "top": "Spirituell & Transpersonal",
         "bottom": "Wissenschaftlich & Psychologisch"
       }
-    }
+    },
+    "synthesis": "Alle Denker dieses Tableaus kreisen um eine Grundfrage: Gibt es ein Selbst, das vor der Erfahrung steht — oder entsteht es erst in ihr? Die westliche Tradition sucht ein stabiles Zentrum (Descartes, Freud, Jung); östliche Traditionen und Neurowissenschaft bestreiten es (Buddha, Metzinger). Bindungstheorie und Entwicklungspsychologie verschieben den Fokus: nicht Was ist das Selbst?, sondern Wie entsteht es — und warum bricht es manchmal zusammen? Das Selbst ist kein Ding, aber auch keine bloße Illusion. Es ist ein Prozess — und du bist mitten darin."
   },
   "levels": [
-    {
-      "id": 1,
-      "label": "Einstieg",
-      "short": "L1"
-    },
-    {
-      "id": 2,
-      "label": "Grundlagen",
-      "short": "L2"
-    },
-    {
-      "id": 3,
-      "label": "Vertiefung",
-      "short": "L3"
-    },
-    {
-      "id": 4,
-      "label": "Analyse",
-      "short": "L4"
-    },
-    {
-      "id": 5,
-      "label": "Synthese",
-      "short": "L5"
-    }
+    { "id": 1, "label": "Einstieg",   "short": "L1" },
+    { "id": 2, "label": "Grundlagen", "short": "L2" },
+    { "id": 3, "label": "Vertiefung", "short": "L3" },
+    { "id": 4, "label": "Analyse",    "short": "L4" },
+    { "id": 5, "label": "Synthese",   "short": "L5" }
   ],
   "thinkers": [
     {
@@ -58,7 +39,7 @@
       "x": 12,
       "y": 88,
       "versions": {
-        "1": "Das wahre Selbst (Atman) ist ein unzerstörbarer, ewiger Kern, der mit dem Kosmos identisch ist und gefunden werden muss."
+        "1": "Das wahre Selbst (Atman [[das göttliche, unveränderliche Ich]] im Vedanta [[eine der ältesten philosophischen Traditionen Indiens]]) ist kein Gedanke, keine Rolle, kein Gefühl — sondern der stille Zeuge hinter allem Erleben. Es ist unveränderlich, unzerstörbar und identisch mit Brahman [[dem universellen Bewusstsein, das allem zugrunde liegt]] — dem Grund aller Wirklichkeit. Die Aufgabe des Lebens ist nicht, dieses Selbst herzustellen, sondern es wiederzuentdecken: Unter den Schichten von Ego und Konditionierung liegt es bereits fertig vor. Meditation, Studium der Schriften (Jnana [[Weg des Wissens]]) und Hingabe (Bhakti [[Weg der Liebe und Verehrung]]) sind die klassischen Pfade dieser Entdeckung. Die Behauptung, dass Atman und Brahman identisch sind, ist der radikalste Kern der Vedanta-Lehre — und der direkte Gegenpol zur buddhistischen Anatta-These."
       }
     },
     {
@@ -70,7 +51,7 @@
       "x": 88,
       "y": 82,
       "versions": {
-        "1": "Die Lehre der Leerheit (Anatta). Was wir als 'Ich' empfinden, ist nur ein ständiger, dynamischer Fluss von Sinneseindrücken. Es gibt keinen festen Kern."
+        "1": "Der Buddha lehrte Anatta [[Pali für 'Nicht-Selbst']] als eine seiner Kerneinsichten: Was wir als 'Ich' erleben, ist kein fester Kern, sondern ein ständig wechselnder Strom aus fünf Skandhas [[Sanskrit für 'Haufen' — Körper, Empfindung, Wahrnehmung, Geistesformationen, Bewusstsein]]. Das Ich ist eher wie eine Flamme als wie ein Stein — von Sekunde zu Sekunde keine identische Flamme, und dennoch brennt sie. Das Festhalten an einem permanenten Ich ist für den Buddhismus die Wurzel von Dukkha [[Leiden, tiefer Unzufriedenheit]]. Anatta bedeutet keinen Nihilismus: Es geht nicht darum, dass nichts existiert, sondern dass das, was existiert, kein Substanzding ist. Die Praxis der Achtsamkeit macht dieses Fließen direkt erfahrbar — nicht als Idee, sondern als Erfahrung."
       }
     },
     {
@@ -82,7 +63,7 @@
       "x": 28,
       "y": 42,
       "versions": {
-        "2": "Das Selbst ist eine psychische Organisation, das Zentrum der Persönlichkeit, das durch den Prozess der Individuation gebaut und integriert wird."
+        "2": "Jung brach mit Freud in einer entscheidenden Frage: Das Unbewusste ist nicht nur ein Abfalleimer verdrängter Erlebnisse, sondern ein eigenständiger, schöpferischer Raum — gefüllt mit Archetypen, universellen seelischen Urbildern, die alle Menschen teilen. Das Selbst ist bei Jung keine Vorgabe, sondern ein Ziel: das Zentrum der Gesamtpersönlichkeit, das durch Individuation — den lebenslangen Prozess der psychischen Reifung — erst errungen werden muss. Schatten (das Verdrängte), Anima/Animus (das gegengeschlechtliche Innere) und das Selbst sind keine bloßen Metaphern, sondern erlebbare psychische Kräfte, die in Träumen, Krisen und schöpferischen Akten auftauchen. Jung war von östlichen Traditionen fasziniert — sein Selbst-Begriff hat eine anerkannte Nähe zur Atman-Idee, betont aber den Prozesscharakter: Das Selbst wird nicht gefunden, es entsteht."
       }
     },
     {
@@ -94,7 +75,7 @@
       "x": 72,
       "y": 22,
       "versions": {
-        "3": "Das Ego-Tunnel-Modell. Niemand war je ein Selbst. Das 'Ich' ist lediglich ein nützliches Datenformat, eine Simulation unseres Gehirns."
+        "3": "Metzingers Kernthese ist radikal: Niemand war je ein Selbst. Das Gehirn erzeugt ein Selbstmodell — einen phänomenalen Tunnel — den wir fälschlicherweise als 'Ich' erleben, weil uns die Modelleigenschaft dieses Tunnels nicht zugänglich ist (Transparenz des Modells). Das Ego-Tunnel-Modell gehört zum naturalistischen Nihilismus: Es gibt kein metaphysisches Subjekt hinter dem Erleben — nur Informationsverarbeitung, die sich selbst modelliert. Dieses Modell ist nützlich und evolutionär sinnvoll — es ermöglicht kohärentes Handeln in einer unübersichtlichen Welt. Aber ontologisch ist es leer: Es repräsentiert einen Agenten, der nicht existiert. Metzinger zieht daraus auch ethische Konsequenzen: Wer versteht, dass das Selbst ein Konstrukt ist, kann mit weniger defensivem Ego durch sein Leben gehen."
       }
     },
     {
@@ -106,67 +87,7 @@
       "x": 65,
       "y": 18,
       "versions": {
-        "3": "Emotionen und das erlebte Selbst sind keine festen Instanzen im Gehirn, sondern werden im Bruchteil einer Sekunde konstruiert, um Energie effizient zu steuern."
-      }
-    },
-    {
-      "id": "ifs",
-      "name": "Internal Family Systems",
-      "lifespan": "1990er –",
-      "firstLevel": 4,
-      "schoolId": "integrative-psychotherapie",
-      "x": 22,
-      "y": 65,
-      "versions": {
-        "4": "Therapeutisches Modell von Dick Schwartz. Wir bestehen aus vielen 'Teilen', besitzen aber im Kern ein unzerstörbares, heiles 'Selbst', das Führung übernehmen kann."
-      }
-    },
-    {
-      "id": "friston",
-      "name": "Karl Friston",
-      "lifespan": "1959–",
-      "firstLevel": 4,
-      "schoolId": "neurophilosophie",
-      "x": 78,
-      "y": 15,
-      "versions": {
-        "4": "Das Inferenz-Modell (Free Energy Principle). Das Selbst ist ein mathematischer Imperativ des Gehirns, um Überraschungen zu minimieren und das Überleben zu sichern."
-      }
-    },
-    {
-      "id": "rohr",
-      "name": "Richard Rohr",
-      "lifespan": "1943–",
-      "firstLevel": 5,
-      "schoolId": "christliche-mystik",
-      "x": 18,
-      "y": 92,
-      "versions": {
-        "5": "Das 'Wahre Selbst' ist unser objektiver Anteil an Gott, verborgen unter dem falschen Selbst unserer Ego-Strukturen."
-      }
-    },
-    {
-      "id": "prozesstheologie",
-      "name": "Prozess-Theologie",
-      "lifespan": "Whitehead / Keller",
-      "firstLevel": 5,
-      "schoolId": "prozesstheologie",
-      "x": 82,
-      "y": 88,
-      "versions": {
-        "5": "Das Selbst und selbst das Göttliche (Whitehead/Keller) sind keine statischen Substanzen, sondern heilige Ereignisse, die sich in ständiger Beziehung zu anderen ereignen."
-      }
-    },
-    {
-      "id": "almaas",
-      "name": "A.H. Almaas",
-      "lifespan": "1944–",
-      "firstLevel": 4,
-      "schoolId": "essentielle-psychologie",
-      "x": 16,
-      "y": 76,
-      "versions": {
-        "4": "Begründer des Diamond Approach: Das wahre Selbst ist eine lebendige, multidimensionale Essenz — nicht abstrakt wie Atman, sondern direkt als Qualität (Liebe, Stärke, Frieden) erfahrbar."
+        "3": "Barrett revolutioniert die Emotionspsychologie mit einer konstruktivistischen These: Emotionen sind keine universellen, fest verdrahteten Reaktionen im Gehirn, sondern Konstruktionen — hergestellt in Echtzeit aus interozeptiven Signalen (Körperwahrnehmung), Konzepten und sozialem Kontext. Das erlebte Selbst folgt demselben Prinzip: Das Gehirn ist kein Reaktionsautomat, sondern eine Vorhersagemaschine, die permanent Hypothesen über den eigenen Zustand bildet. 'Ich bin ängstlich' ist keine Entdeckung eines vorhandenen Zustands, sondern eine Konstruktionsleistung. Barrett zeigt damit, dass Kultur und Sprache nicht nur beschreiben, sondern miterzeugen, was wir als Selbst erfahren. Ihre Theorie konvergiert mit Metzinger (Konstruktivismus des Selbst) und dem Free Energy Principle (Vorhersage als Grundprinzip der Kognition)."
       }
     },
     {
@@ -178,7 +99,7 @@
       "x": 32,
       "y": 28,
       "versions": {
-        "3": "Begründer der Selbstpsychologie. Das Selbst braucht 'Selbstobjekte' — spiegelnde und idealisierbare Bezugspersonen — um sich kohärent zu entwickeln. Trauma fragmentiert es."
+        "3": "Kohut brach mit dem klassischen Freudianismus durch eine einfache, aber revolutionäre Beobachtung: Das Selbst entwickelt sich nicht primär durch Triebkonflikte, sondern durch relationale Spiegelung. Das Kind braucht Selbstobjekte — Bezugspersonen, die grandiose Aussagen spiegeln ('Du bist toll!') und die als Ideal erfahren werden können ('Ich kann mich an dir ausrichten'). Fehlt diese Spiegelung, fragmentiert das nukleare Selbst — der Kern aus Ehrgeiz, Werten und Talenten. Narzissmus ist für Kohut keine pathologische Selbstbezogenheit, sondern eine Entwicklungsstufe auf dem Weg zu gesunder Selbstkohärenz; frühe narzisstische Bedürfnisse dürfen befriedigt werden, nicht verurteilt. Kohuts Selbstpsychologie verschiebt die Therapie von 'Aufdecken von Konflikten' zu 'Heilen von Fragmentierung durch empathische Präsenz'."
       }
     },
     {
@@ -190,7 +111,7 @@
       "x": 18,
       "y": 38,
       "versions": {
-        "3": "Das Selbst entsteht aus der Übereinstimmung zwischen dem erlebten Organismus und dem Selbstbild. Diskrepanz erzeugt Leid; bedingungslose Akzeptanz ermöglicht Heilung."
+        "3": "Rogers ist der Begründer der klientenzentrierten Therapie und ein Pionier der humanistischen Psychologie. Seine Grundthese: Im Menschen wirkt eine natürliche Aktualisierungstendenz — ein organischer Zug hin zu Wachstum, Gesundheit und Fülle. Das Selbst entsteht, wenn das Selbstkonzept (wie ich mich beschreibe) und der Organismus (was ich erlebe) übereinstimmen. Wenn das Selbstkonzept das organische Erleben verleugnet — um Akzeptanz zu erhalten —, entsteht Inkongruenz und Leid. Heilung braucht keine Techniken, sondern eine Beziehungsqualität: bedingungslose positive Wertschätzung, Empathie und Kongruenz des Therapeuten. Rogers' Vertrauen in den Organismus ist das humanistische Gegenstück zu Freuds Misstrauen gegenüber dem Es — und beeinflusste die gesamte Therapiekultur des 20. Jahrhunderts."
       }
     },
     {
@@ -202,7 +123,7 @@
       "x": 40,
       "y": 22,
       "versions": {
-        "3": "Jeder Mensch entwickelt einen einzigartigen Lebensstil als Kompensation für erlebte Minderwertigkeit. Das Selbst ist kein Innenraum, sondern eine soziale Bewegungsrichtung."
+        "3": "Adler war Mitbegründer des Wiener Psychoanalytischen Vereins, trennte sich aber früh von Freud. Die entscheidende Verschiebung: Nicht Sexualtrieb, sondern Minderwertigkeitsgefühl ist die treibende Kraft der Persönlichkeit — und das Streben nach Überlegenheit als Kompensation ist die universelle Reaktion. Jeder Mensch entwickelt einen einzigartigen Lebensstil — eine unbewusste Strategie, mit Unzulänglichkeit umzugehen und Zugehörigkeit zu gewinnen. Das Selbst ist bei Adler kein Innenraum, sondern eine soziale Bewegungsrichtung: Es zeigt sich darin, wie jemand in Beziehungen agiert, nicht in isolierten inneren Zuständen. Gemeinschaftsgefühl — das Gefühl der Verbundenheit mit anderen — ist für Adler das Maß psychischer Gesundheit. Adler war damit ein Vorläufer der sozialen Psychiatrie, der Systemischen Therapie und der modernen Psychologie der Zugehörigkeit."
       }
     },
     {
@@ -214,7 +135,43 @@
       "x": 60,
       "y": 28,
       "versions": {
-        "3": "Das Gehirn konstruiert ein kohärentes Ich-Narrativ aus fragmentierten Erfahrungen — ein nützlicher Trick der Evolution, keine ontologische Wahrheit. (The Self Illusion, 2012)"
+        "3": "Hood ist Kognitionswissenschaftler in Bristol und bekannt für 'The Self Illusion' (2012). Seine These: Das kohärente, kontinuierliche Ich-Erleben ist eine narrative Konstruktion des Gehirns — kein Abbild einer Realität, sondern ein Werkzeug für soziale Koordination. Das Gehirn verknüpft fragmentierte Wahrnehmungen, veränderliche Erinnerungen und soziale Rollen zu einem plausiblen Ich-Narrativ, das Handeln koordiniert und Verantwortungsübernahme ermöglicht. Diese Konstruktion ist evolutionär notwendig — aber sie ist nicht 'wahr' in dem Sinne, dass ein Selbst-Ding auf sie referiert. Hood ist damit in direkter Parallele zu Metzinger (philosophisch) und Barrett (neurowissenschaftlich), aber zugänglicher formuliert und mit Fokus auf empirische Kognitionswissenschaft und entwicklungspsychologische Belege."
+      }
+    },
+    {
+      "id": "ifs",
+      "name": "Internal Family Systems",
+      "lifespan": "1990er –",
+      "firstLevel": 4,
+      "schoolId": "integrative-psychotherapie",
+      "x": 22,
+      "y": 65,
+      "versions": {
+        "4": "Dick Schwartz entwickelte IFS als therapeutisches Modell, das mit der Pluralität der Psyche arbeitet statt sie wegzuerklären: Wir bestehen aus 'Teilen' — Managern (Kontrolle und Planung), Feuerwehrmännern (Ablenkung in Krisen) und Verbannten (verletzten jungen Anteilen, die ins Unbewusste gedrängt wurden). Unter diesen Teilen liegt das 'Selbst' — ein unzerstörbares, ruhiges Zentrum, das keine Vergangenheit oder Verletzung korrumpieren kann. Therapie bedeutet nicht, schwierige Teile zu eliminieren, sondern ihnen aus dem Selbst heraus zu begegnen — mit Neugier, Mitgefühl und Klarheit. IFS hat Jungsche Wurzeln (Teilpersönlichkeiten, ein integrierendes Zentrum), setzt diesen Kern aber spiritueller an: Das Selbst ist nicht Ergebnis von Entwicklung, sondern immer schon vorhanden und zugänglich. Das Modell hat sich als besonders wirksam bei Traumaarbeit erwiesen."
+      }
+    },
+    {
+      "id": "friston",
+      "name": "Karl Friston",
+      "lifespan": "1959–",
+      "firstLevel": 4,
+      "schoolId": "neurophilosophie",
+      "x": 78,
+      "y": 15,
+      "versions": {
+        "4": "Friston formuliert das Free Energy Principle als universelles Prinzip lebendiger Systeme: Jedes selbstorganisierende System muss die 'freie Energie' — die Differenz zwischen Vorhersage und Realität — minimieren, um zu überleben und kohärent zu bleiben. Das Gehirn tut dies durch Predictive Processing: Es modelliert die Welt und sich selbst, um Überraschungen zu reduzieren. Das Selbst ist in diesem Rahmen nicht ein Ort im Gehirn, sondern das Vorhersagemodell des eigenen Zustands — eine Markov-Blanket-Struktur, die Innen statistisch von Außen trennt. Friston konvergiert mit Metzinger und liefert den mathematischen Formalismus für dessen phänomenologische Beschreibungen: Wenn das Gehirn ein Vorhersagemodell der Welt ist, dann ist das Selbstmodell die Vorhersage über den eigenen Zustand. Die Implikation ist tiefgreifend: Selbst und Welt entstehen simultan aus dem gleichen Minimierungsprozess."
+      }
+    },
+    {
+      "id": "almaas",
+      "name": "A.H. Almaas",
+      "lifespan": "1944–",
+      "firstLevel": 4,
+      "schoolId": "essentielle-psychologie",
+      "x": 16,
+      "y": 76,
+      "versions": {
+        "4": "Hameed Ali (Schreibname A.H. Almaas) entwickelte den Diamond Approach als Synthese aus Sufismus, Tibetischem Buddhismus, Enneagramm und westlicher Objekt-Beziehungstheorie. Sein Kernargument: Unter den Ego-Strukturen liegt die Essenz — nicht als abstrakter Zustand (wie Atman), sondern als direkt erfahrbare Qualität, die er Diamantverhältnisse nennt: Liebe, Stärke, Frieden, Wille — jeweils ein eigenes 'Diamant-Aspekt'. Diese Essenz wird nicht hergestellt, sondern freigelegt — indem man Ego-Schichten mit Neugier durchleuchtet statt bekämpft. Almaas ist Vedanta und Rohr nah (echter Kern unter dem Ego), insistiert aber auf direkter Erfahrbarkeit: keine Überzeugung, kein Glaube, sondern Berührung. Strukturell teilt er mit IFS die Annahme, dass das Eigentliche immer schon vorhanden war und nie beschädigt wurde."
       }
     },
     {
@@ -226,76 +183,48 @@
       "x": 75,
       "y": 72,
       "versions": {
-        "4": "Partizipative Spiritualität: Spirituelle Erfahrungen entstehen nicht im isolierten Individuum, sondern durch aktive Ko-Kreation zwischen Mensch, Gemeinschaft und dem kosmischen Feld."
+        "4": "Ferrer entwickelte die partizipative Spiritualitätstheorie als Kritik am subjektivistischen Einschlag der transpersonalen Psychologie (vor allem Ken Wilbers): Spirituelle Wahrheit ist nicht im isolierten Bewusstsein verborgen, das aufgedeckt werden muss, sondern entsteht ko-kreativ — durch verkörperten Kontakt zwischen Mensch, Gemeinschaft und dem, was er das 'kosmische Heimatland' nennt. Das Selbst ist für Ferrer nicht der Behälter spiritueller Erfahrung, sondern Partizipant in einem offenen Prozess. Spirituelle Vielfalt ist damit kein Problem (verschiedene Beschreibungen desselben Gipfels), sondern ein Feature: Verschiedene Traditionen öffnen verschiedene Aspekte einer reichen, multidimensionalen Wirklichkeit. Ferrer steht der Prozesstheologie nahe — beide denken Realität als Ereignis zwischen, nicht als Substanz innen."
+      }
+    },
+    {
+      "id": "rohr",
+      "name": "Richard Rohr",
+      "lifespan": "1943–",
+      "firstLevel": 5,
+      "schoolId": "christliche-mystik",
+      "x": 18,
+      "y": 92,
+      "versions": {
+        "5": "Rohr ist franziskanischer Priester und einer der einflussreichsten Mystiker des 21. Jahrhunderts. Seine Kernunterscheidung: Das falsche Selbst ist die Identität, die wir aus Leistung, Besitz, Status und Reaktionsmustern aufbauen — notwendig für das Überleben in der ersten Lebenshälfte, aber nicht das, was wir wirklich sind. Das Wahre Selbst ist das, was bleibt, wenn alle diese Konstruktionen fallen: unser Anteil an Gott, unzerstörbar, nicht durch Scheitern angreifbar, nicht durch Erfolg vergrößerbar. Rohr verbindet die christliche Kontemplationstradition (Meister Eckhart, Johannes vom Kreuz) mit Entwicklungspsychologie: Die 'zweite Lebenshälfte' ist kein Abstieg, sondern Rückkehr zum Wesentlichen. Strukturell steht er Almaas und IFS nahe: Unter dem aufgebauten Ego liegt eine andere Ebene — ruhiger, echter, weniger defensiv."
+      }
+    },
+    {
+      "id": "prozesstheologie",
+      "name": "Prozess-Theologie",
+      "lifespan": "Whitehead / Keller",
+      "firstLevel": 5,
+      "schoolId": "prozesstheologie",
+      "x": 82,
+      "y": 88,
+      "versions": {
+        "5": "Alfred North Whitehead (1861–1947) und seine Nachfolgerin Catherine Keller entwickelten eine Metaphysik, in der Realität aus Ereignissen besteht, nicht aus Substanzen. Das Selbst ist kein stabiles Ding, sondern eine Abfolge von 'occasions of experience' — jeweils neuem Werden, das die Vergangenheit aufnimmt und transformiert. Selbst das Göttliche ist für die Prozesstheologie nicht statisch und allwissend, sondern miterleidend und mitwerdend — ein Gott, der mit der Welt ringt, nicht über ihr thront. Diese Sicht konvergiert mit der buddhistischen Leerheitslehre: keine Substanzen, nur Beziehungen und Prozesse. Kellers 'entangled' Theologie — alles ist mit allem verflochten — trägt das in ein feministisches und ökologisches Denken hinein und ist die westliche Echostruktur zur östlichen Anatta-These."
       }
     }
   ],
   "schools": [
-    {
-      "id": "vedanta",
-      "label": "Vedanta",
-      "color": "oklch(0.48 0.13 55)"
-    },
-    {
-      "id": "buddhismus",
-      "label": "Buddhismus",
-      "color": "oklch(0.44 0.11 75)"
-    },
-    {
-      "id": "analytische-psychologie",
-      "label": "Analytische Psychologie",
-      "color": "oklch(0.40 0.09 200)"
-    },
-    {
-      "id": "neurophilosophie",
-      "label": "Neurophilosophie",
-      "color": "oklch(0.38 0.10 240)"
-    },
-    {
-      "id": "konstruktive-neurowissenschaft",
-      "label": "Konstruktive Neurowissenschaft",
-      "color": "oklch(0.36 0.09 230)"
-    },
-    {
-      "id": "integrative-psychotherapie",
-      "label": "Integrative Psychotherapie",
-      "color": "oklch(0.42 0.10 150)"
-    },
-    {
-      "id": "christliche-mystik",
-      "label": "Christliche Mystik",
-      "color": "oklch(0.42 0.09 350)"
-    },
-    {
-      "id": "prozesstheologie",
-      "label": "Prozess-Theologie",
-      "color": "oklch(0.40 0.11 290)"
-    },
-    {
-      "id": "essentielle-psychologie",
-      "label": "Essentielle Psychologie",
-      "color": "oklch(0.46 0.12 48)"
-    },
-    {
-      "id": "selbstpsychologie",
-      "label": "Selbstpsychologie",
-      "color": "oklch(0.42 0.08 330)"
-    },
-    {
-      "id": "humanistische-psychologie",
-      "label": "Humanistische Psychologie",
-      "color": "oklch(0.44 0.10 135)"
-    },
-    {
-      "id": "individualpsychologie",
-      "label": "Individualpsychologie",
-      "color": "oklch(0.46 0.11 65)"
-    },
-    {
-      "id": "transpersonale-psychologie",
-      "label": "Transpersonale Psychologie",
-      "color": "oklch(0.38 0.12 295)"
-    }
+    { "id": "vedanta",                    "label": "Vedanta",                        "color": "oklch(0.48 0.13 55)"  },
+    { "id": "buddhismus",                 "label": "Buddhismus",                     "color": "oklch(0.44 0.11 75)"  },
+    { "id": "analytische-psychologie",    "label": "Analytische Psychologie",        "color": "oklch(0.40 0.09 200)" },
+    { "id": "neurophilosophie",           "label": "Neurophilosophie",               "color": "oklch(0.38 0.10 240)" },
+    { "id": "konstruktive-neurowissenschaft", "label": "Konstruktive Neurowissenschaft", "color": "oklch(0.36 0.09 230)" },
+    { "id": "integrative-psychotherapie", "label": "Integrative Psychotherapie",    "color": "oklch(0.42 0.10 150)" },
+    { "id": "christliche-mystik",         "label": "Christliche Mystik",            "color": "oklch(0.42 0.09 350)" },
+    { "id": "prozesstheologie",           "label": "Prozess-Theologie",             "color": "oklch(0.40 0.11 290)" },
+    { "id": "essentielle-psychologie",    "label": "Essentielle Psychologie",       "color": "oklch(0.46 0.12 48)"  },
+    { "id": "selbstpsychologie",          "label": "Selbstpsychologie",             "color": "oklch(0.42 0.08 330)" },
+    { "id": "humanistische-psychologie",  "label": "Humanistische Psychologie",     "color": "oklch(0.44 0.10 135)" },
+    { "id": "individualpsychologie",      "label": "Individualpsychologie",         "color": "oklch(0.46 0.11 65)"  },
+    { "id": "transpersonale-psychologie", "label": "Transpersonale Psychologie",    "color": "oklch(0.38 0.12 295)" }
   ],
   "concepts": [
     {
@@ -306,7 +235,7 @@
       "x": 10,
       "y": 88,
       "versions": {
-        "1": "Das unveränderliche, ewige Selbst im Vedanta — identisch mit Brahman, dem universellen Bewusstsein."
+        "1": "Im Vedanta [[einer der ältesten philosophischen Traditionen Indiens]] ist Atman [[Sanskrit für 'Selbst' oder 'Atem']] der ewige, unveränderliche Kern jedes Wesens — nicht zu verwechseln mit dem Ego oder der Persönlichkeit. Atman ist identisch mit Brahman [[dem universellen Bewusstsein, dem Grund aller Wirklichkeit]] — das bedeutet: Das Tiefste in dir ist dasselbe wie das Tiefste im Kosmos. Diese Identität ist keine Behauptung, die man glauben soll, sondern eine Erfahrung, die durch Meditation und Unterscheidungspraxis (Viveka [[Fähigkeit, das Wahre vom Unwahren zu unterscheiden]]) zugänglich wird. Die Beständigkeit des Atman ist der direkte Gegenpol zur buddhistischen Anatta-Lehre — die zwei größten spirituellen Traditionen Asiens stehen hier in fundamentalem Widerspruch."
       }
     },
     {
@@ -317,7 +246,7 @@
       "x": 88,
       "y": 78,
       "versions": {
-        "1": "Die buddhistische Leerheit des Ich: Was wir 'Selbst' nennen, ist ein flüchtiger Strom aus fünf Skandhas — kein fester Kern."
+        "1": "Anatta [[Pali für 'Nicht-Selbst'; das Gegenteil von Atman]] ist eines der drei Daseinsmerkmale im Buddhismus [[einer der ältesten Weltreligionen, gegründet in Indien um 500 v. Chr.]]. Sie besagt: Was wir als 'Ich' erleben, ist kein fester Kern, sondern ein dynamisches Muster aus fünf Skandhas [[Sanskrit/Pali für 'Haufen': Körper, Empfindung, Wahrnehmung, Geistesformationen, Bewusstsein]] — vergleichbar einem Fluss, der sich ständig bewegt und dennoch als Fluss erkennbar bleibt. Das Festhalten an einem permanenten Ich ist Ursache von Dukkha [[Leiden, tiefer Unzufriedenheit]]. Anatta bedeutet nicht Nihilismus — es geht nicht darum, dass nichts existiert, sondern dass das, was existiert, kein Substanzding ist. Die Praxis der Achtsamkeit macht dieses Fließen direkt erfahrbar: nicht als Idee, sondern als unmittelbare Wahrnehmung."
       }
     },
     {
@@ -328,40 +257,7 @@
       "x": 25,
       "y": 35,
       "versions": {
-        "2": "Jungs Lebensprozess der psychischen Reifung: Integration der Archetypen (Schatten, Anima/Animus, Selbst) zum vollständigen Individuum."
-      }
-    },
-    {
-      "id": "ego-tunnel",
-      "name": "Der Ego-Tunnel",
-      "type": "theory",
-      "firstLevel": 3,
-      "x": 70,
-      "y": 22,
-      "versions": {
-        "3": "Metzingers Kernthese: Das Gehirn erzeugt ein Selbstmodell — einen phänomenalen Tunnel — den wir fälschlicherweise als 'Ich' erleben."
-      }
-    },
-    {
-      "id": "free-energy",
-      "name": "Free Energy Principle",
-      "type": "theory",
-      "firstLevel": 4,
-      "x": 80,
-      "y": 10,
-      "versions": {
-        "4": "Fristons mathematisches Prinzip: Das Gehirn minimiert die Differenz zwischen Vorhersage und Realität. Das Selbst ist das Vorhersagemodell."
-      }
-    },
-    {
-      "id": "wahres-selbst",
-      "name": "Das Wahre Selbst",
-      "type": "axiom",
-      "firstLevel": 5,
-      "x": 14,
-      "y": 80,
-      "versions": {
-        "5": "Rohrs Begriff: Das Wahre Selbst ist das, was übrigbleibt, wenn wir alle aufgebauten Identitäten ablegen — das unzerstörbare Wesen, das Gott in uns kennt."
+        "2": "Jung verstand Individuation als den zentralen Entwicklungsprozess des menschlichen Lebens: die Aufgabe, aus dem kollektiven Unbewussten eine einzigartige, ganzheitliche Persönlichkeit zu formen. Archetypen sind dabei die universellen Schablonen — Schatten (das Verdrängte), Anima/Animus (das gegengeschlechtliche Innere), Persona (die soziale Maske), Selbst (das integrierende Zentrum) — die in allen Kulturen in Mythen, Märchen und Träumen auftauchen. Individuation bedeutet nicht, den Schatten zu eliminieren, sondern ihn zu integrieren: Das Abgelehnte in sich anzuerkennen ist der Preis für Ganzheit. Das Selbst als Archetyp ist Ziel und Motor des Prozesses — es zieht wie ein Magnet, ohne je vollständig erreicht zu werden. Der Prozess dauert ein Leben — und beginnt meist erst in der zweiten Lebenshälfte ernsthaft."
       }
     },
     {
@@ -372,7 +268,7 @@
       "x": 33,
       "y": 30,
       "versions": {
-        "3": "Kohuts Kernbegriff: Das nukleare Selbst ist das Zentrum von Ehrgeiz, Werten und Talenten — kohärent, wenn frühe Selbstobjekte gut genug spiegelten; fragmentiert bei Trauma."
+        "3": "Kohuts 'nukleares Selbst' ist das Zentrum der Persönlichkeit — kein bewusstes Konzept, sondern eine strukturelle Realität, die durch frühe Beziehungserfahrungen geformt wird. Es enthält den Pol des Ehrgeizes (aus grandiosen Aussagen, die gespiegelt wurden), den Pol der Ideale (aus der Idealisierung früher Bezugspersonen) und einen Spannungsbogen der Talente, der diese beiden Pole verbindet. Wenn frühe Selbstobjekte gut genug spiegeln und idealisierbar sind, entwickelt sich ein kohärentes, vital-kreatives Selbst. Wenn nicht — wenn das Kind statt Empathie Gleichgültigkeit oder Überforderung erfährt —, bleibt das nukleare Selbst fragmentiert: anfällig für chronische Scham, Größenphantasien und innere Leere. Kohuts Therapieansatz zielt darauf, durch empathische Präsenz des Therapeuten nachzuholen, was frühe Beziehungen nicht geben konnten."
       }
     },
     {
@@ -383,7 +279,7 @@
       "x": 18,
       "y": 42,
       "versions": {
-        "3": "Rogers' Fundament: Der Organismus weiß instinktiv, was er braucht. Gesundheit entsteht, wenn das Selbstkonzept dem organischen Erleben entspricht — nicht umgekehrt."
+        "3": "Rogers' Konzept des 'Organismus' bezeichnet das Gesamte einer Person — Körper, Gefühle, Intuition — als primäre Wahrheitsquelle. Der Organismus weiß, was er braucht: Das ist Rogers' humanistische Grundüberzeugung, die er gegen den klassischen Freudianismus (Misstrauen gegenüber dem Es) setzt. Das Selbstkonzept (wie ich mich beschreibe und definiere) kann mit dem Organismus übereinstimmen — dann ist die Person kongruent, lebendig, wachstumsorientiert. Oder es kann abweichen — wenn das Kind gelernt hat, bestimmte Erfahrungen zu verleugnen, um Zuneigung zu erhalten (Conditions of Worth). Diese Diskrepanz ist für Rogers die Quelle von Angst, Starrheit und psychischem Leid. Therapeutisch folgt daraus: Der Therapeut schafft keine Deutungen, sondern Bedingungen, unter denen der Organismus seiner eigenen Wahrheit wieder trauen kann."
       }
     },
     {
@@ -394,7 +290,18 @@
       "x": 40,
       "y": 24,
       "versions": {
-        "3": "Adlers Schlüsselbegriff: Der individuelle Lebensstil ist die einmalige, unbewusste Strategie eines Menschen, um Minderwertigkeitsgefühle zu kompensieren und Zugehörigkeit zu gewinnen."
+        "3": "Adlers 'Lebensstil' ist die individuelle, unbewusste Grundstrategie, mit der ein Mensch durch das Leben navigiert — geformt in den ersten vier bis fünf Lebensjahren als Antwort auf Minderwertigkeitsgefühle und die erlebte Familienatmosphäre. Der Lebensstil ist kein Charaktertyp, sondern ein Bewegungsziel: Jede Person bewegt sich auf ein fiktives Endziel zu — eine Vorstellung von Vollständigkeit, Überlegenheit oder Sicherheit. Das macht ihn zum zentralen Schlüssel für Adlers Psychologie: Verstehe den Lebensstil, verstehe die Person. Psychische Störungen sind für Adler fehlerhafte Lebensstile — entwickelt, als sie sinnvoll erschienen, jetzt hinderlich. Gemeinschaftsgefühl (Sozialinteresse) ist der Maßstab für Gesundheit: Je mehr ein Lebensstil auf Kooperation ausgerichtet ist, desto gesünder."
+      }
+    },
+    {
+      "id": "ego-tunnel",
+      "name": "Der Ego-Tunnel",
+      "type": "theory",
+      "firstLevel": 3,
+      "x": 70,
+      "y": 22,
+      "versions": {
+        "3": "Der Ego-Tunnel ist Metzingers Name für das phänomenale Selbstmodell: das Bild, das das Gehirn von sich selbst erstellt, um im Körper zu navigieren. 'Tunnel' bedeutet: Wir erleben nur das, was durch das Modell gefiltert wird — nie die Welt direkt, immer die Welt durch das Modell hindurch. Die entscheidende Eigenschaft ist Transparenz: Das Modell erscheint uns nicht als Modell, sondern als Realität — deshalb erleben wir uns als Subjekte, nicht als Repräsentationen. Aus-dem-Körper-Erfahrungen, Träume und bestimmte Meditationszustände zeigen, was passiert, wenn das Selbstmodell destabilisiert wird: Das Ich 'verrutscht' — und zeigt dabei, dass es konstruiert war. Metzingers Ego-Tunnel ist eine der präzisesten neurophilosophischen Antworten auf die Frage: Warum glauben wir überhaupt an ein Selbst?"
       }
     },
     {
@@ -405,7 +312,7 @@
       "x": 62,
       "y": 30,
       "versions": {
-        "3": "Hoods These: Das erlebte Ich ist eine Fiktion des Gehirns — konstruiert aus Erinnerungen, Erwartungen und sozialen Rollen, um Handlungen zu koordinieren."
+        "3": "Bruce Hoods 'Self Illusion' beschreibt, wie das Gehirn aus widersprüchlichem, zeitlich fragmentiertem Material eine kohärente Ich-Geschichte spinnt. Das Ich-Erleben ist dabei nicht falsch im Sinne von 'nicht vorhanden' — sondern falsch im Sinne von 'falsch repräsentiert': Wir erleben uns als einheitliches Subjekt, das durch die Zeit reist, aber Erinnerungen verändern sich bei jedem Abruf, und Entscheidungen folgen Prozessen, die dem Bewusstsein erst nachträglich zugerechnet werden. Hood zeigt, dass dieser narrative Trick evolutionär nützlich ist: Ein kohärentes Ich koordiniert soziales Verhalten, Verantwortungsübernahme und Langzeitplanung. Die Illusion dient dem Überleben — aber sie ist trotzdem eine Konstruktion. Hood steht damit in expliziter Parallele zu Metzinger (philosophisch) und Barrett (konstruktivistisch-neurowissenschaftlich)."
       }
     },
     {
@@ -416,7 +323,29 @@
       "x": 72,
       "y": 70,
       "versions": {
-        "4": "Ferrers Kernkonzept: Spirituelle Wahrheit entsteht partizipativ — durch verkörperten Kontakt mit der Wirklichkeit in Gemeinschaft, nicht durch einsame innere Erfahrung."
+        "4": "Ferrers 'partizipative Spiritualität' ist eine Kritik am Zentrismus der meisten westlichen Spiritualitätstheorien: Ob Wilbers Integraltheorie oder klassische Mystik — meist wird Spiritualität als inneres Erleben eines Subjekts beschrieben, das zur Quelle vordringt. Ferrer wendet ein: Spirituelle Wahrheit ist nicht im Bewusstsein verborgen, sondern entsteht ko-kreativ — durch verkörperten Kontakt zwischen Mensch, Gemeinschaft und dem, was er das 'kosmische Heimatland' nennt. Verschiedene Traditionen öffnen damit verschiedene Aspekte der Wirklichkeit (spiritual pluralism), nicht verschiedene Zugänge zu derselben Spitze. Das Selbst ist in diesem Modell nicht der Container der Erfahrung, sondern ein Teilnehmer an einem offenen ontologischen Prozess. Ferrer schlägt damit eine Brücke zwischen transpersonaler Psychologie und Prozesstheologie."
+      }
+    },
+    {
+      "id": "free-energy",
+      "name": "Free Energy Principle",
+      "type": "theory",
+      "firstLevel": 4,
+      "x": 80,
+      "y": 10,
+      "versions": {
+        "4": "Fristons Free Energy Principle ist ein mathematisches Modell biologischer Selbstorganisation: Jedes lebende System muss die freie Energie minimieren — technisch: die Überraschung oder Unsicherheit über den eigenen Zustand. Das Gehirn tut dies durch Predictive Processing: Es erstellt Vorhersagen über Sinneseindrücke und aktualisiert diese bei Abweichungen (Vorhersagefehler). Das Selbst ist in diesem Modell das generative Modell des eigenen Zustands — eine Markov-Blanket-Struktur, die Innen von Außen statistisch trennt. Friston gibt Metzingers Ego-Tunnel einen formalen Unterbau: Das Selbstmodell ist das Vorhersagemodell über den eigenen Körper und die eigene Position in der Welt. Die Implikation ist radikal: Subjektivität und Selbst entstehen aus einem Prozess, der primär statistisch und nicht 'intentional' ist — und trotzdem zu dem führt, was wir als Erleben kennen."
+      }
+    },
+    {
+      "id": "wahres-selbst",
+      "name": "Das Wahre Selbst",
+      "type": "axiom",
+      "firstLevel": 5,
+      "x": 14,
+      "y": 80,
+      "versions": {
+        "5": "Richard Rohrs 'Wahres Selbst' ist nicht eine psychologische Beschreibung, sondern eine theologische Anthropologie: Das, was Gott in uns kennt, ist nicht unser Leistungsprofil, sondern unser Sein selbst — unveränderlich, nicht durch Versagen angreifbar, nicht durch Erfolg vergrößerbar. Das 'Falsche Selbst' ist die Identität, die wir aus Rollen, Leistungen und Reaktionsmustern bauen — notwendig und nicht böse, aber nicht das Wesentliche. Die christliche Kontemplationstradition (Meister Eckhart, Johannes vom Kreuz) beschreibt den Weg zur Kenosis — der Selbstentleerung, die das Wahre freilegt. Rohr steht in struktureller Parallele zu Almaas ('Essenz unter dem Ego') und IFS ('Self unter den Teilen'): unterschiedliche Sprachen für eine verwandte Topologie der Person."
       }
     }
   ],
@@ -428,47 +357,7 @@
       "type": "critique",
       "firstLevel": 1,
       "versions": {
-        "1": "Der absolute Gegensatz. Atman (ewiger Kern) vs. Anatta (Leerheit)."
-      }
-    },
-    {
-      "id": "buddhismus-jung",
-      "from": "buddhismus",
-      "to": "jung",
-      "type": "rejection",
-      "firstLevel": 2,
-      "versions": {
-        "2": "Jung sucht den wahren Kern (das Selbst), den der Buddhismus als Ursache von Leid dekonstruiert."
-      }
-    },
-    {
-      "id": "jung-metzinger",
-      "from": "jung",
-      "to": "metzinger",
-      "type": "critique",
-      "firstLevel": 3,
-      "versions": {
-        "3": "Metzinger reduziert Jungs tiefes, psychisches Zentrum auf eine reine Rechenleistung des Gehirns."
-      }
-    },
-    {
-      "id": "buddhismus-barrett",
-      "from": "buddhismus",
-      "to": "barrett",
-      "type": "parallel",
-      "firstLevel": 3,
-      "versions": {
-        "3": "Moderne wissenschaftliche Bestätigung der buddhistischen These: Das Ich ist ein Konstrukt aus Momenten (Skandhas)."
-      }
-    },
-    {
-      "id": "jung-ifs",
-      "from": "jung",
-      "to": "ifs",
-      "type": "influence",
-      "firstLevel": 4,
-      "versions": {
-        "4": "IFS baut auf Jungs Arbeit der Teilpersönlichkeiten (Komplexe) auf, setzt aber eine spirituelle Essenz ins Zentrum."
+        "1": "Dies ist der fundamentalste Widerspruch in der Geschichte des Selbst-Denkens: Vedanta [[die klassische hinduistische Philosophie]] behauptet, es gibt einen ewigen Kern (Atman [[das unveränderliche, göttliche Selbst]]); Buddhismus bestreitet genau das — Anatta [[Nicht-Selbst]] ist seine Kerneinsicht. Beide Traditionen entstanden in Indien, beide reagieren auf die Erfahrung des Leidens, beide empfehlen Meditation als Weg — und kommen zu entgegengesetzten Schlüssen über die Natur dessen, der meditiert. Der Streit ist nicht beigelegt: Auch heute debattieren Philosophen und Meditierende, ob tiefe Stille ein Zeuge ist (Vedanta) oder nur Stille (Buddhismus)."
       }
     },
     {
@@ -478,27 +367,17 @@
       "type": "influence",
       "firstLevel": 2,
       "versions": {
-        "2": "Jung war zeitlebens fasziniert von östlichen Lehren. Sein Selbst-Konzept hat eine eingestandene Nähe zur Atman-Idee: ein tieferer, transpersonaler Kern, der durch psychische Reifung zugänglich wird. Anders als Vedanta sieht Jung diesen Kern aber als Ergebnis eines Entwicklungsprozesses (Individuation), nicht als ewig Vorhandenes."
+        "2": "Jung war zeitlebens fasziniert von östlichen Lehren. Sein Selbst-Konzept hat eine eingestandene Nähe zur Atman-Idee: ein tieferer, transpersonaler Kern, der durch psychische Reifung zugänglich wird. Anders als Vedanta sieht Jung diesen Kern aber als Ergebnis eines Entwicklungsprozesses (Individuation), nicht als ewig Vorhandenes — das ist die entscheidende Verschiebung. Jung übersetzte Vedanta-Einsichten in die Sprache der westlichen Tiefenpsychologie und machte sie damit für ein säkulares Publikum zugänglich, das mit spirituellen Autoritäten wenig anfangen konnte."
       }
     },
     {
-      "id": "metzinger-hood",
-      "from": "metzinger",
-      "to": "hood",
-      "type": "parallel",
-      "firstLevel": 3,
+      "id": "buddhismus-jung",
+      "from": "buddhismus",
+      "to": "jung",
+      "type": "rejection",
+      "firstLevel": 2,
       "versions": {
-        "3": "Zwei Stimmen derselben neurowissenschaftlichen Diagnose: Das Selbst ist Konstruktion, nicht Substanz. Metzinger formuliert es philosophisch (Ego-Tunnel als Repräsentation), Hood populär-empirisch (Ich-Narrativ als evolutionärer Trick). Gemeinsame Pointe: Es gibt niemanden, der den Tunnel bewohnt."
-      }
-    },
-    {
-      "id": "metzinger-barrett",
-      "from": "metzinger",
-      "to": "barrett",
-      "type": "parallel",
-      "firstLevel": 3,
-      "versions": {
-        "3": "Geteilter Konstruktivismus. Metzinger zeigt: das Selbst ist ein Modell. Barrett zeigt: auch Emotionen sind Konstruktionen, nicht Entdeckungen. Beide räumen mit der Vorstellung auf, dass es im Gehirn 'Dinge' gibt, die einfach nur abgerufen werden — alles ist aktive Konstruktion in Echtzeit."
+        "2": "Jung kannte buddhistische Texte gut und bezog sie ein — aber seine Antwort auf die Frage 'Was ist das Selbst?' ist das genaue Gegenteil der buddhistischen. Für den Buddhismus ist das Festhalten an einem Kern-Ich die Wurzel des Leidens; für Jung ist das Selbst das höchste Entwicklungsziel — ein integriertes Zentrum, auf das hin die Psyche sich entfaltet. Jung versuchte, diese Spannung aufzulösen: Er interpretierte Nirvana als Auflösung des Ego, nicht des Selbst. Kritiker halten das für eine Fehllektüre — aber die Frage bleibt produktiv: Wird das Tiefste in uns entdeckt (Vedanta, Jung) oder dekonstruiert (Buddhismus)?"
       }
     },
     {
@@ -508,7 +387,7 @@
       "type": "influence",
       "firstLevel": 3,
       "versions": {
-        "3": "Kohut erbt von Jung (und Freud) die Idee einer tiefen Selbst-Struktur, verschiebt aber den Fokus: Nicht innere Archetypen-Integration, sondern relationale Spiegelung durch Selbstobjekte konstituiert das Selbst. Das nukleare Selbst entsteht zwischen den Menschen, nicht in der Psyche."
+        "3": "Kohut erbt von Jung (und Freud) die Idee einer tiefen Selbst-Struktur, verschiebt aber den Fokus grundlegend: Nicht innere Archetypen-Integration, sondern relationale Spiegelung durch Selbstobjekte konstituiert das Selbst. Das nukleare Selbst entsteht zwischen den Menschen, nicht in der isolierten Psyche. Kohut macht damit den interpersonellen Raum zum Hauptschauplatz der Selbstentwicklung — was Jung weitgehend vernachlässigt hatte."
       }
     },
     {
@@ -518,7 +397,57 @@
       "type": "parallel",
       "firstLevel": 3,
       "versions": {
-        "3": "Trotz verschiedener Schulen — Tiefenpsychologie und humanistische Psychologie — teilen beide eine Grundintuition: Im Menschen wirkt eine organische Tendenz zur Ganzheit. Bei Jung heißt sie Individuation, bei Rogers Aktualisierungstendenz. Beide vertrauen auf einen gesunden Kern, der sich unter den richtigen Bedingungen entfaltet."
+        "3": "Trotz verschiedener Schulen — Tiefenpsychologie und humanistische Psychologie — teilen beide eine Grundintuition: Im Menschen wirkt eine organische Tendenz zur Ganzheit. Bei Jung heißt sie Individuation, bei Rogers Aktualisierungstendenz. Beide vertrauen auf einen gesunden Kern, der sich unter den richtigen Bedingungen entfaltet. Der entscheidende Unterschied: Jung betont die Arbeit mit dem Unbewussten (Träume, Symbole); Rogers vertraut dem bewussten Erleben und der Beziehungsqualität als ausreichend."
+      }
+    },
+    {
+      "id": "buddhismus-barrett",
+      "from": "buddhismus",
+      "to": "barrett",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Barretts konstruktive Emotionstheorie und die buddhistische Skandha-Lehre konvergieren in einer auffälligen Weise: Beide beschreiben das Selbst-Erleben als emergent aus einer Folge von Konstruktionsprozessen, nicht als Zugang zu etwas Festem. Barrett formuliert das in der Sprache der Neurowissenschaft (Vorhersagen, interozeptive Signale, kategoriale Konstruktion); der Buddhismus in der Sprache der Kontemplation (Moment-für-Moment-Beobachtung der Entstehung und Vergänglichkeit von Erscheinungen). Die Konvergenz ist kein Beweis für den Buddhismus — aber sie zeigt, dass zwei radikal verschiedene Erkenntnisweisen auf eine ähnliche Wirklichkeitsbeschreibung hinführen können."
+      }
+    },
+    {
+      "id": "jung-metzinger",
+      "from": "jung",
+      "to": "metzinger",
+      "type": "critique",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Jung sah das Selbst als psychisches Zentrum — tief, real, erfahrbar in Träumen und Lebenskrisen. Metzinger erklärt genau das weg: Was Jung 'Selbst' nennt, ist ein Selbstmodell des Gehirns — kein Zentrum, sondern eine nützliche Simulation. Die Polemik ist scharf, aber produktiv: Metzinger muss erklären, wie ein bloßes Modell die Tiefe und Transformationskraft erzeugt, die Jung klinisch beobachtete. Jung müsste erklären, warum dieser 'Kern' so konsistent mit neuronalen Prozessen zusammenhängt. Keine Position gewinnt diesen Streit leicht — und das macht ihn zu einem der fruchtbarsten im Tableau."
+      }
+    },
+    {
+      "id": "metzinger-hood",
+      "from": "metzinger",
+      "to": "hood",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Zwei Stimmen derselben neurowissenschaftlichen Diagnose: Das Selbst ist Konstruktion, nicht Substanz. Metzinger formuliert es philosophisch (Ego-Tunnel als Repräsentation ohne Repräsentierten), Hood populär-empirisch (Ich-Narrativ als evolutionärer Koordinationstrick). Gemeinsame Pointe: Es gibt niemanden, der den Tunnel bewohnt — und trotzdem ist das Erleben des Bewohnens real. Ihre Differenz liegt im Ton: Metzinger zieht ethische Konsequenzen aus der These, Hood bleibt beschreibend."
+      }
+    },
+    {
+      "id": "metzinger-barrett",
+      "from": "metzinger",
+      "to": "barrett",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Geteilter Konstruktivismus: Metzinger zeigt, das Selbst ist ein Modell; Barrett zeigt, auch Emotionen sind Konstruktionen, nicht Entdeckungen. Beide räumen mit der Vorstellung auf, dass es im Gehirn 'Dinge' gibt, die einfach nur abgerufen werden — alles ist aktive Konstruktion in Echtzeit. Der Unterschied liegt im Fokus: Metzinger fragt nach dem Subjekt, Barrett nach den Emotionen. Zusammen ergeben sie ein konsistentes Bild: Das Gehirn ist eine Vorhersageschleife, die sowohl das Selbst als auch seine Gefühlswelt konstruiert."
+      }
+    },
+    {
+      "id": "jung-ifs",
+      "from": "jung",
+      "to": "ifs",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Richard Schwartz hat Jungs Arbeit explizit rezipiert: Komplexe — Jung nannte sie 'Teile der Persönlichkeit, die zeitweise die Kontrolle übernehmen' — sind der Vorläufer von Schwartz' 'Teilen'. Der entscheidende Unterschied liegt im Zentrum: Jung formuliert das Selbst als Ergebnis eines langen Integrationsprozesses (Individuation); IFS setzt das Selbst als immer schon vorhanden — als unzerstörbaren, heilen Kern, der nicht entwickelt, sondern befreit werden muss. Therapeutisch hat das große Konsequenzen: Schwartz kann schon in der ersten Sitzung mit dem Selbst des Klienten arbeiten, was Jungs jahrzehntedauernder Individuationsprozess nicht vorsieht."
       }
     },
     {
@@ -528,7 +457,7 @@
       "type": "influence",
       "firstLevel": 4,
       "versions": {
-        "4": "Das Free Energy Principle liefert die mathematische Mechanik, die Metzingers Ego-Tunnel theoretisch braucht: Wenn das Gehirn ein Vorhersagemodell der Welt ist, dann ist das Selbstmodell die Vorhersage über den eigenen Zustand. Fristons Formalismus, Metzingers Phänomenologie."
+        "4": "Das Free Energy Principle liefert die mathematische Mechanik, die Metzingers Ego-Tunnel theoretisch braucht: Wenn das Gehirn ein Vorhersagemodell der Welt ist, dann ist das Selbstmodell die Vorhersage über den eigenen Zustand. Fristons Formalismus, Metzingers Phänomenologie. Zusammen ergeben sie eine der kohärentesten naturalistischen Theorien des Selbst: mathematisch fundiert (Friston), phänomenologisch beschrieben (Metzinger), ethisch ausgedeutet (Metzinger)."
       }
     },
     {
@@ -538,7 +467,7 @@
       "type": "influence",
       "firstLevel": 4,
       "versions": {
-        "4": "Almaas' Diamond Approach hat explizit östliche Wurzeln. Die wahre Essenz als unzerstörbarer Kern unter dem Ego ist Vedanta-nah, wird aber pluralisiert: Statt eines einzigen Atman erscheint die Essenz als Vielzahl konkreter Qualitäten (Liebe, Stärke, Frieden), die direkt erfahrbar sind."
+        "4": "Almaas' Diamond Approach hat explizit östliche Wurzeln. Die wahre Essenz als unzerstörbarer Kern unter dem Ego ist Vedanta-nah — wird aber pluralisiert: Statt eines einzigen Atman erscheint die Essenz als Vielzahl konkreter Qualitäten (Liebe, Stärke, Frieden, Wille), die direkt erfahrbar sind, nicht erschlossen werden müssen. Almaas überbrückt damit Vedanta und westliche Psychologie: Der Kern ist real wie im Vedanta, aber erfahrbar im Körper und in Beziehungen, nicht nur in tiefer Versenkung."
       }
     },
     {
@@ -548,7 +477,7 @@
       "type": "parallel",
       "firstLevel": 5,
       "versions": {
-        "5": "Christliche Mystik und Diamond Approach treffen sich in einer gemeinsamen Diagnose: Unter dem aufgebauten Ego liegt etwas Ursprünglicheres — bei Rohr das Wahre Selbst als Anteil an Gott, bei Almaas die Essenz als lebendige spirituelle Substanz. Verschiedene Sprachen, verwandte Topologie."
+        "5": "Christliche Mystik und Diamond Approach treffen sich in einer gemeinsamen Diagnose: Unter dem aufgebauten Ego liegt etwas Ursprünglicheres — bei Rohr das Wahre Selbst als Anteil an Gott, bei Almaas die Essenz als lebendige spirituelle Substanz. Verschiedene Sprachen, verwandte Topologie: Beide beschreiben einen Weg des Loslassens statt des Hinzufügens. Der Unterschied liegt im Rahmen: Rohr arbeitet in der christlichen Kontemplationstradition (Hingabe, Kenosis), Almaas in einem pluralistisch-erfahrungsbasierten System ohne Glaubensvoraussetzungen."
       }
     },
     {
@@ -558,7 +487,7 @@
       "type": "parallel",
       "firstLevel": 5,
       "versions": {
-        "5": "Östliche Leerheitslehre und westliche Prozessmetaphysik treffen sich in einer geteilten ontologischen Pointe: Es gibt keine statischen Substanzen — weder Selbst noch Gott. Was existiert, sind Ereignisse in Beziehung. Die L1-Eingangsthese (Anatta) findet auf L5 ihren westlichen Echoraum."
+        "5": "Östliche Leerheitslehre und westliche Prozessmetaphysik treffen sich in einer geteilten ontologischen Pointe: Es gibt keine statischen Substanzen — weder Selbst noch Gott. Was existiert, sind Ereignisse in Beziehung. Die L1-Eingangsthese (Anatta) findet auf L5 ihren westlichen Echoraum. Der entscheidende Unterschied: Der Buddhismus schweigt über Gott; die Prozesstheologie postuliert ein mitwerdendes Göttliches. Beide lehnen aber die Idee eines unveränderlichen, substanziellen Kerns ab — ob Selbst oder Gott."
       }
     },
     {
@@ -568,7 +497,7 @@
       "type": "parallel",
       "firstLevel": 5,
       "versions": {
-        "5": "Therapeutisches Modell und spirituelle Tradition treffen sich strukturell: Beide setzen einen unzerstörbaren Kern unter die Teil-Persönlichkeiten oder Ego-Strukturen. Bei IFS heißt er 'Self', bei Almaas 'Essenz'. Die strukturelle Ähnlichkeit zeigt: dieselbe Intuition über die Topologie der Person, in zwei verschiedenen Idiomen."
+        "5": "Therapeutisches Modell und spirituelle Tradition treffen sich strukturell: Beide setzen einen unzerstörbaren Kern unter die Teil-Persönlichkeiten oder Ego-Strukturen. Bei IFS heißt er 'Self', bei Almaas 'Essenz'. Die strukturelle Ähnlichkeit zeigt: dieselbe Intuition über die Topologie der Person in zwei verschiedenen Idiomen — Therapiesprache und Spiritualitätssprache. Der Unterschied liegt im Rahmen: IFS arbeitet therapeutisch mit Teilen, die Führung durch das Selbst brauchen; Almaas arbeitet kontemplativ mit dem direkten Erleben von Essenz-Qualitäten."
       }
     }
   ]

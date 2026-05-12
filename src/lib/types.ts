@@ -24,6 +24,7 @@ export interface Topic {
   quadrants: Quadrants;
   graphLayout?: 'manual' | 'auto';
   thinkerListStyle?: 'cards' | 'grouped';
+  synthesis?: string;       // kuratorische Einordnung, sichtbar nur auf L5
 }
 
 /** Ein Komplexitäts-Level (1 … complexityLevels) */
