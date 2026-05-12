@@ -64,7 +64,7 @@ export default function LandingPage() {
           {
             num: 'III',
             title: 'Wissen räumlich verankert',
-            text: 'Konzepte schweben nicht länger im luftleeren Raum. Jede Idee erhält einen logischen Platz im Koordinatensystem, damit dein Gehirn das "Big Picture" intuitiv abspeichern kann.',
+            text: 'Konzepte schweben nicht länger im luftleeren Raum. Jede Idee findet ihren Platz im Koordinatensystem — und du siehst, wie sie zusammenhängt mit den anderen. Erst dort, im Zusammenhang, lässt sich Wissen zu Ende denken.',
           },
         ].map(item => (
           <div key={item.num} className="flex flex-col gap-2">
