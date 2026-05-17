@@ -14,6 +14,14 @@
 **Datum:** 17.5.26
 **Resultat:** `data/realismus-und-konstruktivismus.json` angelegt (13 Denker, 9 Konzepte, 17 Influences, 9 Schools). In `data/library.json` registriert, in `src/lib/data.ts` importiert. Erster echter Mild-Modus-Lauf der Reihe — meditative Stimme, kein Inquisitor-Lauf.
 
+### [x] Mild-Prompt + Verteilter Mild-Modus — Workflow-Dokumentation
+**Datum:** 17.5.26
+**Resultat:** `prompts/mild-mode.md` erstellt (Mild positiv definiert: 10–14 Denker, drei Prüffragen, Architekt-Prüfer-Ablauf). CLAUDE.md um Sektion "Tableau-Bau — Workflow-Konvention" ergänzt. Bedingung für Wiederholbarkeit des verteilten Workflows ist erfüllt.
+
+### [x] Annotation-Tooltip — Rendering-Fix
+**Datum:** 17.5.26
+**Resultat:** `src/lib/annotations.tsx` vollständig überarbeitet. Zwei Formate unterstützt: (A) `[[term: definition]]` — Term und Definition aus Klammern getrennt; (B) `term [[definition]]` — Term ist das letzte Wort vor `[[]]`, Definition ist der volle Klammer-Inhalt. Tooltip: dunkler Hintergrund (`oklch(0.26)`) statt transparentem Pergament-Look. Behebt: Doppelung (Definition inline + im Tooltip) und unlesbare Darstellung durch gleichen Hintergrund.
+
 ### [x] Landingpage-Überarbeitung
 **Datum:** 11.5.26
 **Resultat:** Hero-Block mit Vision-Klammer neu geschrieben. "Erste interaktive..."-Behauptung entfernt. "Philosophie und Psychologie" geöffnet zu "Ideengeschichte". Sektion III von Speicher-Metapher befreit, Du-Du-Ton durchgehalten. Footer-Untertitel auf "eine Bibliothek der großen Fragen" umgestellt.
@@ -91,12 +99,8 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] Annotation-Rendering als Tooltip statt Inline
-**Status:** diskutiert 14.5.26, konkrete UI-Reparatur identifiziert
-**Kontext:** Aktuelle Implementierung rendert `[[Annotationen]]` als Inline-Einschübe mit Doppelpunkt-Definitionen mitten im Fließtext — der Satz wird durch die Definition gerissen. Stolpert auf Handy mehr als auf Desktop.
-**Vorschlag:** Begriff im Fließtext markiert (anders gefärbt, leicht unterstrichen), beim Antippen/Hover erscheint Definition als Overlay. Schema bleibt unverändert, nur Render-Logik im `Annotated`-Komponenten ändert sich.
-**Aufwand:** Gering — Frontend-Only, kein Schema-Eingriff.
-**Nächster Schritt:** Priorisieren — vermutlich größter Quick Win für Lesbarkeit.
+### [x] Annotation-Rendering als Tooltip statt Inline
+**Status:** implementiert 17.5.26 — siehe "Zuletzt abgeschlossen"
 
 ---
 
