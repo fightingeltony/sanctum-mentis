@@ -2,31 +2,22 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 
-function parseAnnotation(content: string): { term: string; definition: string } {
-  // 1. Split on first ' — ' if term is short enough
+function tryInlineSplit(content: string): { term: string; definition: string } | null {
   const dashIdx = content.indexOf(' — ')
   if (dashIdx !== -1) {
     const candidate = content.slice(0, dashIdx).trim()
     if (candidate.split(/\s+/).length <= 6) {
-      return { term: candidate, definition: content }
+      return { term: candidate, definition: content.slice(dashIdx + 3).trim() }
     }
   }
-
-  // 2. Split on first ':' if term is short enough
   const colonIdx = content.indexOf(':')
   if (colonIdx !== -1) {
     const candidate = content.slice(0, colonIdx).trim()
     if (candidate.split(/\s+/).length <= 8) {
-      return { term: candidate, definition: content }
+      return { term: candidate, definition: content.slice(colonIdx + 1).trim() }
     }
   }
-
-  // 3. Fallback: first 4 words
-  const words = content.split(/\s+/)
-  return {
-    term: words.slice(0, 4).join(' ') + (words.length > 4 ? ' …' : ''),
-    definition: content,
-  }
+  return null
 }
 
 function AnnotationTooltip({ term, definition }: { term: string; definition: string }) {
@@ -45,7 +36,7 @@ function AnnotationTooltip({ term, definition }: { term: string; definition: str
   }, [open])
 
   return (
-    <span ref={ref} className="relative">
+    <span ref={ref} className="relative inline-block">
       <span
         role="button"
         tabIndex={0}
@@ -63,7 +54,12 @@ function AnnotationTooltip({ term, definition }: { term: string; definition: str
       {open && (
         <span
           role="tooltip"
-          className="absolute top-full left-0 z-50 mt-1 w-60 max-w-[min(240px,80vw)] rounded border border-[--hairline-strong] bg-[--bg-raised] px-3 py-2 text-[0.82em] leading-snug text-[--fg-muted] shadow-md"
+          className="absolute top-full left-0 z-50 mt-1 w-60 max-w-[min(240px,80vw)] rounded px-3 py-2 text-[0.82em] leading-snug shadow-lg"
+          style={{
+            background: 'oklch(0.26 0.020 65)',
+            color: 'oklch(0.92 0.015 80)',
+            border: '1px solid oklch(0.35 0.020 65)',
+          }}
         >
           {definition}
         </span>
@@ -82,16 +78,39 @@ export function Annotated({ text, level }: { text: string; level: number }) {
   }
 
   const parts = text.split(/(\[\[.*?\]\])/g)
-  return (
-    <>
-      {parts.map((part, i) => {
-        if (part.startsWith('[[') && part.endsWith(']]')) {
-          const content = part.slice(2, -2)
-          const { term, definition } = parseAnnotation(content)
-          return <AnnotationTooltip key={i} term={term} definition={definition} />
-        }
-        return <React.Fragment key={i}>{part}</React.Fragment>
-      })}
-    </>
-  )
+  const nodes: React.ReactNode[] = []
+
+  parts.forEach((part, i) => {
+    if (!part.startsWith('[[') || !part.endsWith(']]')) {
+      nodes.push(part)
+      return
+    }
+
+    const content = part.slice(2, -2)
+
+    // Format A: [[term: definition]] or [[term — definition]] — term inside brackets
+    const split = tryInlineSplit(content)
+    if (split) {
+      nodes.push(<AnnotationTooltip key={i} term={split.term} definition={split.definition} />)
+      return
+    }
+
+    // Format B: term [[definition]] — term is the last word before [[]] in the text
+    const prev = nodes[nodes.length - 1]
+    if (typeof prev === 'string' && prev.trim().length > 0) {
+      const trimmed = prev.trimEnd()
+      const lastSpace = trimmed.lastIndexOf(' ')
+      const rawTerm = lastSpace === -1 ? trimmed : trimmed.slice(lastSpace + 1)
+      // Strip leading punctuation (e.g. "(" from "(Atman")
+      const term = rawTerm.replace(/^[^\p{L}]+/u, '')
+      const leadingPunct = rawTerm.slice(0, rawTerm.length - term.length)
+      const before = (lastSpace === -1 ? '' : trimmed.slice(0, lastSpace + 1)) + leadingPunct
+      nodes[nodes.length - 1] = before
+      nodes.push(<AnnotationTooltip key={i} term={term} definition={content} />)
+    } else {
+      nodes.push(<AnnotationTooltip key={i} term={content.split(/\s+/)[0]} definition={content} />)
+    }
+  })
+
+  return <>{nodes}</>
 }
