@@ -151,6 +151,24 @@ Sicherheitsnetz auf oberster Ebene — verhindert horizontales Scrollen der gesa
 - Labels in `Marcellus SC bold 0.08em letter-spacing` mit Pergament-Halo (textShadow)
 - `usePanZoom` Hook für Pan/Pinch/Wheel — generisch verwendet von InfluenceGraph + QuadrantPlot
 
+## Tableau-Bau — Workflow-Konvention
+
+### Mild-Modus (Default)
+Alle neuen Tableaus werden im Mild-Modus gebaut. Der Prompt liegt in `prompts/mild-mode.md`.
+
+Kennzeichen: 10–14 Denker, 8–12 Konzepte, kuratorische Auswahl statt Vollständigkeit.
+
+### Verteilter Architekt-Prüfer-Workflow
+Für jeden neuen Tableau-Bau: Architekt und Prüfer in getrennten Chat-Instanzen.
+
+- **Chat A (Architekt):** Baut das Tableau mit Projekt-Kontext (CLAUDE.md, Backlog, Stilreferenz-JSON).
+- **Chat B (Prüfer):** Prüft das fertige JSON frisch — **ohne** Projekt-Kontext. Nur `prompts/mild-mode.md` + fertiges JSON + eine repräsentative Referenz-JSON übergeben. Backlog-Kontext würde den Prüfer in einen Inquisitor verwandeln.
+- Architekt arbeitet Befunde ein. Eine Prüfrunde genügt.
+
+Bedingung für Wiederholbarkeit: `prompts/mild-mode.md` muss aktuell sein.
+
+---
+
 ## Was der Agent NICHT tun soll
 - Carta Librorum (`../carta-librorum/`) anfassen — getrenntes Projekt
 - Features bauen die nicht abgesprochen sind, ohne Rückfrage

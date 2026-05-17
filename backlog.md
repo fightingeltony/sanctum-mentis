@@ -155,19 +155,18 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] Mild-Prompt als Repo-Standard
-**Status:** entwickelt 14.5.26, erprobt an Realismus-Tableau
+### [x] Mild-Prompt als Repo-Standard
+**Status:** implementiert 17.5.26 — `prompts/mild-mode.md` erstellt
 **Kontext:** Im Backlog gab es keinen ausformulierten Mild-Modus-Prompt — nur die negative Definition ("nicht volle Schleife"). Aus der Realismus-Konversation ist ein erster Prompt entstanden, der Mild positiv definiert: 10–14 Denker, drei Prüffragen, kein Vollständigkeitsreflex. Hat sich am realen Bau bewährt.
-**Nächster Schritt:** Prompt als Datei `prompts/mild-mode.md` ins Repo aufnehmen.
 
 ---
 
-### [ ] Verteilter Mild-Modus: Architekt + Prüfer in getrennten Chats
-**Status:** erstmals erprobt 14.5.26, hat sich bewährt
+### [x] Verteilter Mild-Modus: Architekt + Prüfer in getrennten Chats
+**Status:** als Workflow-Konvention in CLAUDE.md aufgenommen 17.5.26
 **Kontext:** Statt Architekt-Inquisitor-Schleife in einer Instanz: Architekt baut in Chat A, neuer Chat B prüft frisch gegen Mild-Prompt + JSON + Stilreferenz, Architekt arbeitet Befunde in Chat A ein. Prüfer kontaminationsfrei — er hat den Bauprozess nicht miterlebt. Wichtig: Prüfer *nicht* im Projektwissen platzieren, sonst verwandelt der Backlog-Kontext ihn zurück in einen Inquisitor.
 **Vorteile:** Saubere Mild-Schleife, keine Selbsttäuschung, dokumentierte Bauentscheidungen.
 **Beobachtung aus Realismus-Bau (14.5.26):** Prüfer-Output disziplinierter als erwartet — drei Fragen, präzise, keine Vollständigkeitskritik. Eingriff 3 (L3-Version für Sinnfeld) wurde berechtigt zurückgewiesen — Prüfer kannte Konvention der Reihe besser als der vorschlagende Architekt. Bedingung für Wiederholbarkeit: Mild-Prompt muss als Datei existieren, sonst wird Methode jedes Mal neu erfunden.
-**Nächster Schritt:** Als Workflow-Konvention in CLAUDE.md aufnehmen. `prompts/mild-mode.md` ist Voraussetzung.
+**Abschluss:** Workflow in CLAUDE.md unter "Tableau-Bau — Workflow-Konvention" dokumentiert.
 
 ---
 
