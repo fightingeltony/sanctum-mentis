@@ -20,6 +20,16 @@
     "tags": ["Bewusstsein", "Qualia", "Dualismus", "Kognitionswissenschaft"]
   },
   {
+    "id": "realismus-und-konstruktivismus",
+    "title": "Realismus und Konstruktivismus",
+    "subtitle": "Was ist da draußen wirklich los, wenn ich nicht hinschaue?",
+    "era": "Antike – Gegenwart",
+    "themeColor": "oklch(0.42 0.11 165)",
+    "status": "available",
+    "desc": "Von Aristoteles bis Markus Gabriel — wie Denker durch die Jahrhunderte stritten, ob die Welt unabhängig von uns existiert oder immer schon unsere Konstruktion ist.",
+    "tags": ["Erkenntnistheorie", "Realismus", "Konstruktivismus", "Wissenschaftsphilosophie"]
+  },
+  {
     "id": "ethik",
     "title": "Ethik",
     "subtitle": "Was sollen wir tun?",

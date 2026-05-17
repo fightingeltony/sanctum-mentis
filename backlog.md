@@ -10,6 +10,10 @@
 **Datum:** 12.5.26
 **Resultat:** `synthesis`-Feld in `Topic`-Schema (types.ts) ergänzt. Block in TopicViewer über Tabs, sichtbar nur auf L5 — identische visuelle Sprache wie Context-Strip (Label "SYNTHESE" gold, kursiver Fließtext). Texte für beide Bestandstableaus geschrieben: Geistphilosophie (Hard Problem / Reduktionismus vs. Irreduzibilität), Das Selbst (Substanz vs. Prozess / westlich vs. östlich).
 
+### [x] Realismus und Konstruktivismus — Implementierung
+**Datum:** 17.5.26
+**Resultat:** `data/realismus-und-konstruktivismus.json` angelegt (13 Denker, 9 Konzepte, 17 Influences, 9 Schools). In `data/library.json` registriert, in `src/lib/data.ts` importiert. Erster echter Mild-Modus-Lauf der Reihe — meditative Stimme, kein Inquisitor-Lauf.
+
 ### [x] Landingpage-Überarbeitung
 **Datum:** 11.5.26
 **Resultat:** Hero-Block mit Vision-Klammer neu geschrieben. "Erste interaktive..."-Behauptung entfernt. "Philosophie und Psychologie" geöffnet zu "Ideengeschichte". Sektion III von Speicher-Metapher befreit, Du-Du-Ton durchgehalten. Footer-Untertitel auf "eine Bibliothek der großen Fragen" umgestellt.
@@ -110,12 +114,63 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
+### [ ] Mild-Prompt als Repo-Standard
+**Status:** entwickelt 14.5.26, erprobt an Realismus-Tableau
+**Kontext:** Im Backlog gab es keinen ausformulierten Mild-Modus-Prompt — nur die negative Definition ("nicht volle Schleife"). Aus der Realismus-Konversation ist ein erster Prompt entstanden, der Mild positiv definiert: 10–14 Denker, drei Prüffragen, kein Vollständigkeitsreflex. Hat sich am realen Bau bewährt.
+**Nächster Schritt:** Prompt als Datei `prompts/mild-mode.md` ins Repo aufnehmen.
+
+---
+
+### [ ] Verteilter Mild-Modus: Architekt + Prüfer in getrennten Chats
+**Status:** erstmals erprobt 14.5.26, hat sich bewährt
+**Kontext:** Statt Architekt-Inquisitor-Schleife in einer Instanz: Architekt baut in Chat A, neuer Chat B prüft frisch gegen Mild-Prompt + JSON + Stilreferenz, Architekt arbeitet Befunde in Chat A ein. Prüfer kontaminationsfrei — er hat den Bauprozess nicht miterlebt. Wichtig: Prüfer *nicht* im Projektwissen platzieren, sonst verwandelt der Backlog-Kontext ihn zurück in einen Inquisitor.
+**Vorteile:** Saubere Mild-Schleife, keine Selbsttäuschung, dokumentierte Bauentscheidungen.
+**Nächster Schritt:** Als Workflow-Konvention in CLAUDE.md aufnehmen.
+
+---
+
 ### [ ] Lectio-Modus — von Nice-to-Have zu Kernfeature
 **Status:** Priorität erhöht 10.5.26
 **Kontext:** Geführte Tour durchs Tableau (zeitliche Sequenz statt räumlicher Karte) war Nice-to-Have. Mit der Sanctum-Linse ("Punkte setzen, Erkenntnisse landen lassen") wird sie zum Kernmechanismus für Verstehen-Abschließen. Die offene Karte zeigt das Big Picture — gut für Verstehen. Die Tour führt durch das Big Picture — gut für Abschließen. Beide gehören zusammen.
 **Verhältnis zu Side-Panel:** Komplementär — Side-Panel ist räumlich strukturiert (Knoten in Beziehung), Lectio temporal (Knoten in Lernreihenfolge).
 **Schema-Implikation:** Eine `lectio_path`-Liste pro Tableau, die eine empfohlene Reihenfolge von Knoten plus Übergangstexte definiert.
 **Nächster Schritt:** Side-Panel Stufe 1 hat Vorrang; danach Lectio parallel zu oder vor Stufe 2 — nicht mehr danach.
+
+---
+
+### [ ] L1 als Einstiegs-Tour, nicht als Anfänger-Stufe
+**Status:** diskutiert 14.5.26, entschieden für Prüfung
+**Kontext:** L1 ist aktuell historisch befüllt — frühe Denker bekommen L1-Texte, späte erst auf höheren Stufen. Das macht L1 zur frühe-Denker-Stufe, nicht zur Einsteiger-Stufe. Nicht-Akademiker steigen thematisch ein, nicht historisch.
+**Verschiebung:** L1 als kuratierte Einstiegs-Tour — fünf bis sieben Knoten, die zusammen einen verständlichen Bogen ergeben. Auswahl folgt didaktischer Logik, nicht historischer.
+**Implikation für Geist-Tableau:** Aktuelle L1-Auswahl (Descartes, Ryle, Wittgenstein) trägt einen Einsteiger vermutlich nicht. Chalmers (Hard Problem) und Nagel wären zugänglicher.
+**Verhältnis zu Lectio:** L1 als Einstiegs-Tour ist Lectio-light — kuratorische Arbeit ohne Frontend-Aufwand.
+**Nächster Schritt:** Selbsttest am Geist-Tableau — auf L1 stellen, drei Knoten lesen, prüfen ob der Einstieg trägt.
+
+---
+
+### [ ] Default-Stufe und Stufen-Navigation prüfen
+**Status:** Beobachtung 14.5.26
+**Kontext:** Wenn Tableaus auf L2/L3 öffnen, landen Nicht-Akademiker direkt in akademischer Sprache ohne das Sicherheitsnetz von L1. L1 wird zur Option, die man bewusst wählen muss — statt zum natürlichen Eingang.
+**Tendenz:** Default auf L1; wer mehr will, schiebt hoch.
+**Nächster Schritt:** Tatsächliche Default-Einstellung im Code prüfen. Kleine technische Reparatur, wenn nötig.
+
+---
+
+### [ ] Polare Eingangs-Karte — kuratorische Signatur erkannt
+**Status:** Einsicht 14.5.26
+**Kontext:** Selbstbeobachtung als Nutzer: Was funktioniert ist ein Einstieg mit polaren Gegenthesen — Atman gegen Anatta, Realismus gegen Konstruktivismus. Das Geist-Tableau hat das nicht — Eingang über Descartes als Gründungsvater, Spannungen entfalten sich erst später. Könnte erklären, warum Geist mehr Kopfschmerzen macht als die anderen beiden.
+**Mögliche Umsetzung:** Beim ersten Öffnen erscheint ein kleines Fenster: *"In diesem Tableau geht es um folgende Spannung: [Pol A] versus [Pol B]."* Drei bis fünf Sätze, klar polar, ohne Auflösung. Die Synthese bleibt auf L5.
+**Abgrenzung:** Nicht die Auflösung wandert nach vorne, sondern die Aufmachung der Spannung.
+**Nächster Schritt:** Beim nächsten Tableau-Bau bewusst polaren Eingang prüfen.
+
+---
+
+### [ ] Synthese-Sichtbarkeit von L1 aus
+**Status:** Idee 14.5.26
+**Kontext:** Synthese-Text ist auf L5 sichtbar. Nutzer, die vor dem Detail einen Vogelblick wollen, können ihn einen Klick entfernt erreichen — aber nicht sehen, dass er verfügbar ist.
+**Risiko:** Synthese-vorab lesen kann den pädagogischen Bogen kaputtmachen — Auflösung vor dem Streit.
+**Tendenz:** Vorsichtig — nicht früher anzeigen, eher Verfügbarkeit auf L5 deutlicher machen. Oder den polaren Eingang (Item oben) als Alternative.
+**Nächster Schritt:** In Verbindung mit polarer Eingangs-Karte denken.
 
 ---
 
@@ -137,8 +192,9 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 - B) Kategorien als Hauptebene, Tableaus darin — klar navigierbar, aber Mehrfach-Zugehörigkeit schwierig
 - C) Kuratierte Pfade plus Bibliothek — lädt zum Eintauchen ein, höherer Pflegeaufwand
 
+**Trias-Einsicht (14.5.26):** Mit Realismus-und-Konstruktivismus entsteht eine implizite Trias: Geist (Werkzeug — wie funktioniert Bewusstsein?), Selbst (Beobachter — wer erlebt?), Bühne (Realität — was ist da draußen?). Ethik wäre das fehlende vierte Element: Was tue ich, wenn ich verstanden habe, was Geist, Selbst und Welt sind?
 **Tendenz:** Pragmatisch B implementieren, langfristig zu C entwickeln. Landingpage "Ideengeschichte" als Oberbegriff einführen — breit genug für Ethik, Politische Theorie, kontemplative Traditionen.
-**Nächster Schritt:** Sobald drittes Tableau existiert, B implementieren.
+**Nächster Schritt:** Erst Ethik bauen (schließt die Trias), dann Library-Architektur Option B mit Werkzeug/Beobachter/Bühne/Handlung als impliziter Klammer.
 
 ---
 
@@ -242,16 +298,10 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ## Themen-Backlog
 
-### [ ] Realismus und Konstruktivismus
-**Status:** Idee 10.5.26
-**Anker:** Markus Gabriel / Neuer Realismus aufgeschnappt; das eigentliche Tableau-Thema steckt eine Ebene darüber.
-**Achsen-Skizze:**
-- X: Realismus ↔ Konstruktivismus (Status der Wirklichkeit)
-- Y: Empirie/Welt ↔ Sprache/Kategorien (Quelle der Erkenntnis)
-
-**Mögliche Denker:** Aristoteles, Locke, Berkeley, Kant, Russell, James, Dewey, Goodman, Putnam (Realismus-Phase + Spätphase als interne Spannung), Rorty, Latour, Searle, Boghossian, Gabriel, Ferraris
-**Modus:** zu prüfen — vor dem Bauen entscheiden, ob volle Schleife nötig oder Mild genügt
-**Nächster Schritt:** Als nächstes Tableau erwägen, wenn Side-Panel Stufe 1 steht. Vorher: Anker prüfen — was treibt mich konkret an dem Thema?
+### [x] Realismus und Konstruktivismus
+**Status:** implementiert 17.5.26 (Architekt-Wurf 14.5.26, milde Prüfung durchlaufen)
+**Anker:** Der Streit um Boden. Gabriel aufgeschnappt — schmale epistemische Inkarnation einer größeren Lebensfrage.
+**Modus:** Mild — 13 Denker, 9 Konzepte, 17 Influences, 9 Schools. Erster echter Mild-Lauf der Reihe.
 
 ---
 
@@ -261,6 +311,17 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Achsen-Skizze:** noch nicht entwickelt
 **Modus:** vermutlich Mild oder Solo (Tradition mit klaren Klassikern, aber Wert liegt in Klarheit der Lebensphilosophie, nicht in akademischer Vollständigkeit)
 **Nächster Schritt:** Anker prüfen, bevor Bau begonnen wird.
+
+---
+
+### [ ] Ethik
+**Status:** Idee 14.5.26
+**Anker:** Schließt die Erkenntnis-Trias (Geist/Selbst/Bühne) durch eine Handlungsdimension — was tue ich, wenn ich verstanden habe, was Geist, Selbst und Welt sind? Anker-Prüfung steht noch aus: reaktiv oder gewachsen?
+**Achsen-Skizze:**
+- X: Begründungsquelle — Tugend/Charakter ↔ Regel/Pflicht/Folgen
+- Y: Geltungsbereich — Universell ↔ Situativ/Kontextuell
+**Modus:** Wahrscheinlich Mild — klassische Schulen klar, Pointe liegt in der Auseinandersetzung, nicht in akademischer Vollständigkeit. Risiko: schulische Trockenheit, wenn nicht lebensweltlich verankert.
+**Nächster Schritt:** Anker prüfen, wenn Realismus-Tableau implementiert ist. Nicht vorher bauen.
 
 ---
 
