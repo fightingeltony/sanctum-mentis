@@ -1,49 +1,74 @@
-# Mild-Modus-Prompt
+# Mild-Modus — Sanctum Tableau Bauanleitung
 
-Baue das Tableau im Mild-Modus. Das bedeutet:
+Bewusste Engführung statt akademische Vollständigkeit. Der Default-Modus
+für neue Tableaus, sofern das Thema nicht ausdrücklich die volle
+Architekt-Inquisitor-Schleife verlangt.
 
-**Denker:** 10–14 Personen. Nicht mehr. Vollständigkeit ist kein Ziel — wähle die Denker, die zusammen den Hauptstreit dieser Disziplin tragen. Schul-Zugehörigkeit nur setzen, wenn mindestens zwei Denker dieselbe Schule teilen.
+## Vor dem Bau lesen
 
-**Konzepte:** 8–12 Konzepte. Jedes Konzept muss im Streit der Denker eine Rolle spielen — keine lexikalischen Einträge, keine Vollständigkeits-Auffüllung.
+- `Vision.md` (kuratorische Linie)
+- `CLAUDE.md` (Datenmodell, Konventionen)
+- `backlog.md`, insbesondere "Kuratorische Prinzipien" und den
+  Item-Eintrag zum aktuellen Thema
+- Mindestens zwei bestehende Tableau-JSONs als stilistische und
+  strukturelle Referenz — NICHT als Komplexitäts-Maßstab. Manche
+  Bestandstableaus sind volle Schleifen, das ist hier nicht das Ziel.
 
-**Einflüsse:** Nur Beziehungen, die eine inhaltliche Geschichte erzählen (influence, critique, student-of, parallel, rejection). Keine erschöpfende Verbindungslandkarte.
+## Modus-Regeln
 
-**Schulen:** Nur wenn mindestens zwei Denker dieselbe Tradition tragen. Einzel-Positionen gehören in den Konzept-Bereich, nicht in Schools.
+- **Größe:** 10–14 Denker, 8–12 Konzepte. Nicht mehr.
+- **Auswahlprinzip:** Jeder Denker muss eine eigene, unverwechselbare
+  Position vertreten, die einen Quadranten oder eine Zwischenlage
+  *braucht*. Wer nur "auch noch" gesagt hat, was ein anderer klarer
+  sagt, fliegt raus.
+- **Eine Runde milde Prüfung nach erstem Entwurf**, mit drei Fragen —
+  nicht mehr:
+  1. Fehlt eine Stimme, ohne die das Tableau seinen Bogen nicht
+     schließen kann?
+  2. Ist eine Position so dargestellt, wie ihre besten Vertreter sie
+     verteidigen würden — nicht so, wie ihre Gegner sie karikieren?
+  3. Trägt jeder Knoten zum Abschließen bei, oder hält er nur
+     Spannungen offen?
+- **Keine Vollständigkeits-Schleife.** Der Reflex "es gibt doch auch
+  noch X, Y, Z" wird nicht bedient. Lieber zehn Knoten, die tragen,
+  als sechzehn, die das Bild verwischen.
 
----
+## Stilistische Konventionen
 
-## Drei Prüffragen vor dem Abschluss
+- L1-Annotationen mit `[[doppelten eckigen Klammern]]` für Fachbegriffe
+- 4–6 Sätze pro Knoten auf der jeweiligen Einstiegs-Stufe
+- Schools sind Traditionen, denen mehrere Denker angehören können —
+  NICHT umetikettierte Personen
+- Influence-Typen: `influence`, `critique`, `parallel`, `rejection`
+- Schulen-Labels: akademisch korrekt, aber wo möglich lebensweltlich
+  verständlich (siehe Backlog-Item "Schulen-Labels überarbeiten")
 
-1. **Versteht ein interessierter Nicht-Akademiker den Hauptstreit?**  
-   Auf L1 lesen: Tragen die fünf bis sieben wichtigsten Knoten allein einen verständlichen Bogen?
+## Synthese-Text (L5)
 
-2. **Gibt es einen klaren polaren Eingang?**  
-   Zwei Gegenpositionen müssen früh sichtbar sein — nicht die Auflösung, aber die Spannung.
+Pflicht. 3–5 Sätze. Benennt am Schluss den Kern-Schmerz oder die
+Kern-Spannung des Themas, ohne sie aufzulösen. Tonart wie in den
+Bestandstableaus — meditativ, persönlich, nicht-akademisch. Kein
+neues Summary, sondern eine kuratorische Einordnung: *"Hier ist die
+Spannung, die du jetzt verstehst."*
 
-3. **Kein Vollständigkeitsreflex?**  
-   Wenn du merkst, dass du einen Denker hinzufügst "weil er ja dazugehört" — lass ihn weg.
+## Lieferform
 
----
+JSON nach dem Schema der Bestandstableaus. Zusätzlich kurze
+Begleitnotiz (max. eine Seite) zu den Bauentscheidungen: welche
+Stimmen aufgenommen, welche bewusst nicht, warum.
 
-## Was Mild NICHT bedeutet
+## Verteilter Modus (empfohlen)
 
-- Nicht "weniger Tiefe" — die L5-Texte dürfen akademisch sein.
-- Nicht "oberflächlich" — Mild ist eine kuratorische Entscheidung, keine Qualitätsstufe.
-- Nicht "schnell" — Mild-Bau erfordert mehr Auswahl-Arbeit als Vollständigkeits-Bau.
+Architekt baut in Chat A. Neuer Chat B prüft frisch gegen diesen
+Prompt + JSON + Stilreferenz. Wichtig: **Prüfer NICHT im
+Projektwissen platzieren** — sonst verwandelt der Backlog-Kontext
+ihn zurück in einen Inquisitor.
 
----
+## Tableau-spezifisch (wird pro Bau ergänzt)
 
-## Verteilter Architekt-Prüfer-Workflow
-
-Architekt und Prüfer arbeiten in **getrennten Chat-Instanzen**.
-
-**Chat A (Architekt):** Baut das Tableau. Lädt Backlog, Stilreferenz, Schema.  
-**Chat B (Prüfer):** Prüft das fertige JSON frisch gegen diesen Mild-Prompt + Stilreferenz. Wichtig: **nicht** im Projekt-Kontext platzieren — der Backlog würde den Prüfer in einen Inquisitor verwandeln. Nur JSON + Mild-Prompt + eine repräsentative Referenz-JSON übergeben.
-
-**Ablauf:**
-1. Architekt baut in Chat A, dokumentiert Bauentscheidungen (warum dieser Denker, warum diese Schule).
-2. Fertige JSON in Chat B einfügen. Prüfer gibt Befunde zurück.
-3. Architekt arbeitet Befunde in Chat A ein.
-4. Eine Schleife genügt — kein endloser Qualitätsloop.
-
-**Ziel:** Der Prüfer hat den Bauprozess nicht miterlebt — kein Bestätigungs-Bias, kein Kontaminierungs-Effekt.
+Jeder konkrete Bau ergänzt diesen Prompt um:
+- Titel + Untertitel-Vorschlag
+- Achsen (X/Y) mit Polen
+- Anker-Beschreibung
+- Inhaltliche Leitplanken (Pflichtbesetzung pro Quadrant, kritische
+  Fairness-Vorgaben, bewusste Auslassungen)
