@@ -91,6 +91,47 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
+### [ ] Annotation-Rendering als Tooltip statt Inline
+**Status:** diskutiert 14.5.26, konkrete UI-Reparatur identifiziert
+**Kontext:** Aktuelle Implementierung rendert `[[Annotationen]]` als Inline-Einschübe mit Doppelpunkt-Definitionen mitten im Fließtext — der Satz wird durch die Definition gerissen. Stolpert auf Handy mehr als auf Desktop.
+**Vorschlag:** Begriff im Fließtext markiert (anders gefärbt, leicht unterstrichen), beim Antippen/Hover erscheint Definition als Overlay. Schema bleibt unverändert, nur Render-Logik im `Annotated`-Komponenten ändert sich.
+**Aufwand:** Gering — Frontend-Only, kein Schema-Eingriff.
+**Nächster Schritt:** Priorisieren — vermutlich größter Quick Win für Lesbarkeit.
+
+---
+
+### [ ] Glossar-Tab (Tab V) aktivieren
+**Status:** identifiziert 14.5.26 durch Vergleich mit Carta Librorum
+**Kontext:** Carta Librorum hat fünf Tabs (inkl. Glossar), Sanctum hat nur drei (Denker / Netz / Karte). Engine bietet die zusätzlichen Tabs offenbar. Glossar-Tab würde alle Annotationen des Tableaus zentral sammeln — komplementär zum Annotation-Tooltip: Tooltip löst Lese-Stolper-Problem, Glossar bietet zentrale Übersicht.
+**Nächster Schritt:** Klären, ob Engine den Tab schon unterstützt oder neu gebaut werden muss.
+
+---
+
+### [ ] Logbuch-Tab (Tab IV) — Zweck klären
+**Status:** identifiziert 14.5.26, Zweck offen
+**Kontext:** Vierter Tab in Carta Librorum, bei Sanctum fehlend. Mögliche Zwecke: Lese-Spur, Bookmarking, persönliche Notizen, erste Form von Lectio.
+**Nächster Schritt:** Beobachten, ob Bedarf entsteht. Aktuell nicht priorisieren.
+
+---
+
+### [ ] UI-Tonart-Vergleich Sanctum vs. Carta
+**Status:** Beobachtung 14.5.26
+**Kontext:** Carta nutzt narrative Tab-Namen ("Personen", "Beziehungen") und zugängliche Beschreibungen. Sanctum nutzt akademische Tab-Namen ("Denker", "Einflüsse") und definitorische Beschreibungen — präzise, aber kühler. Frage: Tab-Namen lebensweltlicher? "Stimmen" statt "Denker"? "Gespräche" statt "Einflüsse"?
+**Risiko:** Marken-Verschiebung Richtung Self-Help. Sanctum braucht den akademischen Anker.
+**Tendenz:** Keine vorschnellen Umbenennungen. Tab-Namen lassen wie sie sind. Schulen-Namen beim nächsten Tableau (Ethik) bewusst prüfen.
+**Nächster Schritt:** Beim nächsten Tableau Schulen-Namen prüfen. Tab-Frage in den Hinterkopf legen.
+
+---
+
+### [ ] Schulen-Labels im Geist-Tableau überarbeiten
+**Status:** identifiziert 14.5.26
+**Kontext:** Filter des Geist-Tableaus zeigt akademisches Vokabular pur als ersten Eingang: *Substanzdualismus, Logischer Behaviorismus, Eliminativer Materialismus, Heterophänomenologie...* Das Selbst hat "Vedanta", "Buddhismus"; Realismus hat "Klassischer Empirismus", "Pragmatismus" — beides zugänglicher. Geist ist der akademische Ausreißer an der Tür.
+**Vorschlag:** Schulen-Labels mit lebensweltlicheren Bezeichnungen ergänzen. "Substanzdualismus" → "Geist und Körper als zwei Welten". "Eliminativer Materialismus" → "Alltagspsychologie als Irrtum". JSON bleibt akademisch korrekt, Label wird erfahrbar.
+**Aufwand:** Gering — einmaliger Pass durch die Schools-Liste.
+**Nächster Schritt:** Beim nächsten Geist-Tableau-Pass aufnehmen, eventuell zusammen mit polarem Eingang.
+
+---
+
 ### [ ] Side-Panel "Tiefenbohrung" — Stufe 2
 **Status:** diskutiert 10.5.26, abhängig von Stufe 1 + zweitem Tableau
 **Kontext:** Knotentyp-spezifische Layouts. Gedankenexperimente brauchen Schritt-für-Schritt-Reveal (Setup → Frage → Antwort → Schluss); Theorien brauchen Kernthese + Hauptargument + Hauptkritik; Methoden brauchen Ziel + Schritte + Limitationen.
@@ -125,7 +166,8 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Status:** erstmals erprobt 14.5.26, hat sich bewährt
 **Kontext:** Statt Architekt-Inquisitor-Schleife in einer Instanz: Architekt baut in Chat A, neuer Chat B prüft frisch gegen Mild-Prompt + JSON + Stilreferenz, Architekt arbeitet Befunde in Chat A ein. Prüfer kontaminationsfrei — er hat den Bauprozess nicht miterlebt. Wichtig: Prüfer *nicht* im Projektwissen platzieren, sonst verwandelt der Backlog-Kontext ihn zurück in einen Inquisitor.
 **Vorteile:** Saubere Mild-Schleife, keine Selbsttäuschung, dokumentierte Bauentscheidungen.
-**Nächster Schritt:** Als Workflow-Konvention in CLAUDE.md aufnehmen.
+**Beobachtung aus Realismus-Bau (14.5.26):** Prüfer-Output disziplinierter als erwartet — drei Fragen, präzise, keine Vollständigkeitskritik. Eingriff 3 (L3-Version für Sinnfeld) wurde berechtigt zurückgewiesen — Prüfer kannte Konvention der Reihe besser als der vorschlagende Architekt. Bedingung für Wiederholbarkeit: Mild-Prompt muss als Datei existieren, sonst wird Methode jedes Mal neu erfunden.
+**Nächster Schritt:** Als Workflow-Konvention in CLAUDE.md aufnehmen. `prompts/mild-mode.md` ist Voraussetzung.
 
 ---
 
@@ -162,6 +204,14 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Mögliche Umsetzung:** Beim ersten Öffnen erscheint ein kleines Fenster: *"In diesem Tableau geht es um folgende Spannung: [Pol A] versus [Pol B]."* Drei bis fünf Sätze, klar polar, ohne Auflösung. Die Synthese bleibt auf L5.
 **Abgrenzung:** Nicht die Auflösung wandert nach vorne, sondern die Aufmachung der Spannung.
 **Nächster Schritt:** Beim nächsten Tableau-Bau bewusst polaren Eingang prüfen.
+
+---
+
+### [ ] Frage hinter der Frage als viertes Eingangs-Element
+**Status:** Idee 14.5.26, setzen lassen
+**Kontext:** Jedes Tableau hat drei Eingangs-Elemente: Titel, Subtitle, Synthese (L5). Vorschlag: viertes Element — die Lebensfrage hinter der akademischen Frage. Nicht das Thema, sondern der Anker, der es dringlich macht. Beispiele: *Geist: Was unterscheidet einen Schmerz von der Information über einen Schmerz? / Selbst: Kann ich mich ändern, oder bin ich festgelegt? / Realismus: Wo stehe ich, wenn die alten Gewissheiten weichen?*
+**Doppelter Nutzen:** (1) Für Nutzer — in fünf Sekunden entscheidbar, ob das Tableau gerade brennt. (2) Für Kurator — eingebauter Resonanzcheck: wenn die Frage nicht formulierbar ist, ist das Tableau möglicherweise zu früh.
+**Nächster Schritt:** Beim Ethik-Bau als Testfrage einbauen. Erst wenn die Idee noch glüht — eine Woche liegen lassen.
 
 ---
 
@@ -355,7 +405,34 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
+## Validierung
+
+### [ ] User-Test mit zwei Personen aus der Persona
+**Status:** Methode 14.5.26
+**Kontext:** Fabian ist bisher der einzige Datenpunkt für UX-Beurteilung. Selbstbeobachtung ist wertvoll, aber unzureichend — "ist es zu textlastig?" oder "ist die Navigation klar?" lässt sich nicht aus eigenem Lesen beantworten.
+**Methode:** Person aus Persona einladen (Coach, Psychologie/Spiritualität/Philosophie-Hintergrund). App geben, nicht erklären. Daneben sitzen, schweigen. Beobachten: Wo klicken sie? Wo zögern sie? Wann verlieren sie den Faden? Nach 20–30 Minuten knappe Nachbesprechung.
+**Risiko:** Falsche Personenauswahl — es muss jemand aus der Sanctum-Persona sein, kein technisch interessierter Bekannter ("Sieht cool aus!") und kein akademischer Philosoph ("Hier fehlt aber Dummett").
+**Nächster Schritt:** Nach Ethik-Bau zwei Personen einladen. Eventuell den Coach, der schon Feedback gegeben hat.
+
+---
+
 ## Verworfene oder pausierte Ideen
+
+### Verkörperungs-Lösung im Tool
+**Datum:** 14.5.26
+**Grund:** Sanctum kann strukturell nicht Bauch sein. Es kann auf Verkörperung hindeuten, nicht sie produzieren. Saubere Markenklarheit wichtiger als ambitionierte Versprechen.
+
+### Hemisphären-Asymmetrie als eigenes Tableau
+**Datum:** 14.5.26
+**Grund:** Keine zweite Achse formulierbar, Feld nicht reif sedimentiert, würde verkleidetes McGilchrist-Tableau werden.
+
+### Archetypen-Tableau aus Peterson-Impuls
+**Datum:** 14.5.26
+**Grund:** Reaktiver Impuls aus aktuellem Lesen. Das Archetypen-Tableau im Backlog bleibt offen — aber erst wenn der Anker eigenständig gewachsen ist, nicht aus einem Buch-Impuls heraus.
+
+### Typologie-Tableau auf Basis von Insider-Korrelationen
+**Datum:** 14.5.26
+**Grund:** Reaktiver Impuls aus einem alten Dokument. Das seriöse Typologien-Tableau (→ Themen-Backlog) bleibt offen, aber auf akademisch-kritischer Basis, nicht auf Persönlichkeits-Korrelations-Daten.
 
 ### Neuer Realismus als eigenständiges Tableau
 **Datum:** 10.5.26
@@ -399,6 +476,9 @@ Nicht jedes Tableau muss durch die volle Architekt-Inquisitor-Schleife. Die Libr
 
 ### Anreicherung statt Erweiterung
 Manche Datensätze brauchen mehr Beziehungen, nicht mehr Knoten. Die Operation "Influence-Anreicherung" ist additiv, schmal und stilerhaltend — geeignet für Datensätze, deren Stimme stimmt, aber deren Netz dünn ist.
+
+### Resonanzcheck vor jedem Tableau-Bau
+Nicht jedes strukturell fehlende Tableau muss gebaut werden. Vor dem Bau strikt prüfen — was treibt mich? Reaktiv (Buchimpuls, architektonische Vollständigkeit) ist dünner als gewachsen (beschäftigt mich seit Monaten, trifft eine persönliche Frage). Tableaus ohne persönlichen Anker können gut gebaut werden — aber Bewusstsein darüber ist Teil der kuratorischen Reife. Sanctum darf solche Tableaus haben, es muss nur ehrlich darüber sein.
 
 ### Datensatz vs. Produkt
 Ein guter Datensatz ist nicht gleich ein gutes Produkt. Side-Panel, Glossar und Synthese-Texte entscheiden, ob die Datensatzqualität auch im Frontend ankommt.
