@@ -3,18 +3,20 @@
 import React, { useState, useRef, useEffect } from 'react'
 
 function tryInlineSplit(content: string): { term: string; definition: string } | null {
-  const dashIdx = content.indexOf(' — ')
-  if (dashIdx !== -1) {
-    const candidate = content.slice(0, dashIdx).trim()
-    if (candidate.split(/\s+/).length <= 6) {
-      return { term: candidate, definition: content.slice(dashIdx + 3).trim() }
-    }
-  }
+  // Colon first — explicit [[term:definition]] format; em-dash may appear inside the definition
   const colonIdx = content.indexOf(':')
   if (colonIdx !== -1) {
     const candidate = content.slice(0, colonIdx).trim()
     if (candidate.split(/\s+/).length <= 8) {
       return { term: candidate, definition: content.slice(colonIdx + 1).trim() }
+    }
+  }
+  // Em-dash fallback — for annotations without a colon separator
+  const dashIdx = content.indexOf(' — ')
+  if (dashIdx !== -1) {
+    const candidate = content.slice(0, dashIdx).trim()
+    if (candidate.split(/\s+/).length <= 6) {
+      return { term: candidate, definition: content.slice(dashIdx + 3).trim() }
     }
   }
   return null
@@ -79,21 +81,7 @@ function renderItalic(text: string, keyPrefix: string): React.ReactNode[] {
   })
 }
 
-function stripAnnotations(text: string): string {
-  return text
-    .replace(/\[\[(.*?)\]\]/g, (_, content) => {
-      const split = tryInlineSplit(content)
-      return split ? split.term : '' // Format A: keep term; Format B: term already in text
-    })
-    .replace(/\s{2,}/g, ' ')
-    .trim()
-}
-
-export function Annotated({ text, level }: { text: string; level: number }) {
-  if (level > 1) {
-    return <>{renderItalic(stripAnnotations(text), 'stripped')}</>
-  }
-
+export function Annotated({ text, level: _level }: { text: string; level: number }) {
   const parts = text.split(/(\[\[.*?\]\])/g)
   const nodes: React.ReactNode[] = []
 
