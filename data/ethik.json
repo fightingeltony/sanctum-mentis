@@ -1,0 +1,507 @@
+{
+  "topic": {
+    "id": "ethik",
+    "title": "Ethik",
+    "subtitle": "",
+    "theme": {
+      "accent": "oklch(0.45 0.12 50)",
+      "accentSoft": "oklch(0.45 0.12 50 / 0.15)"
+    },
+    "complexityLevels": 5,
+    "quadrants": {
+      "axisX": {
+        "label": "Grund der Moral",
+        "left": "Charakter / Person",
+        "right": "Prinzip / Resultat"
+      },
+      "axisY": {
+        "label": "Reichweite des Moralsubjekts",
+        "top": "Individuum",
+        "bottom": "Beziehung / Gemeinschaft"
+      }
+    },
+    "synthesis": "Drei Spannungen halten dieses Tableau zusammen, ohne sich auflösen zu lassen. Erstens: ob Moral aus dem Charakter wächst oder aus dem Prinzip folgt — eine Frage, die Aristoteles und Kant seit 2300 Jahren auseinanderhält. Zweitens: ob das ethische Subjekt das einzelne Ich ist oder das Beziehungsgeflecht — eine Frage, die der Westen lange einseitig beantwortet hat. Drittens: ob Moral sich begründen lässt oder nur erklären — eine Frage, die Hume gestellt und Nietzsche radikalisiert hat. Wer dieses Tableau verlässt, hat keine Antwort. Aber er weiß, an welchem dieser drei Schnitte er gerade steht."
+  },
+  "levels": [
+    { "id": 1, "label": "Einstieg",   "short": "L1", "filled": false },
+    { "id": 2, "label": "Grundlagen", "short": "L2", "filled": false },
+    { "id": 3, "label": "Vertiefung", "short": "L3", "filled": false },
+    { "id": 4, "label": "Analyse",    "short": "L4", "filled": false },
+    { "id": 5, "label": "Synthese",   "short": "L5", "filled": false }
+  ],
+  "schools": [
+    {
+      "id": "aristotelische-tugendethik",
+      "label": "Aristotelische Tugendethik",
+      "color": "oklch(0.42 0.13 60)",
+      "glyph": "Α",
+      "gx": -290, "gy": -210,
+      "labelDir": "NW"
+    },
+    {
+      "id": "stoa",
+      "label": "Stoa",
+      "color": "oklch(0.40 0.10 80)",
+      "glyph": "Σ",
+      "gx": -310, "gy": -130,
+      "labelDir": "W"
+    },
+    {
+      "id": "konfuzianismus",
+      "label": "Konfuzianismus",
+      "color": "oklch(0.40 0.12 140)",
+      "glyph": "仁",
+      "gx": -320, "gy": 130,
+      "labelDir": "SW"
+    },
+    {
+      "id": "pflichtethik",
+      "label": "Pflichtethik / Deontologie",
+      "color": "oklch(0.42 0.14 260)",
+      "glyph": "Κ",
+      "gx": 290, "gy": -210,
+      "labelDir": "NE"
+    },
+    {
+      "id": "utilitarismus",
+      "label": "Utilitarismus / Konsequentialismus",
+      "color": "oklch(0.42 0.12 220)",
+      "glyph": "Υ",
+      "gx": 310, "gy": -110,
+      "labelDir": "E"
+    },
+    {
+      "id": "sentimentalismus",
+      "label": "Moralpsychologie / Sentimentalismus",
+      "color": "oklch(0.40 0.10 180)",
+      "glyph": "Η",
+      "gx": 300, "gy": 60,
+      "labelDir": "E"
+    },
+    {
+      "id": "care-ethik",
+      "label": "Care-Ethik",
+      "color": "oklch(0.42 0.13 0)",
+      "glyph": "♡",
+      "gx": 280, "gy": 150,
+      "labelDir": "E"
+    },
+    {
+      "id": "ethik-des-anderen",
+      "label": "Ethik des Anderen",
+      "color": "oklch(0.40 0.13 320)",
+      "glyph": "⊕",
+      "gx": 310, "gy": 215,
+      "labelDir": "SE"
+    },
+    {
+      "id": "verantwortungsethik",
+      "label": "Verantwortungsethik",
+      "color": "oklch(0.42 0.11 100)",
+      "glyph": "Φ",
+      "gx": 220, "gy": 240,
+      "labelDir": "SE"
+    },
+    {
+      "id": "genealogische-kritik",
+      "label": "Genealogische Kritik",
+      "color": "oklch(0.38 0.14 30)",
+      "glyph": "Ν",
+      "gx": -100, "gy": -260,
+      "labelDir": "N"
+    }
+  ],
+  "thinkers": [
+    {
+      "id": "aristoteles",
+      "name": "Aristoteles",
+      "lifespan": "384–322 v. Chr.",
+      "firstLevel": 1,
+      "schoolId": "aristotelische-tugendethik",
+      "x": 18, "y": 22,
+      "versions": {
+        "1": "Aristoteles begründet die [[Tugendethik:eine Ethik, die nicht nach Regeln fragt, sondern nach dem guten Charakter]] in der *Nikomachischen Ethik*. Das Ziel des Menschen ist [[Eudaimonia:das gelungene Leben, oft als ›Glückseligkeit‹ übersetzt — gemeint ist weniger ein Gefühl als ein gelungenes Tätigsein]], und der Weg dorthin führt über die Tugenden — Charaktereigenschaften, die zwischen zwei Extremen liegen (Mut zwischen Feigheit und Tollkühnheit). Tugend ist keine Regel, die man befolgt, sondern eine Haltung, die man durch Übung erwirbt. Im konkreten Fall braucht es [[Phronesis:praktische Klugheit, die im Einzelfall erkennt, was zu tun ist]] — keine Theorie kann ersetzen, was nur das geschulte Urteil weiß. Aristoteles legt damit das Fundament einer Tradition, die im 20. Jahrhundert über Anscombe und MacIntyre wiederbelebt wird."
+      }
+    },
+    {
+      "id": "marc-aurel",
+      "name": "Marc Aurel",
+      "lifespan": "121–180",
+      "firstLevel": 1,
+      "schoolId": "stoa",
+      "x": 25, "y": 32,
+      "versions": {
+        "1": "Marc Aurel schreibt die *Selbstbetrachtungen* nicht als Lehrbuch, sondern als Werkstatt — Notizen, die ein römischer Kaiser im Feldlager an sich selbst richtet. Die Stoa ist bei ihm keine Theorie mehr, sondern tägliche Praxis am eigenen Charakter: das Unterscheiden zwischen dem, was in der eigenen Macht liegt, und dem, was nicht. Anders als bei Aristoteles, der ein System der Tugend baut, geht es Marc Aurel um die wiederholte Rückkehr zur klaren Sicht — auf sich selbst, auf die Sterblichkeit, auf den eigenen Platz im Ganzen. Ethik ist hier nicht etwas, das man weiß, sondern etwas, das man jeden Morgen neu üben muss. Marc Aurel verkörpert damit eine Lebensform-Ethik, die nicht argumentiert, sondern lebt."
+      }
+    },
+    {
+      "id": "nietzsche",
+      "name": "Friedrich Nietzsche",
+      "lifespan": "1844–1900",
+      "firstLevel": 1,
+      "schoolId": "genealogische-kritik",
+      "x": 38, "y": 18,
+      "versions": {
+        "1": "Nietzsche stellt nicht die Frage *was sollen wir tun*, sondern *woher kommt es, dass wir das wollen sollen*. In der *Genealogie der Moral* zeigt er, dass moralische Begriffe wie ›gut‹ und ›böse‹ eine Geschichte haben — sie sind aus Macht-, Schuld- und Ressentimentverhältnissen entstanden, nicht aus zeitloser Vernunft. Was die christlich-aufklärerische Tradition als universelle Moral ausgibt, deutet er als historisch gewordene Lebenshemmung — als Triumph der Schwachen über die Starken. Nietzsche ruft nicht zur Unmoral auf, sondern zur [[Umwertung aller Werte:die kritische Prüfung, welche moralischen Forderungen das Leben stärken und welche es schwächen]]. Damit wird er zum Sprengsatz, der die gesamte Tradition unter Verdacht stellt — auch die, die nach ihm noch kommt."
+      }
+    },
+    {
+      "id": "anscombe",
+      "name": "G.E.M. Anscombe",
+      "lifespan": "1919–2001",
+      "firstLevel": 2,
+      "schoolId": "aristotelische-tugendethik",
+      "x": 32, "y": 38,
+      "versions": {
+        "2": "Anscombes Aufsatz *Modern Moral Philosophy* (1958) markiert die Wiederbelebung der Tugendethik im 20. Jahrhundert. Ihre zentrale Diagnose: Die moderne Moralphilosophie operiert mit Begriffen wie ›Pflicht‹ und ›moralisches Sollen‹, die nur Sinn ergeben, wenn ein göttlicher Gesetzgeber dahintersteht — und genau den hat die Aufklärung verabschiedet. Was übrig bleibt, ist eine Sprache der Gesetze ohne Gesetzgeber. Anscombe schlägt vor, die ganze Frage neu anzusetzen — nicht bei der Pflicht, sondern bei Aristoteles' Begriff des guten Lebens und der Tugenden. Sie ist analytisch geschult und schreibt mit der Schärfe der Oxforder Schule, aber sie nutzt diese Werkzeuge, um die analytische Ethik selbst zu kritisieren — und MacIntyres *After Virtue* anzustoßen."
+      }
+    },
+    {
+      "id": "kant",
+      "name": "Immanuel Kant",
+      "lifespan": "1724–1804",
+      "firstLevel": 1,
+      "schoolId": "pflichtethik",
+      "x": 78, "y": 28,
+      "versions": {
+        "1": "Kants Ethik beginnt nicht beim Guten, sondern bei der Würde des vernünftigen Wesens. In der *Grundlegung zur Metaphysik der Sitten* formuliert er den [[Kategorischen Imperativ:die Forderung, nur nach Maximen zu handeln, die man zugleich als allgemeines Gesetz wollen könnte]] als Ausdruck der menschlichen Autonomie — der Fähigkeit, sich selbst das moralische Gesetz zu geben. Moral ist hier kein äußerer Zwang, sondern Selbstgesetzgebung der Vernunft. Daraus folgt die zweite Formel: Jeden Menschen niemals bloß als Mittel zu behandeln, sondern immer auch als Zweck an sich — das [[Reich der Zwecke:eine ideale Gemeinschaft, in der alle Vernunftwesen einander wechselseitig als Würdeträger anerkennen]]. Kant ist nicht der Pflichtmechaniker, als der er oft karikiert wird, sondern der Denker einer Freiheit, die sich selbst bindet. An ihm arbeitet sich die gesamte folgende Ethik ab — entweder in Fortführung oder im Widerstand."
+      }
+    },
+    {
+      "id": "mill",
+      "name": "John Stuart Mill",
+      "lifespan": "1806–1873",
+      "firstLevel": 1,
+      "schoolId": "utilitarismus",
+      "x": 82, "y": 22,
+      "versions": {
+        "1": "Mill ist der weiterentwickelte Utilitarismus — nicht mehr Benthams bloßes Lust-Schmerz-Kalkül, sondern eine Ethik, die qualitative Unterschiede zwischen Genüssen anerkennt. ›Es ist besser, ein unzufriedener Sokrates zu sein als ein zufriedenes Schwein‹ — höhere geistige und moralische Freuden stehen über bloßer Sinneslust, auch wenn sie sich nicht aufrechnen lassen. In *On Liberty* verteidigt Mill zugleich die individuelle Freiheit gegen die Tyrannei der Mehrheit — die Mehrheit darf nicht alles, was nützlich erscheint. Damit hält er den [[Konsequentialismus:die ethische Position, dass die moralische Qualität einer Handlung an ihren Folgen zu messen ist]] für einen liberalen Humanismus offen, der sich nicht in Sozialingenieurskunst erschöpft. Mill ist der Punkt, an dem Utilitarismus zur ernsthaften Moralphilosophie wird."
+      }
+    },
+    {
+      "id": "singer",
+      "name": "Peter Singer",
+      "lifespan": "1946–",
+      "firstLevel": 2,
+      "schoolId": "utilitarismus",
+      "x": 88, "y": 34,
+      "versions": {
+        "2": "Singer radikalisiert den Utilitarismus durch konsequente Anwendung des Gleichheitsprinzips. In *Famine, Affluence, and Morality* (1972) argumentiert er: Wenn wir verhindern können, dass jemand stirbt, ohne selbst etwas moralisch Wichtiges zu opfern, dann müssen wir das tun — und zwar global. Daraus erwächst der [[effektive Altruismus:eine Bewegung, die fragt, wie Gutestun durch evidenzbasierte Entscheidungen maximalen Effekt erzielt]] als praktische Konsequenz. Sein berühmtester Schritt: die Erweiterung des Gleichheitsprinzips über Speziesgrenzen hinweg in *Animal Liberation* — wenn Leiden zählt, dann zählt es unabhängig davon, wer leidet. Singer ist die lebende Stimme, die zeigt, dass konsequentialistisches Denken nicht im Lehrbuch bleibt, sondern Forderungen an die eigene Lebensführung stellt — und genau deshalb so unbequem ist."
+      }
+    },
+    {
+      "id": "konfuzius",
+      "name": "Konfuzius",
+      "lifespan": "551–479 v. Chr.",
+      "firstLevel": 1,
+      "schoolId": "konfuzianismus",
+      "x": 22, "y": 78,
+      "versions": {
+        "1": "Konfuzius denkt Ethik nicht vom einzelnen Subjekt her, sondern von der [[Rolle:die konkrete Stellung in einem Geflecht — als Sohn, als Vater, als Untertan, als Freund]] in einem Geflecht von Beziehungen. Im Zentrum steht [[Ren:Menschlichkeit, Mitmenschlichkeit — die Wurzel aller Tugenden, oft mit ›Humanität‹ übersetzt]] — eine Haltung, die sich nicht abstrakt definieren lässt, sondern nur in der gelebten Beziehung zu Eltern, Lehrern, Herrschern und Mitmenschen zeigt. Tugend ist hier kein Besitz des Individuums, sondern die Erfüllung der eigenen Rolle in einer kosmisch-familiär geordneten Welt. ›Was du nicht willst, dass man dir tu, das füg auch keinem andern zu‹ — die Goldene Regel taucht bei Konfuzius fünf Jahrhunderte vor Christus auf, eingebettet in eine Welt, in der niemand isoliert beginnt. Damit ist er der schärfste Antipode zum westlichen Individualismus — eine Ethik, die nicht fragt, *wer bin ich*, sondern *wem gehöre ich an*."
+      }
+    },
+    {
+      "id": "macintyre",
+      "name": "Alasdair MacIntyre",
+      "lifespan": "1929–",
+      "firstLevel": 2,
+      "schoolId": "aristotelische-tugendethik",
+      "x": 32, "y": 72,
+      "versions": {
+        "2": "MacIntyre beginnt *After Virtue* (1981) mit einer Diagnose: Die moderne Moralsprache besteht aus Bruchstücken — Begriffe wie ›Recht‹, ›Würde‹, ›Pflicht‹ zirkulieren, aber der Kontext, der sie sinnvoll machte, ist verloren. Aufklärungs-Ethik (Kant, Mill) hat versucht, Moral aus dem einzelnen Vernunftsubjekt zu begründen — und ist gescheitert, weil Moral immer in Praxisgemeinschaften und Erzähltraditionen eingebettet ist. Tugend ist für MacIntyre nur denkbar innerhalb einer [[Praxis:eine soziale Tätigkeit mit eigenen Standards der Vortrefflichkeit — Wissenschaft, Musik, Handwerk, das Familienleben]] und einer Tradition, die sagt, was als gelungenes Leben gilt. Er nimmt damit Aristoteles auf, aber historisiert ihn — Tugend gibt es nicht zeitlos, sondern nur als Tradition. Wo Konfuzius eine universale Ordnung der Rollen sieht, sieht MacIntyre kontingente, miteinander streitende Traditionen — beide gegen den westlichen Individualismus, aber von verschiedenen Seiten."
+      }
+    },
+    {
+      "id": "hume",
+      "name": "David Hume",
+      "lifespan": "1711–1776",
+      "firstLevel": 2,
+      "schoolId": "sentimentalismus",
+      "x": 68, "y": 58,
+      "versions": {
+        "2": "Hume stellt der rationalistischen Moralphilosophie eine empirische Beobachtung entgegen: Moralische Urteile entstehen nicht aus der Vernunft, sondern aus dem [[Moralischen Gefühl:Sympathie, Mitfühlen — die Fähigkeit, das Wohl und Wehe anderer als eigenes zu spüren]]. Im *Treatise of Human Nature* zeigt er, wie die Vernunft Tatsachen feststellen kann, aber niemals von sich aus zu einem Sollen kommt — die [[Sein-Sollen-Lücke:die Einsicht, dass aus reinen Tatsachenbeschreibungen keine moralischen Forderungen folgen können]] strukturiert die gesamte Metaethik nach ihm. Moral ist für Hume kein logisches System, sondern eine natürliche Eigenschaft sozialer Wesen — Sympathie ist die Brücke zwischen Menschen, an der ethisches Urteilen überhaupt erst entsteht. Damit denkt Hume Moral *deskriptiv* — als das, was Menschen tatsächlich tun, nicht als das, was sie sollen. Er sitzt am Übergang zwischen Beziehungs- und Prinzipien-Spur — beziehungs-gegründet, aber prinzipien-suchend."
+      }
+    },
+    {
+      "id": "gilligan",
+      "name": "Carol Gilligan",
+      "lifespan": "1936–",
+      "firstLevel": 2,
+      "schoolId": "care-ethik",
+      "x": 78, "y": 70,
+      "versions": {
+        "2": "Gilligans *In a Different Voice* (1982) beginnt als Kritik an Lawrence Kohlbergs Modell der moralischen Entwicklung — einem Modell, das auf Kant fußte und Mädchen systematisch auf niedrigeren Stufen einordnete. Gilligan zeigt: Was die Forschung als moralisches Defizit las, war eine andere Stimme — eine [[Care-Ethik:eine Ethik, die nicht aus Prinzipien, sondern aus konkreter Sorge für andere erwächst]], die Verantwortung in Beziehungen vor abstrakte Gerechtigkeit stellt. Wo die Jungen im Heinz-Dilemma nach Regeln suchten (›darf man stehlen, um eine Frau zu retten?‹), suchten die Mädchen nach Wegen, niemanden zurückzulassen. Gilligan stellt das nicht als weibliches Wesensmerkmal dar, sondern als zweite Tradition moralischen Denkens, die der Kanon übersehen hat. Care ist kein Gefühl, sondern eine Praxis der Aufmerksamkeit — und sie steht der Gerechtigkeit nicht entgegen, sondern fragt, was diese ohne sie übersieht."
+      }
+    },
+    {
+      "id": "levinas",
+      "name": "Emmanuel Levinas",
+      "lifespan": "1906–1995",
+      "firstLevel": 3,
+      "schoolId": "ethik-des-anderen",
+      "x": 82, "y": 82,
+      "versions": {
+        "3": "Levinas verschiebt den Ausgangspunkt der Ethik: nicht das autonome Subjekt, das Prinzipien prüft, sondern die Begegnung mit dem Anderen. In *Totalität und Unendlichkeit* (1961) beschreibt er, wie [[das Antlitz:das Gesicht des Anderen, das mich anspricht, bevor ich es einordnen oder beurteilen kann]] mich ethisch in Anspruch nimmt — vor jedem Prinzip, vor jeder Reflexion. Die Verantwortung für den Anderen geht der eigenen Freiheit voraus; ich werde Subjekt erst, indem ich angesprochen werde. Das ist der radikale Gegenentwurf zur kantischen Ordnung: Wo Kant von der Selbstgesetzgebung der Vernunft ausgeht, geht Levinas von der vorgängigen Inanspruchnahme durch den Anderen aus. Ethik ist für ihn nicht eine Disziplin neben der Metaphysik, sondern *erste Philosophie* — der Boden, auf dem alles andere überhaupt erst denkbar wird. Mit ihm wird das Antlitz zum Ausgangspunkt, an dem keine Theorie vorbeikommt."
+      }
+    },
+    {
+      "id": "jonas",
+      "name": "Hans Jonas",
+      "lifespan": "1903–1993",
+      "firstLevel": 3,
+      "schoolId": "verantwortungsethik",
+      "x": 72, "y": 88,
+      "versions": {
+        "3": "Jonas formuliert in *Das Prinzip Verantwortung* (1979) eine Ethik für ein Zeitalter, in dem die Menschheit erstmals die Bedingungen ihrer eigenen Zukunft bedrohen kann — durch Atomwaffen, Klimaschäden, Biotechnologie. Die klassische Ethik, sagt er, war eine Ethik des Nahbereichs: Du sollst deinen Nächsten nicht töten. Aber sie kennt keine Pflicht gegenüber denen, die noch nicht geboren sind. Jonas formuliert deshalb einen neuen kategorischen Imperativ: ›Handle so, dass die Wirkungen deiner Handlung verträglich sind mit der Permanenz echten menschlichen Lebens auf Erden.‹ Damit erweitert er Kants Ordnung — strukturell bleibt er ein Prinzipien-Ethiker, der prozedural argumentiert, kein phänomenologischer Begegnungs-Denker wie Levinas. Aber er gründet sein Prinzip teleologisch: in Aristoteles' Einsicht, dass alles Lebendige ein Eigeninteresse an seinem Fortbestand hat. So spannt sich bei Jonas ein Bogen über 2300 Jahre — Aristoteles' Teleologie wird zur Grundlage einer Ethik für die Zukunft, die wir nicht mehr erleben werden."
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "id": "eudaimonia",
+      "name": "Eudaimonia",
+      "type": "concept",
+      "firstLevel": 2,
+      "x": 14, "y": 30,
+      "versions": {
+        "2": "Eudaimonia ist der Zielbegriff der aristotelischen Ethik — meistens mit ›Glückseligkeit‹ übersetzt, aber das trifft es nicht ganz. Gemeint ist weniger ein Gefühl als ein [[gelungenes Tätigsein:ein Leben, das die eigenen menschlichen Möglichkeiten in vollem Maß verwirklicht]] über die Zeit eines ganzen Lebens. Eudaimonia ist nicht etwas, das einem widerfährt, sondern etwas, das man tut — und zwar gut. Sie ist der Maßstab, an dem Tugenden überhaupt erst als Tugenden erkennbar werden: Mut, Gerechtigkeit, Mäßigung sind die Charaktereigenschaften, die ein gelungenes Leben ermöglichen."
+      }
+    },
+    {
+      "id": "phronesis",
+      "name": "Phronesis",
+      "type": "concept",
+      "firstLevel": 3,
+      "x": 22, "y": 42,
+      "versions": {
+        "3": "Phronesis ist die praktische Klugheit — die Fähigkeit, im konkreten Einzelfall zu erkennen, was zu tun ist. Anders als theoretisches Wissen lässt sie sich nicht in Regeln festhalten; sie wächst durch Erfahrung, Vorbilder und das gelebte Urteil in vielen Situationen. Phronesis ist die Schnittstelle zwischen Charakter und Handlung: Eine tugendhafte Person weiß nicht nur, was Mut ist, sondern auch, *wann* Mut gefragt ist und *wie viel*. Damit bricht Phronesis den Anspruch der Prinzipien-Ethik, dass moralische Wahrheit aus allgemeinen Sätzen ableitbar sei."
+      }
+    },
+    {
+      "id": "kategorischer-imperativ",
+      "name": "Kategorischer Imperativ",
+      "type": "concept",
+      "firstLevel": 2,
+      "x": 72, "y": 34,
+      "versions": {
+        "2": "Der kategorische Imperativ ist Kants Prüfformel für moralische Maximen: Handle so, dass die Maxime deines Willens jederzeit als Prinzip einer allgemeinen Gesetzgebung gelten könnte. Er ist nicht eine Regel unter anderen, sondern die [[Form des Sittengesetzes:das Kriterium, an dem jede konkrete Regel sich messen lassen muss]] selbst. Die zweite Formel verbietet, einen Menschen jemals bloß als Mittel zu behandeln — sie macht den Imperativ konkret als Achtung der Würde. Der Imperativ ist *kategorisch*, weil er nicht bedingt gilt (›wenn du X erreichen willst, dann...‹), sondern unbedingt — moralisch bindend für jedes vernünftige Wesen, weil es vernünftig ist."
+      }
+    },
+    {
+      "id": "utility",
+      "name": "Utility / Nutzen",
+      "type": "concept",
+      "firstLevel": 2,
+      "x": 85, "y": 28,
+      "versions": {
+        "2": "Utility ist der Maßstab des Konsequentialismus — gemeint ist das, was Wohlergehen mehrt und Leid mindert, summiert über alle Betroffenen. Bei Bentham noch quantitativ gedacht (›Lust und Schmerz‹), bei Mill um qualitative Unterschiede erweitert (höhere Freuden zählen mehr als bloße Sinnesreize), bei Singer in [[Präferenzen:gewünschte Zustände, die ein Wesen für sich selbst anstrebt]] umformuliert. Der gemeinsame Kern: Eine Handlung ist moralisch richtig, wenn sie die Gesamt-Utility maximiert — unabhängig davon, ob sie mit Pflichten oder Charaktertugenden im Einklang steht. Das ist die radikalste Verschiebung der Ethik von der Person auf das Resultat."
+      }
+    },
+    {
+      "id": "ren",
+      "name": "Ren",
+      "type": "concept",
+      "firstLevel": 2,
+      "x": 18, "y": 72,
+      "versions": {
+        "2": "Ren ist der zentrale Begriff der konfuzianischen Ethik — meistens als ›Menschlichkeit‹ oder ›Mitmenschlichkeit‹ übersetzt, ohne dass eine westliche Übersetzung den Begriff voll trifft. Ren ist die Wurzel aller Tugenden und zeigt sich nicht in der Reflexion, sondern in der gelebten Beziehung — zu Eltern, Lehrern, Freunden, Untergebenen. Es ist keine Eigenschaft, die jemand isoliert besitzt, sondern eine Qualität, die in der angemessenen Erfüllung der eigenen Rolle sichtbar wird. Wer Ren hat, weiß ohne Berechnung, was die Beziehung gerade verlangt — das macht Ren zu einem Begriff, der ohne den Begriff der Rolle nicht denkbar ist."
+      }
+    },
+    {
+      "id": "is-ought-praxis",
+      "name": "Is-Ought-Brücke durch Praxis",
+      "type": "theory",
+      "firstLevel": 3,
+      "x": 28, "y": 65,
+      "versions": {
+        "3": "Hume zeigte: Aus reinen Tatsachen folgen keine Werte. Die Tugendethik antwortet: Das stimmt — aber Tatsachen und Werte sind in der Praxis nicht getrennt. Wenn der Mensch ein Wesen ist, das in Gemeinschaft lebt und seine Anlagen entfaltet, dann folgt aus dieser [[Anthropologischen Tatsache:der Feststellung dessen, was Menschen als lebendige Wesen sind und brauchen]] tatsächlich etwas darüber, wie er leben soll. Die Brücke zwischen Sein und Sollen wird nicht durch Argument gebaut, sondern durch die Einbettung in Praxisgemeinschaften — durch das, was Aristoteles, Konfuzius und MacIntyre auf je eigene Weise zeigen. Die Lücke verschwindet nicht, aber sie wird überquerbar."
+      }
+    },
+    {
+      "id": "antlitz",
+      "name": "Das Antlitz",
+      "type": "concept",
+      "firstLevel": 3,
+      "x": 78, "y": 78,
+      "versions": {
+        "3": "Das Antlitz ist Levinas' Begriff für die ethische Inanspruchnahme durch den Anderen — das Gesicht eines Menschen, das mich anspricht, bevor ich es einordnen oder beurteilen kann. Es ist nicht das physische Gesicht, sondern die [[Spur des Anderen:die Weise, wie ein Mensch in seiner Andersheit auf mich verweist, ohne von mir vereinnahmt werden zu können]] in unserer Begegnung. Im Antlitz verkündet sich das Gebot ›Du sollst nicht töten‹ — vor jeder Theorie, vor jedem Prinzip, vor jedem Argument. Damit ist das Antlitz nicht eine Quelle moralischer Einsicht unter anderen, sondern der Ort, an dem Ethik überhaupt beginnt."
+      }
+    },
+    {
+      "id": "verantwortung-zukunft",
+      "name": "Verantwortung für die Zukunft",
+      "type": "concept",
+      "firstLevel": 3,
+      "x": 68, "y": 82,
+      "versions": {
+        "3": "Hans Jonas' zentrale These: Die traditionelle Ethik kennt keine Pflicht gegenüber zukünftigen Generationen, weil sie eine Ethik des Nahbereichs war — du sollst deinen Nächsten nicht töten. Aber wenn unsere Technologie die Bedingungen menschlichen Lebens auf Jahrhunderte hinaus prägt, dann reicht das nicht mehr. Jonas formuliert deshalb einen neuen Imperativ, der die zeitliche Reichweite des Handelns ethisch fasst: Verantwortung gilt auch für die, die noch nicht da sind und sich nicht wehren können. Das ist die Erweiterung des Moralsubjekts in eine Dimension, in der das klassische ›Du‹ niemand mehr ist, sondern eine zukünftige Menschheit, deren Existenz wir gerade bestimmen."
+      }
+    },
+    {
+      "id": "sein-sollen",
+      "name": "Sein-Sollen-Lücke",
+      "type": "concept",
+      "firstLevel": 3,
+      "x": 50, "y": 52,
+      "versions": {
+        "3": "Die Sein-Sollen-Lücke ist Humes Einsicht, dass aus reinen Tatsachenbeschreibungen keine moralischen Forderungen folgen können — ›aus dem, was ist, folgt nicht, was sein soll‹. Wer von ›die Menschen verhalten sich so und so‹ zu ›die Menschen sollen sich so und so verhalten‹ springt, hat die Brücke nicht gezeigt. Diese Lücke strukturiert die gesamte moderne Metaethik: Kant antwortet, indem er das Sollen in die Vernunft selbst verlegt; die Tugendethik antwortet, indem sie Tatsache und Wert in der Praxis verschränkt; Nietzsche radikalisiert die Lücke und fragt, *woher* das Sollen überhaupt kommt. Die Lücke ist nicht gelöst — sie ist die Stelle, an der ethische Theorien ihre Voraussetzungen zeigen müssen."
+      }
+    },
+    {
+      "id": "genealogie",
+      "name": "Genealogie der Moral",
+      "type": "concept",
+      "firstLevel": 3,
+      "x": 45, "y": 25,
+      "versions": {
+        "3": "Genealogie ist Nietzsches Methode, Moral nicht zu *begründen*, sondern zu *durchleuchten* — auf ihre Herkunft hin zu befragen. In der *Genealogie der Moral* (1887) zeigt er, dass moralische Begriffe wie ›gut‹, ›böse‹, ›schuldig‹ eine Geschichte haben — sie sind aus Macht-, Schuld- und Ressentimentverhältnissen entstanden, nicht aus zeitloser Vernunft. Damit wird Ethik selbst zum [[Gegenstand der Verdachtshermeneutik:der Methode, die hinter scheinbar selbstverständlichen Begriffen ihre interessengeleitete Entstehung sichtbar macht]] — auch ihre erhabensten Sätze. Die Genealogie ist nicht auf Nietzsche begrenzt; sie wirkt fort bei Foucault, in der feministischen Theorie, in MacIntyres Tradition-Begriff — überall dort, wo Moral nicht nur befolgt, sondern auch historisch verstanden werden soll."
+      }
+    }
+  ],
+  "influences": [
+    {
+      "from": "aristoteles",
+      "to": "marc-aurel",
+      "type": "influence",
+      "firstLevel": 1,
+      "versions": {
+        "1": "Die Stoa nimmt die aristotelische Tugendlehre auf, verschiebt sie aber nach innen — weg vom *Was ist das gute Leben in der Polis* hin zum *Wie bewahre ich die innere Ordnung*. Marc Aurel erbt den Tugendbegriff, gibt ihm aber die stoische Färbung: Selbstbeherrschung statt Selbstverwirklichung."
+      }
+    },
+    {
+      "from": "aristoteles",
+      "to": "anscombe",
+      "type": "influence",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Anscombe ruft 1958 in *Modern Moral Philosophy* explizit zur Rückkehr zu aristotelischen Begriffen auf — *Tugend*, *gutes Leben*, *menschliches Gedeihen* statt der leerlaufenden modernen Pflichtbegriffe. Sie ist es, die Aristoteles aus dem Status der bloßen Philosophiegeschichte zurück ins lebendige ethische Denken holt."
+      }
+    },
+    {
+      "from": "anscombe",
+      "to": "macintyre",
+      "type": "influence",
+      "firstLevel": 2,
+      "versions": {
+        "2": "MacIntyres *After Virtue* (1981) ist die ausgearbeitete Antwort auf Anscombes Diagnose. Er teilt ihre Einschätzung, dass die moderne Moralsprache ein Trümmerfeld ist — und entwickelt daraus die Theorie, dass Tugend nur innerhalb von Traditionen und Praxisgemeinschaften denkbar ist."
+      }
+    },
+    {
+      "from": "aristoteles",
+      "to": "macintyre",
+      "type": "influence",
+      "firstLevel": 2,
+      "versions": {
+        "2": "MacIntyre greift direkt auf Aristoteles zurück — über Anscombe vermittelt, aber auch eigenständig. Er übernimmt den Tugendbegriff und das Telos-Denken, historisiert beides aber: Tugend gibt es nicht zeitlos, sondern nur als gelebte Tradition."
+      }
+    },
+    {
+      "from": "aristoteles",
+      "to": "jonas",
+      "type": "influence",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Jonas studiert Aristoteles intensiv — seine Habilitation gilt der Gnosis, sein Spätwerk *Das Prinzip Verantwortung* gründet auf einer aristotelischen Teleologie. Wenn alles Lebendige ein Eigeninteresse an seinem Fortbestand hat, dann liegt darin der Grund für die Pflicht zur Bewahrung — auch der zukünftigen Generationen."
+      }
+    },
+    {
+      "from": "hume",
+      "to": "kant",
+      "type": "influence",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Kant bekennt: ›Hume hat mich aus dem dogmatischen Schlummer geweckt.‹ Humes Skeptizismus zwingt Kant, die Grundlagen der Erkenntnis und der Moral neu zu denken — der kategorische Imperativ ist nicht zuletzt eine Antwort auf Humes These, dass Vernunft niemals von sich aus zum Sollen kommt."
+      }
+    },
+    {
+      "from": "mill",
+      "to": "singer",
+      "type": "influence",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Singer ist der direkte Erbe des klassischen Utilitarismus — präzisiert ihn aber zum Präferenz-Utilitarismus und radikalisiert die Reichweite. Wenn Mill den Kreis der moralisch Relevanten auf alle Menschen erweitert hat, weitet Singer ihn auf alle leidensfähigen Wesen aus."
+      }
+    },
+    {
+      "from": "kant",
+      "to": "jonas",
+      "type": "influence",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Jonas formuliert seinen neuen Imperativ explizit in kantischer Form: ›Handle so, dass die Wirkungen deiner Handlung verträglich sind mit der Permanenz echten menschlichen Lebens auf Erden.‹ Er erweitert Kant um die zeitliche Dimension — der klassische Imperativ schweigt zu denen, die noch nicht sind."
+      }
+    },
+    {
+      "from": "anscombe",
+      "to": "kant",
+      "type": "critique",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Anscombes Frontalangriff: Kants Begriff der moralischen Pflicht ergibt nur Sinn, wenn ein göttlicher Gesetzgeber dahintersteht — den hat die Aufklärung aber gerade verabschiedet. Was bleibt, ist eine Sprache der Gesetze ohne Gesetzgeber, ein konzeptueller Schwindel."
+      }
+    },
+    {
+      "from": "anscombe",
+      "to": "mill",
+      "type": "critique",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Anscombe lehnt den Konsequentialismus mit derselben Schärfe ab wie die Pflichtethik. Wer Handlungen nur nach Folgen bewertet, hat den Begriff der *Handlung als solcher* — als Ausdruck eines Charakters — bereits verloren; Mills ›höhere Lüste‹ ändert daran nichts."
+      }
+    },
+    {
+      "from": "macintyre",
+      "to": "kant",
+      "type": "rejection",
+      "firstLevel": 2,
+      "versions": {
+        "2": "*After Virtue* beginnt mit der Diagnose, dass das Aufklärungs-Projekt einer rationalen Begründung der Moral gescheitert ist. Kant steht für MacIntyre paradigmatisch für diesen Versuch — die Idee, Moral aus dem einzelnen Vernunftsubjekt zu deduzieren, hat die Tradition zerschlagen, die Moral überhaupt erst trug."
+      }
+    },
+    {
+      "from": "nietzsche",
+      "to": "kant",
+      "type": "critique",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Nietzsches Genealogie ist die schärfste Waffe gegen die kantische Universalmoral. Wo Kant ein zeitloses Sittengesetz aus der Vernunft begründen will, zeigt Nietzsche, dass diese vermeintliche Zeitlosigkeit selbst eine Geschichte hat — und der Verdacht ist, dass es die Geschichte der Schwäche ist."
+      }
+    },
+    {
+      "from": "nietzsche",
+      "to": "mill",
+      "type": "critique",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Nietzsche verachtet den Utilitarismus als Ethik der Behaglichkeit — ›Sklavenmoral‹, die das Mittelmaß zum Maßstab macht und die Größe verlernt hat. Mills *höhere Lüste‹ sind für Nietzsche nichts als die Verfeinerung eines Schwäche-Ideals."
+      }
+    },
+    {
+      "from": "konfuzius",
+      "to": "gilligan",
+      "type": "parallel",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Konfuzius und Gilligan kommen ohne historischen Bezug zueinander zur selben strukturellen Einsicht: Moral lässt sich nicht vom isolierten Individuum her denken. Wo Konfuzius die Rollenethik in einer kosmischen Ordnung verankert, gründet Gilligan die Care-Ethik in beobachteter weiblicher Erfahrungswelt — aber beide stellen die Beziehung an die Stelle, wo der Westen lange das autonome Subjekt gesetzt hatte."
+      }
+    },
+    {
+      "from": "gilligan",
+      "to": "kant",
+      "type": "critique",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Gilligans gesamte These ist eine Kritik an Kohlberg, dessen Stufenmodell auf Kant fußt. Wo die kantische Tradition Moral als abstraktes Gerechtigkeitsurteil denkt, zeigt Gilligan eine andere Stimme — eine Ethik der konkreten Sorge, die kantische Reflexion als ein-, nicht das Modell moralischer Reife sieht."
+      }
+    },
+    {
+      "from": "levinas",
+      "to": "kant",
+      "type": "critique",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Levinas kehrt die kantische Ordnung um. Wo Kant von der Autonomie des Vernunftsubjekts ausgeht, das sich selbst das Gesetz gibt, beginnt Levinas mit der vorgängigen Inanspruchnahme durch den Anderen — Ethik kommt nicht *nach* dem Subjekt, sie macht es überhaupt erst möglich."
+      }
+    }
+  ]
+}
