@@ -34,21 +34,31 @@ function getVersion(item: { versions: Record<number, string> }, level: number): 
 ```
 Dieses Pattern gilt für Denker, Konzepte UND Einflüsse gleichermaßen.
 
-## L1-Glossar-Konvention
+## Annotation-Konvention
 
-Summaries (in `versions[1]`) können Inline-Annotationen für schwierige Begriffe enthalten, in doppelten eckigen Klammern:
+Summaries (in `versions[N]`) können Inline-Annotationen für erklärungsbedürftige Begriffe enthalten, in doppelten eckigen Klammern. Annotationen können auf jedem Level erscheinen — nicht nur L1.
 
+### Format A — Term innerhalb der Klammern
 ```
-"Substanzdualismus [[Lehre, dass Geist und Körper zwei grundverschiedene Arten von Dingen sind]] zwischen res cogitans [[denkender Geist]] ..."
+"begründet die [[Tugendethik:die Lehre vom guten Charakter als Fundament der Moral]] in der ..."
+"([[Atman:das göttliche, unveränderliche Ich im Vedanta — Sanskrit für ›Selbst‹ oder ›Atem‹]])"
 ```
+Separator: Doppelpunkt (primär) oder Em-Dash ` — ` (fallback, wenn kein Doppelpunkt).
+Der Doppelpunkt wird **vor** dem Em-Dash geprüft — verhindert Fehlsplit wenn ein Em-Dash innerhalb der Definition erscheint.
 
-Frontend-Verhalten:
-- Auf L1: Annotationen sichtbar gerendert (klein, kursiv)
-- Auf L2+: Annotationen entfernt (Regex-Strip beim Rendern)
+### Format B — Term vor den Klammern
+```
+"der stille Zeuge Atman [[das göttliche, unveränderliche Ich]] hinter allem Erleben"
+```
+Das letzte Wort vor `[[` wird als Term verwendet. Führende Satzzeichen (z.B. `(`) werden abgetrennt.
 
-Diese Konvention gilt nur für L1-Versions. Höhere Levels verwenden weiterhin reine Summaries ohne Annotationen.
+### Frontend-Verhalten
+- **Auf allen Levels:** Annotationen rendern als interaktiver Tooltip-Anker (Akzentfarbe, gestrichelter Unterstrich)
+- **Tooltip:** dunkler Hintergrund `oklch(0.26 0.020 65)`, öffnet bei Klick/Enter/Space
+- `*kursiver Text*` → `<em>` — gilt auf allen Levels
 
-Begründung: Auch auf L1 enthalten Summaries Fachbegriffe, die ein Einsteiger nicht aus dem Alltag kennt (Substanzdualismus, Kategorienfehler, Privatsprachenargument). Inline-Annotationen lösen das ohne doppelte Summary-Pflege.
+### Tailwind v4 Hinweis
+`text-[--varname]` und `border-[--varname]` generieren **kein** `color: var(--varname)` in Tailwind v4. Für CSS-Custom-Properties immer `style={{ color: 'var(--accent)' }}` verwenden.
 
 ## Daten-Modell
 
