@@ -47,7 +47,8 @@ function AnnotationTooltip({ term, definition }: { term: string; definition: str
             setOpen(v => !v)
           }
         }}
-        className="cursor-help rounded-sm border-b border-dotted border-[--accent] text-[--accent] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[--accent]"
+        className="cursor-help rounded-sm border-b border-dotted focus-visible:outline-none focus-visible:ring-1"
+        style={{ color: 'var(--accent)', borderBottomColor: 'var(--accent)', outlineColor: 'var(--accent)' }}
       >
         {term}
       </span>
@@ -68,13 +69,23 @@ function AnnotationTooltip({ term, definition }: { term: string; definition: str
   )
 }
 
+function renderItalic(text: string, keyPrefix: string): React.ReactNode[] {
+  const segments = text.split(/(\*[^*]+\*)/g)
+  return segments.map((seg, i) => {
+    if (seg.startsWith('*') && seg.endsWith('*') && seg.length > 2) {
+      return <em key={`${keyPrefix}-em-${i}`}>{seg.slice(1, -1)}</em>
+    }
+    return seg
+  })
+}
+
 export function Annotated({ text, level }: { text: string; level: number }) {
   if (level > 1) {
     const stripped = text
       .replace(/\s*\[\[.*?\]\]/g, '')
       .replace(/\s{2,}/g, ' ')
       .trim()
-    return <>{stripped}</>
+    return <>{renderItalic(stripped, 'stripped')}</>
   }
 
   const parts = text.split(/(\[\[.*?\]\])/g)
@@ -82,7 +93,7 @@ export function Annotated({ text, level }: { text: string; level: number }) {
 
   parts.forEach((part, i) => {
     if (!part.startsWith('[[') || !part.endsWith(']]')) {
-      nodes.push(part)
+      nodes.push(...renderItalic(part, String(i)))
       return
     }
 
