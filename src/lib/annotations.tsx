@@ -79,13 +79,19 @@ function renderItalic(text: string, keyPrefix: string): React.ReactNode[] {
   })
 }
 
+function stripAnnotations(text: string): string {
+  return text
+    .replace(/\[\[(.*?)\]\]/g, (_, content) => {
+      const split = tryInlineSplit(content)
+      return split ? split.term : '' // Format A: keep term; Format B: term already in text
+    })
+    .replace(/\s{2,}/g, ' ')
+    .trim()
+}
+
 export function Annotated({ text, level }: { text: string; level: number }) {
   if (level > 1) {
-    const stripped = text
-      .replace(/\s*\[\[.*?\]\]/g, '')
-      .replace(/\s{2,}/g, ' ')
-      .trim()
-    return <>{renderItalic(stripped, 'stripped')}</>
+    return <>{renderItalic(stripAnnotations(text), 'stripped')}</>
   }
 
   const parts = text.split(/(\[\[.*?\]\])/g)
