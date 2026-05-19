@@ -23,22 +23,78 @@
     "synthesis": "Hinter dem akademischen Streit steht eine schlichtere Frage: Wo stehst du, wenn die alten Gewissheiten weichen? Der Realismus bietet Boden — die Welt ist, wie sie ist, du musst sie nur sauber sehen. Der Konstruktivismus bietet Freiheit — was du Welt nennst, ist immer schon deine Welt, also kannst du sie anders denken. Beide Angebote haben einen Preis: Realismus tendiert zur Härte gegen abweichende Sichten, Konstruktivismus zur Schwindelfreiheit im Sinnvakuum. Was dieses Tableau dir nicht geben kann: eine Antwort auf die Frage, wo man steht. Was es dir geben kann: ein Gefühl dafür, welche Antwort welchen Preis hat — und dass die reifsten Positionen weder ganz oben noch ganz unten sitzen, sondern in den Zwischenlagen, in denen man beides aushält."
   },
   "levels": [
-    { "id": 1, "label": "Einstieg",   "short": "L1" },
-    { "id": 2, "label": "Grundlagen", "short": "L2" },
-    { "id": 3, "label": "Vertiefung", "short": "L3" },
-    { "id": 4, "label": "Analyse",    "short": "L4" },
-    { "id": 5, "label": "Synthese",   "short": "L5" }
+    {
+      "id": 1,
+      "label": "Einstieg",
+      "short": "L1"
+    },
+    {
+      "id": 2,
+      "label": "Grundlagen",
+      "short": "L2"
+    },
+    {
+      "id": 3,
+      "label": "Vertiefung",
+      "short": "L3"
+    },
+    {
+      "id": 4,
+      "label": "Analyse",
+      "short": "L4"
+    },
+    {
+      "id": 5,
+      "label": "Synthese",
+      "short": "L5"
+    }
   ],
   "schools": [
-    { "id": "klassischer-empirismus",      "label": "Klassischer Empirismus",          "color": "oklch(0.44 0.10 75)"  },
-    { "id": "transzendentalphilosophie",   "label": "Transzendentalphilosophie",       "color": "oklch(0.40 0.10 250)" },
-    { "id": "wissenschaftlicher-realismus","label": "Wissenschaftlicher Realismus",    "color": "oklch(0.42 0.11 220)" },
-    { "id": "pragmatismus",                "label": "Pragmatismus",                    "color": "oklch(0.44 0.11 130)" },
-    { "id": "sprachphilosophie",           "label": "Sprachphilosophie",               "color": "oklch(0.40 0.10 290)" },
-    { "id": "wissenschaftstheorie",        "label": "Historische Wissenschaftstheorie","color": "oklch(0.42 0.10 200)" },
-    { "id": "neopragmatismus",             "label": "Neopragmatismus",                 "color": "oklch(0.40 0.12 320)" },
-    { "id": "wissenschaftssoziologie",     "label": "Wissenschaftssoziologie",         "color": "oklch(0.42 0.10 30)"  },
-    { "id": "neuer-realismus",             "label": "Neuer Realismus",                 "color": "oklch(0.44 0.12 180)" }
+    {
+      "id": "klassischer-empirismus",
+      "label": "Klassischer Empirismus",
+      "color": "oklch(0.44 0.10 75)"
+    },
+    {
+      "id": "transzendentalphilosophie",
+      "label": "Transzendentalphilosophie",
+      "color": "oklch(0.40 0.10 250)"
+    },
+    {
+      "id": "wissenschaftlicher-realismus",
+      "label": "Wissenschaftlicher Realismus",
+      "color": "oklch(0.42 0.11 220)"
+    },
+    {
+      "id": "pragmatismus",
+      "label": "Pragmatismus",
+      "color": "oklch(0.44 0.11 130)"
+    },
+    {
+      "id": "sprachphilosophie",
+      "label": "Sprachphilosophie",
+      "color": "oklch(0.40 0.10 290)"
+    },
+    {
+      "id": "wissenschaftstheorie",
+      "label": "Historische Wissenschaftstheorie",
+      "color": "oklch(0.42 0.10 200)"
+    },
+    {
+      "id": "neopragmatismus",
+      "label": "Neopragmatismus",
+      "color": "oklch(0.40 0.12 320)"
+    },
+    {
+      "id": "wissenschaftssoziologie",
+      "label": "Wissenschaftssoziologie",
+      "color": "oklch(0.42 0.10 30)"
+    },
+    {
+      "id": "neuer-realismus",
+      "label": "Neuer Realismus",
+      "color": "oklch(0.44 0.12 180)"
+    }
   ],
   "thinkers": [
     {
@@ -47,10 +103,11 @@
       "lifespan": "384–322 v. Chr.",
       "firstLevel": 1,
       "schoolId": "klassischer-empirismus",
-      "x": 18, "y": 18,
+      "x": 18,
+      "y": 18,
       "versions": {
         "1": "Aristoteles ist der erste systematische Realist der Philosophiegeschichte. Was wir erkennen können, sind die [[Formen: die Strukturprinzipien, die ein Ding zu dem machen, was es ist — bei Aristoteles nicht in einer jenseitigen Ideenwelt wie bei Platon, sondern in den Dingen selbst]], die in den Dingen selbst stecken. Wir gewinnen Erkenntnis durch sinnliche Wahrnehmung plus geistige Abstraktion — nichts ist im Verstand, was nicht zuerst in den Sinnen war. Damit setzt er das Grundmuster, das die westliche Wissenschaft jahrhundertelang trägt: Die Welt hat eine eigene Struktur, und unser Geist ist darauf eingerichtet, sie zu erkennen. Erst Kant wird diese Selbstverständlichkeit gründlich erschüttern.",
-        "3": "Aristotelische Erkenntnistheorie als gemäßigter Realismus: Die Formen existieren in den Einzeldingen (in re), nicht jenseits ihrer (Platon: ante rem) und nicht erst durch unser Denken (Nominalismus: post rem). Wahrheit ist Übereinstimmung von Aussage und Sache — die klassische Korrespondenztheorie. Wissenschaft (epistéme) ist möglich, weil die Welt selbst geordnet ist und unser Verstand auf diese Ordnung antwortet. Diese Annahme — strukturelle Passung zwischen Welt und Geist — bleibt das stille Fundament jeder realistischen Position, auch wo sie aristotelische Metaphysik längst abgelegt hat."
+        "3": "Aristotelische Erkenntnistheorie als gemäßigter Realismus: Die Formen existieren in den Einzeldingen ([[in re:lateinisch ›in der Sache‹ — die Formen sind nicht jenseits oder erst nach den Dingen, sondern in ihnen]]), nicht jenseits ihrer (Platon: ante rem) und nicht erst durch unser Denken (Nominalismus: post rem). Wahrheit ist Übereinstimmung von Aussage und Sache — die klassische Korrespondenztheorie. Wissenschaft ([[epistéme:griechisch für ›Wissenschaft‹ — sicheres, begründetes Wissen, im Gegensatz zur bloßen Meinung (doxa)]]) ist möglich, weil die Welt selbst geordnet ist und unser Verstand auf diese Ordnung antwortet. Diese Annahme — strukturelle Passung zwischen Welt und Geist — bleibt das stille Fundament jeder realistischen Position, auch wo sie aristotelische Metaphysik längst abgelegt hat."
       }
     },
     {
@@ -59,9 +116,10 @@
       "lifespan": "1632–1704",
       "firstLevel": 1,
       "schoolId": "klassischer-empirismus",
-      "x": 22, "y": 14,
+      "x": 22,
+      "y": 14,
       "versions": {
-        "1": "Locke ist der Begründer des [[neuzeitlichen Empirismus: die Position, dass alle Erkenntnis aus Erfahrung stammt und der Verstand bei Geburt eine tabula rasa, ein unbeschriebenes Blatt, ist]]. Sinneserfahrung liefert die Materialien; der Verstand verarbeitet sie zu Ideen und Urteilen. Wichtig wird seine Unterscheidung zwischen primären und sekundären Qualitäten: [[Primäre Qualitäten — Größe, Form, Bewegung — gehören den Dingen selbst; sekundäre Qualitäten — Farbe, Klang, Geschmack — entstehen erst im Wahrnehmenden]]. Damit hält Locke am Realismus fest, öffnet aber eine Lücke: Wenn die Hälfte unserer Wahrnehmung in uns entsteht, wie sicher können wir uns über die andere Hälfte sein? Genau in diese Lücke wird Berkeley stoßen.",
+        "1": "John Locke ist der erste systematische Empirist der Neuzeit. In seinem *Essay Concerning Human Understanding* (1689) entwickelt er die These: Der Geist ist bei Geburt eine ›tabula rasa‹ — eine leere Tafel. Alle Erkenntnis stammt aus Sinneserfahrung (sensation) oder innerer Reflexion (reflection). Aus diesen einfachen Ideen baut der Verstand komplexe zusammen. Lockes entscheidende Unterscheidung sortiert die Welt: [[Primäre Qualitäten:Größe, Form, Bewegung — gehören den Dingen selbst]] und [[Sekundäre Qualitäten:Farbe, Klang, Geschmack — entstehen erst im Wahrnehmenden]]. Diese Unterscheidung ist der Versuch, Realismus und Empirismus zu versöhnen — und sie hat im Tableau weitreichende Folgen.",
         "3": "Lockes Empirismus ist epistemologisch radikal, ontologisch konservativ: Alle Ideen stammen aus Sinneserfahrung oder Reflexion, aber die Welt selbst bleibt unabhängig real. Die Primär/Sekundär-Unterscheidung ist eine Kompromissformel — sie rettet einen Kern objektiver Welt (Mathematik, Mechanik) und gibt einen Rand wahrnehmungsabhängig (Sinnesqualitäten). Das Repräsentationsmodell der Wahrnehmung — wir sehen nicht die Welt direkt, sondern Ideen von ihr — öffnet das skeptische Problem, das die ganze nachfolgende Erkenntnistheorie umtreiben wird: Woher wissen wir, dass die Ideen den Dingen entsprechen?"
       }
     },
@@ -71,10 +129,11 @@
       "lifespan": "1685–1753",
       "firstLevel": 2,
       "schoolId": "klassischer-empirismus",
-      "x": 78, "y": 22,
+      "x": 78,
+      "y": 22,
       "versions": {
         "2": "Berkeley nimmt Lockes Empirismus ernster als Locke selbst — und kommt zu einem schockierenden Ergebnis. Wenn wir wirklich nur Ideen wahrnehmen und nichts dahinter, dann hat die Annahme einer Welt jenseits der Ideen keinen Sinn. [[Esse est percipi: lat. ›Sein heißt Wahrgenommenwerden‹ — Berkeleys berühmteste Formel]]. Die Welt besteht aus Wahrnehmungen, nicht aus materiellen Dingen, die wahrgenommen werden. Was uns vor dem Solipsismus rettet, ist Gott — er nimmt alles permanent wahr und garantiert so die Stabilität der Welt, auch wenn niemand sonst hinschaut. Berkeley ist damit der erste konsequente Konstruktivist der westlichen Philosophie — auf empirischer Basis, was die Position besonders bemerkenswert macht.",
-        "4": "Berkeleys Immaterialismus ist nicht idealistische Schwärmerei, sondern empiristische Konsequenz: Wenn alle Erkenntnis aus Sinneswahrnehmung stammt und Sinneswahrnehmungen Ideen sind, ist die Annahme einer mind-independenten Materie eine leere Behauptung. Die Position ist innerhalb des Empirismus stringent und bis heute schwerer zu widerlegen, als man denkt. Berkeley besetzt einen seltenen Quadranten produktiv: Konstruktivismus auf empirischer Grundlage — der Konstruktivismus kommt nicht aus Sprachkritik (wie später bei Rorty), sondern aus konsequentem Empirismus. Sein Gott garantiert, was später bei radikaleren Konstruktivisten ungeschützt bleibt: dass die konstruierte Welt nicht beliebig ist."
+        "4": "Berkeleys [[Immaterialismus:die Position, dass es keine mind-unabhängige Materie gibt — alle Realität besteht aus wahrnehmenden Geistern und ihren Wahrnehmungen]] ist nicht idealistische Schwärmerei, sondern empiristische Konsequenz: Wenn alle Erkenntnis aus Sinneswahrnehmung stammt und Sinneswahrnehmungen Ideen sind, ist die Annahme einer mind-independenten Materie eine leere Behauptung. Die Position ist innerhalb des Empirismus stringent und bis heute schwerer zu widerlegen, als man denkt. Berkeley besetzt einen seltenen Quadranten produktiv: Konstruktivismus auf empirischer Grundlage — der Konstruktivismus kommt nicht aus Sprachkritik (wie später bei Rorty), sondern aus konsequentem Empirismus. Sein Gott garantiert, was später bei radikaleren Konstruktivisten ungeschützt bleibt: dass die konstruierte Welt nicht beliebig ist."
       }
     },
     {
@@ -83,11 +142,12 @@
       "lifespan": "1724–1804",
       "firstLevel": 1,
       "schoolId": "transzendentalphilosophie",
-      "x": 35, "y": 88,
+      "x": 35,
+      "y": 88,
       "versions": {
-        "1": "Kant ist der Dreh- und Angelpunkt der modernen Erkenntnistheorie. Seine Einsicht: Wir sehen die Welt nie, wie sie an sich ist, sondern immer durch unsere [[Erkenntnisformen: Raum, Zeit und die Kategorien des Verstandes — Strukturen, die nicht aus der Erfahrung kommen, sondern Erfahrung überhaupt erst möglich machen]] hindurch. Die [[›Welt an sich‹ — das Ding wie es unabhängig von jeder möglichen Wahrnehmung wäre — bleibt unzugänglich]]. Aber das ist kein Skeptizismus: Die Welt der Erscheinungen ist objektiv und wissenschaftlich erkennbar, weil alle Menschen dieselben Erkenntnisformen teilen. Kant rettet damit die Wissenschaft — und gibt ihr gleichzeitig eine Grenze.",
+        "1": "Kant ist die Achse des modernen Denkens. Vor ihm: Realismus und Empirismus streiten, ob unsere Begriffe in der Welt verankert sind oder aus der Erfahrung kommen. Kant verändert die Frage selbst: Der Geist findet die Welt nicht vor — er strukturiert sie aktiv durch Anschauungsformen (Raum, Zeit) und Verstandeskategorien (Substanz, Kausalität). Was wir erkennen, sind nicht die Dinge selbst, sondern Erscheinungen unter unseren Erkenntnisbedingungen. Die [[›Welt an sich‹:das Ding wie es unabhängig von jeder möglichen Wahrnehmung wäre]] bleibt unzugänglich. Diese ›Kopernikanische Wende‹ ist die Geburt des modernen Konstruktivismus — und gleichzeitig sein paradoxer Ankerpunkt: Kant rettet noch eine Welt-an-sich, an die das Erkennen sich richtet.",
         "3": "Die [[Kopernikanische Wende: Kants Selbstbezeichnung für seinen Ansatz — nicht die Erkenntnis richtet sich nach den Gegenständen, sondern die Gegenstände nach unseren Erkenntnisbedingungen]] verschiebt die Frage von ›Was sind die Dinge?‹ zu ›Was können wir überhaupt von Dingen wissen?‹. Raum und Zeit sind Anschauungsformen, Kausalität und Substanz sind Verstandeskategorien — alle a priori, also vor jeder Erfahrung wirksam. Wahre Aussagen über die Welt der Erscheinungen sind möglich (synthetische Urteile a priori), aber Metaphysik über die Welt an sich ist es nicht. Kant sitzt damit präzise auf der Realismus-Konstruktivismus-Grenze: empirischer Realismus für die Erscheinungen, transzendentaler Idealismus für die Bedingungen.",
-        "5": "Kants Position ist die strukturierende Mitte des gesamten Tableaus. Jede spätere Position positioniert sich zu ihm: Wissenschaftliche Realisten radikalisieren den empirischen Realismus und tilgen das Ding an sich (Sellars, Putnam-Frühphase). Konstruktivisten radikalisieren die Erkenntnisformen und machen sie geschichtlich, sprachlich, kulturell variabel (Goodman, Rorty, Latour). Gabriel kehrt mit dem Neuen Realismus in eine kant-ähnliche Mitte zurück, gibt aber die Einheitlichkeit der Erkenntnisformen auf — verschiedene Sinnfelder haben verschiedene Strukturen. Kant ist nicht eine Position unter anderen, sondern das Koordinatensystem, in dem die anderen liegen."
+        "5": "Kants Position ist die strukturierende Mitte des gesamten Tableaus. Jede spätere Position positioniert sich zu ihm: Wissenschaftliche Realisten radikalisieren den [[empirischen Realismus:Kants Position, dass die Welt der Erscheinungen für uns objektiv erkennbar ist — gegen Skeptizismus]] und tilgen das Ding an sich (Sellars, Putnam-Frühphase). Konstruktivisten radikalisieren den [[transzendentalen Idealismus:Kants Position, dass die Erkenntnisformen vom Subjekt stammen, nicht aus der Welt]] und machen ihn geschichtlich, sprachlich, kulturell variabel (Goodman, Rorty, Latour). Gabriel kehrt mit dem Neuen Realismus in eine kant-ähnliche Mitte zurück, gibt aber die Einheitlichkeit der Erkenntnisformen auf — verschiedene Sinnfelder haben verschiedene Strukturen. Kant ist nicht eine Position unter anderen, sondern das Koordinatensystem, in dem die anderen liegen."
       }
     },
     {
@@ -96,9 +156,10 @@
       "lifespan": "1842–1910",
       "firstLevel": 2,
       "schoolId": "pragmatismus",
-      "x": 72, "y": 32,
+      "x": 72,
+      "y": 32,
       "versions": {
-        "2": "James verschiebt die Wahrheitsfrage radikal. Statt zu fragen ›Stimmt diese Aussage mit der Realität überein?‹, fragt er: [[Was bewirkt diese Überzeugung praktisch? Wahr ist, was sich im Handeln bewährt — der Pragmatismus als amerikanische Antwort auf europäische Erkenntnistheorie]]. Das klingt zunächst flach — Wahrheit als bloße Nützlichkeit. Aber James meint mehr: Eine Überzeugung ist wahr, wenn sie uns hilft, mit der Erfahrung sinnvoll umzugehen, wenn sie sich in der Praxis bewährt, wenn sie zu weiteren bestätigenden Erfahrungen führt. Damit lockert er die starre Realismus-Konstruktivismus-Frage: Es geht nicht um Abbildung oder Konstruktion, sondern um produktive Beziehung zwischen Geist und Welt.",
+        "2": "William James entwickelt mit John Dewey und Charles Sanders Peirce den amerikanischen Pragmatismus. Sein zentraler Schritt: Wahrheit ist nicht primär eine Eigenschaft, die eine Aussage hat oder nicht hat, sondern ein Prozess der Bewährung. [[Pragmatische Wahrheitstheorie:Was bewirkt diese Überzeugung praktisch? Wahr ist, was sich im Handeln bewährt — der Pragmatismus als amerikanische Antwort auf europäische Erkenntnistheorie]]. James will damit nicht den Realismus zerstören, sondern ihn praktisch fundieren: Eine wahre Überzeugung trägt; eine falsche zerbricht in der Auseinandersetzung mit der Welt. Das ist nicht Beliebigkeit — Bewährung ist ein strenger Test — aber es verschiebt die Achse: weg von Korrespondenz, hin zu Funktionalität.",
         "4": "James' Pragmatismus ist achsen-orthogonal: Er bestreitet, dass die Frage ›Realismus oder Konstruktivismus?‹ in dieser Schärfe sinnvoll ist. Wahrheit ist weder reine Korrespondenz noch reine Konstruktion, sondern ein Prozess der Bewährung in der Erfahrung. Diese Position öffnet einen dritten Weg, der weder die Härte des Realismus noch die Schwindelfreiheit des Konstruktivismus hat. James sitzt phänomenologisch in Q3 — konstruktivistisch hinsichtlich des Wahrheitsbegriffs, empirisch hinsichtlich der Grundlage. Seine Wirkung läuft über Dewey weiter zu Rorty, aber auch zu späteren Versuchen, die Achse selbst aufzulösen statt sich auf einer Seite zu verorten."
       }
     },
@@ -108,10 +169,11 @@
       "lifespan": "1872–1970",
       "firstLevel": 2,
       "schoolId": "wissenschaftlicher-realismus",
-      "x": 14, "y": 28,
+      "x": 14,
+      "y": 28,
       "versions": {
         "2": "Russell vertritt einen scharfen wissenschaftlichen Realismus: Die Welt besteht aus dem, was die reife Physik beschreibt — Atome, Felder, Strukturen —, und das existiert unabhängig von uns. Was Russells Position gibt, ist die Auszeichnung der Wissenschaft als nicht-beliebige Beschreibung: Wer ihre Erfolge ernst nimmt, kommt um einen Realismus schwer herum. Sprache und Logik sind Werkzeuge, um diese Welt möglichst präzise zu beschreiben, nicht Konstitutionsbedingungen einer Welt für uns. Russell ist damit ein wichtiger Gegenpol zur kant'schen und postkant'schen Linie: Er nimmt die Wissenschaft ernster als die Erkenntnistheorie und vertraut darauf, dass eine sauber analysierte Sprache uns Zugang zur Welt selbst gibt.",
-        "4": "Russells logischer Atomismus ist das ontologische Pendant zu seinem Realismus: Die Welt zerfällt in elementare Tatsachen, die Sprache zerfällt in elementare Aussagen, und in einer perfekten Sprache entspräche jede Aussage genau einer Tatsache. Diese Vorstellung — Sprache als transparentes Medium der Welt — ist die Annahme, die die spätere sprachphilosophische Tradition, Goodman und schließlich Rorty als unhaltbar zurückweisen. Russells Position ist damit weniger eine bleibende Antwort als der klarste Ausdruck dessen, was der sprachliche Konstruktivismus angreift: die Vorstellung, dass es eine sprach-unabhängige Welt gibt, die in Sprache nur abgebildet wird."
+        "4": "Russells [[logischer Atomismus:Russells frühe Position, dass die Welt aus elementaren Tatsachen und die Sprache aus elementaren Aussagen besteht, die einander spiegeln]] ist das ontologische Pendant zu seinem Realismus: Die Welt zerfällt in elementare Tatsachen, die Sprache zerfällt in elementare Aussagen, und in einer perfekten Sprache entspräche jede Aussage genau einer Tatsache. Diese Vorstellung — Sprache als transparentes Medium der Welt — ist die Annahme, die die spätere sprachphilosophische Tradition, Goodman und schließlich Rorty als unhaltbar zurückweisen. Russells Position ist damit weniger eine bleibende Antwort als der klarste Ausdruck dessen, was der sprachliche Konstruktivismus angreift: die Vorstellung, dass es eine sprach-unabhängige Welt gibt, die in Sprache nur abgebildet wird."
       }
     },
     {
@@ -120,9 +182,10 @@
       "lifespan": "1922–1996",
       "firstLevel": 3,
       "schoolId": "wissenschaftstheorie",
-      "x": 65, "y": 78,
+      "x": 65,
+      "y": 78,
       "versions": {
-        "3": "Kuhn revolutioniert das Bild der Wissenschaft. Statt kontinuierlichem Wahrheitsfortschritt zeigt er: Wissenschaft bewegt sich in [[Paradigmen — Gesamtsysteme aus Theorien, Methoden, Beispielen und Werten, in denen normale Forschung stattfindet]]. Normale Wissenschaft löst Rätsel innerhalb des Paradigmas, bis sich Anomalien häufen und eine wissenschaftliche Revolution ein neues Paradigma etabliert. Das alte und das neue Paradigma sind [[inkommensurabel — sie verwenden Begriffe verschieden, sehen verschiedene Tatsachen, lassen sich nicht direkt vergleichen]]. Damit wird Wissenschaft historisch — und ein wissenschaftlicher Konstruktivismus wird denkbar, der nicht aus Sprachkritik kommt, sondern aus historischer Beobachtung des Wissenschaftsbetriebs selbst.",
+        "3": "Kuhn revolutioniert das Bild der Wissenschaft. Statt kontinuierlichem Wahrheitsfortschritt zeigt er: Wissenschaft bewegt sich in [[Paradigmen:Gesamtsysteme aus Theorien, Methoden, Beispielen und Werten, in denen normale Forschung stattfindet]]. Normale Wissenschaft löst Rätsel innerhalb des Paradigmas, bis sich Anomalien häufen und eine wissenschaftliche Revolution ein neues Paradigma etabliert. Das alte und das neue Paradigma sind [[inkommensurabel:sie verwenden Begriffe verschieden, sehen verschiedene Tatsachen, lassen sich nicht direkt vergleichen]]. Damit wird Wissenschaft historisch — und ein wissenschaftlicher Konstruktivismus wird denkbar, der nicht aus Sprachkritik kommt, sondern aus historischer Beobachtung des Wissenschaftsbetriebs selbst.",
         "5": "Kuhns Position selbst ist schwerer zu verorten, als ihn seine Rezeption macht. Er war kein Anti-Realist im starken Sinne — Wissenschaft macht Fortschritt, aber nicht in Form zunehmender Annäherung an die Wahrheit, sondern in Form zunehmender Problemlösungskapazität. Das ist näher an James als an Latour. Aber die Wirkung war konstruktivistisch: Wenn Tatsachen paradigma-relativ sind und Paradigmen historisch wechseln, dann hat die Vorstellung einer paradigma-unabhängigen Welt-an-sich keinen klaren Sinn mehr. Kuhn ist damit der Türöffner für die Wissenschaftssoziologie — auch wenn er die Konsequenzen, die Latour zieht, selbst zurückgewiesen hätte."
       }
     },
@@ -132,9 +195,10 @@
       "lifespan": "1926–2016",
       "firstLevel": 3,
       "schoolId": "wissenschaftlicher-realismus",
-      "x": 38, "y": 52,
+      "x": 38,
+      "y": 52,
       "versions": {
-        "3": "Putnams philosophische Biographie ist eine Bewegung durch das ganze Tableau. In den 1960ern verteidigt er einen starken wissenschaftlichen Realismus — die Wissenschaft beschreibt die Welt, wie sie ist. In den 1980ern wechselt er zum [[›internen Realismus‹ — Wahrheit ist nicht Korrespondenz mit einer mind-unabhängigen Welt, sondern Kohärenz innerhalb eines konzeptuellen Rahmens]] und nähert sich Kant. In den 1990ern wechselt er erneut, zum ›natürlichen Realismus‹, der die Wahrnehmung wieder direkt nimmt. Diese Bewegung ist kein Schwanken, sondern produktiver Lernprozess: Jede Position bringt Probleme hervor, an denen die nächste arbeitet.",
+        "3": "Putnams philosophische Biographie ist eine Bewegung durch das ganze Tableau. In den 1960ern verteidigt er einen starken wissenschaftlichen Realismus — die Wissenschaft beschreibt die Welt, wie sie ist. In den 1980ern wechselt er zum [[›internen Realismus‹:Wahrheit ist nicht Korrespondenz mit einer mind-unabhängigen Welt, sondern Kohärenz innerhalb eines konzeptuellen Rahmens]] und nähert sich Kant. In den 1990ern wechselt er erneut, zum ›natürlichen Realismus‹, der die Wahrnehmung wieder direkt nimmt. Diese Bewegung ist kein Schwanken, sondern produktiver Lernprozess: Jede Position bringt Probleme hervor, an denen die nächste arbeitet.",
         "5": "Putnams Selbstrevision ist eine seltene philosophische Leistung — er widerruft öffentlich, wo er glaubt, sich geirrt zu haben, und denkt durch, statt zu verteidigen. Inhaltlich zeigt seine Bewegung etwas Wichtiges: Die scharfe Realismus-Konstruktivismus-Achse ist instabil. Wer sie ernst nimmt, wird zwischen den Polen oszillieren, weil keiner für sich genommen trägt. Der innere Realismus ist der Punkt, an dem das Tableau seine Spannung am dichtesten zeigt: Wahrheit ist nicht beliebig (gegen Konstruktivismus), aber auch nicht abbildhaft (gegen Realismus). Das ist die Lage, in die Gabriel mit anderen Mitteln zurückzukommen versucht."
       }
     },
@@ -144,9 +208,10 @@
       "lifespan": "1906–1998",
       "firstLevel": 3,
       "schoolId": "sprachphilosophie",
-      "x": 84, "y": 75,
+      "x": 84,
+      "y": 75,
       "versions": {
-        "3": "Goodmans zentrale These ist provokant: Wir machen Welten, wir finden sie nicht vor. ›Weisen der Welterzeugung‹ (1978) zeigt: Was als Tatsache, als Klasse, als Objekt gilt, hängt davon ab, mit welchen Begriffen, Symbolsystemen und Klassifikationen wir an die Welt herangehen. [[Sternbilder sind das klassische Beispiel — die Sterne sind real, aber ›der Große Wagen‹ ist eine Welterzeugung, keine Entdeckung]]. Goodman ist damit ein klarer Konstruktivist, aber kein Relativist: Welten sind nicht beliebig, sondern an handwerkliche Korrektheit gebunden — ein gemaltes Bild ist anders korrekt als eine wissenschaftliche Tabelle, aber beide können richtig oder falsch gemacht sein.",
+        "3": "Goodmans zentrale These ist provokant: Wir machen Welten, wir finden sie nicht vor. ›Weisen der Welterzeugung‹ (1978) zeigt: Was als Tatsache, als Klasse, als Objekt gilt, hängt davon ab, mit welchen Begriffen, Symbolsystemen und Klassifikationen wir an die Welt herangehen. [[Sternbilder:das klassische Beispiel — die Sterne sind real, aber ›der Große Wagen‹ ist eine Welterzeugung, keine Entdeckung]] zeigen das Prinzip. Goodman ist damit ein klarer Konstruktivist, aber kein Relativist: Welten sind nicht beliebig, sondern an handwerkliche Korrektheit gebunden — ein gemaltes Bild ist anders korrekt als eine wissenschaftliche Tabelle, aber beide können richtig oder falsch gemacht sein.",
         "4": "Goodmans Position ist analytisch geschärft, nicht polemisch wie Latour: Pluralismus statt Anti-Realismus. Verschiedene Welten — die der Physik, der Malerei, der Alltagswahrnehmung — sind gleichwertig, weil keine privilegierter Zugang zu einer einheitlichen Wirklichkeit ist. Das vermeidet die Karikatur ›alles ist beliebig‹: Welten haben strenge Korrektheitskriterien, sie sind nur nicht aufeinander reduzierbar. Goodman ist damit eine der reifsten Q4-Positionen — Konstruktivismus, der sich an die strenge analytische Philosophie hält und ihre Mittel nutzt, um genau das zu zeigen, was Russell für unmöglich hielt."
       }
     },
@@ -156,9 +221,10 @@
       "lifespan": "1931–2007",
       "firstLevel": 3,
       "schoolId": "neopragmatismus",
-      "x": 88, "y": 38,
+      "x": 88,
+      "y": 38,
       "versions": {
-        "3": "Rorty zieht die radikalste Konsequenz aus dem ›linguistic turn‹: Sprache ist kein Medium, das die Welt mehr oder weniger gut abbildet — Sprache ist ein Werkzeug zur Lebensbewältigung. Die Vorstellung, eine Aussage könne ›mit der Realität übereinstimmen‹, setzt einen Standpunkt außerhalb aller Sprachen voraus, den niemand einnehmen kann. Wahrheit ist [[›was unsere Kollegen uns durchgehen lassen‹ — Rortys provokante Formel für: was sich in geteilten Praktiken als zuverlässig erweist]]. Das ist nicht Beliebigkeit, sondern radikaler Anti-Fundamentalismus — es gibt keinen letzten Grund, weder in der Welt noch im Denken.",
+        "3": "Rorty zieht die radikalste Konsequenz aus dem ›linguistic turn‹: Sprache ist kein Medium, das die Welt mehr oder weniger gut abbildet — Sprache ist ein Werkzeug zur Lebensbewältigung. Die Vorstellung, eine Aussage könne ›mit der Realität übereinstimmen‹, setzt einen Standpunkt außerhalb aller Sprachen voraus, den niemand einnehmen kann. Wahrheit ist [[›was unsere Kollegen uns durchgehen lassen‹:Rortys provokante Formel für das, was sich in geteilten Praktiken als zuverlässig erweist]]. Das ist nicht Beliebigkeit, sondern radikaler [[Anti-Fundamentalismus:die Position, dass es keine letzten Begründungen gibt — weder in der Welt noch im Denken]] — es gibt keinen letzten Grund, weder in der Welt noch im Denken.",
         "5": "Rorty ist die schärfste Q4-Position des Tableaus und gleichzeitig die persönlichste. Sein Anti-Fundamentalismus ist nicht erkenntnistheoretischer Eifer, sondern eine Haltung: Wir können ohne Letztbegründung leben, demokratisch, solidarisch, ohne die Illusion, dass uns die Realität die Antwort schon zeigen werde. Damit zielt er direkt auf den Boden-Schmerz: Sein Angebot ist, *kein Boden ist auch eine Antwort*. Wer das aushält, gewinnt Freiheit. Wer es nicht aushält, dem zeigt Rortys Position, was der Konstruktivismus in seiner reifsten Form fordert — und das ist nicht wenig."
       }
     },
@@ -168,10 +234,11 @@
       "lifespan": "1947–2022",
       "firstLevel": 4,
       "schoolId": "wissenschaftssoziologie",
-      "x": 78, "y": 88,
+      "x": 78,
+      "y": 88,
       "versions": {
-        "4": "Latour studiert, wie Wissenschaft tatsächlich gemacht wird — nicht idealisiert, sondern im Labor, in Publikationsprozessen, in Aushandlungen zwischen Forschern, Instrumenten und Förderern. Sein Befund: ›Tatsachen‹ sind nicht einfach gefunden, sondern hergestellt — durch Netzwerke aus Menschen, Geräten, Texten und Praktiken. Das ist nicht zynisch gemeint: Latour bewundert die Wissenschaft, gerade weil er ihre Arbeit ernst nimmt. Aber er widerspricht ihrem Selbstbild, einfach die Wahrheit zu finden. In ›Wir sind nie modern gewesen‹ (1991) zeigt er: Die scharfe Trennung von Natur und Gesellschaft, auf die der moderne Realismus baut, war nie wirklich vollzogen — und sollte es auch nicht sein.",
-        "5": "Latour ist der Q4-Extrempunkt des Tableaus, aber subtiler, als seine Kritiker meinen. Er bestreitet nicht, dass es eine Welt gibt — er bestreitet, dass ›Welt‹ jenseits der Netzwerke, in denen sie greifbar wird, sinnvoll thematisierbar ist. Sein späteres Werk (›An Inquiry into Modes of Existence‹) entwickelt eine Pluralität von Existenzweisen, die Goodmans Welterzeugung-These weiterentwickelt. Latour ist die Position, an der das Tableau seinen Stresstest hat: Wer ihn fair liest, sieht ein produktives Programm; wer ihn unfair liest, sieht den Strohmann der Sokal-Affäre. Mild-Modus heißt hier: fair lesen, ohne sich auf seine Position festzulegen."
+        "4": "Latour studiert, wie Wissenschaft tatsächlich gemacht wird — nicht idealisiert, sondern im Labor, in Publikationsprozessen, in Aushandlungen zwischen Forschern, Instrumenten und Förderern. Sein Befund: ›Tatsachen‹ sind nicht einfach gefunden, sondern hergestellt — durch [[Akteur-Netzwerke:Latours Grundbegriff: Tatsachen entstehen in Verflechtungen aus menschlichen und nicht-menschlichen Akteuren — Forschern, Geräten, Texten, Praktiken]] aus Menschen, Geräten, Texten und Praktiken. Das ist nicht zynisch gemeint: Latour bewundert die Wissenschaft, gerade weil er ihre Arbeit ernst nimmt. Aber er widerspricht ihrem Selbstbild, einfach die Wahrheit zu finden. In ›Wir sind nie modern gewesen‹ (1991) zeigt er: Die scharfe Trennung von Natur und Gesellschaft, auf die der moderne Realismus baut, war nie wirklich vollzogen — und sollte es auch nicht sein.",
+        "5": "Latour ist der Q4-Extrempunkt des Tableaus, aber subtiler, als seine Kritiker meinen. Er bestreitet nicht, dass es eine Welt gibt — er bestreitet, dass ›Welt‹ jenseits der Netzwerke, in denen sie greifbar wird, sinnvoll thematisierbar ist. Sein späteres Werk (›An Inquiry into Modes of Existence‹) entwickelt eine Pluralität von [[Existenzweisen:Latours späterer Begriff für die verschiedenen Modi, in denen etwas wirklich sein kann — wissenschaftlich, juristisch, religiös, technisch]], die Goodmans Welterzeugung-These weiterentwickelt. Latour ist die Position, an der das Tableau seinen Stresstest hat: Wer ihn fair liest, sieht ein produktives Programm; wer ihn unfair liest, sieht den Strohmann der [[Sokal-Affäre:1996 veröffentlichte der Physiker Alan Sokal einen absichtlich sinnlosen Text in einer Kulturwissenschafts-Zeitschrift, um den Konstruktivismus zu blamieren — eine Polemik, die das Feld noch lange prägte]]. Mild-Modus heißt hier: fair lesen, ohne sich auf seine Position festzulegen."
       }
     },
     {
@@ -180,9 +247,10 @@
       "lifespan": "1957–",
       "firstLevel": 4,
       "schoolId": "wissenschaftlicher-realismus",
-      "x": 12, "y": 38,
+      "x": 12,
+      "y": 38,
       "versions": {
-        "4": "Boghossian ist der schärfste analytische Kritiker des Konstruktivismus. In ›Angst vor der Wahrheit‹ (2006) zerlegt er drei Hauptvarianten: Tatsachen-Konstruktivismus (Tatsachen sind sozial konstruiert), epistemischer Relativismus (was als gerechtfertigte Überzeugung gilt, ist kulturabhängig) und Rationalitäts-Relativismus (es gibt keine universelle Vernunft). Sein Argument: Jede dieser Positionen ist entweder trivial wahr (in einem schwachen Sinne) oder spektakulär falsch (in einem starken). Die starken Versionen widersprechen sich selbst — wenn alles konstruiert ist, dann auch die Aussage, dass alles konstruiert ist. Boghossian rettet damit einen robusten Realismus für die analytische Philosophie nach der Sokal-Affäre.",
+        "4": "Boghossian ist der schärfste analytische Kritiker des Konstruktivismus. In ›Angst vor der Wahrheit‹ (2006) zerlegt er drei Hauptvarianten: [[Tatsachen-Konstruktivismus:Boghossians Bezeichnung für die These, dass Tatsachen selbst sozial konstruiert sind, nicht nur unser Wissen über sie]] (Tatsachen sind sozial konstruiert), [[epistemischer Relativismus:die Position, dass die Standards für gerechtfertigte Überzeugung kulturell variieren und nicht universal sind]] (was als gerechtfertigte Überzeugung gilt, ist kulturabhängig) und Rationalitäts-Relativismus (es gibt keine universelle Vernunft). Sein Argument: Jede dieser Positionen ist entweder trivial wahr (in einem schwachen Sinne) oder spektakulär falsch (in einem starken). Die starken Versionen widersprechen sich selbst — wenn alles konstruiert ist, dann auch die Aussage, dass alles konstruiert ist. Boghossian rettet damit einen robusten Realismus für die analytische Philosophie nach der Sokal-Affäre.",
         "5": "Boghossian ist ein bewusst eingebautes Korrektiv: Das Tableau zeigt, dass Konstruktivismus nicht ungebrochen geblieben ist. Sein Argument ist nicht endgültig — Konstruktivisten haben darauf geantwortet, dass schwache und starke Versionen unterscheidbar sind und die starken Karikaturen sind. Aber er macht sichtbar, dass der Konstruktivismus eine Bringschuld hat, die Latour und Rorty nicht immer einlösen. Für den Anker dieses Tableaus — die Boden-Frage — bedeutet Boghossian: Der Realismus ist nicht naiv geworden. Es gibt eine reife realistische Position, die die konstruktivistischen Einwände kennt und beantwortet."
       }
     },
@@ -192,7 +260,8 @@
       "lifespan": "1980–",
       "firstLevel": 5,
       "schoolId": "neuer-realismus",
-      "x": 38, "y": 42,
+      "x": 38,
+      "y": 42,
       "versions": {
         "5": "Gabriel formuliert mit dem Neuen Realismus eine zeitgenössische Mittelposition. Seine Kernthese in ›Warum es die Welt nicht gibt‹ (2013): Es gibt keine umfassende Wirklichkeit, in der alles enthalten wäre — aber das heißt nicht, dass nichts wirklich ist. Im Gegenteil: Es gibt unendlich viele [[Sinnfelder — Gabriels Grundbegriff: Bereiche, in denen Gegenstände in spezifischer Weise vorkommen und Bedingungen ihres Erscheinens haben (Physik, Mathematik, Träume, Romane, soziale Tatsachen)]], und in jedem ist etwas anderes wirklich. Einhörner sind real — als Gegenstände in literarischen Sinnfeldern. Elektronen sind real — als Gegenstände im physikalischen Sinnfeld. Der Fehler des klassischen Realismus war die Annahme, es müsse ein einziges Sinnfeld geben, in dem alles vorkommt; der Fehler des Konstruktivismus war, daraus zu schließen, dass nichts real ist. Sinnfeld-Ontologie ist ein Realismus ohne Welt-Einheit — und damit eine Mitte, die nicht der naive Kompromiss ist, sondern eine eigene Position. Ob sie trägt, ist offen — aber sie zeigt, dass die Achsen dieses Tableaus möglicherweise selbst überdacht werden müssen."
       }
@@ -205,9 +274,10 @@
       "type": "theory",
       "firstLevel": 1,
       "schoolId": "klassischer-empirismus",
-      "x": 15, "y": 20,
+      "x": 15,
+      "y": 20,
       "versions": {
-        "1": "Die älteste und intuitivste Wahrheitstheorie: Eine Aussage ist [[wahr, wenn sie mit den Tatsachen übereinstimmt — wenn das, was sie behauptet, tatsächlich der Fall ist]]. ›Es regnet‹ ist wahr genau dann, wenn es regnet. Aristoteles formuliert das klassisch; Russell und der frühe Wittgenstein arbeiten es analytisch aus. Die Theorie setzt voraus, dass es eine welt-unabhängige Wahrheit gibt, an der Aussagen sich messen lassen — also einen Realismus. Genau diese Voraussetzung ist das, was alle konstruktivistischen Positionen angreifen: Wenn wir nie aus der Sprache und aus den Begriffen heraustreten können, wie sollten wir je Aussage und Tatsache vergleichen?",
+        "1": "Die Korrespondenztheorie ist die Standardintuition: Eine Aussage ist [[wahr:wenn sie mit den Tatsachen übereinstimmt — wenn das, was sie behauptet, tatsächlich der Fall ist]]. ›Die Katze sitzt auf der Matte‹ ist wahr, wenn da tatsächlich eine Katze auf einer Matte sitzt. Das klingt selbstverständlich — und genau das macht es interessant. Die Theorie setzt voraus: Es gibt Tatsachen unabhängig von Aussagen, und es gibt eine Beziehung der Übereinstimmung zwischen beiden. Beide Voraussetzungen werden im Tableau angegriffen. Wer am Realismus festhält, hält in der Regel an einer Form der Korrespondenz fest; wer den Konstruktivismus übernimmt, muss eine andere Wahrheitstheorie entwickeln.",
         "3": "Korrespondenz setzt drei Dinge voraus: eine mind-unabhängige Welt, sprachliche Aussagen mit eindeutigem Gehalt, und eine Relation zwischen beiden, die ›Übereinstimmung‹ heißt. Jeder dieser drei Pfeiler wird im Tableau angegriffen — der erste von Berkeley und Latour, der zweite von Quine und Goodman, der dritte von Rorty. Trotzdem bleibt Korrespondenz die Intuition, die jeder hat, wenn er nicht philosophiert. Das ist kein Argument für ihre Richtigkeit, aber ein Hinweis darauf, dass jede Alternative gegen ein starkes Vorurteil arbeiten muss."
       }
     },
@@ -217,9 +287,10 @@
       "type": "axiom",
       "firstLevel": 1,
       "schoolId": "transzendentalphilosophie",
-      "x": 38, "y": 85,
+      "x": 38,
+      "y": 85,
       "versions": {
-        "1": "Kants Selbstbeschreibung seiner Philosophie. Wie Kopernikus die Erde aus dem Zentrum nahm und sie um die Sonne kreisen ließ, nimmt Kant die Welt aus dem Zentrum der Erkenntnis und lässt sie um unsere Erkenntnisformen kreisen: [[Nicht unsere Erkenntnis richtet sich nach den Gegenständen, sondern die Gegenstände nach unseren Erkenntnisbedingungen — Raum, Zeit und Verstandeskategorien sind nicht in der Welt, sondern in uns]]. Das ist die folgenreichste Verschiebung der modernen Erkenntnistheorie. Ohne Kant gäbe es keinen Konstruktivismus, weil die Idee, dass die Erkenntnisstrukturen vor den Gegenständen kommen, ohne ihn nicht denkbar wäre.",
+        "1": "Kants berühmte Selbstbeschreibung in der *Kritik der reinen Vernunft* (Vorrede zur 2. Auflage): [[Nicht unsere Erkenntnis richtet sich nach den Gegenständen:sondern die Gegenstände nach unseren Erkenntnisbedingungen — Raum, Zeit und Verstandeskategorien sind nicht in der Welt, sondern in uns]]. Die Wende ist radikal: Statt zu fragen, wie wir die Welt erkennen, fragt Kant, wie wir sie überhaupt erst zu einer erkennbaren machen. Die Antwort ist nicht Skepsis (wir können nichts erkennen), sondern eine neue Form des Realismus: Wir erkennen Erscheinungen objektiv, weil die Bedingungen ihrer Erscheinung in der Vernunft selbst liegen — und damit für alle vernünftigen Wesen gleich sind.",
         "3": "Die Wende ist transzendental, nicht psychologisch: Kant beschreibt nicht, wie wir faktisch wahrnehmen, sondern welche Bedingungen Erfahrung überhaupt erst möglich machen. Damit etabliert er eine neue Ebene der Erkenntnistheorie — die Bedingungen der Möglichkeit von Erkenntnis selbst. Wer den Konstruktivismus radikalisiert, macht diese Bedingungen historisch (Hegel), gesellschaftlich (Marx), sprachlich (Rorty) oder paradigma-relativ (Kuhn). Wer dem Realismus zurückkehren will, muss zeigen, dass diese Radikalisierung selbst falsche Voraussetzungen macht — wie Gabriel mit der Sinnfeld-Pluralität versucht."
       }
     },
@@ -229,9 +300,10 @@
       "type": "concept",
       "firstLevel": 2,
       "schoolId": "klassischer-empirismus",
-      "x": 25, "y": 12,
+      "x": 25,
+      "y": 12,
       "versions": {
-        "2": "Lockes Versuch, den Realismus innerhalb des Empirismus zu retten. [[Primäre Qualitäten — Größe, Form, Anzahl, Bewegung — sind objektive Eigenschaften der Dinge selbst; sekundäre Qualitäten — Farben, Klänge, Geschmäcke — entstehen erst durch die Wechselwirkung mit unseren Sinnen]]. Ein Apfel ist objektiv rund (primär), aber seine Röte hängt davon ab, dass es sehende Wesen gibt (sekundär). Damit hat die Wissenschaft (Mathematik, Physik) Zugang zur welt-an-sich, während die Alltagswahrnehmung gemischt ist.",
+        "2": "Lockes Unterscheidung gliedert die Welt nach ihrer Erkennbarkeit: [[Primäre Qualitäten:Größe, Form, Anzahl, Bewegung — sind objektive Eigenschaften der Dinge selbst]], während [[Sekundäre Qualitäten:Farben, Klänge, Geschmäcke — entstehen erst durch die Wechselwirkung mit unseren Sinnen]]. Damit rettet Locke einen wesentlichen Kern Realismus (die mathematisch-mechanisch beschreibbare Welt), ohne den Empirismus aufzugeben. Berkeley wird zeigen, dass diese Trennung instabil ist: Auch primäre Qualitäten erscheinen uns immer nur durch Wahrnehmung — was berechtigt uns, ihnen einen mind-unabhängigen Status zuzuschreiben?",
         "4": "Berkeleys Angriff zeigt die Instabilität der Unterscheidung: Auch primäre Qualitäten erscheinen uns immer nur durch Wahrnehmung — wie sollten wir wissen, dass sie ohne Wahrnehmung existieren? Lockes Unterscheidung ist historisch wichtig als erster Versuch, einen reifen Realismus aufzubauen, der die empiristische Einsicht (alle Erkenntnis aus Sinnen) anerkennt, ohne in Berkeleys Idealismus zu kippen. Sie überlebt in modifizierter Form in der modernen Physik: Was Wissenschaft beschreibt, sind strukturelle Eigenschaften (primär), nicht phänomenale Qualitäten (sekundär)."
       }
     },
@@ -241,10 +313,11 @@
       "type": "concept",
       "firstLevel": 2,
       "schoolId": "transzendentalphilosophie",
-      "x": 42, "y": 88,
+      "x": 42,
+      "y": 88,
       "versions": {
-        "2": "Kants Grenzbegriff: Das, was die Welt unabhängig von unserer Wahrnehmung und unserem Denken wäre — und genau deshalb für uns unzugänglich. Wir erkennen nur die [[Welt der Erscheinungen — die Welt, wie sie unter unseren Erkenntnisformen für uns wird]]. Das Ding an sich ist nicht eine andere Welt, sondern dieselbe Welt aus einer Perspektive, die wir nicht einnehmen können. Es zeigt zugleich die Grenze und die Demut unseres Erkennens.",
-        "4": "Der Begriff ist heftig umstritten, schon zu Kants Zeit. Hegel hält ihn für widersprüchlich: Wenn wir wissen, dass es das Ding an sich gibt, wissen wir schon etwas über es, und wenn wir nichts wissen, dürften wir es nicht setzen. Spätere Realisten (Sellars, Putnam-Frühphase) wollen das Ding an sich tilgen und nur die wissenschaftlich beschriebene Welt übrig lassen. Konstruktivisten radikalisieren in die andere Richtung: Wenn das Ding an sich unerreichbar ist, dann gibt es keinen Sinn, an ihm festzuhalten. Gabriel kehrt mit der Sinnfeld-Ontologie zu einer Version zurück, die das Ding an sich pluralisiert: verschiedene Sinnfelder, verschiedene Weisen der Realität."
+        "2": "Kants Ding an sich (›Noumenon‹) ist der vielleicht problematischste Begriff seiner Philosophie. Er bezeichnet die Dinge, wie sie unabhängig von allen Erkenntnisbedingungen wären — also unabhängig von Raum, Zeit, Kausalität. Wir können nicht wissen, was Dinge an sich sind; wir kennen sie nur als Erscheinungen in der [[Welt der Erscheinungen:die Welt, wie sie unter unseren Erkenntnisformen für uns wird]]. Aber Kant hält am Ding an sich fest: Es muss etwas geben, das uns affiziert, sonst hätten wir gar keine Erfahrung. Diese Konstruktion ist heftig umstritten — Hegel, Schopenhauer, später die analytischen Realisten arbeiten sich an ihr ab.",
+        "4": "Der Begriff ist heftig umstritten, schon zu Kants Zeit. Hegel hält ihn für widersprüchlich: Wenn wir wissen, dass es das Ding an sich gibt, wissen wir schon etwas über es, und wenn wir nichts wissen, dürften wir es nicht setzen. Spätere Realisten (Sellars, Putnam-Frühphase) wollen das Ding an sich tilgen und nur die wissenschaftlich beschriebene Welt übrig lassen. Konstruktivisten radikalisieren in die andere Richtung: Wenn das Ding an sich unerreichbar ist, dann gibt es keinen Sinn, an ihm festzuhalten. Gabriel kehrt mit der [[Sinnfeld-Ontologie:Markus Gabriels Position, dass es keine umfassende Welt gibt, sondern viele Sinnfelder mit je eigenen Existenzbedingungen]] zu einer Version zurück, die das Ding an sich pluralisiert: verschiedene Sinnfelder, verschiedene Weisen der Realität."
       }
     },
     {
@@ -253,9 +326,10 @@
       "type": "theory",
       "firstLevel": 2,
       "schoolId": "pragmatismus",
-      "x": 75, "y": 35,
+      "x": 75,
+      "y": 35,
       "versions": {
-        "2": "James' und Deweys Alternative zur Korrespondenztheorie: [[Wahrheit ist, was sich im Handeln bewährt — was zu produktiven weiteren Erfahrungen führt, was unsere Praxis trägt]]. Nicht die statische Übereinstimmung mit einer Tatsache, sondern die dynamische Bewährung in der Welt. Das ist nicht ›Wahrheit ist nützlich‹ in einem flachen Sinne, sondern ein anderer Begriff: Wahrheit als Beziehung zwischen Überzeugung und Lebensführung, nicht als Beziehung zwischen Aussage und Fakt.",
+        "2": "Die pragmatische Wahrheitstheorie ist Amerikas Antwort auf die europäische Erkenntnistheorie. [[Wahrheit ist, was sich im Handeln bewährt:was zu produktiven weiteren Erfahrungen führt, was unsere Praxis trägt]]. Peirce formuliert das streng (Wahrheit als Limit der idealen Forschung), James liberal (Bewährung im individuellen Leben), Dewey instrumentell (Wahrheit als Werkzeug). Die Stärke: Sie verbindet Realismus (Welt schiebt zurück) mit Konstruktivismus (wir wählen, was wir prüfen). Die Schwäche: Sie erklärt nicht, *warum* sich etwas bewährt — die naheliegende Antwort ›weil es wahr ist‹ macht den Kreis.",
         "4": "Die pragmatische Wahrheit unterläuft die Realismus-Konstruktivismus-Achse, indem sie die Frage verschiebt: Statt zu fragen, ob unsere Überzeugungen die Welt abbilden oder konstruieren, fragt sie, ob sie tragen. Das ist anschlussfähig sowohl an Realismus (was trägt, hat in der Welt einen Grund) als auch an Konstruktivismus (was trägt, hängt von Praktiken und Lebensformen ab). Rorty radikalisiert die Position: Wahrheit ist nicht mehr als das, was sich bewährt, weil es nichts Tieferes gibt, woran man sie messen könnte."
       }
     },
@@ -265,9 +339,10 @@
       "type": "concept",
       "firstLevel": 3,
       "schoolId": "wissenschaftstheorie",
-      "x": 62, "y": 80,
+      "x": 62,
+      "y": 80,
       "versions": {
-        "3": "Kuhns Doppelbegriff. Ein [[Paradigma — Gesamtsystem aus Theorien, Methoden, Beispielen und Werten, in dem normale Wissenschaft stattfindet]]. Wenn ein Paradigma durch ein neues abgelöst wird, sind beide [[inkommensurabel — sie verwenden Begriffe verschieden, sehen verschiedene Tatsachen, lassen sich nicht direkt vergleichen oder ineinander übersetzen]]. Aristotelische und newtonsche Physik sind nicht zwei Versionen derselben Beschreibung, sondern zwei verschiedene Weisen, was als Tatsache gilt. Das verschiebt die Wahrheitsfrage radikal: Wahrheit gibt es nur innerhalb von Paradigmen, nicht zwischen ihnen.",
+        "3": "Kuhns Doppelbegriff. Ein [[Paradigma:Gesamtsystem aus Theorien, Methoden, Beispielen und Werten, in dem normale Wissenschaft stattfindet]]. Wenn ein Paradigma durch ein neues abgelöst wird, sind beide [[inkommensurabel:sie verwenden Begriffe verschieden, sehen verschiedene Tatsachen, lassen sich nicht direkt vergleichen oder ineinander übersetzen]]. Aristotelische und newtonsche Physik sind nicht zwei Versionen derselben Beschreibung, sondern zwei verschiedene Weisen, was als Tatsache gilt. Das verschiebt die Wahrheitsfrage radikal: Wahrheit gibt es nur innerhalb von Paradigmen, nicht zwischen ihnen.",
         "5": "Inkommensurabilität ist die wahrscheinlich folgenreichste These der Wissenschaftstheorie des 20. Jahrhunderts. Sie hat zwei Lesarten: Schwach — verschiedene Paradigmen verwenden Begriffe verschieden, was Übersetzung schwierig macht, aber nicht unmöglich. Stark — verschiedene Paradigmen leben in verschiedenen Welten, zwischen denen es keinen rationalen Vergleich gibt. Kuhn schwankte zwischen beiden Lesarten. Die schwache Version ist mit einem reifen Realismus verträglich; die starke führt zu Latours Wissenschaftssoziologie und zu Rortys Anti-Fundamentalismus."
       }
     },
@@ -277,9 +352,10 @@
       "type": "concept",
       "firstLevel": 3,
       "schoolId": "sprachphilosophie",
-      "x": 85, "y": 70,
+      "x": 85,
+      "y": 70,
       "versions": {
-        "3": "Die [[sprachliche Wende — die Diagnose des 20. Jahrhunderts, dass Sprache nicht ein neutrales Medium zwischen Geist und Welt ist, sondern selbst die Struktur des Erkennbaren prägt]]. Wir denken in Sprache, also denken wir, wie unsere Sprache uns denken lässt. Verschiedene Sprachen schneiden die Welt verschieden zu. Quine, Goodman und Rorty stehen in dieser Linie — jeder mit anderer Radikalität. Die These als solche ist nicht zwingend konstruktivistisch, aber sie öffnet die Tür: Wenn Sprache mitkonstituiert, was wir Welt nennen, dann ist die Trennung von Welt und Sprache nicht mehr scharf.",
+        "3": "Die [[sprachliche Wende:die Diagnose des 20. Jahrhunderts, dass Sprache nicht ein neutrales Medium zwischen Geist und Welt ist, sondern selbst die Struktur des Erkennbaren prägt]]. Wir denken in Sprache, also denken wir, wie unsere Sprache uns denken lässt. Verschiedene Sprachen schneiden die Welt verschieden zu. Quine, Goodman und Rorty stehen in dieser Linie — jeder mit anderer Radikalität. Die These als solche ist nicht zwingend konstruktivistisch, aber sie öffnet die Tür: Wenn Sprache mitkonstituiert, was wir Welt nennen, dann ist die Trennung von Welt und Sprache nicht mehr scharf.",
         "5": "Der linguistic turn ist der gemeinsame Hintergrund fast aller Q4-Positionen des Tableaus. Aber er führt nicht zwingend zu Konstruktivismus: Davidson und der spätere Putnam zeigen, dass man die sprachliche Wende anerkennen kann, ohne den Realismus aufzugeben — Sprache ist nicht das Gefängnis, als das Rorty sie manchmal darstellt. Gabriels Neuer Realismus geht noch weiter: Die sprachliche Wende war eine Etappe, aber sie ist nicht das letzte Wort. Sinnfelder sind nicht primär sprachlich, sondern ontologisch — die Welt selbst ist plural strukturiert, nicht erst unsere Sprache macht sie so."
       }
     },
@@ -289,9 +365,10 @@
       "type": "theory",
       "firstLevel": 3,
       "schoolId": "sprachphilosophie",
-      "x": 82, "y": 78,
+      "x": 82,
+      "y": 78,
       "versions": {
-        "3": "Goodmans zentraler Begriff aus ›Weisen der Welterzeugung‹ (1978). [[Welten werden gemacht, nicht gefunden — durch Symbolsysteme, Klassifikationen, Beispiele, Beschreibungsweisen]]. Aber nicht beliebig: Welterzeugung folgt Regeln der handwerklichen Korrektheit, die je nach Welt verschieden sind. Eine wissenschaftliche Welt wird anders korrekt erzeugt als eine künstlerische — beide können gelingen oder scheitern, aber an verschiedenen Maßstäben.",
+        "3": "Goodmans zentraler Begriff aus ›Weisen der Welterzeugung‹ (1978). [[Welten werden gemacht:nicht gefunden — durch Symbolsysteme, Klassifikationen, Beispiele, Beschreibungsweisen]]. Aber nicht beliebig: Welterzeugung folgt Regeln der handwerklichen Korrektheit, die je nach Welt verschieden sind. Eine wissenschaftliche Welt wird anders korrekt erzeugt als eine künstlerische — beide können gelingen oder scheitern, aber an verschiedenen Maßstäben.",
         "4": "Welterzeugung ist die analytisch geschärfte Version dessen, was Latour soziologisch beschreibt. Sie vermeidet Latours polemische Schärfe und konzentriert sich auf die strukturelle Pointe: Verschiedene Symbolsysteme erzeugen verschiedene Welten, und keine ist die ›eigentliche‹. Das ist eine reife Konstruktivismus-Position — sie ist nicht relativistisch (Welten haben Korrektheitskriterien), aber sie weigert sich, eine Welt als die wahre auszuzeichnen. Gabriels Sinnfeld-Ontologie steht in expliziter Auseinandersetzung mit Goodman: Beide pluralisieren, aber Gabriel ontologisiert die Pluralität, während Goodman sie semiotisch denkt."
       }
     },
@@ -301,9 +378,10 @@
       "type": "theory",
       "firstLevel": 5,
       "schoolId": "neuer-realismus",
-      "x": 40, "y": 45,
+      "x": 40,
+      "y": 45,
       "versions": {
-        "5": "Gabriels Grundbegriff. Ein [[Sinnfeld ist ein Bereich, in dem Gegenstände in spezifischer Weise vorkommen — mit eigenen Bedingungen ihres Erscheinens, ihrer Identität und ihrer Beziehungen]]. Das physikalische Sinnfeld lässt Elektronen vorkommen, nicht aber Einhörner. Das literarische Sinnfeld lässt Einhörner vorkommen, nicht aber Elektronen als Charaktere. Beides ist real — in seinem jeweiligen Sinnfeld. Der Fehler des klassischen Realismus war die Annahme, es müsse ein umfassendes Sinnfeld geben, in dem alles vorkommt (›die Welt‹); der Fehler des Konstruktivismus war, daraus zu schließen, dass nichts wirklich real ist. Sinnfeld-Ontologie ist Realismus ohne Welt-Einheit — eine ontologische Antwort auf die sprachliche Wende, die deren Einsichten nicht zurücknimmt, sondern weiterführt. Ob die Position trägt, hängt davon ab, ob sich die Pluralität der Sinnfelder stabil halten lässt, ohne in einen Relativismus zu kippen. Genau das ist der offene Streit, in dem das Tableau endet."
+        "5": "Gabriels Grundbegriff. Ein [[Sinnfeld:ein Bereich, in dem Gegenstände in spezifischer Weise vorkommen — mit eigenen Bedingungen ihres Erscheinens, ihrer Identität und ihrer Beziehungen]]. Das physikalische Sinnfeld lässt Elektronen vorkommen, nicht aber Einhörner. Das literarische Sinnfeld lässt Einhörner vorkommen, nicht aber Elektronen als Charaktere. Beides ist real — in seinem jeweiligen Sinnfeld. Der Fehler des klassischen Realismus war die Annahme, es müsse ein umfassendes Sinnfeld geben, in dem alles vorkommt (›die Welt‹); der Fehler des Konstruktivismus war, daraus zu schließen, dass nichts wirklich real ist. Sinnfeld-Ontologie ist Realismus ohne Welt-Einheit — eine ontologische Antwort auf die sprachliche Wende, die deren Einsichten nicht zurücknimmt, sondern weiterführt. Ob die Position trägt, hängt davon ab, ob sich die Pluralität der Sinnfelder stabil halten lässt, ohne in einen Relativismus zu kippen. Genau das ist der offene Streit, in dem das Tableau endet."
       }
     }
   ],
@@ -321,9 +399,9 @@
       "from": "locke",
       "to": "berkeley",
       "type": "influence",
-      "firstLevel": 1,
+      "firstLevel": 2,
       "versions": {
-        "1": "Berkeley nimmt Locke ernster als Locke selbst — und das ist eine Kritik. Wenn alle Erkenntnis durch Ideen vermittelt ist, dann ist die Annahme einer Welt jenseits der Ideen leer. Lockes Primär/Sekundär-Unterscheidung kollabiert: Auch primäre Qualitäten erscheinen uns nur als Ideen. Berkeley zeigt, dass konsequenter Empirismus zum Immaterialismus führt — eine Konsequenz, vor der Locke selbst zurückschreckte."
+        "2": "Berkeley nimmt Locke ernster als Locke selbst — und das ist eine Kritik. Wenn alle Erkenntnis durch Ideen vermittelt ist, dann ist die Annahme einer Welt jenseits der Ideen leer. Lockes Primär/Sekundär-Unterscheidung kollabiert: Auch primäre Qualitäten erscheinen uns nur als Ideen. Berkeley zeigt, dass konsequenter Empirismus zum Immaterialismus führt — eine Konsequenz, vor der Locke selbst zurückschreckte."
       }
     },
     {
