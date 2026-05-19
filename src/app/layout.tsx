@@ -16,9 +16,38 @@ const inter = Inter({
   variable: '--font-ui',
 })
 
+const BASE_URL = 'https://sanctum-mentis.vercel.app'
+const DESCRIPTION = 'Eine Bibliothek der großen Fragen — Kontext, der hilft, ein Thema zu Ende zu denken.'
+
 export const metadata: Metadata = {
-  title: 'Sanctum Mentis',
-  description: 'Lerne Philosophie auf deinem Tempo — ein Komplexitäts-Slider steuert die Tiefe.',
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default:  'Sanctum Mentis',
+    template: '%s | Sanctum Mentis',
+  },
+  description: DESCRIPTION,
+  openGraph: {
+    title:       'Sanctum Mentis',
+    description: DESCRIPTION,
+    url:         BASE_URL,
+    siteName:    'Sanctum Mentis',
+    locale:      'de_DE',
+    type:        'website',
+    images: [
+      {
+        url:    '/og-image',
+        width:  1200,
+        height: 630,
+        alt:    'Sanctum Mentis — Eine Bibliothek der großen Fragen',
+      },
+    ],
+  },
+  twitter: {
+    card:        'summary_large_image',
+    title:       'Sanctum Mentis',
+    description: DESCRIPTION,
+    images:      ['/og-image'],
+  },
 }
 
 export const viewport: Viewport = {
