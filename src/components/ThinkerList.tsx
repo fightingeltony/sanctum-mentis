@@ -4,6 +4,29 @@ import React, { useState, useEffect, useRef } from 'react'
 import type { Thinker, School, Level } from '@/lib/types'
 import { Annotated } from '@/lib/annotations'
 
+/** Fades in whenever `text` changes — covers both new thinkers and level-up text updates */
+function FadingParagraph({ text, level, className, style }: {
+  text: string; level: number; className?: string; style?: React.CSSProperties
+}) {
+  const ref = useRef<HTMLParagraphElement>(null)
+  const prevText = useRef(text)
+
+  useEffect(() => {
+    if (prevText.current !== text && ref.current) {
+      prevText.current = text
+      ref.current.classList.remove('thinker-text-fade')
+      void ref.current.offsetWidth // force reflow to restart animation
+      ref.current.classList.add('thinker-text-fade')
+    }
+  }, [text])
+
+  return (
+    <p ref={ref} className={`thinker-text-fade${className ? ` ${className}` : ''}`} style={style}>
+      <Annotated text={text} level={level} />
+    </p>
+  )
+}
+
 interface ThinkerWithDesc extends Thinker {
   description: string
   isNew: boolean
@@ -174,9 +197,12 @@ export default function ThinkerList({
                     {t.lifespan}
                   </span>
                 )}
-                <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]" style={{ textWrap: 'pretty' } as React.CSSProperties}>
-                  <Annotated text={t.description} level={currentLevel.id} />
-                </p>
+                <FadingParagraph
+                  text={t.description}
+                  level={currentLevel.id}
+                  className="font-prose text-[14px] leading-relaxed text-[--fg-muted]"
+                  style={{ textWrap: 'pretty' } as React.CSSProperties}
+                />
               </div>
             )
           })}
@@ -243,12 +269,12 @@ function GroupedList({
                       <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[--gold]">Neu</span>
                     )}
                   </div>
-                  <p
+                  <FadingParagraph
+                    text={t.description}
+                    level={level}
                     className="font-ui text-[13px] leading-relaxed text-[--fg-muted]"
                     style={{ textWrap: 'pretty' } as React.CSSProperties}
-                  >
-                    <Annotated text={t.description} level={level} />
-                  </p>
+                  />
                 </div>
               ))}
             </div>
