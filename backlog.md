@@ -2,6 +2,22 @@
 
 ## Zuletzt abgeschlossen
 
+### [x] Open Graph / Social Media Metadata
+**Datum:** 19.5.26
+**Resultat:** `src/app/og-image/route.tsx` (Edge-Route) — 1200×630 OG-Image via `next/og` mit Pergament-Hintergrund (#F5EAD0), halbdurchsichtigem Quadranten-Kreuz (Option C hybrid), Eyebrow-Label "Philosophie · Denker · Konzepte", kursive Description, Sienna-Divider, URL-Wasserzeichen. `src/app/layout.tsx`: `metadataBase` = `https://sanctum-mentis.vercel.app`, vollständige `openGraph`- + `twitter`-Metadata, alte Mechanism-Description ersetzt durch Vision-Description *"Eine Bibliothek der großen Fragen — Kontext, der hilft, ein Thema zu Ende zu denken."*, `title.template = '%s | Sanctum Mentis'`. `/thema/[topicId]/page.tsx`: `generateMetadata` — Title = Tableau-Titel, Description = Tableau-Subtitle. `twitter:card = summary_large_image`.
+
+### [x] Achsen-Hints im QuadrantPlot + Y-Achsen-Label
+**Datum:** 19.5.26
+**Resultat:** `src/lib/types.ts`: `Quadrants`-Interface um optionale `leftHint?`, `rightHint?`, `topHint?`, `bottomHint?` erweitert. `src/components/QuadrantPlot.tsx`: H 700→760, PAD_Y 60→80 für Margin-Raum; `wrapHint()`-Helper für mehrzeiligen SVG-Text (Wortgrenze bei maxLen=32); Y-Achsen-Label als rotierter `<text>`-Node (war bisher fehlend); Pole-Hints als kursiver SVG-Text unter/über den Pol-Labels mit `<tspan>`-Zeilenumbruch. Alle 4 Tableau-JSONs mit `*Hint`-Feldern befüllt.
+
+### [x] CommandPalette global und stufenunabhängig
+**Datum:** 19.5.26
+**Resultat:** `src/lib/searchIndex.ts` (neu): `SearchEntry`-Interface, `buildGlobalSearchIndex()` (gecacht, iteriert alle Tableaus), `normalize()` für akzentinsensitive Suche. `src/components/CommandPalette.tsx` (Rewrite): sucht alle 4 Tableaus, alle Knoten unabhängig vom aktiven Level, Footer "X Einträge in Y Tableaus". Treffer-Klick navigiert per `router.push('/thema/[id]?highlight=nodeId&level=N&tab=...')`. `src/components/ShellCommandPaletteProvider.tsx` (neu): globaler Cmd+K/Ctrl+K-Listener als React-Context-Provider, eingebunden in Root-Layout (`src/app/layout.tsx`). `src/components/HeaderSearchButton.tsx` (neu): Client-Component für Shell-Header. `/thema/[topicId]/page.tsx`: `searchParams`-Prop + `initialHighlight/Level/Tab`-Übergabe. `TopicViewer.tsx`: URL-Params auslesen, Level- + Highlight-Effect (setTimeout(0)-Defer).
+
+### [x] Stimm-Hierarchie finalisiert — finales Ensemble der Eingangsfragen
+**Datum:** 19.5.26
+**Resultat:** Zweite Iteration aller vier Tableau-Subtitles und Intros nach externer Gegenprüfung (Gemini). Finales Ensemble: Selbst *"Die Suche nach dem Kern — Wer bist du, wenn du alles weglässt?"* / Geist *"Das Rätsel im Kopf — Wo wird aus Materie eigentlich Gefühl?"* / Realismus *"Wo endet die Welt und wo beginnst du?"* / Ethik *"Das Gewicht deiner Freiheit."* Intros: Geist *"Wenn du Schmerz fühlst — was passiert da eigentlich?"* (unverändert) / Selbst *"Bin ich ein Kern, den ich freilegen kann — oder ein Muster, das ich gerade bin?"* / Realismus *"Kannst du der Welt trauen, oder beginnt sie erst in deinem Kopf?"* / Ethik *"Was sollst du tun, wenn es keine einfache Antwort gibt?"* `data/library.json` synchronisiert. `bibliothek-architektur.md` im Repo auf finalen Stand (Du-Konsistenz-Abschnitt, methodische Notiz, Ensemble-Tabelle).
+
 ### [x] v2-Erweiterung aller vier Tableaus + Subtitle-Synchronisation
 **Datum:** 18.–19.5.26
 **Resultat:** Vier Etappen in einer Session: (1) Annotations-Syntax durchgängig auf `[[Begriff:Erklärung]]` mit Doppelpunkt-Trenner. (2) Mehrstufige Texte ergänzt (Mild-Modus-Konvention als Regel). (3) Tooltips über alle Stufen L1–L5 verteilt (vorher konzentriert auf L1–L2). (4) Alle vier Subtitles auf lebensweltliche Fragen umgestellt; `data/library.json` synchronisiert. Sammelbeleg: `v2-erweiterung.md` im Repo-Root.
@@ -102,12 +118,12 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 ### [x] Lebensweltliche Eingangs-Anker prüfen
 **Status:** implementiert 19.5.26
 **Kontext:** Tableau-Subtitles sind teilweise akademisch formuliert. Die Sanctum-Vision verlangt lebensweltliche Anker, die einen Nutzer bei einer Frage abholen, die er selbst hat.
-**Resultat:** `topic.intro`-Feld eingeführt (optional, immer sichtbar, kursiv in Akzentfarbe). Alle vier Tableaus befüllt: "Wenn du Schmerz fühlst — was passiert da eigentlich?" / "Bin ich ein Kern, den ich freilege — oder ein Muster, das ich gerade bin?" / "Wo stehst du, wenn die alten Gewissheiten weichen?" / "Was sollst du tun, wenn du frei bist?"
+**Resultat:** `topic.intro`-Feld eingeführt (optional, immer sichtbar, kursiv in Akzentfarbe). Alle vier Tableaus befüllt — finale Texte nach zweiter Iteration: vgl. "Stimm-Hierarchie finalisiert"-Eintrag oben.
 
 ### [x] Subtitle-Synchronisation — eine einzige Quelle
 **Status:** implementiert 19.5.26
 **Kontext:** Library-Card und Topic-JSON pflegten teilweise abweichende Subtitle-Texte (insbesondere Ethik: Library "Was sollen wir tun?", JSON leer). Außerdem waren alle vier Subtitles noch akademisch-deskriptiv statt lebensweltlich.
-**Resultat:** Alle vier Tableau-Subtitles überarbeitet (lebensweltlich, einladend): *"Wer denkt, wenn ich denke?"* (Geist) / *"Was bin ich wirklich — Wesen, Geschichte oder Illusion?"* (Selbst) / *"Was ist da draußen wirklich los, wenn ich nicht hinschaue?"* (Realismus, unverändert) / *"Wie wollen wir leben?"* (Ethik). `data/library.json` manuell synchronisiert — `subtitle` in beiden Quellen identisch gehalten. `bibliothek-architektur.md` dokumentiert die Stimm-Hierarchie (Subtitle → Intro → Synthese) und liegt jetzt im Repo-Root.
+**Resultat:** Alle vier Tableau-Subtitles in zwei Iterationen überarbeitet (lebensweltlich, einladend, Du-Ton). Finale Ensemble-Texte dokumentiert in `bibliothek-architektur.md` (Repo-Root). `data/library.json` als einzige Quelle synchronisiert. Stimm-Hierarchie-Konvention in `prompts/mild-mode.md` aufgenommen. — Finale Subtitle-Texte: vgl. "Stimm-Hierarchie finalisiert"-Eintrag oben.
 
 ---
 
