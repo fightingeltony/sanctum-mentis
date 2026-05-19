@@ -2,7 +2,7 @@
   {
     "id": "das-selbst",
     "title": "Die Landkarte des Selbst",
-    "subtitle": "Was bin ich wirklich — Wesen, Geschichte oder Illusion?",
+    "subtitle": "Die Suche nach dem Kern — Wer bist du, wenn du alles weglässt?",
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.42 0.12 295)",
     "status": "available",
@@ -12,7 +12,7 @@
   {
     "id": "philosophie-des-geistes",
     "title": "Philosophie des Geistes",
-    "subtitle": "Wer denkt, wenn ich denke?",
+    "subtitle": "Das Rätsel im Kopf — Wo wird aus Materie eigentlich Gefühl?",
     "era": "17. Jh. – Gegenwart",
     "themeColor": "oklch(0.44 0.13 240)",
     "status": "available",
@@ -22,7 +22,7 @@
   {
     "id": "realismus-und-konstruktivismus",
     "title": "Realismus und Konstruktivismus",
-    "subtitle": "Was ist da draußen wirklich los, wenn ich nicht hinschaue?",
+    "subtitle": "Wo endet die Welt und wo beginnst du?",
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.42 0.11 165)",
     "status": "available",
@@ -32,7 +32,7 @@
   {
     "id": "ethik",
     "title": "Ethik",
-    "subtitle": "Wie wollen wir leben?",
+    "subtitle": "Das Gewicht deiner Freiheit.",
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.45 0.12 30)",
     "status": "available",

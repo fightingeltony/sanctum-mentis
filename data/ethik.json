@@ -2,8 +2,8 @@
   "topic": {
     "id": "ethik",
     "title": "Ethik",
-    "subtitle": "Wie wollen wir leben?",
-    "intro": "Was sollst du tun, wenn du frei bist?",
+    "subtitle": "Das Gewicht deiner Freiheit.",
+    "intro": "Was sollst du tun, wenn es keine einfache Antwort gibt?",
     "theme": {
       "accent": "oklch(0.45 0.12 50)",
       "accentSoft": "oklch(0.45 0.12 50 / 0.15)"
