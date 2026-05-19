@@ -70,13 +70,16 @@ export default function ThinkerList({
     thinkers.some(t => t.schoolId === s.id)
   )
 
-  const newCount = thinkers.filter(t => t.isNew).length
+  const newCount      = thinkers.filter(t => t.isNew).length
+  const deepenedCount = thinkers.filter(t => t.isDeepened).length
 
   const filtered = activeFilter === 'neu'
     ? thinkers.filter(t => t.isNew)
-    : activeFilter
-      ? thinkers.filter(t => t.schoolId === activeFilter)
-      : thinkers
+    : activeFilter === 'vertieft'
+      ? thinkers.filter(t => t.isDeepened)
+      : activeFilter
+        ? thinkers.filter(t => t.schoolId === activeFilter)
+        : thinkers
 
   const schoolOrder = schools.map(s => s.id)
   const sorted = [...filtered].sort(
@@ -136,6 +139,20 @@ export default function ThinkerList({
             <span className="opacity-60">{newCount}</span>
           </button>
         )}
+        {deepenedCount > 0 && (
+          <button
+            onClick={() => setActiveFilter(activeFilter === 'vertieft' ? null : 'vertieft')}
+            className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
+              ${activeFilter === 'vertieft'
+                ? 'border-[--gold-soft] text-[--gold] bg-[var(--accent-soft)]'
+                : 'border-[--hairline] text-[--fg-faint] hover:text-[--fg-muted] hover:border-[--hairline-strong]'
+              }`}
+          >
+            <span className="font-ui text-[10px]">↑</span>
+            Vertieft
+            <span className="opacity-60">{deepenedCount}</span>
+          </button>
+        )}
         {visibleSchools.map(s => {
           const count = thinkers.filter(t => t.schoolId === s.id).length
           const isActive = activeFilter === s.id
@@ -184,6 +201,9 @@ export default function ThinkerList({
                   <div className="flex items-baseline gap-2 shrink-0">
                     {t.isNew && (
                       <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[--gold]">Neu</span>
+                    )}
+                    {t.isDeepened && (
+                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[--fg-dim]">↑ Vertieft</span>
                     )}
                     {school && (
                       <span className="font-ui text-[9px] tracking-[0.16em] uppercase" style={{ color }}>
@@ -267,6 +287,9 @@ function GroupedList({
                     )}
                     {t.isNew && (
                       <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[--gold]">Neu</span>
+                    )}
+                    {t.isDeepened && (
+                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[--fg-dim]">↑ Vertieft</span>
                     )}
                   </div>
                   <FadingParagraph

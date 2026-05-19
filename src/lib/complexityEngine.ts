@@ -46,6 +46,7 @@ export function computeLevelState(data: TopicData, levelId: number): LevelState 
       ...t,
       description: getVersion(t, levelId) ?? '',
       isNew: t.firstLevel === levelId,
+      isDeepened: t.firstLevel < levelId && Object.keys(t.versions).map(Number).includes(levelId),
     }))
     .filter(t => t.description !== '');
 

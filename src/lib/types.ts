@@ -121,7 +121,7 @@ export interface TopicData {
 /** Ergebnis der Engine für die UI */
 export interface LevelState {
   level: Level;
-  thinkers: Array<Thinker & { description: string; isNew: boolean }>;
+  thinkers: Array<Thinker & { description: string; isNew: boolean; isDeepened: boolean }>;
   influences: Array<Influence & { description: string }>;
   concepts: Array<Concept & { description: string; isNew: boolean }>;
   context: string | null;
