@@ -57,27 +57,27 @@ Wenn die Library-Page diese Architektur sichtbar macht, gewinnt sie:
 
 Beim Sortieren der Eingangs-Fragen ist klar geworden: ein Tableau spricht mit **drei Stimmen**, jede mit einer eigenen Funktion. Wenn die Stimmen ineinanderfallen, entsteht Redundanz; wenn sie klar getrennt sind, entsteht eine erlebbare Vertiefung.
 
-### `subtitle` — die öffentliche Stimme
+### `subtitle` — die einladende Stimme
 
-Erscheint in der **Library-Card und im Tableau-Kopf** — die erste Frage, die der Nutzer überhaupt sieht. Lebensweltlich, einladend, eine offene Frage. Sie wirbt nicht reißerisch, aber sie zieht hinein.
+Erscheint in der **Library-Card und im Tableau-Kopf** — die erste Frage, die der Nutzer überhaupt sieht. Atmosphärisch, einladend. Format: kurze Aussage gefolgt von einer offenen Frage als Echo.
 
 Beispiele:
-- *Wer denkt, wenn ich denke?* (Geist)
-- *Was bin ich wirklich — Wesen, Geschichte oder Illusion?* (Selbst)
-- *Was ist da draußen wirklich los, wenn ich nicht hinschaue?* (Realismus)
-- *Wie wollen wir leben?* (Ethik)
+- *Das Rätsel im Kopf — Wo wird aus Materie eigentlich Gefühl?* (Geist)
+- *Die Suche nach dem Kern — Wer bist du, wenn du alles weglässt?* (Selbst)
+- *Wo endet die Welt und wo beginnst du?* (Realismus)
+- *Das Gewicht deiner Freiheit.* (Ethik)
 
 Eine Stimme, eine Quelle — der Subtitle wird **nicht** auf Library-Card und Tableau separat gepflegt. Die Library-Card liest direkt aus dem JSON.
 
-### `intro` — die dichtere Stimme
+### `intro` — die zuspitzende Stimme
 
-Erscheint im Tableau auf L1 als zweite Eingangsfrage. Direkter, du-orientiert, eine Spur emotionaler. Sie nimmt den Nutzer, der schon eingetreten ist, und positioniert ihn vor der Tableau-Karte.
+Erscheint im Tableau auf L1 als zweite Eingangsfrage. Direkter, eine konkrete Du-Frage. Sie nimmt den Nutzer, der schon eingetreten ist, und stellt ihm die Tableau-Spannung am eigenen Leib.
 
 Beispiele:
 - *Wenn du Schmerz fühlst — was passiert da eigentlich?* (Geist)
-- *Bin ich ein Kern, den ich freilege — oder ein Muster, das ich gerade bin?* (Selbst)
-- *Wo stehst du, wenn die alten Gewissheiten weichen?* (Realismus)
-- *Was sollst du tun, wenn du frei bist?* (Ethik)
+- *Bin ich ein Kern, den ich freilegen kann — oder ein Muster, das ich gerade bin?* (Selbst)
+- *Kannst du der Welt trauen, oder beginnt sie erst in deinem Kopf?* (Realismus)
+- *Was sollst du tun, wenn es keine einfache Antwort gibt?* (Ethik)
 
 Wichtig: Intro **nimmt nicht die Synthese vorweg**. Sie stellt die Frage, an der sich die Pole abarbeiten — sie nennt die Pole nicht. Auflösung bleibt der Synthese vorbehalten.
 
@@ -94,24 +94,36 @@ Drei Stimmen, drei Funktionen, drei Orte:
 | Stimme | Wo | Funktion |
 |---|---|---|
 | `subtitle` | Library-Card + Tableau-Kopf | einladen, hineinziehen |
-| `intro` | Tableau auf L1 | positionieren, ankommen |
+| `intro` | Tableau auf L1 | zuspitzen, am Leib stellen |
 | `synthesis` | Tableau auf L5 | auflösen, landen |
 
 Das ist der Bogen, den die Sanctum-Vision verlangt: Punkte setzen, Erkenntnisse landen lassen. Subtitle ist der Punkt, an dem das Thema sich dem Nutzer anbietet; Intro ist der Punkt, an dem das Thema ihn ankommen lässt; Synthese ist der Punkt, an dem es sich schließt.
 
 ---
 
-## Personalpronomen als Architektur-Signal
+## Du-Konsistenz als Sammlung-Signatur
 
-Bei der Subtitle-Wahl wurde sichtbar: Die vier Tableaus sprechen mit verschiedenen Personalpronomen, und das ist kein Zufall.
+Beim Sortieren der Eingangsfragen ist eine Versuchung sichtbar geworden, die nicht trägt: die Idee, dass Personalpronomen architektur-tragend sein müssten — *ich* für Innenfragen (Geist, Selbst), *du* für die Welt-Frage (Realismus), *wir* für die Gemeinschafts-Frage (Ethik).
 
-- **Geist** und **Selbst** sprechen "ich" — Innenfragen
-- **Realismus** spricht "du" — eine Du-Frage, Standpunkt zur Welt
-- **Ethik** spricht "wir" — die einzige Wir-Frage, gemeinsame Sache
+Was sich beim wirklichen Schreiben gezeigt hat: Diese Pronomen-Architektur klingt sauber, fühlt sich aber inkonsistent an. Die Sammlung wird durch die **einheitliche Du-Adressierung** stärker — alle vier Tableaus sprechen den Nutzer direkt an. Das gewinnt an Konsistenz und Direktheit; das *wir* in *"Wie wollen wir leben?"* (Ethik-Vorform) fiel in die Lehrbuch-Falle, weil es vom Nutzer wegging in eine abstrakte Gemeinschaft.
 
-Das spiegelt die Reichweite der jeweiligen Frage: Wo Erkenntnis individuell ist (Geist, Selbst), wo sie eine Welt befragt (Realismus), wo sie eine Gemeinschaft bindet (Ethik).
+**Sammlungs-Signatur:** Subtitle und Intro sprechen "du". Die Synthese auf L5 darf anders sprechen — sie ist kuratorisch, nicht einladend. Aber an der Tür spricht das Tableau persönlich.
 
-Bei künftigen Tableaus diese Linse anwenden: Wenn das Personalpronomen nicht "selbstverständlich" trifft, ist das Tableau möglicherweise nicht klar genug verortet. *Politische Philosophie* wird vermutlich "wir" sprechen, wie Ethik. Ein Tableau über *Schönheit* könnte "ich" oder "du" sein. *Geschichte* möglicherweise "wir".
+Diese Erkenntnis ist eine Revision: In einer früheren Fassung dieser Notiz hatte ich Personalpronomen als Architektur-Signal benannt. Die Du-Konsistenz ist die ehrlichere Beobachtung.
+
+---
+
+## Methodische Notiz: Externer Blick als Korrektur-Vehikel
+
+Bei der Subtitle-Findung wurden zwei Iterationen mit Gemini gegengeprüft. Die Befunde haben den Wurf substanziell verbessert:
+
+- **"Lehrbuch-Falle" bei Ethik** *("Wie wollen wir leben?")* — wäre Schulbuch-Sprache geworden
+- **"Philosophie-Kopf-Satz" bei Geist** *("Wer denkt, wenn ich denke?")* — clever, aber ohne Berührung
+- **Aufzählungs-Subtitle bei Selbst** *("Wesen, Geschichte oder Illusion")* — wie ein Inhaltsverzeichnis
+
+Diese Diagnosen kamen nicht aus dem eigenen Kopf, sondern aus dem externen Blick. Sie haben den Ensemble-Wurf merklich verbessert. Lesson: Bei textlichen Schlüsselelementen (Subtitle, Intro, Synthese) lohnt sich ein zweiter Blick durch eine andere Stimme, bevor man sich auf eine Formulierung festlegt. Ähnlich wie beim verteilten Mild-Modus mit getrennten Architekt/Prüfer-Chats — nur auf der textlichen Mikro-Ebene.
+
+Wichtig: Nicht alles übernehmen, was die andere Stimme vorschlägt. Bei Realismus war Geminis Frage *"Kannst du der Welt trauen, wenn sie erst in deinem Kopf zu einer Welt wird?"* stilistisch stark, aber konstruktivistisch gefärbt — sie nahm einen Pol der Achse vorweg. Die abgemilderte Form *"...oder beginnt sie erst in deinem Kopf?"* erhält die Stärke, behält die Neutralität.
 
 ---
 
@@ -120,10 +132,24 @@ Bei künftigen Tableaus diese Linse anwenden: Wenn das Personalpronomen nicht "s
 1. **Erkenntnis-Trias geschlossen** — Geist, Selbst, Realismus bilden ein vollständiges Feld
 2. **Handlungs-Spur offen** — Ethik allein, wartet auf Politische Philosophie
 3. **Library-Architektur sichtbar machen** ist Folgearbeit, lohnt erst bei zwei Handlungs-Tableaus
-4. **Drei Stimmen pro Tableau** — Subtitle (öffentlich), Intro (dicht), Synthese (landend)
-5. **Personalpronomen als Architektur-Signal** — Reichweite der Frage wird in der Sprache hörbar
+4. **Drei Stimmen pro Tableau** — Subtitle (einladend), Intro (zuspitzend), Synthese (landend)
+5. **Du-Konsistenz als Sammlung-Signatur** — Subtitle und Intro sprechen einheitlich "du", nicht gemischte Pronomen
+6. **Externer Blick als Korrektur-Vehikel** — bei Schlüsselelementen lohnt sich ein zweiter Blick
 
 Diese Punkte sind keine ToDo-Liste, sondern Leitlinien. Sie helfen, beim nächsten Tableau-Bau zu wissen, wo der neue Knoten in die Sammlung hineinwächst.
+
+---
+
+## Finales Ensemble der Eingangsfragen
+
+Nach Iteration und externer Prüfung:
+
+| Tableau | Subtitle | Intro |
+|---|---|---|
+| **Selbst** | Die Suche nach dem Kern — Wer bist du, wenn du alles weglässt? | Bin ich ein Kern, den ich freilegen kann — oder ein Muster, das ich gerade bin? |
+| **Geist** | Das Rätsel im Kopf — Wo wird aus Materie eigentlich Gefühl? | Wenn du Schmerz fühlst — was passiert da eigentlich? |
+| **Realismus** | Wo endet die Welt und wo beginnst du? | Kannst du der Welt trauen, oder beginnt sie erst in deinem Kopf? |
+| **Ethik** | Das Gewicht deiner Freiheit. | Was sollst du tun, wenn es keine einfache Antwort gibt? |
 
 ---
 
@@ -133,7 +159,7 @@ Aus dieser Notiz ergeben sich zwei neue Items für `backlog.md`:
 
 1. **Library-Architektur sichtbar machen** — Frontend-Aufgabe, ausgelöst sobald Politische Philosophie live ist. Trennende Kapitelmarkierungen oder klare Reihen-Logik.
 
-2. **Stimm-Hierarchie als Konvention** in `prompts/mild-mode.md` aufnehmen — Subtitle (öffentlich, lebensweltlich), Intro (dicht, du-orientiert), Synthese (landend, kuratorisch). Künftige Tableaus folgen dieser Dreiteilung.
+2. **Stimm-Hierarchie als Konvention** in `prompts/mild-mode.md` aufnehmen — Subtitle (einladend, atmosphärisch, Du-Form), Intro (zuspitzend, direkte Du-Frage), Synthese (landend, kuratorisch). Künftige Tableaus folgen dieser Dreiteilung.
 
 Außerdem sind folgende Backlog-Items durch diese Klärung **erledigt** oder **präzisiert:**
 
