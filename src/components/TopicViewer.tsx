@@ -203,6 +203,15 @@ export default function TopicViewer({ data }: Props) {
       {/* ── Main content ── */}
       <main className="main-content min-w-0">
 
+        {data.topic.intro && (
+          <p
+            className="font-body italic text-[17px] leading-relaxed px-4 sm:px-5 mb-5"
+            style={{ color: 'var(--accent)' }}
+          >
+            {data.topic.intro}
+          </p>
+        )}
+
         {levelId === data.topic.complexityLevels && data.topic.synthesis && (
           <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-[--hairline] bg-[--bg-raised] mb-6 items-start">
             <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-[--gold] pt-0.5 shrink-0">

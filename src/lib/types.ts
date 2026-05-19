@@ -18,6 +18,7 @@ export interface Topic {
   id: string;
   title: string;
   subtitle?: string;
+  intro?: string;           // lebensweltliche Einstiegsfrage, sichtbar ab L1
   era?: string;             // freier Tag, z.B. "Antike – 21. Jh."
   theme?: TopicTheme;
   complexityLevels: number; // typischerweise 5

@@ -3,6 +3,7 @@
     "id": "das-selbst",
     "title": "Die Landkarte des Selbst",
     "subtitle": "Was ist das Ich? Von antiker Essenz bis zur neurokognitiven Simulation.",
+    "intro": "Bin ich ein Kern, den ich freilege — oder ein Muster, das ich gerade bin?",
     "theme": {
       "accent": "oklch(0.42 0.12 295)",
       "accentSoft": "oklch(0.42 0.12 295 / 0.15)"
