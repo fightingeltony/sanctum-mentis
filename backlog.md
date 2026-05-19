@@ -91,23 +91,30 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] Lebensweltliche Eingangs-Anker prüfen
-**Status:** vorgeschlagen 10.5.26
-**Kontext:** Tableau-Subtitles sind teilweise akademisch formuliert. Die Sanctum-Vision verlangt lebensweltliche Anker, die einen Nutzer bei einer Frage abholen, die er selbst hat. *Lebensfragen sind die kraftvollste Form von "Ein Thema zu Ende denken"*.
-**Beispiel:** Geistphilosophie könnte statt "Vom Gespenst in der Maschine zur Architektur des Selbst" etwas wie "Wenn ich Schmerz fühle — was passiert da eigentlich?" tragen. (Beispiel, nicht festgelegt.)
-**Nächster Schritt:** Bestandstableaus prüfen, gegebenenfalls Subtitle überarbeiten.
+### [x] Lebensweltliche Eingangs-Anker prüfen
+**Status:** implementiert 19.5.26
+**Kontext:** Tableau-Subtitles sind teilweise akademisch formuliert. Die Sanctum-Vision verlangt lebensweltliche Anker, die einen Nutzer bei einer Frage abholen, die er selbst hat.
+**Resultat:** `topic.intro`-Feld eingeführt (optional, immer sichtbar, kursiv in Akzentfarbe). Alle vier Tableaus befüllt: "Wenn du Schmerz fühlst — was passiert da eigentlich?" / "Bin ich ein Kern, den ich freilege — oder ein Muster, das ich gerade bin?" / "Wo stehst du, wenn die alten Gewissheiten weichen?" / "Was sollst du tun, wenn du frei bist?"
 
 ---
 
 ### [x] Annotation-Rendering als Tooltip statt Inline
-**Status:** implementiert 17.5.26 — siehe "Zuletzt abgeschlossen"
+**Status:** implementiert 17.5.26, erweitert 19.5.26
+**Erweiterung 19.5.26:** Tooltips auf allen Levels (nicht nur L1), Colon-vor-Dash-Priorität in Parser, Markdown-Italic (`*text*` → `<em>`), Mobile-Overflow-Fix (translateX), Tailwind-v4-CSS-Variable-Bug behoben.
+
+---
+
+### [x] Stufen-Wechsel-Indikator
+**Status:** implementiert 19.5.26
+**Kontext:** Beim Slider-Wechsel gab es kein Signal wenn ein bestehender Knoten einen tieferen Text bekommt — nur `NEU` für neue Knoten.
+**Resultat:** Zwei komplementäre Signale: (1) `↑ Vertieft`-Tag auf der Karte + Filter-Button (permanent, für Denker mit `firstLevel < levelId && versions[levelId]` existiert). (2) Fade-Animation (400ms opacity+translateY) bei jedem Textwechsel — auch für neue Knoten. Beides in `ThinkerList.tsx`, `isDeepened` in `complexityEngine.ts`.
 
 ---
 
 ### [ ] Glossar-Tab (Tab V) aktivieren
-**Status:** identifiziert 14.5.26 durch Vergleich mit Carta Librorum
-**Kontext:** Carta Librorum hat fünf Tabs (inkl. Glossar), Sanctum hat nur drei (Denker / Netz / Karte). Engine bietet die zusätzlichen Tabs offenbar. Glossar-Tab würde alle Annotationen des Tableaus zentral sammeln — komplementär zum Annotation-Tooltip: Tooltip löst Lese-Stolper-Problem, Glossar bietet zentrale Übersicht.
-**Nächster Schritt:** Klären, ob Engine den Tab schon unterstützt oder neu gebaut werden muss.
+**Status:** identifiziert 14.5.26, Priorität erhöht 19.5.26
+**Kontext:** Carta Librorum hat fünf Tabs (inkl. Glossar), Sanctum hat nur drei (Denker / Netz / Karte). Nach v2-Erweiterung: 173+ Annotationen über vier Tableaus (Geist 73, Realismus 37, Selbst 42, Ethik 21). Das lohnt einen zentralen Glossar-Tab deutlich mehr als bei Identifikation.
+**Nächster Schritt:** Klären, ob Engine den Tab schon unterstützt oder neu gebaut werden muss. Alle `[[Begriff:Erklärung]]`-Paare aus dem JSON extrahieren, alphabetisch oder nach Schule gruppieren.
 
 ---
 
@@ -210,11 +217,9 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] Frage hinter der Frage als viertes Eingangs-Element
-**Status:** Idee 14.5.26, setzen lassen
-**Kontext:** Jedes Tableau hat drei Eingangs-Elemente: Titel, Subtitle, Synthese (L5). Vorschlag: viertes Element — die Lebensfrage hinter der akademischen Frage. Nicht das Thema, sondern der Anker, der es dringlich macht. Beispiele: *Geist: Was unterscheidet einen Schmerz von der Information über einen Schmerz? / Selbst: Kann ich mich ändern, oder bin ich festgelegt? / Realismus: Wo stehe ich, wenn die alten Gewissheiten weichen?*
-**Doppelter Nutzen:** (1) Für Nutzer — in fünf Sekunden entscheidbar, ob das Tableau gerade brennt. (2) Für Kurator — eingebauter Resonanzcheck: wenn die Frage nicht formulierbar ist, ist das Tableau möglicherweise zu früh.
-**Nächster Schritt:** Beim Ethik-Bau als Testfrage einbauen. Erst wenn die Idee noch glüht — eine Woche liegen lassen.
+### [x] Frage hinter der Frage als viertes Eingangs-Element
+**Status:** implementiert 19.5.26 via `topic.intro`-Feld — zusammengelegt mit "Lebensweltliche Eingangs-Anker"
+**Kontext:** Das `intro`-Feld löst beide Items in einem: lebensweltlicher Anker + Frage hinter der Frage. Alle vier Tableaus befüllt. Synthese bleibt auf L5.
 
 ---
 

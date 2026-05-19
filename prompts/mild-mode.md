@@ -33,15 +33,46 @@ Architekt-Inquisitor-Schleife verlangt.
   noch X, Y, Z" wird nicht bedient. Lieber zehn Knoten, die tragen,
   als sechzehn, die das Bild verwischen.
 
+## Mehrstufige Texte — Pflicht, nicht Option
+
+Mild-Modus heißt **nicht** "ein Text pro Knoten". Fast jeder Knoten
+bekommt zwei Texte auf verschiedenen Stufen, Hubs drei.
+
+**Faustregel:**
+- Hubs (4+ Influences, strukturelle Mitte des Tableaus) → drei Stufen
+- Alle anderen Knoten → zwei Stufen
+- Solo-L5-Knoten (erscheinen erst auf L5) → eine Stufe, dicht
+
+Der Slider hat damit Tiefenfunktion (Text wächst) *zusätzlich* zur
+Sichtbarkeitsfunktion (neue Knoten erscheinen).
+
+## Tonalität nach Stufe
+
+**L1:** Didaktisch — Konzept einführen, Begriffe erklären, den Knoten
+zugänglich machen. Leser hat das Fachvokabular noch nicht.
+
+**L3–L5:** Tableau-positionierend — Wirkungslinien, Streitstellen,
+Konvergenzen, Hub-Stellung zeigen. Nicht den Denker *erklären*,
+sondern zeigen, *wo er im Feld steht* und woran sich andere an ihm
+abarbeiten. Die Tonalitäts-Verschiebung ist tableau-spezifisch —
+analytisch bei Geist, lebensweltlich-meditativ bei Selbst,
+nüchtern-kuratorisch bei Ethik.
+
 ## Stilistische Konventionen
 
-- L1-Annotationen mit `[[doppelten eckigen Klammern]]` für Fachbegriffe
+- Annotationen mit `[[Begriff:Erklärung]]` auf **allen** Stufen, wo
+  ein Fachbegriff erstmals eingeführt wird — nicht nur auf L1.
+  Solo-L5-Knoten brauchen besonders viele (kein L1-Vorlauf).
+  Sparsamkeitsprinzip: Tooltip nur wenn der Leser ohne Erklärung den
+  Satz nicht versteht oder den Cluster verliert.
 - 4–6 Sätze pro Knoten auf der jeweiligen Einstiegs-Stufe
 - Schools sind Traditionen, denen mehrere Denker angehören können —
   NICHT umetikettierte Personen
 - Influence-Typen: `influence`, `critique`, `parallel`, `rejection`
 - Schulen-Labels: akademisch korrekt, aber wo möglich lebensweltlich
   verständlich (siehe Backlog-Item "Schulen-Labels überarbeiten")
+- **Influence-Stufungs-Regel:** Eine Kante darf nie früher erscheinen
+  als der spätere ihrer Endpunkte. Nach jedem Bau validieren.
 
 ## Synthese-Text (L5)
 
