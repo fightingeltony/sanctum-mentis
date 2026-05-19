@@ -30,6 +30,7 @@ function FadingParagraph({ text, level, className, style }: {
 interface ThinkerWithDesc extends Thinker {
   description: string
   isNew: boolean
+  isDeepened: boolean
 }
 
 interface Props {
