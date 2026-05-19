@@ -24,8 +24,11 @@ function tryInlineSplit(content: string): { term: string; definition: string } |
 
 function AnnotationTooltip({ term, definition }: { term: string; definition: string }) {
   const [open, setOpen] = useState(false)
+  const [nudge, setNudge] = useState(0)
   const ref = useRef<HTMLSpanElement>(null)
+  const tooltipRef = useRef<HTMLSpanElement>(null)
 
+  // Close on outside click
   useEffect(() => {
     if (!open) return
     function handleClick(e: MouseEvent) {
@@ -35,6 +38,20 @@ function AnnotationTooltip({ term, definition }: { term: string; definition: str
     }
     document.addEventListener('click', handleClick)
     return () => document.removeEventListener('click', handleClick)
+  }, [open])
+
+  // Nudge tooltip back into viewport if it overflows left or right edge
+  useEffect(() => {
+    if (!open || !tooltipRef.current) return
+    const MARGIN = 8
+    const rect = tooltipRef.current.getBoundingClientRect()
+    if (rect.right > window.innerWidth - MARGIN) {
+      setNudge(-(rect.right - window.innerWidth + MARGIN))
+    } else if (rect.left < MARGIN) {
+      setNudge(MARGIN - rect.left)
+    } else {
+      setNudge(0)
+    }
   }, [open])
 
   return (
@@ -56,12 +73,14 @@ function AnnotationTooltip({ term, definition }: { term: string; definition: str
       </span>
       {open && (
         <span
+          ref={tooltipRef}
           role="tooltip"
           className="absolute top-full left-0 z-50 mt-1 w-60 max-w-[min(240px,80vw)] rounded px-3 py-2 text-[0.82em] leading-snug shadow-lg"
           style={{
             background: 'oklch(0.26 0.020 65)',
             color: 'oklch(0.92 0.015 80)',
             border: '1px solid oklch(0.35 0.020 65)',
+            transform: nudge !== 0 ? `translateX(${nudge}px)` : undefined,
           }}
         >
           {definition}
