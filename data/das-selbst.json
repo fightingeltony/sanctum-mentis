@@ -2,7 +2,7 @@
   "topic": {
     "id": "das-selbst",
     "title": "Die Landkarte des Selbst",
-    "subtitle": "Was ist das Ich? Von antiker Essenz bis zur neurokognitiven Simulation.",
+    "subtitle": "Was bin ich wirklich — Wesen, Geschichte oder Illusion?",
     "intro": "Bin ich ein Kern, den ich freilege — oder ein Muster, das ich gerade bin?",
     "theme": {
       "accent": "oklch(0.42 0.12 295)",
@@ -13,12 +13,16 @@
       "axisX": {
         "label": "Natur des Selbst",
         "left": "Substanz & Konstanz",
-        "right": "Prozess & Fluidität"
+        "leftHint": "ein bleibender Kern",
+        "right": "Prozess & Fluidität",
+        "rightHint": "ein wandelnder Vollzug"
       },
       "axisY": {
         "label": "Erkenntnisrahmen",
         "top": "Spirituell & Transpersonal",
-        "bottom": "Wissenschaftlich & Psychologisch"
+        "topHint": "östliche und mystische Traditionen",
+        "bottom": "Wissenschaftlich & Psychologisch",
+        "bottomHint": "moderne empirische Zugänge"
       }
     },
     "synthesis": "Alle Denker dieses Tableaus kreisen um eine Grundfrage: Gibt es ein Selbst, das vor der Erfahrung steht — oder entsteht es erst in ihr? Die westliche Tradition sucht ein stabiles Zentrum (Descartes, Freud, Jung); östliche Traditionen und Neurowissenschaft bestreiten es (Buddha, Metzinger). Bindungstheorie und Entwicklungspsychologie verschieben den Fokus: nicht Was ist das Selbst?, sondern Wie entsteht es — und warum bricht es manchmal zusammen? Das Selbst ist kein Ding, aber auch keine bloße Illusion. Es ist ein Prozess — und du bist mitten darin."

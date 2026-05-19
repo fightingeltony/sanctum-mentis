@@ -1,22 +1,28 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Command } from 'cmdk'
-import type { Thinker, School } from '@/lib/types'
-
-interface ThinkerWithDesc extends Thinker {
-  description: string
-}
+import { buildGlobalSearchIndex, normalize } from '@/lib/searchIndex'
+import type { SearchEntry } from '@/lib/searchIndex'
 
 interface Props {
   open: boolean
   onClose: () => void
-  thinkers: ThinkerWithDesc[]
-  schools: School[]
-  onSelect: (thinkerId: string) => void
 }
 
-export default function CommandPalette({ open, onClose, thinkers, schools, onSelect }: Props) {
+const TYPE_LABEL: Record<SearchEntry['type'], string> = {
+  thinker: 'Denker',
+  concept: 'Konzept',
+  school:  'Schule',
+}
+
+export default function CommandPalette({ open, onClose }: Props) {
+  const router     = useRouter()
+  const allEntries = useMemo(() => buildGlobalSearchIndex(), [])
+  const [search, setSearch] = useState('')
+
+  /* Close on Escape */
   useEffect(() => {
     if (!open) return
     function onKey(e: KeyboardEvent) {
@@ -26,7 +32,36 @@ export default function CommandPalette({ open, onClose, thinkers, schools, onSel
     return () => window.removeEventListener('keydown', onKey)
   }, [open, onClose])
 
+  /* Reset search when palette opens */
+  useEffect(() => {
+    if (open) setSearch('')
+  }, [open])
+
+  function handleSelect(entry: SearchEntry) {
+    onClose()
+
+    const params = new URLSearchParams()
+    if (entry.type === 'thinker') {
+      params.set('highlight', entry.nodeId)
+      params.set('tab', 'denker')
+    } else if (entry.type === 'concept') {
+      params.set('tab', 'quadrant')
+    } else {
+      // school → denker tab with school visible
+      params.set('tab', 'denker')
+    }
+    if (entry.firstLevel !== undefined) {
+      params.set('level', String(entry.firstLevel))
+    }
+
+    router.push(`/thema/${entry.topicId}?${params.toString()}`)
+  }
+
   if (!open) return null
+
+  const hits = search.trim()
+    ? allEntries.filter(e => normalize(e.name).includes(normalize(search)))
+    : []
 
   return (
     <div
@@ -39,13 +74,19 @@ export default function CommandPalette({ open, onClose, thinkers, schools, onSel
         style={{ background: 'var(--bg-raised)', boxShadow: '0 24px 64px oklch(0.15 0.020 65 / 0.30)' }}
         onClick={e => e.stopPropagation()}
       >
-        <Command>
-          <div className="flex items-center gap-3 px-5 border-b border-[--hairline]"
-            style={{ paddingTop: '14px', paddingBottom: '14px' }}>
+        <Command shouldFilter={false} loop>
+
+          {/* ── Search input ── */}
+          <div
+            className="flex items-center gap-3 px-5 border-b border-[--hairline]"
+            style={{ paddingTop: '14px', paddingBottom: '14px' }}
+          >
             <span className="font-body text-[18px] text-[--fg-dim] leading-none select-none">⌕</span>
             <Command.Input
               autoFocus
-              placeholder="Denker suchen …"
+              value={search}
+              onValueChange={setSearch}
+              placeholder="Denker, Konzepte, Schulen …"
               className="flex-1 bg-transparent outline-none font-prose text-[16px]
                 text-[--fg] placeholder:text-[--fg-dim]"
             />
@@ -55,61 +96,53 @@ export default function CommandPalette({ open, onClose, thinkers, schools, onSel
             </kbd>
           </div>
 
-          <Command.List className="overflow-y-auto p-2" style={{ maxHeight: '400px' }}>
-            <Command.Empty className="py-12 text-center font-body italic text-[14px] text-[--fg-dim]">
-              Kein Denker gefunden.
-            </Command.Empty>
-
-            {thinkers.map(t => {
-              const school = schools.find(s => s.id === t.schoolId)
-              const color = school?.color ?? 'var(--gold)'
-              return (
+          {/* ── Results ── */}
+          <Command.List className="overflow-y-auto p-2" style={{ maxHeight: '420px' }}>
+            {!search.trim() ? (
+              <p className="py-10 text-center font-body italic text-[14px] text-[--fg-dim]">
+                Denker, Konzepte oder Schulen suchen …
+              </p>
+            ) : hits.length === 0 ? (
+              <p className="py-10 text-center font-body italic text-[14px] text-[--fg-dim]">
+                Nichts gefunden.
+              </p>
+            ) : (
+              hits.map(entry => (
                 <Command.Item
-                  key={t.id}
-                  value={t.name}
-                  onSelect={() => onSelect(t.id)}
-                  className="flex items-start gap-3 px-4 py-3 rounded-[4px] cursor-pointer
+                  key={`${entry.topicId}-${entry.type}-${entry.nodeId}`}
+                  value={`${entry.topicId}-${entry.type}-${entry.nodeId}`}
+                  onSelect={() => handleSelect(entry)}
+                  className="flex items-center gap-3 px-4 py-3 rounded-[4px] cursor-pointer
                     aria-selected:bg-[--bg-sunk] outline-none"
                 >
-                  <span
-                    className="w-[3px] self-stretch rounded-full shrink-0 mt-0.5"
-                    style={{ background: color }}
-                  />
-
                   <div className="flex flex-col gap-0.5 min-w-0 flex-1">
-                    <div className="flex items-baseline gap-2 min-w-0 flex-wrap">
-                      <span className="font-prose font-medium text-[14px] text-[--fg] leading-tight">
-                        {t.name}
+                    {/* Name + type badge */}
+                    <div className="flex items-baseline justify-between gap-3 min-w-0">
+                      <span className="font-prose font-medium text-[14px] text-[--fg] leading-tight truncate">
+                        {entry.name}
                       </span>
-                      {t.lifespan && (
-                        <span className="font-ui text-[9px] tracking-[0.10em] text-[--fg-dim]">
-                          {t.lifespan}
-                        </span>
-                      )}
-                      {school && (
-                        <span
-                          className="font-ui text-[9px] tracking-[0.14em] uppercase shrink-0"
-                          style={{ color }}
-                        >
-                          {school.label}
+                      <span className="font-ui text-[9px] tracking-[0.14em] uppercase text-[--fg-faint] shrink-0">
+                        {TYPE_LABEL[entry.type]}
+                      </span>
+                    </div>
+                    {/* Tableau + level */}
+                    <div className="flex items-baseline gap-1.5">
+                      <span className="font-ui text-[11px] text-[--fg-dim]">
+                        {entry.topicTitle}
+                      </span>
+                      {entry.firstLevel !== undefined && (
+                        <span className="font-ui text-[10px] tracking-[0.10em] text-[--fg-faint]">
+                          — L{entry.firstLevel}
                         </span>
                       )}
                     </div>
-                    <p className="font-prose text-[12px] text-[--fg-muted] leading-relaxed"
-                      style={{
-                        display: '-webkit-box',
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: 'vertical',
-                        overflow: 'hidden',
-                      } as React.CSSProperties}>
-                      {t.description}
-                    </p>
                   </div>
                 </Command.Item>
-              )
-            })}
+              ))
+            )}
           </Command.List>
 
+          {/* ── Footer ── */}
           <div className="flex items-center gap-4 px-5 py-2.5 border-t border-[--hairline]">
             <span className="font-ui text-[9px] tracking-[0.12em] uppercase text-[--fg-faint]">
               ↑↓ navigieren
@@ -118,9 +151,12 @@ export default function CommandPalette({ open, onClose, thinkers, schools, onSel
               ↵ öffnen
             </span>
             <span className="font-ui text-[9px] tracking-[0.12em] uppercase text-[--fg-faint] ml-auto">
-              {thinkers.length} Denker freigeschaltet
+              {allEntries.length} Einträge in {Object.keys(
+                allEntries.reduce((acc, e) => ({ ...acc, [e.topicId]: 1 }), {})
+              ).length} Tableaus
             </span>
           </div>
+
         </Command>
       </div>
     </div>

@@ -9,8 +9,16 @@ export interface TopicTheme {
 
 /** Quadranten-Achsen — definieren den 2D-Raum für Konzepte und Denker */
 export interface Quadrants {
-  axisX: { label: string; left: string; right: string };
-  axisY: { label: string; top: string;  bottom: string };
+  axisX: {
+    label: string;
+    left: string;   leftHint?: string;   // optionaler Erklär-Untertitel
+    right: string;  rightHint?: string;
+  };
+  axisY: {
+    label: string;
+    top: string;    topHint?: string;
+    bottom: string; bottomHint?: string;
+  };
 }
 
 /** Ein Themengebiet (z.B. Erkenntnistheorie, Ethik, Politische Philosophie) */

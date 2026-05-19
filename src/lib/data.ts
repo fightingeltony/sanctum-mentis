@@ -16,6 +16,10 @@ export function getTopic(id: string): TopicData | null {
   return TOPICS[id] ?? null
 }
 
+export function getAllTopics(): TopicData[] {
+  return Object.values(TOPICS)
+}
+
 export interface LibraryEntry {
   id: string
   title: string

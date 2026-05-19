@@ -8,28 +8,52 @@ import LevelSlider from './LevelSlider'
 import ThinkerList from './ThinkerList'
 import InfluenceGraph from './InfluenceGraph'
 import QuadrantPlot from './QuadrantPlot'
-import CommandPalette from './CommandPalette'
+import { useCommandPalette } from './ShellCommandPaletteProvider'
 
 type Tab = 'denker' | 'einfluesse' | 'quadrant'
 
 interface Props {
   data: TopicData
+  /** nodeId to scroll-highlight after mount — set by CommandPalette navigation */
+  initialHighlight?: string
+  /** Level to activate after mount — set by CommandPalette navigation */
+  initialLevel?: number
+  /** Tab to activate after mount — set by CommandPalette navigation */
+  initialTab?: Tab
 }
 
-export default function TopicViewer({ data }: Props) {
+export default function TopicViewer({ data, initialHighlight, initialLevel, initialTab }: Props) {
   const [levelId, setLevelId] = useState(1)
-  const [tab, setTab] = useState<Tab>('denker')
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [cmdOpen, setCmdOpen] = useState(false)
+  const [tab, setTab]         = useState<Tab>('denker')
+  const [menuOpen, setMenuOpen]     = useState(false)
   const [highlightId, setHighlightId] = useState<string | null>(null)
 
+  const palette = useCommandPalette()
+
+  /* ── Level initialisation: URL param > localStorage ── */
   useEffect(() => {
-    const saved = localStorage.getItem(`mentis:level:${data.topic.id}`)
-    if (saved !== null) {
-      const n = Math.min(Number(saved), data.topic.complexityLevels)
-      if (n >= 1) setLevelId(n)
+    if (initialLevel !== undefined && !isNaN(initialLevel) && initialLevel >= 1) {
+      const n = Math.min(initialLevel, data.topic.complexityLevels)
+      setLevelId(n)
+      localStorage.setItem(`mentis:level:${data.topic.id}`, String(n))
+    } else {
+      const saved = localStorage.getItem(`mentis:level:${data.topic.id}`)
+      if (saved !== null) {
+        const n = Math.min(Number(saved), data.topic.complexityLevels)
+        if (n >= 1) setLevelId(n)
+      }
     }
-  }, [data.topic.id, data.topic.complexityLevels])
+  }, [data.topic.id, data.topic.complexityLevels, initialLevel])
+
+  /* ── Tab + highlight from URL params ── */
+  useEffect(() => {
+    if (initialTab) setTab(initialTab)
+    if (initialHighlight) {
+      // Defer highlight until level has re-rendered so the card is in the DOM
+      const t = setTimeout(() => setHighlightId(initialHighlight), 0)
+      return () => clearTimeout(t)
+    }
+  }, [initialHighlight, initialTab])
 
   function handleLevelChange(id: number) {
     setLevelId(id)
@@ -44,42 +68,19 @@ export default function TopicViewer({ data }: Props) {
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
-  useEffect(() => {
-    function onKey(e: KeyboardEvent) {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault()
-        setCmdOpen(prev => !prev)
-      }
-    }
-    window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [])
-
   const state = useMemo(() => computeLevelState(data, levelId), [data, levelId])
 
   const tabs: { id: Tab; label: string; mobileLabel: string; numeral: string; count: number | null }[] = [
-    { id: 'denker',     label: 'Denker',     mobileLabel: 'Denker', numeral: 'I',   count: state.thinkers.length },
-    { id: 'einfluesse', label: 'Einflüsse',  mobileLabel: 'Netz',   numeral: 'II',  count: state.influences.length },
-    { id: 'quadrant',   label: 'Konzepte',   mobileLabel: 'Karte',  numeral: 'III', count: state.concepts.length },
+    { id: 'denker',     label: 'Denker',    mobileLabel: 'Denker', numeral: 'I',   count: state.thinkers.length },
+    { id: 'einfluesse', label: 'Einflüsse', mobileLabel: 'Netz',   numeral: 'II',  count: state.influences.length },
+    { id: 'quadrant',   label: 'Konzepte',  mobileLabel: 'Karte',  numeral: 'III', count: state.concepts.length },
   ]
 
   const activeIdx = Math.max(0, data.levels.findIndex(l => l.id === levelId))
-  const fillPct = data.levels.length > 1 ? (activeIdx / (data.levels.length - 1)) * 100 : 0
+  const fillPct   = data.levels.length > 1 ? (activeIdx / (data.levels.length - 1)) * 100 : 0
 
   return (
     <div className="shell">
-
-      <CommandPalette
-        open={cmdOpen}
-        onClose={() => setCmdOpen(false)}
-        thinkers={state.thinkers}
-        schools={data.schools}
-        onSelect={(id) => {
-          setCmdOpen(false)
-          setTab('denker')
-          setHighlightId(id)
-        }}
-      />
 
       {/* ── Mobile top bar ── */}
       <header className="mobile-bar">
@@ -100,8 +101,9 @@ export default function TopicViewer({ data }: Props) {
           </span>
         </div>
 
+        {/* Search button — opens the global palette via context */}
         <button
-          onClick={() => setCmdOpen(true)}
+          onClick={() => palette?.openPalette()}
           className="flex items-center justify-center w-8 h-8 text-[--fg-dim]
             hover:text-[--fg] transition-colors"
           aria-label="Suche öffnen (Cmd+K)"

@@ -13,12 +13,16 @@
       "axisX": {
         "label": "Status der Wirklichkeit",
         "left": "Realismus",
-        "right": "Konstruktivismus"
+        "leftHint": "die Welt ist unabhängig von uns da",
+        "right": "Konstruktivismus",
+        "rightHint": "die Welt entsteht in unserem Zugriff auf sie"
       },
       "axisY": {
         "label": "Erkenntnisquelle",
         "top": "Empirie & Welt",
-        "bottom": "Sprache & Kategorien"
+        "topHint": "Erkenntnis durch Wahrnehmung und Erfahrung",
+        "bottom": "Sprache & Kategorien",
+        "bottomHint": "Erkenntnis durch Begriffe und Symbolsysteme"
       }
     },
     "synthesis": "Hinter dem akademischen Streit steht eine schlichtere Frage: Wo stehst du, wenn die alten Gewissheiten weichen? Der Realismus bietet Boden — die Welt ist, wie sie ist, du musst sie nur sauber sehen. Der Konstruktivismus bietet Freiheit — was du Welt nennst, ist immer schon deine Welt, also kannst du sie anders denken. Beide Angebote haben einen Preis: Realismus tendiert zur Härte gegen abweichende Sichten, Konstruktivismus zur Schwindelfreiheit im Sinnvakuum. Was dieses Tableau dir nicht geben kann: eine Antwort auf die Frage, wo man steht. Was es dir geben kann: ein Gefühl dafür, welche Antwort welchen Preis hat — und dass die reifsten Positionen weder ganz oben noch ganz unten sitzen, sondern in den Zwischenlagen, in denen man beides aushält."

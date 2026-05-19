@@ -82,6 +82,29 @@ Bestandstableaus — meditativ, persönlich, nicht-akademisch. Kein
 neues Summary, sondern eine kuratorische Einordnung: *"Hier ist die
 Spannung, die du jetzt verstehst."*
 
+## Stimm-Hierarchie — drei Stimmen pro Tableau
+
+Jedes Tableau spricht mit drei Stimmen. Wenn sie ineinanderfallen, entsteht Redundanz; wenn sie klar getrennt sind, entsteht eine erlebbare Vertiefung.
+
+| Stimme | Wo | Funktion |
+|---|---|---|
+| `subtitle` | Library-Card + Tableau-Kopf | einladen, hineinziehen |
+| `intro` | Tableau auf L1 | positionieren, ankommen |
+| `synthesis` | Tableau auf L5 | auflösen, landen |
+
+**`subtitle`** — die öffentliche Stimme. Lebensweltlich, einladend, eine offene Frage. Erscheint sowohl in der Library-Card als auch im Tableau-Kopf — **eine Quelle, kein Duplikat**. Nicht reißerisch, aber zieht hinein.
+
+**`intro`** — die dichtere Stimme. Direkter, du-orientiert, eine Spur emotionaler. Stellt die Frage, an der sich die Pole abarbeiten — nennt die Pole nicht. Auflösung bleibt der Synthese vorbehalten. Muss eine **andere** Frage sein als der Subtitle.
+
+**`synthesis`** — die landende Stimme. Kuratorisch, nicht didaktisch. Benennt am Schluss den Kern-Schmerz oder die Kern-Spannung, ohne sie aufzulösen. *"Hier ist die Spannung, die du jetzt verstehst."*
+
+**Prüffragen vor dem Bau:**
+1. Ist der Subtitle lebensweltlich genug für eine Library-Card?
+2. Ist das Intro eine andere Frage als der Subtitle — oder dasselbe in anderen Worten?
+3. Löst die Synthese auf, was Subtitle und Intro aufgemacht haben?
+
+**Personalpronomen als Signal:** Innenfragen sprechen "ich" (Geist, Selbst), Weltfragen "du" (Realismus), Gemeinschaftsfragen "wir" (Ethik, Politische Philosophie). Wenn das Pronomen nicht selbstverständlich trifft, ist das Tableau möglicherweise nicht klar genug verortet.
+
 ## Lieferform
 
 JSON nach dem Schema der Bestandstableaus. Zusätzlich kurze

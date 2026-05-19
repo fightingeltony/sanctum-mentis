@@ -2,6 +2,14 @@
 
 ## Zuletzt abgeschlossen
 
+### [x] v2-Erweiterung aller vier Tableaus + Subtitle-Synchronisation
+**Datum:** 18.–19.5.26
+**Resultat:** Vier Etappen in einer Session: (1) Annotations-Syntax durchgängig auf `[[Begriff:Erklärung]]` mit Doppelpunkt-Trenner. (2) Mehrstufige Texte ergänzt (Mild-Modus-Konvention als Regel). (3) Tooltips über alle Stufen L1–L5 verteilt (vorher konzentriert auf L1–L2). (4) Alle vier Subtitles auf lebensweltliche Fragen umgestellt; `data/library.json` synchronisiert. Sammelbeleg: `v2-erweiterung.md` im Repo-Root.
+
+### [x] Ethik-Tableau — Vollbau + Integration
+**Datum:** 19.5.26
+**Resultat:** `data/ethik.json` (13 Denker, 10 Konzepte, Kant/Aristoteles/Mill als Hubs). In `src/lib/data.ts` importiert, `data/library.json` als `"available"` freigeschaltet. Verteilter Mild-Modus, Begleitnotiz dokumentiert Kuratorentscheidungen. Bildet Handlungs-Spur neben der Erkenntnis-Trias.
+
 ### [x] Das Selbst — Content-Erweiterung
 **Datum:** 12.5.26
 **Resultat:** Alle 15 Denker und 11 Konzepte auf 4–6 Sätze ausgebaut. L1-Annotationen für Vedanta, Buddhismus, Atman, Anatta. Kurze Einfluss-Einträge (vedanta-buddhismus, buddhismus-jung, jung-metzinger, buddhismus-barrett, jung-ifs) auf 3–4 Sätze erweitert. Meditative Stimme des Tableaus erhalten — kein Inquisitor-Lauf.
@@ -96,6 +104,11 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Kontext:** Tableau-Subtitles sind teilweise akademisch formuliert. Die Sanctum-Vision verlangt lebensweltliche Anker, die einen Nutzer bei einer Frage abholen, die er selbst hat.
 **Resultat:** `topic.intro`-Feld eingeführt (optional, immer sichtbar, kursiv in Akzentfarbe). Alle vier Tableaus befüllt: "Wenn du Schmerz fühlst — was passiert da eigentlich?" / "Bin ich ein Kern, den ich freilege — oder ein Muster, das ich gerade bin?" / "Wo stehst du, wenn die alten Gewissheiten weichen?" / "Was sollst du tun, wenn du frei bist?"
 
+### [x] Subtitle-Synchronisation — eine einzige Quelle
+**Status:** implementiert 19.5.26
+**Kontext:** Library-Card und Topic-JSON pflegten teilweise abweichende Subtitle-Texte (insbesondere Ethik: Library "Was sollen wir tun?", JSON leer). Außerdem waren alle vier Subtitles noch akademisch-deskriptiv statt lebensweltlich.
+**Resultat:** Alle vier Tableau-Subtitles überarbeitet (lebensweltlich, einladend): *"Wer denkt, wenn ich denke?"* (Geist) / *"Was bin ich wirklich — Wesen, Geschichte oder Illusion?"* (Selbst) / *"Was ist da draußen wirklich los, wenn ich nicht hinschaue?"* (Realismus, unverändert) / *"Wie wollen wir leben?"* (Ethik). `data/library.json` manuell synchronisiert — `subtitle` in beiden Quellen identisch gehalten. `bibliothek-architektur.md` dokumentiert die Stimm-Hierarchie (Subtitle → Intro → Synthese) und liegt jetzt im Repo-Root.
+
 ---
 
 ### [x] Annotation-Rendering als Tooltip statt Inline
@@ -108,6 +121,22 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Status:** implementiert 19.5.26
 **Kontext:** Beim Slider-Wechsel gab es kein Signal wenn ein bestehender Knoten einen tieferen Text bekommt — nur `NEU` für neue Knoten.
 **Resultat:** Zwei komplementäre Signale: (1) `↑ Vertieft`-Tag auf der Karte + Filter-Button (permanent, für Denker mit `firstLevel < levelId && versions[levelId]` existiert). (2) Fade-Animation (400ms opacity+translateY) bei jedem Textwechsel — auch für neue Knoten. Beides in `ThinkerList.tsx`, `isDeepened` in `complexityEngine.ts`.
+
+---
+
+### [ ] Library-Architektur sichtbar machen
+**Status:** identifiziert 19.5.26, zurückgestellt bis Politische Philosophie live
+**Kontext:** Die vier Tableaus bilden keine zufällige Liste — sie ordnen sich in zwei Gruppen: Erkenntnis-Trias (Geist / Selbst / Realismus: Akt, Subjekt, Objekt der Erkenntnis) und Handlungs-Spur (Ethik + geplant: Politische Philosophie). Diese Architektur ist kuratorische Entscheidung — sichtbar machen würde der Library-Page eine zweite Bedeutungsebene geben.
+**Umsetzungsoptionen:** Trennende Kapitelmarkierungen / zwei Reihen mit klarer Bedeutung / implizite Anordnung durch Position und Abstand.
+**Bedingung:** Lohnt erst, wenn Handlungs-Spur mindestens zwei live Tableaus hat (also Politische Philosophie live). Eine Gruppe aus einem Tableau ist keine Gruppe.
+**Referenz:** `bibliothek-architektur.md` im Repo-Root.
+**Nächster Schritt:** Nach Politische Philosophie-Launch aufnehmen.
+
+---
+
+### [x] Stimm-Hierarchie als Konvention in `prompts/mild-mode.md`
+**Status:** implementiert 19.5.26
+**Resultat:** Neue Sektion "Stimm-Hierarchie — drei Stimmen pro Tableau" in `prompts/mild-mode.md`. Tabelle (Subtitle / Intro / Synthese), Prüffragen, Personalpronomen-Kompass. Referenzdokument: `bibliothek-architektur.md` im Repo-Root.
 
 ---
 
@@ -208,12 +237,10 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] Polare Eingangs-Karte — kuratorische Signatur erkannt
-**Status:** Einsicht 14.5.26
+### [x] Polare Eingangs-Karte — kuratorische Signatur erkannt
+**Status:** durch `topic.intro`-Feld umgesetzt 19.5.26
 **Kontext:** Selbstbeobachtung als Nutzer: Was funktioniert ist ein Einstieg mit polaren Gegenthesen — Atman gegen Anatta, Realismus gegen Konstruktivismus. Das Geist-Tableau hat das nicht — Eingang über Descartes als Gründungsvater, Spannungen entfalten sich erst später. Könnte erklären, warum Geist mehr Kopfschmerzen macht als die anderen beiden.
-**Mögliche Umsetzung:** Beim ersten Öffnen erscheint ein kleines Fenster: *"In diesem Tableau geht es um folgende Spannung: [Pol A] versus [Pol B]."* Drei bis fünf Sätze, klar polar, ohne Auflösung. Die Synthese bleibt auf L5.
-**Abgrenzung:** Nicht die Auflösung wandert nach vorne, sondern die Aufmachung der Spannung.
-**Nächster Schritt:** Beim nächsten Tableau-Bau bewusst polaren Eingang prüfen.
+**Resultat:** Intro-Feld löst den lebensweltlichen Anker ohne explizite Pol-Nennung — es stellt die Frage, an der sich die Pole abarbeiten, nennt die Pole aber nicht. Auflösung bleibt der Synthese vorbehalten. Explizite Pol-Nennung optional für künftige Tableaus.
 
 ---
 
@@ -372,14 +399,10 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] Ethik
-**Status:** Idee 14.5.26
-**Anker:** Schließt die Erkenntnis-Trias (Geist/Selbst/Bühne) durch eine Handlungsdimension — was tue ich, wenn ich verstanden habe, was Geist, Selbst und Welt sind? Anker-Prüfung steht noch aus: reaktiv oder gewachsen?
-**Achsen-Skizze:**
-- X: Begründungsquelle — Tugend/Charakter ↔ Regel/Pflicht/Folgen
-- Y: Geltungsbereich — Universell ↔ Situativ/Kontextuell
-**Modus:** Wahrscheinlich Mild — klassische Schulen klar, Pointe liegt in der Auseinandersetzung, nicht in akademischer Vollständigkeit. Risiko: schulische Trockenheit, wenn nicht lebensweltlich verankert.
-**Nächster Schritt:** Anker prüfen, wenn Realismus-Tableau implementiert ist. Nicht vorher bauen.
+### [x] Ethik
+**Status:** implementiert 19.5.26 (Mild-Modus, verteilter Architekt-Prüfer-Workflow)
+**Anker:** Schließt die Erkenntnis-Trias (Geist/Selbst/Bühne) durch eine Handlungsdimension — bewusst architektonisch gesetzt, nicht aus persönlichem Anker gewachsen. Das ist dokumentierte kuratorische Entscheidung.
+**Ergebnis:** 13 Denker (Aristoteles, Kant, Mill als Hubs), 10 Konzepte, 4 Achsen (Begründungsquelle / Geltungsbereich). Verteilter Mild-Modus: Begleitnotiz und v2-Erweiterung (Sammelbeleg) im Repo.
 
 ---
 

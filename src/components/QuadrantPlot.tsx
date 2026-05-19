@@ -23,9 +23,9 @@ interface Props {
   onThinkerClick?: (id: string) => void
 }
 
-const W = 980, H = 700
+const W = 980, H = 760  // taller canvas — extra 60 px bottom room for hints
 const PAD_X = 200  // wider horizontal margin to fit axis labels outside the frame
-const PAD_Y = 60
+const PAD_Y = 80   // increased from 60 — gives space for pole-hint rows
 const PIN_COLOR     = 'oklch(0.32 0.09 42)'  // dark sienna
 const PIN_SELECTED  = 'oklch(0.26 0.10 42)'
 const AXIS_COL      = 'oklch(0.35 0.022 65 / 0.55)'
@@ -35,6 +35,20 @@ const AXIS_HINT     = 'oklch(0.40 0.022 65 / 0.55)'
 // Convert normalized 0-100 (math convention: y=0 bottom) into SVG coords (y=0 top).
 function mapX(x: number) { return PAD_X + (x / 100) * (W - 2 * PAD_X) }
 function mapY(y: number) { return H - PAD_Y - (y / 100) * (H - 2 * PAD_Y) }
+
+/**
+ * Splits a hint string into at most two lines, breaking at the word closest
+ * to the midpoint. Returns a single-element array for short strings.
+ */
+function wrapHint(hint: string, maxLen = 32): [string] | [string, string] {
+  if (hint.length <= maxLen) return [hint]
+  const mid = Math.floor(hint.length / 2)
+  const after  = hint.indexOf(' ', mid)
+  const before = hint.lastIndexOf(' ', mid)
+  const cut = after !== -1 && (after - mid) <= (mid - before) ? after : before
+  if (cut <= 0) return [hint]
+  return [hint.slice(0, cut), hint.slice(cut + 1)]
+}
 
 export default function QuadrantPlot({
   concepts, totalConcepts, thinkers = [], levelId, currentLevel, quadrants, onThinkerClick,
@@ -152,54 +166,126 @@ export default function QuadrantPlot({
             <line x1={PAD_X} y1={H / 2} x2={W - PAD_X} y2={H / 2}
               stroke={AXIS_COL} strokeOpacity={0.55} strokeWidth={1} pointerEvents="none" />
 
-            {/* ── Axis labels (X axis) — outside the frame ── */}
+            {/* ══ Axis labels & hints ══════════════════════════════════════
+                Layout (PAD_Y=80, H=760):
+                  Top area    (y=0…80):  topHint @ 36, topLabel @ 52, frame @ 80
+                  Bottom area (y=680…760): frame @ 680, bottomLabel @ 698, bottomHint @ 712, xLabel @ 736
+                  Left/right  (x=margins, y=H/2=380): poleLabel, hint 16 px below
+                  Y-axis label: rotated at far left (x=18, y=H/2)
+            ════════════════════════════════════════════════════════════════ */}
+
+            {/* ── Y-axis label (rotated, far left) ── */}
+            <text
+              x={18} y={H / 2}
+              textAnchor="middle" dominantBaseline="middle"
+              transform={`rotate(-90, 18, ${H / 2})`}
+              fontFamily="'Inter', system-ui, sans-serif"
+              fontStyle="italic" fontSize={9} letterSpacing="0.08em"
+              fill={AXIS_HINT}
+              pointerEvents="none"
+            >
+              ↑ {quadrants.axisY.label} ↓
+            </text>
+
+            {/* ── X-axis: left pole ── */}
             <text x={PAD_X - 12} y={H / 2}
               textAnchor="end" dominantBaseline="middle"
               fontFamily="'Marcellus SC', serif"
               fontWeight="bold" fontSize={11} letterSpacing="0.18em"
-              fill={AXIS_LABEL}
-              pointerEvents="none"
+              fill={AXIS_LABEL} pointerEvents="none"
             >
               {quadrants.axisX.left.toUpperCase()}
             </text>
+            {quadrants.axisX.leftHint && (() => {
+              const lines = wrapHint(quadrants.axisX.leftHint)
+              return (
+                <text x={PAD_X - 12} y={H / 2 + 16}
+                  textAnchor="end"
+                  fontFamily="'Inter', system-ui, sans-serif"
+                  fontStyle="italic" fontSize={8} letterSpacing="0.04em"
+                  fill={AXIS_HINT} pointerEvents="none"
+                >
+                  {lines.map((line, i) => (
+                    <tspan key={i} x={PAD_X - 12} dy={i === 0 ? 0 : 11}>{line}</tspan>
+                  ))}
+                </text>
+              )
+            })()}
+
+            {/* ── X-axis: right pole ── */}
             <text x={W - PAD_X + 12} y={H / 2}
               textAnchor="start" dominantBaseline="middle"
               fontFamily="'Marcellus SC', serif"
               fontWeight="bold" fontSize={11} letterSpacing="0.18em"
-              fill={AXIS_LABEL}
-              pointerEvents="none"
+              fill={AXIS_LABEL} pointerEvents="none"
             >
               {quadrants.axisX.right.toUpperCase()}
             </text>
-            <text x={W / 2} y={H - PAD_Y / 2}
+            {quadrants.axisX.rightHint && (() => {
+              const lines = wrapHint(quadrants.axisX.rightHint)
+              return (
+                <text x={W - PAD_X + 12} y={H / 2 + 16}
+                  textAnchor="start"
+                  fontFamily="'Inter', system-ui, sans-serif"
+                  fontStyle="italic" fontSize={8} letterSpacing="0.04em"
+                  fill={AXIS_HINT} pointerEvents="none"
+                >
+                  {lines.map((line, i) => (
+                    <tspan key={i} x={W - PAD_X + 12} dy={i === 0 ? 0 : 11}>{line}</tspan>
+                  ))}
+                </text>
+              )
+            })()}
+
+            {/* ── X-axis label (centered below plot) ── */}
+            <text x={W / 2} y={H - PAD_Y + 56}
               textAnchor="middle" dominantBaseline="middle"
               fontFamily="'Inter', system-ui, sans-serif"
               fontStyle="italic" fontSize={10} letterSpacing="0.08em"
-              fill={AXIS_HINT}
-              pointerEvents="none"
+              fill={AXIS_HINT} pointerEvents="none"
             >
               ← {quadrants.axisX.label} →
             </text>
 
-            {/* ── Axis labels (Y axis) — outside the frame ── */}
-            <text x={W / 2} y={PAD_Y - 14}
+            {/* ── Y-axis: top pole ── */}
+            {quadrants.axisY.topHint && (
+              <text x={W / 2} y={PAD_Y - 44}
+                textAnchor="middle" dominantBaseline="middle"
+                fontFamily="'Inter', system-ui, sans-serif"
+                fontStyle="italic" fontSize={8} letterSpacing="0.04em"
+                fill={AXIS_HINT} pointerEvents="none"
+              >
+                {quadrants.axisY.topHint}
+              </text>
+            )}
+            <text x={W / 2} y={PAD_Y - 28}
               textAnchor="middle" dominantBaseline="middle"
               fontFamily="'Marcellus SC', serif"
               fontWeight="bold" fontSize={11} letterSpacing="0.18em"
-              fill={AXIS_LABEL}
-              pointerEvents="none"
+              fill={AXIS_LABEL} pointerEvents="none"
             >
               {quadrants.axisY.top.toUpperCase()}
             </text>
+
+            {/* ── Y-axis: bottom pole ── */}
             <text x={W / 2} y={H - PAD_Y + 18}
               textAnchor="middle" dominantBaseline="middle"
               fontFamily="'Marcellus SC', serif"
               fontWeight="bold" fontSize={11} letterSpacing="0.18em"
-              fill={AXIS_LABEL}
-              pointerEvents="none"
+              fill={AXIS_LABEL} pointerEvents="none"
             >
               {quadrants.axisY.bottom.toUpperCase()}
             </text>
+            {quadrants.axisY.bottomHint && (
+              <text x={W / 2} y={H - PAD_Y + 34}
+                textAnchor="middle" dominantBaseline="middle"
+                fontFamily="'Inter', system-ui, sans-serif"
+                fontStyle="italic" fontSize={8} letterSpacing="0.04em"
+                fill={AXIS_HINT} pointerEvents="none"
+              >
+                {quadrants.axisY.bottomHint}
+              </text>
+            )}
             {/* ── Concept markers ── */}
             {concepts.map(concept => {
               const isSelected = selected?.id === concept.id

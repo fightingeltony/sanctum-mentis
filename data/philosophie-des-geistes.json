@@ -2,7 +2,7 @@
   "topic": {
     "id": "philosophie-des-geistes",
     "title": "Philosophie des Geistes",
-    "subtitle": "Vom Gespenst in der Maschine zur Architektur des Selbst.",
+    "subtitle": "Wer denkt, wenn ich denke?",
     "intro": "Wenn du Schmerz fühlst — was passiert da eigentlich?",
     "theme": {
       "accent": "oklch(0.44 0.13 240)",
@@ -13,12 +13,16 @@
       "axisX": {
         "label": "Ontologie des Mentalen",
         "left": "Reduktionismus",
-        "right": "Irreduzibilität"
+        "leftHint": "Geist lässt sich auf physische Prozesse zurückführen",
+        "right": "Irreduzibilität",
+        "rightHint": "Erleben bleibt eigenständig, nicht erklärbar durch Physik"
       },
       "axisY": {
         "label": "Erkenntnisquelle",
         "top": "First-Person",
-        "bottom": "Third-Person"
+        "topHint": "Innenperspektive — Erleben",
+        "bottom": "Third-Person",
+        "bottomHint": "Außenperspektive — Beobachtung"
       }
     },
     "synthesis": "Das Hard Problem of Consciousness ist der ungelöste Kern dieses Tableaus: Warum gibt es überhaupt subjektives Erleben — ein Wie-es-sich-anfühlt — und nicht nur Informationsverarbeitung im Dunkeln? Reduktionisten wie Dennett antworten: Es gibt kein Problem, nur ein Missverständnis. Irreduzibilisten wie Nagel und Jackson antworten: Die erste Person lässt sich nicht verlustfrei in die dritte übersetzen. Predictive Processing und IIT sind die neuesten Brückenbauversuche — produktiv, aber noch unvollständig. Was du hier mitnehmen kannst: nicht die Lösung, sondern ein Gefühl dafür, warum diese Frage es verdient, schwer zu sein."

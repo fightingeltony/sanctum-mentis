@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import HeaderSearchButton from '@/components/HeaderSearchButton'
 
 export default function ShellLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -29,6 +30,7 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
             >
               Themen
             </Link>
+            <HeaderSearchButton />
           </nav>
         </div>
       </header>

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Marcellus_SC, Inter } from 'next/font/google'
+import ShellCommandPaletteProvider from '@/components/ShellCommandPaletteProvider'
 import './globals.css'
 
 const marcellusSC = Marcellus_SC({
@@ -27,7 +28,11 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de" className={`${marcellusSC.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <ShellCommandPaletteProvider>
+          {children}
+        </ShellCommandPaletteProvider>
+      </body>
     </html>
   )
 }

@@ -2,7 +2,7 @@
   "topic": {
     "id": "ethik",
     "title": "Ethik",
-    "subtitle": "",
+    "subtitle": "Wie wollen wir leben?",
     "intro": "Was sollst du tun, wenn du frei bist?",
     "theme": {
       "accent": "oklch(0.45 0.12 50)",
@@ -13,12 +13,16 @@
       "axisX": {
         "label": "Grund der Moral",
         "left": "Charakter / Person",
-        "right": "Prinzip / Resultat"
+        "leftHint": "Moral wächst aus dem Wer",
+        "right": "Prinzip / Resultat",
+        "rightHint": "Moral folgt aus dem Was"
       },
       "axisY": {
         "label": "Reichweite des Moralsubjekts",
         "top": "Individuum",
-        "bottom": "Beziehung / Gemeinschaft"
+        "topHint": "das einzelne Ich als ethisches Subjekt",
+        "bottom": "Beziehung / Gemeinschaft",
+        "bottomHint": "das Geflecht als ethisches Subjekt"
       }
     },
     "synthesis": "Drei Spannungen halten dieses Tableau zusammen, ohne sich auflösen zu lassen. Erstens: ob Moral aus dem Charakter wächst oder aus dem Prinzip folgt — eine Frage, die Aristoteles und Kant seit 2300 Jahren auseinanderhält. Zweitens: ob das ethische Subjekt das einzelne Ich ist oder das Beziehungsgeflecht — eine Frage, die der Westen lange einseitig beantwortet hat. Drittens: ob Moral sich begründen lässt oder nur erklären — eine Frage, die Hume gestellt und Nietzsche radikalisiert hat. Wer dieses Tableau verlässt, hat keine Antwort. Aber er weiß, an welchem dieser drei Schnitte er gerade steht."

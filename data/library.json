@@ -2,7 +2,7 @@
   {
     "id": "das-selbst",
     "title": "Die Landkarte des Selbst",
-    "subtitle": "Was ist das Ich? Von antiker Essenz bis zur neurokognitiven Simulation.",
+    "subtitle": "Was bin ich wirklich — Wesen, Geschichte oder Illusion?",
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.42 0.12 295)",
     "status": "available",
@@ -12,7 +12,7 @@
   {
     "id": "philosophie-des-geistes",
     "title": "Philosophie des Geistes",
-    "subtitle": "Vom Gespenst in der Maschine zur Architektur des Selbst.",
+    "subtitle": "Wer denkt, wenn ich denke?",
     "era": "17. Jh. – Gegenwart",
     "themeColor": "oklch(0.44 0.13 240)",
     "status": "available",
@@ -32,7 +32,7 @@
   {
     "id": "ethik",
     "title": "Ethik",
-    "subtitle": "Was sollen wir tun?",
+    "subtitle": "Wie wollen wir leben?",
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.45 0.12 30)",
     "status": "available",
