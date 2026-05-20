@@ -218,6 +218,13 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
+### [x] Hard-Prompt als Repo-Standard
+**Status:** implementiert 19.5.26 (v1) — `prompts/hard-mode.md`
+**Kontext:** Gegenstück zu `mild-mode.md` für akademisch sensible Tableaus. Ergibt sich aus dem etablierten Inquisitor-Prompt-Konzept im Backlog, jetzt als vollständiger Baustandard ausformuliert.
+**Inhalt:** Anwendungs-Gatekeeper (drei Tests, alle müssen positiv sein), vier Prüfsteine (Reduktionismus, Kategorienfehler, Blinde Flecken, Logik der Kanten), Anti-Höflichkeits-Klauseln, Größenrichtwerte (16–22 Denker), Architekt-Prompt und Inquisitor-Prompt als copy-paste-fähige Startblöcke, Begleitnotiz-Format. Strukturelle Konventionen (Stimm-Hierarchie, Du-Konsistenz, Achsen-Hints, Annotations-Syntax) mit Mild-Modus identisch. CLAUDE.md um Hard-Modus-Sektion ergänzt.
+
+---
+
 ### [x] Verteilter Mild-Modus: Architekt + Prüfer in getrennten Chats
 **Status:** als Workflow-Konvention in CLAUDE.md aufgenommen 17.5.26
 **Kontext:** Statt Architekt-Inquisitor-Schleife in einer Instanz: Architekt baut in Chat A, neuer Chat B prüft frisch gegen Mild-Prompt + JSON + Stilreferenz, Architekt arbeitet Befunde in Chat A ein. Prüfer kontaminationsfrei — er hat den Bauprozess nicht miterlebt. Wichtig: Prüfer *nicht* im Projektwissen platzieren, sonst verwandelt der Backlog-Kontext ihn zurück in einen Inquisitor.

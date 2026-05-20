@@ -168,14 +168,19 @@ Alle neuen Tableaus werden im Mild-Modus gebaut. Der Prompt liegt in `prompts/mi
 
 Kennzeichen: 10–14 Denker, 8–12 Konzepte, kuratorische Auswahl statt Vollständigkeit.
 
+### Hard-Modus (bewusste Ausnahme)
+Für akademisch sensible Tableaus mit Vollständigkeitsanspruch (z.B. Erkenntnistheorie, Logik, Wissenschaftstheorie). Der Prompt liegt in `prompts/hard-mode.md`. **Begründungspflicht** — drei Gatekeeper-Tests müssen alle positiv sein, bevor Hard-Mode verwendet wird.
+
+Kennzeichen: 16–22 Denker, 12–18 Konzepte, adversarielle Prüfung, Inquisitor-Chat statt milder Prüfer-Chat.
+
 ### Verteilter Architekt-Prüfer-Workflow
 Für jeden neuen Tableau-Bau: Architekt und Prüfer in getrennten Chat-Instanzen.
 
 - **Chat A (Architekt):** Baut das Tableau mit Projekt-Kontext (CLAUDE.md, Backlog, Stilreferenz-JSON).
-- **Chat B (Prüfer):** Prüft das fertige JSON frisch — **ohne** Projekt-Kontext. Nur `prompts/mild-mode.md` + fertiges JSON + eine repräsentative Referenz-JSON übergeben. Backlog-Kontext würde den Prüfer in einen Inquisitor verwandeln.
+- **Chat B (Prüfer):** Prüft das fertige JSON frisch — **ohne** Projekt-Kontext. Nur `prompts/mild-mode.md` (oder `hard-mode.md`) + fertiges JSON + eine repräsentative Referenz-JSON übergeben. Backlog-Kontext würde den Prüfer in einen Inquisitor verwandeln.
 - Architekt arbeitet Befunde ein. Eine Prüfrunde genügt.
 
-Bedingung für Wiederholbarkeit: `prompts/mild-mode.md` muss aktuell sein.
+Bedingung für Wiederholbarkeit: `prompts/mild-mode.md` und `prompts/hard-mode.md` müssen aktuell sein.
 
 ---
 
