@@ -1,128 +1,310 @@
-# Mild-Modus — Sanctum Tableau Bauanleitung
+# Mild-Modus — Sanctum-Standard für Tableau-Bauten
 
-Bewusste Engführung statt akademische Vollständigkeit. Der Default-Modus
-für neue Tableaus, sofern das Thema nicht ausdrücklich die volle
-Architekt-Inquisitor-Schleife verlangt.
+**Status:** Konvention, gültig seit v2-Etappe (Mai 2026)
+**Anwendungsbereich:** Alle Tableau-Bauten in Sanctum Mentis, sofern nicht explizit anders angegeben.
 
-## Vor dem Bau lesen
+---
 
-- `Vision.md` (kuratorische Linie)
-- `CLAUDE.md` (Datenmodell, Konventionen)
-- `backlog.md`, insbesondere "Kuratorische Prinzipien" und den
-  Item-Eintrag zum aktuellen Thema
-- Mindestens zwei bestehende Tableau-JSONs als stilistische und
-  strukturelle Referenz — NICHT als Komplexitäts-Maßstab. Manche
-  Bestandstableaus sind volle Schleifen, das ist hier nicht das Ziel.
+## Was der Mild-Modus ist
 
-## Modus-Regeln
+Der Mild-Modus ist der **Default-Bauweg** für Sanctum-Tableaus. Er steht zwischen zwei Extremen:
 
-- **Größe:** 10–14 Denker, 8–12 Konzepte. Nicht mehr.
-- **Auswahlprinzip:** Jeder Denker muss eine eigene, unverwechselbare
-  Position vertreten, die einen Quadranten oder eine Zwischenlage
-  *braucht*. Wer nur "auch noch" gesagt hat, was ein anderer klarer
-  sagt, fliegt raus.
-- **Eine Runde milde Prüfung nach erstem Entwurf**, mit drei Fragen —
-  nicht mehr:
-  1. Fehlt eine Stimme, ohne die das Tableau seinen Bogen nicht
-     schließen kann?
-  2. Ist eine Position so dargestellt, wie ihre besten Vertreter sie
-     verteidigen würden — nicht so, wie ihre Gegner sie karikieren?
-  3. Trägt jeder Knoten zum Abschließen bei, oder hält er nur
-     Spannungen offen?
-- **Keine Vollständigkeits-Schleife.** Der Reflex "es gibt doch auch
-  noch X, Y, Z" wird nicht bedient. Lieber zehn Knoten, die tragen,
-  als sechzehn, die das Bild verwischen.
+- **Solo-Architekt** (8–12 Knoten, ohne kritische Revision, schnell und intuitiv) — verzichtet auf Prüfung, verliert dadurch oft die Tableau-Stimme.
+- **Volle Schleife** (Architekt → Inquisitor → Architekt, 16+ Knoten, akademische Reife) — produziert vollständige Datensätze, kann aber meditative oder lebensweltliche Stimmen zerstören.
 
-## Mehrstufige Texte — Pflicht, nicht Option
+Mild ist die **bewusst gemäßigte Mitte**: 10–14 Denker, eine Runde milde Selbstprüfung, kein Vollständigkeitsreflex. Mild ist nicht "abgespecktes Voll". Mild ist eine **eigene Methode** mit eigenen Erfolgsbedingungen.
 
-Mild-Modus heißt **nicht** "ein Text pro Knoten". Fast jeder Knoten
-bekommt zwei Texte auf verschiedenen Stufen, Hubs drei.
+---
+
+## Sanctum-Vision in einem Satz
+
+Sanctum hilft Nutzern, **ein Thema zu Ende zu denken** — nicht alle Positionen zu kennen. **Verstehbarkeit, nicht Vollständigkeit.**
+
+Jede Bauentscheidung in einem Mild-Tableau muss sich an dieser Vision messen lassen. Wenn ein Knoten nicht hilft, das Thema verstehbar abzuschließen, gehört er nicht ins Tableau — auch wenn er akademisch wichtig wäre.
+
+---
+
+## Drei Mild-Prüffragen
+
+Beim Bau und beim Prüfen eines Mild-Tableaus stelle dich diesen drei Fragen, in dieser Reihenfolge:
+
+### 1. Trägt der Anker?
+
+Bevor irgendetwas gebaut wird: Was ist die **Lebensfrage hinter der akademischen Frage**? Welche Frage des Nutzers macht dieses Tableau dringlich? Ist sie formulierbar in einem Satz?
+
+Wenn die Lebensfrage nicht formulierbar ist, ist das Tableau möglicherweise zu früh. Ist sie formulierbar, dann ist sie der innere Maßstab für alle späteren Entscheidungen — sie wird zur Intro-Frage des Tableaus.
+
+**Zwei Ankertypen:**
+- **Gewachsen** — eine echte Frage des Kurators, lebensweltlich, persönlich. Ergibt warme, einladende Tableaus (Beispiel: Selbst, Realismus).
+- **Architektonisch** — eine kuratorische Frage, die ein Feld schließt oder eine Gruppe ergänzt. Ergibt nüchternere, strukturell motivierte Tableaus (Beispiel: Ethik als Brücke zur Handlungs-Spur).
+
+Beide sind legitim. Wichtig: Architektonische Anker müssen *als solche markiert* werden — sie verlangen nüchternere Sprache und keine forcierte Lebensweltlichkeit.
+
+### 2. Trägt die polare Spannung?
+
+Jedes Tableau braucht eine zentrale Spannung, die durch die Achsen sichtbar wird. Zwei Achsen, je zwei Pole:
+
+- **X-Achse:** die Hauptspannung des Feldes
+- **Y-Achse:** eine zweite, unabhängige Dimension
+
+**Test:** Lassen sich die Denker des Feldes nicht-trivial in die vier Quadranten verteilen, ohne dass ein Quadrant systematisch leer bleibt oder die Verteilung gequält wirkt? Falls einer der Quadranten dünn besetzt ist, ist das oft eine wertvolle Aussage (siehe Ethik Q3: Charakter/Beziehung). Aber dieser Befund muss **bewusst** sein, nicht zufällig.
+
+**Prüfe besonders die Achsen-Beschriftung:** Sind die Pole für Nicht-Akademiker zugänglich? Wenn nicht, kommen erklärende Untertitel hinzu (`leftHint`, `rightHint`, `topHint`, `bottomHint` im Schema). Knapp, neutral, ohne subtile Wertung zugunsten eines Pols.
+
+### 3. Trägt die Mild-Disziplin?
+
+Vollständigkeitsreflex ist der größte Feind des Mild-Modus. Vor jedem zusätzlichen Knoten frage:
+
+- Wird das Tableau durch diesen Knoten **abschlussfähiger** oder nur **vollständiger**?
+- Würde ein Nutzer am Ende sagen: *"Jetzt habe ich verstanden"* — oder eher: *"Jetzt weiß ich, dass es noch mehr gibt"*?
+
+Mild zielt auf das erste. Akademische Vollständigkeit ist erlaubt, wo sie hilft. Sie ist nicht das Ziel.
+
+---
+
+## Tableau-Größen (Richtwerte, keine Regeln)
+
+| Element | Richtwert |
+|---|---|
+| Denker | 10–14 |
+| Konzepte | 8–12 |
+| Schulen | 6–10 |
+| Influences | 12–18 |
+
+Abweichungen nach unten sind okay (Solo-Wurf). Abweichungen deutlich nach oben (16+ Denker) sind ein Signal, dass du nicht mehr Mild baust, sondern in volle Schleife rutschst. Dann diese Entscheidung **bewusst** treffen, nicht heimlich.
+
+---
+
+## Stufen-Verteilung über alle 5 Komplexitäts-Level
+
+**Verteilung der Denker** über die fünf Stufen — als Faustregel:
+
+| Stufe | Anteil | Funktion |
+|---|---|---|
+| L1 | 2–4 Denker | Einstieg, zugänglichste Positionen |
+| L2 | 2–3 Denker | Erste Vertiefung |
+| L3 | 2–4 Denker | Hauptkörper |
+| L4 | 2–3 Denker | Spezialisierung |
+| L5 | 1–2 Denker | Synthese, Solo-Positionen |
+
+**Beispiel Selbst:** 2-1-6-4-2. **Beispiel Ethik v2:** 4-3-3-2-1.
+
+Keine starre Vorgabe — Tableau-spezifische Variationen sind erwartet. Aber alle fünf Stufen müssen mit Inhalt belegt sein. **Wenn der Slider auf L5 nichts mehr zeigt, was er auf L3 nicht schon zeigte, ist das Tableau auf der Tiefe nicht durchgebaut.**
+
+**Influence-Stufungs-Regel:** Eine Influence-Kante darf nie früher erscheinen als der spätere ihrer Endpunkte. Eine Kante zwischen einem L1-Denker und einem L4-Denker hat firstLevel ≥ 4. Beim Bau validieren, bei v2-Erweiterungen prüfen.
+
+---
+
+## Mehrstufige Texte sind die Regel
+
+**Mild-Modus heißt nicht "ein Text pro Knoten".** Realismus-Konvention und v2-Etappe haben gezeigt: Fast jeder Knoten bekommt **zwei Stufen**, zentrale Hubs **drei**.
 
 **Faustregel:**
-- Hubs (4+ Influences, strukturelle Mitte des Tableaus) → drei Stufen
-- Alle anderen Knoten → zwei Stufen
-- Solo-L5-Knoten (erscheinen erst auf L5) → eine Stufe, dicht
+- **Hubs** (4+ Influences, strukturelle Mitte) → drei Stufen
+- **Reguläre Knoten** → zwei Stufen
+- **Solo-L5-Knoten** → eine Stufe
 
-Der Slider hat damit Tiefenfunktion (Text wächst) *zusätzlich* zur
-Sichtbarkeitsfunktion (neue Knoten erscheinen).
+**Beispiel-Verteilung:**
+- Aristoteles als Hub: L1, L3, L5
+- Reguläre L2-Knoten: L2 + L4
+- Levinas als Solo-L5: nur L5
 
-## Tonalität nach Stufe
+### Tonalität der höheren Stufen
 
-**L1:** Didaktisch — Konzept einführen, Begriffe erklären, den Knoten
-zugänglich machen. Leser hat das Fachvokabular noch nicht.
+L1-Texte sind **didaktisch**: Konzepte einführen, Begriffe erklären, den Knoten zugänglich machen.
 
-**L3–L5:** Tableau-positionierend — Wirkungslinien, Streitstellen,
-Konvergenzen, Hub-Stellung zeigen. Nicht den Denker *erklären*,
-sondern zeigen, *wo er im Feld steht* und woran sich andere an ihm
-abarbeiten. Die Tonalitäts-Verschiebung ist tableau-spezifisch —
-analytisch bei Geist, lebensweltlich-meditativ bei Selbst,
-nüchtern-kuratorisch bei Ethik.
+L3–L5-Texte sind **tableau-positionierend**: Wirkungslinien, Streitstellen, Konvergenzen, Hub-Stellung. Nicht den Denker erklären, sondern zeigen, wo er im Feld steht und woran sich andere an ihm abarbeiten.
 
-## Stilistische Konventionen
+Diese Tonalitäts-Verschiebung ist nicht starr, sondern tableau-spezifisch:
+- **Analytisch** (Geist, Realismus): präzise, knappe Begriffe — *"Φ ist Tononis formales Maß"*
+- **Lebensweltlich** (Selbst): verwandte Topologien, geteilte Diagnosen — *"Atman, Wahres Selbst und Self meinen verwandte Topologien"*
+- **Kuratorisch-nüchtern** (Ethik): Hub-Stellung, strukturelle Mitte — *"Kant ist nicht eine Position unter anderen"*
 
-- Annotationen mit `[[Begriff:Erklärung]]` auf **allen** Stufen, wo
-  ein Fachbegriff erstmals eingeführt wird — nicht nur auf L1.
-  Solo-L5-Knoten brauchen besonders viele (kein L1-Vorlauf).
-  Sparsamkeitsprinzip: Tooltip nur wenn der Leser ohne Erklärung den
-  Satz nicht versteht oder den Cluster verliert.
-- 4–6 Sätze pro Knoten auf der jeweiligen Einstiegs-Stufe
-- Schools sind Traditionen, denen mehrere Denker angehören können —
-  NICHT umetikettierte Personen
-- Influence-Typen: `influence`, `critique`, `parallel`, `rejection`
-- Schulen-Labels: akademisch korrekt, aber wo möglich lebensweltlich
-  verständlich (siehe Backlog-Item "Schulen-Labels überarbeiten")
-- **Influence-Stufungs-Regel:** Eine Kante darf nie früher erscheinen
-  als der spätere ihrer Endpunkte. Nach jedem Bau validieren.
+---
 
-## Synthese-Text (L5)
+## Annotations-Syntax — `[[Begriff:Erklärung]]`
 
-Pflicht. 3–5 Sätze. Benennt am Schluss den Kern-Schmerz oder die
-Kern-Spannung des Themas, ohne sie aufzulösen. Tonart wie in den
-Bestandstableaus — meditativ, persönlich, nicht-akademisch. Kein
-neues Summary, sondern eine kuratorische Einordnung: *"Hier ist die
-Spannung, die du jetzt verstehst."*
+**Einheitliche Form:** Der Begriff steht vor dem Doppelpunkt im Klammer-Inhalt, die Erklärung dahinter:
 
-## Stimm-Hierarchie — drei Stimmen pro Tableau
+```
+Die [[Phronesis:praktische Klugheit, die im Einzelfall erkennt, was zu tun ist]] zeigt sich nur in Erfahrung.
+```
 
-Jedes Tableau spricht mit drei Stimmen. Wenn sie ineinanderfallen, entsteht Redundanz; wenn sie klar getrennt sind, entsteht eine erlebbare Vertiefung.
+**Rendering:** Der Begriff erscheint im Fließtext mit gestrichelter Tooltip-Unterstreichung, die Erklärung wird beim Hover/Tap als Tooltip angezeigt.
 
-| Stimme | Wo | Funktion |
-|---|---|---|
-| `subtitle` | Library-Card + Tableau-Kopf | einladen, hineinziehen |
-| `intro` | Tableau auf L1 | positionieren, ankommen |
-| `synthesis` | Tableau auf L5 | auflösen, landen |
+### Tooltips bis L5
 
-**`subtitle`** — die öffentliche Stimme. Lebensweltlich, einladend, eine offene Frage. Erscheint sowohl in der Library-Card als auch im Tableau-Kopf — **eine Quelle, kein Duplikat**. Nicht reißerisch, aber zieht hinein.
+Annotationen gehören **nicht nur** auf L1 (Einsteigerbegriffe), sondern auf **alle Stufen**, wo der Text einen Fachbegriff erstmals einführt, der ohne Erklärung den Leser ausschließen würde.
 
-**`intro`** — die dichtere Stimme. Direkter, du-orientiert, eine Spur emotionaler. Stellt die Frage, an der sich die Pole abarbeiten — nennt die Pole nicht. Auflösung bleibt der Synthese vorbehalten. Muss eine **andere** Frage sein als der Subtitle.
+**Solo-L5-Knoten brauchen besonders viele Tooltips**, weil sie ohne L1-Vorlauf erscheinen und ihre Spezialtermini im Moment der ersten Erwähnung erklären müssen.
 
-**`synthesis`** — die landende Stimme. Kuratorisch, nicht didaktisch. Benennt am Schluss den Kern-Schmerz oder die Kern-Spannung, ohne sie aufzulösen. *"Hier ist die Spannung, die du jetzt verstehst."*
+### Sparsamkeit als Prinzip
 
-**Prüffragen vor dem Bau:**
-1. Ist der Subtitle lebensweltlich genug für eine Library-Card?
-2. Ist das Intro eine andere Frage als der Subtitle — oder dasselbe in anderen Worten?
-3. Löst die Synthese auf, was Subtitle und Intro aufgemacht haben?
+Nicht jeder Begriff verdient einen Tooltip. **Pro Tooltip die Frage stellen:** Wird der Leser ohne diese Erklärung den Satz nicht verstehen oder den Text-Cluster verlieren?
 
-**Personalpronomen als Signal:** Innenfragen sprechen "ich" (Geist, Selbst), Weltfragen "du" (Realismus), Gemeinschaftsfragen "wir" (Ethik, Politische Philosophie). Wenn das Pronomen nicht selbstverständlich trifft, ist das Tableau möglicherweise nicht klar genug verortet.
+- **Wenn ja:** Tooltip setzen.
+- **Wenn nein:** Begriff im Fließtext lassen, Tooltip einsparen.
 
-## Lieferform
+Doppelte Tooltips für denselben Begriff in eng benachbarten Texten vermeiden — einmal erklärt, gilt im Tableau-Cluster.
 
-JSON nach dem Schema der Bestandstableaus. Zusätzlich kurze
-Begleitnotiz (max. eine Seite) zu den Bauentscheidungen: welche
-Stimmen aufgenommen, welche bewusst nicht, warum.
+---
 
-## Verteilter Modus (empfohlen)
+## Stimm-Hierarchie eines Tableaus
 
-Architekt baut in Chat A. Neuer Chat B prüft frisch gegen diesen
-Prompt + JSON + Stilreferenz. Wichtig: **Prüfer NICHT im
-Projektwissen platzieren** — sonst verwandelt der Backlog-Kontext
-ihn zurück in einen Inquisitor.
+Ein Tableau spricht mit **drei Stimmen**, jede mit eigener Funktion. Die Stimmen dürfen nicht ineinanderfallen, sonst entsteht Redundanz.
 
-## Tableau-spezifisch (wird pro Bau ergänzt)
+### `subtitle` — die einladende Stimme
 
-Jeder konkrete Bau ergänzt diesen Prompt um:
-- Titel + Untertitel-Vorschlag
-- Achsen (X/Y) mit Polen
-- Anker-Beschreibung
-- Inhaltliche Leitplanken (Pflichtbesetzung pro Quadrant, kritische
-  Fairness-Vorgaben, bewusste Auslassungen)
+Erscheint in der **Library-Card und im Tableau-Kopf** — die erste Frage, die der Nutzer sieht. Atmosphärisch, einladend. Format: kurze Aussage gefolgt von einer offenen Frage als Echo.
+
+**Beispiele:**
+- *Das Rätsel im Kopf — Wo wird aus Materie eigentlich Gefühl?* (Geist)
+- *Die Suche nach dem Kern — Wer bist du, wenn du alles weglässt?* (Selbst)
+- *Das Gewicht deiner Freiheit.* (Ethik)
+
+### `intro` — die zuspitzende Stimme
+
+Erscheint im Tableau auf L1 als zweite Eingangsfrage. Direkter, konkrete Du-Frage. Stellt dem Nutzer die Tableau-Spannung am eigenen Leib.
+
+**Beispiele:**
+- *Wenn du Schmerz fühlst — was passiert da eigentlich?* (Geist)
+- *Bin ich ein Kern, den ich freilegen kann — oder ein Muster, das ich gerade bin?* (Selbst)
+- *Was sollst du tun, wenn es keine einfache Antwort gibt?* (Ethik)
+
+**Wichtig:** Intro nennt **keine Pole**. Sie stellt die Frage, an der sich die Pole abarbeiten — sie nimmt die Synthese nicht vorweg.
+
+### `synthesis` — die landende Stimme
+
+Erscheint auf L5. Drei bis fünf Sätze, kuratorisch. Hier wird der Bogen geschlossen, die Spannungen ausformuliert, die Positionen genannt.
+
+### Du-Konsistenz
+
+Subtitle und Intro sprechen einheitlich **"du"**. Das gewinnt an Direktheit. Die Synthese auf L5 darf anders sprechen (kuratorisch, dritte Person) — aber an der Tür spricht das Tableau persönlich.
+
+---
+
+## Verteilter Mild-Modus (empfohlen, nicht Pflicht)
+
+**Workflow:**
+
+- **Chat A (Architekt):** Baut das Tableau auf Basis dieses Prompts plus Anker-Klärung mit dem Kurator. Liefert JSON, Begleitnotiz und kuratorische Entscheidungen.
+
+- **Chat B (Prüfer):** Externer Chat, **ohne Projektwissen verknüpft** (sonst wird er zum Inquisitor). Bekommt das fertige JSON, diesen Mild-Prompt und ein bestehendes Tableau als Stilreferenz. Prüft gegen die drei Mild-Prüffragen — knapp, ohne Vollständigkeitsreflex.
+
+- **Architekt arbeitet Befunde ein.**
+
+**Bedingung für Wiederholbarkeit:** Dieser Prompt muss als Datei existieren. Sonst wird die Methode jedes Mal neu erfunden.
+
+---
+
+## Schema-Felder, die ein Mild-Tableau füllen muss
+
+```json
+{
+  "topic": {
+    "id": "...",
+    "title": "...",
+    "subtitle": "...",
+    "intro": "...",
+    "synthesis": "...",
+    "theme": { "accent": "...", "accentSoft": "..." },
+    "complexityLevels": 5,
+    "quadrants": {
+      "axisX": {
+        "label": "...",
+        "left": "...", "leftHint": "...",
+        "right": "...", "rightHint": "..."
+      },
+      "axisY": {
+        "label": "...",
+        "top": "...", "topHint": "...",
+        "bottom": "...", "bottomHint": "..."
+      }
+    }
+  },
+  "levels": [ ... ],
+  "schools": [ ... ],
+  "thinkers": [ ... ],
+  "concepts": [ ... ],
+  "influences": [ ... ]
+}
+```
+
+Pflichtfelder pro Knoten:
+- **Denker:** `id`, `name`, `lifespan`, `firstLevel`, `schoolId`, `x`, `y`, `versions` (mit mind. Text auf `firstLevel`, idealerweise mehrstufig)
+- **Konzept:** `id`, `name`, `type`, `firstLevel`, `x`, `y`, `versions`
+- **Influence:** `from`, `to`, `type`, `firstLevel` (≥ max der Endpunkte), `versions`
+- **Schule:** `id`, `label`, `color`, `glyph`, `gx`, `gy`, `labelDir`
+
+---
+
+## Validierungs-Checkliste vor Lieferung
+
+Vor der Übergabe an Claude Code / das Repo:
+
+- [ ] Alle Schulen-Referenzen (`schoolId`) verweisen auf existierende Schulen
+- [ ] Alle Influence-Endpunkte (`from`, `to`) verweisen auf existierende Knoten
+- [ ] Jeder Knoten hat mindestens einen Text auf seinem `firstLevel`
+- [ ] Jede Influence-Stufe ≥ max(firstLevel der Endpunkte)
+- [ ] Annotations-Syntax durchgängig `[[Begriff:Erklärung]]` mit Doppelpunkt
+- [ ] Mehrstufige Texte vorhanden (12+ von 13 Denkern, 8+ von 10 Konzepten)
+- [ ] Tooltips auf allen fünf Stufen verteilt (nicht nur L1–L2)
+- [ ] Subtitle, Intro, Synthese alle gefüllt
+- [ ] Achsen-Hints für alle vier Pole gefüllt
+- [ ] Stufen-Verteilung über L1–L5 (kein Stau auf einer Stufe)
+
+---
+
+## Begleitnotiz beim Liefern
+
+Jedes neu gebaute Tableau wird mit einer **Begleitnotiz** geliefert, die festhält:
+
+1. Anker (gewachsen oder architektonisch, mit Begründung)
+2. Achsenwahl (welche Alternativen wurden geprüft und warum diese gewählt)
+3. Aufgenommene Denker mit Begründung der Wahl
+4. Bewusst nicht aufgenommene Denker (mit Begründung)
+5. Stufen-Verteilung
+6. Synthese-Text mit Erklärung der drei Spannungen
+7. Lessons für den Backlog
+
+Begleitnotizen sind nicht für die App, sondern für die kuratorische Selbstvergewisserung. Sie helfen, beim nächsten Tableau-Bau zu wissen, was funktioniert hat und was nicht.
+
+---
+
+## Was Mild nicht ist
+
+- **Nicht "abgespecktes Voll"** — Mild ist eine eigene Methode mit eigenen Erfolgsbedingungen.
+- **Nicht "ohne Prüfung"** — Mild hat eine Runde milde Selbstprüfung gegen die drei Prüffragen.
+- **Nicht "schnell und schlampig"** — Mild verlangt sorgfältige Anker-Klärung, mehrstufige Texte, einheitliche Annotation. Sie ist nicht weniger Arbeit als die volle Schleife, sondern anders fokussiert.
+- **Nicht "ohne Tooltips"** — Mild-Tableaus haben Tooltips über alle fünf Stufen, sparsam aber gezielt.
+
+---
+
+## Wann statt Mild den vollen Schleife verwenden?
+
+Volle Schleife ist gerechtfertigt, wenn:
+
+- Das Feld akademisch hochsensibel ist und Vollständigkeit eingeklagt würde (z.B. Erkenntnistheorie, Logik)
+- Das Tableau später als wissenschaftliche Referenz dienen soll
+- Es ein methodisches Schaustück werden soll, nicht ein lebensweltliches Werkzeug
+
+In allen anderen Fällen: Mild ist Default.
+
+---
+
+## Wann statt Mild Solo verwenden?
+
+Solo (8–12 Knoten, ohne Prüfung) ist gerechtfertigt, wenn:
+
+- Das Tableau ein erster Wurf ist, der bewusst nicht reif werden soll
+- Es ein Skizzen-Tableau für eine Idee ist (z.B. ein neues Feld erforschen)
+- Geschwindigkeit wichtiger ist als Reife
+
+Solo-Tableaus werden **als solche markiert** in der Begleitnotiz. Sie sind keine fertigen Tableaus.
+
+---
+
+## Versionshistorie
+
+- **v1** (14.5.26): Erster Wurf, entwickelt während Realismus-Bau. Drei Prüffragen, 10–14 Denker, verteilter Modus.
+- **v2** (19.5.26): Erweitert nach v2-Etappe (Ethik, Selbst, Realismus, Geist). Hinzugekommen: Mehrstufige Texte als Regel, Tooltips bis L5, einheitliche Annotations-Syntax `[[Begriff:Erklärung]]`, Stimm-Hierarchie (Subtitle/Intro/Synthese), Du-Konsistenz, Achsen-Hints, Influence-Stufungs-Regel, Validierungs-Checkliste.

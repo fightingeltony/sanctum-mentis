@@ -212,8 +212,9 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 ---
 
 ### [x] Mild-Prompt als Repo-Standard
-**Status:** implementiert 17.5.26 — `prompts/mild-mode.md` erstellt
+**Status:** implementiert 17.5.26 (v1), aktualisiert 19.5.26 (v2) — `prompts/mild-mode.md`
 **Kontext:** Im Backlog gab es keinen ausformulierten Mild-Modus-Prompt — nur die negative Definition ("nicht volle Schleife"). Aus der Realismus-Konversation ist ein erster Prompt entstanden, der Mild positiv definiert: 10–14 Denker, drei Prüffragen, kein Vollständigkeitsreflex. Hat sich am realen Bau bewährt.
+**v2 (19.5.26):** Erheblich ausgebaut nach v2-Etappe. Neu: Mehrstufige Texte als Regel, Tonalitäts-Verschiebung L1→L5, Tooltips bis L5, einheitliche Annotations-Syntax, Stimm-Hierarchie (Subtitle/Intro/Synthese), Du-Konsistenz, Achsen-Hints im Schema, Influence-Stufungs-Regel, Validierungs-Checkliste, Ankertypen (gewachsen/architektonisch), Versionshistorie.
 
 ---
 
