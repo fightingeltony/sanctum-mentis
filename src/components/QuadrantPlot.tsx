@@ -23,6 +23,16 @@ interface Props {
   onThinkerClick?: (id: string) => void
 }
 
+/** Zweistufige Auflösung: primaryThinker-Override, dann Schule-Heuristik (genau 1 Denker). */
+function resolveConceptThinker(concept: ConceptWithDesc, thinkers: Thinker[]): string | null {
+  if (concept.primaryThinker) {
+    return thinkers.find(t => t.id === concept.primaryThinker)?.name ?? null
+  }
+  if (!concept.schoolId) return null
+  const schoolThinkers = thinkers.filter(t => t.schoolId === concept.schoolId)
+  return schoolThinkers.length === 1 ? schoolThinkers[0].name : null
+}
+
 const W = 980, H = 760  // taller canvas — extra 60 px bottom room for hints
 const PAD_X = 200  // wider horizontal margin to fit axis labels outside the frame
 const PAD_Y = 80   // increased from 60 — gives space for pole-hint rows
@@ -288,14 +298,15 @@ export default function QuadrantPlot({
             )}
             {/* ── Concept markers ── */}
             {concepts.map(concept => {
-              const isSelected = selected?.id === concept.id
-              const isHovered  = hovered === concept.id
-              const isPulsing  = pulsing.has(concept.id)
-              const active     = isSelected || isHovered
-              const lo         = concept.labelOffset ?? { dx: 12, dy: 0, anchor: 'start' as const }
-              const cx         = mapX(concept.x)
-              const cy         = mapY(concept.y)
-              const glyph      = CONCEPT_GLYPH[concept.type] ?? '◆'
+              const isSelected  = selected?.id === concept.id
+              const isHovered   = hovered === concept.id
+              const isPulsing   = pulsing.has(concept.id)
+              const active      = isSelected || isHovered
+              const lo          = concept.labelOffset ?? { dx: 12, dy: 0, anchor: 'start' as const }
+              const cx          = mapX(concept.x)
+              const cy          = mapY(concept.y)
+              const glyph       = CONCEPT_GLYPH[concept.type] ?? '◆'
+              const thinkerName = resolveConceptThinker(concept, thinkers)
 
               return (
                 <g key={concept.id}
@@ -353,6 +364,28 @@ export default function QuadrantPlot({
                   >
                     {concept.name.toUpperCase()}
                   </text>
+
+                  {thinkerName && (
+                    <text
+                      x={cx + lo.dx} y={cy + lo.dy + (active ? 14 : 13)}
+                      textAnchor={lo.anchor}
+                      dominantBaseline="central"
+                      fontFamily="'Inter', system-ui, sans-serif"
+                      fontStyle="italic"
+                      fontSize={active ? 8.5 : 7.5}
+                      letterSpacing="0.02em"
+                      fill={AXIS_HINT}
+                      fillOpacity={active ? 0.9 : 0.72}
+                      pointerEvents="none"
+                      style={{
+                        transition: 'fill-opacity 150ms, font-size 150ms',
+                        userSelect: 'none',
+                        textShadow: '1px 1px 0 #f5efdf, -1px -1px 0 #f5efdf, 1px -1px 0 #f5efdf, -1px 1px 0 #f5efdf, 0 0 4px rgba(245,239,223,0.7)',
+                      } as React.CSSProperties}
+                    >
+                      {thinkerName}
+                    </text>
+                  )}
                 </g>
               )
             })}

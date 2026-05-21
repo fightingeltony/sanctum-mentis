@@ -67,7 +67,8 @@
         "1": "Das wahre Selbst ([[Atman:das göttliche, unveränderliche Ich im Vedanta — Sanskrit für ›Selbst‹ oder ›Atem‹]]) ist kein Gedanke, keine Rolle, kein Gefühl — sondern der stille Zeuge hinter allem Erleben. Es ist unveränderlich, unzerstörbar und identisch mit [[Brahman:dem universellen Bewusstsein, das allem zugrunde liegt]] — dem Grund aller Wirklichkeit. Die Aufgabe des Lebens ist nicht, dieses Selbst herzustellen, sondern es wiederzuentdecken: Unter den Schichten von Ego und Konditionierung liegt es bereits fertig vor. Meditation, Studium der Schriften ([[Jnana:Weg des Wissens]]) und Hingabe ([[Bhakti:Weg der Liebe und Verehrung]]) sind die klassischen Pfade dieser Entdeckung. Die Behauptung, dass Atman und Brahman identisch sind, ist der radikalste Kern der Vedanta-Lehre — und der direkte Gegenpol zur buddhistischen Anatta-These.",
         "3": "Vedantas Position im Tableau ist nicht nur eine historische Größe, sondern eine lebendige Gegenstimme zur modernen Konstruktion-Theorie des Selbst. Wenn Metzinger, Hood und Barrett zeigen, dass das Ich-Erleben ein Modell ist, fragt Vedanta zurück: Was beobachtet das Modell? Der stille Zeuge, der die Entstehung und Vergänglichkeit aller mentalen Inhalte wahrnimmt, lässt sich nach Vedanta nicht selbst als Inhalt fassen — er ist die Bedingung für jede Beobachtung, einschließlich der wissenschaftlichen. Diese Anfrage ist nicht widerlegt; sie ist im modernen Diskurs nur selten ernsthaft adressiert. Almaas und Rohr arbeiten beide an Spielarten dieser Intuition — ein unzerstörbarer Kern unter den Konstruktionen —, aber Vedanta bleibt die radikalste Formulierung.",
         "5": "Was Vedanta dem ganzen Tableau strukturell vorhält: Wenn das Selbst nur Prozess ist, wer erlebt dann den Prozess? Diese Frage lässt sich nicht durch genauere Beschreibung der Prozesse beantworten — sie zielt auf eine andere Dimension. Vedanta antwortet mit der [[Saksin:Sanskrit für ›Zeuge‹ — der gewahrende Grund, der selbst nicht Gegenstand des Bewusstseins werden kann]]-Lehre: Das, was alles Erleben begleitet, ohne selbst Inhalt zu werden, ist nicht ein zusätzliches Phänomen, sondern die Bedingung von Phänomenalität überhaupt. Der Buddhismus weist diese Antwort zurück (auch die Beobachtung ist Prozess), die Neurowissenschaft ignoriert sie (was nicht messbar ist, ist nicht ihr Gegenstand). Aber die Frage selbst hat sich nicht aufgelöst — sie sitzt am Rand jedes ernsthaften Selbst-Diskurses und wartet."
-      }
+      },
+      "lectio_brief": "Hinter allem, was in dir geschieht — Gedanken, Gefühle, Erinnerungen — liegt ein stiller Zeuge, der das alles bemerkt. Dieser Zeuge ist unveränderlich, unzerstörbar und identisch mit dem Grund aller Wirklichkeit. Du musst ihn nicht herstellen. Du musst ihn wiederfinden."
     },
     {
       "id": "buddhismus",
@@ -81,7 +82,8 @@
         "1": "Der Buddha lehrte [[Anatta:Pali für ›Nicht-Selbst‹]] als eine seiner Kerneinsichten: Was wir als ›Ich‹ erleben, ist kein fester Kern, sondern ein ständig wechselnder Strom aus fünf [[Skandhas:Sanskrit für ›Haufen‹ — Körper, Empfindung, Wahrnehmung, Geistesformationen, Bewusstsein]]. Das Ich ist eher wie eine Flamme als wie ein Stein — von Sekunde zu Sekunde keine identische Flamme, und dennoch brennt sie. Das Festhalten an einem permanenten Ich ist für den Buddhismus die Wurzel von [[Dukkha:Leiden, tiefer Unzufriedenheit]]. Anatta bedeutet keinen Nihilismus: Es geht nicht darum, dass nichts existiert, sondern dass das, was existiert, kein Substanzding ist. Die Praxis der Achtsamkeit macht dieses Fließen direkt erfahrbar — nicht als Idee, sondern als Erfahrung.",
         "3": "Was den Buddhismus im Tableau besonders macht: Er ist die einzige der antiken Stimmen, deren Diagnose in der modernen Neurowissenschaft eine empirische Echostruktur gefunden hat. Barrett zeigt Konstruktion auf neurokognitiver Ebene, Metzinger formuliert dasselbe philosophisch, Friston gibt es einen mathematischen Unterbau — und alle drei kommen unabhängig vom Buddhismus zu derselben strukturellen Behauptung: Es gibt keinen Substanzkern, nur Prozess. Ob das eine Konvergenz oder eine Übereinstimmung ist, bleibt umstritten. Aber zwei radikal verschiedene Erkenntniswege — kontemplative Innenschau über 2500 Jahre und experimentelle Außenschau über 30 Jahre — landen am selben Ort. Das ist nicht Beweis, aber Anlass für [[Aufmerksamkeit:hier im technischen Sinn — die kontemplative Disziplin der direkten Beobachtung des Ich-Entstehens, im Buddhismus Sati genannt]].",
         "5": "Die buddhistische Position auf der höchsten Stufe zeigt ihre stille Reichweite: Anatta ist nicht nur eine Lehre über das Selbst, sondern eine Lehre über jede Art von Substanz. Was vom Ich gilt, gilt von allem — keine Dinge, nur Beziehungen und Prozesse. Diese ontologische Verallgemeinerung trifft auf der westlichen Seite die Prozesstheologie (Whitehead/Keller), die unabhängig denselben Schritt vollzieht: Es gibt keine Substanzen, weder Selbst noch Gott — nur Ereignisse in Verbindung. Beide Traditionen treffen sich nicht durch historischen Kontakt, sondern durch geteilte Diagnose. Was sie unterscheidet, ist der Ton: Der Buddhismus schweigt über das Göttliche, die Prozesstheologie postuliert ein mitwerdendes Göttliches. Beide aber lehnen die statische Substanz als ontologische Grundeinheit ab."
-      }
+      },
+      "lectio_brief": "Was du dein Ich nennst, ist kein Ding, sondern ein Strom. Wahrnehmungen, Empfindungen, Gedanken — sie steigen auf und vergehen, ohne dass irgendwo ein bleibender Träger sitzt. Anatta heißt nicht: nichts existiert. Anatta heißt: kein Kern, nur Bewegung."
     },
     {
       "id": "jung",
@@ -95,7 +97,8 @@
         "2": "Jung brach mit Freud in einer entscheidenden Frage: Das Unbewusste ist nicht nur ein Abfalleimer verdrängter Erlebnisse, sondern ein eigenständiger, schöpferischer Raum — gefüllt mit Archetypen, universellen seelischen Urbildern, die alle Menschen teilen. Das Selbst ist bei Jung keine Vorgabe, sondern ein Ziel: das Zentrum der Gesamtpersönlichkeit, das durch Individuation — den lebenslangen Prozess der psychischen Reifung — erst errungen werden muss. Schatten (das Verdrängte), Anima/Animus (das gegengeschlechtliche Innere) und das Selbst sind keine bloßen Metaphern, sondern erlebbare psychische Kräfte, die in Träumen, Krisen und schöpferischen Akten auftauchen. Jung war von östlichen Traditionen fasziniert — sein Selbst-Begriff hat eine anerkannte Nähe zur Atman-Idee, betont aber den Prozesscharakter: Das Selbst wird nicht gefunden, es entsteht.",
         "3": "Jung sitzt im Tableau an der Stelle, an der die östlichen Lehren in die westliche Psychologie übersetzt werden — und gleichzeitig dort, wo das moderne Selbst-Denken aufhört, sich nur als Substanz zu denken. Seine Idee, dass das Selbst durch Individuation entsteht, ist die strukturelle Vorlage für fast alle späteren psychologischen Positionen im Tableau: Kohuts nukleares Selbst, Rogers' Aktualisierungstendenz, IFS' Topologie der Teile, sogar Almaas' Diamantessenz schulden Jung den Gedanken eines tiefen Kerns, der durch Entwicklung zugänglich wird. Was Jung von all diesen unterscheidet: Er hielt diesen Kern für mehr als nur Psychologie — er nannte ihn [[numinos:das Heilige als unmittelbar erlebbare, ergreifende Wirklichkeit — von Rudolf Otto geprägter Begriff]] und meinte das ernst.",
         "5": "Jung als dreifacher Hub des Tableaus: Er ist die einzige Position, die alle drei großen Spuren miteinander verbindet — die spirituell-transpersonale (über Atman-Echo und [[Synchronizität:Jungs Begriff für sinnvolle, akausale Zusammenhänge zwischen psychischen und physischen Ereignissen]]), die psychologisch-entwicklungsorientierte (Individuation als Vorlage für Kohut, Rogers, IFS) und die mystische (über Eckhart-Lektüre und Numinosum-Begriff zu Rohr und Almaas). Diese Mittellage ist auch seine Verwundbarkeit: Wer streng wissenschaftlich denkt (Metzinger), kann Jung nicht ernst nehmen; wer streng buddhistisch denkt, hält das Selbst-Konzept für die Wurzel des Leidens. Jung steht an der Stelle, an der das Tableau seine größte interne Spannung trägt — und an der das Selbst gleichzeitig als psychologisches Konstrukt und als spirituelle Realität gedacht wird. Beide Positionen weisen ihn von verschiedenen Seiten zurück; trotzdem ist er die meistgelesene Stimme des Tableaus."
-      }
+      },
+      "lectio_brief": "Das Selbst ist kein Ding, das du hast, sondern eines, das durch dich entsteht. Im Lauf des Lebens — durch Träume, Krisen, Auseinandersetzung mit dem, was du verdrängst — bildet sich ein Zentrum, das mehr ist als das Ich. Jung nannte es das Selbst und meinte: numinos, ergreifend, mehr als nur Funktion."
     },
     {
       "id": "metzinger",
@@ -108,7 +111,8 @@
       "versions": {
         "3": "Metzingers Kernthese ist radikal: Niemand war je ein Selbst. Das Gehirn erzeugt ein Selbstmodell — einen phänomenalen Tunnel — den wir fälschlicherweise als 'Ich' erleben, weil uns die Modelleigenschaft dieses Tunnels nicht zugänglich ist (Transparenz des Modells). Das Ego-Tunnel-Modell gehört zum naturalistischen Nihilismus: Es gibt kein metaphysisches Subjekt hinter dem Erleben — nur Informationsverarbeitung, die sich selbst modelliert. Dieses Modell ist nützlich und evolutionär sinnvoll — es ermöglicht kohärentes Handeln in einer unübersichtlichen Welt. Aber ontologisch ist es leer: Es repräsentiert einen Agenten, der nicht existiert. Metzinger zieht daraus auch ethische Konsequenzen: Wer versteht, dass das Selbst ein Konstrukt ist, kann mit weniger defensivem Ego durch sein Leben gehen.",
         "5": "Metzinger steht im Tableau an der Stelle, an der die buddhistische Anatta-Lehre ihre moderne, naturalistische Form findet — ohne dass Metzinger das selbst so framed. Die Pointe seines Ego-Tunnel-Modells ist nicht nur deskriptiv (so funktioniert das Gehirn), sondern auch ethisch (so können wir leben): Wer versteht, dass das Selbst ein Modell ist, kann mit weniger defensivem Ego durchs Leben gehen. Das ist die naturwissenschaftliche Variante einer Einsicht, die Vedanta und Buddhismus über Meditation erreichen. Drei Wege zur selben strukturellen Erfahrung — kontemplativ (Anatta), neurophilosophisch (Ego-Tunnel), mathematisch (über Friston). Was sie unterscheidet, ist die Methode, nicht die Beobachtung. Jung würde dagegen einwenden: Was ist mit der numinosen Tiefe der Selbst-Erfahrung? Metzinger antwortet: ein besonders eindrückliches [[Phänomenales Selbstmodell:der vom Gehirn erzeugte Repräsentationsraum, in dem ich mich selbst als Subjekt erlebe]]-Phänomen, mehr nicht."
-      }
+      },
+      "lectio_brief": "Niemand war je ein Selbst. Was du als Ich erlebst, ist ein Modell, das dein Gehirn von sich selbst macht — und das so überzeugend ist, weil es sich selbst nicht als Modell erkennt. Der Ego-Tunnel ist real als Phänomen, aber leer als Substanz."
     },
     {
       "id": "barrett",
@@ -324,6 +328,7 @@
       "id": "atman",
       "name": "Atman (Das ewige Selbst)",
       "type": "axiom",
+      "primaryThinker": "vedanta",
       "firstLevel": 1,
       "x": 10,
       "y": 88,
@@ -336,6 +341,7 @@
       "id": "anatta",
       "name": "Anatta (Das Nicht-Selbst)",
       "type": "axiom",
+      "primaryThinker": "buddhismus",
       "firstLevel": 1,
       "x": 88,
       "y": 78,
@@ -348,6 +354,7 @@
       "id": "individuation",
       "name": "Individuation & Archetypen",
       "type": "theory",
+      "primaryThinker": "jung",
       "firstLevel": 2,
       "x": 25,
       "y": 35,
@@ -360,6 +367,7 @@
       "id": "nukleares-selbst",
       "name": "Nukleares Selbst",
       "type": "concept",
+      "primaryThinker": "kohut",
       "firstLevel": 3,
       "x": 33,
       "y": 30,
@@ -372,6 +380,7 @@
       "id": "organismisches-ich",
       "name": "Organismisches Ich",
       "type": "concept",
+      "primaryThinker": "rogers",
       "firstLevel": 3,
       "x": 18,
       "y": 42,
@@ -384,6 +393,7 @@
       "id": "lebensstil",
       "name": "Lebensstil",
       "type": "concept",
+      "primaryThinker": "adler",
       "firstLevel": 3,
       "x": 40,
       "y": 24,
@@ -396,6 +406,7 @@
       "id": "ego-tunnel",
       "name": "Der Ego-Tunnel",
       "type": "theory",
+      "primaryThinker": "metzinger",
       "firstLevel": 3,
       "x": 70,
       "y": 22,
@@ -408,6 +419,7 @@
       "id": "illusion-des-selbst",
       "name": "Die Illusion des Selbst",
       "type": "theory",
+      "primaryThinker": "hood",
       "firstLevel": 3,
       "x": 62,
       "y": 30,
@@ -420,6 +432,7 @@
       "id": "partizipation",
       "name": "Partizipation",
       "type": "concept",
+      "primaryThinker": "ferrer",
       "firstLevel": 4,
       "x": 72,
       "y": 70,
@@ -432,6 +445,7 @@
       "id": "free-energy",
       "name": "Free Energy Principle",
       "type": "theory",
+      "primaryThinker": "friston",
       "firstLevel": 4,
       "x": 80,
       "y": 10,
@@ -444,6 +458,7 @@
       "id": "wahres-selbst",
       "name": "Das Wahre Selbst",
       "type": "axiom",
+      "primaryThinker": "rohr",
       "firstLevel": 5,
       "x": 14,
       "y": 80,

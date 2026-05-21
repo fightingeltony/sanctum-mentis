@@ -56,6 +56,7 @@ export interface School {
   gy?: number;
   labelDir?: 'N' | 'NE' | 'E' | 'SE' | 'S' | 'SW' | 'W' | 'NW';
   cluster?: { cx: number; cy: number; rx: number; ry: number; lx: number; ly: number; ta: 'start' | 'middle' | 'end' };
+  lectio_brief?: string;    // optional 2–3-Satz-Ankerpunkt für Lectio-Modus
 }
 
 /**
@@ -77,6 +78,7 @@ export interface Thinker extends Versioned {
   lifespan?: string;        // z.B. "1724–1804"
   graphX?: number;          // SVG-Position im Influence-Graph (manual layout)
   graphY?: number;
+  lectio_brief?: string;    // optional 2–3-Satz-Ankerpunkt für Lectio-Modus
 }
 
 /** Beziehungstypen zwischen Denkern bzw. zwischen Denkern und Konzepten */
@@ -110,7 +112,9 @@ export interface Concept extends Versioned {
   y: number;        // 0–100, Position im Quadranten-Raum
   type: ConceptType;
   schoolId?: string;
+  primaryThinker?: string;  // optionaler Denker-ID-Override für das Karten-Label
   labelOffset?: { dx: number; dy: number; anchor: 'middle' | 'start' | 'end' };
+  lectio_brief?: string;    // optional 2–3-Satz-Ankerpunkt für Lectio-Modus
 }
 
 /** Kompletter Datensatz für ein Themengebiet */
@@ -133,4 +137,37 @@ export interface LevelState {
   influences: Array<Influence & { description: string }>;
   concepts: Array<Concept & { description: string; isNew: boolean }>;
   context: string | null;
+}
+
+// ─── Lectio Types ────────────────────────────────────────────
+
+/** Eine Station im Lectio-Pfad */
+export interface LectioStep {
+  nodeId: string | string[];
+  nodeType: 'thinker' | 'concept' | 'school';
+  transition: string;
+}
+
+/** Ein kuratorischer Lesepfad durch ein Tableau */
+export interface Lectio {
+  id: string;
+  tableauId: string;
+  title: string;
+  focus: string;
+  thesis: string;
+  level: number;
+  estimated_minutes: number;
+  intro: string;
+  path: LectioStep[];
+  closing_synthesis: string;
+  closing_question: string;
+}
+
+/** Kompakte Lectio-Vorschau für Discovery im Tableau-Kopf */
+export interface LectioSummary {
+  id: string;
+  title: string;
+  focus: string;
+  estimated_minutes: number;
+  stationCount: number;
 }

@@ -1,6 +1,6 @@
 # Lectio-Modus — Sanctum-Standard für geführte Pfade
 
-**Status:** Konvention v1.4, Mai 2026
+**Status:** Konvention v1.5, Mai 2026
 **Anwendungsbereich:** Alle Lectio-Bauten in Sanctum Mentis.
 
 ---
@@ -68,34 +68,59 @@ Eine Lectio behandelt immer einen **Pfad durch ein Tableau**, nicht das Tableau 
 
 ---
 
-### 4. Stilbruch zwischen Lectio-Stimme und Knoten-Text — methodisch markiert
+### 4. Eigene Knoten-Stimme — `lectio_brief` als dichter Anker
 
 Im Lesefluss stehen zwei Textsorten nebeneinander:
 
-- **Übergangstexte** (neu für die Lectio): du-orientiert, kurz, kuratorisch bewertend
-- **Knoten-Texte** (aus dem Tableau-JSON): er/sie-orientiert, nüchtern, akademisch-beschreibend
+- **`lectio_brief`-Texte** (eigenes Feld pro Knoten): dichte 2–3-Satz-Stimme des Denkers, atmosphärisch, in sich stehend
+- **Übergangstexte** (neu für die Lectio): du-orientiert, kuratorisch bewertend, 1–3 Sätze
 
-Der Stilbruch wird **nicht eliminiert**, sondern **methodisch markiert**: Die Lectio-Stimme umrahmt, der Knoten-Text steht als eigenständiger Block dazwischen. Frontend und Typografie können diesen Wechsel sichtbar machen — die Lectio-Stimme in Akzentfarbe, der Knoten-Text im normalen Lesemodus.
+Beide werden im Lectio-Kontext gezeigt. Die Lectio-Stimme bewertet und überleitet; der `lectio_brief` sagt, was der Denker meint, ohne ihn ausführlich zu erklären.
 
-**Verworfene Alternativen:**
-- **B) Selektive Neu-Texte** — Knoten-Texte nur für Lectio-Stationen und nur auf der Lectio-`level`-Stufe neu schreiben. Schlanker als volle Doppelpflege, aber: Jede Änderung am Tableau-JSON erfordert dann eine separate Lectio-Prüfung. Zwei Wahrheiten über denselben Knoten, die auseinanderdriften können. Verworfen wegen Pflege-Risiko.
-- **C) `summary_lectio`-Feld im Knoten-Schema** — optionales Feld, das auf Standard-Text zurückfällt, wenn leer. Elegant, aber: Verschiebt die Pflegelast in den Datensatz, statt sie zu eliminieren. Würde das Knoten-Schema aufblähen für einen Anwendungsfall, der selten ist. Verworfen wegen Schema-Komplikation.
+**Schema-Erweiterung:** Knoten (Denker, Konzepte, Schulen) bekommen ein optionales Feld `lectio_brief` neben `versions`. Wenn vorhanden, wird es im Lectio-Modus gezeigt — unabhängig von der `level`-Wahl der Lectio. Wenn nicht vorhanden, greift die alte Fallback-Regel auf `versions` (siehe Punkt 5).
 
-**Entscheidung A** ist die bewusste Wahl: Der Stilbruch bleibt, wird aber durch Typografie sichtbar gemacht — Lectio-Stimme in Akzentfarbe, Knoten-Text als abgesetzter Block. Zwei Stimmen, zwei visuelle Zonen. Das ist Form, nicht Fehler.
+```json
+{
+  "id": "vedanta",
+  "name": "Vedanta",
+  "versions": { "1": "...", "3": "..." },
+  "lectio_brief": "Hinter allem, was in dir geschieht — Gedanken, Gefühle, Erinnerungen — liegt ein stiller Zeuge, der das alles bemerkt. Dieser Zeuge ist unveränderlich, unzerstörbar und identisch mit dem Grund aller Wirklichkeit. Du musst ihn nicht herstellen. Du musst ihn wiederfinden."
+}
+```
 
-**Konvention für Übergangstexte:** Immer du-Ton. Immer kuratorisch bewertet — kein neutrales "Als nächstes folgt X", sondern eine Aussage über die Funktion des nächsten Knotens im Bogen. 1–3 Sätze.
+**Schreib-Disziplin für `lectio_brief`:**
+- **Dicht, nicht didaktisch.** Sagt, was der Denker meint, nicht wie das Argument funktioniert.
+- **Anschlussfähig an die Lectio-Stimme.** Lässt Raum für die kuratorische Bewertung danach.
+- **2–3 Sätze, mit Pointe.** Klare Position, dichter Kern am Ende.
+- **Keine Annotationen.** Kein `[[Begriff:Erklärung]]` — wer in der Lectio liest, soll lesen, nicht recherchieren. Fachbegriffe (Atman, Anatta, Ego-Tunnel) werden durch Kontext oder Lectio-Stimme erschlossen.
+
+**Konvention für Übergangstexte:** Immer du-Ton. Immer kuratorisch bewertet — keine Wiederholung des `lectio_brief`, sondern Bewertung *und* Brücke zum nächsten Knoten.
 
 ---
 
-### 5. `level`-Semantik — Lese-Stufe, nicht Sichtbarkeits-Schwelle
+### 4.1 Methodische Revision — warum diese Lösung statt der ursprünglichen
 
-`level` in einer Lectio bedeutet: **Lese-Stufe der Knoten-Texte**. Die Lectio zeigt den Text auf dieser Stufe.
+In v1 stand hier die Entscheidung A: Stilbruch zwischen Lectio-Stimme und Tableau-Knoten-Text wird typografisch markiert, aber inhaltlich akzeptiert. Optionen B (selektive Neu-Texte) und C (`summary_lectio`-Feld) wurden mit Pflegeaufwand bzw. Schema-Komplikation begründet verworfen.
 
-Das ist nicht identisch mit der Tableau-Sichtbarkeitslogik (wo Knoten erst ab `firstLevel` auftauchen). Lectio kann Knoten aufnehmen, die im Tableau erst auf höheren Stufen sichtbar sind — z.B. Metzinger (`firstLevel: 5`) in einer L2-Lectio.
+**Diese Begründung war falsch.** Beim Live-Test des Selbst-Skripts auf `level: 3` zeigte sich: Die Tableau-Knoten-Texte sind ausführliche Lehrtexte (5–7 Sätze, akademisch). Sie sagen schon vollständig, was die Lectio-Stimme dann kuratorisch wiederholt. Das produziert **Redundanz**, nicht **Stilbruch**. Die Lectio-Stimme wird zur Paraphrase des Knoten-Texts, statt zur eigenständigen Bewertung.
 
-**Fallback-Regel:** Wenn ein Knoten keinen Text auf der Lectio-`level`-Stufe hat, wird der Text der **niedrigsten verfügbaren Stufe ≥ firstLevel** gezeigt. Metzinger in einer L2-Lectio zeigt den L5-Text — seinen einzigen. Das ist ehrlich: Lectio überschreibt die Tableau-Sichtbarkeit, weil sie kuratorisch entschieden hat, diesen Knoten an dieser Stelle zu zeigen.
+Das `lectio_brief`-Feld löst das: Der Brief ist atmosphärisch und dicht (kein Lehrtext), die Lectio-Stimme bewertet und überleitet (kein Erklärtext). Zwei Funktionen, keine zwei Wahrheiten.
 
-**`level` als Anspruchsindikator für den Nutzer:** Zusätzlich signalisiert `level` die kognitive Anspruchsstufe — L2 ist Grundlagen, L3 Vertiefung. Das hilft dem Nutzer bei der Entscheidung, welche Lectio zu ihm passt.
+**Pflegeaufwand:** 20–25 Briefs über die geplanten vier Lectios — einmaliger Aufwand, beim Lectio-Bau mit eingeplant. Bei späteren Tableaus mit Lectio-Vorausschau (Existenzialismus etc.) werden Briefs gleich beim Knoten mitgeschrieben.
+
+**Methodische Folge:** Lectio ist nicht mehr rein auf Tableau-Daten aufgesetzt — sie definiert die Knoten teilweise mit. Das ist eine Verschiebung, aber eine ehrliche: Die Knoten bekommen damit zwei legitime Funktionen, nicht zwei konkurrierende Stimmen.
+
+---
+
+### 5. `level`-Semantik — Fallback, nicht Default
+
+`level` in einer Lectio kommt nur dann zum Tragen, wenn ein Knoten **kein `lectio_brief`** hat. In dem Fall wird der `versions`-Text dieser Stufe gezeigt (analog zur Tableau-Logik).
+
+Bei Knoten **mit** `lectio_brief` wird dieser unabhängig von `level` gezeigt — das ist der Default-Fall für gut gepflegte Lectios.
+
+**Fallback-Regel:** Wenn weder `lectio_brief` noch ein Text auf der Lectio-`level`-Stufe existiert, wird der Text der **niedrigsten verfügbaren Stufe ≥ firstLevel** gezeigt. Metzinger in einer L2-Lectio ohne `lectio_brief` zeigt den L5-Text — seinen einzigen.
+
+**`level` als Anspruchsindikator für den Nutzer:** Auch wenn `lectio_brief` den Lese-Text liefert, signalisiert `level` weiterhin die kognitive Anspruchsstufe der Lectio insgesamt — L2 ist Grundlagen, L3 Vertiefung. Das hilft dem Nutzer bei der Entscheidung, welche Lectio zu ihm passt.
 
 ---
 
@@ -219,3 +244,4 @@ Lectios können nach zwei Mustern aufgebaut sein:
 - **v1.2 (Mai 2026):** Kopf-Herz-Bauch-Bewegung als Stimm-Konvention bei Punkt 6 ergänzt — bewusste Entscheidung gegen ein `resonance`-Schema-Feld, weil die Bewegung in der Stimme lebt, nicht in Tags. Pilot-Skript: Intro auf Zeh-Anker umgestellt, Descartes-Übergang mit Ryle-Brücke geschärft, Closing Question schließt den Bogen zum Zeh zurück.
 - **v1.3 (Mai 2026):** Zwei methodische Befunde aus dem zweiten Skript (Selbst-Tableau, Atman vs. Anatta): Zirkel-Signatur als Konvention bei Punkt 6 (Intro-Anker kehrt in Schlussfrage zurück); Pfad-Länge auf 4–8 erweitert, mit explizitem Antagonismus-Hinweis (weniger ist besser bei hoher Spannungsdichte).
 - **v1.4 (Mai 2026):** Nach zweiter Challenge des zweiten Skripts: Punkt 9 (Pfad-Typen narrativ vs. konfrontativ) neu, mit Bogen-Zwang-Warnung; Punkt 2 um Gegenkonvention zur Doppelstation-Vermeidung bei Bruchstellen ergänzt. Selbst-Skript: `focus`-Feld spezifischer, Jung-Übergang und Closing Synthesis neu — Jung steht jetzt als eigenständige psychologische Position, nicht als Vermittler.
+- **v1.5 (Mai 2026):** Methodische Revision von Punkt 4 nach Live-Test der Selbst-Lectio. Tableau-Knoten-Texte erzeugen mit der Lectio-Stimme Redundanz, nicht Stilbruch — Lectio-Stimme paraphrasiert den Knoten-Text. Lösung: neues Feld `lectio_brief` (2–3 Sätze, atmosphärisch, dicht) als eigene Knoten-Stimme im Lectio-Modus. Punkt 5 entsprechend angepasst (`level` wird Fallback statt Default). Sektion 4.1 dokumentiert die Revision explizit.

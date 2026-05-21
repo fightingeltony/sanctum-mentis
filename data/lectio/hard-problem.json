@@ -3,45 +3,45 @@
   "tableauId": "philosophie-des-geistes",
   "title": "Warum das Rätsel nicht verschwindet",
   "focus": "Hard Problem — Entstehung, Gegenantworten, Diagnose",
-  "thesis": "Das Hard Problem ist keine Lücke im Wissen, die Wissenschaft schließen wird. Es ist eine Struktur der Wirklichkeit, die uns etwas über die Grenzen der Außenperspektive zeigt — und am Ende über uns selbst.",
+  "thesis": "Das Hard Problem ist keine Wissenslücke, die die Wissenschaft einfach füllen wird. Es ist eine strukturelle Grenze der Außenperspektive — und damit ein Hinweis auf das Wesen unserer Subjektivität.",
   "level": 2,
   "estimated_minutes": 15,
-  "intro": "Was passiert eigentlich, wenn du dir den Zeh stößt? Dein Körper registriert einen Impuls, Nerven feuern, Chemie schießt durch dein Gehirn — aber für dich ist es ein stechender, hässlicher Schmerz. Warum bleibt es nicht bei der Chemie? Warum leuchtet in dir dieses Gefühl auf, anstatt dass die Verarbeitung einfach im Dunkeln abläuft? Das ist das Hard Problem. Lass uns dort anfangen, wo das moderne Rätsel seinen Ursprung nahm.",
+  "intro": "Schlag dir einmal leicht mit der Hand auf den Oberschenkel. Da ist ein Geräusch, ein Reiz, eine mechanische Erschütterung. Aber da ist auch ein Gefühl. Warum bleibt es nicht bei der bloßen Datenverarbeitung im Gehirn? Warum leuchtet in dir dieses hässliche oder neutrale ‚Etwas' auf? Das ist das Hard Problem. Wir beginnen unsere Reise dort, wo der moderne Geist sich selbst zum Rätsel wurde.",
 
   "path": [
     {
       "nodeId": "descartes",
       "nodeType": "thinker",
-      "transition": "Descartes irrt sich mit seiner Antwort. Aber er hat recht mit seiner Frage. Spürst du, wie diese Trennung uns zu Fremden im eigenen Körper macht? Gilbert Ryle nannte das später spöttisch das ›Gespenst in der Maschine‹."
+      "transition": "Descartes hat uns eine Welt hinterlassen, die sauber getrennt ist. Er hat recht mit dem Riss, den er beschreibt, aber seine Antwort — eine eigene ‚Geistsubstanz' — wirkt heute wie ein Verlegenheitsurteil. Die Sprachphilosophie wollte diesen Geist später einfach als Grammatikfehler entlarven."
     },
     {
       "nodeId": ["ryle", "wittgenstein"],
       "nodeType": "thinker",
-      "transition": "Die Sprachkritik löst die Verwirrung über Begriffe — nicht die Verwirrung über das Erleben selbst."
+      "transition": "Die Sprachkritik ist heilsam: Sie räumt mit Geistern und Gespenstern auf. Aber spürst du es? Die Verwirrung über das Erleben selbst verschwindet nicht, nur weil wir unsere Sätze korrigieren. Thomas Nagel hat dieses Schweigen der Wissenschaft schließlich gebrochen."
     },
     {
       "nodeId": "nagel",
       "nodeType": "thinker",
-      "transition": "Nagel stellt die Grenze fest. Er benennt sie noch nicht. Das tut Chalmers."
+      "transition": "Nagel hat gezeigt, dass wir alles über die Biologie einer Fledermaus wissen können, ohne jemals zu wissen, wie es sich *anfühlt*, sie zu sein. Er markiert die Grenze der Erkenntnis — David Chalmers wird sie gleich für unüberwindbar erklären."
     },
     {
       "nodeId": ["chalmers", "jackson"],
       "nodeType": "thinker",
-      "transition": "Zwei Argumente, eine Diagnose: Die Außenperspektive ist nicht vollständig. Etwas bleibt."
+      "transition": "Zwei Argumente, eine Diagnose: Die Außenperspektive der Physik ist niemals vollständig. Etwas bleibt immer draußen vor der Tür. Doch während Chalmers die Mauer errichtet, versucht Daniel Dennett bereits, sie Stein für Stein wieder abzutragen."
     },
     {
       "nodeId": "dennett",
       "nodeType": "thinker",
-      "transition": "Dennett erklärt das Problem weg — oder erklärt, warum wir fälschlicherweise denken, es gäbe eines. Welche Beschreibung zutrifft, ist selbst Teil des Streits."
+      "transition": "Dennett ist brillant und provokant. Er erklärt das Rätsel nicht, er erklärt es weg. Er behauptet, wir seien einer bloßen Illusion von Tiefe erlegen. Wenn man Dennett liest, fühlt man sich wie eine Maschine — bis man wieder zu Thomas Metzinger kommt, der uns zeigt, wie diese Maschine sich selbst täuscht."
     },
     {
       "nodeId": "metzinger",
       "nodeType": "thinker",
-      "transition": "Metzinger löst das Problem nicht — er diagnostiziert es. Und die Diagnose ist selbst faszinierend."
+      "transition": "Metzinger liefert die vielleicht radikalste Diagnose unserer Zeit. Er löst das Hard Problem nicht durch Metaphysik, sondern durch eine Theorie der Simulation. Das Rätsel bleibt, aber es ist nun ein durchschautes Rätsel."
     }
   ],
 
-  "closing_synthesis": "Drei Antworten auf dasselbe Problem. Dennett sagt, es gibt keines — nur eine begriffliche Verwirrung über Introspektion. Nagel und Jackson sagen, die erste Person lässt sich nicht verlustfrei in die dritte übersetzen. Metzinger sagt, das Rätsel ist eine strukturelle Eigenschaft des Selbstmodells — keine ontologische Grenze, sondern ein Transparenz-Phänomen. Du hast jetzt alle drei gehört. Das Rätsel ist nicht gelöst. Aber du weißt jetzt, warum es verdient, schwer zu sein.",
+  "closing_synthesis": "Du stehst nun am Ende des Pfades zwischen drei unversöhnlichen Welten. Dennett sagt, es gibt kein Rätsel — nur eine Verwirrung über Funktionen. Nagel und Jackson sagen, die erste Person ist ein unteilbares Geheimnis. Und Metzinger erklärt dieses Geheimnis als den eleganten Trick einer biologischen Simulation. Das Rätsel ist nicht gelöst. Aber du weißt jetzt, warum es verdient, schwer zu sein.",
 
-  "closing_question": "Wenn du dir das nächste Mal den Zeh stößt — oder wenn jemand neben dir Schmerz spürt, dem du nicht ausweichen kannst: Was bedeutet es, dass dieser Schmerz mehr ist als Chemie, und keiner so genau sagen kann, was dieses Mehr eigentlich ist?"
+  "closing_question": "Wenn kein Scanner der Welt jemals dein Schmerzgefühl finden kann — was bedeutet das für die Weise, wie wir einander begegnen? Ist das Leid eines anderen Menschen für dich eine bloße biologische Tatsache oder ein unantastbares Geheimnis?"
 }

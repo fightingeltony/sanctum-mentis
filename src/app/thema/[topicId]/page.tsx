@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getTopic, library } from '@/lib/data'
+import { getTopic, getLectiosByTableauId, library } from '@/lib/data'
 import TopicViewer from '@/components/TopicViewer'
 
 interface Props {
@@ -46,9 +46,12 @@ export default async function TopicPage({ params, searchParams }: Props) {
   const data        = getTopic(topicId)
   if (!data) notFound()
 
+  const lectios = getLectiosByTableauId(topicId)
+
   return (
     <TopicViewer
       data={data}
+      lectios={lectios}
       initialHighlight={sp?.highlight}
       initialLevel={sp?.level ? Number(sp.level) : undefined}
       initialTab={sp?.tab as 'denker' | 'einfluesse' | 'quadrant' | undefined}

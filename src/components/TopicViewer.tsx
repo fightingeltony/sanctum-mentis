@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback } from 'react'
 import Link from 'next/link'
-import type { TopicData } from '@/lib/types'
+import type { TopicData, LectioSummary } from '@/lib/types'
 import { computeLevelState } from '@/lib/complexityEngine'
 import LevelSlider from './LevelSlider'
 import ThinkerList from './ThinkerList'
@@ -20,9 +20,11 @@ interface Props {
   initialLevel?: number
   /** Tab to activate after mount — set by CommandPalette navigation */
   initialTab?: Tab
+  /** Lectios for this tableau — shown as guided-path discovery in the header */
+  lectios?: LectioSummary[]
 }
 
-export default function TopicViewer({ data, initialHighlight, initialLevel, initialTab }: Props) {
+export default function TopicViewer({ data, initialHighlight, initialLevel, initialTab, lectios }: Props) {
   const [levelId, setLevelId] = useState(1)
   const [tab, setTab]         = useState<Tab>('denker')
   const [menuOpen, setMenuOpen]     = useState(false)
@@ -212,6 +214,36 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
           >
             {data.topic.intro}
           </p>
+        )}
+
+        {lectios && lectios.length > 0 && (
+          <div className="px-4 sm:px-5 mb-6">
+            <p className="font-ui text-[11px] tracking-[0.06em] text-[--fg-faint] mb-2">
+              Geführte Pfade
+            </p>
+            <div className="flex flex-col gap-1.5">
+              {lectios.map(l => (
+                <Link
+                  key={l.id}
+                  href={`/lectio/${l.id}`}
+                  className="font-body text-[14px] leading-snug no-underline
+                    transition-colors group"
+                  style={{ color: 'var(--fg-muted)' }}
+                >
+                  <span
+                    className="mr-1.5 transition-colors"
+                    style={{ color: 'var(--accent)' }}
+                  >
+                    →
+                  </span>
+                  <span className="group-hover:underline">{l.title}</span>
+                  <span className="text-[12px] ml-2 text-[--fg-faint]">
+                    {l.stationCount} Stationen · ~{l.estimated_minutes} Min
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
         )}
 
         {levelId === data.topic.complexityLevels && data.topic.synthesis && (
