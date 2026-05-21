@@ -173,6 +173,11 @@ Für akademisch sensible Tableaus mit Vollständigkeitsanspruch (z.B. Erkenntnis
 
 Kennzeichen: 16–22 Denker, 12–18 Konzepte, adversarielle Prüfung, Inquisitor-Chat statt milder Prüfer-Chat.
 
+### Lectio-Modus (Zugangs-Modus, kein Tableau-Format)
+Geführte Pfade durch bestehende Tableau-Datensätze. Der Prompt liegt in `prompts/lectio-mode.md`. Tableau-Bauten folgen Mild oder Hard — Lectio ist ein separater Schritt danach.
+
+Kennzeichen: 5–8 Knoten pro Pfad, eigene `intro`/`transition`/`closing_synthesis`/`closing_question`-Texte, `level` = Lese-Stufe (nicht Sichtbarkeitsschwelle). Skripte liegen in `data/lectio/[id].json`. Kein Hard-Mode-Äquivalent — Lectio ist immer mild.
+
 ### Verteilter Architekt-Prüfer-Workflow
 Für jeden neuen Tableau-Bau: Architekt und Prüfer in getrennten Chat-Instanzen.
 

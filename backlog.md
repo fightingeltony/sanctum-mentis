@@ -235,11 +235,11 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 ---
 
 ### [ ] Lectio-Modus — von Nice-to-Have zu Kernfeature
-**Status:** Priorität erhöht 10.5.26
+**Status:** konzeptionell vorbereitet 19.5.26 — Frontend-Implementierung ausstehend
 **Kontext:** Geführte Tour durchs Tableau (zeitliche Sequenz statt räumlicher Karte) war Nice-to-Have. Mit der Sanctum-Linse ("Punkte setzen, Erkenntnisse landen lassen") wird sie zum Kernmechanismus für Verstehen-Abschließen. Die offene Karte zeigt das Big Picture — gut für Verstehen. Die Tour führt durch das Big Picture — gut für Abschließen. Beide gehören zusammen.
 **Verhältnis zu Side-Panel:** Komplementär — Side-Panel ist räumlich strukturiert (Knoten in Beziehung), Lectio temporal (Knoten in Lernreihenfolge).
-**Schema-Implikation:** Eine `lectio_path`-Liste pro Tableau, die eine empfohlene Reihenfolge von Knoten plus Übergangstexte definiert.
-**Nächster Schritt:** Side-Panel Stufe 1 hat Vorrang; danach Lectio parallel zu oder vor Stufe 2 — nicht mehr danach.
+**Konzeptioneller Stand (19.5.26):** `prompts/lectio-mode.md` v1.2 — acht methodische Entscheidungen, Schema-Definition, Größen-Richtwerte, Verhältnis zu Mild/Hard dokumentiert. `data/lectio/hard-problem.json` — erstes Pilot-Skript (Philosophie des Geistes, Hard-Problem-Strang, 6 Stationen, Zeh-Einstieg, Schlussfrage schließt auf Erlebnis-Ebene zurück). Schema: eigene `intro`/`transition`/`closing_synthesis`/`closing_question`-Felder, `level` = Lese-Stufe (nicht Sichtbarkeitsschwelle), `nodeId` als String oder Array.
+**Nächster Schritt:** Frontend-Implementierung als separater Auftrag. Content (weitere Skripte) wartet auf Frontend.
 
 ---
 

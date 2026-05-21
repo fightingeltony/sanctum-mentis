@@ -1,0 +1,47 @@
+{
+  "id": "hard-problem",
+  "tableauId": "philosophie-des-geistes",
+  "title": "Warum das Rätsel nicht verschwindet",
+  "focus": "Hard Problem — Entstehung, Gegenantworten, Diagnose",
+  "thesis": "Das Hard Problem ist keine Lücke im Wissen, die Wissenschaft schließen wird. Es ist eine Struktur der Wirklichkeit, die uns etwas über die Grenzen der Außenperspektive zeigt — und am Ende über uns selbst.",
+  "level": 2,
+  "estimated_minutes": 15,
+  "intro": "Was passiert eigentlich, wenn du dir den Zeh stößt? Dein Körper registriert einen Impuls, Nerven feuern, Chemie schießt durch dein Gehirn — aber für dich ist es ein stechender, hässlicher Schmerz. Warum bleibt es nicht bei der Chemie? Warum leuchtet in dir dieses Gefühl auf, anstatt dass die Verarbeitung einfach im Dunkeln abläuft? Das ist das Hard Problem. Lass uns dort anfangen, wo das moderne Rätsel seinen Ursprung nahm.",
+
+  "path": [
+    {
+      "nodeId": "descartes",
+      "nodeType": "thinker",
+      "transition": "Descartes irrt sich mit seiner Antwort. Aber er hat recht mit seiner Frage. Spürst du, wie diese Trennung uns zu Fremden im eigenen Körper macht? Gilbert Ryle nannte das später spöttisch das ›Gespenst in der Maschine‹."
+    },
+    {
+      "nodeId": ["ryle", "wittgenstein"],
+      "nodeType": "thinker",
+      "transition": "Die Sprachkritik löst die Verwirrung über Begriffe — nicht die Verwirrung über das Erleben selbst."
+    },
+    {
+      "nodeId": "nagel",
+      "nodeType": "thinker",
+      "transition": "Nagel stellt die Grenze fest. Er benennt sie noch nicht. Das tut Chalmers."
+    },
+    {
+      "nodeId": ["chalmers", "jackson"],
+      "nodeType": "thinker",
+      "transition": "Zwei Argumente, eine Diagnose: Die Außenperspektive ist nicht vollständig. Etwas bleibt."
+    },
+    {
+      "nodeId": "dennett",
+      "nodeType": "thinker",
+      "transition": "Dennett erklärt das Problem weg — oder erklärt, warum wir fälschlicherweise denken, es gäbe eines. Welche Beschreibung zutrifft, ist selbst Teil des Streits."
+    },
+    {
+      "nodeId": "metzinger",
+      "nodeType": "thinker",
+      "transition": "Metzinger löst das Problem nicht — er diagnostiziert es. Und die Diagnose ist selbst faszinierend."
+    }
+  ],
+
+  "closing_synthesis": "Drei Antworten auf dasselbe Problem. Dennett sagt, es gibt keines — nur eine begriffliche Verwirrung über Introspektion. Nagel und Jackson sagen, die erste Person lässt sich nicht verlustfrei in die dritte übersetzen. Metzinger sagt, das Rätsel ist eine strukturelle Eigenschaft des Selbstmodells — keine ontologische Grenze, sondern ein Transparenz-Phänomen. Du hast jetzt alle drei gehört. Das Rätsel ist nicht gelöst. Aber du weißt jetzt, warum es verdient, schwer zu sein.",
+
+  "closing_question": "Wenn du dir das nächste Mal den Zeh stößt — oder wenn jemand neben dir Schmerz spürt, dem du nicht ausweichen kannst: Was bedeutet es, dass dieser Schmerz mehr ist als Chemie, und keiner so genau sagen kann, was dieses Mehr eigentlich ist?"
+}
