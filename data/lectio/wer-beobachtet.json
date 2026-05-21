@@ -1,0 +1,37 @@
+{
+  "id": "wer-beobachtet",
+  "tableauId": "das-selbst",
+  "title": "Wer beobachtet, wenn du beobachtest?",
+  "focus": "Atman vs. Anatta in vier Stimmen — zwei Traditionen, ein Neurophilosoph, ein Tiefenpsychologe",
+  "thesis": "Wenn du dich selbst beobachtest, gibt es offenbar einen Beobachter. Aber ist dieser Beobachter ein bleibender Kern — oder selbst nur ein weiterer Prozess, der gerade beobachtet? Diese Frage ist nicht gelöst. Sie ist die Spannung, die das ganze Tableau trägt.",
+  "level": 3,
+  "estimated_minutes": 15,
+  "intro": "Setz dich einen Moment hin. Atme. Und jetzt: Schau dir selbst beim Denken zu. Da ist offensichtlich jemand, der schaut. Aber ist dieser Schauende selbst ein Ding — ein Kern, der du wirklich bist? Oder ist er selbst nur ein Schauen, das gerade passiert? Diese Frage ist 2500 Jahre alt und sie ist nicht entschieden. Vier Stimmen, die unterschiedlich antworten — und ein letzter Knoten, der die Frage offenhält.",
+
+  "path": [
+    {
+      "nodeId": "vedanta",
+      "nodeType": "thinker",
+      "transition": "Vedanta sagt: Du bist nicht der Gedanke. Du bist das, was den Gedanken bemerkt. Und dieses Bemerkende ist ewig, unzerstörbar, identisch mit dem Grund von allem. Eine schöne, beinahe tröstliche Antwort. Der Buddha hat sie zurückgewiesen — aus genau derselben kontemplativen Praxis heraus."
+    },
+    {
+      "nodeId": "buddhismus",
+      "nodeType": "thinker",
+      "transition": "Spürst du den Unterschied? Vedanta sucht das, was bleibt. Der Buddhismus sucht das, was sich verändert — und findet nichts anderes. Auch das Beobachten selbst ist Prozess: ein Sehen, das aufsteigt, ein Wissen, das verklingt. Zweitausendfünfhundert Jahre später hat ein deutscher Philosoph diese Diagnose neu formuliert — diesmal aus dem Labor."
+    },
+    {
+      "nodeId": "metzinger",
+      "nodeType": "thinker",
+      "transition": "Metzinger ist konsequent. Wenn man ihm bis ans Ende folgt, bleibt ein präzises, kühles Bild: ein Gehirn, ein Modell, niemand drin. Manche bleiben dabei. Andere — nicht weniger ernst — bestehen darauf, dass die Tiefe der Erfahrung mehr verlangt als diese Beschreibung."
+    },
+    {
+      "nodeId": "jung",
+      "nodeType": "thinker",
+      "transition": "Jung antwortet nicht aus dem Streit, sondern aus einer anderen Tradition — der westlichen Tiefenpsychologie. Das Selbst ist für ihn weder ewiger Kern noch reine Illusion, sondern ein Archetyp: eine psychische Realität, die sich durch Individuation, durch Träume, durch Auseinandersetzung mit dem Schatten erschließt. Vedanta und Buddhismus schauen nun beide auf Jung und seufzen — der eine, weil er ihm den Kern zu psychologisch denkt, der andere, weil er ihn zu schnell zugesteht."
+    }
+  ],
+
+  "closing_synthesis": "Vier Stimmen, vier Antworten. Vedanta: Es gibt einen Kern, den du wiederfinden musst. Der Buddhismus: Es gibt keinen Kern, nur Prozess — und Befreiung liegt darin, das zu sehen. Metzinger: Auch ›keinen Kern‹ ist zu viel gesagt — es gibt nur ein Modell, das sich für einen Kern hält. Jung antwortet aus einer anderen Sprache: Das Selbst ist ein Archetyp, eine psychische Realität, die durch Individuation erfahrbar wird — ohne sich auf eine Ontologie festzulegen. Drei ontologische Antworten und eine psychologische, die sich der Ontologie verweigert. Die Frage, wer beobachtet, ist nicht gelöst. Sie ist gut gefragt.",
+
+  "closing_question": "Schau dir noch einmal selbst beim Denken zu — wie vor zehn Minuten am Anfang. Hat sich etwas verschoben in dem, wer da gerade schaut? Und falls ja: Wer hat es gemerkt?"
+}

@@ -1,6 +1,6 @@
 # Lectio-Modus — Sanctum-Standard für geführte Pfade
 
-**Status:** Konvention v1.2, Mai 2026
+**Status:** Konvention v1.4, Mai 2026
 **Anwendungsbereich:** Alle Lectio-Bauten in Sanctum Mentis.
 
 ---
@@ -22,7 +22,7 @@ Lectio ist komplementär, nicht konkurrierend:
 - **Karte** — räumlich, explorativ, vollständig, selbstgesteuert
 - **Lectio** — temporal, geführt, selektiv, kuratorisch
 
-Eine Lectio durch ein Tableau mit 15 Denkern führt typischerweise durch 5–8 davon. Die anderen bleiben in der Karte erreichbar. Lectio ist die kuratierte Route, nicht der vollständige Stadtplan.
+Eine Lectio durch ein Tableau mit 15 Denkern führt typischerweise durch 4–8 davon. Die anderen bleiben in der Karte erreichbar. Lectio ist die kuratierte Route, nicht der vollständige Stadtplan.
 
 ---
 
@@ -34,7 +34,7 @@ Lectio ist außerdem der erste Schritt zu Kopf-Herz-Bauch: Sie kann *zur* Fühle
 
 ---
 
-## Acht methodische Entscheidungen
+## Neun methodische Entscheidungen
 
 ### 1. Eigene Landung — keine Leihgabe
 
@@ -53,6 +53,8 @@ Ein Pfad-Schritt kann einen oder mehrere Knoten enthalten. `nodeId` kann ein Str
 **Begründung:** Manche Denker gehören als Paar zusammen — Ryle + Wittgenstein, Chalmers + Jackson. Die Methode erzwingt kein 1:1-Verhältnis zwischen Station und Knoten.
 
 **Konvention:** Knoten-Arrays bei einer Station nur verwenden, wenn die Denker dieselbe Funktion im Bogen haben. Nicht als Abkürzung, um zwei Stationen zu sparen.
+
+**Gegenkonvention:** Doppelstationen werden *vermieden*, wo der Bruch zwischen den Positionen der lehrende Moment ist. Vedanta und Buddhismus teilen die kontemplative Tradition, aber ihre Antagonie ist der zentrale didaktische Punkt — sie gehören als getrennte Stationen, nicht als Paar.
 
 ---
 
@@ -107,6 +109,8 @@ Die Schlussfrage gehört zur Lectio, nicht zum Tableau. Sie ist auf den spezifis
 
 **Konvention Kopf-Herz-Bauch:** Wenn die Lectio die Bewegung Verstehen → Fühlen → Handeln trägt, lebt sie in den Übergangstexten und der Schlussfrage — nicht im Schema. Kein `resonance`-Tag, keine Pflicht-Markierung. Die Bewegung ist eine Stimm-Eigenschaft der Lectio, keine Datenstruktur. Frühe Übergänge dürfen analytisch sein, spätere körperlich, die Schlussfrage persönlich. Aber nicht jede Lectio muss diese Bewegung machen — manche bleiben ganz im Kopf, manche starten direkt im Bauch.
 
+**Konvention Zirkel-Signatur:** Wenn die Intro einen körperlichen oder erfahrungsnahen Anker setzt (Zeh stoßen, Atem, Innehalten), gewinnt die Schlussfrage durch Rückkehr zu diesem Anker — derselbe Ort, aber nach dem Pfad. Hard Problem: Zeh am Anfang, Zeh am Ende. Atman/Anatta: Beobachten am Anfang, Beobachten am Ende. Das ist nicht Pflicht — aber wenn der Anker es trägt, schließt sich die Lectio von selbst.
+
 ---
 
 ### 7. Pacing — Verweilen ermöglichen, nicht erzwingen
@@ -130,6 +134,22 @@ Lectio-Stationen können Denker (`thinker`), Konzepte (`concept`) oder Schulen (
 **Schulen als Stationen:** Selten sinnvoll. Schul-Texte beschreiben eine Tradition, keine Argumentation. Lectio braucht Argumente, keine Etiketten. Schulen bleiben besser als Hintergrundwissen in der Karte.
 
 **`nodeType`-Werte:** `"thinker"` | `"concept"` | `"school"`
+
+---
+
+### 9. Pfad-Typen — narrativ oder konfrontativ
+
+Lectios können nach zwei Mustern aufgebaut sein:
+
+**Narrativ-historisch:** Stationen lösen sich chronologisch ab, jede antwortet auf die vorige. Descartes → Sprachkritik → Nagel → Chalmers → Dennett → Metzinger. Der Bogen entsteht aus der historischen Entfaltung des Problems.
+**Risiko:** Vereinfachung historischer Komplexität — die Stationen werden zu Etappen eines linearen Fortschritts gepresst, der so nicht stattgefunden hat.
+
+**Konkurrierend-konfrontativ:** Stationen sind gleichzeitige Antworten auf dieselbe Frage. Vedanta vs. Buddhismus vs. Metzinger vs. Jung — keine Ablösung, sondern Konfrontation. Der Bogen entsteht aus der Spannung zwischen den Positionen.
+**Risiko:** Bogen-Zwang. Wenn alle Stationen dieselbe Frage beantworten, entsteht Druck, sie in einen abschließenden Bogen zu pressen — und manche Stimmen werden dabei gebogen, in eine Vermittler-Rolle gedrängt oder mit einer Funktion belegt, die nicht ihre eigene ist.
+
+**Konvention für konfrontative Lectios:** Lass jede Stimme ihre eigene Position einnehmen, nicht eine Funktion im Bogen erfüllen. Die Closing Synthesis darf vier Antworten nennen, ohne sie in drei zusammenzudrängen, weil das didaktisch glatter klingt. Auch wenn der Bogen nicht *sauber* schließt — das ist ehrlicher als eine gebogene Position.
+
+**Hinweis zur Pfad-Länge in konfrontativen Lectios:** Hier ist die Antagonismus-Asymmetrie aus den Größen-Richtwerten besonders relevant — 4 Stationen können vollständig sein, jede weitere verwässert die Konfrontation.
 
 ---
 
@@ -171,7 +191,7 @@ Lectio-Stationen können Denker (`thinker`), Konzepte (`concept`) oder Schulen (
 
 | Parameter | Richtwert | Pilot-Befund |
 |---|---|---|
-| Knoten im Pfad | 5–8 | 6 Stationen ✓ |
+| Knoten im Pfad | 4–8 (4 bei Antagonismus-Lectios) | 6 / 4 ✓ |
 | Lesezeit | 12–20 Minuten | ~15 Min. ✓ |
 | Lectios pro Tableau | 1–3 (je nach Strängen) | — |
 | Intro-Länge | 3–5 Sätze | 5 Sätze ✓ |
@@ -179,6 +199,8 @@ Lectio-Stationen können Denker (`thinker`), Konzepte (`concept`) oder Schulen (
 | Closing Synthesis | 3–5 Sätze | 5 Sätze ✓ |
 
 **Hinweis zu Intro und Closing Synthesis:** Diese beiden Texte tragen strukturell mehr als Übergänge — Intro eröffnet den Rahmen, Closing Synthesis schließt ihn. Sie dürfen länger sein als Übergänge. 3–5 Sätze ist der ehrliche Richtwert, geerdet am Pilot.
+
+**Hinweis zur Pfad-Länge:** Antagonismus-Lectios mit hoher Spannungsdichte (z.B. Atman vs. Anatta) können mit 4 Stationen vollständig sein. Jeder zusätzliche Knoten verwässert dann die Konzentration, statt sie zu erweitern. Qualität vor Quantität: Wenn der Bogen mit weniger trägt, ist weniger besser.
 
 ---
 
@@ -195,3 +217,5 @@ Lectio-Stationen können Denker (`thinker`), Konzepte (`concept`) oder Schulen (
 - **v1 (Mai 2026):** Sieben methodische Entscheidungen auf Basis des ersten Pilot-Skripts (Hard Problem / Philosophie des Geistes). Schema daraus abgeleitet.
 - **v1.1 (Mai 2026):** Drei Nachbesserungen nach externer Challenge: Punkt 4 mit verworfenen Alternativen B/C explizit begründet; Punkt 8 (Knoten-Typen) neu; Größen-Richtwerte am Pilot geerdet.
 - **v1.2 (Mai 2026):** Kopf-Herz-Bauch-Bewegung als Stimm-Konvention bei Punkt 6 ergänzt — bewusste Entscheidung gegen ein `resonance`-Schema-Feld, weil die Bewegung in der Stimme lebt, nicht in Tags. Pilot-Skript: Intro auf Zeh-Anker umgestellt, Descartes-Übergang mit Ryle-Brücke geschärft, Closing Question schließt den Bogen zum Zeh zurück.
+- **v1.3 (Mai 2026):** Zwei methodische Befunde aus dem zweiten Skript (Selbst-Tableau, Atman vs. Anatta): Zirkel-Signatur als Konvention bei Punkt 6 (Intro-Anker kehrt in Schlussfrage zurück); Pfad-Länge auf 4–8 erweitert, mit explizitem Antagonismus-Hinweis (weniger ist besser bei hoher Spannungsdichte).
+- **v1.4 (Mai 2026):** Nach zweiter Challenge des zweiten Skripts: Punkt 9 (Pfad-Typen narrativ vs. konfrontativ) neu, mit Bogen-Zwang-Warnung; Punkt 2 um Gegenkonvention zur Doppelstation-Vermeidung bei Bruchstellen ergänzt. Selbst-Skript: `focus`-Feld spezifischer, Jung-Übergang und Closing Synthesis neu — Jung steht jetzt als eigenständige psychologische Position, nicht als Vermittler.
