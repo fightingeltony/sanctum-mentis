@@ -414,6 +414,36 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
+### [ ] Existenzialismus
+**Status:** geplant 19.5.26 — Reihenfolge nach Lectio-Bau für die bestehenden vier Tableaus
+**Anker:** Gewachsen — *"Was tust du mit deiner Freiheit, wenn niemand dir sagt, was sie soll?"* Alternative, weniger zugespitzt: *"Wie lebt man, wenn nichts vorgegeben ist?"* Vorarbeit liegt vor: Auseinandersetzung mit Martin Buber und Kierkegaard (Angst-Begriff) ist beim Kurator vorhanden.
+**Achsen-Vorschlag:**
+- X: **Bejahung ↔ Verzweiflung** — Wie geht man mit der Diagnose der Sinnlosigkeit um? (Nietzsche/Camus/de Beauvoir vs. Kierkegaard/Heidegger/Sartre)
+- Y: **Geworfenheit ↔ Entwurf** — Wo entsteht der Mensch? (Heidegger/Kierkegaard vs. Sartre/Nietzsche/de Beauvoir)
+- **Alternative X:** Subjekt ↔ Begegnung — Wo entsteht Sinn? (Sartre/Nietzsche vs. Buber/Marcel/Frankl) — hat Querverbindungen zu Levinas (Ethik) und Gilligan (Ethik). Beim Bau entscheiden.
+
+**Vorläufige Denkerliste (13, Mild-Modus):**
+Vorläufer L1–L2: Kierkegaard, Nietzsche, Dostojewski. Klassiker L2–L3: Heidegger, Sartre, Camus, de Beauvoir. Dialogisch L3: Buber, Marcel. Therapeutisch L4: Yalom, Frankl. Erweiterung L4–L5: Tillich, Hannah Arendt. Reserve: Iris Murdoch, ggf. zeitgenössische Stimme.
+
+**Konzepte (vorläufig):** Geworfenheit, Existenz vor Essenz, Absurdität, Mauvaise foi, Angst, Ich-Du-Beziehung, Sinn finden vs. Sinn machen (Frankl vs. Sartre), Tod als Strukturprinzip, Fiktive Endorientierung (Konzept-Echo aus Selbst-Tableau).
+
+**Adler-Frage:** Nicht als Denker aufnehmen (würde mit Selbst-Tableau doppeln), aber *Fiktive Endorientierung* als Konzept-Knoten mit Tooltip-Verweis auf Adler. Plus Influence-Kante Adler → Frankl im Selbst-Tableau markieren. Neues kuratorisches Pattern: Querverbindung über Konzept-Echo, nicht über Denker-Doppelung.
+
+**Kuratorische Pointe:** Frankl-Sartre-Streit — *"Es gibt keinen Sinn, du musst ihn machen"* vs. *"Es gibt einen Sinn, du musst ihn finden."* Beide Existenzialisten, beide mit Auschwitz-Bezug, gegensätzliche Konsequenzen. Tableau soll den Streit zeigen, nicht beruhigen.
+
+**Sammlungs-Verortung:** Eröffnet dritte Spur neben Erkenntnis-Trias und Handlungs-Spur — **Existenz-Spur** (oder Lebensfragen-Spur). Künftige Tableaus: Sinn (Logos/Telos), Glück und Lebenskunst, Tod und Endlichkeit, Liebe und Verbundenheit. Library-Architektur erst sichtbar machen, wenn Spur mindestens zwei live Tableaus hat.
+
+**Querverbindungen:** Sartre ↔ Levinas (Ethik), Buber/Marcel ↔ Gilligan (Ethik), Yalom/Frankl ↔ Selbst, Heidegger ↔ Husserl (Geist), Adler-Konzept ↔ Selbst. Existenzialismus ist integratives Tableau, nicht nur additiv.
+
+**Sonderrolle geprüft:** Könnte erstes Tableau werden, das von Anfang an mit Lectio integriert gebaut wird — nicht nachträglich. Material trägt es: narrative Linie (Kierkegaard → Nietzsche → Sartre → Camus → Frankl), dramatische Spannungen, hohe Lebensweltlichkeit. Beim Bau entscheiden.
+
+**Offene Fragen beim Bau:** (1) Welche X-Achse trägt besser? (2) Adler als Konzept-Echo — bestehender Konzept-Knoten oder Schema-Erweiterung nötig? (3) Hannah Arendt hier oder in Politische Philosophie? (4) Lectio-Integration ja/nein und welche 7–9 Stationen?
+
+**Modus:** Mild
+**Nächster Schritt:** Anker-Klärung und Achsenwahl beim Bau.
+
+---
+
 ### [ ] Stoizismus
 **Status:** Idee, früher in Konversation erwähnt
 **Anker:** unklar
