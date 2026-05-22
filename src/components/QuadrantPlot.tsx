@@ -365,7 +365,7 @@ export default function QuadrantPlot({
                     {concept.name.toUpperCase()}
                   </text>
 
-                  {thinkerName && (
+                  {thinkerName && active && (
                     <text
                       x={cx + lo.dx} y={cy + lo.dy + (active ? 14 : 13)}
                       textAnchor={lo.anchor}
