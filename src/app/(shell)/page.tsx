@@ -128,7 +128,7 @@ export default function LandingPage() {
             <div>
               <h3 className="font-prose font-medium text-[14px] text-[--fg] mb-2">Die Lectio</h3>
               <p className="font-body text-[13px] text-[--fg-muted] leading-relaxed">
-                Die Lectio führt dich durch einen kuratierten Pfad. Vier bis sechs Stationen, ein Bogen, ein offenes Ende. Die Karte gibt dir das Feld, die Lectio gibt dir eine Reise hindurch.
+                Die Lectio führt dich durch einen kuratierten Pfad. Vier bis sechs Stationen aus dem Tableau, ein Bogen, ein offenes Ende. Nicht alle Denker, sondern die, die zusammen eine Frage tragen. Die Karte bleibt offen für alles, was die Lectio weglässt.
               </p>
             </div>
           </div>
