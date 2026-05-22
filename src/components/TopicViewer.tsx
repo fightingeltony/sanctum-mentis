@@ -221,24 +221,36 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
             <p className="font-ui text-[11px] tracking-[0.06em] text-[--fg-faint] mb-2">
               Geführte Pfade
             </p>
-            <div className="flex flex-col gap-1.5">
+            <div className="flex flex-col gap-2">
               {lectios.map(l => (
                 <Link
                   key={l.id}
                   href={`/lectio/${l.id}`}
-                  className="font-body text-[14px] leading-snug no-underline
-                    transition-colors group"
-                  style={{ color: 'var(--fg-muted)' }}
+                  className="flex items-center justify-between gap-3 px-3 py-2.5 rounded
+                    no-underline transition-colors group"
+                  style={{ border: '1px solid var(--hairline)' }}
+                  onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.background = 'var(--bg-raised)'}
+                  onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.background = 'transparent'}
                 >
-                  <span
-                    className="mr-1.5 transition-colors"
-                    style={{ color: 'var(--accent)' }}
-                  >
-                    →
+                  <span className="flex items-center gap-2 min-w-0">
+                    <span
+                      className="shrink-0 transition-transform group-hover:translate-x-0.5"
+                      style={{ color: 'var(--accent)' }}
+                    >
+                      →
+                    </span>
+                    <span
+                      className="font-body text-[14px] leading-snug truncate"
+                      style={{ color: 'var(--fg)' }}
+                    >
+                      {l.title}
+                    </span>
                   </span>
-                  <span className="group-hover:underline">{l.title}</span>
-                  <span className="text-[12px] ml-2 text-[--fg-faint]">
-                    {l.stationCount} Stationen · ~{l.estimated_minutes} Min
+                  <span
+                    className="font-ui text-[11px] tracking-[0.02em] shrink-0"
+                    style={{ color: 'var(--fg-faint)' }}
+                  >
+                    {l.stationCount} St. · ~{l.estimated_minutes} Min
                   </span>
                 </Link>
               ))}
