@@ -131,6 +131,7 @@ Sicherheitsnetz auf oberster Ebene — verhindert horizontales Scrollen der gesa
 - [ ] Quadranten-Achsen im `topic.quadrants` definieren — sie steuern den QuadrantPlot
 - [ ] Schul-Farben direkt als `school.color` (oklch) — keine globalen CSS-Variablen mehr nötig
 - [ ] Karten-Pulsanimation (`wm-pulse-ring`) ist global vorhanden — gilt automatisch
+- [ ] (Optional) Bei Lectio-Vorausschau: `lectio_brief`-Felder beim Knoten mitschreiben (siehe `prompts/lectio-mode.md`)
 
 ## Animationen & Accessibility
 
@@ -186,6 +187,24 @@ Für jeden neuen Tableau-Bau: Architekt und Prüfer in getrennten Chat-Instanzen
 - Architekt arbeitet Befunde ein. Eine Prüfrunde genügt.
 
 Bedingung für Wiederholbarkeit: `prompts/mild-mode.md` und `prompts/hard-mode.md` müssen aktuell sein.
+
+## Lectio-Modus
+
+Ergänzend zu Tableau-Bauten gibt es Lectios — geführte Pfade durch ein Tableau (4–6 Stationen, kuratorischer Bogen, offenes Ende). Komplementär zur räumlichen Karte: Lectio ist temporal, nicht explorativ.
+
+**Bau-Konvention** in `prompts/lectio-mode.md` (aktuell v1.8). Zehn methodische Entscheidungen, vier Pfad-Typen:
+- *narrativ-historisch* — Stationen lösen sich chronologisch ab (Geist/Hard Problem)
+- *konkurrierend-konfrontativ* — gleichzeitige Positionen zur selben Frage (Selbst/Wer beobachtet)
+- *emotional-kumulativ* — Stationen kumulieren in einer emotionalen Bewegung (Realismus/Wenn die Welt wackelt)
+- *destruktiv-aufbauend* — Stationen demontieren ein Fundament, letzte Station bietet anderen Zugang (Ethik/Warum solltest du)
+
+**`lectio_brief`-Feld:** Optionales Feld `lectio_brief` auf Thinker/Concept/School im Tableau-JSON. Wenn vorhanden, wird es in der Lectio statt des `versions`-Texts gezeigt — 2–3 dichte Sätze, keine Annotationen. Bei neuen Tableaus mit geplanter Lectio direkt beim Knoten mitschreiben.
+
+**Konvention Offener Ausgang:** Sanctum darf eine kuratorische Haltung haben, aber keine Wahrheit verkünden. Schlussfragen öffnen, phänomenologische Sprache statt ontologischer Behauptungen. Ausführlich in `prompts/lectio-mode.md` Punkt 10 und `bibliothek-architektur.md` Sektion "Bibliothek mit Haltung, ohne Wahrheitsanspruch".
+
+**Datenort:** `data/lectio/[id].json`. Loader in `src/lib/data.ts` (LECTIOS-Dictionary), Route `/lectio/[id]`.
+
+**Bestehende Lectios:** `hard-problem` (Geist) · `wer-beobachtet` (Selbst) · `wenn-die-welt-wackelt` (Realismus) · `warum-sollst-du` (Ethik).
 
 ---
 

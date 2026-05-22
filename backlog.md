@@ -245,6 +245,9 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Methode:** `prompts/lectio-mode.md` v1.8 — zehn methodische Entscheidungen. Neu in v1.6–v1.8: Pfad-Typ emotional-kumulativ (Realismus), Wortmotiv-Konvention, Variante destruktiv-aufbauend (Ethik), Punkt 10 Offener Ausgang (Sanctum verkündet keine Wahrheit — phänomenologische Sprache, Schlussfrage öffnet statt schließt).
 **lectio_brief-Felder gepflegt (20 total):** Geist (8), Selbst (4), Realismus (6), Ethik (4)
 **Nächster Schritt:** User-Test Lectio live; Existenzialismus-Lectio beim Bau des Tableaus von Anfang an integriert planen.
+**Folgearbeit:**
+- Tableau-übergreifende Lectios (Schema-Erweiterung: tableauId als Array)
+- Bei Bedarf weitere Lectios pro Tableau
 
 ---
 
