@@ -234,13 +234,17 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] Lectio-Modus — von Nice-to-Have zu Kernfeature
-**Status:** konzeptionell vorbereitet 19.5.26 — Frontend-Implementierung ausstehend
-**Kontext:** Geführte Tour durchs Tableau (zeitliche Sequenz statt räumlicher Karte) war Nice-to-Have. Mit der Sanctum-Linse ("Punkte setzen, Erkenntnisse landen lassen") wird sie zum Kernmechanismus für Verstehen-Abschließen. Die offene Karte zeigt das Big Picture — gut für Verstehen. Die Tour führt durch das Big Picture — gut für Abschließen. Beide gehören zusammen.
-**Verhältnis zu Side-Panel:** Komplementär — Side-Panel ist räumlich strukturiert (Knoten in Beziehung), Lectio temporal (Knoten in Lernreihenfolge).
-**Konzeptioneller Stand (19.5.26):** `prompts/lectio-mode.md` v1.2 — acht methodische Entscheidungen, Schema-Definition, Größen-Richtwerte, Verhältnis zu Mild/Hard dokumentiert. `data/lectio/hard-problem.json` — erstes Pilot-Skript (Philosophie des Geistes, Hard-Problem-Strang, 6 Stationen, Zeh-Einstieg, Schlussfrage schließt auf Erlebnis-Ebene zurück). Schema: eigene `intro`/`transition`/`closing_synthesis`/`closing_question`-Felder, `level` = Lese-Stufe (nicht Sichtbarkeitsschwelle), `nodeId` als String oder Array.
-**Skripte im Repo:** `data/lectio/hard-problem.json` (Geist, narrativ-historisch, L2, 6 Stationen) + `data/lectio/wer-beobachtet.json` (Selbst, konfrontativ, L3, 4 Stationen — Vedanta / Buddhismus / Metzinger / Jung). `prompts/lectio-mode.md` v1.4: Punkt 9 (Pfad-Typen narrativ vs. konfrontativ, Bogen-Zwang-Warnung) + Gegenkonvention Doppelstation bei Bruchstellen (Punkt 2) + Zirkel-Signatur (Punkt 6) + Antagonismus-Pfadlängen-Hinweis.
-**Nächster Schritt:** Frontend-Implementierung als separater Auftrag. Content (weitere Skripte) wartet auf Frontend.
+### [x] Lectio-Modus — von Nice-to-Have zu Kernfeature
+**Status:** vollständig implementiert und live, Stand 22.5.26
+**Kontext:** Geführte Tour durchs Tableau (zeitliche Sequenz statt räumlicher Karte). Frontend live (`/lectio/[id]`), Discovery-Abschnitt in Tableau-Köpfen, `lectio_brief`-Schema, progressives Reveal mit Fade-in.
+**Skripte im Repo (4 live):**
+- `data/lectio/hard-problem.json` — Geist, narrativ-historisch, L2, 6 Stationen
+- `data/lectio/wer-beobachtet.json` — Selbst, konfrontativ, L3, 4 Stationen (Vedanta / Buddhismus / Metzinger / Jung)
+- `data/lectio/wenn-die-welt-wackelt.json` — Realismus, emotional-kumulativ, L2, 6 Stationen (Aristoteles → Berkeley → Kant → Kuhn → Rorty → Gabriel)
+- `data/lectio/warum-sollst-du.json` — Ethik, destruktiv-aufbauend, L2, 4 Stationen (Kant → Hume → Nietzsche → Levinas)
+**Methode:** `prompts/lectio-mode.md` v1.8 — zehn methodische Entscheidungen. Neu in v1.6–v1.8: Pfad-Typ emotional-kumulativ (Realismus), Wortmotiv-Konvention, Variante destruktiv-aufbauend (Ethik), Punkt 10 Offener Ausgang (Sanctum verkündet keine Wahrheit — phänomenologische Sprache, Schlussfrage öffnet statt schließt).
+**lectio_brief-Felder gepflegt (20 total):** Geist (8), Selbst (4), Realismus (6), Ethik (4)
+**Nächster Schritt:** User-Test Lectio live; Existenzialismus-Lectio beim Bau des Tableaus von Anfang an integriert planen.
 
 ---
 

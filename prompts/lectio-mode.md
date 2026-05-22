@@ -1,6 +1,6 @@
 # Lectio-Modus — Sanctum-Standard für geführte Pfade
 
-**Status:** Konvention v1.5, Mai 2026
+**Status:** Konvention v1, Mai 2026
 **Anwendungsbereich:** Alle Lectio-Bauten in Sanctum Mentis.
 
 ---
@@ -34,7 +34,7 @@ Lectio ist außerdem der erste Schritt zu Kopf-Herz-Bauch: Sie kann *zur* Fühle
 
 ---
 
-## Neun methodische Entscheidungen
+## Zehn methodische Entscheidungen
 
 ### 1. Eigene Landung — keine Leihgabe
 
@@ -172,9 +172,37 @@ Lectios können nach zwei Mustern aufgebaut sein:
 **Konkurrierend-konfrontativ:** Stationen sind gleichzeitige Antworten auf dieselbe Frage. Vedanta vs. Buddhismus vs. Metzinger vs. Jung — keine Ablösung, sondern Konfrontation. Der Bogen entsteht aus der Spannung zwischen den Positionen.
 **Risiko:** Bogen-Zwang. Wenn alle Stationen dieselbe Frage beantworten, entsteht Druck, sie in einen abschließenden Bogen zu pressen — und manche Stimmen werden dabei gebogen, in eine Vermittler-Rolle gedrängt oder mit einer Funktion belegt, die nicht ihre eigene ist.
 
+**Emotional-kumulativ:** Stationen lösen sich nicht historisch ab und antworten sich nicht konkurrierend — sie kumulieren in einer emotionalen Bewegung. Jede Station nimmt die emotionale Lage der vorigen mit und vertieft oder kehrt sie um. Beispiel: Schwindel-Lectio durch Realismus (Aristoteles als Festigkeit, Berkeley als erster Riss, Kant als Rettung mit Verlust, Kuhn als Radikalisierung, Rorty als Schwindel-Mitte, Gabriel als Rückkehr ohne Naivität).
+**Risiko:** Wenn die kumulative Bewegung dramatisch erzählt wird, kann die Lectio einzelne Positionen als bloße Stadien einer Reise behandeln, statt sie in ihrer Eigenständigkeit zu respektieren. Berkeley als "Stachel für Kant" zu behandeln verkürzt ihn. Jede Station verdient eigene Würdigung, auch wenn sie im Bogen eine bestimmte Funktion erfüllt.
+**Konvention:** In emotional-kumulativen Lectios trägt jeder Übergang einen kleinen Schwindel-Indikator — sonst verflacht der Bogen zur historischen Aufzählung. Sätze wie "Was bleibt dann sicher?" nach Kuhn oder "Wie soll man dann noch handeln?" nach Rorty halten die emotionale Bewegung wach.
+
+**Variante: destruktiv-aufbauend.** Eine Unterform des emotional-kumulativen Pfad-Typs, bei der die ersten Stationen das Fundament demontieren und eine letzte Station nicht in Reife landet, sondern in einem qualitativ anderen Zugang. Beispiel: Ethik-Lectio durch die Begründungs-Frage (Kant baut Fundament aus Vernunft, Hume zeigt Gefühl darunter, Nietzsche zeigt Genealogie darunter, Levinas gibt die Suche auf und beschreibt etwas vor der Begründung).
+**Besonderes Risiko:** Wenn die letzte Station eine attraktive "Lösung" anbietet, kann die Lectio sie als finale Antwort markieren — und damit die Frage schließen, die sie eigentlich öffnen sollte. Siehe Punkt 10: Offener Ausgang.
+
+**Konvention Wortmotiv:** Über die punktuellen Indikatoren hinaus trägt der Bogen einen wiederkehrenden Wortteppich — Bilder, die sich durch Intro, Übergänge und Schlussfrage ziehen. Bei der Schwindel-Lectio: *verrutschen*, *wackeln*, *Selbstverständlichkeit*, *Schwindel*. Das Motiv wird nicht überstrapaziert, aber es kehrt wieder. So spürt der Leser am Ende, dass die Lectio den Titel eingelöst hat — der Schwindel ist nicht nur Thema, sondern Textur.
+
 **Konvention für konfrontative Lectios:** Lass jede Stimme ihre eigene Position einnehmen, nicht eine Funktion im Bogen erfüllen. Die Closing Synthesis darf vier Antworten nennen, ohne sie in drei zusammenzudrängen, weil das didaktisch glatter klingt. Auch wenn der Bogen nicht *sauber* schließt — das ist ehrlicher als eine gebogene Position.
 
 **Hinweis zur Pfad-Länge in konfrontativen Lectios:** Hier ist die Antagonismus-Asymmetrie aus den Größen-Richtwerten besonders relevant — 4 Stationen können vollständig sein, jede weitere verwässert die Konfrontation.
+
+---
+
+### 10. Offener Ausgang — Sanctum verkündet keine Wahrheit
+
+Eine Sanctum-Lectio darf eine Haltung haben, aber keine Wahrheit verkünden. Die kuratorisch stärkste Position darf spürbar sein — aber sie darf nicht als finale Antwort markiert werden.
+
+**Begründung:** Sanctum ist eine Bibliothek, kein Verkündungs-Raum. Der Leser muss am Ende einer Lectio eigene Gedanken haben dürfen, die nicht vorweggenommen sind. Wenn die Closing Synthesis eine These formuliert, statt eine Möglichkeit zu zeigen, wird die Lectio zur Predigt. Der Leser hat dann nichts mehr zu tun, außer zuzustimmen oder zu widersprechen — beides ist falsch, weil beides die Frage schließt.
+
+**Praktische Folgen:**
+
+- **Closing Synthesis ist Beobachtung, keine Lösung.** Sätze wie "Ethik beginnt vor der Begründung" sind philosophische Thesen — sie gehören nicht in die Lectio-Stimme. Erlaubt ist: "Es ist die Frage, ob die Begründungs-Suche der richtige Weg war." Verboten ist: "Ethik beginnt nicht in Begründungen."
+- **Phänomenologische statt ontologische Formulierungen.** Beschreibe, was passiert (*"Ein Denker beobachtet, was schon geschehen war..."*), nicht was ist (*"Ethik ist..."*). Beschreibung lässt offen, Behauptung schließt.
+- **Schlussfrage öffnet, sie schließt nicht.** Eine echte Frage hat mehrere mögliche Antworten und drängt den Leser nicht in eine. *"Hattest du dafür einen Grund?"* ist offen. *"Warst du nicht schon angesprochen, bevor du fragtest?"* ist eine Suggestiv-Frage und damit verschlossen.
+- **Die kuratorisch stärkste Position darf gezeigt werden** — als Möglichkeit, nicht als Antwort. Die Formulierung *"Du musst nicht zustimmen. Aber du hast die Möglichkeit gesehen"* ist die Haltung dieser Konvention in einem Satz.
+
+**Wo diese Konvention besonders wichtig wird:** Bei der destruktiv-aufbauenden Variante (Punkt 9), wo die letzte Station eine attraktive Alternative zu den demontierten Positionen bietet. Hier ist die Versuchung zur Lösung am größten. Auch bei Lectios mit einer ausgeprägten kuratorischen Stimme, die eine Position überzeugend findet — der Architekt schreibt überzeugend, der Inquisitor muss prüfen, ob das Überzeugen zur Vorgabe wird.
+
+**Wann diese Konvention nicht greift:** Bei den anderen Pfad-Typen (narrativ-historisch, konkurrierend-konfrontativ, emotional-kumulativ ohne destruktiv-aufbauend) ist die Versuchung zur Lösung typischerweise geringer, weil das Material selbst Spannung trägt. Aber die Konvention gilt auch dort — Geist, Selbst und Realismus haben sie zufällig erfüllt, weil ihre Themen sich nicht leicht lösen lassen. Bei Ethik wurde sie sichtbar, weil Levinas eine Lösung anbietet.
 
 ---
 
@@ -245,3 +273,6 @@ Lectios können nach zwei Mustern aufgebaut sein:
 - **v1.3 (Mai 2026):** Zwei methodische Befunde aus dem zweiten Skript (Selbst-Tableau, Atman vs. Anatta): Zirkel-Signatur als Konvention bei Punkt 6 (Intro-Anker kehrt in Schlussfrage zurück); Pfad-Länge auf 4–8 erweitert, mit explizitem Antagonismus-Hinweis (weniger ist besser bei hoher Spannungsdichte).
 - **v1.4 (Mai 2026):** Nach zweiter Challenge des zweiten Skripts: Punkt 9 (Pfad-Typen narrativ vs. konfrontativ) neu, mit Bogen-Zwang-Warnung; Punkt 2 um Gegenkonvention zur Doppelstation-Vermeidung bei Bruchstellen ergänzt. Selbst-Skript: `focus`-Feld spezifischer, Jung-Übergang und Closing Synthesis neu — Jung steht jetzt als eigenständige psychologische Position, nicht als Vermittler.
 - **v1.5 (Mai 2026):** Methodische Revision von Punkt 4 nach Live-Test der Selbst-Lectio. Tableau-Knoten-Texte erzeugen mit der Lectio-Stimme Redundanz, nicht Stilbruch — Lectio-Stimme paraphrasiert den Knoten-Text. Lösung: neues Feld `lectio_brief` (2–3 Sätze, atmosphärisch, dicht) als eigene Knoten-Stimme im Lectio-Modus. Punkt 5 entsprechend angepasst (`level` wird Fallback statt Default). Sektion 4.1 dokumentiert die Revision explizit.
+- **v1.6 (Mai 2026):** Dritter Pfad-Typ aus dem Realismus-Skript: emotional-kumulativ. Stationen kumulieren in einer emotionalen Bewegung (Festigkeit → Erschütterung → Schwindel → Reife), nicht in Argumentation oder Konfrontation. Punkt 9 entsprechend erweitert, mit Konvention zum Schwindel-Indikator in jedem Übergang. Realismus-Skript: vier Übergänge nachgezogen (Berkeley respektvoller, Kuhn mit Schwindel-Indikator, Rorty mit Vokabular-Erfahrung, Closing Synthesis mit klarem Adressaten).
+- **v1.7 (Mai 2026):** Konvention Wortmotiv ergänzt (Gemini-Impuls): emotional-kumulative Lectios tragen einen wiederkehrenden Wortteppich durch den ganzen Bogen, der den Titel als Textur einlöst. Realismus-Skript: Closing Question um Bild "im Schwindel zu stehen" geschärft.
+- **v1.8 (Mai 2026):** Vierte Schicht aus der Ethik-Lectio. Punkt 9 um Variante "destruktiv-aufbauend" erweitert (Stationen demontieren das Fundament, letzte Station bietet qualitativ anderen Zugang). Punkt 10 neu: Offener Ausgang — Sanctum verkündet keine Wahrheit, kuratorisch stärkste Position darf spürbar sein, aber nicht als finale Antwort markiert werden. Phänomenologische statt ontologische Formulierungen. Diese Konvention betrifft alle Pfad-Typen, wurde aber bei Ethik sichtbar, weil Levinas eine attraktive Lösung anbietet. Ethik-Skript entsprechend an drei Stellen geöffnet: Thesis, Intro, Closing Synthesis.

@@ -1,0 +1,47 @@
+{
+  "id": "wenn-die-welt-wackelt",
+  "tableauId": "realismus-und-konstruktivismus",
+  "title": "Wenn die Welt zu wackeln beginnt",
+  "focus": "Die Schwindel-Frage — vom selbstverständlichen Realismus über den Verlust dieser Selbstverständlichkeit hin zu einer Rückkehr ohne Naivität",
+  "thesis": "Es gibt Momente, in denen die Welt aufhört, einfach da zu sein. Eine andere Kultur, eine andere Wissenschaft, ein anderes Vokabular — und plötzlich wird sichtbar, dass deine Wirklichkeit eine Konstruktion war. Diese Lectio führt durch sechs Antworten auf die Frage, was man tun kann, wenn die alten Gewissheiten weichen.",
+  "level": 2,
+  "estimated_minutes": 17,
+  "intro": "Stell dir vor, du verbringst Zeit in einem ganz anderen Land. Andere Sprache, andere Vorstellungen davon, was wichtig ist, andere Selbstverständlichkeiten im Alltag. Nach drei Wochen merkst du: Was du für die Welt gehalten hast, war eine Version davon. Und dann die unangenehmere Frage: Wenn das so leicht verrutscht, was bleibt eigentlich übrig? Die Lectio beginnt dort, wo die Welt noch fest stand — und führt dich durch die großen Erschütterungen bis zu einer Rückkehr, die nicht mehr naiv sein kann.",
+
+  "path": [
+    {
+      "nodeId": "aristoteles",
+      "nodeType": "thinker",
+      "transition": "Eine vertraute Welt. Aber sie hält nicht ewig. Schon mit der frühen Neuzeit beginnt das Wackeln — und mit Berkeley wird daraus ein Erdbeben."
+    },
+    {
+      "nodeId": "berkeley",
+      "nodeType": "thinker",
+      "transition": "Berkeleys These klingt heute kühn — die ganze Welt nur Wahrnehmung, hinter den Wahrnehmungen nichts. Wenige Philosophen würden ihm direkt folgen. Aber sein Argument bleibt: Wenn du nur Wahrnehmungen hast, woher willst du wissen, dass dahinter eine Welt liegt? Diese Frage hat keinen leichten Ausweg. Kant findet einen — aber er bezahlt mit der Welt, wie wir sie für selbstverständlich hielten."
+    },
+    {
+      "nodeId": "kant",
+      "nodeType": "thinker",
+      "transition": "Kant ist die Achse. Vor ihm gab es Welt-die-sich-zeigt versus Welt-im-Geist. Nach ihm gibt es nur noch Welt-durch-uns-zugänglich. Diese Verschiebung wirkt bis heute — aber sie wird in den nächsten hundert Jahren radikaler, als Kant es gewollt hätte."
+    },
+    {
+      "nodeId": "kuhn",
+      "nodeType": "thinker",
+      "transition": "Kuhn kommt nicht aus der Philosophie, sondern aus der Wissenschaftsgeschichte. Wenn selbst die Wissenschaft, dieser angeblich gesicherte Zugang zur Welt, durch Paradigmen geht — was bleibt dann sicher? Rorty zieht die radikale Konsequenz."
+    },
+    {
+      "nodeId": "rorty",
+      "nodeType": "thinker",
+      "transition": "Rorty ist der Punkt, an dem viele Menschen schwindlig werden. Wenn Wahrheit nur ein Vokabular ist, das gerade gut funktioniert — wie soll man dann noch handeln, urteilen, sich für etwas einsetzen? Du erinnerst dich vielleicht selbst an einen Moment, in dem du eine Position vertreten hast — politisch, ethisch, persönlich — und plötzlich dachtest: Was, wenn das nur mein Vokabular ist? Das ist nicht nur philosophisches Problem, das ist Alltagserfahrung in einer Zeit, die alle Erzählungen verloren hat. Hier antwortet ein zeitgenössischer Denker, der einen Weg sucht zwischen Naivität und Schwindel."
+    },
+    {
+      "nodeId": "gabriel",
+      "nodeType": "thinker",
+      "transition": "Gabriel ist nicht die Antwort auf alle Fragen. Aber er ist ein Versuch, aus der postmodernen Erschöpfung herauszukommen — ohne die Naivität von Aristoteles und ohne den Schwindel von Rorty. Eine reife Position, die beide Lektionen mitnimmt."
+    }
+  ],
+
+  "closing_synthesis": "Sechs Stationen, ein Bogen. Aristoteles steht noch fest in der Welt. Berkeley zeigt: Das war nie so selbstverständlich, wie es schien. Kant rettet die Welt, aber unter Vorbehalt — nur als unsere Welt. Kuhn radikalisiert das in die Wissenschaftsgeschichte hinein. Rorty zieht die letzte Konsequenz: Welt ist Vokabular. Gabriel sucht den Rückweg, der nicht naiv ist. Was die Lectio dir mitgibt, ist keine Lösung: einen Unterschied zwischen Naivität und Reife, zwischen Schwindel und einem Stehen, das die Erschütterungen kennt.",
+
+  "closing_question": "In welchem Moment ist dir das letzte Mal die Welt etwas verrutscht — eine Selbstverständlichkeit, die plötzlich nicht mehr selbstverständlich war? Bist du danach in eine neue Selbstverständlichkeit zurückgekehrt, oder hast du gelernt, im Schwindel zu stehen?"
+}

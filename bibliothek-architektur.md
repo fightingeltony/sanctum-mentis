@@ -113,6 +113,29 @@ Diese Erkenntnis ist eine Revision: In einer früheren Fassung dieser Notiz hatt
 
 ---
 
+## Bibliothek mit Haltung, ohne Wahrheitsanspruch
+
+Beim Bau der Ethik-Lectio (Begründungs-Frage mit Levinas-Landung) wurde eine Konvention sichtbar, die alle vier Tableaus schon implizit erfüllt hatten — die aber zum ersten Mal explizit werden musste, weil das Material eine Versuchung zur Lösung anbot.
+
+**Sanctum darf eine Haltung haben — aber keine Wahrheit verkünden.**
+
+Eine Lectio, eine Synthese, ein Tableau zeigt einen Blick auf das Feld. Die kuratorisch stärkste Position darf spürbar sein. Aber sie darf nicht als finale Antwort markiert werden. Der Leser muss am Ende eigene Gedanken haben dürfen, die nicht vorweggenommen sind.
+
+**Praktische Folgen für Sammlungs-Bauten:**
+
+- **Phänomenologische statt ontologische Sprache.** Sanctum beschreibt, was passiert (*"Levinas beobachtet, was schon geschehen war..."*), nicht was ist (*"Ethik ist..."*). Beschreibung lässt offen, Behauptung schließt.
+- **Synthese und Closing sind Beobachtung, keine Lösung.** Sätze wie *"Ethik beginnt vor der Begründung"* sind philosophische Thesen — sie gehören nicht in die Sanctum-Stimme. Erlaubt: *"Es ist die Frage, ob die Begründungs-Suche der richtige Weg war."*
+- **Schlussfragen öffnen, sie schließen nicht.** Eine echte Frage hat mehrere mögliche Antworten und drängt den Leser nicht in eine.
+- **Die kuratorisch stärkste Position darf gezeigt werden** — als Möglichkeit, nicht als Antwort. Die Formulierung *"Du musst nicht zustimmen. Aber du hast die Möglichkeit gesehen"* ist die Haltung dieser Konvention in einem Satz.
+
+**Wo diese Konvention besonders wichtig wird:** Bei Lectios mit einer destruktiv-aufbauenden Bewegung (siehe `prompts/lectio-mode.md` Punkt 9), wo eine letzte Station eine attraktive Alternative zu den demontierten Positionen anbietet. Auch bei Themen, in denen der Kurator selbst eine starke Überzeugung hat — der Architekt schreibt überzeugend, der Inquisitor muss prüfen, ob das Überzeugen zur Vorgabe wird.
+
+**Sammlungs-Signatur:** Bibliothek mit Haltung, ohne Wahrheitsanspruch. Das schließt an die Du-Konsistenz an — Sanctum spricht den Leser persönlich an, aber gibt ihm nicht vor, was er denken soll. Die Bibliothek zeigt das Feld; der Leser geht hindurch.
+
+Methodische Vertiefung der Konvention in `prompts/lectio-mode.md` Punkt 10 (Offener Ausgang). Sollte sinngemäß auch in `prompts/mild-mode.md` für Synthese-Texte aufgenommen werden.
+
+---
+
 ## Methodische Notiz: Externer Blick als Korrektur-Vehikel
 
 Bei der Subtitle-Findung wurden zwei Iterationen mit Gemini gegengeprüft. Die Befunde haben den Wurf substanziell verbessert:
@@ -134,7 +157,8 @@ Wichtig: Nicht alles übernehmen, was die andere Stimme vorschlägt. Bei Realism
 3. **Library-Architektur sichtbar machen** ist Folgearbeit, lohnt erst bei zwei Handlungs-Tableaus
 4. **Drei Stimmen pro Tableau** — Subtitle (einladend), Intro (zuspitzend), Synthese (landend)
 5. **Du-Konsistenz als Sammlung-Signatur** — Subtitle und Intro sprechen einheitlich "du", nicht gemischte Pronomen
-6. **Externer Blick als Korrektur-Vehikel** — bei Schlüsselelementen lohnt sich ein zweiter Blick
+6. **Bibliothek mit Haltung, ohne Wahrheitsanspruch** — Sanctum darf Position zeigen, aber nicht verkünden. Phänomenologische statt ontologischer Sprache, Synthese als Beobachtung, Schlussfragen als Öffnung
+7. **Externer Blick als Korrektur-Vehikel** — bei Schlüsselelementen lohnt sich ein zweiter Blick
 
 Diese Punkte sind keine ToDo-Liste, sondern Leitlinien. Sie helfen, beim nächsten Tableau-Bau zu wissen, wo der neue Knoten in die Sammlung hineinwächst.
 

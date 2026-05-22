@@ -6,6 +6,8 @@ import ethikRaw                            from '../../data/ethik.json'
 import libraryRaw                          from '../../data/library.json'
 import hardProblemRaw                      from '../../data/lectio/hard-problem.json'
 import werBeobachtetRaw                    from '../../data/lectio/wer-beobachtet.json'
+import wennDieWeltWackeltRaw               from '../../data/lectio/wenn-die-welt-wackelt.json'
+import warumSollstDuRaw                    from '../../data/lectio/warum-sollst-du.json'
 
 const TOPICS: Record<string, TopicData> = {
   'das-selbst':                       dasSelbstRaw                    as unknown as TopicData,
@@ -38,8 +40,10 @@ export const library: LibraryEntry[] = libraryRaw as LibraryEntry[]
 // ─── Lectio Loader ───────────────────────────────────────────
 
 const LECTIOS: Record<string, Lectio> = {
-  'hard-problem':   hardProblemRaw   as unknown as Lectio,
-  'wer-beobachtet': werBeobachtetRaw as unknown as Lectio,
+  'hard-problem':          hardProblemRaw          as unknown as Lectio,
+  'wer-beobachtet':        werBeobachtetRaw        as unknown as Lectio,
+  'wenn-die-welt-wackelt': wennDieWeltWackeltRaw   as unknown as Lectio,
+  'warum-sollst-du':       warumSollstDuRaw        as unknown as Lectio,
 }
 
 export function getLectio(id: string): Lectio | null {

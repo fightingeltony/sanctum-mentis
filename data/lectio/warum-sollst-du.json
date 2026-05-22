@@ -1,0 +1,37 @@
+{
+  "id": "warum-sollst-du",
+  "tableauId": "ethik",
+  "title": "Warum solltest du überhaupt?",
+  "focus": "Die Begründungs-Frage der Ethik — vom rationalen Fundament über seine Erschütterung bis zu einem Anspruch, der vor jeder Begründung kommt",
+  "thesis": "Du weißt, dass du etwas tun solltest — den Anruf nicht ignorieren, den Bedürftigen nicht übersehen, das Versprechen halten. Aber warum eigentlich? Diese Lectio führt durch vier Antworten, von denen drei den Boden unter deinen Füßen wegnehmen — und eine vierte, die nicht weiter nach Begründung sucht, sondern den Anspruch beschreibt, der schon da war.",
+  "level": 2,
+  "estimated_minutes": 14,
+  "intro": "Die Ethik hat ein Geheimnis, das sie nicht gerne ausspricht: Sie weiß nicht genau, woher sie kommt. Jeder spürt, dass es Dinge gibt, die man tun sollte und andere nicht. Aber wenn jemand fragt — wirklich fragt — warum, beginnt es zu wackeln. Diese Lectio nimmt diese Frage ernst und führt dich durch vier Stationen, in denen der Boden der Ethik immer dünner wird — bis du an einer Stelle ankommst, an der ein Denker den Versuch aufgibt, eine Begründung zu finden, und stattdessen schaut, was tatsächlich passiert, wenn ein anderer Mensch dir gegenübersteht.",
+
+  "path": [
+    {
+      "nodeId": "kant",
+      "nodeType": "thinker",
+      "transition": "Kants Antwort ist großartig, aber sie hängt an einer Bedingung: dass die Vernunft als verbindlicher Ort tragen kann. Hume bezweifelt genau das."
+    },
+    {
+      "nodeId": "hume",
+      "nodeType": "thinker",
+      "transition": "Hume ist nicht nüchterner Empiriker, der die Vernunft entzaubert — er ist freundlicher. Er sagt: Moral ist warm, nicht kalt. Aber sein Argument hat eine Lücke. Wenn moralische Urteile aus Gefühlen kommen, woher kommen die Gefühle? Sind sie selbst noch begründet — oder nur historisch geworden? Nietzsche stellt diese Frage radikaler als alle anderen."
+    },
+    {
+      "nodeId": "nietzsche",
+      "nodeType": "thinker",
+      "transition": "Nietzsche ist nicht der Zerstörer, als der er manchmal gelesen wird. Er ist der ehrlichste Diagnostiker dessen, was wir geerbt haben. Aber seine Genealogie lässt eine Frage offen: Wenn alle moralischen Begriffe historisch geworden sind — wie kommst du überhaupt noch zum Handeln? Hier setzt Levinas anders an. Er sucht nicht nach einer neuen Begründung. Er sucht nach dem, was vor jeder Begründung war."
+    },
+    {
+      "nodeId": "levinas",
+      "nodeType": "thinker",
+      "transition": "Levinas dreht die Frage um. Statt zu fragen ›Warum solltest du?‹, beobachtet er, was schon passiert ist, bevor du fragen konntest: Du hast jemanden gesehen. Ein Gesicht. Und in diesem Sehen warst du bereits angesprochen, bereits verantwortlich. Das ist keine Begründung, das ist eine Beschreibung. Schau selbst, ob sie trägt."
+    }
+  ],
+
+  "closing_synthesis": "Vier Stationen, eine Bewegung von der Begründung weg. Kant baut das Fundament aus Vernunft. Hume legt offen, dass darunter Gefühl liegt. Nietzsche fragt, was unter dem Gefühl liegt — und findet keine Letztbegründung mehr. An dieser Stelle wäre Schwindel die naheliegende Antwort. Levinas geht einen anderen Weg: Er gibt die Begründung auf und schaut, was tatsächlich passiert, wenn ein anderer Mensch vor dir steht. Was die Lectio dir zurücklässt, ist keine Theorie der Ethik. Es ist die Frage, ob die Begründungs-Suche überhaupt der richtige Weg war — oder ob da etwas anderes ist, das vor der Begründung kommt. Du musst nicht zustimmen. Aber du hast die Möglichkeit gesehen.",
+
+  "closing_question": "Denk an eine Situation, in der du etwas getan hast, ohne lange zu überlegen — geholfen, geblieben, angerufen, dich gemeldet. Hattest du dafür einen Grund? Oder war der Grund erst nachher da, als Erklärung für etwas, das vorher schon geschehen war?"
+}
