@@ -80,6 +80,66 @@ export default function LandingPage() {
           </div>
         ))}
       </div>
+
+      {/* ── Zwei Wege ── */}
+      <div className="mt-16 pt-10 border-t border-[--hairline]">
+        <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-[--fg] mb-2">
+          Zwei Wege durch jedes Thema
+        </h2>
+        <p className="font-body italic text-[15px] text-[--fg-muted] mb-8 max-w-[52ch]">
+          Manche Themen liest man besser räumlich, andere als Reise.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+          {/* Karte */}
+          <div
+            className="rounded px-5 pt-5 pb-6 flex flex-col gap-4"
+            style={{ background: 'var(--bg-raised)', border: '1px solid var(--hairline)' }}
+          >
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <line x1="16" y1="3" x2="16" y2="29" stroke="currentColor" strokeOpacity="0.2" />
+              <line x1="3" y1="16" x2="29" y2="16" stroke="currentColor" strokeOpacity="0.2" />
+              <circle cx="9"  cy="9"  r="2"   fill="currentColor" fillOpacity="0.45" />
+              <circle cx="23" cy="11" r="2"   fill="currentColor" fillOpacity="0.45" />
+              <circle cx="11" cy="23" r="1.5" fill="currentColor" fillOpacity="0.45" />
+              <circle cx="22" cy="22" r="2"   fill="currentColor" fillOpacity="0.45" />
+              <circle cx="21" cy="7"  r="1.5" fill="currentColor" fillOpacity="0.45" />
+            </svg>
+            <div>
+              <h3 className="font-prose font-medium text-[14px] text-[--fg] mb-2">Die Karte</h3>
+              <p className="font-body text-[13px] text-[--fg-muted] leading-relaxed">
+                Die Karte zeigt das ganze Feld auf einmal. Denker, Konzepte, Schulen — alles gleichzeitig sichtbar. Du erkundest selbst, wohin du gehst, wählst die Tiefe und folgst deiner eigenen Frage.
+              </p>
+            </div>
+          </div>
+
+          {/* Lectio */}
+          <div
+            className="rounded px-5 pt-5 pb-6 flex flex-col gap-4"
+            style={{ background: 'var(--bg-raised)', border: '1px solid var(--hairline)' }}
+          >
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <line x1="16" y1="7" x2="16" y2="25" stroke="currentColor" strokeOpacity="0.2" strokeDasharray="2 2" />
+              <circle cx="16" cy="7"  r="2.5" fill="currentColor" fillOpacity="0.55" />
+              <circle cx="16" cy="16" r="2.5" fill="currentColor" fillOpacity="0.42" />
+              <circle cx="16" cy="25" r="2.5" fill="currentColor" fillOpacity="0.30" />
+            </svg>
+            <div>
+              <h3 className="font-prose font-medium text-[14px] text-[--fg] mb-2">Die Lectio</h3>
+              <p className="font-body text-[13px] text-[--fg-muted] leading-relaxed">
+                Die Lectio führt dich durch einen kuratierten Pfad. Vier bis sechs Stationen, ein Bogen, ein offenes Ende. Die Karte gibt dir das Feld, die Lectio gibt dir eine Reise hindurch.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <p className="font-body italic text-[12px] text-[--fg-faint] mt-5">
+          Komplementär, nicht alternativ.
+        </p>
+      </div>
+
     </section>
   )
 }
