@@ -146,7 +146,8 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Umsetzungsoptionen:** Trennende Kapitelmarkierungen / zwei Reihen mit klarer Bedeutung / implizite Anordnung durch Position und Abstand.
 **Bedingung:** Lohnt erst, wenn Handlungs-Spur mindestens zwei live Tableaus hat (also Politische Philosophie live). Eine Gruppe aus einem Tableau ist keine Gruppe.
 **Referenz:** `bibliothek-architektur.md` im Repo-Root.
-**Nächster Schritt:** Nach Politische Philosophie-Launch aufnehmen.
+**Nächster Schritt:** Nach zweitem Handlungs-Tableau aufnehmen.
+**Update 23.5.26:** Farb-Architektur löst bereits die *implizite* Spur-Sichtbarkeit — drei Hue-Bänder machen Spuren ohne Text erkennbar. Explizite Sichtbarmachung (Trennstriche, Reihen) weiterhin zurückgestellt bis Handlungs-Spur zwei live-Tableaus hat.
 
 ---
 
@@ -439,12 +440,8 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] Farb-Architektur der Sammlung — eine Farbe pro Spur
-**Status:** identifiziert 23.5.26 beim Existenzialismus-Bau
-**Kontext:** Akzentfarben bisher einzeln pro Tableau. Ab 8+ Tableaus entsteht Überlappung. Sammlungs-Spuren (Erkenntnis-Trias / Handlungs-Spur / Existenz-Spur) könnten durch Farbfamilien sichtbar gemacht werden.
-**Tendenz (A):** Eine Farbfamilie pro Spur, Differenzierung durch Helligkeit/Sättigung. Konzeptuell stärker als eine reine Sammlungs-Palette (B), weil Struktur sichtbar wird. Aktueller Existenzialismus-Akzent (oklch 0.42 0.10 45) ist Platzhalter — wartet auf diese Entscheidung.
-**Bedingung:** Vor dem nächsten Existenz-Spur-Tableau entscheiden, sonst werden Farbgewohnheiten zementiert.
-**Nächster Schritt:** Nach Existenzialismus-Launch Palette festlegen. Ggf. Bestandstableaus retrofitten.
+### [x] Farb-Architektur der Sammlung — eine Farbe pro Spur
+**Status:** implementiert 23.5.26 — drei Hue-Bänder (Erkenntnis 220°–290° kühl, Handlung 15°–55° warm, Existenz 110°–160° erdig). Alle 5 Tableau-JSONs + library.json aktualisiert. Konvention in `bibliothek-architektur.md` dokumentiert. Reserve für 2–3 weitere Spuren (Magenta, Cyan, Gelb).
 
 ---
 

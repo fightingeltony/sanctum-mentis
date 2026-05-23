@@ -53,6 +53,34 @@ Wenn die Library-Page diese Architektur sichtbar macht, gewinnt sie:
 
 ---
 
+## Farb-Architektur der Sammlung
+
+Akzentfarben werden ab 23.5.26 nicht mehr pro Tableau einzeln vergeben, sondern folgen einer Spur-Logik. Jede Spur hat ein eigenes Hue-Band; innerhalb des Bands differenzieren Tableaus durch Hue-Position. Lightness und Chroma bleiben konstant, damit die Spuren als gleichwertig wahrgenommen werden.
+
+| Spur | Hue-Band | Symbolik |
+|---|---|---|
+| Erkenntnis-Trias | 220°–290° (kühl, blau-violett) | Erkenntnis als distanzierende Operation |
+| Handlungs-Spur | 15°–55° (warm, orange-rot) | Handlung als warme, dringliche Tätigkeit |
+| Existenz-Spur | 110°–160° (erdig, olive-grün) | Existenz als Boden, Geworfenheit |
+
+**Reserve:** Die drei Bänder lassen ca. 180° offen (Magenta-Pink, Cyan-Blau, Gelb) für künftige Spuren (Person/Psyche, Religion/Mythos, ggf. weitere). Beim Hinzukommen einer vierten Spur wird das nächste Band entschieden — das ist *Erweiterung*, kein Umfärben.
+
+**Konstante Stellschrauben:** L ≈ 0.42–0.45, C ≈ 0.10–0.13.
+
+**Aktueller Bestand:**
+
+```
+Realismus              oklch(0.42 0.12 220)   Erkenntnis-Trias
+Geist                  oklch(0.44 0.13 250)   Erkenntnis-Trias
+Selbst                 oklch(0.42 0.12 290)   Erkenntnis-Trias
+Ethik                  oklch(0.45 0.12  25)   Handlungs-Spur
+Existenzialismus       oklch(0.42 0.11 130)   Existenz-Spur
+```
+
+**Verhältnis zu „Library-Architektur sichtbar machen":** Die Farb-Architektur ist *implizite* Spur-Sichtbarmachung. Explizite Sichtbarmachung (Trennstriche, Header, zwei Reihen) bleibt eigenes Backlog-Item, ausgelöst sobald die Handlungs-Spur ein zweites live-Tableau hat.
+
+---
+
 ## Die Stimm-Hierarchie eines Tableaus
 
 Beim Sortieren der Eingangs-Fragen ist klar geworden: ein Tableau spricht mit **drei Stimmen**, jede mit einer eigenen Funktion. Wenn die Stimmen ineinanderfallen, entsteht Redundanz; wenn sie klar getrennt sind, entsteht eine erlebbare Vertiefung.

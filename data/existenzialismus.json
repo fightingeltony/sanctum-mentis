@@ -5,8 +5,8 @@
     "subtitle": "Wenn nichts mehr vorgegeben ist — was tust du mit deiner Freiheit?",
     "intro": "Stell dir vor, niemand sagt dir mehr, wozu du da bist. Kein Gott, keine Natur, keine Tradition, die wirklich trägt. Du bist frei — und genau das ist das Problem. Diese Karte zeigt dir Denker, die diese Lage ernst genommen haben. Manche sehen darin eine Befreiung, andere einen Abgrund. Sie streiten sich, ob Sinn etwas ist, das du machst oder findest. Sie sind sich nur in einem einig: Du kommst nicht darum herum, zu antworten.",
     "theme": {
-      "accent": "oklch(0.42 0.10 45)",
-      "accentSoft": "oklch(0.42 0.10 45 / 0.15)"
+      "accent": "oklch(0.42 0.11 130)",
+      "accentSoft": "oklch(0.42 0.11 130 / 0.15)"
     },
     "complexityLevels": 5,
     "quadrants": {

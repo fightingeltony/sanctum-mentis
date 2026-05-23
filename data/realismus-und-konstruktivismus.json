@@ -5,8 +5,8 @@
     "subtitle": "Wo endet die Welt und wo beginnst du?",
     "intro": "Kannst du der Welt trauen, oder beginnt sie erst in deinem Kopf?",
     "theme": {
-      "accent": "oklch(0.42 0.11 165)",
-      "accentSoft": "oklch(0.42 0.11 165 / 0.15)"
+      "accent": "oklch(0.42 0.12 220)",
+      "accentSoft": "oklch(0.42 0.12 220 / 0.15)"
     },
     "complexityLevels": 5,
     "quadrants": {
