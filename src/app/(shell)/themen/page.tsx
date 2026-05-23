@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { library } from '@/lib/data'
+import { SPUR_LABELS } from '@/lib/spuren'
 
 export default function ThemenPage() {
   return (
@@ -24,6 +25,14 @@ export default function ThemenPage() {
                 opacity: available ? 1 : 0.55,
               }}
             >
+              {topic.spur && (
+                <p
+                  className="font-ui text-[11px] tracking-[0.08em] uppercase"
+                  style={{ color: topic.themeColor }}
+                >
+                  {SPUR_LABELS[topic.spur]}
+                </p>
+              )}
               <div className="flex items-baseline justify-between gap-3">
                 <span
                   className="font-display text-[18px] tracking-[0.10em] text-[--fg]"

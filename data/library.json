@@ -6,6 +6,7 @@
     "era": "17. Jh. – Gegenwart",
     "themeColor": "oklch(0.44 0.13 250)",
     "status": "available",
+    "spur": "erkenntnis",
     "desc": "Von Descartes' Ghost in the Machine bis Chalmers' Hard Problem — die zentralen Positionen zur Frage, ob und wie Materie denkt und fühlt.",
     "tags": [
       "Bewusstsein",
@@ -21,6 +22,7 @@
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.42 0.12 290)",
     "status": "available",
+    "spur": "erkenntnis",
     "desc": "Von Vedanta bis Karl Friston — wie 3000 Jahre Denken das Ich als Essenz, Struktur, Simulation oder Fluss begreifen.",
     "tags": [
       "Identität",
@@ -36,6 +38,7 @@
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.42 0.12 220)",
     "status": "available",
+    "spur": "erkenntnis",
     "desc": "Von Aristoteles bis Markus Gabriel — wie Denker durch die Jahrhunderte stritten, ob die Welt unabhängig von uns existiert oder immer schon unsere Konstruktion ist.",
     "tags": [
       "Erkenntnistheorie",
@@ -51,6 +54,7 @@
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.45 0.12  25)",
     "status": "available",
+    "spur": "handlung",
     "desc": "Tugendethik, Deontologie, Konsequentialismus — und ihre modernen Varianten.",
     "tags": [
       "Tugend",
@@ -65,6 +69,7 @@
     "era": "19.–20. Jahrhundert",
     "themeColor": "oklch(0.42 0.11 130)",
     "status": "available",
+    "spur": "existenz",
     "desc": "Von Kierkegaard bis Frankl — Denker, die die Lage des Menschen ohne Vorgabe ernst genommen haben. Mit gegensätzlichen Antworten: Sinn machen, Sinn finden, das Sinnlose bejahen.",
     "tags": [
       "Freiheit",

@@ -147,7 +147,7 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Bedingung:** Lohnt erst, wenn Handlungs-Spur mindestens zwei live Tableaus hat (also Politische Philosophie live). Eine Gruppe aus einem Tableau ist keine Gruppe.
 **Referenz:** `bibliothek-architektur.md` im Repo-Root.
 **Nächster Schritt:** Nach zweitem Handlungs-Tableau aufnehmen.
-**Update 23.5.26:** Farb-Architektur löst bereits die *implizite* Spur-Sichtbarkeit — drei Hue-Bänder machen Spuren ohne Text erkennbar. Explizite Sichtbarmachung (Trennstriche, Reihen) weiterhin zurückgestellt bis Handlungs-Spur zwei live-Tableaus hat.
+**Update 23.5.26:** Implizite Spur-Sichtbarkeit umgesetzt — Farb-Architektur als Familien-Signal, Spur-Reihenfolge in library.json, Eyebrow-Markierung pro Card (Spur-Name in Spur-Farbe, uppercase, 11px). Explizite Sichtbarkeits-Lösung (Section-Header / Trennstriche / Spur-Filter) bleibt offen, ausgelöst sobald alle Spuren mindestens zwei Tableaus tragen.
 
 ---
 

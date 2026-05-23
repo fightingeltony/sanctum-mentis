@@ -79,6 +79,18 @@ Existenzialismus       oklch(0.42 0.11 130)   Existenz-Spur
 
 **Verhältnis zu „Library-Architektur sichtbar machen":** Die Farb-Architektur ist *implizite* Spur-Sichtbarmachung. Explizite Sichtbarmachung (Trennstriche, Header, zwei Reihen) bleibt eigenes Backlog-Item, ausgelöst sobald die Handlungs-Spur ein zweites live-Tableau hat.
 
+## Spur-Sichtbarkeit — Hybrid
+
+Die Spur-Architektur wird in der Library *implizit* sichtbar gemacht — ohne harte Section-Header oder Trennstriche:
+
+- **Farbe** als Familien-Signal (kühl / warm / erdig) — die drei Hue-Bänder sind auf einen Blick wahrnehmbar
+- **Reihenfolge** in `library.json` gruppiert nach Spur (Erkenntnis → Handlung → Existenz)
+- **Eyebrow-Markierung** pro Card — kleiner Spur-Name (`ERKENNTNIS`, `HANDLUNG`, `EXISTENZ`) über dem Card-Titel, in der Spur-Farbe des Tableaus, uppercase, ca. 11px
+
+Keine harten Section-Header, keine Trennstriche zwischen Spuren. Begründung: Zwei der drei Spuren haben aktuell nur ein Tableau — Section-Header würden "Sektion mit einer Karte" zeigen, was unfertig wirkt. Die Hybrid-Lösung trägt jetzt und skaliert mit wachsender Sammlung.
+
+**Bedingung für explizite Sichtbarkeits-Lösung** (Section-Header, Trennstriche, ggf. Spur-Filter): Alle bestehenden Spuren tragen mindestens zwei Tableaus. Aktuell erfüllt nur Erkenntnis dieses Kriterium. Bei zweitem Handlungs- und zweitem Existenz-Tableau ist die Bedingung erfüllt.
+
 ---
 
 ## Die Stimm-Hierarchie eines Tableaus

@@ -1,4 +1,4 @@
-import type { TopicData, Lectio, LectioSummary } from './types'
+import type { TopicData, Lectio, LectioSummary, Spur } from './types'
 import dasSelbstRaw                        from '../../data/das-selbst.json'
 import philosophieDesGeistesRaw            from '../../data/philosophie-des-geistes.json'
 import realismusUndKonstruktivismusRaw     from '../../data/realismus-und-konstruktivismus.json'
@@ -34,6 +34,7 @@ export interface LibraryEntry {
   era?: string
   themeColor: string
   status: 'available' | 'coming'
+  spur?: Spur
   desc?: string
   tags?: string[]
 }
