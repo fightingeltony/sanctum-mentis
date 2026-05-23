@@ -40,6 +40,16 @@
     "tags": ["Tugend", "Pflicht", "Folgen"]
   },
   {
+    "id": "existenzialismus",
+    "title": "Existenzialismus",
+    "subtitle": "Wenn nichts mehr vorgegeben ist — was tust du mit deiner Freiheit?",
+    "era": "19. Jh. – Gegenwart",
+    "themeColor": "oklch(0.42 0.10 45)",
+    "status": "available",
+    "desc": "Von Kierkegaard und Nietzsche bis Sartre, Camus und Frankl — drei nicht-auflösbare Antworten auf die Frage, was bleibt, wenn keine äußere Instanz mehr vorschreibt, wofür du da bist.",
+    "tags": ["Freiheit", "Sinn", "Angst", "Authentizität"]
+  },
+  {
     "id": "politische-philosophie",
     "title": "Politische Philosophie",
     "subtitle": "Wie wollen wir zusammenleben?",

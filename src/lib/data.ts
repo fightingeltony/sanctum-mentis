@@ -3,17 +3,20 @@ import dasSelbstRaw                        from '../../data/das-selbst.json'
 import philosophieDesGeistesRaw            from '../../data/philosophie-des-geistes.json'
 import realismusUndKonstruktivismusRaw     from '../../data/realismus-und-konstruktivismus.json'
 import ethikRaw                            from '../../data/ethik.json'
+import existenzialismusRaw                 from '../../data/existenzialismus.json'
 import libraryRaw                          from '../../data/library.json'
 import hardProblemRaw                      from '../../data/lectio/hard-problem.json'
 import werBeobachtetRaw                    from '../../data/lectio/wer-beobachtet.json'
 import wennDieWeltWackeltRaw               from '../../data/lectio/wenn-die-welt-wackelt.json'
 import warumSollstDuRaw                    from '../../data/lectio/warum-sollst-du.json'
+import wennNichtsVorgegebenRaw             from '../../data/lectio/wenn-nichts-vorgegeben.json'
 
 const TOPICS: Record<string, TopicData> = {
   'das-selbst':                       dasSelbstRaw                    as unknown as TopicData,
   'philosophie-des-geistes':          philosophieDesGeistesRaw        as unknown as TopicData,
   'realismus-und-konstruktivismus':   realismusUndKonstruktivismusRaw as unknown as TopicData,
   'ethik':                            ethikRaw                        as unknown as TopicData,
+  'existenzialismus':                 existenzialismusRaw             as unknown as TopicData,
 }
 
 export function getTopic(id: string): TopicData | null {
@@ -44,6 +47,7 @@ const LECTIOS: Record<string, Lectio> = {
   'wer-beobachtet':        werBeobachtetRaw        as unknown as Lectio,
   'wenn-die-welt-wackelt': wennDieWeltWackeltRaw   as unknown as Lectio,
   'warum-sollst-du':       warumSollstDuRaw        as unknown as Lectio,
+  'wenn-nichts-vorgegeben': wennNichtsVorgegebenRaw as unknown as Lectio,
 }
 
 export function getLectio(id: string): Lectio | null {

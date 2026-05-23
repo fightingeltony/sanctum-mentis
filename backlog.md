@@ -242,9 +242,10 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 - `data/lectio/wer-beobachtet.json` — Selbst, konfrontativ, L3, 4 Stationen (Vedanta / Buddhismus / Metzinger / Jung)
 - `data/lectio/wenn-die-welt-wackelt.json` — Realismus, emotional-kumulativ, L2, 6 Stationen (Aristoteles → Berkeley → Kant → Kuhn → Rorty → Gabriel)
 - `data/lectio/warum-sollst-du.json` — Ethik, destruktiv-aufbauend, L2, 4 Stationen (Kant → Hume → Nietzsche → Levinas)
+- `data/lectio/wenn-nichts-vorgegeben.json` — Existenzialismus, narrativ-historisch, L2, 5 Stationen (Nietzsche → Kierkegaard → Sartre → Frankl → Camus)
 **Methode:** `prompts/lectio-mode.md` v1.8 — zehn methodische Entscheidungen. Neu in v1.6–v1.8: Pfad-Typ emotional-kumulativ (Realismus), Wortmotiv-Konvention, Variante destruktiv-aufbauend (Ethik), Punkt 10 Offener Ausgang (Sanctum verkündet keine Wahrheit — phänomenologische Sprache, Schlussfrage öffnet statt schließt).
-**lectio_brief-Felder gepflegt (20 total):** Geist (8), Selbst (4), Realismus (6), Ethik (4)
-**Nächster Schritt:** User-Test Lectio live; Existenzialismus-Lectio beim Bau des Tableaus von Anfang an integriert planen.
+**lectio_brief-Felder gepflegt (27 total):** Geist (8), Selbst (4), Realismus (6), Ethik (4), Existenzialismus (5 + 2 Reserve)
+**Nächster Schritt:** User-Test Lectio live; nächste Existenz-Spur-Lectio planen (Tod und Endlichkeit / Heidegger-Brief liegt vor).
 **Folgearbeit:**
 - Tableau-übergreifende Lectios (Schema-Erweiterung: tableauId als Array)
 - Bei Bedarf weitere Lectios pro Tableau
@@ -347,6 +348,29 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
+---
+
+### [ ] Pfad-Typ-Definition — Wann ist ein neuer Typ destilliert?
+**Status:** Methoden-Beobachtung 23.5.26
+**Kontext:** Beim Existenzialismus-Lectio-Bau wurde erstmals versucht, einen neuen Pfad-Typ ("existenziell-zugespitzt") *vor* der Lectio zu postulieren. Nach Prüfung zurückgenommen — die Lectio war narrativ-historisch.
+**Methoden-Klarstellung:** Pfad-Typen werden destilliert aus *überraschenden* Lectios, nicht beim Bau postuliert. Wenn ein Bau das vorhandene Vokabular nicht braucht, ist das ein Signal.
+**Nächster Schritt:** Bei nächstem Lectio-Bau diese Disziplin aktiv anwenden. Falls neuer Pfad-Typ entsteht → `prompts/lectio-mode.md` v1.9.
+
+---
+
+### [ ] Lectio-Methoden-Klarstellung — narrativ-historisch ≠ chronologisch streng
+**Status:** identifiziert 23.5.26 in zweiter Prüfrunde Existenzialismus
+**Kontext:** Die Existenzialismus-Lectio stellt Nietzsche vor Kierkegaard, obwohl Kierkegaard historisch früher ist. Phänomenologisch trägt die Reihenfolge (hörbare Diagnose vor älterer, weniger sichtbarer Vorform), und der Übergangstext macht die Versetzung explizit. Aber das Label "narrativ-historisch" suggeriert strenge Chronologie.
+**Methoden-Klarstellung für v1.9:** Narrativ-historische Pfade dürfen historisch leicht versetzt sein, wenn die Versetzung im Übergangstext explizit gemacht wird.
+**Nächster Schritt:** Bei nächster Konventions-Revision in Punkt 9 von `lectio-mode.md` ergänzen.
+
+---
+
+### [ ] lectio_brief-Schreibdisziplin — Reserve-Briefs mit Dokumentation
+**Status:** identifiziert 23.5.26 in zweiter Prüfrunde Existenzialismus
+**Kontext:** Beim Existenzialismus-Bau wurden 7 lectio_briefs für 5 Lectio-Stationen geschrieben — 2 "Reserve-Briefs" (Heidegger → Tod-Lectio, Dostojewski → Freiheits-Lectio). Legitim, aber in der ersten Begleitnotiz nicht dokumentiert.
+**Methoden-Klarstellung:** Reserve-Briefs sind erlaubt, wenn (a) das Material trägt, (b) die künftige Lectio im Backlog steht, (c) der Reserve-Brief in der Begleitnotiz explizit dokumentiert wird.
+**Nächster Schritt:** Bei nächstem Tableau-Bau anwenden. Konvention in `lectio-mode.md` v1.9 aufnehmen.
 ## Landingpage
 
 ### [x] Vision-Klammer ergänzen
@@ -413,6 +437,22 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
+---
+
+### [ ] Farb-Architektur der Sammlung — eine Farbe pro Spur
+**Status:** identifiziert 23.5.26 beim Existenzialismus-Bau
+**Kontext:** Akzentfarben bisher einzeln pro Tableau. Ab 8+ Tableaus entsteht Überlappung. Sammlungs-Spuren (Erkenntnis-Trias / Handlungs-Spur / Existenz-Spur) könnten durch Farbfamilien sichtbar gemacht werden.
+**Tendenz (A):** Eine Farbfamilie pro Spur, Differenzierung durch Helligkeit/Sättigung. Konzeptuell stärker als eine reine Sammlungs-Palette (B), weil Struktur sichtbar wird. Aktueller Existenzialismus-Akzent (oklch 0.42 0.10 45) ist Platzhalter — wartet auf diese Entscheidung.
+**Bedingung:** Vor dem nächsten Existenz-Spur-Tableau entscheiden, sonst werden Farbgewohnheiten zementiert.
+**Nächster Schritt:** Nach Existenzialismus-Launch Palette festlegen. Ggf. Bestandstableaus retrofitten.
+
+---
+
+### [ ] Cross-Reference Predictive Processing (Geist ↔ Selbst)
+**Status:** identifiziert 23.5.26 als Befund der Side-Quest beim Existenzialismus-Bau
+**Kontext:** Predictive Processing / Free Energy Principle ist in beiden Tableaus doppelt anwesend — Geist hat `predictive-processing` als Theorie-Knoten, Selbst hat `free-energy` plus Friston als Denker. Nutzer sehen die Doppelanwesenheit nicht.
+**Instrument:** Nicht Konzept-Echo (das wäre Konzept-in-A / Denker-in-B), sondern `related_topics`-Cross-Reference.
+**Nächster Schritt:** Bei Implementation von `related_topics` als ersten Anwendungsfall pilotieren.
 ## Themen-Backlog
 
 ### [x] Realismus und Konstruktivismus
@@ -422,34 +462,13 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] Existenzialismus
-**Status:** geplant 19.5.26 — Reihenfolge nach Lectio-Bau für die bestehenden vier Tableaus
-**Anker:** Gewachsen — *"Was tust du mit deiner Freiheit, wenn niemand dir sagt, was sie soll?"* Alternative, weniger zugespitzt: *"Wie lebt man, wenn nichts vorgegeben ist?"* Vorarbeit liegt vor: Auseinandersetzung mit Martin Buber und Kierkegaard (Angst-Begriff) ist beim Kurator vorhanden.
-**Achsen-Vorschlag:**
-- X: **Bejahung ↔ Verzweiflung** — Wie geht man mit der Diagnose der Sinnlosigkeit um? (Nietzsche/Camus/de Beauvoir vs. Kierkegaard/Heidegger/Sartre)
-- Y: **Geworfenheit ↔ Entwurf** — Wo entsteht der Mensch? (Heidegger/Kierkegaard vs. Sartre/Nietzsche/de Beauvoir)
-- **Alternative X:** Subjekt ↔ Begegnung — Wo entsteht Sinn? (Sartre/Nietzsche vs. Buber/Marcel/Frankl) — hat Querverbindungen zu Levinas (Ethik) und Gilligan (Ethik). Beim Bau entscheiden.
-
-**Vorläufige Denkerliste (13, Mild-Modus):**
-Vorläufer L1–L2: Kierkegaard, Nietzsche, Dostojewski. Klassiker L2–L3: Heidegger, Sartre, Camus, de Beauvoir. Dialogisch L3: Buber, Marcel. Therapeutisch L4: Yalom, Frankl. Erweiterung L4–L5: Tillich, Hannah Arendt. Reserve: Iris Murdoch, ggf. zeitgenössische Stimme.
-
-**Konzepte (vorläufig):** Geworfenheit, Existenz vor Essenz, Absurdität, Mauvaise foi, Angst, Ich-Du-Beziehung, Sinn finden vs. Sinn machen (Frankl vs. Sartre), Tod als Strukturprinzip, Fiktive Endorientierung (Konzept-Echo aus Selbst-Tableau).
-
-**Adler-Frage:** Nicht als Denker aufnehmen (würde mit Selbst-Tableau doppeln), aber *Fiktive Endorientierung* als Konzept-Knoten mit Tooltip-Verweis auf Adler. Plus Influence-Kante Adler → Frankl im Selbst-Tableau markieren. Neues kuratorisches Pattern: Querverbindung über Konzept-Echo, nicht über Denker-Doppelung.
-
-**Kuratorische Pointe:** Frankl-Sartre-Streit — *"Es gibt keinen Sinn, du musst ihn machen"* vs. *"Es gibt einen Sinn, du musst ihn finden."* Beide Existenzialisten, beide mit Auschwitz-Bezug, gegensätzliche Konsequenzen. Tableau soll den Streit zeigen, nicht beruhigen.
-
-**Sammlungs-Verortung:** Eröffnet dritte Spur neben Erkenntnis-Trias und Handlungs-Spur — **Existenz-Spur** (oder Lebensfragen-Spur). Künftige Tableaus: Sinn (Logos/Telos), Glück und Lebenskunst, Tod und Endlichkeit, Liebe und Verbundenheit. Library-Architektur erst sichtbar machen, wenn Spur mindestens zwei live Tableaus hat.
-
-**Querverbindungen:** Sartre ↔ Levinas (Ethik), Buber/Marcel ↔ Gilligan (Ethik), Yalom/Frankl ↔ Selbst, Heidegger ↔ Husserl (Geist), Adler-Konzept ↔ Selbst. Existenzialismus ist integratives Tableau, nicht nur additiv.
-
-**Sonderrolle geprüft:** Könnte erstes Tableau werden, das von Anfang an mit Lectio integriert gebaut wird — nicht nachträglich. Material trägt es: narrative Linie (Kierkegaard → Nietzsche → Sartre → Camus → Frankl), dramatische Spannungen, hohe Lebensweltlichkeit. Beim Bau entscheiden.
-
-**Offene Fragen beim Bau:** (1) Welche X-Achse trägt besser? (2) Adler als Konzept-Echo — bestehender Konzept-Knoten oder Schema-Erweiterung nötig? (3) Hannah Arendt hier oder in Politische Philosophie? (4) Lectio-Integration ja/nein und welche 7–9 Stationen?
-
-**Modus:** Mild
-**Nächster Schritt:** Anker-Klärung und Achsenwahl beim Bau.
-
+### [x] Existenzialismus
+**Status:** implementiert 23.5.26 (Mild-Modus, verteilter Architekt-Prüfer-Workflow, zweite Prüfrunde)
+**Anker:** Gewachsen — *"Was tust du mit deiner Freiheit, wenn niemand dir sagt, was sie soll?"* — Vorarbeit seit Monaten: Buber, Kierkegaard-Angst-Begriff.
+**Ergebnis:** 13 Denker (Sartre + Heidegger je 7 Einfluss-Kanten als Hubs), 9 Konzepte, 7 Schulen, 20 Influences. Lectio `wenn-nichts-vorgegeben` (narrativ-historisch, L2, 5 Stationen: Nietzsche → Kierkegaard → Sartre → Frankl → Camus). Konzept-Echo-Pattern erstmals systematisch angewendet: *Fiktive Endorientierung* mit Adler-Verweis. Eröffnet **Existenz-Spur** der Sammlung.
+**Achsen:** X = Bejahung ↔ Verzweiflung, Y = Entwurf ↔ Geworfenheit. Buber peripher (x=25, y=72) als markierte Randstimme.
+**7 lectio_briefs:** 5 Lectio-Stationen (Nietzsche, Kierkegaard, Sartre, Frankl, Camus) + 2 Reserve (Heidegger → geplante Tod-Lectio, Dostojewski → ggf. Freiheits-Lectio).
+**Begleitnotiz:** 5 Lessons + 5 neue Backlog-Items (Farb-Architektur, Cross-Reference PP, 3 Methoden-Klarstellungen).
 ---
 
 ### [ ] Stoizismus
