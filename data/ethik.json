@@ -356,7 +356,7 @@
     {
       "id": "kategorischer-imperativ",
       "name": "Kategorischer Imperativ",
-      "type": "concept",
+      "type": "axiom",
       "firstLevel": 1,
       "x": 72,
       "y": 34,
@@ -369,7 +369,7 @@
     {
       "id": "utility",
       "name": "Utility / Nutzen",
-      "type": "concept",
+      "type": "axiom",
       "firstLevel": 1,
       "x": 85,
       "y": 28,
@@ -420,7 +420,7 @@
     {
       "id": "verantwortung-zukunft",
       "name": "Verantwortung für die Zukunft",
-      "type": "concept",
+      "type": "axiom",
       "firstLevel": 5,
       "x": 68,
       "y": 82,
@@ -432,7 +432,7 @@
     {
       "id": "sein-sollen",
       "name": "Sein-Sollen-Lücke",
-      "type": "concept",
+      "type": "phenomenon",
       "firstLevel": 3,
       "x": 50,
       "y": 52,
@@ -445,7 +445,7 @@
     {
       "id": "genealogie",
       "name": "Genealogie der Moral",
-      "type": "concept",
+      "type": "method",
       "firstLevel": 4,
       "x": 45,
       "y": 25,

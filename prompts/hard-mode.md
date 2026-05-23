@@ -115,6 +115,10 @@ Hard-Mode-Tableaus sind größer, weil sie die Komplexität des Feldes vollstän
 
 Die meisten Sanctum-Konventionen gelten auch im Hard-Mode unverändert. Das sind die strukturellen Grundlagen, die nicht modusabhängig sind:
 
+### Konzept-Typologie
+
+Auch im Hard-Mode gilt die fünf-glyphige Typologie (`axiom`, `theory`, `concept`, `phenomenon`, `method`) — siehe `mild-mode.md` Sektion "Konzept-Typologie". Im Hard-Mode tendenziell **strenger** durchgesetzt, weil Hard-Mode-Tableaus oft viele Konzepte und mehrere `axiom`-/`method`-Knoten gleichzeitig haben. Die Differenzierung muss visuell tragen.
+
 ### Annotations-Syntax — `[[Begriff:Erklärung]]`
 
 Einheitliche Form mit Doppelpunkt-Trenner. Im Hard-Mode tendenziell **mehr** Tooltips, weil mehr Fachbegriffe vorkommen — aber das Sparsamkeitsprinzip bleibt: nur dort, wo der Begriff den Leser ohne Erklärung ausschließen würde.

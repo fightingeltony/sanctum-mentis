@@ -428,7 +428,7 @@
     {
       "id": "kategorienfehler",
       "name": "Kategorienfehler",
-      "type": "concept",
+      "type": "method",
       "firstLevel": 1,
       "schoolId": "logischer-behaviorismus",
       "x": 15,
@@ -530,7 +530,7 @@
     {
       "id": "wissensargument",
       "name": "Wissensargument (Mary's Room)",
-      "type": "phenomenon",
+      "type": "concept",
       "firstLevel": 3,
       "schoolId": "qualia-realismus",
       "x": 68,
@@ -566,7 +566,7 @@
     {
       "id": "chinesisches-zimmer",
       "name": "Chinesisches Zimmer",
-      "type": "phenomenon",
+      "type": "concept",
       "firstLevel": 3,
       "schoolId": "biologischer-naturalismus",
       "x": 62,

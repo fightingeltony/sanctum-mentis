@@ -392,7 +392,7 @@
     {
       "id": "lebensstil",
       "name": "Lebensstil",
-      "type": "concept",
+      "type": "theory",
       "primaryThinker": "adler",
       "firstLevel": 3,
       "x": 40,
