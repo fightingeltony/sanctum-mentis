@@ -279,7 +279,7 @@
     {
       "id": "geworfenheit",
       "name": "Geworfenheit",
-      "type": "begriff",
+      "type": "concept",
       "firstLevel": 2,
       "x": 50,
       "y": 92,
@@ -292,7 +292,7 @@
     {
       "id": "existenz-vor-essenz",
       "name": "Existenz vor Essenz",
-      "type": "begriff",
+      "type": "axiom",
       "firstLevel": 1,
       "x": 40,
       "y": 8,
@@ -305,7 +305,7 @@
     {
       "id": "absurditaet",
       "name": "Absurdität",
-      "type": "begriff",
+      "type": "concept",
       "firstLevel": 2,
       "x": 20,
       "y": 50,
@@ -318,7 +318,7 @@
     {
       "id": "mauvaise-foi",
       "name": "Mauvaise foi",
-      "type": "begriff",
+      "type": "phenomenon",
       "firstLevel": 3,
       "x": 48,
       "y": 20,
@@ -331,7 +331,7 @@
     {
       "id": "angst",
       "name": "Angst",
-      "type": "begriff",
+      "type": "phenomenon",
       "firstLevel": 2,
       "x": 72,
       "y": 70,
@@ -344,7 +344,7 @@
     {
       "id": "tod-als-strukturprinzip",
       "name": "Tod als Strukturprinzip",
-      "type": "begriff",
+      "type": "theory",
       "firstLevel": 3,
       "x": 60,
       "y": 80,
@@ -370,7 +370,7 @@
     {
       "id": "ich-du",
       "name": "Ich-Du",
-      "type": "begriff",
+      "type": "concept",
       "firstLevel": 4,
       "x": 22,
       "y": 75,
@@ -383,7 +383,7 @@
     {
       "id": "fiktive-endorientierung",
       "name": "Fiktive Endorientierung",
-      "type": "begriff",
+      "type": "theory",
       "firstLevel": 4,
       "x": 32,
       "y": 55,
