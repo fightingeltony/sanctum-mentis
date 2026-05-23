@@ -48,15 +48,5 @@
     "status": "available",
     "desc": "Von Kierkegaard und Nietzsche bis Sartre, Camus und Frankl — drei nicht-auflösbare Antworten auf die Frage, was bleibt, wenn keine äußere Instanz mehr vorschreibt, wofür du da bist.",
     "tags": ["Freiheit", "Sinn", "Angst", "Authentizität"]
-  },
-  {
-    "id": "politische-philosophie",
-    "title": "Politische Philosophie",
-    "subtitle": "Wie wollen wir zusammenleben?",
-    "era": "Antike – Gegenwart",
-    "themeColor": "oklch(0.40 0.10 145)",
-    "status": "coming",
-    "desc": "Vom Gesellschaftsvertrag bis zum modernen Liberalismus.",
-    "tags": ["Vertrag", "Gerechtigkeit", "Freiheit"]
   }
 ]
