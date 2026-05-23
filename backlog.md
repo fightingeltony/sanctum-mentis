@@ -530,36 +530,48 @@ Vorläufer L1–L2: Kierkegaard, Nietzsche, Dostojewski. Klassiker L2–L3: Heid
 ### Neuer Realismus als eigenständiges Tableau
 **Datum:** 10.5.26
 **Grund:** Zu schmal — Neuer Realismus ist eine Strömung, vergleichbar mit "Predictive Processing" oder "Funktionalismus" in Geistphilosophie. Solche Strömungen sind Knoten, keine Tableau-Themen. Außerdem Aktualitätsproblem: noch keine akademische Sedimentierung. Gabriel sitzt sinnvoll als L5-Knoten in einem Tableau "Realismus und Konstruktivismus".
-
----
-
-## Offene Grundsatzfragen
-
 ### Kopf-Herz-Bauch
-**Status:** beobachten, nicht jetzt entscheiden
-**Kontext:** Aktuelle Sanctum-Architektur ist kopflastig. Tableaus organisieren Wissen, Lectio führt durch Wissen — beides kognitive Modi. Die persönliche Bewegung des Kurators (Wissen muss vom Kopf über das Herz in den Bauch wandern) ist im Tool nicht abgebildet.
+**Status:** Tendenz C methodisch umgesetzt 22.5.26, als Sehnsucht offen
+**Kontext:** Aktuelle Sanctum-Architektur ist kopflastig. Tableaus organisieren Wissen, Lectio führt durch Wissen — beides kognitive Modi. Die persönliche Bewegung des Kurators (Wissen muss vom Kopf über das Herz in den Bauch wandern) ist im Tool nicht explizit abgebildet.
 **Drei mögliche Antworten:**
 - A) Herz/Bauch als Tableau-Ebenen (vermutlich überladen)
 - B) Herz/Bauch als zusätzliche Eintritte in die Bibliothek (Frage-Architektur deckt das teilweise ab)
 - C) Herz/Bauch im Lectio-Modus integrieren (geführte Tour als Brücke vom Verstehen zum Verkörpern)
 
-**Tendenz:** C, weil Lectio sowieso geplant ist und die natürliche Stelle für diese Bewegung wäre.
-**Nächster Schritt:** Beobachten, ob die Frage wiederkommt.
+**Tendenz C umgesetzt:** Lectio integriert die Bewegung *implizit* über die Schlussfrage und die Konvention "Offener Ausgang" (`prompts/lectio-mode.md` Punkt 10). Bewusste Entscheidung gegen ein `resonance`-Schema-Feld — die Bewegung lebt in der Stimme, nicht in Tags. Die Closing Question öffnet eine Tür zum Fühlen, ohne dahinter Therapie zu verkaufen.
+**Als Sehnsucht offen:** Falls Außenfeedback zeigt, dass die implizite Form nicht reicht, bleibt eine explizitere Brücke vom Verstehen zur Handlung denkbar.
+**Nächster Schritt:** Außenfeedback zu Lectios sammeln. Beobachten, ob die Schlussfragen die emotionale Öffnung tatsächlich leisten oder ob es mehr braucht.
 
 ---
 
-## Kuratorische Prinzipien
+### Lebensfragen als Sanctum-Form
+**Status:** zurückgestellt nach Pflege-Analyse 22.5.26
+**Kontext:** Mögliche dritte Sanctum-Form neben Tableau und Lectio: tableau-übergreifende, frageorientierte Pfade ("Wie sollst du mit Tieren umgehen?"), die Stimmen aus mehreren Tableaus versammeln. Praktische Brücke vom Verstehen zur Handlung — Tierethik als möglicher erster Test.
+**Problem:** Tableau-übergreifende dynamische Register sind pflegerisch fragil. Jede neue Tableau-Erweiterung würde alle bestehenden Lebensfragen veralten. Bei drei Lebensfragen okay, bei zehn wird es zur Last.
+**Mögliche Auswege:**
+- A) Lebensfragen ganz aufgeben — Brücke vom Verstehen zur Handlung passiert implizit beim Leser (jetzige Form)
+- B) Als kuratorische Pfade analog zu Lectios bauen — selektiv, statisch, neue Versionen bei Bedarf (nicht dynamisches Register)
+- C) Sehr selektive dynamische Register mit Pflege-Disziplin — max. 3–4 Lebensfragen, klare Pflege-Regel bei neuen Tableaus
 
-Sammlung der Prinzipien, die sich beim Bauen herausgeschält haben — keine ToDo-Items, sondern Leitlinien für jede Entscheidung.
+**Tendenz:** A oder B. Aktuell zugunsten A zurückgestellt — die Konvention "Offener Ausgang" deckt die Brücke zum Fühlen über die Lectio-Schlussfrage bereits ab.
+**Nächster Schritt:** Beobachten, ob die Frage aus Außenfeedback wiederkommt. Erst dann entscheiden.
 
-### Verstehen-Abschließen als Maßstab
-Sanctum hilft Nutzern, Themen *zu Ende zu denken*, nicht alle möglichen Positionen zu kennen. Prüffrage für jede Datensatz-Entscheidung: *Hilft diese Erweiterung beim Abschließen, oder hält sie nur Spannungen offen?* Vollständigkeit ist nicht das Ziel — Verstehbarkeit ist es.
+---
 
-### Größencheck für neue Themen
-Wenn man nicht spontan zwei Achsen formulieren kann, die das Thema produktiv aufspannen, ist es zu schmal für ein Tableau. Strömungen und Schulen sind Knoten, keine Tableau-Themen.
+### Game B als Material
+**Status:** wartet auf passendes Tableau 22.5.26
+**Kontext:** Eigene Auseinandersetzung des Kurators mit der Metakrise (Schmachtenberger, Hanzi Freinacht, McGilchrist, Whitehead-Buber als relationale Ontologie). Ein Manifest, das eine Position formuliert — nicht eine Sammlung von Positionen.
+**Eignung als eigenes Tableau:** Nicht geeignet. Zu thesen-haltig, kein echter Antagonismus innerhalb des Materials, würde gegen Konvention "Offener Ausgang" (bibliothek-architektur.md) verstoßen — wäre Verkündigung, nicht Karte.
+**Mögliche Anschluss-Tableaus, in denen Game B als Schule oder Stimme vorkäme:**
+- Prozessphilosophie vs. Substanzphilosophie (Whitehead, Buber, Merleau-Ponty, McGilchrist)
+- Metamodernismus als Epoche (knüpft an Realismus-Lectio "Wenn die Welt zu wackeln beginnt" an)
+- Komplexitätstheorie und ihre philosophischen Konsequenzen (Moloch, Systemdenken, Schmachtenberger)
+- Relationale Ethik (knüpft an Ethik-Tableau mit Levinas an)
 
-### Reifecheck für neue Themen
-Tableaus brauchen historische Sedimentierung — klare Vorläufer, Klassiker, zeitgenössische Erben. Aktuelle Bewegungen ohne stabilisierte Form eignen sich schlecht.
+**Game B als Schule:** Mehrere Vertreter (Schmachtenberger, Freinacht, Vervaeke) — also tatsächlich Tradition, nicht Einzelposition. Würde Schools-Konvention erfüllen.
+**Nächster Schritt:** Beim nächsten Tableau-Bau (Existenzialismus oder später) prüfen, ob eine der genannten Richtungen als Anker tragfähig ist. Game B nicht als eigenständiges Projekt planen — als Knoten in einem größeren Feld denken.
+
+---
 
 ### Persönlicher Resonanzcheck
 Bevor ein Thema gebaut wird, prüfen — was treibt mich? Reaktive Themen ("hab heute davon gelesen") sind dünner als gewachsene ("beschäftigt mich seit Monaten").
