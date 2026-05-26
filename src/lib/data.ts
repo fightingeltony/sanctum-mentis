@@ -76,6 +76,10 @@ export function getAllLebensfragen(): Lebensfrage[] {
   return Object.values(LEBENSFRAGEN)
 }
 
+export function getLebensfrageIds(): string[] {
+  return Object.keys(LEBENSFRAGEN)
+}
+
 export function getLectiosByTableauId(tableauId: string): LectioSummary[] {
   return Object.values(LECTIOS)
     .filter(l => l.tableauId === tableauId)

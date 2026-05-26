@@ -565,7 +565,7 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 ---
 
 ### Lebensfragen als Sanctum-Form
-**Status:** zurückgestellt nach Pflege-Analyse 22.5.26
+**Status:** Soft Launch 26.5.26 — Weg B umgesetzt, Library-Sektion zurückgestellt
 **Kontext:** Mögliche dritte Sanctum-Form neben Tableau und Lectio: tableau-übergreifende, frageorientierte Pfade ("Wie sollst du mit Tieren umgehen?"), die Stimmen aus mehreren Tableaus versammeln. Praktische Brücke vom Verstehen zur Handlung — Tierethik als möglicher erster Test.
 **Problem:** Tableau-übergreifende dynamische Register sind pflegerisch fragil. Jede neue Tableau-Erweiterung würde alle bestehenden Lebensfragen veralten. Bei drei Lebensfragen okay, bei zehn wird es zur Last.
 **Mögliche Auswege:**
@@ -573,8 +573,9 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 - B) Als kuratorische Pfade analog zu Lectios bauen — selektiv, statisch, neue Versionen bei Bedarf (nicht dynamisches Register)
 - C) Sehr selektive dynamische Register mit Pflege-Disziplin — max. 3–4 Lebensfragen, klare Pflege-Regel bei neuen Tableaus
 
-**Tendenz:** A oder B. Aktuell zugunsten A zurückgestellt — die Konvention "Offener Ausgang" deckt die Brücke zum Fühlen über die Lectio-Schlussfrage bereits ab.
-**Nächster Schritt:** Beobachten, ob die Frage aus Außenfeedback wiederkommt. Erst dann entscheiden.
+**Entscheidung:** Weg B umgesetzt. "Was tue ich mit Schmerz?" als erste Lebensfrage live — Route `/lebensfragen/schmerz`, `LebensfrageViewer`-Komponente, statisch geladene Stimmen aus drei Tableaus.
+**UI-Wohnort:** Provisorisch via Footer-Link ("Lebensfragen (im Aufbau): Was tue ich mit Schmerz?"). Keine Library-Card, keine Library-Sektion — "eine Gruppe aus einem ist keine Gruppe."
+**Nächster Schritt:** Sichtbare Library-Sektion folgt, sobald eine zweite Lebensfrage existiert.
 
 ---
 
