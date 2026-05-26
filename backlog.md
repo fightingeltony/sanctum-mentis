@@ -2,6 +2,10 @@
 
 ## Zuletzt abgeschlossen
 
+### [x] Y-Achsen-Inversionsbug in drei Mild-Tableaus
+**Datum:** 26.5.26
+**Resultat:** Bug in drei Mild-Tableaus entdeckt: Existenzialismus (separater Commit), Realismus und Ethik (dieser Commit). Y-Werte aller Denker und Konzepte invertiert via y_neu = 100 - y_alt. Methodische Härtung in mild-mode.md v2.2: Y-Konvention explizit (y=100 oben, y=0 unten), Pflicht-Plausibilitätstest mit drei Anker-Knoten nach Koordinaten-Setzung eingeführt. Parallel-Eintrag in hard-mode.md. Geist und Selbst (Vollmodus) waren nicht betroffen.
+
 ### [x] Open Graph / Social Media Metadata
 **Datum:** 19.5.26
 **Resultat:** `src/app/og-image/route.tsx` (Edge-Route) — 1200×630 OG-Image via `next/og` mit Pergament-Hintergrund (#F5EAD0), halbdurchsichtigem Quadranten-Kreuz (Option C hybrid), Eyebrow-Label "Philosophie · Denker · Konzepte", kursive Description, Sienna-Divider, URL-Wasserzeichen. `src/app/layout.tsx`: `metadataBase` = `https://sanctum-mentis.vercel.app`, vollständige `openGraph`- + `twitter`-Metadata, alte Mechanism-Description ersetzt durch Vision-Description *"Eine Bibliothek der großen Fragen — Kontext, der hilft, ein Thema zu Ende zu denken."*, `title.template = '%s | Sanctum Mentis'`. `/thema/[topicId]/page.tsx`: `generateMetadata` — Title = Tableau-Titel, Description = Tableau-Subtitle. `twitter:card = summary_large_image`.

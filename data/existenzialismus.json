@@ -5,8 +5,8 @@
     "subtitle": "Wenn nichts mehr vorgegeben ist — was tust du mit deiner Freiheit?",
     "intro": "Stell dir vor, niemand sagt dir mehr, wozu du da bist. Kein Gott, keine Natur, keine Tradition, die wirklich trägt. Du bist frei — und genau das ist das Problem. Diese Karte zeigt dir Denker, die diese Lage ernst genommen haben. Manche sehen darin eine Befreiung, andere einen Abgrund. Sie streiten sich, ob Sinn etwas ist, das du machst oder findest. Sie sind sich nur in einem einig: Du kommst nicht darum herum, zu antworten.",
     "theme": {
-      "accent": "oklch(0.42 0.11 130)",
-      "accentSoft": "oklch(0.42 0.11 130 / 0.15)"
+      "accent": "oklch(0.42 0.10 45)",
+      "accentSoft": "oklch(0.42 0.10 45 / 0.15)"
     },
     "complexityLevels": 5,
     "quadrants": {
@@ -99,7 +99,7 @@
       "firstLevel": 1,
       "schoolId": "christlicher-existenzialismus",
       "x": 72,
-      "y": 80,
+      "y": 20,
       "versions": {
         "1": "Kierkegaard ist der erste Denker, der das Wort Existenz für eine bestimmte Lage des Menschen reserviert: Der Mensch existiert nicht einfach, er muss sich zu sich selbst verhalten, und das ist anstrengend. Vor ihm war Philosophie ein System, das die Welt erklärt. Bei Kierkegaard wird sie zum Versuch, das eigene Leben zu führen. Er stellt eine Frage, die alle nach ihm beerben werden: Was machst du, wenn keine Theorie dir sagt, wie du leben sollst? Sein Antwort, die er als gläubiger Christ gibt, ist der [[Glaubenssprung: die Entscheidung, sich auf Gott einzulassen, ohne rationale Garantie — bei Kierkegaard die einzige Bewegung, die der Verzweiflung wirklich entkommt]]. Aber der Sprung selbst ist die existenzielle Geste, auch wenn sein Inhalt religiös bleibt.",
         "3": "Kierkegaards [[Angst: nicht Furcht vor etwas Bestimmtem, sondern Schwindel vor der eigenen Freiheit — das Gefühl, dass alles möglich wäre und gerade darin das Unerträgliche liegt]] ist der Schlüsselbegriff, an dem sich der ganze spätere Existenzialismus abarbeitet. Anders als Furcht hat Angst kein Objekt — sie ist die Reaktion auf das Mögliche selbst, auf den offenen Raum der Freiheit. Heidegger wird diese Analyse übernehmen und säkularisieren; Sartre wird sie zur Grundlage seiner Theorie der Bewusstseinsstruktur machen. Kierkegaards drei Stadien — ästhetisch, ethisch, religiös — sind dabei keine Entwicklungsstufen, sondern Existenzweisen, zwischen denen man wählen muss. Wer im ästhetischen Stadium bleibt, lebt von Stimmungen; wer ins ethische geht, übernimmt Verantwortung; wer ins religiöse springt, vertraut ohne Garantie.",
@@ -114,7 +114,7 @@
       "firstLevel": 1,
       "schoolId": "lebensphilosophie",
       "x": 18,
-      "y": 22,
+      "y": 78,
       "versions": {
         "1": "Nietzsche ist der Diagnostiker des großen Umbruchs: Er sieht, dass die christliche Weltordnung, die in Europa zweitausend Jahre lang den Sinn-Rahmen geliefert hat, nicht mehr trägt. Sein Satz vom [[Tod Gottes: nicht eine theologische Aussage, sondern eine kulturdiagnostische — die Götter, an die niemand mehr wirklich glaubt, geben dem Leben keinen Halt mehr]] ist nicht atheistische Provokation, sondern eine kulturhistorische Beobachtung. Die Folge: Niemand sagt dir mehr, wozu du da bist. Du musst es selbst herausfinden — oder so tun, als gäbe es noch eine Antwort. Nietzsches Vorschlag: das Leben selbst affirmieren, mit allem, was es enthält. Der Übermensch ist nicht der überlegene Mensch, sondern der, der die Lage erträgt und in ihr noch Ja sagen kann.",
         "3": "Nietzsche unterscheidet zwischen reaktivem und aktivem Nihilismus. Reaktiver Nihilismus stellt fest, dass es keinen Sinn gibt, und kollabiert in Trauer oder Zynismus. Aktiver Nihilismus stellt dasselbe fest und nimmt es als Möglichkeit: Wenn nichts vorgegeben ist, kann ich etwas setzen. Die [[ewige Wiederkunft: das Gedankenexperiment, dass du dein Leben unendlich oft genauso wieder leben müsstest — eine Prüfung der Affirmation]] ist nicht Metaphysik, sondern Prüfung: Würdest du dein Leben so wollen, dass du es unendlich oft genauso wieder leben müsstest? Wer das mit Ja beantworten kann, hat den aktiven Nihilismus gelebt. Wer es nicht kann, weiß, was zu tun ist. Sartre wird Nietzsches Diagnose erben, aber Nietzsches Affirmation nicht — bei Sartre bleibt die Wahl ohne Bejahungs-Geste.",
@@ -129,7 +129,7 @@
       "firstLevel": 2,
       "schoolId": "literarischer-existenzialismus",
       "x": 68,
-      "y": 78,
+      "y": 22,
       "versions": {
         "2": "Dostojewski ist kein Philosoph, sondern ein Romancier — und gerade darin steht er den Existenzialisten näher als manche akademische Vorgänger. Seine Figuren leben die existenziellen Fragen aus, die spätere Theoretiker formulieren werden: Raskolnikow testet, ob er sich selbst über das Gesetz erheben kann; der Großinquisitor zeigt, dass Menschen die Freiheit nicht ertragen und dafür Sicherheit eintauschen; der Untergrundmann erkennt, dass die Vernunft seinem Handeln nicht gewachsen ist. Sartre und Camus haben Dostojewski intensiv gelesen — Sartre zitiert den oft missverstandenen Satz \"wenn Gott nicht existiert, ist alles erlaubt\" als Ausgangspunkt seines Atheismus.",
         "4": "Dostojewski ist die seltsamste Figur dieses Tableaus: Er teilt mit Kierkegaard die christliche Grundausrichtung, aber er teilt mit Sartre und Camus die Aufmerksamkeit für die Lage des modernen Menschen, der die Vorgaben verloren hat. Seine Größe liegt nicht in einer Lehre, sondern in der phänomenologischen Genauigkeit, mit der er existenzielle Lagen vorführt. Wer den Großinquisitor liest, sieht das Problem der Freiheit klarer als bei vielen Argumentationen — Freiheit ist zu schwer, Menschen wollen sie loswerden, und wer sie ihnen abnimmt, kann Macht über sie gewinnen. Das ist eine Diagnose, die im 20. Jahrhundert blutige Bestätigung gefunden hat. Dostojewski sitzt im Tableau dort, wo Geworfenheit und Verzweiflung sich treffen — aber er ist zugleich derjenige, der den Ausweg in einer christlichen Liebe sieht, die seinen Erben nicht mehr zur Verfügung steht."
@@ -143,7 +143,7 @@
       "firstLevel": 2,
       "schoolId": "deutsche-existenzphilosophie",
       "x": 58,
-      "y": 85,
+      "y": 15,
       "versions": {
         "2": "Heidegger gibt der existenziellen Lage des Menschen ihren philosophisch dichtesten Namen: [[Dasein: Heideggers Begriff für die spezifische Seinsweise des Menschen — kein Subjekt, das einer Welt gegenübersteht, sondern ein Wesen, das immer schon in einer Welt ist und sich zu seinem eigenen Sein verhalten muss]]. Der Mensch ist kein Ding unter Dingen, sondern ein Wesen, das sich zu sich selbst verhalten muss. Drei Grundbestimmungen ziehen sich durch sein Hauptwerk Sein und Zeit: Geworfenheit (du findest dich immer schon vor), Entwurf (du musst dich zu deiner Lage verhalten), Verfallenheit (meist tust du das nicht, sondern lebst im Man — in dem, was man so sagt und tut). Die Befreiung daraus ist das, was Heidegger eigentliche Existenz nennt — und sie hat einen seltsamen Schlüssel: den Tod.",
         "4": "Heideggers [[Sein-zum-Tode: die Einsicht, dass der eigene Tod nicht ein irgendwann eintretendes Ereignis ist, sondern eine Struktur, die das Leben jetzt schon prägt und zur Ernsthaftigkeit zwingt]] ist nicht morbide Meditation, sondern strukturelle Analyse. Solange du den Tod als etwas siehst, was anderen geschieht, lebst du im Man. Erst wenn du verstehst, dass du selbst der bist, der stirbt, und dass dieser Tod jederzeit kommen kann, bekommen deine Wahlen Gewicht. Die Angst — Kierkegaards Begriff, säkularisiert — ist die Stimmung, in der das Sein-zum-Tode dir zugänglich wird. Eigentliche Existenz heißt nicht, anders zu leben als andere, sondern das eigene Leben als das eigene zu übernehmen. Diese Analyse ist die einflussreichste Existenzphilosophie des 20. Jahrhunderts — Sartre baut auf ihr auf, Yalom übersetzt sie therapeutisch, Tillich nimmt sie theologisch auf.",
@@ -158,7 +158,7 @@
       "firstLevel": 1,
       "schoolId": "franzoesischer-existenzialismus",
       "x": 60,
-      "y": 18,
+      "y": 82,
       "versions": {
         "1": "Sartre ist der bekannteste Existenzialist — und der, der dem Begriff seine schärfste Form gegeben hat. Sein berühmter Satz \"Die [[Existenz geht der Essenz voraus: Sartres zentrale Formel — der Mensch existiert zuerst, bevor er irgendetwas Bestimmtes ist; er macht sich erst durch seine Wahl zu dem, was er ist]] \" bedeutet: Beim Menschen ist es anders als bei einem Brieföffner. Ein Brieföffner wird gemacht, um Briefe zu öffnen — seine Funktion (Essenz) kommt vor seinem Dasein. Beim Menschen ist es umgekehrt: Er existiert zuerst und macht sich dann zu dem, was er ist. Das hat eine Konsequenz, die Sartre nicht abschwächt: \"Der Mensch ist [[verurteilt zur Freiheit: Sartres Formel — Freiheit ist nicht ein Geschenk, das man nehmen kann oder nicht, sondern eine Lage, der man nicht entkommt]] \". Du kannst nicht nicht wählen. Selbst nicht zu wählen ist eine Wahl.",
         "3": "Sartres Konzept der [[mauvaise foi: wörtlich ›böser Glaube‹, oft übersetzt als Selbsttäuschung — die Bewegung, mit der man die eigene Freiheit vor sich selbst verbirgt, indem man so tut, als sei man festgelegt]] ist eine seiner präzisesten Analysen. Mauvaise foi ist der Versuch, der eigenen Freiheit zu entgehen, indem man sich als festgelegt versteht — als Kellner, der nur Kellner ist; als Liebende, die ihr Verhalten ihrer Liebe zuschreibt; als Verfolgter, der sich als Opfer der Umstände versteht. In allen drei Fällen ist die Selbsttäuschung dieselbe: Du tust so, als hättest du keine Wahl. Sartre zeigt: Du hast immer eine Wahl, auch da, wo du dir einredest, keine zu haben. Diese Analyse ist gleichermaßen befreiend und belastend — befreiend, weil sie zeigt, dass du nicht festgelegt bist; belastend, weil sie zeigt, dass es immer auch deine Schuld ist.",
@@ -173,7 +173,7 @@
       "firstLevel": 1,
       "schoolId": "franzoesischer-existenzialismus",
       "x": 22,
-      "y": 62,
+      "y": 38,
       "versions": {
         "1": "Camus stellt eine einfache Frage, die alles entscheidet: Lohnt es sich zu leben? Sein Mythos des Sisyphos beginnt mit dem Satz: \"Es gibt nur ein wirklich ernstes philosophisches Problem: den Selbstmord.\" Das ist nicht morbide, das ist ehrlich. Wenn die Welt keinen Sinn vorgibt — und Camus glaubt, dass sie das nicht tut — dann muss die Frage gestellt werden, warum man trotzdem weiterlebt. Camus' Antwort ist nicht Sartres Antwort. Sartre sagt: Du machst den Sinn. Camus sagt: Du machst keinen Sinn — du lebst trotzdem, und du bejahst das. Sein Begriff dafür ist das [[Absurde: Camus' Bezeichnung für die Spannung zwischen dem menschlichen Bedürfnis nach Sinn und der Stummheit der Welt, die keinen liefert]]. Die Lage des Menschen ist absurd, und der einzig würdige Umgang damit ist die Revolte.",
         "3": "Camus' Sisyphos ist die ungewöhnlichste Figur des Existenzialismus. Sisyphos, von den Göttern verurteilt, einen Stein einen Berg hinaufzurollen, von dem er immer wieder herunterrollt, ist das Bild des sinnlosen Lebens. Camus dreht den Mythos um: \"Man muss sich Sisyphos als glücklichen Menschen vorstellen.\" Das ist keine Romantik, sondern eine präzise Position: Glück besteht nicht darin, dass das Leben Sinn hat, sondern darin, dass man es führt, ohne sich zu belügen. Camus' [[Revolte: nicht politische Aktion, sondern die Grundhaltung des absurden Menschen — die Weigerung, die Sinnlosigkeit zu beschönigen, und zugleich die Weigerung, an ihr zu zerbrechen]] ist nicht politische Aktion, sondern eine Grundhaltung: Du lebst weiter, du beschönigst nicht, du gibst nicht auf, du erfindest keinen Trost. Das ist seine Position gegen alle Versuche, der Absurdität durch Sinnstiftung zu entkommen — auch Sartres Sinnstiftung.",
@@ -188,7 +188,7 @@
       "firstLevel": 2,
       "schoolId": "franzoesischer-existenzialismus",
       "x": 38,
-      "y": 25,
+      "y": 75,
       "versions": {
         "2": "De Beauvoir ist die Denkerin, die den Existenzialismus aus dem rein individuellen Drama in das Feld konkreter Lagen geführt hat. Ihr Werk Das andere Geschlecht (1949) wendet die existenzialistische Frage auf die Lage der Frau an: \"Man kommt nicht als Frau zur Welt, man wird es.\" Das ist eine Anwendung der Formel ›Existenz vor Essenz‹ — Frau-Sein ist keine Wesensbestimmung, sondern ein Werden, das in konkreten gesellschaftlichen Strukturen stattfindet. Damit erweitert sie Sartre an einer entscheidenden Stelle: Freiheit ist nicht abstrakt, sondern situiert. Du bist frei, aber du bist es in einer bestimmten Lage, die dir nicht gleichgültig ist.",
         "4": "De Beauvoirs Ethik der Mehrdeutigkeit (1947) ist die ethische Vertiefung des Existenzialismus, die Sartre selbst nie geliefert hat. Sie zeigt, dass aus der existenziellen Freiheit nicht Beliebigkeit folgt: Wer seine eigene Freiheit ernst nimmt, muss auch die Freiheit anderer ernst nehmen, weil seine Freiheit auf die der anderen angewiesen ist. Das ist ein Argument, das Sartre erst spät und unvollkommen einholt. De Beauvoir denkt die Freiheit als beziehungshaft, ohne den Anspruch auf radikale Selbstsetzung aufzugeben. Diese Position macht sie zur strukturell unterschätzten Stimme des Tableaus — sie sitzt im Quadranten Entwurf, aber mit einer ethischen Wendung, die Sartre und Camus in dieser Klarheit nicht haben. Wer den Existenzialismus auf seine berühmten Männer verkürzt, übersieht, dass die ethisch reifste Position der Schule von einer Frau geschrieben wurde, die im Schatten ihres Lebensgefährten gelesen wurde."
@@ -201,7 +201,7 @@
       "firstLevel": 2,
       "schoolId": "existenzielle-psychotherapie",
       "x": 30,
-      "y": 70,
+      "y": 30,
       "versions": {
         "2": "Frankl gehört zu den existenzialistischen Denkern, deren Theorie aus einer Erfahrung gewachsen ist, die alle Theorie übersteigt: Er hat Auschwitz und Dachau überlebt. Seine [[Logotherapie: von Frankl entwickelte Therapieform — geht davon aus, dass der Mensch primär nach Sinn sucht, nicht nach Lust (wie Freud) oder Macht (wie Adler)]] geht von einer einfachen, aber folgenreichen These aus: Der Mensch sucht nicht primär nach Lust oder Macht, sondern nach Sinn. Wenn er keinen findet, wird er krank — das ist die existenzielle Neurose. Sinn ist für Frankl nicht etwas, das man sich aussucht oder erfindet, sondern etwas, das einen anruft: in einer bestimmten Situation, durch eine bestimmte Aufgabe, durch einen bestimmten Menschen. Du findest Sinn nicht durch Suchen, sondern durch Antworten.",
         "4": "Frankls zentrale These ist die direkte Gegenposition zu Sartre: \"Wir mussten erfahren, dass es darauf gar nicht ankommt, was wir vom Leben erwarten, sondern darauf, was das Leben von uns erwartet.\" Wo Sartre sagt ›Du machst den Sinn‹, sagt Frankl ›Der Sinn ruft dich an, du antwortest‹. Beide haben extreme Erfahrungen im Rücken — Sartre die deutsche Besatzung und die Résistance, Frankl die Konzentrationslager. Beide kommen zu gegensätzlichen Antworten. Das ist der Frankl-Sartre-Streit, der im Tableau strukturell zentral ist. Frankls Argument für seine Position ist nicht theoretisch, sondern empirisch: Die Menschen, die in den Lagern überlebt haben, waren nicht die Stärksten, sondern die, die einen Grund hatten, weiterzuleben — ein Mensch, der auf sie wartete, eine Arbeit, die unvollendet war, eine Aufgabe, die sie sich noch nicht hatten nehmen lassen. Diese empirische Verankerung gibt Frankls Position ein Gewicht, das rein theoretische Existenzialismen nicht haben.",
@@ -216,7 +216,7 @@
       "firstLevel": 3,
       "schoolId": "existenzielle-psychotherapie",
       "x": 58,
-      "y": 58,
+      "y": 42,
       "versions": {
         "3": "Yalom hat den Existenzialismus für die klinische Praxis übersetzt. Sein Werk Existenzielle Psychotherapie identifiziert vier letzte Sorgen, die jeden Menschen betreffen — und an deren Verdrängung oder Verarbeitung psychisches Leiden hängt: Tod, Freiheit, Einsamkeit, Sinnlosigkeit. Das ist nicht originelle Philosophie, sondern eine therapeutisch produktive Bündelung dessen, was Kierkegaard, Heidegger und Sartre theoretisch entwickelt hatten. Yaloms Stärke liegt in der Klarheit, mit der er zeigt: Diese Themen sind nicht Spezialprobleme der Philosophie, sondern Grundfragen, die in jeder Therapie auftauchen, ob die Therapeuten sie benennen oder nicht. Wer in Therapie ›Lebenssinn‹ verhandelt, ist in einem existenzialistischen Diskurs, ob er es weiß oder nicht.",
         "5": "Yalom ist der Beleg dafür, dass der Existenzialismus eine therapeutische Fortsetzung hat, die wirksam ist — auch ohne die ontologische Schwere Heideggers oder die literarische Eleganz Sartres. Seine Position ist nicht philosophisch innovativ, sondern phänomenologisch genau: Was passiert, wenn ein Mensch im Behandlungszimmer mit dem eigenen Tod konfrontiert wird? Was, wenn er entdeckt, dass er für die Wahlen seines Lebens selbst verantwortlich war? Yaloms therapeutische Texte sind voll von Fallgeschichten, die existenzialistische Theorie in Erfahrung zurückübersetzen — und damit zeigen, dass die Theorie nicht abstrakt war, sondern eine Beschreibung dessen, was Menschen tatsächlich erleben. Wer Heidegger oder Sartre liest und denkt, das sei nur Schreibtisch-Philosophie, sollte Yalom danach lesen. Es ist beides dasselbe."
@@ -229,7 +229,7 @@
       "firstLevel": 4,
       "schoolId": "dialogisches-denken",
       "x": 25,
-      "y": 72,
+      "y": 28,
       "versions": {
         "4": "Buber gehört in dieses Tableau und gehört zugleich nicht hinein. Er selbst hat den Begriff Existenzialismus für sein Denken abgelehnt — er nannte es dialogisches Denken oder Philosophie des Zwischen. Aber er wurde von den Existenzialisten gelesen, er hat sie gelesen, und seine Diagnose der Moderne überlappt mit der ihren. Bubers Grundfigur ist die Unterscheidung zwischen zwei Grundworten: [[Ich-Du: Bubers Begriff für die Beziehung, in der zwei Wesen einander ganz begegnen — kein Subjekt-Objekt-Verhältnis, sondern eine wechselseitige Anwesenheit]] und Ich-Es. Im Ich-Es-Verhältnis erkennt das Ich einen Gegenstand — der andere wird zum Objekt der Beobachtung, der Berechnung, des Gebrauchs. Im Ich-Du-Verhältnis tritt das Ich in eine Begegnung, in der der andere als Du erscheint, nicht als Es. Die moderne Welt, sagt Buber, hat die Ich-Du-Beziehung weitgehend durch Ich-Es-Beziehungen ersetzt — auch wo es um Menschen geht.",
         "5": "Bubers Position ist die orthogonale Stimme im Existenzialismus-Tableau: Wo Sartre die Freiheit des Einzelnen radikalisiert und das Andere als Bedrohung dieser Freiheit denkt (›Die Hölle, das sind die anderen‹), denkt Buber den Anderen als das, woher der Mensch überhaupt erst entsteht — der Mensch wird Ich erst am Du. Diese Position hat in der Existenzialismus-Diskussion keine zentrale Stelle gefunden, weil sie die zentrale Voraussetzung des Existenzialismus — die Einzelperson als Ausgangspunkt — nicht teilt. Buber selbst hat Heideggers Mit-sein in Sein und Zeit als ungenügend kritisiert: Das Mit-sein bleibt strukturell, eine Eigenschaft des Daseins, aber keine wirkliche Begegnung. Bubers tragender Ort ist nicht der Existenzialismus, sondern ein Tableau, das das dialogische Denken zum Gegenstand hat — möglicherweise ›Theorien der Liebe und Beziehung‹, das in der Sanctum-Bibliothek noch nicht existiert. Im Existenzialismus-Tableau sitzt Buber als markierte Randstimme: anwesend, aber an der Grenze."
@@ -242,7 +242,7 @@
       "firstLevel": 4,
       "schoolId": "christlicher-existenzialismus",
       "x": 28,
-      "y": 78,
+      "y": 22,
       "versions": {
         "4": "Marcel ist der christliche Existenzialist der französischen Tradition — und damit derjenige, der den ungemütlichen Platz zwischen Sartre und Buber besetzt. Mit Sartre teilt er die Aufmerksamkeit für die konkrete existenzielle Lage des Menschen; gegen Sartre setzt er die christliche Hoffnung und das Mysterium des Anderen. Seine zentrale Unterscheidung ist die zwischen Problem und [[Mysterium: Marcels Unterscheidung zur Welt der Probleme — ein Mysterium ist eine Frage, die mich selbst mit einbezieht und nicht von außen gelöst werden kann]]. Ein Problem ist etwas, das man von außen lösen kann — wie eine Mathematikaufgabe. Ein Mysterium ist eine Frage, die mich selbst mit einbezieht — wie die Frage ›Wer bin ich?‹ oder ›Was ist Liebe?‹ —, und das kann ich nicht außen vor mir auflösen. Die moderne Welt, sagt Marcel, behandelt Mysterien wie Probleme — und verliert sie damit.",
         "5": "Marcel steht im Tableau strukturell ähnlich wie Buber: als orthogonale Stimme, die die Solipsismus-Tendenz des klassischen Existenzialismus von einer dialogisch-religiösen Seite her bricht. Während Sartre die ontologische Unmöglichkeit echter Verbindung zwischen Bewusstseinen behauptet (jedes Bewusstsein ist für sich, das Andere ist Bedrohung), sieht Marcel die Verbindung als grundlegender als die Trennung — Hoffnung, Treue, Verfügbarkeit (disponibilité) sind für ihn nicht Hilfskonstruktionen, sondern existenzielle Grundbewegungen. Wer Marcel liest, sieht den klassischen Existenzialismus als eine partielle Wahrheit: Es stimmt, dass der Mensch geworfen ist und sich zu seiner Lage verhalten muss. Aber er ist nicht allein dabei. Diese Position wird im Existenzialismus-Tableau peripher behandelt, weil sie streng genommen die existenzialistische Grundbewegung verlässt — aber sie ist Teil der Geschichte des Existenzialismus, weil sie aus dem Existenzialismus heraus argumentiert."
@@ -255,7 +255,7 @@
       "firstLevel": 4,
       "schoolId": "deutsche-existenzphilosophie",
       "x": 55,
-      "y": 75,
+      "y": 25,
       "versions": {
         "4": "Jaspers ist der zweite große deutsche Existenzphilosoph neben Heidegger — und in vielem dessen Gegenstück. Während Heidegger das Sein-zum-Tode in den Mittelpunkt stellt, denkt Jaspers in [[Grenzsituationen: Jaspers' Begriff für Situationen, in denen die normalen Lebensvollzüge an eine Grenze stoßen — Tod, Leid, Kampf, Schuld — und der Mensch sich auf seine Existenz selbst zurückgeworfen sieht]] : Tod, Leid, Kampf, Schuld. Das sind nicht Einzelereignisse, sondern Strukturen menschlicher Existenz, an denen sich zeigt, dass man dem Eigentlichen nicht ausweichen kann. In einer Grenzsituation wird man zu dem, was Jaspers ›Existenz‹ nennt: ein Selbst, das nicht mehr in seinen Rollen aufgeht, sondern dem eigenen Sein gegenübersteht. Jaspers' Begriff der Existenz ist persönlicher und weniger systematisch als Heideggers Dasein-Analytik — und sie steht der religiösen Tradition näher.",
         "5": "Jaspers wird im Tableau leicht übersehen, weil sein Werk weniger zugespitzt ist als Heideggers und weniger kämpferisch als Sartres. Aber er hat eine Stelle, an der seine Position einzigartig wird: die Frage der Transzendenz. Wo Sartre sagt, es gibt keinen Sinn jenseits der eigenen Wahl, sagt Jaspers: In den Grenzsituationen erfahren wir eine Chiffre der Transzendenz — etwas, das uns angeht, ohne dass wir es benennen oder festhalten könnten. Das ist nicht religiöser Trost, sondern eine Beschreibung dessen, was Menschen in den extremen Lagen tatsächlich erfahren: dass etwas in ihnen über das Sichtbare hinausweist, ohne dass sie sagen könnten, wohin. Jaspers ist damit die Brücke zwischen dem säkularen Existenzialismus Sartres und der religiösen Existenzphilosophie Bubers und Marcels — er gibt der Transzendenz einen Platz, ohne ihren Inhalt zu fixieren. Persönlich gehört er außerdem zu denen, die im Nationalsozialismus aufrecht geblieben sind (er wurde wegen seiner jüdischen Frau aus dem Universitätsamt gedrängt) — ein biografischer Kontrast zu Heidegger, der nicht philosophisch zentral ist, aber zur Lektüre dazugehört."
@@ -268,7 +268,7 @@
       "firstLevel": 4,
       "schoolId": "christlicher-existenzialismus",
       "x": 62,
-      "y": 72,
+      "y": 28,
       "versions": {
         "4": "Tillich ist der protestantische Theologe, der die existenzialistische Frage in den Mittelpunkt der Theologie gerückt hat. Sein Werk Der Mut zum Sein nimmt Heideggers Analyse der Angst auf und gibt ihr eine theologische Wendung: Die [[Angst des Nichtseins: Tillichs Begriff für die Grundbedrohung der menschlichen Existenz — drei Formen: Angst des Schicksals und Todes, der Leere und Sinnlosigkeit, der Schuld und Verdammung]], die Heidegger als strukturelles Faktum beschreibt, ist nach Tillich die Form, in der der Mensch vor der Frage steht: Trägt etwas mein Sein, oder gibt es darunter nur das Nichts? Tillichs Antwort ist nicht ein Argument für Gott im traditionellen Sinn, sondern ein Begriff: Gott als der ›Grund des Seins‹, nicht als ein Wesen unter Wesen. Diese Reformulierung des Gottesbegriffs lässt Tillich die existenzialistische Diagnose ernst nehmen — die Angst ist real, die Sinnlosigkeit ist real — und gleichzeitig eine theologische Antwort geben, die diese Diagnose nicht überspringt.",
         "5": "Tillich sitzt im Tableau in einer eigenen Position: Er teilt mit Sartre und Heidegger die Diagnose, aber er teilt mit Kierkegaard und Marcel die religiöse Antwort. Sein Mut zum Sein ist keine Selbstbehauptung im Sinne Sartres und keine Affirmation im Sinne Nietzsches — er ist die Bereitschaft, das eigene Sein im Wissen um die Bedrohung durch das Nichtsein zu bejahen. Tillich unterscheidet drei Formen der Angst: die Angst vor Schicksal und Tod (antik), die Angst vor Leere und Sinnlosigkeit (modern), die Angst vor Schuld und Verdammung (christlich). Jede Zeit hat ihre Hauptangst, sagt Tillich; die unsere ist die der Sinnlosigkeit. Damit gibt er der existenzialistischen Diagnose eine historische Tiefe, die sie bei Sartre nicht hat. Wer Sartre und Heidegger gelesen hat und sich fragt, was eine christliche Antwort wäre, die ihre Diagnose nicht beschönigt, sollte Tillich lesen. Es ist keine Versöhnung, aber es ist ein ehrlicher Versuch."
@@ -282,12 +282,11 @@
       "type": "concept",
       "firstLevel": 2,
       "x": 50,
-      "y": 92,
+      "y": 8,
       "versions": {
         "2": "Geworfenheit ist Heideggers Begriff für die Grundlage menschlicher Existenz: Du findest dich immer schon in einer bestimmten Lage vor. Du hast dir deine Eltern nicht ausgesucht, deinen Körper nicht, deine Sprache nicht, deine Zeit nicht. Diese Faktizität ist nicht ein Hindernis vor der eigentlichen Existenz, sondern Teil dieser Existenz selbst — du bist immer schon in einer Welt, bevor du wählst, in welcher du sein willst.",
         "4": "Die [[Geworfenheit: Heideggers Begriff für die nicht gewählte Faktizität, in der jeder Mensch sich vorfindet — Herkunft, Körper, Zeit, Sprache]] ist der strukturelle Gegenpol zum [[Entwurf: Heideggers Begriff für die Bewegung des Daseins, sich auf Möglichkeiten zu entwerfen — die Zukunft als das, was noch nicht entschieden ist]]. Geworfenheit nach hinten (Herkunft, die du nicht wählen konntest), Entwurf nach vorne (Möglichkeiten, zwischen denen du wählen musst). Das ist die Doppelstruktur menschlicher Zeitlichkeit. Sartre wird die Geworfenheit als Faktizität übernehmen, ihr aber weniger Gewicht geben — bei Sartre ist die Geworfenheit ein Material, das die Freiheit überformt. Bei Heidegger ist sie strukturell gleichursprünglich."
-      },
-      "primaryThinker": "heidegger"
+      }
     },
     {
       "id": "existenz-vor-essenz",
@@ -295,12 +294,11 @@
       "type": "axiom",
       "firstLevel": 1,
       "x": 40,
-      "y": 8,
+      "y": 92,
       "versions": {
         "1": "Sartres berühmteste Formel — und der schärfste existenzialistische Grundsatz. Bei einem Brieföffner kommt die Funktion (die Essenz: was er ist) vor der Existenz (dass er ist). Beim Menschen ist es umgekehrt: Er existiert zuerst, ohne festgelegt zu sein, und macht sich dann erst zu dem, was er ist — durch seine Wahlen. Das hat eine Konsequenz, die Sartre nicht abschwächt: Wenn dich niemand gemacht hat, um etwas Bestimmtes zu sein, dann bist du das, was du aus dir machst. Keine Ausreden.",
         "3": "Sartres Formel ist eine direkte Anwendung auf den Menschen dessen, was Aristoteles für Werkzeuge angenommen hatte: Bei einem Werkzeug definiert die Funktion das Wesen. Sartre dreht das Verhältnis um. Damit ist nicht gesagt, dass der Mensch unfertig wäre, sondern dass es bei ihm keine vorgegebene Funktion gibt, an der er sich messen müsste. Das ist befreiend und beunruhigend zugleich: befreiend, weil du nichts ›von Natur aus‹ bist; beunruhigend, weil du für das, was du bist, niemanden außer dir selbst verantwortlich machen kannst. Diese Formel ist das Banner des klassischen Existenzialismus und der Punkt, an dem die religiösen Existenzialisten (Kierkegaard, Marcel, Tillich) anderen Wegs gehen — bei ihnen bleibt der Mensch in einer Beziehung, die er nicht gewählt hat."
-      },
-      "primaryThinker": "sartre"
+      }
     },
     {
       "id": "absurditaet",
@@ -312,8 +310,7 @@
       "versions": {
         "2": "Camus' Begriff für die Lage des modernen Menschen: nicht die Welt ist absurd, nicht der Mensch ist absurd, sondern das Verhältnis zwischen beiden. Der Mensch verlangt nach Sinn — die Welt schweigt. Der Mensch sucht nach Ordnung — die Welt liefert keine. Die Absurdität ist genau dieses Aufeinanderprallen: ein Wesen, das fragt, in einer Wirklichkeit, die nicht antwortet. Camus zieht daraus nicht den Schluss, dass man die Frage aufgeben sollte (das wäre falsche Demut), sondern dass man die Spannung aushalten muss.",
         "4": "Camus' Absurditätsbegriff ist präziser, als er oft gelesen wird: Er sagt nicht, dass das Leben sinnlos sei (das wäre eine metaphysische Aussage), sondern dass die Lage des Menschen, der nach Sinn fragt und keinen findet, absurd ist. Diese Position ist phänomenologisch — sie beschreibt eine Erfahrung, keine Ontologie. Drei Auswege aus der Absurdität sind nach Camus unredlich: der Selbstmord (er löst die Spannung, indem er das fragende Wesen abschafft), der Sprung in den Glauben (er löst sie, indem er die Antwort hineinpostuliert, die die Welt nicht gibt), und die Hoffnung auf einen späteren Sinn (sie verschiebt die Lösung in eine Zukunft, die nichts garantiert). Camus' Antwort ist die Revolte: die Spannung tragen, ohne sie aufzulösen."
-      },
-      "primaryThinker": "camus"
+      }
     },
     {
       "id": "mauvaise-foi",
@@ -321,12 +318,11 @@
       "type": "phenomenon",
       "firstLevel": 3,
       "x": 48,
-      "y": 20,
+      "y": 80,
       "versions": {
         "3": "Sartres Begriff für die Selbsttäuschung, in der ein Mensch der eigenen Freiheit zu entkommen versucht, indem er so tut, als sei er festgelegt. Klassische Beispiele: der Kellner, der ›nur Kellner‹ ist und in dieser Rolle aufgeht; die Verliebte, die ihrer Hand erlaubt, in der Hand des anderen zu liegen, ohne diese Hand selbst gewählt zu haben; der Mensch, der über sich sagt ›so bin ich eben‹, als sei dies ein Naturgesetz und keine Wahl. In allen Fällen ist die Bewegung dieselbe: Etwas, das gewählt wird, wird so dargestellt, als sei es nicht wählbar.",
         "5": "Mauvaise foi ist eines der präzisesten Konzepte des Existenzialismus, weil es eine spezifische Bewegung beschreibt, die Menschen wirklich vollziehen. Es ist nicht einfach Lüge (eine Lüge weiß, dass sie eine Lüge ist), sondern eine Selbsttäuschung, die ihre eigene Bedingung verschleiert: Du musst wissen, dass du wählst, um dir glaubhaft einzureden, du würdest nicht wählen. Sartre zeigt damit eine Struktur, die nicht nur Einzelne, sondern ganze gesellschaftliche Praktiken durchzieht: ›Was soll ich machen, ich bin nun einmal so erzogen worden‹, ›in meiner Position kann ich das nicht ablehnen‹, ›so ist die Welt eben‹. All das sind Versuche, das Wählen unsichtbar zu machen, das doch geschieht. Wer mauvaise foi versteht, sieht überall, wo Menschen sich auf Festgelegtheit berufen, eine Wahl, die getroffen wird, und die genauso gut anders ausfallen könnte."
-      },
-      "primaryThinker": "sartre"
+      }
     },
     {
       "id": "angst",
@@ -334,12 +330,11 @@
       "type": "phenomenon",
       "firstLevel": 2,
       "x": 72,
-      "y": 70,
+      "y": 30,
       "versions": {
         "2": "Angst ist im Existenzialismus etwas anderes als Furcht. Furcht hat ein Objekt — du fürchtest dich vor einer bestimmten Gefahr, einem Ereignis, einer Person. Angst hat keines — sie ist eine Grundstimmung, die nicht auf etwas Bestimmtes gerichtet ist. Kierkegaard nennt sie den ›Schwindel der Freiheit‹: die Reaktion auf die Tatsache, dass alles möglich wäre und genau das das Unerträgliche ist. Heidegger übernimmt diese Analyse und macht aus der Angst die Stimmung, in der einem das eigene Sein-zum-Tode zugänglich wird — also gerade das, was die Eigentlichkeit ermöglicht.",
         "4": "Die existenzialistische Analyse der Angst ist eine der haltbarsten Einsichten dieser Tradition. Anders als die psychologische Angst-Forschung, die Angst als pathologisches Phänomen behandelt, sehen Kierkegaard, Heidegger und Tillich in der Angst eine ontologische Struktur: Sie ist nicht ein Symptom, sondern ein Hinweis auf die Lage, in der wir uns finden. Wer keine Angst kennt, hat noch nicht bemerkt, dass er frei ist. Tillich entwickelt dies weiter: Es gibt drei Formen existenzieller Angst — vor Schicksal und Tod, vor Leere und Sinnlosigkeit, vor Schuld und Verdammung —, und jede Zeit hat ihre vorherrschende Form. Die unsere, sagt Tillich, ist die Angst vor der Sinnlosigkeit. Wer das ernst nimmt, sieht die zeitgenössische Therapie-Industrie in einem anderen Licht: Sie behandelt Symptome einer Lage, die strukturell ist."
-      },
-      "primaryThinker": "kierkegaard"
+      }
     },
     {
       "id": "tod-als-strukturprinzip",
@@ -347,12 +342,11 @@
       "type": "theory",
       "firstLevel": 3,
       "x": 60,
-      "y": 80,
+      "y": 20,
       "versions": {
         "3": "Im Existenzialismus ist der Tod nicht ein Ereignis am Ende des Lebens, sondern eine Struktur, die das Leben selbst prägt. Heideggers Sein-zum-Tode ist die Formel dafür: Der Tod ist nicht etwas, das später kommt, sondern etwas, das jederzeit kommen könnte, und dieses Wissen verändert das Leben jetzt. Wer den Tod als bloß zukünftiges Ereignis betrachtet, lebt im Man — er kann immer noch tun, was zu tun ist. Wer den Tod als jederzeit möglich versteht, bekommt eine Dringlichkeit, die anders ist. Yalom übersetzt das therapeutisch: Die Konfrontation mit der eigenen Sterblichkeit ist in vielen Fällen der Punkt, an dem Menschen anfangen zu leben.",
         "5": "Heideggers Tod-Analyse hat zwei strukturelle Pointen, die in der populären Rezeption oft verloren gehen. Erstens: Der eigene Tod ist nicht-relational — niemand kann ihn dir abnehmen, niemand kann ihn für dich sterben. Das macht ihn zu dem Ereignis, in dem du am unausweichlichsten du selbst bist. Zweitens: Er ist unbestimmt-gewiss — du weißt, dass er kommt, aber nicht wann. Diese Unbestimmtheit macht ihn jederzeit möglich, was die Dringlichkeit erzeugt, die eigentliche Existenz tragen kann. Yalom zeigt klinisch, was Heidegger ontologisch entwickelt hat: Menschen, die in eine Krebsdiagnose oder ein anderes lebensbedrohliches Ereignis geraten, beschreiben oft eine ›zweite Geburt‹ — sie fangen an, das zu tun, was sie wirklich wollen, weil ihnen plötzlich klar ist, dass die Zeit endlich ist. Das ist die phänomenologische Bestätigung von Heideggers These: Der Tod ist eine Lebens-Struktur, keine Lebens-Grenze."
-      },
-      "primaryThinker": "heidegger"
+      }
     },
     {
       "id": "ich-du",
@@ -360,12 +354,11 @@
       "type": "concept",
       "firstLevel": 4,
       "x": 22,
-      "y": 75,
+      "y": 25,
       "versions": {
         "4": "Bubers zentraler Begriff — und die orthogonale Stimme im Existenzialismus-Tableau. Buber unterscheidet zwei Grundworte des Menschen: Ich-Es und Ich-Du. Im Ich-Es-Verhältnis erfasst das Ich einen Gegenstand — der andere wird zum Objekt der Beobachtung, der Berechnung, des Gebrauchs. Im Ich-Du-Verhältnis tritt das Ich in eine Begegnung, in der der andere als ganzes Wesen anwesend ist, nicht als Bündel von Eigenschaften. Diese Begegnung ist nicht herstellbar, sondern geschieht — und sie kann nicht festgehalten werden, denn sobald das Du wieder zum Es wird, ist die Begegnung vorbei. Bubers Pointe: Der Mensch wird Ich erst am Du.",
         "5": "Bubers Ich-Du steht im Existenzialismus-Tableau strukturell quer zur Hauptbewegung. Die meisten Existenzialisten beginnen beim einzelnen Bewusstsein und denken den Anderen entweder als Begegnender (positiv), Mitseiender (strukturell) oder Bedrohung der eigenen Freiheit (negativ — so vor allem Sartre). Buber beginnt umgekehrt: Beziehung ist das Erste, das einzelne Ich ist abgeleitet. Diese Verkehrung des Ausgangspunkts macht Bubers Position für den klassischen Existenzialismus schwer integrierbar — und gerade deshalb produktiv. Sartres berühmtes Diktum ›Die Hölle, das sind die anderen‹ wäre für Buber eine präzise Beschreibung der Ich-Es-Welt — aber eben nur einer Möglichkeit, nicht der menschlichen Grundverfassung. Buber wird im Tableau peripher behandelt, weil die volle Würdigung seines Denkens ein eigenes Tableau erfordert: das des dialogischen Denkens oder der Beziehungstheorien. Hier erscheint Ich-Du als markierte Randstimme — anwesend, aber nicht zentral."
-      },
-      "primaryThinker": "buber"
+      }
     },
     {
       "id": "fiktive-endorientierung",
@@ -373,12 +366,11 @@
       "type": "theory",
       "firstLevel": 4,
       "x": 32,
-      "y": 55,
+      "y": 45,
       "versions": {
         "4": "Ein Begriff, der ursprünglich nicht aus dem Existenzialismus stammt, aber strukturell genau dorthin gehört: Alfred Adler, der zweite große Schüler Freuds (neben Jung), formulierte ihn in den 1910er Jahren. Eine [[fiktive Endorientierung: Adlers Begriff für die selbstgewählten Leitziele, die unbewusst das Leben organisieren — bei Sanctum ein Konzept-Echo aus der Landkarte des Selbst, das im Existenzialismus strukturell wiederkehrt]] ist ein selbstgewähltes Leitziel, das das Leben unbewusst organisiert — eine Vorstellung davon, wer man sein wird, wenn man angekommen ist. Adler nannte es ›fiktiv‹, weil es nie eingelöst wird und auch nicht eingelöst werden muss, um zu wirken. Es organisiert das Leben gerade dadurch, dass es vorausläuft. Das ist die psychotherapeutische Vorform dessen, was Frankl später als Sinn-Anruf beschreibt: ein Punkt vor mir, der mein Handeln strukturiert, ohne dass ich ihn erreichen muss. Das Konzept gehört in dieses Tableau als Echo eines Knotens aus der ›Landkarte des Selbst‹ — Adler selbst sitzt dort, hier sitzt sein Konzept. Eine Form der Querverbindung, die nicht über doppelte Denker, sondern über wandernde Begriffe läuft.",
         "5": "Dieses Konzept ist das erste Beispiel einer Querverbindung in der Sanctum-Bibliothek, die nicht über doppelte Denker, sondern über wandernde Begriffe läuft. Adler sitzt im Selbst-Tableau als Tiefenpsychologe; sein Begriff sitzt hier, weil er strukturell hierhergehört. Was sich an dieser Wanderung zeigt, ist eine genealogische Pointe: Existenzielle Probleme haben oft Vorformen in der Tiefenpsychologie, die in der Philosophie später ohne Kreditierung der Quelle wiederkehren. Der Punkt, an dem Sinn-Anruf bei Frankl beginnt, war bei Adler bereits als Leitziel-Theorie ausgearbeitet — Jahre vor Sein und Zeit, Jahrzehnte vor Der Mensch auf der Suche nach Sinn. Diese Genealogie verdankt der Existenzialismus seinen psychotherapeutischen Vorgängern, von denen er sich später diskursiv trennen wird. Dass Sanctum dieses Konzept hier zeigt, ohne Adler selbst zu duplizieren, ist eine kuratorische Geste: Ideen wandern, und sie wandern manchmal schneller als die Personen, die sie zuerst gedacht haben. Wer dem Knoten folgt, kann zum Selbst-Tableau zurückkehren und sehen, wo der Gedanke zuerst eine Heimat hatte."
-      },
-      "primaryThinker": "frankl"
+      }
     }
   ],
   "influences": [

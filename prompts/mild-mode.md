@@ -288,6 +288,38 @@ Pflichtfelder pro Knoten:
 
 ---
 
+## Koordinaten-Konvention: X und Y
+
+Knoten haben `x` und `y`-Koordinaten von 0 bis 100. Die Konvention ist **mathematisch**, nicht CSS-/Screen-orientiert:
+
+- **x = 0** ist links, **x = 100** ist rechts
+- **y = 0** ist **unten** am bottom-Pol der Y-Achse, **y = 100** ist **oben** am top-Pol
+
+Das heißt: Wenn die Y-Achse als `axisY: { top: "Spirituell", bottom: "Wissenschaftlich" }` definiert ist, dann sitzen Knoten mit hohem y (z.B. 88) **oben am spirituellen Pol**, Knoten mit niedrigem y (z.B. 22) **unten am wissenschaftlichen Pol**.
+
+**Warnung:** Bei intuitivem Bau gibt es die Versuchung, hohe Y-Werte mit "tieferer/ernsthafterer Position" zu assoziieren und sie deshalb dem dramatischeren Pol zuzuordnen. Das ist falsch. Y folgt der Achsen-Definition, nicht der Dramaturgie.
+
+### Plausibilitäts-Pflichttest nach Koordinaten-Setzung
+
+Nach dem Setzen aller Koordinaten — und bevor die Begleitnotiz geschrieben wird — folgenden Test durchführen:
+
+1. Drei **Anker-Knoten** wählen, deren Position in jedem der vier Pole eindeutig sein muss.
+2. Für jeden Anker laut sagen: *"X ist am [Pol]-Pol der [X|Y]-Achse, also müsste seine [x|y]-Koordinate [niedrig | hoch] sein."*
+3. Im JSON nachschauen — wenn auch nur ein Anker auf der falschen Seite sitzt: **systematischer Inversionsverdacht**. Alle anderen Knoten ebenfalls prüfen.
+
+Konkretes Beispiel für ein Existenzialismus-Tableau (Y: Entwurf oben ↔ Geworfenheit unten):
+- Sartre ist *der* Entwurfs-Denker → y muss HOCH sein
+- Heidegger ist *der* Geworfenheits-Denker → y muss NIEDRIG sein
+- Sartre y=18, Heidegger y=85 → **Achtung, beide invertiert** → systematischer Fix nötig
+
+Der Test kostet drei Minuten. Sein Auslassen kostet später eine externe Beobachtung und einen Patch-Lauf.
+
+### Warum dieser Test in den Prompt gehört
+
+Der Inversionsbug ist *systematisch konsistent*: Alle Knoten passen relativ zueinander, nur eben gespiegelt. Interne Selbstprüfung übersieht das, weil die Spannungen zwischen den Knoten stimmen. Nur ein externer Achsen-Anker-Test ("wo erwarte ich Sartre, wo Heidegger?") deckt den Bug auf.
+
+---
+
 ## Validierungs-Checkliste vor Lieferung
 
 Vor der Übergabe an Claude Code / das Repo:
@@ -302,6 +334,7 @@ Vor der Übergabe an Claude Code / das Repo:
 - [ ] Subtitle, Intro, Synthese alle gefüllt
 - [ ] Achsen-Hints für alle vier Pole gefüllt
 - [ ] Stufen-Verteilung über L1–L5 (kein Stau auf einer Stufe)
+- [ ] **Koordinaten-Plausibilitätstest** mit drei Anker-Knoten durchgeführt (y=100 oben, y=0 unten)
 
 ---
 
@@ -359,3 +392,4 @@ Solo-Tableaus werden **als solche markiert** in der Begleitnotiz. Sie sind keine
 - **v1** (14.5.26): Erster Wurf, entwickelt während Realismus-Bau. Drei Prüffragen, 10–14 Denker, verteilter Modus.
 - **v2** (19.5.26): Erweitert nach v2-Etappe (Ethik, Selbst, Realismus, Geist). Hinzugekommen: Mehrstufige Texte als Regel, Tooltips bis L5, einheitliche Annotations-Syntax `[[Begriff:Erklärung]]`, Stimm-Hierarchie (Subtitle/Intro/Synthese), Du-Konsistenz, Achsen-Hints, Influence-Stufungs-Regel, Validierungs-Checkliste.
 - **v2.1** (23.5.26): Konzept-Typologie als verbindliche Konvention aufgenommen. Fünf Glyphen (◆ axiom, ⌘ theory, ❖ concept, ◎ phenomenon, ⚡ method) mit klaren Tests und Grenzfall-Klärungen (Gedankenexperimente, Imperative, Theorie-vs-Methode, Phänomen-vs-Begriff, Streitstellen). Bestandstableaus retrospektiv typisiert. Streitstellen werden ab v2.1 nicht mehr als Konzept-Knoten geführt, sondern als hervorgehobene Critique-Kanten in den Influences.
+- **v2.2** (26.5.26): Y-Achsen-Konvention explizit aufgenommen (y=100 ist oben am top-Pol, y=0 ist unten am bottom-Pol). Pflicht-Plausibilitätstest mit drei Anker-Knoten nach Koordinaten-Setzung eingeführt. Anlass: Y-Inversionsbug in drei Mild-Tableaus entdeckt (Realismus, Ethik, Existenzialismus), gefixt durch y_neu = 100 - y_alt. Geist und Selbst (Vollmodus) waren korrekt.

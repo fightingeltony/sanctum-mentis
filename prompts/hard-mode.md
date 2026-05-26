@@ -119,6 +119,10 @@ Die meisten Sanctum-Konventionen gelten auch im Hard-Mode unverändert. Das sind
 
 Auch im Hard-Mode gilt die fünf-glyphige Typologie (`axiom`, `theory`, `concept`, `phenomenon`, `method`) — siehe `mild-mode.md` Sektion "Konzept-Typologie". Im Hard-Mode tendenziell **strenger** durchgesetzt, weil Hard-Mode-Tableaus oft viele Konzepte und mehrere `axiom`-/`method`-Knoten gleichzeitig haben. Die Differenzierung muss visuell tragen.
 
+### Koordinaten-Konvention und Plausibilitätstest
+
+Auch im Hard-Mode gilt die Y-Konvention (y=100 oben, y=0 unten) und der Pflicht-Plausibilitätstest mit drei Anker-Knoten nach Koordinaten-Setzung — siehe `mild-mode.md` Sektion "Koordinaten-Konvention". Im Hard-Mode mit mehr Knoten ist der Test eher noch wichtiger, weil Inversionsbugs schwerer rückgängig zu machen sind.
+
 ### Annotations-Syntax — `[[Begriff:Erklärung]]`
 
 Einheitliche Form mit Doppelpunkt-Trenner. Im Hard-Mode tendenziell **mehr** Tooltips, weil mehr Fachbegriffe vorkommen — aber das Sparsamkeitsprinzip bleibt: nur dort, wo der Begriff den Leser ohne Erklärung ausschließen würde.
