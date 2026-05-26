@@ -128,6 +128,7 @@ export default function LectioViewer({ lectio, topicData }: Props) {
                         nodeType={step.nodeType}
                         topicData={topicData}
                         lectioLevel={lectio.level}
+                        brief={step.brief}
                       />
                     </div>
                   </React.Fragment>
@@ -218,12 +219,22 @@ function NodeTextBlock({
   nodeType,
   topicData,
   lectioLevel,
+  brief,
 }: {
   nodeId: string
   nodeType: LectioStep['nodeType']
   topicData: TopicData
   lectioLevel: number
+  brief?: string
 }) {
+  if (brief) {
+    return (
+      <p className="font-body text-[15px] leading-relaxed text-[--fg]">
+        {brief}
+      </p>
+    )
+  }
+
   if (nodeType === 'school') {
     const school = topicData.schools.find(s => s.id === nodeId)
     if (!school) return <NodeFallback />

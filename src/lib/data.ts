@@ -1,4 +1,4 @@
-import type { TopicData, Lectio, LectioSummary, Spur } from './types'
+import type { TopicData, Lectio, LectioSummary, Spur, Lebensfrage } from './types'
 import dasSelbstRaw                        from '../../data/das-selbst.json'
 import philosophieDesGeistesRaw            from '../../data/philosophie-des-geistes.json'
 import realismusUndKonstruktivismusRaw     from '../../data/realismus-und-konstruktivismus.json'
@@ -10,6 +10,8 @@ import werBeobachtetRaw                    from '../../data/lectio/wer-beobachte
 import wennDieWeltWackeltRaw               from '../../data/lectio/wenn-die-welt-wackelt.json'
 import warumSollstDuRaw                    from '../../data/lectio/warum-sollst-du.json'
 import wennNichtsVorgegebenRaw             from '../../data/lectio/wenn-nichts-vorgegeben.json'
+import findestDuOderMachstDuRaw            from '../../data/lectio/findest-du-oder-machst-du.json'
+import schmerzRaw                          from '../../data/lebensfragen/schmerz.json'
 
 const TOPICS: Record<string, TopicData> = {
   'das-selbst':                       dasSelbstRaw                    as unknown as TopicData,
@@ -48,7 +50,8 @@ const LECTIOS: Record<string, Lectio> = {
   'wer-beobachtet':        werBeobachtetRaw        as unknown as Lectio,
   'wenn-die-welt-wackelt': wennDieWeltWackeltRaw   as unknown as Lectio,
   'warum-sollst-du':       warumSollstDuRaw        as unknown as Lectio,
-  'wenn-nichts-vorgegeben': wennNichtsVorgegebenRaw as unknown as Lectio,
+  'wenn-nichts-vorgegeben':       wennNichtsVorgegebenRaw       as unknown as Lectio,
+  'findest-du-oder-machst-du':   findestDuOderMachstDuRaw      as unknown as Lectio,
 }
 
 export function getLectio(id: string): Lectio | null {
@@ -57,6 +60,20 @@ export function getLectio(id: string): Lectio | null {
 
 export function getLectioIds(): string[] {
   return Object.keys(LECTIOS)
+}
+
+// ─── Lebensfragen Loader ─────────────────────────────────────
+
+const LEBENSFRAGEN: Record<string, Lebensfrage> = {
+  'schmerz': schmerzRaw as unknown as Lebensfrage,
+}
+
+export function getLebensfrage(id: string): Lebensfrage | null {
+  return LEBENSFRAGEN[id] ?? null
+}
+
+export function getAllLebensfragen(): Lebensfrage[] {
+  return Object.values(LEBENSFRAGEN)
 }
 
 export function getLectiosByTableauId(tableauId: string): LectioSummary[] {

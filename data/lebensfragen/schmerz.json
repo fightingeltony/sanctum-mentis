@@ -1,0 +1,87 @@
+{
+  "id": "schmerz",
+  "title": "Was tue ich mit Schmerz?",
+  "anker": "Schmerz ist universal und unausweichlich. Aber wie umgehen mit ihm?",
+  "intro": "Schmerz kommt selten, wann du ihn erwartest. Manchmal sitzt du gerade beim Kaffee und etwas zieht sich zusammen — ein Gedanke, eine Erinnerung, ein körperliches Ziehen. Manchmal bleibt es Wochen, manchmal nur Sekunden. Aber wenn er da ist, stellt sich eine Frage, die keine Theorie ganz beantwortet: Was tust du jetzt mit ihm?\n\nNeun Stimmen, neun Antworten. Sie sind sich nicht einig.",
+  "stimmen": [
+    {
+      "aus": {
+        "tableau": "das-selbst",
+        "knoten": "buddhismus"
+      },
+      "ueberschrift": "Buddhismus: Schmerz und Leid sind nicht dasselbe",
+      "text": "Der Schmerz ist da. Das ist die erste Edle Wahrheit. Aber das Leiden, das wir um den Schmerz herum aufbauen, entsteht aus etwas anderem: aus dem Anhaften am Wunsch, dass es nicht so sein möge. Das Leiden ist die Geschichte, die wir uns über den Schmerz erzählen — dass er ungerecht sei, dass er aufhören müsse, dass er uns definiere. Wer den Schmerz als Schmerz erkennt, ohne die zweite Schicht des Widerstands, leidet weniger. Nicht weil der Schmerz verschwindet, sondern weil das Anhaften aufhört."
+    },
+    {
+      "aus": {
+        "tableau": "das-selbst",
+        "knoten": "vedanta"
+      },
+      "ueberschrift": "Vedanta: Du bist nicht, was leidet",
+      "text": "Schmerz betrifft die Hülle — den Körper, die Empfindungen, das Ich-Bewusstsein. Aber das wahre Selbst, der Atman, bleibt davon unberührt. Vedanta lädt nicht ein, den Schmerz zu bekämpfen oder zu transformieren, sondern ihn aus einer anderen Position zu sehen: Du bist nicht der, der leidet. Du bist der unberührte Zeuge, der das Leiden bemerkt. Diese Verschiebung ist keine Verdrängung, sondern eine Disidentifikation. Der Schmerz darf da sein. Aber er ist nicht du."
+    },
+    {
+      "aus": {
+        "tableau": "das-selbst",
+        "knoten": "rohr"
+      },
+      "ueberschrift": "Rohr: Der Schmerz zerbricht das falsche Selbst",
+      "text": "Wir leben lange in einem falschen Selbst — dem Ego, das schützt, vermeidet, kontrolliert, sich identifiziert mit Rollen und Erfolgen. Dieses falsche Selbst lässt sich nicht durch Einsicht überwinden. Es lässt sich nur durch Leid zerbrechen. Schmerz ist für Rohr nicht Illusion, sondern Tür: Was du verlierst, wenn du leidest, war ohnehin nicht dein wahres Selbst. Erst durch das Hindurchgehen — nicht das Umgehen — wird sichtbar, wer du unter dem Ego bist. Das ist eine harte Lehre, aber eine ehrliche."
+    },
+    {
+      "aus": {
+        "tableau": "das-selbst",
+        "knoten": "adler"
+      },
+      "ueberschrift": "Adler: Wozu dient dir der Schmerz?",
+      "text": "Adlers Frage ist unbequem: Welche Funktion hat dein Schmerz in deinem Lebensstil? Kein Mensch ist nur Opfer seines Leidens — wir nutzen es, oft unbewusst. Schmerz kann uns vor Anforderungen schützen, eine Identität geben, Beziehungen organisieren, Aufmerksamkeit binden. Das ist keine Schuldzuweisung. Es ist eine Einladung, ehrlich zu fragen: Was würde wegfallen, wenn der Schmerz weg wäre? Wer wäre ich dann? Wer Schmerz so anschaut, gewinnt Handlungsspielraum, wo vorher nur Zustand war."
+    },
+    {
+      "aus": {
+        "tableau": "das-selbst",
+        "knoten": "ifs"
+      },
+      "ueberschrift": "IFS: Ein Anteil in dir trägt den Schmerz",
+      "text": "Du bist nicht der Schmerz, und der Schmerz ist nicht alles in dir. Im Inneren leben viele Anteile. Einer trägt den ursprünglichen Schmerz — IFS nennt ihn einen Verbannten. Ein anderer beschützt dich davor, ihn zu fühlen — ein Manager, der ablenkt, oder ein Feuerwehrmann, der betäubt. Heilung beginnt, wenn das Self mit großem S — das Zentrum aus Klarheit und Mitgefühl, das du auch bist — mit dem leidenden Anteil in Kontakt tritt. Nicht reparieren, nicht wegschicken. Hören, was er zu sagen hat. Anwesend sein bei dem, was du sonst meidest."
+    },
+    {
+      "aus": {
+        "tableau": "existenzialismus",
+        "knoten": "frankl"
+      },
+      "ueberschrift": "Frankl: Schmerz kann Sinn tragen",
+      "text": "Du kannst nicht immer wählen, was dir geschieht. Aber du kannst wählen, wie du dazu stehst. Diese letzte Freiheit — die innere Haltung — kann auch der Schmerz nicht nehmen. Frankl fragt nicht: Warum trifft dich der Schmerz? Sondern: Wozu fordert er dich jetzt heraus? Schmerz wird nicht erträglicher dadurch, dass er Sinn hat. Aber er wird zu etwas, das du nicht nur erleidest, sondern in dem du dich verhältst. Das ist keine billige Sinngebung — das ist die strenge Einladung, Subjekt zu bleiben, auch im Leiden."
+    },
+    {
+      "aus": {
+        "tableau": "existenzialismus",
+        "knoten": "camus"
+      },
+      "ueberschrift": "Camus: Vielleicht hat der Schmerz keinen Sinn",
+      "text": "Was, wenn der Schmerz keinen Sinn trägt? Was, wenn er einfach da ist, ohne dass eine Geschichte ihn rechtfertigt? Camus weigert sich, die Welt schöner zu machen, als sie ist. Sein Sisyphos kennt den Schmerz, kennt die Sinnlosigkeit, und entscheidet sich trotzdem für das Leben. Nicht weil das Leben Sinn hat, sondern weil die Bejahung selbst eine Antwort ist. Das ist die strengste Position dieser Sammlung: Sie verlangt, das Leiden zu sehen, ohne es zu übersetzen — und trotzdem zu leben."
+    },
+    {
+      "aus": {
+        "tableau": "existenzialismus",
+        "knoten": "buber"
+      },
+      "ueberschrift": "Buber: Der Schmerz wird anders im Du",
+      "text": "Alleiner Schmerz und geteilter Schmerz sind nicht dasselbe. Buber denkt nicht über Schmerz selbst nach, sondern über das, was zwischen Menschen geschieht. Wenn ein anderer Mensch wirklich da ist — nicht nur körperlich, sondern als Du, das mit dir mitträgt — verändert sich der Schmerz. Er hört nicht auf. Aber er ist nicht mehr nur deiner. Buber sagt nicht: Erzähle deinen Schmerz, damit du ihn loswirst. Er sagt: Der Schmerz, der von einem Du gehört wird, ist ein anderer Schmerz."
+    },
+    {
+      "aus": {
+        "tableau": "ethik",
+        "knoten": "marc-aurel"
+      },
+      "ueberschrift": "Marc Aurel: Trenne das Ereignis vom Urteil",
+      "text": "Etwas geschieht. Du leidest. Das sind zwei Dinge, sagt der Stoiker. Das Ereignis liegt nicht in deiner Macht. Aber das Urteil, das du darüber fällst — dass es schlimm sei, dass es nicht hätte sein dürfen, dass es dich kaputtmacht — das liegt in deiner Macht. Marc Aurel schreibt sich diese Trennung immer wieder in seine Selbstgespräche, weil sie nicht selbstverständlich ist. Es ist eine Übung, kein Zustand. Was du dem Ereignis hinzufügst, kannst du auch wieder abziehen — wenn du es nur als das siehst, was es ist."
+    }
+  ],
+  "schluss": "Neun Antworten, und sie sind sich nicht einig. Vedanta und Rohr stehen sich gegenüber, Frankl und Camus stehen sich gegenüber, Adler und IFS fragen das Gegenteil voneinander. Diese Spannungen sind nicht zu lösen.\n\nVielleicht trägt dich gerade eine dieser Stimmen mehr als die anderen. Vielleicht ändert sich das mit den Jahren. Vielleicht widerspricht dir alles, was du gelesen hast — und du findest deine Antwort genau dort, wo du widersprichst.",
+  "kuratiert": "2026-05-26",
+  "kuratiert_aus_tableaus": [
+    "das-selbst",
+    "existenzialismus",
+    "ethik"
+  ]
+}

@@ -148,6 +148,7 @@ export interface LevelState {
 export interface LectioStep {
   nodeId: string | string[];
   nodeType: 'thinker' | 'concept' | 'school';
+  brief?: string;
   transition: string;
 }
 
@@ -173,4 +174,31 @@ export interface LectioSummary {
   focus: string;
   estimated_minutes: number;
   stationCount: number;
+}
+
+// ─── Lebensfragen Types ──────────────────────────────────────
+
+/** Herkunft einer Stimme in einer Lebensfrage */
+export interface LebensfragQuelle {
+  tableau: string;
+  knoten: string;
+}
+
+/** Eine Stimme in einer Lebensfrage */
+export interface LebensfrageStimme {
+  aus: LebensfragQuelle;
+  ueberschrift: string;
+  text: string;
+}
+
+/** Tableau-übergreifende Stimmen-Sammlung zu einer konkreten Lebensfrage */
+export interface Lebensfrage {
+  id: string;
+  title: string;
+  anker: string;
+  intro: string;
+  stimmen: LebensfrageStimme[];
+  schluss: string;
+  kuratiert: string;
+  kuratiert_aus_tableaus: string[];
 }
