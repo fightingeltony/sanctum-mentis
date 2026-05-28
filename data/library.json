@@ -6,6 +6,7 @@
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.42 0.12 295)",
     "status": "available",
+    "spur": "erkenntnis",
     "desc": "Von Vedanta bis Karl Friston — wie 3000 Jahre Denken das Ich als Essenz, Struktur, Simulation oder Fluss begreifen.",
     "tags": ["Identität", "Bewusstsein", "Neurowissenschaft", "Spiritualität"]
   },
@@ -16,6 +17,7 @@
     "era": "17. Jh. – Gegenwart",
     "themeColor": "oklch(0.44 0.13 240)",
     "status": "available",
+    "spur": "erkenntnis",
     "desc": "Von Descartes' Ghost in the Machine bis Chalmers' Hard Problem — die zentralen Positionen zur Frage, ob und wie Materie denkt und fühlt.",
     "tags": ["Bewusstsein", "Qualia", "Dualismus", "Kognitionswissenschaft"]
   },
@@ -26,6 +28,7 @@
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.42 0.11 165)",
     "status": "available",
+    "spur": "erkenntnis",
     "desc": "Von Aristoteles bis Markus Gabriel — wie Denker durch die Jahrhunderte stritten, ob die Welt unabhängig von uns existiert oder immer schon unsere Konstruktion ist.",
     "tags": ["Erkenntnistheorie", "Realismus", "Konstruktivismus", "Wissenschaftsphilosophie"]
   },
@@ -36,6 +39,7 @@
     "era": "19. Jh. – Gegenwart",
     "themeColor": "oklch(0.42 0.10 45)",
     "status": "available",
+    "spur": "existenz",
     "desc": "Von Kierkegaard bis Camus — wie man lebt, wenn nichts vorgegeben ist und der Sinn nicht gefunden, sondern gemacht werden muss.",
     "tags": ["Freiheit", "Sinn", "Angst", "Absurdität"]
   },
@@ -46,6 +50,7 @@
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.44 0.12 128)",
     "status": "available",
+    "spur": "handlung",
     "desc": "Von Hobbes' Leviathan bis Rawls' Schleier des Nichtwissens — und den Stimmen, die fragen, ob Herrschaft überhaupt das Zentrum der Politik ist.",
     "tags": ["Vertrag", "Gerechtigkeit", "Freiheit", "Macht"]
   },
@@ -56,6 +61,7 @@
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.45 0.12 100)",
     "status": "available",
+    "spur": "handlung",
     "desc": "Tugendethik, Deontologie, Konsequentialismus — und ihre modernen Varianten.",
     "tags": ["Tugend", "Pflicht", "Folgen"]
   }
