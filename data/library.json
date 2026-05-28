@@ -1,81 +1,62 @@
 [
   {
-    "id": "philosophie-des-geistes",
-    "title": "Philosophie des Geistes",
-    "subtitle": "Das Rätsel im Kopf — Wo wird aus Materie eigentlich Gefühl?",
-    "era": "17. Jh. – Gegenwart",
-    "themeColor": "oklch(0.44 0.13 250)",
-    "status": "available",
-    "spur": "erkenntnis",
-    "desc": "Von Descartes' Ghost in the Machine bis Chalmers' Hard Problem — die zentralen Positionen zur Frage, ob und wie Materie denkt und fühlt.",
-    "tags": [
-      "Bewusstsein",
-      "Qualia",
-      "Dualismus",
-      "Kognitionswissenschaft"
-    ]
-  },
-  {
     "id": "das-selbst",
     "title": "Die Landkarte des Selbst",
     "subtitle": "Die Suche nach dem Kern — Wer bist du, wenn du alles weglässt?",
     "era": "Antike – Gegenwart",
-    "themeColor": "oklch(0.42 0.12 290)",
+    "themeColor": "oklch(0.42 0.12 295)",
     "status": "available",
-    "spur": "erkenntnis",
     "desc": "Von Vedanta bis Karl Friston — wie 3000 Jahre Denken das Ich als Essenz, Struktur, Simulation oder Fluss begreifen.",
-    "tags": [
-      "Identität",
-      "Bewusstsein",
-      "Neurowissenschaft",
-      "Spiritualität"
-    ]
+    "tags": ["Identität", "Bewusstsein", "Neurowissenschaft", "Spiritualität"]
+  },
+  {
+    "id": "philosophie-des-geistes",
+    "title": "Philosophie des Geistes",
+    "subtitle": "Das Rätsel im Kopf — Wo wird aus Materie eigentlich Gefühl?",
+    "era": "17. Jh. – Gegenwart",
+    "themeColor": "oklch(0.44 0.13 240)",
+    "status": "available",
+    "desc": "Von Descartes' Ghost in the Machine bis Chalmers' Hard Problem — die zentralen Positionen zur Frage, ob und wie Materie denkt und fühlt.",
+    "tags": ["Bewusstsein", "Qualia", "Dualismus", "Kognitionswissenschaft"]
   },
   {
     "id": "realismus-und-konstruktivismus",
     "title": "Realismus und Konstruktivismus",
     "subtitle": "Wo endet die Welt und wo beginnst du?",
     "era": "Antike – Gegenwart",
-    "themeColor": "oklch(0.42 0.12 220)",
+    "themeColor": "oklch(0.42 0.11 165)",
     "status": "available",
-    "spur": "erkenntnis",
     "desc": "Von Aristoteles bis Markus Gabriel — wie Denker durch die Jahrhunderte stritten, ob die Welt unabhängig von uns existiert oder immer schon unsere Konstruktion ist.",
-    "tags": [
-      "Erkenntnistheorie",
-      "Realismus",
-      "Konstruktivismus",
-      "Wissenschaftsphilosophie"
-    ]
+    "tags": ["Erkenntnistheorie", "Realismus", "Konstruktivismus", "Wissenschaftsphilosophie"]
+  },
+  {
+    "id": "existenzialismus",
+    "title": "Existenzialismus",
+    "subtitle": "Was tust du mit deiner Freiheit, wenn niemand dir sagt, was sie soll?",
+    "era": "19. Jh. – Gegenwart",
+    "themeColor": "oklch(0.42 0.10 45)",
+    "status": "available",
+    "desc": "Von Kierkegaard bis Camus — wie man lebt, wenn nichts vorgegeben ist und der Sinn nicht gefunden, sondern gemacht werden muss.",
+    "tags": ["Freiheit", "Sinn", "Angst", "Absurdität"]
+  },
+  {
+    "id": "politische-philosophie",
+    "title": "Politische Philosophie",
+    "subtitle": "Woher nimmt Herrschaft ihr Recht?",
+    "era": "Antike – Gegenwart",
+    "themeColor": "oklch(0.44 0.12 128)",
+    "status": "available",
+    "desc": "Von Hobbes' Leviathan bis Rawls' Schleier des Nichtwissens — und den Stimmen, die fragen, ob Herrschaft überhaupt das Zentrum der Politik ist.",
+    "tags": ["Vertrag", "Gerechtigkeit", "Freiheit", "Macht"]
   },
   {
     "id": "ethik",
     "title": "Ethik",
     "subtitle": "Das Gewicht deiner Freiheit.",
     "era": "Antike – Gegenwart",
-    "themeColor": "oklch(0.45 0.12  25)",
+    "themeColor": "oklch(0.45 0.12 100)",
     "status": "available",
-    "spur": "handlung",
     "desc": "Tugendethik, Deontologie, Konsequentialismus — und ihre modernen Varianten.",
-    "tags": [
-      "Tugend",
-      "Pflicht",
-      "Folgen"
-    ]
-  },
-  {
-    "id": "existenzialismus",
-    "title": "Existenzialismus",
-    "subtitle": "Wenn nichts mehr vorgegeben ist — was tust du mit deiner Freiheit?",
-    "era": "19.–20. Jahrhundert",
-    "themeColor": "oklch(0.42 0.11 130)",
-    "status": "available",
-    "spur": "existenz",
-    "desc": "Von Kierkegaard bis Frankl — Denker, die die Lage des Menschen ohne Vorgabe ernst genommen haben. Mit gegensätzlichen Antworten: Sinn machen, Sinn finden, das Sinnlose bejahen.",
-    "tags": [
-      "Freiheit",
-      "Sinn",
-      "Angst",
-      "Lebensphilosophie"
-    ]
+    "tags": ["Tugend", "Pflicht", "Folgen"]
   }
 ]

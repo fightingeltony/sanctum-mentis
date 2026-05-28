@@ -4,12 +4,14 @@ import philosophieDesGeistesRaw            from '../../data/philosophie-des-geis
 import realismusUndKonstruktivismusRaw     from '../../data/realismus-und-konstruktivismus.json'
 import ethikRaw                            from '../../data/ethik.json'
 import existenzialismusRaw                 from '../../data/existenzialismus.json'
+import politischePhilosophieRaw            from '../../data/politische-philosophie.json'
 import libraryRaw                          from '../../data/library.json'
 import hardProblemRaw                      from '../../data/lectio/hard-problem.json'
 import werBeobachtetRaw                    from '../../data/lectio/wer-beobachtet.json'
 import wennDieWeltWackeltRaw               from '../../data/lectio/wenn-die-welt-wackelt.json'
 import warumSollstDuRaw                    from '../../data/lectio/warum-sollst-du.json'
 import wennNichtsVorgegebenRaw             from '../../data/lectio/wenn-nichts-vorgegeben.json'
+import warumGehorchstDuRaw                from '../../data/lectio/warum-gehorchst-du.json'
 import findestDuOderMachstDuRaw            from '../../data/lectio/findest-du-oder-machst-du.json'
 import schmerzRaw                          from '../../data/lebensfragen/schmerz.json'
 
@@ -19,6 +21,7 @@ const TOPICS: Record<string, TopicData> = {
   'realismus-und-konstruktivismus':   realismusUndKonstruktivismusRaw as unknown as TopicData,
   'ethik':                            ethikRaw                        as unknown as TopicData,
   'existenzialismus':                 existenzialismusRaw             as unknown as TopicData,
+  'politische-philosophie':           politischePhilosophieRaw        as unknown as TopicData,
 }
 
 export function getTopic(id: string): TopicData | null {
@@ -51,6 +54,7 @@ const LECTIOS: Record<string, Lectio> = {
   'wenn-die-welt-wackelt': wennDieWeltWackeltRaw   as unknown as Lectio,
   'warum-sollst-du':       warumSollstDuRaw        as unknown as Lectio,
   'wenn-nichts-vorgegeben':       wennNichtsVorgegebenRaw       as unknown as Lectio,
+  'warum-gehorchst-du':          warumGehorchstDuRaw           as unknown as Lectio,
   'findest-du-oder-machst-du':   findestDuOderMachstDuRaw      as unknown as Lectio,
 }
 

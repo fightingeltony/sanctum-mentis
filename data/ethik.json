@@ -5,8 +5,8 @@
     "subtitle": "Das Gewicht deiner Freiheit.",
     "intro": "Was sollst du tun, wenn es keine einfache Antwort gibt?",
     "theme": {
-      "accent": "oklch(0.45 0.12  25)",
-      "accentSoft": "oklch(0.45 0.12  25 / 0.15)"
+      "accent": "oklch(0.45 0.12 100)",
+      "accentSoft": "oklch(0.45 0.12 100 / 0.15)"
     },
     "complexityLevels": 5,
     "quadrants": {

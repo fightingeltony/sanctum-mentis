@@ -472,6 +472,25 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Begleitnotiz:** 5 Lessons + 5 neue Backlog-Items (Farb-Architektur, Cross-Reference PP, 3 Methoden-Klarstellungen).
 ---
 
+### [ ] Quellen der Erkenntnis (Arbeitstitel)
+**Status:** Skizze 27.5.26
+**Anker:** "Welcher meiner Quellen darf ich glauben?" — die lebensweltliche Erkenntnisfrage. Nicht akademisch-abstrakt (das ist Realismus/Konstruktivismus), sondern als persönliche Frage: Vertraue ich dem Verstand, dem Bauch, dem Input von außen? Vier Dimensionen: epistemisch (Urteile über die Welt), intuitiv (Bauchgefühl), moralisch (ethische Entscheidungen), introspektiv (Selbstwahrnehmung).
+**Kuratorische Position (27.5.26):** "Ich würde nachdenken, das Bauchgefühl aber versuchen miteinzubeziehen." — eine gewichtete Doppelbewegung: Verstand zuerst, Bauch bewusst dazu. Dieser Anker ist der Ausgangspunkt, von dem aus das Tableau gebaut werden kann.
+**Achsen-Skizze (drei Alternativen, noch offen):**
+- Skizze 1: X = Innen (Intuition/Gefühl) ↔ Außen (Input/Logik) · Y = Selbstbezug (Wer bin ich?) ↔ Weltbezug (Was ist wahr?) — Stichprobentest zeigt: Y nicht trennscharf, viele Denker haben eine Theorie, die beides erklärt
+- Skizze 2: X = Innen ↔ Außen · Y = Vertrauen (Quelle verlässlich) ↔ Skepsis (Quelle täuscht) — möglicherweise trennschärfer
+- Skizze 3: X = Innen ↔ Außen · Y = Methode (aktives Erkennen) ↔ Geschehen (empfangenes Wissen)
+**Mögliche Denker:** Descartes (cogito, Innen-Selbst), Hume (Empirismus, Außen), Locke (tabula rasa), Kant (Vermittlung), Husserl (Phänomenologie, Innen-Welt), Wittgenstein (öffentliche Kriterien, Außen), Damasio (somatische Marker, Innen), Gigerenzer (Heuristiken), Jung (Individuation, Innen-Selbst), Hood (Selbst als Illusion, Skepsis), Pyrrhon/Sextus Empiricus (antike Skepsis), William James (Pragmatismus) — Auswahl beim Bau verdichten.
+**Abgrenzung:** Lebensweltlich-persönlich (welchen meiner Quellen traue ich?) vs. Realismus/Konstruktivismus (akademisch-ontologisch: was ist real?). Knotenüberschneidungen (Hume, Kant) über Cross-Reference, nicht dopppeln.
+**Verhältnis zu anderen Tableaus:** Erkenntnis-Spur. Überlappt mit Realismus, peripher mit Selbst (Introspektion) und Geist (First/Third-Person).
+**Offene Voraussetzungen vor Bau:**
+- Y-Achse entscheiden — Skizze 2 oder 3 nach Stichprobentest mit den Hauptdenkern
+- Akademisch oder lebensweltlich klären: philosophische Tradition (Hume, Kant, Husserl) oder praktische Frage (Bauchgefühl, Intuition, Heuristiken) — beides ohne Spannung geht nicht
+**Modus:** Zu prüfen, eventuell volle Schleife wegen persönlicher Ankerhärte.
+**Nächster Schritt:** Y-Achse per Stichprobentest entscheiden, dann Bau-Entscheidung treffen.
+
+---
+
 ### [ ] Stoizismus
 **Status:** Idee, früher in Konversation erwähnt
 **Anker:** unklar

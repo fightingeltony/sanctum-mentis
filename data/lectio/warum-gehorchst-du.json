@@ -1,0 +1,39 @@
+{
+  "id": "warum-gehorchst-du",
+  "tableauId": "politische-philosophie",
+  "title": "Warum gehorchst du?",
+  "focus": "Die Legitimitätsfrage von der scheinbar sichersten Antwort bis zu ihrem Zusammenbruch",
+  "thesis": "Die Antwort ›weil ich zugestimmt habe‹ klingt sicher — und wird mit jedem Schritt unsicherer, bis die Frage selbst fraglich wird.",
+  "level": 3,
+  "estimated_minutes": 16,
+  "intro": "Du stehst an einer roten Ampel, nachts, keine Autos weit und breit. Du bleibst stehen. Warum eigentlich? Diese kleine Geste ist die ganze politische Philosophie in Kurzform: Warum fügst du dich einer Ordnung, die in diesem Moment niemand durchsetzt? Die naheliegendste Antwort lautet: weil ich, auf irgendeine Weise, zugestimmt habe. Diese Lectio nimmt diese Antwort ernst — und folgt ihr so weit, bis sich zeigt, ob sie trägt.",
+  "path": [
+    {
+      "nodeId": "hobbes",
+      "nodeType": "thinker",
+      "transition": "Hobbes gibt die erste, härteste Version der Antwort: Du gehorchst, weil die Alternative der Krieg aller gegen alle ist. Zustimmung ist hier kein freier Akt, sondern die Wahl des Erträglichen vor dem Unerträglichen. Halt einen Moment inne bei dem, was das kostet — die Ordnung ist gesichert, aber der Souverän, dem du zugestimmt hast, steht von nun an über dir. Kann eine einmalige Zustimmung dich für immer binden?"
+    },
+    {
+      "nodeId": "locke",
+      "nodeType": "thinker",
+      "transition": "Locke baut die Tür ein, die Hobbes verschlossen hatte: Du hast zugestimmt, aber unter Bedingungen — und wenn die Macht ihren Teil bricht, darfst du den deinen aufkündigen. Das fühlt sich freier an, sicherer. Aber sieh genau hin: Wann genau hast du zugestimmt? Du wurdest in deinen Staat hineingeboren, nicht in ihn aufgenommen. Wo ist der Vertrag, den du unterschrieben hast?"
+    },
+    {
+      "nodeId": "gesellschaftsvertrag",
+      "nodeType": "concept",
+      "transition": "Hier wird die Antwort, mit der wir begonnen haben, zum ersten Mal brüchig. Der Vertrag, auf den sich alles stützt, ist von niemandem unterschrieben worden. Man rettet ihn, indem man ihn ›stillschweigend‹ nennt oder ›hypothetisch‹ — aber beide Rettungen geben etwas zu: Die Zustimmung, die deine Ampel-Geste begründen sollte, ist eine Konstruktion, kein Ereignis. Was, wenn unter der Zustimmung etwas anderes liegt?"
+    },
+    {
+      "nodeId": "schmitt",
+      "nodeType": "thinker",
+      "transition": "Schmitt ist der unbequemste Moment dieses Pfades, und er soll unbequem bleiben. Er sagt: Unter all den Verfahren und Verträgen liegt am Ende eine Entscheidung, die selbst nicht mehr begründet ist — jemand setzt fest, was gilt. Du musst ihm nicht folgen; wohin sein Denken historisch geführt hat, steht als Warnung daneben. Aber spür den Riss, den er aufreißt: Wenn die Zustimmung eine Konstruktion war und darunter bloß eine Entscheidung liegt — war ›weil ich zugestimmt habe‹ je die wahre Antwort?"
+    },
+    {
+      "nodeId": "arendt",
+      "nodeType": "thinker",
+      "transition": "Arendt tritt einen Schritt zurück und stellt eine andere Frage. Vielleicht, sagt sie, war ›Warum gehorchst du?‹ von Anfang an die falsche Frage. Sie unterstellt, Politik sei im Kern Befehl und Gehorsam. Aber was, wenn das gar nicht das Zentrum ist — wenn Politik das gemeinsame Handeln unter Gleichen meint, und Macht etwas ist, das zwischen Menschen entsteht, nicht über sie verhängt wird? Das ist keine bessere Antwort auf unsere Frage. Es ist der Verdacht, dass wir die ganze Zeit das Falsche gefragt haben."
+    }
+  ],
+  "closing_synthesis": "Fünf Stationen, und die Antwort, mit der wir begannen, hat sich aufgelöst. Hobbes gründet den Gehorsam in der Angst, Locke gibt ihm ein Rückgaberecht — aber der Vertrag, auf dem beide ruhen, erweist sich als etwas, das niemand je geschlossen hat. Schmitt zeigt, was darunter liegen könnte: nicht Zustimmung, sondern Entscheidung. Und Arendt fragt am Ende, ob ›Gehorsam‹ überhaupt der richtige Boden war, um Politik zu verstehen. Was diese Lectio dir zurücklässt, ist keine Begründung für dein Stehenbleiben an der roten Ampel. Es ist die Einsicht, dass die sicherste Antwort die brüchigste war — und dass die interessantere Bewegung vielleicht nicht im Beantworten, sondern im Umstellen der Frage liegt. Du musst Arendt nicht folgen. Aber du hast die Möglichkeit gesehen.",
+  "closing_question": "Denk noch einmal an die rote Ampel in der leeren Nacht. Du bleibst stehen — folgst du in diesem Moment einer Ordnung, der du zugestimmt hast? Gehorchst du einer Macht, die über dir steht? Oder tust du etwas, das mit beidem wenig zu tun hat — und für das wir noch kaum die Worte haben?"
+}
