@@ -50,10 +50,10 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
           </div>
           <p className="font-ui text-[11px] tracking-[0.04em]" style={{ color: 'var(--fg-faint)' }}>
             <Link
-              href="/lebensfragen/schmerz"
+              href="/lebensfragen"
               className="no-underline hover:text-[--fg-muted] transition-colors"
             >
-              Lebensfragen (im Aufbau): Was tue ich mit Schmerz?
+              Lebensfragen
             </Link>
           </p>
         </div>
