@@ -40,18 +40,6 @@ export default function LandingPage() {
           Bibliothek öffnen
           <span aria-hidden>→</span>
         </Link>
-        <Link
-          href="/lebensfragen"
-          className="inline-flex items-center gap-2 px-5 py-3 border font-ui text-[12px] tracking-[0.18em] uppercase
-            no-underline transition-colors"
-          style={{
-            color: 'var(--accent)',
-            borderColor: 'var(--accent)',
-          }}
-        >
-          Lebensfragen
-          <span aria-hidden>→</span>
-        </Link>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-10 border-t border-[--hairline]">
@@ -141,8 +129,50 @@ export default function LandingPage() {
         </div>
 
         <p className="font-body italic text-[12px] text-[--fg-faint] mt-5">
-          Komplementär, nicht alternativ.
+          Beide führen durch ein Thema — komplementär, nicht alternativ.
         </p>
+      </div>
+
+      {/* ── Und ein Weg quer hindurch ── */}
+      <div className="mt-16 pt-10 border-t border-[--hairline]">
+        <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-[--fg] mb-2">
+          Ein Weg quer hindurch
+        </h2>
+        <p className="font-body italic text-[15px] text-[--fg-muted] mb-8 max-w-[52ch]">
+          Manche Fragen überschreiten ein einzelnes Thema.
+        </p>
+
+        <div
+          className="rounded px-5 pt-5 pb-6 flex flex-col gap-4 max-w-[480px]"
+          style={{ background: 'var(--bg-raised)', border: '1px solid var(--hairline)' }}
+        >
+          <svg
+            width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"
+            style={{ color: 'currentColor' }}
+          >
+            <line x1="4" y1="16" x2="28" y2="16" stroke="currentColor" strokeOpacity="0.18" />
+            <circle cx="8"  cy="16" r="2"   fill="currentColor" fillOpacity="0.55" />
+            <circle cx="16" cy="10" r="2"   fill="currentColor" fillOpacity="0.45" />
+            <circle cx="16" cy="22" r="2"   fill="currentColor" fillOpacity="0.45" />
+            <circle cx="24" cy="16" r="2"   fill="currentColor" fillOpacity="0.35" />
+          </svg>
+          <div>
+            <h3 className="font-prose font-medium text-[14px] text-[--fg] mb-2">Die Lebensfrage</h3>
+            <p className="font-body text-[13px] text-[--fg-muted] leading-relaxed">
+              Karte und Lectio bleiben innerhalb eines Feldes. Manche Fragen aber gehören
+              keinem Feld allein — sie ziehen quer durch die Bibliothek. Eine gelebte Situation
+              — Schmerz, Tod, Freiheit — beleuchtet durch Stimmen aus verschiedenen Feldern.
+            </p>
+          </div>
+          <Link
+            href="/lebensfragen"
+            className="self-start inline-flex items-center gap-2 font-ui text-[11px] tracking-[0.18em] uppercase no-underline"
+            style={{ color: 'var(--accent)' }}
+          >
+            Lebensfragen öffnen
+            <span aria-hidden>→</span>
+          </Link>
+        </div>
       </div>
 
     </section>

@@ -233,6 +233,50 @@ Subtitle und Intro sprechen einheitlich **"du"**. Das gewinnt an Direktheit. Die
 
 ---
 
+## Tableau / Lectio / Lebensfrage — die drei Formen (Kanon)
+
+> **Kanonische Definition.** Dieser Block ist wortgleich in `bibliothek-architektur.md`, `prompts/lectio-mode.md` und `prompts/mild-mode.md` hinterlegt. Änderungen an einer Stelle müssen in allen drei nachgezogen werden — es gibt nur eine Quelle der Wahrheit.
+
+Sanctum kennt drei Formen, in denen Wissen zugänglich wird. Sie sind nicht drei gleichrangige Geschwister nebeneinander, sondern unterscheiden sich in **Reichweite** und **Wohnort**. Wer eine neue Form baut, muss wissen, welche davon er gerade bedient.
+
+### Tableau — die Fläche
+
+Das Tableau ist die **Karte eines Feldes**. Alle Stimmen eines Themas gleichzeitig sichtbar, räumlich angeordnet, selbstgesteuert begehbar. Es behauptet keinen Pfad — es zeigt das ganze Feld und überlässt dem Nutzer, wohin er geht.
+
+Das Tableau ist die **Quelle, aus der die beiden anderen Formen schöpfen.** Sowohl Lectio als auch Lebensfrage greifen auf Tableau-Knoten zurück; keine von beiden erzeugt eigenes Stimmen-Material.
+
+### Lectio — Tiefe in *einem* Feld
+
+Die Lectio ist eine **kuratierte Sequenz innerhalb eines einzigen Tableaus.** Sie wohnt im Tableau und verlässt es nie. Sie nimmt 4–8 der vorhandenen Knoten und legt sie in eine Reihenfolge, die einen Bogen trägt — vertikal, ein Feld in die Tiefe.
+
+- **Reichweite:** ein Tableau.
+- **Wohnort:** *im* Tableau (Discovery im Tableau-Kopf, Route `/lectio/[id]`). **Nicht** als eigene Top-Level-Form in der Bibliothek sichtbar.
+- **Achse:** Tiefe. Sie fragt nicht „was sagen andere Felder dazu", sondern „wie hängt dieses eine Feld in sich zusammen".
+
+### Lebensfrage — Breite *über* Felder
+
+Die Lebensfrage ist eine **kuratierte Sammlung quer über mehrere Tableaus.** Sie nimmt eine gelebte Situation („Was tue ich mit Schmerz?", „Wie stelle ich mich zum Tod?") und versammelt dazu Stimmen aus verschiedenen Feldern — horizontal, eine Lebenslage aus mehreren Blickwinkeln beleuchtet.
+
+- **Reichweite:** mehrere Tableaus.
+- **Wohnort:** *neben* der Bibliothek (eigener Bereich, Route `/lebensfragen/[id]`). Sichtbar auf Top-Level, weil sie keinem einzelnen Tableau gehört.
+- **Achse:** Breite. Sie fragt nicht „wie hängt ein Feld zusammen", sondern „was haben die Felder dieser einen Lebenslage zu sagen".
+
+### Die Asymmetrie ist die Aussage
+
+| Form | Reichweite | Achse | Wohnort | sichtbar als |
+|---|---|---|---|---|
+| **Tableau** | ein Feld, ganz | Fläche | Bibliothek | Library-Card |
+| **Lectio** | Ausschnitt *eines* Feldes | Tiefe (vertikal) | *im* Tableau | Discovery im Tableau-Kopf |
+| **Lebensfrage** | Ausschnitt *über* Felder | Breite (horizontal) | *neben* der Bibliothek | eigener Bereich |
+
+Lectio ist **Tiefe in einem Feld**, Lebensfrage ist **Breite über Felder**, Tableau ist die **Fläche, aus der beide schöpfen.** Diese drei Sätze sind die kürzeste tragfähige Fassung des Kanons.
+
+Daraus folgt die Bau-Regel: Eine Lectio darf nie Tableau-Grenzen überschreiten (sonst wird sie zur Lebensfrage), und eine Lebensfrage muss mindestens zwei Tableaus berühren (sonst ist sie eine Lectio mit falschem Wohnort). Wer beim Bau merkt, dass eine Lectio nach einem fremden Feld greift, baut in Wahrheit eine Lebensfrage — und umgekehrt.
+
+Für den Tableau-Bau heißt das konkret: Ein im Mild-Modus gebautes Tableau ist die **Fläche**. Beim Bau ist nicht zu planen, welche Lectios oder Lebensfragen später daraus schöpfen — das Tableau muss als ganzes Feld tragen, nicht als Vorrat für spätere Pfade. Umgekehrt gilt die schon dokumentierte Disziplin: Knoten bewusst lebensweltlich anschlussfähig schreiben (vgl. `lectio_brief`- und Reserve-Brief-Konvention), damit Lectio und Lebensfrage später ohne Nachbau andocken können. Die Fläche zuerst — die Pfade finden sich danach.
+
+---
+
 ## Verteilter Mild-Modus (empfohlen, nicht Pflicht)
 
 **Workflow:**

@@ -1,6 +1,6 @@
 # Lectio-Modus — Sanctum-Standard für geführte Pfade
 
-**Status:** Konvention v1, Mai 2026
+**Status:** Konvention v1.9, Mai 2026
 **Anwendungsbereich:** Alle Lectio-Bauten in Sanctum Mentis.
 
 ---
@@ -257,6 +257,48 @@ Eine Sanctum-Lectio darf eine Haltung haben, aber keine Wahrheit verkünden. Die
 
 ---
 
+## Tableau / Lectio / Lebensfrage — die drei Formen (Kanon)
+
+> **Kanonische Definition.** Dieser Block ist wortgleich in `bibliothek-architektur.md`, `prompts/lectio-mode.md` und `prompts/mild-mode.md` hinterlegt. Änderungen an einer Stelle müssen in allen drei nachgezogen werden — es gibt nur eine Quelle der Wahrheit.
+
+Sanctum kennt drei Formen, in denen Wissen zugänglich wird. Sie sind nicht drei gleichrangige Geschwister nebeneinander, sondern unterscheiden sich in **Reichweite** und **Wohnort**. Wer eine neue Form baut, muss wissen, welche davon er gerade bedient.
+
+### Tableau — die Fläche
+
+Das Tableau ist die **Karte eines Feldes**. Alle Stimmen eines Themas gleichzeitig sichtbar, räumlich angeordnet, selbstgesteuert begehbar. Es behauptet keinen Pfad — es zeigt das ganze Feld und überlässt dem Nutzer, wohin er geht.
+
+Das Tableau ist die **Quelle, aus der die beiden anderen Formen schöpfen.** Sowohl Lectio als auch Lebensfrage greifen auf Tableau-Knoten zurück; keine von beiden erzeugt eigenes Stimmen-Material.
+
+### Lectio — Tiefe in *einem* Feld
+
+Die Lectio ist eine **kuratierte Sequenz innerhalb eines einzigen Tableaus.** Sie wohnt im Tableau und verlässt es nie. Sie nimmt 4–8 der vorhandenen Knoten und legt sie in eine Reihenfolge, die einen Bogen trägt — vertikal, ein Feld in die Tiefe.
+
+- **Reichweite:** ein Tableau.
+- **Wohnort:** *im* Tableau (Discovery im Tableau-Kopf, Route `/lectio/[id]`). **Nicht** als eigene Top-Level-Form in der Bibliothek sichtbar.
+- **Achse:** Tiefe. Sie fragt nicht „was sagen andere Felder dazu", sondern „wie hängt dieses eine Feld in sich zusammen".
+
+### Lebensfrage — Breite *über* Felder
+
+Die Lebensfrage ist eine **kuratierte Sammlung quer über mehrere Tableaus.** Sie nimmt eine gelebte Situation („Was tue ich mit Schmerz?", „Wie stelle ich mich zum Tod?") und versammelt dazu Stimmen aus verschiedenen Feldern — horizontal, eine Lebenslage aus mehreren Blickwinkeln beleuchtet.
+
+- **Reichweite:** mehrere Tableaus.
+- **Wohnort:** *neben* der Bibliothek (eigener Bereich, Route `/lebensfragen/[id]`). Sichtbar auf Top-Level, weil sie keinem einzelnen Tableau gehört.
+- **Achse:** Breite. Sie fragt nicht „wie hängt ein Feld zusammen", sondern „was haben die Felder dieser einen Lebenslage zu sagen".
+
+### Die Asymmetrie ist die Aussage
+
+| Form | Reichweite | Achse | Wohnort | sichtbar als |
+|---|---|---|---|---|
+| **Tableau** | ein Feld, ganz | Fläche | Bibliothek | Library-Card |
+| **Lectio** | Ausschnitt *eines* Feldes | Tiefe (vertikal) | *im* Tableau | Discovery im Tableau-Kopf |
+| **Lebensfrage** | Ausschnitt *über* Felder | Breite (horizontal) | *neben* der Bibliothek | eigener Bereich |
+
+Lectio ist **Tiefe in einem Feld**, Lebensfrage ist **Breite über Felder**, Tableau ist die **Fläche, aus der beide schöpfen.** Diese drei Sätze sind die kürzeste tragfähige Fassung des Kanons.
+
+Daraus folgt die Bau-Regel: Eine Lectio darf nie Tableau-Grenzen überschreiten (sonst wird sie zur Lebensfrage), und eine Lebensfrage muss mindestens zwei Tableaus berühren (sonst ist sie eine Lectio mit falschem Wohnort). Wer beim Bau merkt, dass eine Lectio nach einem fremden Feld greift, baut in Wahrheit eine Lebensfrage — und umgekehrt.
+
+---
+
 ## Verhältnis zu anderen Prompts
 
 - `mild-mode.md` — Tableau-Bau. Lectio baut *auf* Tableau-Datensätzen auf, folgt aber eigenen Regeln.
@@ -275,4 +317,5 @@ Eine Sanctum-Lectio darf eine Haltung haben, aber keine Wahrheit verkünden. Die
 - **v1.5 (Mai 2026):** Methodische Revision von Punkt 4 nach Live-Test der Selbst-Lectio. Tableau-Knoten-Texte erzeugen mit der Lectio-Stimme Redundanz, nicht Stilbruch — Lectio-Stimme paraphrasiert den Knoten-Text. Lösung: neues Feld `lectio_brief` (2–3 Sätze, atmosphärisch, dicht) als eigene Knoten-Stimme im Lectio-Modus. Punkt 5 entsprechend angepasst (`level` wird Fallback statt Default). Sektion 4.1 dokumentiert die Revision explizit.
 - **v1.6 (Mai 2026):** Dritter Pfad-Typ aus dem Realismus-Skript: emotional-kumulativ. Stationen kumulieren in einer emotionalen Bewegung (Festigkeit → Erschütterung → Schwindel → Reife), nicht in Argumentation oder Konfrontation. Punkt 9 entsprechend erweitert, mit Konvention zum Schwindel-Indikator in jedem Übergang. Realismus-Skript: vier Übergänge nachgezogen (Berkeley respektvoller, Kuhn mit Schwindel-Indikator, Rorty mit Vokabular-Erfahrung, Closing Synthesis mit klarem Adressaten).
 - **v1.7 (Mai 2026):** Konvention Wortmotiv ergänzt (Gemini-Impuls): emotional-kumulative Lectios tragen einen wiederkehrenden Wortteppich durch den ganzen Bogen, der den Titel als Textur einlöst. Realismus-Skript: Closing Question um Bild "im Schwindel zu stehen" geschärft.
+- **v1.9 (Mai 2026):** Kanon-Block „Tableau / Lectio / Lebensfrage — die drei Formen" aufgenommen (wortgleich in `bibliothek-architektur.md` und `mild-mode.md`). Stellt klar: Lectio ist Tiefe *in einem* Feld und wohnt im Tableau; Lebensfrage ist Breite *über* Felder und wohnt neben der Bibliothek. Bau-Regel ergänzt: Lectio überschreitet nie Tableau-Grenzen.
 - **v1.8 (Mai 2026):** Vierte Schicht aus der Ethik-Lectio. Punkt 9 um Variante "destruktiv-aufbauend" erweitert (Stationen demontieren das Fundament, letzte Station bietet qualitativ anderen Zugang). Punkt 10 neu: Offener Ausgang — Sanctum verkündet keine Wahrheit, kuratorisch stärkste Position darf spürbar sein, aber nicht als finale Antwort markiert werden. Phänomenologische statt ontologische Formulierungen. Diese Konvention betrifft alle Pfad-Typen, wurde aber bei Ethik sichtbar, weil Levinas eine attraktive Lösung anbietet. Ethik-Skript entsprechend an drei Stellen geöffnet: Thesis, Intro, Closing Synthesis.
