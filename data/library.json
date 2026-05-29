@@ -55,6 +55,17 @@
     "tags": ["Vertrag", "Gerechtigkeit", "Freiheit", "Macht"]
   },
   {
+    "id": "lebenskunst",
+    "title": "Lebenskunst",
+    "subtitle": "Die Kunst, gut zu leben — wann gelingt dir dein Leben?",
+    "era": "Antike – Gegenwart",
+    "themeColor": "oklch(0.45 0.11 65)",
+    "status": "available",
+    "spur": "existenz",
+    "desc": "Von Epikurs Garten bis zur Flow-Forschung — wie die großen Schulen das gelingende Leben dachten: Lust oder Tugend, Rückzug oder Tätigkeit.",
+    "tags": ["Glück", "Stoa", "Epikur", "gutes Leben"]
+  },
+  {
     "id": "ethik",
     "title": "Ethik",
     "subtitle": "Das Gewicht deiner Freiheit.",

@@ -5,6 +5,7 @@ import realismusUndKonstruktivismusRaw     from '../../data/realismus-und-konstr
 import ethikRaw                            from '../../data/ethik.json'
 import existenzialismusRaw                 from '../../data/existenzialismus.json'
 import politischePhilosophieRaw            from '../../data/politische-philosophie.json'
+import lebenskunstRaw                      from '../../data/lebenskunst.json'
 import libraryRaw                          from '../../data/library.json'
 import hardProblemRaw                      from '../../data/lectio/hard-problem.json'
 import werBeobachtetRaw                    from '../../data/lectio/wer-beobachtet.json'
@@ -14,6 +15,7 @@ import wennNichtsVorgegebenRaw             from '../../data/lectio/wenn-nichts-v
 import warumGehorchstDuRaw                from '../../data/lectio/warum-gehorchst-du.json'
 import findestDuOderMachstDuRaw            from '../../data/lectio/findest-du-oder-machst-du.json'
 import schmerzRaw                          from '../../data/lebensfragen/schmerz.json'
+import todRaw                              from '../../data/lebensfragen/tod.json'
 
 const TOPICS: Record<string, TopicData> = {
   'das-selbst':                       dasSelbstRaw                    as unknown as TopicData,
@@ -22,6 +24,7 @@ const TOPICS: Record<string, TopicData> = {
   'ethik':                            ethikRaw                        as unknown as TopicData,
   'existenzialismus':                 existenzialismusRaw             as unknown as TopicData,
   'politische-philosophie':           politischePhilosophieRaw        as unknown as TopicData,
+  'lebenskunst':                      lebenskunstRaw                  as unknown as TopicData,
 }
 
 export function getTopic(id: string): TopicData | null {
@@ -70,6 +73,7 @@ export function getLectioIds(): string[] {
 
 const LEBENSFRAGEN: Record<string, Lebensfrage> = {
   'schmerz': schmerzRaw as unknown as Lebensfrage,
+  'tod':     todRaw     as unknown as Lebensfrage,
 }
 
 export function getLebensfrage(id: string): Lebensfrage | null {

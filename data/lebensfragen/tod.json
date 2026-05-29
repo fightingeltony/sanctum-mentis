@@ -1,0 +1,61 @@
+{
+  "id": "tod",
+  "title": "Wie begegne ich dem Tod?",
+  "anker": "Der Tod ist gewiss und seine Stunde ungewiss. Wie begegnest du dem, was du nicht abwenden kannst?",
+  "intro": "Du verschiebst etwas auf nächstes Jahr. Du sagst ›später‹, ›irgendwann‹, ›wenn mehr Zeit ist‹. Und für einen Moment, den du sofort wieder wegschiebst, weißt du: Dieses Später ist nicht garantiert. Niemand hat dir versprochen, dass du das Buch zu Ende liest, das du gerade angefangen hast. Der Tod ist die eine Tatsache, an der keine Theorie vorbeikommt — und die Frage ist nicht, ob er kommt, sondern was du mit dem Wissen darum machst, solange du lebst.\n\nNeun Stimmen, neun Haltungen. Sie reichen vom Achselzucken bis zur Ehrfurcht — und sie sind sich nicht einig.",
+  "stimmen": [
+    {
+      "aus": { "tableau": "lebenskunst", "knoten": "epikur" },
+      "ueberschrift": "Epikur: Der Tod geht dich nichts an",
+      "text": "Der Tod, sagt Epikur, ist für uns ein Nichts. Solange du da bist, ist er nicht da; sobald er da ist, bist du nicht mehr. Es gibt also keinen einzigen Moment, in dem du deinem eigenen Tod tatsächlich begegnest — du erlebst ihn nie. Warum dann die Angst? Sie richtet sich auf etwas, das dir nie widerfahren wird. Epikur will dir nicht den Ernst nehmen, sondern die Furcht: Wer begreift, dass der Tod kein Erlebnis ist, gewinnt die Ruhe zurück, das Leben zu leben, das er hat. Das ist die nüchternste Stimme dieser Sammlung — und vielleicht die befreiendste."
+    },
+    {
+      "aus": { "tableau": "ethik", "knoten": "marc-aurel" },
+      "ueberschrift": "Marc Aurel: Sterben ist ein Werk der Natur",
+      "text": "Der Stoiker dramatisiert den Tod nicht — er ordnet ihn ein. Sterben ist eines der Dinge, die die Natur will, wie Geborenwerden, Wachsen, Altern. Was naturgemäß ist, kann nicht schlecht sein. Marc Aurel schreibt sich das Sterben immer wieder in seine Selbstgespräche, nicht aus Morbidität, sondern als Übung: Wer sich täglich erinnert, dass er endlich ist, hört auf, Belanglosigkeiten für dringend zu halten. Der Gedanke an den Tod ist hier kein Schrecken, sondern ein Filter — er zeigt dir, was zählt, indem er zeigt, was nicht zählt."
+    },
+    {
+      "aus": { "tableau": "das-selbst", "knoten": "buddhismus" },
+      "ueberschrift": "Buddhismus: Es stirbt niemand, der bleibt",
+      "text": "Was hast du Angst zu verlieren? Ein Selbst, das durch die Zeit trägt — eine feste Person, die ausgelöscht wird. Aber genau dieses bleibende Selbst, sagt der Buddhismus, ist eine Illusion. Es gibt kein unveränderliches Ich, das stirbt; es gibt einen Strom von Augenblicken, der sich ohnehin in jedem Moment wandelt. Der Tod ist nicht das Ende eines Dings, sondern die letzte und deutlichste Form der Vergänglichkeit, die immer schon am Werk war. Wer das Anhaften an einem festen Selbst löst, verliert im Tod weniger — weil er nie geglaubt hat, etwas Festes zu besitzen."
+    },
+    {
+      "aus": { "tableau": "das-selbst", "knoten": "vedanta" },
+      "ueberschrift": "Vedanta: Was in dir wahr ist, stirbt nicht",
+      "text": "Vedanta dreht die buddhistische Bewegung um und kommt zu einem ähnlichen Frieden. Was stirbt, ist die Hülle: der Körper, die Person, das Ich-Gefühl. Aber der Atman — das reine Bewusstsein, das all das bemerkt — wird nicht geboren und stirbt nicht. Du bist nicht die Welle, die sich bricht, sondern das Wasser, das bleibt. Diese Stimme verlangt einen Glauben, den nicht jeder teilt. Aber wenn sie trägt, verwandelt sie den Tod von einer Auslöschung in einen Übergang — das Ablegen eines Gewandes, nicht das Ende dessen, der es trug."
+    },
+    {
+      "aus": { "tableau": "existenzialismus", "knoten": "heidegger" },
+      "ueberschrift": "Heidegger: Erst der Tod macht dein Leben zu deinem",
+      "text": "Gegen Epikur stellt Heidegger das genaue Gegenteil: Gerade weil der Tod jederzeit kommen kann und niemand ihn dir abnimmt, ist er nicht gleichgültig. Solange du verdrängst, dass du stirbst, lebst du im ›man‹ — man tut dies, man denkt das, eine namenlose Allgemeinheit lebt dein Leben für dich. Erst wenn dein eigener Tod dich anschaut, hört dieses ›man‹ auf. Dann wird aus den endlosen Möglichkeiten eine Wahl, die zählt, weil die Zeit nicht endlos ist. Der Tod ist hier kein Feind, sondern das, was dein Leben überhaupt erst ernst macht."
+    },
+    {
+      "aus": { "tableau": "existenzialismus", "knoten": "tod-als-strukturprinzip" },
+      "ueberschrift": "Yalom: Die Nähe des Todes weckt zum Leben",
+      "text": "Was Heidegger als Begriff dachte, hat Irvin Yalom als Therapeut gesehen. Menschen, die einer Diagnose begegnen oder einen nahen Menschen verlieren, beschreiben oft eine seltsame zweite Geburt: Plötzlich schmeckt der Kaffee, plötzlich zählen die Gespräche, plötzlich fällt das Belanglose ab. Die Nähe des Todes wirkt wie ein Weckruf. Yalom nennt das nicht Trost — es bleibt schmerzhaft —, aber es ist eine Möglichkeit: Die Endlichkeit, bewusst zugelassen, kann das Leben verdichten, statt es zu vergiften. Der Tod als Lehrer, nicht als Dieb."
+    },
+    {
+      "aus": { "tableau": "existenzialismus", "knoten": "camus" },
+      "ueberschrift": "Camus: Lebe gerade gegen die Sinnlosigkeit",
+      "text": "Camus weigert sich, dem Tod einen Trost abzuringen, den er nicht hat. Der Tod macht das Leben nicht sinnvoll und nicht sinnlos — er macht es absurd: Wir verlangen nach Dauer und bekommen Endlichkeit. Aber Camus zieht daraus keine Verzweiflung, sondern Trotz. Gerade weil der Tod das letzte Wort hat, ist jeder gelebte Tag eine Revolte gegen ihn. Man muss sich den Menschen, der seine Sterblichkeit kennt und trotzdem leidenschaftlich lebt, als einen Glücklichen vorstellen. Das ist die strengste Haltung hier: kein Jenseits, keine Auflösung, kein höherer Sinn — nur das wache, trotzige Ja zum endlichen Leben."
+    },
+    {
+      "aus": { "tableau": "existenzialismus", "knoten": "frankl" },
+      "ueberschrift": "Frankl: Gerade die Endlichkeit verpflichtet",
+      "text": "Für Viktor Frankl ist die Vergänglichkeit kein Argument gegen den Sinn, sondern für ihn. Würdest du ewig leben, könntest du alles unendlich aufschieben — nichts wäre dringend, nichts würde zählen. Weil die Zeit begrenzt ist, wird jede Tat, jede Begegnung, jede Entscheidung einmalig und unwiederbringlich. Der Tod nimmt dem Leben nicht den Sinn, er erzwingt ihn: Was du tust, tust du ein einziges Mal. Frankl verlangt nicht, den Tod zu lieben — er verlangt, aus seiner Gewissheit eine Verantwortung zu machen für das, was du mit der geliehenen Zeit anfängst."
+    },
+    {
+      "aus": { "tableau": "existenzialismus", "knoten": "tillich" },
+      "ueberschrift": "Tillich: Den Mut finden, endlich zu sein",
+      "text": "Paul Tillich nennt die tiefste Angst die vor dem Nichtsein — nicht die Furcht vor diesem oder jenem, sondern das nackte Wissen, dass du nicht sein wirst. Sie lässt sich nicht wegargumentieren wie bei Epikur und nicht in Eigentlichkeit verwandeln wie bei Heidegger. Sie verlangt etwas anderes: Mut. Den Mut zum Sein, der die Angst des Nichtseins nicht beseitigt, sondern in sich aufnimmt — getragen von einem Grund des Seins, der tiefer reicht als das einzelne Leben. Ob du diesen Grund Gott nennst oder anders, bleibt offen. Tillich beschreibt eine Bewegung, keine Lehre: nicht über die Angst hinwegzukommen, sondern durch sie hindurch zu einem Ja zu finden."
+    }
+  ],
+  "schluss": "Neun Stimmen, und sie ziehen in entgegengesetzte Richtungen. Epikur und Marc Aurel wollen dir die Furcht nehmen; Heidegger und Yalom wollen, dass der Tod dich aufweckt. Buddhismus und Vedanta lösen den auf, der zu sterben glaubt; Camus verweigert jeden Trost und lebt trotzig weiter; Frankl macht aus der Endlichkeit eine Pflicht, und Tillich sucht den Mut, das Nichtsein zu tragen.\n\nKeine dieser Stimmen ist die Lösung. Vielleicht trägt dich heute die nüchterne — der Tod geht dich nichts an, lebe. Vielleicht trägt dich morgen die ernste — gerade weil du stirbst, zählt, was du tust. Vielleicht wechselst du zwischen ihnen, je nachdem, wie nah der Tod gerade steht. Was bleibt, ist nicht eine Antwort, sondern die Frage, die jede dieser Stimmen auf ihre Weise stellt: Wenn du wirklich wüsstest, dass deine Zeit endlich ist — würdest du heute anders leben?",
+  "kuratiert": "2026-05-29",
+  "kuratiert_aus_tableaus": [
+    "lebenskunst",
+    "ethik",
+    "das-selbst",
+    "existenzialismus"
+  ]
+}

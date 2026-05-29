@@ -1,0 +1,549 @@
+{
+  "topic": {
+    "id": "lebenskunst",
+    "title": "Lebenskunst",
+    "subtitle": "Die Kunst, gut zu leben — wann gelingt dir dein Leben?",
+    "intro": "Wann ist ein Leben dir gelungen — wenn es sich gut anfühlt, oder wenn du richtig gelebt hast?",
+    "theme": {
+      "accent": "oklch(0.45 0.11 65)",
+      "accentSoft": "oklch(0.45 0.11 65 / 0.15)"
+    },
+    "complexityLevels": 5,
+    "quadrants": {
+      "axisX": {
+        "label": "Quelle des Gelingens",
+        "left": "Lust / Genuss",
+        "leftHint": "gelingen heißt: es fühlt sich gut an",
+        "right": "Tugend / Haltung",
+        "rightHint": "gelingen heißt: richtig verfasst sein"
+      },
+      "axisY": {
+        "label": "Verhältnis zur Welt",
+        "top": "Selbstgenügsamkeit / Rückzug",
+        "topHint": "frei werden von der Welt",
+        "bottom": "Weltzuwendung / Tätigkeit",
+        "bottomHint": "gelingen im Tun und in Beziehung"
+      }
+    },
+    "synthesis": "Dieses Tableau hält drei Spannungen offen, die seit der Antike kein Denker für alle gelöst hat. Erstens: ob das gelungene Leben sich gut anfühlen muss oder gut verfasst sein — Epikur und die Stoa geben darauf entgegengesetzte Antworten, und beide haben Jahrhunderte überzeugt. Zweitens: ob das Gelingen aus dem Rückzug von der Welt kommt oder aus der Zuwendung zu ihr — der Garten gegen die Polis, die Seelenruhe gegen das tätige Leben. Drittens, leiser, aber moderner: ob Lebenskunst überhaupt lehrbar ist oder nur gelebt werden kann — ob Philosophie eine Theorie liefert oder eine Übung ist. Das Tableau verspricht keine Antwort, welche Ecke die reifste ist. Es zeigt das Feld, durch das jeder selbst seinen Weg findet — und macht sichtbar, dass die Frage nach dem guten Leben älter, breiter und unentschiedener ist, als jede einzelne Schule zugibt."
+  },
+  "levels": [
+    {
+      "id": 1,
+      "label": "Einstieg",
+      "short": "L1",
+      "filled": false
+    },
+    {
+      "id": 2,
+      "label": "Grundlagen",
+      "short": "L2",
+      "filled": false
+    },
+    {
+      "id": 3,
+      "label": "Vertiefung",
+      "short": "L3",
+      "filled": false
+    },
+    {
+      "id": 4,
+      "label": "Kontext",
+      "short": "L4",
+      "filled": false
+    },
+    {
+      "id": 5,
+      "label": "Forschung",
+      "short": "L5",
+      "filled": false
+    }
+  ],
+  "schools": [
+    {
+      "id": "epikureismus",
+      "label": "Epikureismus",
+      "color": "oklch(0.50 0.11 40)",
+      "glyph": "Ε",
+      "gx": -300,
+      "gy": -150,
+      "labelDir": "W"
+    },
+    {
+      "id": "stoa",
+      "label": "Stoa",
+      "color": "oklch(0.40 0.10 80)",
+      "glyph": "Σ",
+      "gx": 300,
+      "gy": -140,
+      "labelDir": "E"
+    },
+    {
+      "id": "aristotelische-eudaimonie",
+      "label": "Eudaimonie-Tradition",
+      "color": "oklch(0.44 0.12 130)",
+      "glyph": "Α",
+      "gx": 280,
+      "gy": 160,
+      "labelDir": "E"
+    },
+    {
+      "id": "kynismus",
+      "label": "Kynismus",
+      "color": "oklch(0.45 0.09 55)",
+      "glyph": "Κ",
+      "gx": -320,
+      "gy": 60,
+      "labelDir": "W"
+    },
+    {
+      "id": "skeptizismus",
+      "label": "Skepsis",
+      "color": "oklch(0.48 0.06 100)",
+      "glyph": "Ø",
+      "gx": 60,
+      "gy": -200,
+      "labelDir": "N"
+    },
+    {
+      "id": "lebensphilosophie",
+      "label": "Lebensphilosophie",
+      "color": "oklch(0.42 0.13 25)",
+      "glyph": "Λ",
+      "gx": -120,
+      "gy": 200,
+      "labelDir": "S"
+    }
+  ],
+  "thinkers": [
+    {
+      "id": "epikur",
+      "name": "Epikur",
+      "lifespan": "341–270 v. Chr.",
+      "firstLevel": 1,
+      "schoolId": "epikureismus",
+      "x": 18,
+      "y": 72,
+      "versions": {
+        "1": "Epikur lehrt, dass das Ziel des Lebens die [[Lust:nicht Ausschweifung, sondern die Abwesenheit von Schmerz und Unruhe]] ist — aber er meint damit nicht Genusssucht. Das höchste Glück ist [[Ataraxie:die Unerschütterlichkeit der Seele, ein Zustand ungestörter Ruhe]], erreicht durch einfache Freuden, Freundschaft und die Befreiung von Furcht. Wer wenig braucht, ist schwer zu erschüttern. Darum zog sich Epikur mit Freunden in den ›Garten‹ zurück, fern von Politik und Ehrgeiz: Das gelungene Leben ist still, nicht glanzvoll. Seine berühmteste Übung gilt der Todesfurcht — der Tod, sagt er, geht uns nichts an, denn wo wir sind, ist er nicht.",
+        "3": "Epikur besetzt im Tableau die Ecke Lust + Rückzug am reinsten. Seine Lust-Lehre ist defensiv, nicht expansiv: Das höchste Gut ist die Abwesenheit von Schmerz (aponia) und Seelenunruhe (ataraxia), nicht die Maximierung von Genuss. Diese Unterscheidung trennt ihn scharf vom späteren Hedonismus-Vorwurf und rückt ihn paradoxerweise nahe an die Stoa: Beide suchen Unerschütterlichkeit, nur über entgegengesetzte Wege — Epikur durch Bedürfnisminimierung, die Stoa durch Urteilskontrolle. Der Streit der beiden Schulen ist die zentrale Spannung der hellenistischen Lebenskunst. Epikurs Rückzug aus der Polis ist dabei selbst eine These: dass das gute Leben politisches Engagement nicht braucht — eine direkte Gegenposition zu Aristoteles."
+      }
+    },
+    {
+      "id": "aristoteles",
+      "name": "Aristoteles",
+      "lifespan": "384–322 v. Chr.",
+      "firstLevel": 1,
+      "schoolId": "aristotelische-eudaimonie",
+      "x": 72,
+      "y": 20,
+      "versions": {
+        "1": "Für Aristoteles gelingt ein Leben nicht im Gefühl, sondern im [[gelungenen Tätigsein:der vollen Verwirklichung der menschlichen Möglichkeiten über ein ganzes Leben]] — er nennt es [[Eudaimonia:das geglückte Leben, oft ›Glückseligkeit‹ übersetzt, gemeint ist tätiges Gelingen, nicht ein Gefühlszustand]]. Anders als Epikur zieht er sich nicht zurück: Der Mensch ist ein Gemeinschaftswesen, und das gute Leben verwirklicht sich im tätigen Leben unter anderen — in der Polis, in Freundschaft, in der Ausübung der Tugenden. Glück ist hier kein Zustand, den man hat, sondern etwas, das man tut, und zwar gut. Es braucht auch ein Mindestmaß an äußeren Gütern — wer in bitterer Armut oder Einsamkeit lebt, dem fehlt etwas zum vollen Gelingen.",
+        "3": "Aristoteles ist im Lebenskunst-Tableau ein wandernder Knoten: Derselbe Denker trägt in der Ethik die Tugend-gegen-Prinzip-Frage, hier die Gelingens-Frage. Der Akzent verschiebt sich von ›welche Handlung ist gut‹ zu ›welches Leben ist geglückt‹. Eudaimonia besetzt die Ecke Tugend + Weltzuwendung: Gelingen ist tätig (energeia, nicht hexis) und sozial (der Mensch als zoon politikon). Damit steht Aristoteles gegen beide hellenistischen Rückzugs-Schulen — gegen Epikurs Garten wie gegen die stoische Innenwendung. Seine These, dass das gute Leben äußere Güter und Glück (eutychia) braucht, macht ihn verwundbar gegenüber der Stoa, die genau das bestreitet: dass dem Weisen nichts Äußeres etwas anhaben könne. Dieser Streit — ob Tugend zum Glück genügt oder nur notwendig ist — durchzieht die ganze antike Lebenskunst."
+      }
+    },
+    {
+      "id": "marc-aurel",
+      "name": "Marc Aurel",
+      "lifespan": "121–180 n. Chr.",
+      "firstLevel": 1,
+      "schoolId": "stoa",
+      "x": 78,
+      "y": 70,
+      "versions": {
+        "1": "Marc Aurel, römischer Kaiser und Stoiker, hält in seinen *Selbstbetrachtungen* fest, wie man inmitten von Macht und Pflicht die innere Ruhe bewahrt. Der Kern der stoischen Lebenskunst ist eine Unterscheidung: Manches liegt in deiner Macht (deine Urteile, dein Wollen), das meiste nicht (Gesundheit, Ruf, Tod). Gelingen heißt, sich nur um das Erste zu sorgen und das Zweite gelassen anzunehmen. Nicht die Dinge beunruhigen dich, sondern deine Urteile über sie — und die Urteile gehören dir. So wird Tugend, die richtige innere Haltung, zur einzigen verlässlichen Quelle eines guten Lebens.",
+        "3": "Marc Aurel besetzt im Tableau die Ecke Tugend + Rückzug — geteilt mit Ethik, aber hier mit verschobenem Akzent. In der Ethik trägt er die stoische Tugendposition; hier die Lebenskunst-Technik der Gelassenheit. Die Stoa radikalisiert Aristoteles: Wo dieser äußere Güter zum Gelingen für nötig hält, erklärt die Stoa sie für gleichgültig (adiaphora) — der Weise ist auch auf der Folterbank glücklich. Das ist die stärkste Autarkie-These der Antike und der direkte Gegenpol zu Aristoteles' sozialer Eudaimonie. Marc Aurels Rückzug ist dabei kein äußerer (er bleibt Kaiser), sondern ein innerer: die ›Zitadelle der Seele‹, in die man sich jederzeit zurückziehen kann. Damit unterscheidet er sich von Epikurs realem Rückzug aus der Polis — beide suchen Unerschütterlichkeit, aber der Stoiker findet sie mitten im Welttreiben."
+      }
+    },
+    {
+      "id": "seneca",
+      "name": "Seneca",
+      "lifespan": "4 v. Chr.–65 n. Chr.",
+      "firstLevel": 2,
+      "schoolId": "stoa",
+      "x": 70,
+      "y": 62,
+      "versions": {
+        "2": "Seneca, Stoiker und Berater Neros, schreibt die praktische Seite der stoischen Lebenskunst — in Briefen und Essays über Zeit, Zorn, Gelassenheit und die Kürze des Lebens. Sein berühmtester Gedanke: Das Leben ist nicht kurz, wir machen es kurz, indem wir es vergeuden. Gelingen heißt, die Zeit als das einzige wirklich Eigene zu behandeln und nicht an Belangloses zu verlieren. Seneca ist konkreter als Marc Aurel — er gibt Übungen, keine bloßen Maximen.",
+        "3": "Seneca ergänzt die stoische Ecke um die praktisch-therapeutische Dimension. Während Marc Aurel introspektiv notiert, schreibt Seneca adressiert und didaktisch — die *Epistulae morales* sind ein Lebenskunst-Programm in Briefform. Seine Spannung im Tableau: Als reicher, mächtiger Mann lebte er, was die Stoa für gleichgültig erklärt (Reichtum, Einfluss), und musste den Vorwurf der Heuchelei aushalten. Diese Lücke zwischen Lehre und Leben ist selbst ein Lebenskunst-Thema: ob die Lehre vom guten Leben gelebt werden muss, um zu gelten. Pierre Hadot wird genau das später zum Zentrum machen — Philosophie als geübte Lebensform, nicht als Theorie."
+      }
+    },
+    {
+      "id": "epiktet",
+      "name": "Epiktet",
+      "lifespan": "50–135 n. Chr.",
+      "firstLevel": 3,
+      "schoolId": "stoa",
+      "x": 82,
+      "y": 76,
+      "versions": {
+        "3": "Epiktet, von der Geburt Sklave, später Lehrer, gibt der Stoa ihre schärfste Formel: die Unterscheidung zwischen dem, was ›in unserer Macht‹ steht (eph' hēmin), und dem, was nicht. Seine Lebenskunst ist die radikalste Reduktion des Tableaus: Glück hängt ausschließlich an der inneren Einstellung, gar nicht an den Umständen. Damit besetzt er den äußersten Punkt der Tugend+Rückzug-Ecke. Sein Einfluss reicht bis in die moderne Psychotherapie — die kognitive Verhaltenstherapie beruft sich direkt auf seine Einsicht, dass nicht die Ereignisse, sondern die Bewertungen das Leiden erzeugen. Epiktet ist die Brücke von der antiken Lebenskunst zur modernen Glücksforschung."
+      }
+    },
+    {
+      "id": "diogenes",
+      "name": "Diogenes von Sinope",
+      "lifespan": "412–323 v. Chr.",
+      "firstLevel": 2,
+      "schoolId": "kynismus",
+      "x": 40,
+      "y": 82,
+      "versions": {
+        "2": "Diogenes, der Kyniker, treibt die Selbstgenügsamkeit ins Provokante: Er lebte in einer Tonne, besaß fast nichts und verachtete Konventionen, Ruhm und Besitz offen. Seine Lebenskunst ist die radikalste Form der Autarkie — Glück durch Bedürfnislosigkeit, erreicht nicht durch feine Abwägung wie bei Epikur, sondern durch demonstrativen Verzicht. Als Alexander der Große ihn fragte, was er sich wünsche, soll er geantwortet haben: ›Geh mir aus der Sonne.‹ Der Kynismus ist die Lebenskunst der schamlosen Freiheit.",
+        "3": "Diogenes markiert im Tableau den Extrempunkt des Rückzugs — radikaler als Epikur, weil ohne dessen kultivierte Genuss-Dosierung. Er sitzt zwischen Lust und Tugend, weil der Kynismus beide Achsen unterläuft: Er sucht weder Genuss noch konventionelle Tugend, sondern die Freiheit von beidem durch Naturgemäßheit. Historisch ist er das Scharnier zwischen Sokrates und der Stoa — Zenon, der Stoa-Gründer, war Schüler des Kynikers Krates. Die Stoa wird die kynische Bedürfnislosigkeit später zähmen und gesellschaftsfähig machen. Diogenes hält im Tableau die unbequeme Frage offen: ob Lebenskunst Kultivierung ist oder gerade die Befreiung von aller Kultivierung."
+      }
+    },
+    {
+      "id": "pyrrhon",
+      "name": "Pyrrhon",
+      "lifespan": "360–270 v. Chr.",
+      "firstLevel": 4,
+      "schoolId": "skeptizismus",
+      "x": 55,
+      "y": 85,
+      "versions": {
+        "4": "Pyrrhon, der Begründer der antiken Skepsis, sucht die Seelenruhe auf einem überraschenden Weg: durch die Enthaltung des Urteils (epoché). Wenn wir nicht sicher wissen können, ob etwas gut oder schlecht ist, dann hört das Bewerten auf — und mit dem Bewerten die Unruhe. Die Ataraxie folgt der Skepsis wie der Schatten dem Körper, heißt es. Pyrrhon teilt mit Epikur und der Stoa das Ziel — Unerschütterlichkeit —, aber sein Mittel ist die Aufgabe des Wissensanspruchs selbst. Im Tableau besetzt er einen eigenen Punkt: Gelingen nicht durch die richtige Überzeugung, sondern durch das Loslassen aller Überzeugungen."
+      }
+    },
+    {
+      "id": "montaigne",
+      "name": "Michel de Montaigne",
+      "lifespan": "1533–1592",
+      "firstLevel": 2,
+      "schoolId": "lebensphilosophie",
+      "x": 32,
+      "y": 28,
+      "versions": {
+        "2": "Montaigne erfindet im 16. Jahrhundert den Essay, um eine einzige Frage zu umkreisen: Wie lebe ich dieses, mein eigenes Leben? Er liest die Antiken — Stoa, Epikur, Skepsis — aber folgt keiner Schule, sondern probiert, beobachtet sich, widerspricht sich. Seine Lebenskunst ist die genießende Aufmerksamkeit auf das gewöhnliche Leben: ›Wenn ich tanze, tanze ich; wenn ich schlafe, schlafe ich.‹ Er besetzt die schwierige Ecke Lust + Weltzuwendung — zugewandt der Welt, dem Körper, den Freunden, ohne Rückzug, aber auch ohne aristotelischen Tugend-Ernst. Gelingen heißt für ihn: das eigene, mittelmäßige, sterbliche Leben mit Humor und Aufmerksamkeit bewohnen.",
+        "3": "Montaigne ist der wichtigste Besetzer der sonst dünnen Ecke Lust + Weltzuwendung und damit ein Stresstest-Knoten für die X-Achse. Er löst das hellenistische Rückzugs-Paradigma auf: Man muss nicht in den Garten oder die innere Zitadelle, um gut zu leben — man kann mitten im weltlichen Leben, mit allen Unvollkommenheiten, genießend präsent sein. Sein Skeptizismus (›Que sais-je?‹) erbt er von Pyrrhon, aber er zieht daraus nicht Urteilsenthaltung, sondern Milde. Montaigne ist die Brücke von der antiken zur modernen Lebenskunst und der direkte Vorläufer von Foucaults ›Sorge um sich‹ und der Idee, das eigene Leben als ein zu gestaltendes Werk zu sehen."
+      }
+    },
+    {
+      "id": "schopenhauer",
+      "name": "Arthur Schopenhauer",
+      "lifespan": "1788–1860",
+      "firstLevel": 3,
+      "schoolId": "lebensphilosophie",
+      "x": 60,
+      "y": 50,
+      "versions": {
+        "3": "Schopenhauer schreibt mit den *Aphorismen zur Lebensweisheit* eine pessimistische Lebenskunst: Da das Leben im Kern Leiden ist (der blinde Wille, der nie zur Ruhe kommt), kann Lebenskunst nicht Glück anstreben, sondern nur die Minderung des Unglücks. Sein Rat ist darum defensiv und nah an Epikur: Erwarte wenig, schütze deine Unabhängigkeit, kultiviere den Geist statt äußere Güter, denn was einer ist, zählt mehr als was einer hat. Im Tableau sitzt er zwischen den Achsen — er teilt Epikurs Rückzug und Bedürfnisminimierung, aber ohne dessen heiteren Grundton.",
+        "5": "Schopenhauer ist im Tableau die Scharnierfigur zwischen antiker Lebenskunst und moderner Lebensphilosophie. Seine *Aphorismen* sind bewusst als praktische Eudaimonologie geschrieben — eine ›Anweisung zu einem möglichst glücklichen Dasein‹ —, obwohl seine Metaphysik das Glück eigentlich für unmöglich erklärt. Diese Spannung (eine Lebenskunst trotz metaphysischem Pessimismus) ist philosophisch produktiv: Sie zeigt, dass Lebenskunst von der Glücksmetaphysik ablösbar ist. Nietzsche, sein großer Leser und Gegner, wird genau hier ansetzen — und den Pessimismus in eine Lebensbejahung umkehren, ohne den metaphysischen Trost zurückzuholen."
+      }
+    },
+    {
+      "id": "nietzsche",
+      "name": "Friedrich Nietzsche",
+      "lifespan": "1844–1900",
+      "firstLevel": 2,
+      "schoolId": "lebensphilosophie",
+      "x": 45,
+      "y": 32,
+      "versions": {
+        "2": "Nietzsche stellt die Lebenskunst auf einen neuen Grund: Wenn es keinen vorgegebenen Sinn und keine göttliche Ordnung mehr gibt, dann wird das eigene Leben zum Material, aus dem man etwas formen muss. ›Seinem Charakter Stil geben‹ nennt er das — das Leben als Kunstwerk, gestaltet aus den eigenen Stärken und Schwächen. Sein Maßstab ist der [[amor fati:die Liebe zum Schicksal — nicht nur das Notwendige ertragen, sondern es wollen]]: ein Leben so zu leben, dass man bereit wäre, es in ewiger Wiederkehr noch einmal zu leben. Gelingen heißt hier nicht Ruhe oder Tugend, sondern die schöpferische Bejahung des eigenen, ganzen Lebens.",
+        "3": "Nietzsche ist im Tableau ein wandernder Knoten (auch in Ethik und Existenzialismus), hier in seiner lebenskünstlerischen Dimension: das Leben als ästhetisches Projekt der Selbstgestaltung. Er besetzt die Weltzuwendungs-Seite, aber radikal anders als Aristoteles — nicht soziale Verwirklichung in der Polis, sondern individuelle Selbsterschaffung gegen die Herde. Sein amor fati ist die schärfste Gegenposition zur stoischen Gelassenheit: Wo der Stoiker das Schicksal gleichmütig hinnimmt, soll der Nietzscheanische Mensch es leidenschaftlich wollen. Beide bejahen das Notwendige, aber der eine aus Distanz, der andere aus Begierde. Nietzsche ist auch die Brücke zu Foucault, der die antike Selbstsorge unter ausdrücklichem Rückgriff auf eine Ästhetik der Existenz wieder aufnimmt."
+      }
+    },
+    {
+      "id": "mill",
+      "name": "John Stuart Mill",
+      "lifespan": "1806–1873",
+      "firstLevel": 3,
+      "schoolId": "lebensphilosophie",
+      "x": 25,
+      "y": 38,
+      "versions": {
+        "3": "Mill rettet den Hedonismus vor dem Schwein-Vorwurf: Nicht alle Lüste sind gleich. Es gibt höhere und niedere Freuden, und ein Mensch, der beide kennt, zieht die höheren vor — ›besser ein unzufriedener Sokrates als ein zufriedenes Schwein‹. Damit verschiebt Mill die Lust-Achse: Genuss bleibt das Ziel, aber qualifizierter Genuss, der Kultur, Geist und soziale Bindung einschließt. Im Tableau hilft er, die Ecke Lust + Weltzuwendung zu besetzen: Das gute Leben fühlt sich gut an, aber das beste Gefühl entsteht im entwickelten, sozial eingebundenen Leben, nicht im Rückzug. Mill ist der Punkt, an dem antiker Hedonismus und moderne, weltzugewandte Glückskonzeption sich berühren."
+      }
+    },
+    {
+      "id": "foucault",
+      "name": "Michel Foucault",
+      "lifespan": "1926–1984",
+      "firstLevel": 4,
+      "schoolId": "lebensphilosophie",
+      "x": 48,
+      "y": 45,
+      "versions": {
+        "4": "Der späte Foucault entdeckt die antike Lebenskunst neu — als ›Sorge um sich‹ (epimeleia heautou) und ›Ästhetik der Existenz‹. Sein Befund: In der Antike war Ethik nicht primär ein System von Verboten, sondern eine Praxis der Selbstformung — Übungen, mit denen man sich selbst zu einem bestimmten Menschen machte. Diese Idee, das eigene Leben als ein zu gestaltendes Werk zu begreifen, stellt Foucault der modernen Moral als befreiende Alternative gegenüber. Im Tableau ist er die Meta-Stimme der Weltzuwendungs-Seite: Lebenskunst nicht als Lehre vom richtigen Inhalt, sondern als Form der Arbeit an sich selbst.",
+        "5": "Foucault liefert dem Tableau seine selbstreflexive Klammer: Er macht die antike Lebenskunst zum Gegenstand und zugleich zum Programm. Seine These — Ethik als ›Technologie des Selbst‹ — verschiebt die ganze Fragestellung: Nicht ›welche Lehre vom guten Leben ist wahr‹, sondern ›welche Praktiken formen welche Art von Subjekt‹. Das ist anschlussfähig an Hadots These der Philosophie als Lebensform, aber Foucault dreht sie ins Produktive: Es gibt kein wahres Selbst, das man verwirklicht (gegen Aristoteles), sondern nur ein Selbst, das man erschafft (mit Nietzsche). Damit besetzt Foucault die moderne Spitze der Weltzuwendungs-Achse und stellt zugleich die Frage, ob das ganze Tableau eine Sammlung von Wahrheiten ist oder von Übungen — eine Frage, die es offen lässt."
+      }
+    },
+    {
+      "id": "hadot",
+      "name": "Pierre Hadot",
+      "lifespan": "1922–2010",
+      "firstLevel": 5,
+      "schoolId": "lebensphilosophie",
+      "x": 65,
+      "y": 40,
+      "versions": {
+        "5": "Pierre Hadot ist die historisch-methodische Gewissensstimme des Tableaus. Seine zentrale These: Antike Philosophie war keine Theorie, sondern eine Lebensform — ein System ›geistiger Übungen‹ (exercices spirituels), mit denen man sich selbst transformierte. Die Lehrsätze der Stoa oder Epikurs waren nicht als abstrakte Wahrheiten gemeint, sondern als verinnerlichte Werkzeuge für den Alltag. Hadot wirft der modernen akademischen Philosophie vor, diese praktische Dimension verloren zu haben — Philosophie sei zum Diskurs über Philosophie geworden. Im Tableau hält Hadot die unbequeme Frage offen, ob man die hier versammelten Denker überhaupt richtig versteht, wenn man sie nur liest, statt sie zu üben. Er ist die Stimme, die sagt: Lebenskunst lässt sich nicht kartieren, nur leben — und macht damit die Grenze des Tableaus selbst sichtbar."
+      }
+    },
+    {
+      "id": "csikszentmihalyi",
+      "name": "Mihály Csíkszentmihályi",
+      "lifespan": "1934–2021",
+      "firstLevel": 4,
+      "schoolId": "lebensphilosophie",
+      "x": 30,
+      "y": 15,
+      "versions": {
+        "4": "Csíkszentmihályi bringt die Lebenskunst in die empirische Psychologie: Sein Begriff des [[Flow:das völlige Aufgehen in einer Tätigkeit, bei dem Zeit und Selbstbewusstsein verschwinden]] beschreibt die Erfahrung, in der Menschen sich am lebendigsten und zufriedensten fühlen — nicht in Ruhe oder Genuss, sondern in fordernder, gekonnter Tätigkeit. Das gute Leben ist demnach kein Zustand, sondern eine Abfolge von Flow-Erfahrungen: voll engagiert in Aufgaben, die Können und Herausforderung in Balance halten. Im Tableau besetzt er die Ecke Weltzuwendung empirisch und bestätigt, modern und messend, Aristoteles' alte Intuition: Glück liegt im gekonnten Tätigsein, nicht im Haben.",
+        "5": "Csíkszentmihályi ist im Tableau die Stelle, an der die antike Eudaimonie-Tradition empirische Bestätigung findet — und damit ein Beleg, dass die Achsen nicht bloß historisch sind. Seine Flow-Forschung zeigt messbar, dass tätiges Aufgehen mehr zum erlebten Wohlbefinden beiträgt als Genuss oder Entspannung — was Aristoteles gegen Epikur recht zu geben scheint. Aber die Lesart hat Grenzen: Flow ist eine Theorie des Erlebens, nicht des guten Lebens als Ganzem; ein Leben voller Flow-Momente kann moralisch leer oder einsam sein. Im Tableau hält er die Spannung zwischen empirischer Glücksforschung (was fühlt sich gut an?) und der älteren normativen Frage (was ist ein gutes Leben?) offen — und zeigt, dass beide nicht dasselbe sind."
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "id": "ataraxie",
+      "name": "Ataraxie",
+      "type": "concept",
+      "firstLevel": 1,
+      "x": 50,
+      "y": 78,
+      "versions": {
+        "1": "Ataraxie ist die ungestörte Ruhe der Seele — der Zustand, in dem nichts dich mehr erschüttert. Sie ist das gemeinsame Ziel fast aller antiken Lebenskunst-Schulen, aber jede sucht sie auf eigenem Weg: Epikur durch das Minimieren der Bedürfnisse, die Stoa durch die Kontrolle der Urteile, die Skepsis durch das Aufgeben aller Urteile. Dass so verschiedene Wege dasselbe Ziel anpeilen, zeigt, wie zentral die Seelenruhe für das antike Verständnis des guten Lebens war.",
+        "3": "Ataraxie ist der Schlüsselbegriff, an dem die hellenistischen Schulen sich zugleich treffen und trennen. Alle wollen Unerschütterlichkeit — aber der Weg dorthin definiert die Schule. Diese Konvergenz im Ziel bei Divergenz im Mittel ist die innere Struktur der oberen Tableau-Hälfte (Rückzug/Selbstgenügsamkeit). Der Begriff markiert auch die Grenze zur modernen Glücksforschung: Wo die Antike Ruhe als höchstes Gut sah, misst die moderne Psychologie eher Engagement und Flow — ein stiller, aber tiefer Wertewandel. Die Frage, ob das gute Leben ruhig oder erfüllt-tätig ist, trennt antike und moderne Lebenskunst quer durch das Tableau."
+      },
+      "primaryThinker": "epikur"
+    },
+    {
+      "id": "eudaimonia",
+      "name": "Eudaimonia",
+      "type": "concept",
+      "firstLevel": 1,
+      "x": 76,
+      "y": 24,
+      "versions": {
+        "1": "Eudaimonia ist der Zielbegriff der aristotelischen Lebenskunst — meist als ›Glückseligkeit‹ übersetzt, aber gemeint ist [[gelungenes Tätigsein:ein Leben, das die menschlichen Möglichkeiten voll verwirklicht]], nicht ein Gefühl. Anders als die Lust ist Eudaimonia kein Zustand, den man empfindet, sondern eine Qualität, die ein ganzes Leben über seine Tätigkeiten hat. Sie verlangt Tugend, aber auch ein Mindestmaß an Glück und äußeren Gütern. Hier liegt der schärfste Gegensatz zur Stoa, die behauptet, Tugend allein genüge.",
+        "3": "Eudaimonia ist im Lebenskunst-Tableau der wandernde Knoten par excellence — er trägt in der Ethik die Tugend-Begründung, hier die Gelingens-Frage. Der Begriff ankert die ganze rechte untere Ecke (Tugend + Weltzuwendung) und steht im Zentrum des antiken Hauptstreits: Genügt Tugend zum Glück (Stoa) oder ist sie nur notwendig, während es auch äußere Güter braucht (Aristoteles)? Dieser Streit ist nicht akademisch — er entscheidet, ob ein gutes Leben gegen das Schicksal immun sein kann oder verwundbar bleibt. Die moderne Glücksforschung (Csíkszentmihályi) gibt der aristotelischen Seite indirekt recht: gelungenes Tätigsein schlägt passiven Genuss."
+      },
+      "primaryThinker": "aristoteles"
+    },
+    {
+      "id": "lust-aponia",
+      "name": "Lust als Schmerzfreiheit",
+      "type": "concept",
+      "firstLevel": 2,
+      "x": 16,
+      "y": 65,
+      "versions": {
+        "2": "Epikurs Lust-Begriff wird oft missverstanden. Er meint nicht das Anhäufen von Genüssen, sondern [[Aponia:die Abwesenheit von körperlichem Schmerz]] und Ataraxie — die Abwesenheit von seelischer Unruhe. Die höchste Lust ist erreicht, wenn nichts mehr wehtut und nichts mehr beunruhigt; alles Weitere ist nur Variation, keine Steigerung. Darum braucht das gute Leben wenig: einfache Speise, Freundschaft, Schutz vor Furcht. Dieser ›negative‹ Lustbegriff trennt Epikur scharf vom späteren Hedonismus und erklärt, warum seine Lust-Lehre paradoxerweise asketische Züge hat.",
+        "3": "Lust als Schmerzfreiheit ist der Begriff, der die linke (Lust-)Achse des Tableaus vor dem Hedonismus-Missverständnis schützt. Epikurs Unterscheidung zwischen kinetischen (bewegten) und katastematischen (ruhenden) Lüsten ist entscheidend: Das höchste Gut ist die ruhende Lust des ungestörten Zustands, nicht der bewegte Genuss. Damit rückt Epikurs ›Lust‹ überraschend nah an die stoische ›Ruhe‹ — beide Schulen zielen auf einen stabilen, unerschütterlichen Zustand, nicht auf Erlebnis-Maximierung. J.S. Mill wird die Lust-Achse später in die Gegenrichtung öffnen: hin zu qualifiziertem, aktivem, sozialem Genuss — und damit den modernen Hedonismus von Epikurs defensivem trennen."
+      },
+      "primaryThinker": "epikur"
+    },
+    {
+      "id": "eph-hemin",
+      "name": "Was in unserer Macht steht",
+      "type": "concept",
+      "firstLevel": 2,
+      "x": 80,
+      "y": 80,
+      "versions": {
+        "2": "Die stoische Grundunterscheidung: Manches steht in unserer Macht (eph' hēmin) — unsere Urteile, Absichten, unser Wollen —, das meiste nicht — Gesundheit, Besitz, Ruf, der Tod. Alles Leiden, sagt Epiktet, entsteht daraus, dass wir uns um das Zweite sorgen, als läge es in unserer Macht. Lebenskunst heißt: die Grenze genau ziehen und die ganze Energie auf den inneren Bereich richten, der wirklich dir gehört. Was du nicht ändern kannst, nimmst du gelassen an.",
+        "3": "Diese Unterscheidung ist die operative Mitte der stoischen Lebenskunst und der Mechanismus hinter ihrer Autarkie-These. Indem die Stoa das Glück vollständig in den inneren Bereich (die Urteile) verlegt, macht sie es vom Schicksal unabhängig — der Preis ist die Erklärung aller äußeren Güter zu ›Gleichgültigem‹ (adiaphora). Hier liegt der schärfste Gegensatz zu Aristoteles, für den ein Leben in Armut, Krankheit oder Einsamkeit eben nicht voll gelingen kann. Der Begriff ist zugleich die Brücke zur modernen Psychotherapie: Die kognitive Verhaltenstherapie operationalisiert genau diese Einsicht — nicht die Ereignisse, sondern die Bewertungen erzeugen das Leiden."
+      },
+      "primaryThinker": "epiktet"
+    },
+    {
+      "id": "amor-fati",
+      "name": "Amor fati",
+      "type": "concept",
+      "firstLevel": 3,
+      "x": 42,
+      "y": 40,
+      "versions": {
+        "3": "Amor fati — die Liebe zum Schicksal — ist Nietzsches Formel für die höchste Lebensbejahung: nicht das Notwendige bloß ertragen (wie der Stoiker), sondern es wollen, lieben, als gewählt empfinden. Der Prüfstein ist der Gedanke der ewigen Wiederkehr: Würdest du dein Leben, genau dieses, in allen Einzelheiten unendlich oft wiederholen wollen? Wer ja sagen kann, hat sein Leben bejaht. Amor fati ist die affektivste Position des Tableaus — Gelingen nicht als Ruhe, Tugend oder Genuss, sondern als leidenschaftliche Bejahung des ganzen, auch des schmerzhaften Lebens.",
+        "5": "Amor fati markiert im Tableau den Bruch zwischen antiker und moderner Lebenskunst. Oberflächlich ähnelt Nietzsches Schicksalsliebe der stoischen Hinnahme — beide sagen Ja zum Notwendigen. Aber die Affektrichtung ist entgegengesetzt: Der Stoiker distanziert sich, um nicht zu leiden; Nietzsche verlangt leidenschaftliche Aneignung gerade des Leidens. Wo die Stoa Unerschütterlichkeit will, will Nietzsche Intensität. Damit kehrt amor fati das ganze hellenistische Ataraxie-Ideal um: Nicht Ruhe ist das höchste Gut, sondern die Fähigkeit, das eigene Leben so zu wollen, wie es ist. Diese Umkehrung macht Nietzsche zum Scharnier zwischen der antiken Lebenskunst der Seelenruhe und der modernen der Selbstgestaltung und Intensität."
+      },
+      "primaryThinker": "nietzsche"
+    },
+    {
+      "id": "flow",
+      "name": "Flow",
+      "type": "phenomenon",
+      "firstLevel": 4,
+      "x": 28,
+      "y": 12,
+      "versions": {
+        "4": "Flow ist der Zustand des völligen Aufgehens in einer Tätigkeit — Zeit und Selbstbewusstsein verschwinden, die Handlung trägt sich selbst. Csíkszentmihályi fand ihn bei Künstlern, Sportlern, Chirurgen, Schachspielern: überall dort, wo Können und Herausforderung in Balance sind. Im Tableau ist Flow die empirische Einlösung der aristotelischen Intuition: Das beste Erleben entsteht nicht in Ruhe oder Genuss, sondern in gekonnter, fordernder Tätigkeit. Ein gutes Leben ist demnach eines, das reich an Flow-Erfahrungen ist — voll engagiert in Aufgaben, die man kann und die einen fordern.",
+        "5": "Flow ist im Tableau die moderne, messbare Stimme auf der Weltzuwendungs-Seite und zugleich ein Begriff mit eingebauter Grenze. Er bestätigt Aristoteles gegen Epikur (Tätigkeit schlägt Genuss), aber er ist eine Theorie des optimalen Erlebens, nicht des guten Lebens — ein Auftragsmörder kann Flow erleben. Diese Lücke zwischen ›fühlt sich erfüllend an‹ und ›ist ein gutes Leben‹ ist philosophisch entscheidend: Sie zeigt, dass die empirische Glücksforschung die normative Frage der antiken Lebenskunst nicht ersetzt, sondern nur einen Teil davon vermisst. Flow hält damit im Tableau die Frage offen, ob sich Lebenskunst überhaupt empirisch einholen lässt oder ob ihr Kern — was ein Leben gut macht — eine Wertfrage bleibt."
+      },
+      "primaryThinker": "csikszentmihalyi"
+    },
+    {
+      "id": "epoche-skepsis",
+      "name": "Urteilsenthaltung",
+      "type": "method",
+      "firstLevel": 4,
+      "x": 58,
+      "y": 88,
+      "versions": {
+        "4": "Die skeptische Epoché ist die Enthaltung des Urteils: Wo wir nicht sicher wissen können, ob etwas gut oder schlecht ist, halten wir das Urteil zurück. Pyrrhon zieht daraus eine überraschende Lebenskunst-Konsequenz: Wer aufhört, die Dinge als gut oder schlecht zu bewerten, hört auf, sich über sie zu beunruhigen — die Seelenruhe folgt der Urteilsenthaltung von selbst. Im Tableau ist die Epoché der dritte Weg zur Ataraxie, neben Epikurs Bedürfnisminimierung und der stoischen Urteilskontrolle: nicht das richtige Urteil, sondern gar keines."
+      },
+      "primaryThinker": "pyrrhon"
+    },
+    {
+      "id": "selbstsorge",
+      "name": "Sorge um sich",
+      "type": "concept",
+      "firstLevel": 4,
+      "x": 50,
+      "y": 50,
+      "versions": {
+        "4": "Die ›Sorge um sich‹ (epimeleia heautou) ist Foucaults Wiederentdeckung des antiken Kerns der Lebenskunst: Bevor das ›Erkenne dich selbst‹ zur theoretischen Selbsterkenntnis wurde, war es eine Praxis — sich um sich zu kümmern, an sich zu arbeiten, sich durch Übungen zu formen. Lebenskunst ist demnach keine Lehre, die man glaubt, sondern eine Arbeit, die man an sich vollzieht. Im Tableau ist die Selbstsorge die verbindende Idee hinter allen Schulen: Ob Epikur, Stoa oder Skepsis — alle bieten konkrete Übungen der Selbstformung, nicht bloß Überzeugungen.",
+        "5": "Die Sorge um sich ist im Tableau der Begriff, der die historische Distanz reflektiert. Foucaults These verschiebt die Frage von ›welche Lehre ist wahr‹ zu ›welche Praxis formt welches Subjekt‹ — und macht damit das ganze Tableau auf eine zweite Weise lesbar: nicht als Streit konkurrierender Wahrheiten, sondern als Repertoire von Selbsttechniken. Das verbindet sie eng mit Hadots ›geistigen Übungen‹, aber Foucault entzieht ihr den normativen Boden: Es gibt kein wahres Selbst, das man verwirklicht, nur eines, das man erschafft. Damit steht die Selbstsorge zwischen Aristoteles (Selbstverwirklichung eines vorgegebenen Wesens) und Nietzsche (Selbsterschaffung ohne Vorgabe) — und hält offen, ob Lebenskunst Entdeckung oder Erfindung ist."
+      },
+      "primaryThinker": "foucault"
+    }
+  ],
+  "influences": [
+    {
+      "from": "epikur",
+      "to": "marc-aurel",
+      "type": "parallel",
+      "firstLevel": 1,
+      "versions": {
+        "1": "Epikur und die Stoa sind die großen Rivalen der hellenistischen Lebenskunst — und doch suchen beide dasselbe: die Unerschütterlichkeit der Seele. Sie streiten nicht über das Ziel, sondern über den Weg. Epikur minimiert die Bedürfnisse und zieht sich zurück; die Stoa kontrolliert die Urteile und bleibt in der Welt. Zwei Wege zur selben Ruhe."
+      }
+    },
+    {
+      "from": "aristoteles",
+      "to": "epikur",
+      "type": "critique",
+      "firstLevel": 1,
+      "versions": {
+        "1": "Aristoteles und Epikur stehen für die Grundspannung des Tableaus: tätiges Leben in der Welt gegen genießenden Rückzug aus ihr. Für Aristoteles ist der Mensch ein Gemeinschaftswesen, das sich nur in der Polis verwirklicht — Epikurs Garten wäre ihm ein verkümmertes Leben. Für Epikur ist Aristoteles' politisches Engagement eine Quelle von Unruhe, die das Glück gerade verhindert."
+      }
+    },
+    {
+      "from": "aristoteles",
+      "to": "marc-aurel",
+      "type": "influence",
+      "firstLevel": 1,
+      "versions": {
+        "1": "Die Stoa erbt von Aristoteles den Tugendbegriff, verschiebt ihn aber nach innen — weg vom ›Was ist das gute Leben in der Polis‹ hin zum ›Wie bewahre ich die innere Ordnung‹. Wo Aristoteles äußere Güter und Glück zum Gelingen für nötig hält, erklärt die Stoa sie für gleichgültig: Dem Weisen genügt die Tugend allein."
+      }
+    },
+    {
+      "from": "diogenes",
+      "to": "marc-aurel",
+      "type": "influence",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Die Stoa entspringt direkt dem Kynismus — Zenon, ihr Gründer, war Schüler des Kynikers Krates. Die Stoa übernimmt die kynische Bedürfnislosigkeit und Naturgemäßheit, zähmt sie aber: Aus Diogenes' provokanter Schamlosigkeit wird die gesellschaftsfähige innere Distanz Marc Aurels. Der Kyniker verwirft die Welt, der Stoiker dient ihr gelassen."
+      }
+    },
+    {
+      "from": "epikur",
+      "to": "pyrrhon",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Epikur und Pyrrhon teilen das Ziel der Ataraxie, aber Pyrrhon radikalisiert den Weg: Wo Epikur die richtigen Überzeugungen über die Welt sucht (es gibt nichts zu fürchten), gibt der Skeptiker die Überzeugungen ganz auf. Beide enden in der Seelenruhe — der eine durch richtiges Wissen, der andere durch das Eingeständnis des Nichtwissens."
+      }
+    },
+    {
+      "from": "epikur",
+      "to": "montaigne",
+      "type": "influence",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Montaigne liest die Antiken als Werkzeugkasten für das eigene Leben und nimmt von Epikur die genießende Bescheidenheit auf — aber er löst sie aus dem Rückzug. Wo Epikur den Garten braucht, findet Montaigne die einfache Freude mitten im weltlichen Leben, im eigenen Turm wie unter Freunden. Aus der epikureischen Schmerzvermeidung wird bei ihm eine zugewandte Lebensfreude."
+      }
+    },
+    {
+      "from": "pyrrhon",
+      "to": "montaigne",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Montaignes ›Que sais-je?‹ (Was weiß ich?) erbt direkt die pyrrhonische Skepsis. Aber Montaigne zieht aus dem Nichtwissen nicht die strenge Urteilsenthaltung, sondern eine milde, tolerante Aufmerksamkeit auf das konkrete Leben. Die Skepsis wird bei ihm vom Mittel der Seelenruhe zur Haltung der Bescheidenheit gegenüber der eigenen Begrenztheit."
+      }
+    },
+    {
+      "from": "schopenhauer",
+      "to": "epikur",
+      "type": "influence",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Schopenhauers Lebensweisheit ist tief epikureisch in ihrer Defensive: Da Glück im Grunde nur Abwesenheit von Leiden ist, rät auch er zu Bedürfnisminimierung, Unabhängigkeit und der Pflege des Inneren statt des Äußeren. Aber wo Epikur heiter ist, ist Schopenhauer pessimistisch — dieselbe Strategie, anderer Grundton."
+      }
+    },
+    {
+      "from": "schopenhauer",
+      "to": "nietzsche",
+      "type": "critique",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Nietzsche war Schopenhauers leidenschaftlichster Leser und schärfster Überwinder. Er übernimmt die Diagnose — das Leben ist Leiden, ohne metaphysischen Trost —, verwirft aber die Konsequenz. Wo Schopenhauer Verneinung und Rückzug predigt, antwortet Nietzsche mit Bejahung und amor fati: nicht weg vom Leben, sondern leidenschaftlich hinein."
+      }
+    },
+    {
+      "from": "marc-aurel",
+      "to": "nietzsche",
+      "type": "critique",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Nietzsches amor fati ist die direkte Herausforderung der stoischen Gelassenheit. Beide bejahen das Notwendige, aber entgegengesetzt: Der Stoiker nimmt das Schicksal gleichmütig hin und schützt sich durch Distanz; Nietzsche verlangt, es leidenschaftlich zu wollen. Wo die Stoa Unerschütterlichkeit sucht, sucht Nietzsche Intensität — Ruhe gegen Rausch als zwei Gestalten der Lebensbejahung."
+      }
+    },
+    {
+      "from": "epikur",
+      "to": "mill",
+      "type": "influence",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Mill erbt von Epikur den hedonistischen Grundsatz — Lust ist das Gute —, öffnet ihn aber in die Gegenrichtung. Wo Epikurs Lust defensiv und ruhend ist (Schmerzfreiheit), ist Mills Lust qualitativ gestuft und aktiv: höhere Freuden des Geistes und der sozialen Bindung schlagen die niederen. Aus dem Rückzug-Hedonismus wird ein weltzugewandter."
+      }
+    },
+    {
+      "from": "marc-aurel",
+      "to": "epiktet",
+      "type": "influence",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Epiktet ist die Quelle, Marc Aurel der Erbe: Der Kaiser las den ehemaligen Sklaven und machte dessen Unterscheidung zwischen Eigenem und Fremdem zum Kern seiner Selbstbetrachtungen. Bei Epiktet ist sie scharfe Lehre, bei Marc Aurel verinnerlichte tägliche Übung — dieselbe Stoa, einmal als System, einmal als gelebtes Tagebuch."
+      }
+    },
+    {
+      "from": "nietzsche",
+      "to": "foucault",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Foucaults Ästhetik der Existenz erbt Nietzsches Idee der Selbsterschaffung: kein wahres Selbst, das man freilegt, sondern ein Leben, das man gestaltet. Aber Foucault verbindet sie mit der historischen Wiederentdeckung der antiken Selbstsorge — und macht aus Nietzsches einsamem Übermenschen-Projekt eine an die Antike anschließende Praxis der Selbstformung."
+      }
+    },
+    {
+      "from": "foucault",
+      "to": "hadot",
+      "type": "critique",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Hadot und Foucault entdecken beide die antike Philosophie als Lebensform wieder, streiten aber über ihren Kern. Für Hadot zielen die geistigen Übungen auf Selbst-Überschreitung — ein Aufgehen in einem größeren Ganzen (Natur, Kosmos, Vernunft). Foucault liest sie als Selbst-Gestaltung, als Ästhetik der Existenz ohne überindividuelles Ziel. Der Streit ist entscheidend: Ist Lebenskunst Hingabe an etwas Größeres oder Erschaffung des eigenen Selbst?"
+      }
+    },
+    {
+      "from": "aristoteles",
+      "to": "csikszentmihalyi",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Csíkszentmihályis Flow-Forschung bestätigt empirisch, was Aristoteles begrifflich behauptete: Das beste Erleben liegt im gekonnten Tätigsein, nicht im Genuss oder in der Ruhe. Über zwei Jahrtausende hinweg treffen sich die teleologische Eudaimonie und die empirische Psychologie im selben Befund — Glück ist eine Weise des Tuns, kein Zustand des Habens."
+      }
+    },
+    {
+      "from": "epiktet",
+      "to": "csikszentmihalyi",
+      "type": "influence",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Eine unterirdische Linie verbindet die Stoa mit der modernen Glücksforschung: Epiktets Einsicht, dass nicht die Ereignisse, sondern die Bewertungen das Erleben bestimmen, ist zur Grundlage der kognitiven Verhaltenstherapie geworden — dem klinischen Arm der modernen Glücksforschung. Was bei Epiktet philosophische Lebenskunst war, ist heute empirisch geprüfte Technik der Urteilskorrektur."
+      }
+    }
+  ]
+}

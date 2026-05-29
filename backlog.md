@@ -152,6 +152,8 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Referenz:** `bibliothek-architektur.md` im Repo-Root.
 **Nächster Schritt:** Nach zweitem Handlungs-Tableau aufnehmen.
 **Update 23.5.26:** Implizite Spur-Sichtbarkeit umgesetzt — Farb-Architektur als Familien-Signal, Spur-Reihenfolge in library.json, Eyebrow-Markierung pro Card (Spur-Name in Spur-Farbe, uppercase, 11px). Explizite Sichtbarkeits-Lösung (Section-Header / Trennstriche / Spur-Filter) bleibt offen, ausgelöst sobald alle Spuren mindestens zwei Tableaus tragen.
+**Update 29.5.26:** Bedingung erfüllt — alle drei Spuren haben nun ≥2 Tableaus (Erkenntnis 3, Handlung 2, Existenz 2). Explizite Sichtbarkeits-Lösung kann jetzt umgesetzt werden.
+**Nächster Schritt:** Section-Header / Trennstriche / Spur-Filter implementieren.
 
 ---
 
@@ -465,11 +467,23 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ### [x] Existenzialismus
 **Status:** implementiert 23.5.26 (Mild-Modus, verteilter Architekt-Prüfer-Workflow, zweite Prüfrunde)
-**Anker:** Gewachsen — *"Was tust du mit deiner Freiheit, wenn niemand dir sagt, was sie soll?"* — Vorarbeit seit Monaten: Buber, Kierkegaard-Angst-Begriff.
+**Anker:** Gewachsen — *"Was tust du mit deiner Freiheit, wenn niemand dir soll?"* — Vorarbeit seit Monaten: Buber, Kierkegaard-Angst-Begriff.
 **Ergebnis:** 13 Denker (Sartre + Heidegger je 7 Einfluss-Kanten als Hubs), 9 Konzepte, 7 Schulen, 20 Influences. Lectio `wenn-nichts-vorgegeben` (narrativ-historisch, L2, 5 Stationen: Nietzsche → Kierkegaard → Sartre → Frankl → Camus). Konzept-Echo-Pattern erstmals systematisch angewendet: *Fiktive Endorientierung* mit Adler-Verweis. Eröffnet **Existenz-Spur** der Sammlung.
 **Achsen:** X = Bejahung ↔ Verzweiflung, Y = Entwurf ↔ Geworfenheit. Buber peripher (x=25, y=72) als markierte Randstimme.
 **7 lectio_briefs:** 5 Lectio-Stationen (Nietzsche, Kierkegaard, Sartre, Frankl, Camus) + 2 Reserve (Heidegger → geplante Tod-Lectio, Dostojewski → ggf. Freiheits-Lectio).
 **Begleitnotiz:** 5 Lessons + 5 neue Backlog-Items (Farb-Architektur, Cross-Reference PP, 3 Methoden-Klarstellungen).
+
+---
+
+### [x] Lebenskunst
+**Status:** implementiert 29.5.26 (Mild-Modus, Architekt-Entwurf — Anker-Dokument in `lebenskunst-anker.md`)
+**Anker:** Gewachsen — *"Wie lebst du, dass dein Leben dir gelingt?"* — Epikur-Schuld aus Tod-Lebensfrage getilgt (`aus: lebenskunst/epikur` jetzt gültig).
+**Ergebnis:** 14 Denker (Aristoteles, Marc Aurel, Epikur als Hubs), 8 Konzepte, 6 Schulen. Spur: Existenz (hue 65, amber-gold). Zweites Existenz-Tableau — Bedingung für explizite Library-Sichtbarkeit erfüllt.
+**Achsen:** X = Lust/Genuss ↔ Tugend/Haltung · Y = Selbstgenügsamkeit/Rückzug ↔ Weltzuwendung/Tätigkeit. Vier Ecken klar besetzt: Epikur (Lust+Rückzug), Aristoteles (Tugend+Welt), Stoa (Tugend+Rückzug), Montaigne/Mill/Csíkszentmihályi (Lust+Welt).
+**Wandernde Knoten:** Aristoteles, Stoa, Nietzsche erscheinen in Ethik und Existenzialismus mit verschobenem Akzent — erster systematischer Einsatz des `related_topics`-Musters.
+**Methoden-Signal (v2.3):** Y-Inversions-Bug ist nun 4× aufgetreten. Pre-Liefer-Validator muss Achsen-Konvention aus einem bekannt-korrekten Referenz-Knoten kalibrieren (z.B. Kant=Individuum=y72 im Politik-Tableau), nicht aus Label-Intuition — sonst kodiert er denselben Vorzeichenfehler.
+**Nächster Schritt:** Lectio planen (Kandidat: destruktiv-aufbauend oder konkurrierend-konfrontativ um die Ataraxie-Frage).
+
 ---
 
 ### [ ] Quellen der Erkenntnis (Arbeitstitel)

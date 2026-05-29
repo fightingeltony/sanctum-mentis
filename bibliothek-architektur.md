@@ -57,24 +57,27 @@ Wenn die Library-Page diese Architektur sichtbar macht, gewinnt sie:
 
 Akzentfarben werden ab 23.5.26 nicht mehr pro Tableau einzeln vergeben, sondern folgen einer Spur-Logik. Jede Spur hat ein eigenes Hue-Band; innerhalb des Bands differenzieren Tableaus durch Hue-Position. Lightness und Chroma bleiben konstant, damit die Spuren als gleichwertig wahrgenommen werden.
 
-**Update 28.5.26:** Farbarchitektur nach Farb-Runde neu kalibriert. Die Bänder haben sich verschoben — insbesondere Existenz (war 110–160, ist jetzt ~45) und Handlung (war 15–55, ist jetzt 100–128). Symbolik-Beschreibungen sind provisorisch und müssen vom Kurator revidiert werden.
+**Update 28.5.26:** Farbarchitektur nach Farb-Runde neu kalibriert. Die Bänder haben sich verschoben — Existenz ist jetzt warm (≈35–70°, amber-gold), Handlung ist oliv-grün (100–128°), das frühere grüne Band (110–160°) ist freie Reserve. Symbolik-Beschreibungen sind provisorisch und müssen vom Kurator revidiert werden.
+
+**Update 29.5.26:** Lebenskunst (hue 65, Existenz-Spur) eingebunden. Existenz-Band jetzt mit zwei Tableaus (Existenzialismus 45, Lebenskunst 65) — Bandbreite ≈35–70° bestätigt.
 
 | Spur | Hue-Band | Symbolik (provisorisch) |
 |---|---|---|
 | Erkenntnis-Trias | 165°–295° (grün bis blau-violett) | Erkenntnis als distanzierende Operation |
 | Handlungs-Spur | 100°–128° (oliv-grün) | Handlung als geerdet, nüchtern — *zu präzisieren* |
-| Existenz-Spur | ~45° (warm amber) | Existenz als Unmittelbarkeit, Wärme — *zu präzisieren* |
+| Existenz-Spur | 35°–70° (warm amber-gold) | Existenz als Unmittelbarkeit, gelebtes Dasein — *zu präzisieren* |
 
-**Reserve:** Offen ca. 200° (Magenta-Pink, Cyan-Blau, Gelb-Orange) für künftige Spuren. Beim Hinzukommen einer vierten Spur wird das nächste Band entschieden — das ist *Erweiterung*, kein Umfärben.
+**Reserve:** Das frühere Existenz-Band (110–160°, erdig-grün) ist jetzt frei. Offen insgesamt ca. 200°+ (Magenta-Pink, Cyan-Blau, Gelb, Erdig-Grün) für künftige Spuren. Beim Hinzukommen einer vierten Spur wird das nächste Band entschieden — das ist *Erweiterung*, kein Umfärben.
 
 **Konstante Stellschrauben:** L ≈ 0.42–0.45, C ≈ 0.10–0.13.
 
-**Aktueller Bestand (Stand 28.5.26):**
+**Aktueller Bestand (Stand 29.5.26):**
 
 ```
 Selbst                   oklch(0.42 0.12 295)   Erkenntnis-Trias
 Geist                    oklch(0.44 0.13 240)   Erkenntnis-Trias
 Realismus                oklch(0.42 0.11 165)   Erkenntnis-Trias
+Lebenskunst              oklch(0.45 0.11  65)   Existenz-Spur
 Existenzialismus         oklch(0.42 0.10  45)   Existenz-Spur
 Politische Philosophie   oklch(0.44 0.12 128)   Handlungs-Spur
 Ethik                    oklch(0.45 0.12 100)   Handlungs-Spur
@@ -92,7 +95,7 @@ Die Spur-Architektur wird in der Library *implizit* sichtbar gemacht — ohne ha
 
 Keine harten Section-Header, keine Trennstriche zwischen Spuren. Begründung: Zwei der drei Spuren haben aktuell nur ein Tableau — Section-Header würden "Sektion mit einer Karte" zeigen, was unfertig wirkt. Die Hybrid-Lösung trägt jetzt und skaliert mit wachsender Sammlung.
 
-**Bedingung für explizite Sichtbarkeits-Lösung** (Section-Header, Trennstriche, ggf. Spur-Filter): Alle bestehenden Spuren tragen mindestens zwei Tableaus. Stand 28.5.26: Erkenntnis (3) ✓, Handlung (2: Ethik + Politische Philosophie) ✓, Existenz (1: Existenzialismus) ✗. Bedingung erfüllt, sobald ein zweites Existenz-Tableau live ist.
+**Bedingung für explizite Sichtbarkeits-Lösung** (Section-Header, Trennstriche, ggf. Spur-Filter): Alle bestehenden Spuren tragen mindestens zwei Tableaus. Stand 29.5.26: Erkenntnis (3) ✓, Handlung (2: Ethik + Politische Philosophie) ✓, Existenz (2: Existenzialismus + Lebenskunst) ✓. **Bedingung erfüllt** — explizite Sichtbarkeits-Lösung kann jetzt umgesetzt werden.
 
 ---
 
