@@ -29,6 +29,8 @@ Sammelort für Resonanzen aus dem ersten Beta-Test. Nicht jeder Eintrag wird zur
 
 **Tendenz:** A. Die jetzige Lectio ist Atman/Anatta-Bogen; eine zweite wäre psychologisch-westlich. Beide hätten klar getrennten Fokus, jede würde ihre eigene Stimme finden. Im `focus`-Feld der jetzigen Lectio könnte zusätzlich explizit gemacht werden, dass sie nicht den psychologischen Diskurs vollständig vertritt.
 
+**→ Abgearbeitet (Mai 2026):** Selbst-Lectio II (psychologisch-westlich, mit Adler) gebaut.
+
 ### Offene Frage
 
 > *"Was würd mit dem Pfad passieren, wenn mer es ganz konkretes Problem würd nä, und verschiedene Antworten bechunt? Zum Beispiel Thema Schmerz. Was wär denn konkret die verschiedene Antworten auf ein konkretes Problem?"*
@@ -85,7 +87,7 @@ Sie hat um Skript-Lesen gebeten — vorsichtig, mit expliziter Ablehnungs-Erlaub
 ### Implikationen für Sanctum (nicht jetzt umsetzen)
 
 - **Paradox / non-duales Denken als positive Bestimmung** der Wahrheitsanspruchs-Konvention prüfen
-- **Selbst-Lectio II (psychologisch-westlich, mit Adler):** weiter offen, Eintrag 22.5.26
+- **Selbst-Lectio II (psychologisch-westlich, mit Adler):** ~~weiter offen, Eintrag 22.5.26~~ → **abgearbeitet (Mai 2026)**
 - **Lebensfragen-Form ist gebaut und validiert** — Pflegeintensität bleibt offene Architektur-Frage
 - **Konvergenz Sanctum / Rohr:** Das Werk steht unbewusst in einer Linie, die nun bewusster verfolgt werden kann. Ohne sich daran zu binden.
 
