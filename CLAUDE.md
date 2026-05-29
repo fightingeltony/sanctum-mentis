@@ -204,7 +204,7 @@ Ergänzend zu Tableau-Bauten gibt es Lectios — geführte Pfade durch ein Table
 
 **Datenort:** `data/lectio/[id].json`. Loader in `src/lib/data.ts` (LECTIOS-Dictionary), Route `/lectio/[id]`.
 
-**Bestehende Lectios:** `hard-problem` (Geist) · `wer-beobachtet` (Selbst) · `findest-du-oder-machst-du` (Selbst) · `wenn-die-welt-wackelt` (Realismus) · `warum-sollst-du` (Ethik) · `wenn-nichts-vorgegeben` (Existenzialismus) · `warum-gehorchst-du` (Politische Philosophie).
+**Bestehende Lectios:** `hard-problem` (Geist) · `wer-beobachtet` (Selbst) · `findest-du-oder-machst-du` (Selbst) · `wenn-die-welt-wackelt` (Realismus) · `warum-sollst-du` (Ethik) · `wenn-nichts-vorgegeben` (Existenzialismus) · `warum-gehorchst-du` (Politische Philosophie) · `ruhe-oder-rausch` (Lebenskunst).
 
 ---
 

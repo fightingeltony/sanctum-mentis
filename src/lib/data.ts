@@ -14,6 +14,7 @@ import warumSollstDuRaw                    from '../../data/lectio/warum-sollst-
 import wennNichtsVorgegebenRaw             from '../../data/lectio/wenn-nichts-vorgegeben.json'
 import warumGehorchstDuRaw                from '../../data/lectio/warum-gehorchst-du.json'
 import findestDuOderMachstDuRaw            from '../../data/lectio/findest-du-oder-machst-du.json'
+import ruheOderRauschRaw                   from '../../data/lectio/ruhe-oder-rausch.json'
 import schmerzRaw                          from '../../data/lebensfragen/schmerz.json'
 import todRaw                              from '../../data/lebensfragen/tod.json'
 
@@ -59,6 +60,7 @@ const LECTIOS: Record<string, Lectio> = {
   'wenn-nichts-vorgegeben':       wennNichtsVorgegebenRaw       as unknown as Lectio,
   'warum-gehorchst-du':          warumGehorchstDuRaw           as unknown as Lectio,
   'findest-du-oder-machst-du':   findestDuOderMachstDuRaw      as unknown as Lectio,
+  'ruhe-oder-rausch':            ruheOderRauschRaw             as unknown as Lectio,
 }
 
 export function getLectio(id: string): Lectio | null {
