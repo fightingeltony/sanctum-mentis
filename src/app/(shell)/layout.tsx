@@ -48,14 +48,6 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
               Alpha
             </p>
           </div>
-          <p className="font-ui text-[11px] tracking-[0.04em]" style={{ color: 'var(--fg-faint)' }}>
-            <Link
-              href="/lebensfragen"
-              className="no-underline hover:text-[--fg-muted] transition-colors"
-            >
-              Lebensfragen
-            </Link>
-          </p>
         </div>
       </footer>
     </div>

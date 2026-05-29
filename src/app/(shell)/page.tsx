@@ -42,10 +42,15 @@ export default function LandingPage() {
         </Link>
         <Link
           href="/lebensfragen"
-          className="inline-flex items-center gap-2 px-5 py-3 border border-[--hairline] font-ui text-[12px] tracking-[0.18em] uppercase
-            text-[--fg-muted] hover:text-[--fg] no-underline transition-colors"
+          className="inline-flex items-center gap-2 px-5 py-3 border font-ui text-[12px] tracking-[0.18em] uppercase
+            no-underline transition-colors"
+          style={{
+            color: 'var(--accent)',
+            borderColor: 'var(--accent)',
+          }}
         >
           Lebensfragen
+          <span aria-hidden>→</span>
         </Link>
       </div>
 
