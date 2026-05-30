@@ -36,6 +36,8 @@ function resolveConceptThinker(concept: ConceptWithDesc, thinkers: Thinker[]): s
 const W = 980, H = 760  // taller canvas — extra 60 px bottom room for hints
 const PAD_X = 200  // wider horizontal margin to fit axis labels outside the frame
 const PAD_Y = 80   // increased from 60 — gives space for pole-hint rows
+const POLE_LABEL_WRAP = 19  // max chars before an X-pole label wraps to 2 lines
+                            // (≈ the longest single-line label that fits in PAD_X)
 const PIN_COLOR     = 'oklch(0.32 0.09 42)'  // dark sienna
 const PIN_SELECTED  = 'oklch(0.26 0.10 42)'
 const AXIS_COL      = 'oklch(0.35 0.022 65 / 0.55)'
@@ -197,53 +199,69 @@ export default function QuadrantPlot({
               ↑ {quadrants.axisY.label} ↓
             </text>
 
-            {/* ── X-axis: left pole ── */}
-            <text x={PAD_X - 12} y={H / 2}
-              textAnchor="end" dominantBaseline="middle"
-              fontFamily="'Marcellus SC', serif"
-              fontWeight="bold" fontSize={11} letterSpacing="0.18em"
-              fill={AXIS_LABEL} pointerEvents="none"
-            >
-              {quadrants.axisX.left.toUpperCase()}
-            </text>
-            {quadrants.axisX.leftHint && (() => {
-              const lines = wrapHint(quadrants.axisX.leftHint)
+            {/* ── X-axis: left pole (wraps to 2 lines when too long for the margin) ── */}
+            {(() => {
+              const labelLines = wrapHint(quadrants.axisX.left.toUpperCase(), POLE_LABEL_WRAP)
+              const multi = labelLines.length > 1
+              const hintLines = quadrants.axisX.leftHint ? wrapHint(quadrants.axisX.leftHint) : null
               return (
-                <text x={PAD_X - 12} y={H / 2 + 16}
-                  textAnchor="end"
-                  fontFamily="'Inter', system-ui, sans-serif"
-                  fontStyle="italic" fontSize={8} letterSpacing="0.04em"
-                  fill={AXIS_HINT} pointerEvents="none"
-                >
-                  {lines.map((line, i) => (
-                    <tspan key={i} x={PAD_X - 12} dy={i === 0 ? 0 : 11}>{line}</tspan>
-                  ))}
-                </text>
+                <>
+                  <text x={PAD_X - 12} y={H / 2 - (multi ? 6 : 0)}
+                    textAnchor="end" dominantBaseline="middle"
+                    fontFamily="'Marcellus SC', serif"
+                    fontWeight="bold" fontSize={11} letterSpacing="0.18em"
+                    fill={AXIS_LABEL} pointerEvents="none"
+                  >
+                    {labelLines.map((line, i) => (
+                      <tspan key={i} x={PAD_X - 12} dy={i === 0 ? 0 : 12}>{line}</tspan>
+                    ))}
+                  </text>
+                  {hintLines && (
+                    <text x={PAD_X - 12} y={H / 2 + (multi ? 22 : 16)}
+                      textAnchor="end"
+                      fontFamily="'Inter', system-ui, sans-serif"
+                      fontStyle="italic" fontSize={8} letterSpacing="0.04em"
+                      fill={AXIS_HINT} pointerEvents="none"
+                    >
+                      {hintLines.map((line, i) => (
+                        <tspan key={i} x={PAD_X - 12} dy={i === 0 ? 0 : 11}>{line}</tspan>
+                      ))}
+                    </text>
+                  )}
+                </>
               )
             })()}
 
-            {/* ── X-axis: right pole ── */}
-            <text x={W - PAD_X + 12} y={H / 2}
-              textAnchor="start" dominantBaseline="middle"
-              fontFamily="'Marcellus SC', serif"
-              fontWeight="bold" fontSize={11} letterSpacing="0.18em"
-              fill={AXIS_LABEL} pointerEvents="none"
-            >
-              {quadrants.axisX.right.toUpperCase()}
-            </text>
-            {quadrants.axisX.rightHint && (() => {
-              const lines = wrapHint(quadrants.axisX.rightHint)
+            {/* ── X-axis: right pole (wraps to 2 lines when too long for the margin) ── */}
+            {(() => {
+              const labelLines = wrapHint(quadrants.axisX.right.toUpperCase(), POLE_LABEL_WRAP)
+              const multi = labelLines.length > 1
+              const hintLines = quadrants.axisX.rightHint ? wrapHint(quadrants.axisX.rightHint) : null
               return (
-                <text x={W - PAD_X + 12} y={H / 2 + 16}
-                  textAnchor="start"
-                  fontFamily="'Inter', system-ui, sans-serif"
-                  fontStyle="italic" fontSize={8} letterSpacing="0.04em"
-                  fill={AXIS_HINT} pointerEvents="none"
-                >
-                  {lines.map((line, i) => (
-                    <tspan key={i} x={W - PAD_X + 12} dy={i === 0 ? 0 : 11}>{line}</tspan>
-                  ))}
-                </text>
+                <>
+                  <text x={W - PAD_X + 12} y={H / 2 - (multi ? 6 : 0)}
+                    textAnchor="start" dominantBaseline="middle"
+                    fontFamily="'Marcellus SC', serif"
+                    fontWeight="bold" fontSize={11} letterSpacing="0.18em"
+                    fill={AXIS_LABEL} pointerEvents="none"
+                  >
+                    {labelLines.map((line, i) => (
+                      <tspan key={i} x={W - PAD_X + 12} dy={i === 0 ? 0 : 12}>{line}</tspan>
+                    ))}
+                  </text>
+                  {hintLines && (
+                    <text x={W - PAD_X + 12} y={H / 2 + (multi ? 22 : 16)}
+                      textAnchor="start"
+                      fontFamily="'Inter', system-ui, sans-serif"
+                      fontStyle="italic" fontSize={8} letterSpacing="0.04em"
+                      fill={AXIS_HINT} pointerEvents="none"
+                    >
+                      {hintLines.map((line, i) => (
+                        <tspan key={i} x={W - PAD_X + 12} dy={i === 0 ? 0 : 11}>{line}</tspan>
+                      ))}
+                    </text>
+                  )}
+                </>
               )
             })()}
 
