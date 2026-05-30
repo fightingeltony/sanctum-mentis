@@ -448,6 +448,9 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ### [x] Farb-Architektur der Sammlung — eine Farbe pro Spur
 **Status:** implementiert 23.5.26 — drei Hue-Bänder (Erkenntnis 220°–290° kühl, Handlung 15°–55° warm, Existenz 110°–160° erdig). Alle 5 Tableau-JSONs + library.json aktualisiert. Konvention in `bibliothek-architektur.md` dokumentiert. Reserve für 2–3 weitere Spuren (Magenta, Cyan, Gelb).
+**Update 30.5.26 — Existenz-Palette festgelegt.** Auslöser: drei Existenz-Tableaus, keines sauber im Korridor. Finale Staffelung im warmen Band (35–70°):
+  Begegnung 35 · Existenzialismus 45 · Lebenskunst 65   (L 0.42–0.44, C 0.11–0.12)
+Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialismus 0.42/0.10/45 als final bestätigt (Platzhalter-Markierung entfernen). Lebenskunst L 0.45→0.44. library.json themeColor an die drei JSON-Akzente angeglichen. Begründung + kanonische Werte in begegnung-aenderung.md / farb-sitzung-existenz.md.
 
 ---
 
@@ -483,6 +486,50 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Wandernde Knoten:** Aristoteles, Stoa, Nietzsche erscheinen in Ethik und Existenzialismus mit verschobenem Akzent — erster systematischer Einsatz des `related_topics`-Musters.
 **Methoden-Signal (v2.3):** Y-Inversions-Bug ist nun 4× aufgetreten. Pre-Liefer-Validator muss Achsen-Konvention aus einem bekannt-korrekten Referenz-Knoten kalibrieren (z.B. Kant=Individuum=y72 im Politik-Tableau), nicht aus Label-Intuition — sonst kodiert er denselben Vorzeichenfehler.
 **Nächster Schritt:** Lectio planen (Kandidat: destruktiv-aufbauend oder konkurrierend-konfrontativ um die Ataraxie-Frage).
+
+---
+
+### [x] Begegnung (Der Andere)
+**Status:** implementiert 30.5.26 (Mild-Modus, externe Prüfung bestanden)
+**Anker:** Gewachsen — „Werde ich erst am Anderen zu mir selbst — und ist der Andere dabei Geschenk oder Zumutung?" Aus mehrtägigem Nachdenken über Bubers „Weg des Menschen".
+**Ergebnis:** 11 Denker (Buber als Haupt-Hub 6 Kanten/3 Stufen, Sartre als negativer Gegen-Hub), 8 Konzepte, 5 Schulen, 13 Influences. Spur: Existenz (hue 35). Drittes Existenz-Tableau.
+**Achsen:** X = Der Einzelne ist der Grund ↔ Die Beziehung ist der Grund · Y = Geschenk (nährend) ↔ Zumutung (bedrohlich). Quadranten-Verteilung 6/2/2/1 — Q1 (Einzelner+Geschenk) bewusst dünn (nur Aristoteles), als dritte Spannung in der Synthese verarbeitet: „Wer den Einzelnen zum Grund macht, dem wird der Andere fast zwangsläufig zur Grenze."
+**Wandernde Knoten (related_topics, Bestand unangetastet):** Buber, Marcel, Sartre, de Beauvoir → existenzialismus · Rogers → das-selbst · Aristoteles → ethik/lebenskunst. Kein gedoppelter Knoten.
+**Schul-Ausnahme:** tugendethik-der-freundschaft = Ein-Denker-Schule (nur Aristoteles), bewusst, dokumentiert in topic.meta.schoolExceptions (Cicero/De Amicitia als künftige zweite Stimme).
+**Prüfbefund (extern):** Reifstes Tableau der Serie, Koordinatentest auf Anhieb bestanden, keine Strukturfehler. Einziger Fund war die Farb-Einordnung → Farb-Sitzung (s.u.).
+**Bau-Panne (nachträglich):** levels-Format war falsch ({"level":N} statt {"id":N, "short":"LN"}) — von Code gefixt. Auslöser für JSON-Validator-Item (s.u.).
+
+---
+
+### [x] Lectio „Wo bist du?" (Der Weg des Menschen)
+**Status:** implementiert 30.5.26, externe Prüfung bestanden
+**Tableau:** begegnung · **Pfad-Typ:** kontemplativ-vertiefend (NEU, erster Fall) · L2, 4 Stationen, ~16 Min.
+**Form:** Erste Ein-Werk-Lectio der Sammlung — drei Stationen durch DENSELBEN Buber-Knoten (je eine Stufe von „Der Weg des Menschen": Wo bist du? → Umkehr/Sammlung → bei sich beginnen, nicht bei sich enden), dann Doppelstation Marcel+Rogers als Zeugen der Wende.
+**Schema-Erweiterung:** Feld `step_brief` auf LectioStep — überschreibt den Knoten-Text pro Station, damit derselbe Knoten dreimal verschiedenen Text zeigt. Engine-Priorität: step_brief → lectio_brief → versions[level] → Fallback.
+**Anker:** Gewachsen aus der Retraite-Erfahrung des Kurators — „Wo bist du?" als berührendster Moment, und die Einsicht, dass Begegnung übers offene Herz läuft, nicht über die Logik (offene Türen einrennen). closing_question kehrt zum „Wo bist du?" zurück (Zirkel-Signatur), gewendet ins Handeln.
+**Methoden-Disziplin (Befund #2):** Pfad-Typ kontemplativ-vertiefend wird NICHT sofort in lectio-mode kanonisiert — nur ein Fall. Aufnahme (dann v1.10) wartet auf einen zweiten, unabhängigen kontemplativ-vertiefenden Bau. lectio-mode bleibt v1.9.
+
+---
+
+### [ ] Diagonal-Lectio „Ist der Andere Hölle oder Heimat?" (Begegnung)
+**Status:** geplant 30.5.26 — zweiter Strang des Begegnung-Tableaus
+**Pfad-Typ:** konkurrierend-konfrontativ (Gegentyp zur stillen „Wo bist du?")
+**Stationen (4):** Sartre (der Blick versklavt) → Hegel (Anerkennung nur durch Kampf) → Buber+Marcel (das Du, das werden lässt) → Lévinas (der Andere als unendlicher Anspruch). Schreitet die Diagonale + Y-Achse des Tableaus ab (Zumutung ↔ Geschenk).
+**Knoten existieren alle** — kein Nachbau nötig. lectio_briefs prüfen: Hegel/Honneth/Sartre/de Beauvoir/Lévinas brauchen ggf. noch Briefs (nur Buber/Marcel/Rogers haben sie).
+**Wäre KEIN zweiter Beleg für kontemplativ-vertiefend** (anderer Typ) — die v1.10-Frage bleibt davon unberührt.
+**Nächster Schritt:** In frischem Chat bauen, mit vollem Kontext aber ohne Session-Ballast.
+
+---
+
+### [ ] JSON-Validator beim Build (Tableau + Lectio)
+**Status:** identifiziert 30.5.26, ausgelöst durch levels-Format-Panne im Begegnung-Bau
+**Problem:** JSONs werden per `as unknown as TopicData` eingebunden — tsc prüft die Struktur nicht. Feld-Mismatches (level vs. id), fehlende Pflichtfelder und tote Referenzen brechen erst still im Browser. Der levels-Bug (Slider zeigte keine Stufen) war der erste sichtbare Fall; dieselbe blinde Stelle gilt für quadrants, versions-Keys, schoolId, influence-Endpunkte.
+**Lösung (drei Prüfklassen in einem Tool):**
+1. **Schema (zod):** Tableau-/Lectio-JSON gegen ein zod-Schema, abgeleitet aus/synchron mit types.ts. Ersetzt `as unknown as`. Fängt level↔id und fehlende Felder.
+2. **Referenz-Integrität:** jede schoolId → existierende Schule, jeder influence-Endpunkt → existierender Knoten, jeder Lectio-nodeId → Tableau-Knoten, kuratiert_aus_tableaus == genutzte aus.tableau. (Genau die Checks, die in der Session manuell liefen.)
+3. **Koordinaten-Plausibilität:** Y-Konvention gegen einen BEKANNT-KORREKTEN Anker-Knoten kalibrieren (nicht gegen Label-Intuition — sonst kodiert der Validator den Y-Inversions-Bug mit). Der Bug ist 4× aufgetreten; dieser Check verhindert den 5.
+**Bündelt:** die früheren losen Prüfer-Vorschläge „mechanischer Koordinaten-Validator" (Lebenskunst-Review) und „Schul-Heuristik: Schule = geteilte Begründungsstruktur, nicht geteiltes Thema" (Begegnung-Review). Letztere als Lint-Warnung bei Ein-Denker-Schulen.
+**Läuft beim Build, nicht zur Laufzeit.**
 
 ---
 

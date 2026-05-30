@@ -192,7 +192,7 @@ Bedingung für Wiederholbarkeit: `prompts/mild-mode.md` und `prompts/hard-mode.m
 
 Ergänzend zu Tableau-Bauten gibt es Lectios — geführte Pfade durch ein Tableau (4–6 Stationen, kuratorischer Bogen, offenes Ende). Komplementär zur räumlichen Karte: Lectio ist temporal, nicht explorativ.
 
-**Bau-Konvention** in `prompts/lectio-mode.md` (aktuell v1.8). Zehn methodische Entscheidungen, vier Pfad-Typen:
+**Bau-Konvention** in `prompts/lectio-mode.md` (aktuell v1.9). Zehn methodische Entscheidungen, vier Pfad-Typen:
 - *narrativ-historisch* — Stationen lösen sich chronologisch ab (Geist/Hard Problem)
 - *konkurrierend-konfrontativ* — gleichzeitige Positionen zur selben Frage (Selbst/Wer beobachtet)
 - *emotional-kumulativ* — Stationen kumulieren in einer emotionalen Bewegung (Realismus/Wenn die Welt wackelt)
@@ -200,11 +200,15 @@ Ergänzend zu Tableau-Bauten gibt es Lectios — geführte Pfade durch ein Table
 
 **`lectio_brief`-Feld:** Optionales Feld `lectio_brief` auf Thinker/Concept/School im Tableau-JSON. Wenn vorhanden, wird es in der Lectio statt des `versions`-Texts gezeigt — 2–3 dichte Sätze, keine Annotationen. Bei neuen Tableaus mit geplanter Lectio direkt beim Knoten mitschreiben.
 
+**Schema-Feld `step_brief` (seit 30.5.26):** Optionales Feld auf LectioStep. Wenn gesetzt, überschreibt es den Knoten-Text NUR für diese Station — ermöglicht Ein-Werk-Lectios, bei denen derselbe Knoten an mehreren Stationen mit verschiedenem Text erscheint. Engine-Priorität in lectioEngine.ts: step_brief → lectio_brief → versions[level] → Fallback. Nur für Einzelknoten-Stationen, nicht für Doppelstationen (Array-nodeId). Erste Anwendung: der-weg-des-menschen.json.
+
+**Feld `path_type` (Datenwert, seit 30.5.26):** Beschreibt den Pfad-Typ einer Lectio im JSON (narrativ-historisch / konkurrierend-konfrontativ / emotional-kumulativ / destruktiv-aufbauend / kontemplativ-vertiefend). ACHTUNG: kontemplativ-vertiefend ist als DATENWERT gesetzt, aber NOCH NICHT als Methoden-Konvention in lectio-mode aufgenommen (nur ein Fall; wartet auf zweiten — Befund #2 „destillieren, nicht postulieren"). lectio-mode bleibt v1.9.
+
 **Konvention Offener Ausgang:** Sanctum darf eine kuratorische Haltung haben, aber keine Wahrheit verkünden. Schlussfragen öffnen, phänomenologische Sprache statt ontologischer Behauptungen. Ausführlich in `prompts/lectio-mode.md` Punkt 10 und `bibliothek-architektur.md` Sektion "Bibliothek mit Haltung, ohne Wahrheitsanspruch".
 
 **Datenort:** `data/lectio/[id].json`. Loader in `src/lib/data.ts` (LECTIOS-Dictionary), Route `/lectio/[id]`.
 
-**Bestehende Lectios:** `hard-problem` (Geist) · `wer-beobachtet` (Selbst) · `findest-du-oder-machst-du` (Selbst) · `wenn-die-welt-wackelt` (Realismus) · `warum-sollst-du` (Ethik) · `wenn-nichts-vorgegeben` (Existenzialismus) · `warum-gehorchst-du` (Politische Philosophie) · `ruhe-oder-rausch` (Lebenskunst).
+**Bestehende Lectios:** `hard-problem` (Geist) · `wer-beobachtet` (Selbst) · `findest-du-oder-machst-du` (Selbst) · `wenn-die-welt-wackelt` (Realismus) · `warum-sollst-du` (Ethik) · `wenn-nichts-vorgegeben` (Existenzialismus) · `warum-gehorchst-du` (Politische Philosophie) · `ruhe-oder-rausch` (Lebenskunst) · `der-weg-des-menschen` (Begegnung — Ein-Werk-Lectio, kontemplativ-vertiefend).
 
 ---
 
