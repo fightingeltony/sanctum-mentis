@@ -105,13 +105,16 @@ Akzentfarben werden ab 23.5.26 nicht mehr pro Tableau einzeln vergeben, sondern 
 
 **Update 30.5.26:** Begegnung (hue 35, Existenz-Spur) eingebunden. Existenz-Band jetzt mit drei Tableaus (Begegnung 35 · Existenzialismus 45 · Lebenskunst 65), Staffelung mit ≥10° Abstand. Existenzialismus von „Platzhalter" auf final. Existenz-Spur-Palette abgeschlossen. Deklaration der Begegnung-Akzent-Korrektur (Hue 25→35) siehe `begegnung-aenderung.md`.
 
+**Update 30.5.26 (Wandlung):** Vierte Spur eröffnet. Wandlung (hue 152, erdig-grün) belegt das frühere Reserve-Band (110–160°). Abstand zu Handlung (oliv 100–128°): 24° — beim Live-Klick prüfen; ggf. auf ~158° ausweichen. Library-Sichtbarkeits-Bedingung (alle Spuren ≥2 Tableaus) wieder gebrochen — explizite Section-Header warten bis Wandlung-Spur ein zweites Tableau hat.
+
 | Spur | Hue-Band | Symbolik (provisorisch) |
 |---|---|---|
 | Erkenntnis-Trias | 165°–295° (grün bis blau-violett) | Erkenntnis als distanzierende Operation |
 | Handlungs-Spur | 100°–128° (oliv-grün) | Handlung als geerdet, nüchtern — *zu präzisieren* |
 | Existenz-Spur | 35°–70° (warm amber-gold) | Existenz als Unmittelbarkeit, gelebtes Dasein — *zu präzisieren* |
+| Wandlung-Spur | 150°–160° (erdig-grün) | Wandlung als Wachstum, Lebendigkeit — *zu präzisieren* |
 
-**Reserve:** Das frühere Existenz-Band (110–160°, erdig-grün) ist jetzt frei. Offen insgesamt ca. 200°+ (Magenta-Pink, Cyan-Blau, Gelb, Erdig-Grün) für künftige Spuren. Beim Hinzukommen einer vierten Spur wird das nächste Band entschieden — das ist *Erweiterung*, kein Umfärben.
+**Reserve:** Offen ca. 180°+ (Magenta-Pink, Cyan-Blau, Gelb) für künftige Spuren.
 
 **Konstante Stellschrauben:** L ≈ 0.42–0.45, C ≈ 0.10–0.13.
 
@@ -121,14 +124,15 @@ Akzentfarben werden ab 23.5.26 nicht mehr pro Tableau einzeln vergeben, sondern 
 Selbst                   oklch(0.42 0.12 295)   Erkenntnis-Trias
 Geist                    oklch(0.44 0.13 240)   Erkenntnis-Trias
 Realismus                oklch(0.42 0.11 165)   Erkenntnis-Trias
-Begegnung                oklch(0.43 0.12  35)   Existenz-Spur      ← NEU
-Existenzialismus         oklch(0.42 0.10  45)   Existenz-Spur      ← final (war Platzhalter)
-Lebenskunst              oklch(0.44 0.11  65)   Existenz-Spur      ← L 0.45→0.44
+Begegnung                oklch(0.43 0.12  35)   Existenz-Spur
+Existenzialismus         oklch(0.42 0.10  45)   Existenz-Spur
+Lebenskunst              oklch(0.44 0.11  65)   Existenz-Spur
 Politische Philosophie   oklch(0.44 0.12 128)   Handlungs-Spur
 Ethik                    oklch(0.45 0.12 100)   Handlungs-Spur
+Wandlung                 oklch(0.43 0.11 152)   Wandlung-Spur      ← NEU (4. Spur)
 ```
 
-**Verhältnis zu „Library-Architektur sichtbar machen":** Die Farb-Architektur ist *implizite* Spur-Sichtbarmachung. Explizite Sichtbarmachung (Trennstriche, Header, zwei Reihen) bleibt eigenes Backlog-Item, ausgelöst sobald die Handlungs-Spur ein zweites live-Tableau hat.
+**Verhältnis zu „Library-Architektur sichtbar machen":** Die Farb-Architektur ist *implizite* Spur-Sichtbarmachung. Explizite Sichtbarmachung (Trennstriche, Header, zwei Reihen) bleibt eigenes Backlog-Item, ausgelöst sobald JEDE Spur ≥2 live-Tableaus hat (Wandlung hat derzeit 1).
 
 ## Spur-Sichtbarkeit — Hybrid
 

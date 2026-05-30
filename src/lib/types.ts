@@ -2,7 +2,7 @@
 // Lern-Companion: Denker, Konzepte, Schulen, Einflüsse — gefiltert nach Komplexitäts-Level.
 
 /** Sammlungs-Spur — kuratorische Architektur-Ebene */
-export type Spur = 'erkenntnis' | 'handlung' | 'existenz'
+export type Spur = 'erkenntnis' | 'handlung' | 'existenz' | 'wandlung'
 
 /** Themen-spezifisches Theme — wird als CSS-Variablen injiziert */
 export interface TopicTheme {

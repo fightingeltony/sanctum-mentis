@@ -86,5 +86,16 @@
     "spur": "handlung",
     "desc": "Tugendethik, Deontologie, Konsequentialismus — und ihre modernen Varianten.",
     "tags": ["Tugend", "Pflicht", "Folgen"]
+  },
+  {
+    "id": "wandlung",
+    "title": "Wandlung",
+    "subtitle": "Wandlung — Was muss geschehen, damit ein Mensch ein anderer wird?",
+    "era": "19. Jh. – Gegenwart",
+    "themeColor": "oklch(0.43 0.11 152)",
+    "status": "available",
+    "spur": "wandlung",
+    "desc": "Von Freud bis Kabat-Zinn — was Therapie, Achtsamkeit und Körperarbeit über Veränderung wissen: Einsicht, Erfahrung, Beziehung.",
+    "tags": ["Therapie", "Transformation", "Heilung", "Veränderung"]
   }
 ]

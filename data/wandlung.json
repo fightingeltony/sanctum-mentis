@@ -1,0 +1,477 @@
+{
+  "topic": {
+    "id": "wandlung",
+    "title": "Wandlung",
+    "subtitle": "Wandlung — Was muss geschehen, damit ein Mensch ein anderer wird?",
+    "intro": "Musst du verstehen, woher es kommt — oder genügt es, anders weiterzugehen?",
+    "synthesis": "Die Schulen der Wandlung streiten nicht über ein Detail, sondern über das, was einen Menschen überhaupt verändert. Die eine Linie sagt: Du musst verstehen, woher es kommt — erst die Einsicht löst (Freud, Beck, Ellis). Die andere sagt: Verstehen ändert nichts, du musst es neu erleben — im Körper, im Moment, in der Begegnung (van der Kolk, Perls, Gendlin, Rogers). Quer dazu liegt eine zweite Frage: Geschieht Wandlung im Inneren eines Menschen, oder erst im Zwischen — ändere ich mich allein, oder nur in Beziehung und im System? Auffällig ist, dass keine Schule ohne die andere auskommt: Die kognitivste Therapie braucht eine tragende Beziehung, die erlebnisorientierteste braucht ein Verstehen ihrer selbst. Und über allem steht die nüchterne Beobachtung des Stufenmodells: Wandlung ist selten ein Sprung, meist ein langsames Hin und Her zwischen Rückfall und Fortschritt. Vielleicht ist Wandlung darum kein Ort auf der Karte, sondern die Bewegung zwischen ihren Polen.",
+    "theme": {
+      "accent": "oklch(0.43 0.11 152)",
+      "accentSoft": "oklch(0.93 0.03 152)"
+    },
+    "spur": "wandlung",
+    "complexityLevels": 5,
+    "quadrants": {
+      "axisX": {
+        "label": "Was heilt einen Menschen?",
+        "left": "Verstehen",
+        "leftHint": "Heilung durch Einsicht — den Grund durchschauen, bewusst machen",
+        "right": "Erfahren",
+        "rightHint": "Heilung durch Erleben — im Körper, im Moment, neu erfahren"
+      },
+      "axisY": {
+        "label": "Wo geschieht die Wandlung?",
+        "top": "Im Einzelnen",
+        "topHint": "Veränderung im Inneren der Person",
+        "bottom": "In Beziehung",
+        "bottomHint": "Veränderung im Zwischen, im System, in der Begegnung"
+      }
+    },
+    "meta": {
+      "ankertyp": "gewachsen",
+      "spurHinweis": "Eröffnet die vierte Sammlungs-Spur 'Wandlung' (erdig-grün, hue 152, freies Reserve-Band laut bibliothek-architektur.md 30.5.; Existenz-Spur wohnt warm bei 35–70°, keine Kollision). Die Spur ist BEWUSST breiter gefasst als ihr erstes Tableau: 'Wandlung' meint Veränderung des Menschen allgemein (auch Konversion, Bildung, biografische Brüche, Reifung). Dieses erste Tableau behandelt die therapeutische Wandlung — es schöpft die Spur bewusst NICHT aus, damit künftige Tableaus (z.B. spirituelle Transformation, Entwicklungspsychologie, Bildungsprozesse) unter derselben Spur Platz haben. Das erste Tableau soll die Spur-Identität NICHT auf Therapie zementieren. Farb-Abstand: zu Handlung (oliv 100–128°) nur 24° — beim Live-Klick prüfen, ob Grün sich klar abhebt; ggf. auf ~158° ausweichen (unter 160° bleiben).",
+      "tiefeNachgezogen": "Erste Fassung (30.5.) war horizontal fertig, vertikal nicht gebaut (0 Konzepte, 0 Annotationen, 0 Hubs) — Prüfbefund. Nachgezogen: 8 Konzepte mit Typen (theory/concept/axiom/method/phenomenon), Annotationen über die Stufen verteilt, 3 echte Hubs auf 3 Textstufen (Freud, Rogers, Perls — Kantengrad 4, graph-gedeckt). Damit Mild-Standard erfüllt, nicht mehr Solo.",
+      "abgrenzungSelbst": "Wandlung fragt prozessual (wie verändert sich ein Mensch, was heilt?), nicht ontologisch (was IST das Selbst?). Jung/Kohut/IFS sitzen bewusst in 'Das Selbst' und sind hier NICHT aufgenommen — sie wären Wiedergänger ohne neue prozessuale Pointe. Rogers und Adler erscheinen in beiden Tableaus, aber unter verschiedener Frage (Familien-Pattern auf Tableau-Ebene).",
+      "relationalerPol": "Bewusst maßvoll besetzt (Adler, Rogers, Satir). Der relationale Pol grenzt Wandlung von 'Begegnung' ab, wo Beziehung selbst das Thema ist; hier ist sie nur einer von mehreren Heilungswegen.",
+      "schoolExceptions": "Fünf Schulen sind im Mild-Bau bewusst mit nur einer Stimme besetzt. Das ist KEIN getarntes Anti-Muster (Einzelposition als Schule), sondern Größenentscheidung: Es sind real benannte Therapie-Traditionen mit offensichtlichen weiteren Vertretern, die im Mild-Umfang (12 Denker) nicht aufgenommen wurden. Erweiterungs-Kandidaten je Schule: koerper-traumatherapie (weitere: Reich, Levine/Somatic Experiencing, Ogden/Sensorimotor); humanistische-therapie (Maslow, Bugental, Greenberg/EFT); systemische-therapie (Minuchin, Selvini Palazzoli, de Shazer/lösungsorientiert, Bowen); achtsamkeitsbasierte-verfahren (Segal/Williams/Teasdale/MBCT, Linehan/DBT, Hayes/ACT); logotherapie (Längle/Existenzanalyse, Yalom als verwandte existenzielle Therapie). Anders als das CLAUDE.md-Anti-Muster 'selbstmodell-theorie = nur Metzinger' filtern diese Schulen sinnvoll, sobald das Tableau wächst — sie sind Eingänge in erweiterbare Felder, keine umetikettierten Personen. Der Schul-Lint-Check soll hier nur warnen, nicht blockieren."
+    }
+  },
+  "levels": [
+    { "id": 1, "label": "Einstieg", "short": "L1", "filled": false },
+    { "id": 2, "label": "Grundlagen", "short": "L2", "filled": false },
+    { "id": 3, "label": "Vertiefung", "short": "L3", "filled": false },
+    { "id": 4, "label": "Analyse", "short": "L4", "filled": false },
+    { "id": 5, "label": "Synthese", "short": "L5", "filled": false }
+  ],
+  "schools": [
+    { "id": "psychoanalyse", "label": "Psychoanalyse", "color": "oklch(0.42 0.11 145)", "glyph": "Ψ", "gx": -290, "gy": -210, "labelDir": "NW" },
+    { "id": "kognitive-verhaltenstherapie", "label": "Kognitive Verhaltenstherapie", "color": "oklch(0.40 0.10 160)", "glyph": "◧", "gx": -300, "gy": -120, "labelDir": "W" },
+    { "id": "gestalt-erlebnistherapie", "label": "Gestalt- & Erlebnistherapie", "color": "oklch(0.44 0.12 135)", "glyph": "◑", "gx": 280, "gy": -200, "labelDir": "NE" },
+    { "id": "koerper-traumatherapie", "label": "Körper- & Traumatherapie", "color": "oklch(0.42 0.12 120)", "glyph": "❋", "gx": 300, "gy": -110, "labelDir": "E" },
+    { "id": "humanistische-therapie", "label": "Humanistische Therapie", "color": "oklch(0.45 0.11 168)", "glyph": "◇", "gx": 250, "gy": 200, "labelDir": "SE" },
+    { "id": "systemische-therapie", "label": "Systemische Therapie", "color": "oklch(0.43 0.10 178)", "glyph": "⬡", "gx": 120, "gy": 230, "labelDir": "S" },
+    { "id": "achtsamkeitsbasierte-verfahren", "label": "Achtsamkeitsbasierte Verfahren", "color": "oklch(0.46 0.10 150)", "glyph": "○", "gx": 300, "gy": -40, "labelDir": "E" },
+    { "id": "logotherapie", "label": "Logotherapie", "color": "oklch(0.41 0.11 140)", "glyph": "✦", "gx": -200, "gy": 180, "labelDir": "SW" }
+  ],
+  "thinkers": [
+    {
+      "id": "freud",
+      "name": "Sigmund Freud",
+      "lifespan": "1856–1939",
+      "firstLevel": 1,
+      "schoolId": "psychoanalyse",
+      "x": 18,
+      "y": 80,
+      "graphX": -280,
+      "graphY": -200,
+      "versions": {
+        "1": "Freud ist der Urvater der modernen Psychotherapie — und seine Grundidee prägt bis heute, was viele unter Heilung verstehen: Was uns heute belastet, hat seine Wurzeln in der Vergangenheit, meist in der Kindheit, und meist im Verborgenen. Symptome sind für Freud keine Zufälle, sondern verschlüsselte Botschaften aus dem Unbewussten — aus all dem, was zu schmerzhaft war, um bewusst zu bleiben, und darum verdrängt wurde. Wandlung geschieht, indem das Verdrängte ans Licht kommt: Was unbewusst war, wird bewusst gemacht, durchgearbeitet, verstanden. Erst wer den Grund seines Leidens durchschaut, kann sich von ihm lösen.",
+        "3": "Freuds Position im Tableau ist der Eckpfeiler oben links: Wandlung durch Verstehen, im Inneren des Einzelnen. Die therapeutische Bewegung ist rückwärtsgewandt und deutend — die Couch, die freie Assoziation, die Traumdeutung dienen alle dem einen Ziel, das Unbewusste lesbar zu machen. ›Wo Es war, soll Ich werden‹: Der dunkle, triebhafte Untergrund soll durch bewusste Einsicht ein Stück weit eingeholt werden. Das ist der Ursprung der gesamten ›sprechenden Kur‹ — und gleichzeitig die Position, gegen die sich fast alle späteren Schulen in irgendeiner Weise abgearbeitet haben: zu vergangenheitsfixiert die einen, zu kopflastig die anderen, zu wenig auf das Erleben im Hier und Jetzt bezogen die dritten.",
+        "5": "Auf der höchsten Stufe wird Freuds Stellung als negativer Hub des ganzen Tableaus sichtbar — die Position, an der sich alle anderen reiben. Adler bricht mit ihm (Ziel statt Ursache), Perls kehrt ihn um (Erleben statt Deuten), Beck verlegt sein Verstehen in die Gegenwart, Ellis erklärt seine Ursachensuche für überflüssig, van der Kolk zeigt, wo das Sprechen an Grenzen stößt. Keine dieser Schulen wäre ohne Freud denkbar; jede definiert sich als Antwort auf ihn. Das ist die Pointe der Verstehen-Seite: Freud hat die Grundgleichung gestiftet, dass Bewusstmachen heilt — und die ganze Therapiegeschichte ist die Auseinandersetzung mit der Frage, ob das stimmt, und wenn ja, was genau bewusst werden muss: die Vergangenheit, der Gedanke, der Sinn, das soziale Ziel oder am Ende doch der Körper, der sich nicht aussprechen lässt. Freud sitzt im Tableau allein in seiner Ecke (Verstehen + Einzelner + Vergangenheit) — und genau diese Einsamkeit macht ihn zum Bezugspunkt aller anderen."
+      }
+    },
+    {
+      "id": "rogers",
+      "name": "Carl Rogers",
+      "lifespan": "1902–1987",
+      "firstLevel": 1,
+      "schoolId": "humanistische-therapie",
+      "x": 70,
+      "y": 22,
+      "graphX": 240,
+      "graphY": 190,
+      "versions": {
+        "1": "Rogers stellt die ganze Therapie vom Kopf auf die Beziehung. Seine revolutionäre These: Menschen heilen nicht durch clevere Deutungen des Therapeuten, sondern durch eine bestimmte Qualität von Beziehung. Wenn ein Mensch echte Wertschätzung ohne Bedingungen erfährt, einfühlsames Verstehen und einen Gegenüber, der ehrlich ist, dann beginnt in ihm von selbst eine Bewegung hin zu Wachstum. Rogers nennt das die [[Aktualisierungstendenz:der eingebaute Zug jedes Menschen, sich zu entfalten, wenn die Bedingungen stimmen]] — den eingebauten Zug jedes Menschen, sich zu entfalten, wenn die Bedingungen stimmen. Heilung braucht keine Technik, sondern eine tragende Begegnung.",
+        "3": "Rogers besetzt die Ecke unten rechts: Wandlung durch Erfahren, und zwar in Beziehung. Er ist der eine große relationale Heilungsweg, der nicht über das System geht (wie die systemische Therapie), sondern über die unmittelbare Zweierbeziehung von Klient und Therapeut. Seine drei Kernbedingungen — [[bedingungslose positive Wertschätzung:den Klienten ganz annehmen, ohne sein Verhalten zur Bedingung der Annahme zu machen]], Empathie, [[Kongruenz:die Echtheit des Therapeuten — kein Spielen einer Rolle, sondern ein wirklicher Mensch sein]] — sind keine Techniken, sondern Haltungen. Damit verschiebt Rogers den Wirkort der Therapie radikal: nicht in die Deutung, nicht in die Methode, sondern in das, was zwischen zwei Menschen geschieht. Diese Verschiebung hat die gesamte Therapiekultur des 20. Jahrhunderts geprägt — auch Schulen, die ihm sonst wenig verdanken, setzen die ›therapeutische Beziehung‹ heute als Wirkfaktor voraus.",
+        "4": "Auf der höheren Stufe zeigt sich Rogers als heimlicher Hub des ganzen Erfahren-Pols: Fast jede erlebnisorientierte und relationale Stimme im Tableau verdankt ihm etwas. Perls teilt das Vertrauen in die Selbstheilungskraft des Erlebens (streitet nur über den Stil — sanft gegen konfrontativ); Satir überträgt Rogers' Wachstumsvertrauen aufs Familiensystem; Gendlin entwickelte Focusing direkt aus der Frage, warum Rogers' Methode bei manchen wirkt und bei anderen nicht; und Kabat-Zinns nicht-wertendes Gewahrsein ist Rogers' annehmende Haltung, nach innen gewendet. Rogers' eigene Grenze ist die Kehrseite seines Optimismus: Das Vertrauen in die Aktualisierungstendenz hat keine Antwort auf die Frage, was bei schwerer Traumatisierung geschieht, wo der ›organische Zug zum Wachstum‹ vom Nervensystem selbst blockiert wird — genau dort setzt van der Kolk an."
+      }
+    },
+    {
+      "id": "beck",
+      "name": "Aaron Beck",
+      "lifespan": "1921–2021",
+      "firstLevel": 2,
+      "schoolId": "kognitive-verhaltenstherapie",
+      "x": 24,
+      "y": 64,
+      "graphX": -290,
+      "graphY": -120,
+      "versions": {
+        "2": "Beck begründete die kognitive Therapie mit einer einfachen, folgenreichen Beobachtung: Zwischen einem Ereignis und unserem Gefühl steht immer ein Gedanke — und oft ist es dieser Gedanke, nicht das Ereignis, der uns leiden lässt. Depressive Menschen denken in systematischen Verzerrungen: Sie verallgemeinern Einzelfälle (›immer scheitere ich‹), filtern das Positive heraus, deuten Neutrales negativ. Wandlung geschieht, indem man diese [[automatischen Gedanken:blitzschnelle, ungeprüfte Bewertungen, die einer Situation sofort folgen und das Gefühl steuern]] erkennt, prüft und durch realistischere ersetzt. Beck bleibt damit auf der Seite des Verstehens — aber anders als Freud blickt er nicht zurück in die Kindheit, sondern auf die Denkmuster im Hier und Jetzt.",
+        "3": "Beck sitzt im Tableau oben links, nahe bei Freud — beide setzen auf Einsicht im Einzelnen —, aber mit einer entscheidenden Verschiebung der Blickrichtung. Wo Freud rückwärts gräbt, arbeitet Beck am gegenwärtigen Denken: Die kognitive Therapie ist gegenwartsorientiertes Verstehen. Das Symptom wird nicht als verschlüsselte Botschaft aus der Vergangenheit gelesen, sondern als Resultat überprüfbarer Denkfehler. Diese Verschiebung machte die Therapie messbar, kurzfristig und wissenschaftlich evaluierbar — die kognitive Verhaltenstherapie ist heute das am besten beforschte Verfahren überhaupt. Der Preis dieser Klarheit ist eine gewisse Engführung: Was sich nicht als Gedanke fassen lässt — das körperlich Gespürte, das Vorsprachliche —, gerät bei Beck leichter aus dem Blick."
+      }
+    },
+    {
+      "id": "perls",
+      "name": "Fritz Perls",
+      "lifespan": "1893–1970",
+      "firstLevel": 2,
+      "schoolId": "gestalt-erlebnistherapie",
+      "x": 76,
+      "y": 74,
+      "graphX": 270,
+      "graphY": -190,
+      "versions": {
+        "2": "Perls, der Begründer der Gestalttherapie, kehrt Freuds Methode geradezu um. Sein Schlachtruf: ›Lose your mind and come to your senses‹ — verlier deinen Verstand und komm zu deinen Sinnen. Nicht das Deuten der Vergangenheit heilt, sondern das volle Erleben des gegenwärtigen Moments. Wandlung geschieht im [[Hier und Jetzt:das unmittelbare gegenwärtige Erleben als Ort der Veränderung, statt des Redens über Vergangenes]]: indem ich spüre, was ich gerade vermeide, indem ich den Konflikt nicht bespreche, sondern im Raum lebendig werden lasse (etwa im berühmten leeren Stuhl, auf dem ich meinem Vater gegenübertrete). Verstehen kommt für Perls nach der Erfahrung, nicht davor — und oft braucht es das Verstehen gar nicht.",
+        "4": "Perls markiert die Ecke oben rechts: Wandlung durch Erfahren, im Einzelnen. Die Gestalttherapie ist die schärfste methodische Antithese zur Psychoanalyse — sie misstraut der Deutung als intellektueller Flucht vor dem Erleben. [[Awareness:das unmittelbare Gewahrsein dessen, was im Moment geschieht — Wahrnehmen statt Deuten]], das unmittelbare Gewahrsein dessen, was jetzt geschieht, ist der Wandlungsort. Wo Freud fragt ›warum?‹, fragt Perls ›was und wie?‹ — was spürst du gerade, wie vermeidest du es. Damit gehört Perls zu den Begründern der gesamten erlebnisorientierten Tradition. Seine Grenze ist die Kehrseite seiner Stärke: Die radikale Gegenwartsfixierung kann das Gewordensein eines Menschen unterschätzen — manche Wunden sitzen tiefer, als der gegenwärtige Moment zeigt.",
+        "5": "Auf der höchsten Stufe wird Perls' Stellung im Tableau zur Scharnierfigur des Erfahren-Pols sichtbar. Drei Linien laufen durch ihn: zurück zu Freud, gegen den sich die ganze Gestalt-Bewegung als Antithese definiert; seitwärts zu Rogers, mit dem er das Vertrauen ins Erleben teilt und sich nur im Stil unterscheidet (Konfrontation gegen Annahme); und vorwärts zu Gendlin und van der Kolk, die das ›Hier und Jetzt‹ verfeinern und neurobiologisch fundieren. Perls hat die Intuition formuliert — Heilung über das gegenwärtige Erleben, nicht die Deutung —, die spätere Verfahren empirisch einlösten. Die Pointe fürs Tableau: Die Erfahren-Seite ist keine lose Sammlung von Methoden, sondern eine zusammenhängende Tradition mit Perls als unruhigem Stammvater. Was ihr fehlt und was die Verstehen-Seite hat, ist die Geschichte: Das radikale Jetzt vergisst leicht, dass ein Mensch geworden ist."
+      }
+    },
+    {
+      "id": "van-der-kolk",
+      "name": "Bessel van der Kolk",
+      "lifespan": "1943–",
+      "firstLevel": 3,
+      "schoolId": "koerper-traumatherapie",
+      "x": 82,
+      "y": 60,
+      "graphX": 290,
+      "graphY": -100,
+      "versions": {
+        "3": "Van der Kolk hat mit ›The Body Keeps the Score‹ die Trauma-Therapie revolutioniert — und damit eine Grenze des reinen Verstehens sichtbar gemacht. Seine Kernthese: Trauma wird nicht primär als Erinnerung gespeichert, sondern im Körper — in der Daueralarmbereitschaft des Nervensystems, in Anspannung, Taubheit, Schreckreaktionen. Darum hilft es traumatisierten Menschen oft wenig, über das Geschehene zu sprechen oder es zu ›verstehen‹: Das Trauma sitzt unterhalb der Sprache, außerhalb des [[window of tolerance:der Bereich nervlicher Erregung, in dem ein Mensch noch denken und fühlen kann, ohne zu überfluten oder zu erstarren]]. Wandlung geschieht über den Körper — durch Bewegung, Atem, Rhythmus, durch Verfahren wie [[EMDR:Eye Movement Desensitization and Reprocessing — Traumaverarbeitung mithilfe geführter Augenbewegungen]], Yoga oder somatische Ansätze, die dem Nervensystem neue Erfahrungen von Sicherheit geben.",
+        "4": "Van der Kolk sitzt oben rechts, im Erfahren-Feld, und liefert das vielleicht stärkste empirische Argument gegen einen rein kognitiven Heilungsbegriff. Seine Position ist keine bloße Methode, sondern eine Verschiebung des Menschenbildes: Der Mensch ist nicht primär ein denkendes, sondern ein verkörpertes Wesen, dessen tiefste Verletzungen vorsprachlich sind. Damit steht er Perls und der erlebnisorientierten Tradition nahe, unterfüttert sie aber mit Neurobiologie ([[Polyvagal-Theorie:Stephen Porges' Modell, das erklärt, wie das autonome Nervensystem zwischen Sicherheit, Kampf-Flucht und Erstarrung schaltet]]). Die Pointe für das ganze Tableau: Wenn van der Kolk recht hat, dann ist die alte Frage ›Verstehen oder Erfahren?‹ keine philosophische Geschmacksfrage, sondern hängt davon ab, wo die Verletzung sitzt — und manche sitzen an einem Ort, den die Einsicht nicht erreicht."
+      }
+    },
+    {
+      "id": "adler",
+      "name": "Alfred Adler",
+      "lifespan": "1870–1937",
+      "firstLevel": 3,
+      "schoolId": "psychoanalyse",
+      "x": 34,
+      "y": 30,
+      "graphX": -180,
+      "graphY": 170,
+      "versions": {
+        "3": "Adler war Freuds früher Weggefährte, brach aber mit ihm in einer entscheidenden Frage. Für Adler ist der Mensch nicht von seiner Vergangenheit getrieben, sondern von Zielen gezogen: Jeder entwickelt früh einen [[Lebensstil:die unbewusste Grundstrategie, mit der ein Mensch Zugehörigkeit sucht und mit Minderwertigkeitsgefühlen umgeht]] — eine unbewusste Grundstrategie, mit Minderwertigkeitsgefühlen umzugehen und Zugehörigkeit zu finden. Entscheidend ist, dass das Selbst bei Adler kein Innenraum ist, sondern eine soziale Bewegungsrichtung: Wie ein Mensch sich wandelt, zeigt sich darin, wie er sich auf andere zubewegt. Gesundheit ist für Adler [[Gemeinschaftsgefühl:Adlers Maß seelischer Gesundheit — die Fähigkeit, sich verbunden zu fühlen und zum Ganzen beizutragen]] — die Fähigkeit, sich verbunden zu fühlen und beizutragen. Heilung heißt, den eigenen Lebensstil zu verstehen und ihn auf die Mitmenschen hin zu öffnen.",
+        "4": "Adler ist im Tableau der Brückenknoten auf der Verstehen-Seite hin zum Relationalen — er sitzt unten links: Wandlung durch Einsicht, aber Einsicht in eine soziale Bewegung, nicht in einen Innenraum. Damit unterläuft er die Couch-Innerlichkeit Freuds, lange bevor die systemische Therapie es tat. Seine ›finale‹ Betrachtung (der Mensch wird von Zielen gezogen, nicht von Ursachen geschoben) macht ihn zugleich zum heimlichen Vorläufer der lösungs- und zukunftsorientierten Verfahren. Adler zeigt, dass Verstehen nicht zwangsläufig rückwärtsgewandt sein muss: Man kann auch verstehen, wohin jemand will, statt nur, woher er kommt. Diese Doppelstellung — deutend wie Freud, sozial wie die Systemiker, zukunftsgerichtet wie die Lösungsorientierten — macht ihn zu einer der am breitesten anschlussfähigen Stimmen des Feldes."
+      }
+    },
+    {
+      "id": "satir",
+      "name": "Virginia Satir",
+      "lifespan": "1916–1988",
+      "firstLevel": 3,
+      "schoolId": "systemische-therapie",
+      "x": 58,
+      "y": 14,
+      "graphX": 110,
+      "graphY": 220,
+      "versions": {
+        "3": "Satir, eine der Begründerinnen der Familientherapie, verschiebt den Wandlungsort vom Einzelnen ins System. Ihre Grundeinsicht: Das Symptom eines Menschen ist oft Ausdruck eines kranken Beziehungsgefüges — das ›auffällige‹ Familienmitglied trägt stellvertretend eine Spannung, die allen gehört. Wandlung geschieht darum nicht, indem man eine Person repariert, sondern indem das ganze System neue Muster der Kommunikation findet. Satir arbeitete erlebnisorientiert und warmherzig: mit Familienskulpturen, in denen Beziehungen körperlich aufgestellt werden, mit dem Aufdecken verdeckter Kommunikationsmuster. Für sie war der Mensch grundsätzlich wachstumsfähig — wenn das System ihn lässt.",
+        "4": "Satir besetzt die Ecke unten rechts neben Rogers — Wandlung durch Erfahren, in Beziehung —, steht aber für einen anderen relationalen Weg als er: nicht die heilende Zweierbeziehung, sondern das ganze Beziehungssystem als Ort der Veränderung. Damit vertritt sie im Tableau den systemischen Gedanken in seiner erlebnisorientierten, nicht in seiner technischen Form. Ihre Nähe zu Rogers (Wachstumsvertrauen, Wärme, Erleben) und ihre Differenz zu ihm (System statt Dyade) machen sie zur idealen zweiten relationalen Stimme — sie hält den unteren Rand des Tableaus besetzt, ohne dass Beziehung zum Hauptthema wird. Satir grenzt das Wandlung-Tableau zugleich sauber von ›Begegnung‹ ab: Dort ist die Beziehung das philosophische Thema, hier ist sie ein Heilungsweg unter mehreren."
+      }
+    },
+    {
+      "id": "kabat-zinn",
+      "name": "Jon Kabat-Zinn",
+      "lifespan": "1944–",
+      "firstLevel": 3,
+      "schoolId": "achtsamkeitsbasierte-verfahren",
+      "x": 88,
+      "y": 50,
+      "graphX": 300,
+      "graphY": -30,
+      "versions": {
+        "3": "Kabat-Zinn brachte die buddhistische Achtsamkeitspraxis in die westliche Medizin und schuf mit [[MBSR:Mindfulness-Based Stress Reduction — ein achtwöchiges, säkulares Achtsamkeitsprogramm, klinisch erprobt]] ein säkulares, klinisch erprobtes Verfahren. Seine Grundhaltung: Wandlung beginnt paradox — nicht im Wollen, etwas zu verändern, sondern im nicht-wertenden Annehmen dessen, was gerade ist. Indem ich lerne, meine Gedanken, Gefühle und Körperempfindungen zu beobachten, ohne sofort zu reagieren oder zu urteilen, entsteht ein Spielraum zwischen Reiz und Reaktion. In diesem Spielraum liegt die Freiheit. Heilung ist hier kein Reparieren, sondern eine veränderte Beziehung zum eigenen Erleben.",
+        "4": "Kabat-Zinn sitzt weit rechts im Erfahren-Feld, eher im Einzelnen — aber er kompliziert die X-Achse auf interessante Weise. Achtsamkeit ist weder Verstehen im deutenden Sinn (sie analysiert nichts) noch Erfahren im ausagierenden Sinn (sie verändert die Erfahrung nicht aktiv) — sie ist ein drittes: beobachtendes Gewahrsein. Diese Position macht ihn zur Scharnierstelle moderner Verfahren: Die [[dritte Welle:die jüngste Generation der Verhaltenstherapie (ACT, MBCT, DBT), die Achtsamkeit und Akzeptanz statt reiner Gedankenkorrektur einsetzt]] hat Achtsamkeit mit kognitiven Ansätzen verschmolzen und damit die alte Front zwischen Verstehen und Erfahren teilweise aufgelöst. Über die Influence-Kanten ist Kabat-Zinn breit vernetzt — zu Beck (kognitive Integration), zu van der Kolk (Körperregulation bei Trauma), zu Rogers (annehmende Haltung, nach innen gewendet) und weiter zum Stufenmodell.",
+        "5": "Auf der höchsten Stufe ist Kabat-Zinn die vielleicht versöhnlichste Stimme des Tableaus — die einzige, die den Grundstreit nicht entscheidet, sondern unterläuft. Wo Freud und Beck auf Verstehen setzen und Perls und van der Kolk aufs Erfahren, bietet die Achtsamkeit eine dritte Bewegung an: weder das Durchschauen noch das Durchleben, sondern das nicht-wertende Beobachten dessen, was ist. Das ist kein fauler Kompromiss, sondern eine eigene Wette darüber, was heilt: nicht der Inhalt des Erlebens und nicht seine Deutung, sondern die veränderte Beziehung dazu — die Fähigkeit, nicht jeder inneren Regung folgen zu müssen. Damit steht Kabat-Zinn dem Stufenmodell von Prochaska und DiClemente nahe: Beide relativieren den Schulenstreit, der eine über eine dritte Haltung, der andere über die Beobachtung, dass alle Wege dieselben Veränderungsstufen durchlaufen. Gemeinsam bilden sie den leisen Schlussakkord des Tableaus: Vielleicht ist die Frage ›Verstehen oder Erfahren?‹ weniger wichtig als die Frage, wie ein Mensch zu dem steht, was in ihm vorgeht.",
+        "4": "Kabat-Zinn sitzt weit rechts im Erfahren-Feld, eher im Einzelnen — aber er kompliziert die X-Achse auf interessante Weise. Achtsamkeit ist weder Verstehen im deutenden Sinn (sie analysiert nichts) noch Erfahren im ausagierenden Sinn (sie verändert die Erfahrung nicht aktiv) — sie ist ein drittes: beobachtendes Gewahrsein. Diese Position macht ihn zur Scharnierstelle moderner Verfahren: Die ›dritte Welle‹ der Verhaltenstherapie (ACT, MBCT) hat Achtsamkeit mit kognitiven Ansätzen verschmolzen und damit die alte Front zwischen Verstehen und Erfahren teilweise aufgelöst. Kabat-Zinns Pointe fürs Tableau: Vielleicht heilt weder das Durchschauen noch das Durchleben, sondern das Danebenstehen-Können — die Fähigkeit, nicht jeder inneren Regung folgen zu müssen."
+      }
+    },
+    {
+      "id": "ellis",
+      "name": "Albert Ellis",
+      "lifespan": "1913–2007",
+      "firstLevel": 4,
+      "schoolId": "kognitive-verhaltenstherapie",
+      "x": 16,
+      "y": 56,
+      "graphX": -310,
+      "graphY": -150,
+      "versions": {
+        "4": "Ellis entwickelte mit der Rational-Emotiven Verhaltenstherapie (REBT) parallel zu Beck den zweiten großen kognitiven Ansatz — schärfer, konfrontativer, philosophischer. Sein ABC-Modell: Nicht das auslösende Ereignis (A) verursacht die Konsequenz (C), sondern die Überzeugung dazwischen (B, belief). Im Zentrum stehen für Ellis irrationale Glaubenssätze, meist in Form rigider Forderungen: ›Ich muss perfekt sein‹, ›alle müssen mich mögen‹, ›das Leben muss fair sein‹. Wandlung geschieht durch energisches Bestreiten (Disputation) dieser Forderungen — der Therapeut argumentiert aktiv dagegen. Ellis sitzt damit ganz links im Verstehen-Feld, noch radikaler kopfbetont als Beck: Heilung ist hier ein Stück weit angewandte Philosophie, das Ersetzen unhaltbarer Annahmen durch vernünftige."
+      }
+    },
+    {
+      "id": "gendlin",
+      "name": "Eugene Gendlin",
+      "lifespan": "1926–2017",
+      "firstLevel": 4,
+      "schoolId": "gestalt-erlebnistherapie",
+      "x": 72,
+      "y": 58,
+      "graphX": 250,
+      "graphY": -150,
+      "versions": {
+        "4": "Gendlin, Philosoph und Therapeut, machte eine empirische Entdeckung, die quer zu allen Schulen liegt: Ob eine Therapie wirkt, hängt weniger von der Methode ab als davon, ob der Klient Zugang zu seinem ›felt sense‹ findet — einem körperlich gespürten, noch unklaren Sinn für eine Situation, der mehr weiß als der Verstand. Sein Verfahren ›Focusing‹ ist die Kunst, diesem vagen Körpergespür Aufmerksamkeit zu schenken, bis sich von selbst ein Schritt (a ›felt shift‹) einstellt — ein spürbares Sich-Lösen. Gendlin sitzt damit im Erfahren-Feld, aber an einer feinen Stelle: Er überbrückt Verstehen und Erfahren, denn der felt sense ist vorsprachliches Wissen, das nach Worten sucht. Wandlung ist hier weder reines Deuten noch reines Erleben, sondern das geduldige Übersetzen zwischen Körper und Sprache."
+      }
+    },
+    {
+      "id": "frankl",
+      "name": "Viktor Frankl",
+      "lifespan": "1905–1997",
+      "firstLevel": 4,
+      "schoolId": "logotherapie",
+      "x": 40,
+      "y": 44,
+      "graphX": -190,
+      "graphY": 180,
+      "versions": {
+        "4": "Frankl, Wiener Psychiater und Überlebender der Konzentrationslager, begründete mit der Logotherapie eine dritte Wiener Schule neben Freud und Adler. Seine zentrale Verschiebung: Der Mensch wird nicht primär von Lust (Freud) oder Macht (Adler) bewegt, sondern vom [[Willen zum Sinn:Frankls Grundannahme, dass die tiefste menschliche Motivation das Finden von Sinn ist, nicht Lust oder Geltung]]. Wandlung geschieht, wenn ein Mensch in seinem Leiden, seiner Aufgabe, seiner Liebe einen Sinn entdeckt — denn ›wer ein Warum zu leben hat, erträgt fast jedes Wie‹. Im Tableau ist Frankl ein Grenzgänger: Er steht auf der Verstehen-Seite (Sinn wird erkannt, nicht erlebt), aber sein Verstehen ist weder vergangenheitsdeutend wie Freud noch denkfehler-korrigierend wie Beck — es ist eine existenzielle Sinnfindung, zukunftsgerichtet. Diese Stellung macht ihn zur Brücke zur Existenz-Spur (er sitzt prominent auch im Existenzialismus-Tableau), hier aber als Therapeut gelesen: Sinn als Wandlungskraft, nicht als philosophisches Prinzip."
+      }
+    },
+    {
+      "id": "prochaska-diclemente",
+      "name": "Prochaska & DiClemente",
+      "lifespan": "Stufenmodell, ab 1983",
+      "firstLevel": 5,
+      "schoolId": "kognitive-verhaltenstherapie",
+      "x": 48,
+      "y": 52,
+      "graphX": -120,
+      "graphY": -40,
+      "versions": {
+        "5": "Prochaska und DiClemente stellten eine Frage, die quer zu allen Schulen steht: Nicht ›welche Methode heilt?‹, sondern ›wie läuft Veränderung überhaupt ab — egal durch welche Methode?‹. Ihr Transtheoretisches Modell beschreibt Wandlung als Abfolge von Stufen: Absichtslosigkeit (das Problem wird nicht gesehen), Absichtsbildung (ambivalentes Erwägen), Vorbereitung, Handlung, Aufrechterhaltung — und, fast immer, Rückfall, der nicht das Scheitern, sondern ein normaler Teil der Schleife ist. Im Tableau sitzt das Modell bewusst in der Mitte: Es gehört keinem der vier Quadranten an, weil es eine Meta-Ebene beschreibt, die über Verstehen und Erfahren, über individuell und relational hinweg gilt. Seine Pointe ist nüchtern und tröstlich zugleich: Wandlung ist selten der eine große Durchbruch, den die Schulen je auf ihre Weise versprechen, sondern meist ein langsames, kreisendes Hin und Her — und Rückschritt gehört dazu. Damit relativiert das Modell den Streit des ganzen Tableaus: Vielleicht ist die Frage nicht, welcher Weg der richtige ist, sondern auf welcher Stufe ein Mensch gerade steht und was er dort braucht."
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "id": "das-unbewusste",
+      "name": "Das Unbewusste",
+      "type": "theory",
+      "primaryThinker": "freud",
+      "firstLevel": 1,
+      "x": 14,
+      "y": 86,
+      "versions": {
+        "1": "Freuds folgenreichste Idee: Der größte Teil unseres Seelenlebens liegt im Dunkeln. Wünsche, Ängste und Erinnerungen, die zu bedrohlich waren, werden [[verdrängt:aus dem Bewusstsein in den unbewussten Bereich der Psyche abgeschoben, wo sie weiterwirken]] — aber sie verschwinden nicht, sie wirken im Verborgenen weiter und zeigen sich in Träumen, Versprechern und Symptomen. Wandlung beginnt für Freud damit, dieses Verborgene ans Licht zu holen.",
+        "3": "Das Unbewusste ist nicht nur eine Theorie über die Psyche, sondern die Begründung einer ganzen Therapieform: Wenn das Leiden aus verborgenen Quellen stammt, dann muss Heilung diese Quellen freilegen. Die Methoden — [[freie Assoziation:ungefiltertes Aussprechen aller Einfälle, um verdrängtem Material auf die Spur zu kommen]], Traumdeutung, die Arbeit an der [[Übertragung:unbewusste Wiederholung früherer Beziehungsmuster gegenüber dem Therapeuten]] — dienen alle dem einen Ziel, das Unbewusste lesbar zu machen. Die Annahme, dass Bewusstmachen heilt, ist das gemeinsame Erbe aller aufdeckenden Verfahren und der Punkt, an dem die erlebnisorientierten und kognitiven Schulen sich später abstoßen."
+      }
+    },
+    {
+      "id": "abwehrmechanismen",
+      "name": "Abwehrmechanismen",
+      "type": "concept",
+      "primaryThinker": "freud",
+      "firstLevel": 3,
+      "x": 22,
+      "y": 74,
+      "versions": {
+        "3": "Abwehrmechanismen sind die unbewussten Strategien, mit denen die Psyche sich vor unerträglichen Gefühlen schützt: [[Verdrängung:das Wegschieben bedrohlicher Inhalte ins Unbewusste]], Verleugnung, Projektion (eigene Impulse im anderen sehen), Rationalisierung (nachträgliche vernünftige Begründung). Sie sind nicht krankhaft — jeder braucht sie —, werden aber zum Problem, wenn sie starr und allumfassend werden. In der aufdeckenden Therapie ist das Erkennen der eigenen Abwehr ein zentraler Wandlungsschritt: Man sieht, wie man sich selbst im Weg steht."
+      }
+    },
+    {
+      "id": "kognitive-verzerrung",
+      "name": "Kognitive Verzerrung",
+      "type": "concept",
+      "primaryThinker": "beck",
+      "firstLevel": 2,
+      "x": 26,
+      "y": 60,
+      "versions": {
+        "2": "Becks Schlüsselbegriff: systematische Denkfehler, die das Leiden erzeugen oder verstärken. Typische Muster sind Übergeneralisierung (›immer scheitere ich‹), [[selektive Abstraktion:das Herausfiltern nur der negativen Details aus einer Situation]], Schwarz-Weiß-Denken und Katastrophisieren. Anders als Freuds Unbewusstes sind diese Verzerrungen bewusstseinsfähig — man kann sie erkennen, aufschreiben, prüfen. Genau das macht die kognitive Therapie kurz und überprüfbar: Wandlung geschieht, indem man die automatischen Gedanken bei der Arbeit ertappt und korrigiert."
+      }
+    },
+    {
+      "id": "irrationale-glaubenssaetze",
+      "name": "Irrationale Glaubenssätze",
+      "type": "concept",
+      "primaryThinker": "ellis",
+      "firstLevel": 4,
+      "x": 14,
+      "y": 52,
+      "versions": {
+        "4": "Ellis' Kern: rigide, absolute Forderungen an sich, andere und die Welt — meist erkennbar an den Wörtern ›muss‹, ›sollte‹, ›darf nicht‹. ›Ich muss von allen gemocht werden‹, ›das Leben muss fair sein‹. Im [[ABC-Modell:Auslöser (A) führt nicht direkt zur Konsequenz (C); dazwischen steht die Überzeugung (B, belief)]] sind nicht die Ereignisse das Problem, sondern diese Forderungen. Wandlung geschieht durch [[Disputation:das aktive, argumentative Bestreiten irrationaler Überzeugungen]] — der Therapeut argumentiert energisch dagegen, bis die rigide Forderung zur flexiblen Vorliebe wird."
+      }
+    },
+    {
+      "id": "aktualisierungstendenz",
+      "name": "Aktualisierungstendenz",
+      "type": "axiom",
+      "primaryThinker": "rogers",
+      "firstLevel": 1,
+      "x": 66,
+      "y": 26,
+      "versions": {
+        "1": "Rogers' Grundvertrauen: In jedem Menschen wirkt ein eingebauter Zug zu Wachstum und Entfaltung — so wie eine Pflanze zum Licht strebt. Man muss den Menschen nicht reparieren oder umbauen; man muss die Bedingungen schaffen, unter denen sich dieser Zug entfalten kann. Das ist die Umkehrung von Freuds Misstrauen gegen die menschliche Natur.",
+        "3": "Die Aktualisierungstendenz ist das Axiom, auf dem die ganze humanistische Therapie ruht: Der Mensch ist nicht von Natur aus konfliktgesteuert (Freud) oder denkfehlerhaft (Beck), sondern grundsätzlich wachstumsorientiert. Leiden entsteht, wenn diese Tendenz blockiert wird — etwa durch [[Inkongruenz:die Kluft zwischen dem organischen Erleben und dem Selbstbild, das man aufrechterhalten muss, um geliebt zu werden]]. Therapie räumt die Blockade weg, statt eine Lösung zu liefern. Diese Annahme verbindet Rogers mit Maslow, mit Satirs Wachstumsvertrauen und mit Jungs Individuation — und trennt ihn scharf von den defizitorientierten Verfahren."
+      }
+    },
+    {
+      "id": "hier-und-jetzt",
+      "name": "Hier und Jetzt",
+      "type": "method",
+      "primaryThinker": "perls",
+      "firstLevel": 2,
+      "x": 80,
+      "y": 70,
+      "versions": {
+        "2": "Das methodische Herz der Gestalttherapie: Wandlung geschieht nicht beim Reden über Vergangenes, sondern im unmittelbaren Erleben des gegenwärtigen Augenblicks. Statt zu fragen ›warum bist du wütend auf deinen Vater?‹ lässt der Gestalttherapeut den Konflikt jetzt lebendig werden — etwa indem der Klient im [[leeren Stuhl:Gestalt-Technik, bei der man einer abwesenden Person gegenübertritt und sie direkt anspricht]] dem Vater direkt gegenübertritt. Im Spüren dessen, was gerade geschieht und was gerade vermieden wird, liegt die Veränderung.",
+        "4": "›Hier und Jetzt‹ ist nicht nur Technik, sondern eine erkenntnistheoretische Wette gegen die Psychoanalyse: dass das Vergangene nur insofern zählt, als es jetzt gegenwärtig ist — in der Haltung, der Vermeidung, der Körperspannung des Moments. Diese Methode verbindet die ganze erlebnisorientierte Tradition, von Perls über Gendlins Focusing bis zu van der Kolks körperbasierter Trauma-Arbeit. Ihre Stärke ist die Unmittelbarkeit, ihre Gefahr die Geschichtsvergessenheit: Manche Wunden sind im gegenwärtigen Moment nicht sichtbar und brauchen doch Bearbeitung."
+      }
+    },
+    {
+      "id": "felt-sense",
+      "name": "Felt Sense",
+      "type": "phenomenon",
+      "primaryThinker": "gendlin",
+      "firstLevel": 4,
+      "x": 70,
+      "y": 54,
+      "versions": {
+        "4": "Gendlins Entdeckung: ein körperlich gespürter, zunächst unklarer Gesamtsinn für eine Situation, der mehr ›weiß‹ als der Verstand — etwa das diffuse Engegefühl, das sich meldet, wenn man an ein Problem denkt, bevor man es in Worte fassen kann. Im Verfahren [[Focusing:das geduldige Aufmerksamkeitschenken auf das körperliche Gespür, bis sich von selbst ein Wort oder Bild einstellt]] schenkt man diesem vagen Gespür Aufmerksamkeit, bis sich ein [[felt shift:eine spürbare innere Lösung, ein körperliches Sich-Entspannen, wenn das Gespürte den passenden Ausdruck findet]] einstellt. Der felt sense liegt genau zwischen Verstehen und Erfahren — vorsprachliches Wissen, das nach Sprache sucht — und ist Gendlins Brücke über die Hauptachse des Tableaus."
+      }
+    },
+    {
+      "id": "veraenderungsstufen",
+      "name": "Stufen der Veränderung",
+      "type": "theory",
+      "primaryThinker": "prochaska-diclemente",
+      "firstLevel": 5,
+      "x": 48,
+      "y": 48,
+      "versions": {
+        "5": "Das Transtheoretische Modell beschreibt, wie Veränderung quer durch alle Schulen abläuft: [[Absichtslosigkeit:die Stufe, auf der ein Problem noch gar nicht als solches gesehen wird]], Absichtsbildung (ambivalentes Erwägen), Vorbereitung, Handlung, Aufrechterhaltung — und Rückfall, der nicht Scheitern bedeutet, sondern als normaler Teil der Schleife verstanden wird. Das Konzept sitzt bewusst in der Mitte des Tableaus, weil es keinem Quadranten angehört: Es beschreibt nicht, *was* heilt (Verstehen oder Erfahren, allein oder in Beziehung), sondern *wie* der Prozess der Wandlung sich entfaltet, unabhängig vom Weg. Damit relativiert es den Schulenstreit: Vielleicht ist die entscheidende Frage nicht, welche Methode die richtige ist, sondern auf welcher Stufe ein Mensch gerade steht — und was er dort braucht."
+      }
+    }
+  ],
+  "influences": [
+    {
+      "from": "freud",
+      "to": "adler",
+      "type": "rejection",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Adler war Mitglied von Freuds innerem Kreis, brach aber 1911 mit ihm. Der Streit ging ans Grundsätzliche: Freud sah den Menschen von Trieben und seiner Vergangenheit getrieben, Adler von sozialen Zielen gezogen. Wo Freud nach Ursachen grub, fragte Adler nach Richtung und Zweck. Diese frühe Spaltung ist die erste große Verzweigung der Therapiegeschichte — und sie nimmt die spätere Frontlinie zwischen rückwärts- und zukunftsgewandten Verfahren vorweg."
+      }
+    },
+    {
+      "from": "freud",
+      "to": "perls",
+      "type": "rejection",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Perls war psychoanalytisch ausgebildet, wandte sich dann aber scharf gegen Freud. Sein Vorwurf: Die Analyse rede über das Erleben, statt es zuzulassen — sie mache aus der Therapie eine intellektuelle Übung, eine Flucht in die Deutung. Gestalttherapie ist die methodische Gegenbewegung: weg vom deutenden ›Warum‹, hin zum erlebten ›Was und Wie‹ im gegenwärtigen Moment. Damit markiert das Verhältnis Freud–Perls die Hauptachse des Tableaus in Reinform: Verstehen gegen Erfahren."
+      }
+    },
+    {
+      "from": "freud",
+      "to": "beck",
+      "type": "critique",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Beck begann als ausgebildeter Psychoanalytiker und wollte Freuds Depressionstheorie empirisch belegen — und fand das Gegenteil. Statt verdrängter Aggression nach innen entdeckte er bei depressiven Patienten vor allem verzerrte, automatische Gedanken über sich, die Welt und die Zukunft. Beck behält Freuds Grundüberzeugung, dass Verstehen heilt, verschiebt aber den Ort des Verstehens: weg vom verborgenen Unbewussten der Vergangenheit, hin zu den überprüfbaren Denkmustern der Gegenwart."
+      }
+    },
+    {
+      "from": "beck",
+      "to": "ellis",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Beck und Ellis entwickelten unabhängig und fast gleichzeitig die beiden großen kognitiven Therapien. Beide teilen die Grundidee, dass nicht Ereignisse, sondern Überzeugungen das Leiden erzeugen. Der Unterschied liegt im Ton und im Ansatz: Beck arbeitet eher empirisch-prüfend (›lass uns diesen Gedanken testen‹), Ellis konfrontativ-philosophisch (›diese Forderung ist irrational, gib sie auf�›). Zusammen bilden sie das kognitive Fundament, auf dem die moderne Verhaltenstherapie steht."
+      }
+    },
+    {
+      "from": "perls",
+      "to": "gendlin",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Gendlin und Perls gehören beide zur erlebnisorientierten Wende, setzen aber verschieden an. Perls drängt auf das volle, oft dramatische Ausagieren im Hier und Jetzt; Gendlin lauscht dem leisen, körperlich gespürten ›felt sense‹, der noch keine Worte hat. Wo Perls die Erfahrung intensiviert, verlangsamt Gendlin sie, bis sich von selbst ein innerer Schritt einstellt. Beide eint die Überzeugung, dass der Körper mehr weiß als der deutende Verstand."
+      }
+    },
+    {
+      "from": "perls",
+      "to": "van-der-kolk",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Van der Kolk steht in der von Perls eröffneten erlebnisorientierten Linie, unterfüttert sie aber mit Neurobiologie. Was bei Perls noch therapeutische Intuition war — dass Heilung über das gegenwärtige Erleben und den Körper läuft, nicht über die Deutung —, wird bei van der Kolk zur empirisch gestützten Trauma-Theorie. Beide stehen gegen die Annahme, man könne sich gesund reden; van der Kolk liefert die Hirnforschung zu Perls' Verdacht."
+      }
+    },
+    {
+      "from": "rogers",
+      "to": "satir",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Satir teilt Rogers' tiefes Vertrauen in die Wachstumsfähigkeit des Menschen und seine erlebnisorientierte, warme Haltung — überträgt beides aber von der Zweierbeziehung auf das Familiensystem. Wo Rogers den einzelnen Klienten in einer heilenden Begegnung sieht, sieht Satir das ganze Beziehungsgefüge als Ort der Wandlung. Beide gehören zum humanistisch-erlebnisorientierten Pol, vertreten dort aber zwei verschiedene relationale Wege: Dyade und System."
+      }
+    },
+    {
+      "from": "rogers",
+      "to": "gendlin",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Gendlin war Rogers' Mitarbeiter an der Universität Chicago und entwickelte Focusing direkt aus der Frage, warum Rogers' klientenzentrierte Therapie bei manchen wirkt und bei anderen nicht. Seine Antwort — es kommt auf den Zugang zum körperlich gespürten Sinn an — ist eine Präzisierung und empirische Vertiefung von Rogers' Erfahrungsbegriff. Die heilende Beziehung schafft den Raum; der felt sense ist, was darin geschieht."
+      }
+    },
+    {
+      "from": "adler",
+      "to": "frankl",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Frankl war zeitweise Adlers Schüler, bevor er seinen eigenen Weg ging. Von Adler übernahm er die Abkehr von Freuds Triebmechanik und die Betonung von Zukunft und Richtung; er ersetzte aber Adlers Streben nach Geltung durch den Willen zum Sinn. Beide gehören zu den großen Wiener Dissidenten, die den Menschen nicht von der Vergangenheit geschoben, sondern von etwas vor ihm Liegenden gezogen sehen — bei Adler die soziale Aufgabe, bei Frankl der Sinn."
+      }
+    },
+    {
+      "from": "beck",
+      "to": "kabat-zinn",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Die ›dritte Welle‹ der Verhaltenstherapie hat Kabat-Zinns Achtsamkeit in die kognitive Tradition Becks integriert (etwa in der Mindfulness-Based Cognitive Therapy zur Rückfallprophylaxe bei Depression). Statt verzerrte Gedanken zu bestreiten wie bei Beck, lernt man, sie als bloße mentale Ereignisse zu beobachten, ohne ihnen zu folgen. Damit verschiebt sich der Ansatz vom Verstehen-und-Verändern zum achtsamen Danebenstehen — eine teilweise Versöhnung der Verstehen- mit der Erfahren-Seite des Tableaus."
+      }
+    },
+    {
+      "from": "kabat-zinn",
+      "to": "prochaska-diclemente",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Beide stehen für eine Relativierung des Schulenstreits, auf je eigene Weise. Kabat-Zinn unterläuft die Frage ›Verstehen oder Erfahren?‹ durch eine dritte Haltung, das beobachtende Gewahrsein. Prochaska und DiClemente unterlaufen den ganzen Methodenstreit, indem sie zeigen, dass quer durch alle Verfahren dieselben Veränderungsstufen durchlaufen werden. Gemeinsam ist ihnen die Einsicht, dass nicht die Technik allein entscheidet, sondern die Beziehung des Menschen zu seinem eigenen Veränderungsprozess."
+      }
+    },
+    {
+      "from": "van-der-kolk",
+      "to": "kabat-zinn",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Van der Kolk hat achtsamkeits- und körperbasierte Verfahren ausdrücklich als wirksam bei Trauma beschrieben — Yoga, Atem, Meditation geben dem überaktivierten Nervensystem neue Erfahrungen von Sicherheit. Beide teilen die Überzeugung, dass Heilung über die Regulation des Körpers und der Aufmerksamkeit läuft, nicht über das Durchsprechen. Kabat-Zinn liefert die Praxis des Gewahrseins, van der Kolk die neurobiologische Begründung, warum sie bei Trauma greift."
+      }
+    },
+    {
+      "from": "freud",
+      "to": "ellis",
+      "type": "critique",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Ellis war psychoanalytisch ausgebildet und wandte sich dann scharf gegen Freud — mit demselben Vorwurf wie viele Dissidenten, nur radikaler: Die jahrelange Suche nach verborgenen Ursachen in der Kindheit sei therapeutisch ineffizient und meist überflüssig. Nicht das vergangene Trauma halte den Menschen gefangen, sondern die irrationalen Überzeugungen, die er heute über dieses Trauma pflegt. Ellis behält damit Freuds Grundidee, dass etwas Verborgenes das Leiden steuert, verlegt es aber von der unbewussten Vergangenheit in die bewusstseinsfähige, prüfbare Gegenwart der Glaubenssätze."
+      }
+    },
+    {
+      "from": "rogers",
+      "to": "perls",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Rogers und Perls gehören beide zur humanistisch-erlebnisorientierten Wende der Nachkriegszeit und teilen die Abkehr von Freuds Deutungsmacht: Nicht der Therapeut weiß es besser, der Mensch trägt seine Wandlung in sich. Doch sie spalten sich im Stil. Rogers schafft einen warmen, annehmenden Raum und vertraut darauf, dass Wachstum von selbst geschieht; Perls konfrontiert, provoziert, treibt ins unmittelbare Erleben. Sanfte Begleitung gegen aktive Konfrontation — zwei Temperamente desselben Vertrauens in die Selbstheilungskraft des Erlebens."
+      }
+    },
+    {
+      "from": "rogers",
+      "to": "kabat-zinn",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Rogers' bedingungslose positive Wertschätzung und Kabat-Zinns nicht-wertendes Gewahrsein sind verwandte Haltungen, einmal nach außen und einmal nach innen gewendet. Wo Rogers den Therapeuten dem Klienten gegenüber annehmend sein lässt, lehrt Kabat-Zinn den Menschen, sich selbst und seinem Erleben dieselbe nicht-urteilende Aufmerksamkeit zu schenken. Beide setzen auf Akzeptanz als paradoxen Anfang der Veränderung: Erst das Annehmen dessen, was ist, macht Wandlung möglich."
+      }
+    }
+  ]
+}
