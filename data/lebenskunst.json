@@ -5,8 +5,8 @@
     "subtitle": "Die Kunst, gut zu leben — wann gelingt dir dein Leben?",
     "intro": "Wann ist ein Leben dir gelungen — wenn es sich gut anfühlt, oder wenn du richtig gelebt hast?",
     "theme": {
-      "accent": "oklch(0.45 0.11 65)",
-      "accentSoft": "oklch(0.45 0.11 65 / 0.15)"
+      "accent": "oklch(0.44 0.11 65)",
+      "accentSoft": "oklch(0.44 0.11 65 / 0.15)"
     },
     "complexityLevels": 5,
     "quadrants": {

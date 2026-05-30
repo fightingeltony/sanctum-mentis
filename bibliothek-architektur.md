@@ -103,6 +103,8 @@ Akzentfarben werden ab 23.5.26 nicht mehr pro Tableau einzeln vergeben, sondern 
 
 **Update 29.5.26:** Lebenskunst (hue 65, Existenz-Spur) eingebunden. Existenz-Band jetzt mit zwei Tableaus (Existenzialismus 45, Lebenskunst 65) — Bandbreite ≈35–70° bestätigt.
 
+**Update 30.5.26:** Begegnung (hue 35, Existenz-Spur) eingebunden — sitzt am unteren, wärmsten Rand des Existenz-Bands. Staffelung jetzt Begegnung 35 · Existenzialismus 45 · Lebenskunst 65. Lebenskunst-L von 0.45 auf 0.44 angeglichen (Korridor-Hygiene). Existenzialismus oklch(0.42 0.10 45) als final bestätigt. Deklaration der Begegnung-Akzent-Korrektur (Hue 25→35) siehe `begegnung-aenderung.md`.
+
 | Spur | Hue-Band | Symbolik (provisorisch) |
 |---|---|---|
 | Erkenntnis-Trias | 165°–295° (grün bis blau-violett) | Erkenntnis als distanzierende Operation |
@@ -113,14 +115,15 @@ Akzentfarben werden ab 23.5.26 nicht mehr pro Tableau einzeln vergeben, sondern 
 
 **Konstante Stellschrauben:** L ≈ 0.42–0.45, C ≈ 0.10–0.13.
 
-**Aktueller Bestand (Stand 29.5.26):**
+**Aktueller Bestand (Stand 30.5.26):**
 
 ```
 Selbst                   oklch(0.42 0.12 295)   Erkenntnis-Trias
 Geist                    oklch(0.44 0.13 240)   Erkenntnis-Trias
 Realismus                oklch(0.42 0.11 165)   Erkenntnis-Trias
-Lebenskunst              oklch(0.45 0.11  65)   Existenz-Spur
+Begegnung                oklch(0.43 0.12  35)   Existenz-Spur
 Existenzialismus         oklch(0.42 0.10  45)   Existenz-Spur
+Lebenskunst              oklch(0.44 0.11  65)   Existenz-Spur
 Politische Philosophie   oklch(0.44 0.12 128)   Handlungs-Spur
 Ethik                    oklch(0.45 0.12 100)   Handlungs-Spur
 ```

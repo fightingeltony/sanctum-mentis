@@ -6,6 +6,7 @@ import ethikRaw                            from '../../data/ethik.json'
 import existenzialismusRaw                 from '../../data/existenzialismus.json'
 import politischePhilosophieRaw            from '../../data/politische-philosophie.json'
 import lebenskunstRaw                      from '../../data/lebenskunst.json'
+import begegnungRaw                         from '../../data/begegnung.json'
 import libraryRaw                          from '../../data/library.json'
 import hardProblemRaw                      from '../../data/lectio/hard-problem.json'
 import werBeobachtetRaw                    from '../../data/lectio/wer-beobachtet.json'
@@ -15,6 +16,7 @@ import wennNichtsVorgegebenRaw             from '../../data/lectio/wenn-nichts-v
 import warumGehorchstDuRaw                from '../../data/lectio/warum-gehorchst-du.json'
 import findestDuOderMachstDuRaw            from '../../data/lectio/findest-du-oder-machst-du.json'
 import ruheOderRauschRaw                   from '../../data/lectio/ruhe-oder-rausch.json'
+import derWegDesMenschenRaw                from '../../data/lectio/der-weg-des-menschen.json'
 import schmerzRaw                          from '../../data/lebensfragen/schmerz.json'
 import todRaw                              from '../../data/lebensfragen/tod.json'
 
@@ -26,6 +28,7 @@ const TOPICS: Record<string, TopicData> = {
   'existenzialismus':                 existenzialismusRaw             as unknown as TopicData,
   'politische-philosophie':           politischePhilosophieRaw        as unknown as TopicData,
   'lebenskunst':                      lebenskunstRaw                  as unknown as TopicData,
+  'begegnung':                        begegnungRaw                    as unknown as TopicData,
 }
 
 export function getTopic(id: string): TopicData | null {
@@ -61,6 +64,7 @@ const LECTIOS: Record<string, Lectio> = {
   'warum-gehorchst-du':          warumGehorchstDuRaw           as unknown as Lectio,
   'findest-du-oder-machst-du':   findestDuOderMachstDuRaw      as unknown as Lectio,
   'ruhe-oder-rausch':            ruheOderRauschRaw             as unknown as Lectio,
+  'der-weg-des-menschen':        derWegDesMenschenRaw          as unknown as Lectio,
 }
 
 export function getLectio(id: string): Lectio | null {

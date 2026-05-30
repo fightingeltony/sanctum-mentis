@@ -9,7 +9,11 @@ export interface LectioNodeResult {
 /**
  * Gibt den Knoten-Text für eine Lectio zurück.
  *
- * Priorität:
+ * Volle Priorität (über alle Render-Stufen hinweg):
+ * 0. `step.step_brief` — stationseigener Text, höchste Priorität. Wird in der
+ *    Render-Schicht (LectioViewer) VOR dieser Funktion geprüft; bypasst sie ganz.
+ *    Gleicher annotationsfreier Charakter wie `lectio_brief`. Nur Einzelknoten.
+ * Diese Funktion deckt die übrigen Stufen ab:
  * 1. `lectio_brief` — wenn vorhanden, wird dieser unabhängig vom Level gezeigt.
  *    Kein Annotation-Rendering: Der Brief hat keine [[Begriff:Erklärung]]-Markierungen.
  * 2. Standard: höchste `versions`-Stufe ≤ lectioLevel (identisch mit getVersion).

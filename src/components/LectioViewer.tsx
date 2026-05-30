@@ -128,7 +128,7 @@ export default function LectioViewer({ lectio, topicData }: Props) {
                         nodeType={step.nodeType}
                         topicData={topicData}
                         lectioLevel={lectio.level}
-                        brief={step.brief}
+                        brief={step.step_brief ?? step.brief}
                       />
                     </div>
                   </React.Fragment>

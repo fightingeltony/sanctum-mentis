@@ -1,0 +1,488 @@
+{
+  "topic": {
+    "id": "begegnung",
+    "title": "Begegnung",
+    "subtitle": "Der Andere — wirst du erst an ihm zu dir selbst?",
+    "intro": "Wirst du erst am Anderen zu dir selbst — und ist er dabei Geschenk oder Zumutung?",
+    "synthesis": "Drei Spannungen halten dieses Feld zusammen. Die erste verläuft waagrecht: Manche Denker beginnen beim einzelnen Ich und fragen, wie es zum Anderen kommt — andere kehren das um und sagen, das Ich entstehe überhaupt erst in der Beziehung. Die zweite verläuft senkrecht: Der Andere kann nähren und tragen, oder er kann bedrohen, vereinnahmen, zum Objekt machen. Die dritte ist die unbesetzte Ecke selbst — dass kaum ein Denker, der vom souveränen Einzelnen ausgeht, den Anderen noch als reines Geschenk denken kann. Wer den Einzelnen zum Grund macht, dem wird der Andere fast zwangsläufig zur Grenze. Das Tableau löst diesen Streit nicht. Es zeigt, dass die Frage, ob du dich allein oder erst durch Begegnung findest, keine psychologische Spitzfindigkeit ist, sondern darüber entscheidet, ob du im Anderen eine Gefahr siehst oder ein Zuhause.",
+    "theme": {
+      "accent": "oklch(0.43 0.12 35)",
+      "accentSoft": "oklch(0.93 0.03 35)"
+    },
+    "spur": "existenz",
+    "complexityLevels": 5,
+    "quadrants": {
+      "axisX": {
+        "label": "Woraus entsteht das Ich?",
+        "left": "Der Einzelne ist der Grund",
+        "leftHint": "Das Ich ist zuerst da; der Andere kommt hinzu",
+        "right": "Die Beziehung ist der Grund",
+        "rightHint": "Das Ich entsteht erst in der Begegnung mit dem Du"
+      },
+      "axisY": {
+        "label": "Was ist der Andere für mich?",
+        "top": "Geschenk",
+        "topHint": "Der Andere nährt, trägt, lässt mich werden",
+        "bottom": "Zumutung",
+        "bottomHint": "Der Andere bedroht, vereinnahmt, macht zum Objekt"
+      }
+    },
+    "meta": {
+      "schoolExceptions": "tugendethik-der-freundschaft ist bewusst eine Einzelpositions-Schule (nur Aristoteles): Er ist die einzige antike Stimme und hält allein den dünnen Quadranten oben links (Einzelner ist Grund + Geschenk). Eine zweite Stimme dieser Tradition (z.B. Cicero, De Amicitia) ist als künftige Erweiterung denkbar, aber im Mild-Bau bewusst weggelassen."
+    }
+  },
+  "levels": [
+    {
+      "level": 1,
+      "label": "Einstieg"
+    },
+    {
+      "level": 2,
+      "label": "Vertiefung"
+    },
+    {
+      "level": 3,
+      "label": "Hauptkörper"
+    },
+    {
+      "level": 4,
+      "label": "Spezialisierung"
+    },
+    {
+      "level": 5,
+      "label": "Synthese"
+    }
+  ],
+  "schools": [
+    {
+      "id": "philosophie-des-anderen",
+      "label": "Philosophie des Anderen",
+      "color": "oklch(0.52 0.11 55)",
+      "glyph": "◐",
+      "gx": 80,
+      "gy": 60,
+      "labelDir": "s"
+    },
+    {
+      "id": "anerkennungstheorie",
+      "label": "Anerkennungstheorie",
+      "color": "oklch(0.50 0.10 145)",
+      "glyph": "⇄",
+      "gx": 82,
+      "gy": 48,
+      "labelDir": "e"
+    },
+    {
+      "id": "objektbeziehung",
+      "label": "Objektbeziehung & humanistische Psychologie",
+      "color": "oklch(0.55 0.09 95)",
+      "glyph": "◍",
+      "gx": 60,
+      "gy": 88,
+      "labelDir": "n"
+    },
+    {
+      "id": "existenzialistische-subjektphilosophie",
+      "label": "Existenzialistische Subjektphilosophie",
+      "color": "oklch(0.50 0.12 295)",
+      "glyph": "✦",
+      "gx": 22,
+      "gy": 22,
+      "labelDir": "s"
+    },
+    {
+      "id": "tugendethik-der-freundschaft",
+      "label": "Tugendethik der Freundschaft",
+      "color": "oklch(0.55 0.10 130)",
+      "glyph": "❦",
+      "gx": 25,
+      "gy": 78,
+      "labelDir": "n"
+    }
+  ],
+  "thinkers": [
+    {
+      "id": "buber",
+      "name": "Martin Buber",
+      "lifespan": "1878–1965",
+      "firstLevel": 1,
+      "schoolId": "philosophie-des-anderen",
+      "x": 80,
+      "y": 85,
+      "related_topics": [
+        "existenzialismus"
+      ],
+      "lectio_brief": "Buber unterscheidet zwei Grundworte: Ich-Es, in dem der andere zum Gegenstand wird, und Ich-Du, in dem er als ganzes Wesen begegnet. Seine Pointe: Der Mensch wird Ich erst am Du. Beziehung ist nicht etwas, das ein fertiges Ich eingeht — sie ist das, woraus das Ich überhaupt hervorgeht.",
+      "versions": {
+        "1": "Martin Buber ist der Denker, von dem dieses Tableau ausgeht. Sein Grundgedanke ist einfach und umstürzend zugleich: Der Mensch sagt nicht einfach ›Ich‹, sondern immer eines von zwei [[Grundworte: Bubers Begriff für die zwei Grundhaltungen, aus denen heraus ein Mensch zur Welt steht — Ich-Du und Ich-Es]]. Im Ich-Es behandelt er den anderen als Gegenstand — etwas, das man beobachtet, einordnet, benutzt. Im Ich-Du tritt er in eine wirkliche Begegnung, in der der andere als ganzes Wesen da ist, nicht als Bündel von Eigenschaften. Bubers berühmtester Satz: Der Mensch wird am Du zum Ich. Du bist nicht zuerst ein fertiges Selbst, das dann Beziehungen eingeht — du wirst, wer du bist, erst in der Begegnung.",
+        "3": "Buber ist der Hub des Tableaus, weil fast jede andere Position sich zu ihm verhält — zustimmend, verschärfend oder ablehnend. Seine Verkehrung des Ausgangspunkts (Beziehung zuerst, Ich abgeleitet) ist die rechte Hälfte des Feldes in einem Satz. Lévinas wird diese Bewegung radikalisieren, Marcel sie religiös vertiefen, Sartre sie frontal bestreiten. Wichtig ist Bubers Bestehen darauf, dass die Ich-Du-Begegnung nicht *herstellbar* ist: Sie geschieht, sie kann nicht erzwungen werden, und sobald man sie festhalten will, ist das Du schon wieder zum Es geworden. Das macht Begegnung bei Buber zu einem Geschenk im strengen Sinn — etwas, das man empfängt, nicht produziert.",
+        "5": "In ›Der Weg des Menschen‹ zieht Buber die praktische Summe seines dialogischen Denkens, und sie korrigiert ein verbreitetes Missverständnis. Wer Ich-Du hört, denkt leicht: also weg von mir, hin zum Anderen. Buber sagt das Gegenteil — und dann doch nicht. Sein Schlusswort lautet, man solle bei sich selbst beginnen, aber nicht bei sich selbst enden. Die Sammlung des Menschen bei sich ist nur der Anfang; ihr Sinn ist die Wendung nach außen, zum Du und zur Welt. Damit hält Buber beide Pole der ganzen Transformationsfrage zusammen: Wandel beginnt im Einzelnen und vollendet sich in der Begegnung. Diese doppelte Bewegung ist der heimliche Mittelpunkt des Tableaus."
+      }
+    },
+    {
+      "id": "levinas",
+      "name": "Emmanuel Lévinas",
+      "lifespan": "1906–1995",
+      "firstLevel": 5,
+      "schoolId": "philosophie-des-anderen",
+      "x": 88,
+      "y": 32,
+      "versions": {
+        "5": "Lévinas treibt Bubers Gedanken an seine äußerste Grenze. Auch für ihn geht der Andere dem Ich voraus — aber nicht als wechselseitige Begegnung, sondern als einseitiger Anspruch. Im [[Antlitz: Lévinas' Begriff für die Weise, in der der Andere mir begegnet — nicht als Bild oder Gegenstand, sondern als unmittelbarer ethischer Anspruch, der mich vor jeder Wahl in Verantwortung ruft]] des Anderen werde ich angesprochen, noch bevor ich etwas tue oder entscheide. ›Du sollst nicht töten‹ steht im Gesicht des Anderen geschrieben. Diese Verantwortung ist nicht symmetrisch — ich bin für den Anderen verantwortlich, ohne dass dies an seine Gegenleistung gebunden wäre. Damit sitzt Lévinas auf der rechten Seite (Beziehung ist Grund), aber tief unten: Der Andere ist hier keine Wohltat, sondern eine fast erdrückende Zumutung, die meine Freiheit von Anfang an in Anspruch nimmt.\n\nLévinas ist die radikalste Stimme des Tableaus und ein Solo-L5-Knoten, weil seine Position erst vor dem Hintergrund aller anderen verständlich wird. Er teilt mit Buber die Umkehrung (der Andere zuerst), aber er bricht mit der Wechselseitigkeit: Wo Buber das Ich-Du als gegenseitige Anwesenheit denkt, ist Lévinas' Verhältnis grundlegend asymmetrisch — meine Verantwortung wächst, je mehr ich ihr nachkomme, sie ist nie eingelöst. Gegen Heideggers Ontologie (das Sein als Letztes) setzt Lévinas die Ethik als erste Philosophie: Noch vor allem Erkennen steht der Anspruch des Anderen. Das ist die schärfste Antwort auf Sartre: Wo bei Sartre der Blick des Anderen mich versklavt, ist bei Lévinas gerade die Geiselschaft für den Anderen der Ursprung meiner Menschlichkeit."
+      }
+    },
+    {
+      "id": "marcel",
+      "name": "Gabriel Marcel",
+      "lifespan": "1889–1973",
+      "firstLevel": 3,
+      "schoolId": "philosophie-des-anderen",
+      "x": 72,
+      "y": 70,
+      "related_topics": [
+        "existenzialismus"
+      ],
+      "versions": {
+        "3": "Marcel steht zwischen Buber und dem klassischen Existenzialismus — und teilt Bubers Grundhaltung gegen Sartre. Seine zentrale Unterscheidung ist die zwischen [[Problem und Mysterium: Marcels Unterscheidung — ein Problem löst man von außen, ein Mysterium bezieht den Fragenden selbst mit ein und lässt sich nicht von außen auflösen]]. Den Anderen als Problem zu behandeln heißt, ihn zu vergegenständlichen; ihn als Mysterium anzuerkennen heißt, in eine Beziehung einzutreten, die mich selbst verändert. Marcels Schlüsselwort ist [[disponibilité: Verfügbarkeit — die Bereitschaft, für den Anderen wirklich da zu sein, sich ihm zu öffnen, statt ihn auf Abstand zu halten]]: das Da-sein-für-den-Anderen. Damit sitzt Marcel oben rechts — Beziehung als Grund, und der Andere als Geschenk.",
+        "4": "Marcel verschiebt gegenüber Sartre die ontologische Grundannahme. Sartre behauptet die prinzipielle Unmöglichkeit echter Verbindung zwischen Bewusstseinen — jedes ist für sich, der Andere ist Bedrohung. Marcel sieht die Verbindung als grundlegender als die Trennung: Treue, Hoffnung und Verfügbarkeit sind für ihn keine nachträglichen Hilfskonstruktionen, sondern existenzielle Grundbewegungen. Wer Marcel liest, sieht den klassischen Existenzialismus als halbe Wahrheit — es stimmt, dass der Mensch geworfen ist und sich verhalten muss, aber er ist nicht allein dabei. Marcels christlicher Hintergrund unterscheidet ihn von Buber, doch beide erreichen verwandte Positionen aus verschiedenen Traditionen."
+      },
+      "lectio_brief": "Marcel unterscheidet, ob ich einem Menschen als Problem begegne — etwas, das ich von außen löse — oder als Mysterium, das mich selbst mit hineinnimmt. Seine Haltung dafür heißt disponibilité: verfügbar sein, sich öffnen, statt den anderen auf Abstand zu halten. Wer verfügbar ist, lässt sich vom anderen angehen und verändern."
+    },
+    {
+      "id": "winnicott",
+      "name": "Donald Winnicott",
+      "lifespan": "1896–1971",
+      "firstLevel": 2,
+      "schoolId": "objektbeziehung",
+      "x": 64,
+      "y": 88,
+      "versions": {
+        "2": "Winnicott ist Kinderarzt und Psychoanalytiker — und liefert die empirische Untermauerung dessen, was Buber philosophisch behauptet. Sein berühmtester Satz: So etwas wie einen Säugling gibt es nicht. Gemeint ist: Ein Baby existiert nie allein, sondern immer nur als Baby-und-Mutter, als Einheit der Fürsorge. Das [[wahre Selbst: bei Winnicott das spontane, lebendige Selbst, das sich nur in einer ausreichend guten, haltenden Beziehung entfalten kann]] entsteht nicht von innen heraus, sondern in der haltenden Umgebung einer ›ausreichend guten‹ Bezugsperson. Fehlt dieses Halten, bildet sich ein falsches Selbst, das sich anpasst und versteckt. Damit sitzt Winnicott klar oben rechts: Beziehung ist der Grund, aus dem das Selbst überhaupt erst werden kann.",
+        "4": "Winnicott ist die Brücke zwischen der philosophischen und der psychologischen Hälfte des Feldes. Was Buber als Grundwort und Lévinas als Anspruch fasst, beschreibt Winnicott als beobachtbaren Entwicklungsvorgang: Das Selbst ist von Anfang an relational verfasst. Sein Begriff des [[Übergangsraums: der Zwischenbereich zwischen Innen und Außen, in dem Spiel, Kreativität und Kultur entstehen — weder rein subjektiv noch rein objektiv]] zeigt, dass das Dazwischen kein leerer Abstand ist, sondern der eigentliche Ort, an dem ein Mensch lebendig wird. Damit gibt er der rechten Tableau-Hälfte ihre entwicklungspsychologische Tiefe — und verbindet sich mit Kohut aus dem Selbst-Tableau, für den das Selbst ebenfalls nur in Spiegelung entsteht."
+      }
+    },
+    {
+      "id": "fromm",
+      "name": "Erich Fromm",
+      "lifespan": "1900–1980",
+      "firstLevel": 2,
+      "schoolId": "objektbeziehung",
+      "x": 55,
+      "y": 76,
+      "versions": {
+        "2": "Fromm stellt die provokante These auf, dass Liebe keine Empfindung ist, die einem zustößt, sondern eine [[Kunst: bei Fromm eine Fähigkeit, die man wie jede andere Kunst übt, lernt und kultiviert — nicht ein Glück, das einem widerfährt]], die man lernt und übt. Wer auf den richtigen Menschen wartet, hat die Frage schon falsch gestellt: Nicht das Objekt der Liebe ist das Problem, sondern die eigene Fähigkeit zu lieben. Lieben heißt für Fromm geben, nicht nehmen — und zwar nicht, weil man sich aufopfert, sondern weil im Geben die eigene Lebendigkeit erfahrbar wird. Damit sitzt Fromm oben (Geschenk), aber etwas weiter links als Buber: Die Fähigkeit zur Beziehung ist eine Leistung des reifen Ich.",
+        "4": "Fromm verbindet die psychoanalytische mit der gesellschaftskritischen Perspektive und nimmt im Tableau eine vermittelnde Position ein. Anders als Buber, für den Begegnung geschieht und nicht herstellbar ist, betont Fromm das Übende, Aktive: Beziehungsfähigkeit ist Resultat von Reife und Arbeit an sich selbst. Das bringt eine produktive Spannung ins Feld — ist echte Begegnung Gnade (Buber) oder Praxis (Fromm)? Fromms Kritik an der modernen ›Marktorientierung‹, die auch Menschen nach Tauschwert beurteilt, schlägt zudem eine Brücke zur Zumutungs-Seite: Wo der Andere zur Ware wird, kippt Beziehung in Vergegenständlichung — Fromms Diagnose trifft sich hier mit Bubers Ich-Es."
+      }
+    },
+    {
+      "id": "hegel",
+      "name": "G. W. F. Hegel",
+      "lifespan": "1770–1831",
+      "firstLevel": 3,
+      "schoolId": "anerkennungstheorie",
+      "x": 78,
+      "y": 38,
+      "versions": {
+        "3": "Hegel liefert die Urszene aller Beziehungsphilosophie: die Dialektik von [[Herr und Knecht: Hegels Bild für den Kampf zweier Selbstbewusstseine um Anerkennung, aus dem die Grundstruktur menschlicher Beziehungen hervorgeht]]. Selbstbewusstsein, sagt er, gibt es nur, indem es von einem anderen Selbstbewusstsein anerkannt wird — ich werde mir meiner selbst erst gewiss im Spiegel des Anderen. Doch dieser Weg führt über einen Kampf: Zwei Selbstbewusstsein treffen aufeinander, jedes will anerkannt werden, und es entsteht ein Verhältnis von Herrschaft und Knechtschaft. Damit sitzt Hegel rechts (Anerkennung als Grund des Ich), aber unten: Der Weg zum Selbst über den Anderen ist zunächst ein Kampf, keine Wohltat.",
+        "5": "Hegel ist die historische Wurzel der gesamten rechten Tableau-Hälfte — von ihm zweigen zwei Linien ab. Die eine, über Honneth, macht die Anerkennung zum positiven Fundament des Sozialen. Die andere, über Sartre, macht den Blick des Anderen zur Bedrohung. Beide berufen sich auf dieselbe Hegelsche Einsicht — dass das Ich relational ist —, ziehen aber entgegengesetzte Konsequenzen. Hegels Pointe, die beide teilen: Es gibt kein Selbstbewusstsein vor der Begegnung. Die Frage, die das Tableau spaltet, ist nur, ob diese Begegnung gelingt (Honneth, Buber) oder ob sie strukturell konflikthaft bleibt (Sartre)."
+      }
+    },
+    {
+      "id": "honneth",
+      "name": "Axel Honneth",
+      "lifespan": "geb. 1949",
+      "firstLevel": 4,
+      "schoolId": "anerkennungstheorie",
+      "x": 84,
+      "y": 52,
+      "versions": {
+        "4": "Honneth holt Hegels Anerkennungsgedanken in die Gegenwart und macht ihn konkret. Menschen werden, sagt er, durch [[Anerkennung: Honneths Begriff für die Bestätigung, die ein Mensch in drei Sphären braucht, um ein gelingendes Selbstverhältnis aufzubauen — Liebe, Recht, Solidarität]] in drei Sphären zu vollen Subjekten: in der Liebe (emotionale Zuwendung, die Selbstvertrauen schafft), im Recht (Achtung als gleicher Träger von Rechten, die Selbstachtung schafft) und in der Solidarität (Wertschätzung der eigenen Leistung, die Selbstschätzung schafft). Sein eigentlicher Hebel ist die Kehrseite: Missachtung — Demütigung, Entrechtung, Entwürdigung — verletzt Menschen in ihrem Kern und ist die Wurzel sozialer Kämpfe. Damit sitzt Honneth rechts und in der Mitte der Y-Achse: Beziehung ist Grund, und sie kann beides — nähren oder verletzen.",
+        "5": "Honneth ist im Tableau die systematischste Ausarbeitung der These, dass das Selbst durch und durch relational ist — und zugleich die Stimme, die Geschenk und Zumutung nicht als Gegensatz, sondern als zwei Seiten derselben Sache fasst. Anerkennung nährt; ihr Entzug verletzt. Beide sind nur möglich, weil der Mensch grundlegend auf den Anderen angewiesen ist. Das unterscheidet Honneth von Sartre: Wo Sartre die Abhängigkeit vom Blick des Anderen als ontologisches Verhängnis sieht, sieht Honneth in ihr die Bedingung gelingenden Lebens, die nur dann zur Verletzung wird, wenn die Anerkennung verweigert wird. Honneth verbindet so die nährende und die bedrohliche Hälfte zu einer einzigen relationalen Theorie."
+      }
+    },
+    {
+      "id": "sartre",
+      "name": "Jean-Paul Sartre",
+      "lifespan": "1905–1980",
+      "firstLevel": 1,
+      "schoolId": "existenzialistische-subjektphilosophie",
+      "x": 18,
+      "y": 18,
+      "related_topics": [
+        "existenzialismus"
+      ],
+      "versions": {
+        "1": "Sartre ist die große Gegenstimme dieses Tableaus. Für ihn beginnt alles beim einzelnen Bewusstsein, das radikal frei ist — und der Andere ist zunächst eine Bedrohung dieser Freiheit. Sein berühmtestes Bild ist der [[Blick: bei Sartre die Erfahrung, vom Anderen angesehen und damit zum Objekt gemacht zu werden — ich verliere meine Freiheit als Subjekt und werde zu etwas, das der Andere beurteilt]]: Wenn mich ein anderer ansieht, werde ich von einem freien Subjekt zu einem Ding in seiner Welt, das er einordnet und beurteilt. ›Die Hölle, das sind die anderen‹ — dieser Satz steht für die Erfahrung, dass der Blick des Anderen mich festlegt. Damit sitzt Sartre unten links: Der Einzelne ist der Grund, und der Andere ist Zumutung.",
+        "3": "Sartre ist der Gegenpol zu Buber und besetzt die Diagonale des Tableaus. Beide gehen von Hegels Einsicht aus, dass das Ich durch den Anderen vermittelt ist — aber Sartre zieht die entgegengesetzte Konsequenz: Diese Vermittlung ist ein Konflikt, kein Geschenk. Das Für-sich (mein freies Bewusstsein) und das Für-Andere (mein Sein als Objekt im Blick des Anderen) lassen sich nicht versöhnen. Liebe, für Sartre, ist der unmögliche Versuch, die Freiheit des Anderen zu besitzen, ohne sie zu zerstören. Diese düstere Anthropologie ist die schärfste Herausforderung an die rechte Tableau-Hälfte — und der Grund, warum Buber, Marcel und Lévinas alle explizit gegen Sartre denken.",
+        "5": "Sartre ist der strukturelle Gegenpol des ganzen Tableaus — die Stimme, an der sich jede relationale Position messen muss. Seine Hub-Stellung ist negativ: Buber, Marcel und Lévinas definieren ihre Positionen teils dadurch, dass sie Sartres Konflikt-Anthropologie widersprechen. Der tiefste Streit verläuft um die Frage, ob die Angewiesenheit auf den Anderen ein Verhängnis ist (Sartre) oder die Bedingung des Menschseins (die rechte Tableau-Hälfte). Sartre hält daran fest, dass jedes Bewusstsein die Freiheit des anderen entweder unterwirft oder ihr unterworfen wird — eine dritte, versöhnte Möglichkeit bestreitet er. Gerade diese Schärfe macht ihn unverzichtbar: Ohne Sartres Einspruch geriete das Feld in die Gefahr, Begegnung zu romantisieren. Er ist der Stachel, der die nährende Hälfte ehrlich hält."
+      }
+    },
+    {
+      "id": "de-beauvoir",
+      "name": "Simone de Beauvoir",
+      "lifespan": "1908–1986",
+      "firstLevel": 3,
+      "schoolId": "existenzialistische-subjektphilosophie",
+      "x": 30,
+      "y": 30,
+      "related_topics": [
+        "existenzialismus"
+      ],
+      "versions": {
+        "3": "De Beauvoir nimmt Sartres Struktur — das Ich und der bedrohliche Andere — und macht daraus eine Analyse von Macht. In ›Das andere Geschlecht‹ zeigt sie, wie eine Gruppe zum [[Anderen: de Beauvoirs Begriff für die Position, in die ein Mensch gedrängt wird, wenn eine dominante Gruppe sich als Norm setzt und ihn zum abweichenden, definierten Gegenüber macht]] gemacht wird: Der Mann setzt sich als das Wesentliche, die Frau wird zum Unwesentlichen, zum definierten Gegenüber. Das Zum-Anderen-gemacht-Werden ist hier kein metaphysisches Schicksal wie bei Sartre, sondern ein gesellschaftlicher Vorgang, der sich ändern lässt. Damit sitzt de Beauvoir unten links wie Sartre, aber etwas näher zur Mitte: Sie teilt die Konflikt-Anthropologie, eröffnet aber die Möglichkeit der Befreiung.",
+        "4": "De Beauvoir verschiebt die existenzialistische Subjektphilosophie ins Konkret-Soziale und ist damit die Stimme, die zeigt, dass die Zumutung des Anderen nicht nur ontologisch (Sartre), sondern politisch ist. Ihre Pointe — ›Man kommt nicht als Frau zur Welt, man wird es‹ — überträgt Sartres Existenz-vor-Essenz auf die soziale Konstruktion von Identität durch den Blick der Anderen. Im Tableau bildet sie die Brücke zwischen Sartres düsterer Diagonale und Honneths Anerkennungstheorie: Wie Honneth sieht sie, dass Missachtung Menschen formt — aber sie betont die Asymmetrie der Macht, die Honneths Versöhnungsperspektive fehlt."
+      }
+    },
+    {
+      "id": "aristoteles",
+      "name": "Aristoteles",
+      "lifespan": "384–322 v. Chr.",
+      "firstLevel": 2,
+      "schoolId": "tugendethik-der-freundschaft",
+      "x": 26,
+      "y": 68,
+      "related_topics": [
+        "ethik",
+        "lebenskunst"
+      ],
+      "versions": {
+        "2": "Aristoteles besetzt fast im Alleingang die dünnste Ecke des Tableaus — oben links. Für ihn beginnt das gute Leben beim einzelnen, tugendhaften Menschen; Beziehung ist nicht der Grund des Ich, sondern seine Vollendung. Seine höchste Form ist die [[Tugendfreundschaft: bei Aristoteles die Freundschaft zwischen zwei guten Menschen, die einander um ihrer selbst willen schätzen — die seltenste und beständigste Form, im Unterschied zu Nutzen- und Lustfreundschaft]]: die Freundschaft zwischen zwei guten Menschen, die einander um ihrer selbst willen wollen. Den Freund nennt er ein ›zweites Selbst‹. Hier ist der Andere ein Geschenk — aber ein Geschenk an einen, der schon ein Selbst hat. Darum sitzt Aristoteles oben (Geschenk), aber links (der Einzelne ist der Grund).",
+        "4": "Aristoteles ist im Tableau die kuratorisch wichtigste Einzelbesetzung, weil er fast allein den Quadranten oben links hält — und damit sichtbar macht, wie dünn dieser ist. Seine Freundschaftslehre ist die große Ausnahme von der Regel, dass wer beim Einzelnen beginnt, den Anderen als Grenze denkt. Aber die Ausnahme bestätigt die Struktur: Aristoteles' Freund ist gerade kein konstitutiver Anderer, der mich erst zum Ich macht (wie bei Buber), sondern ein Spiegel meiner schon erreichten Tugend. Der Andere vollendet ein Selbst, das ohne ihn schon bestünde. Das ist der feine, aber entscheidende Unterschied, der die linke von der rechten Tableau-Hälfte trennt."
+      }
+    },
+    {
+      "id": "rogers",
+      "name": "Carl Rogers",
+      "lifespan": "1902–1987",
+      "firstLevel": 2,
+      "schoolId": "objektbeziehung",
+      "x": 58,
+      "y": 82,
+      "related_topics": [
+        "das-selbst"
+      ],
+      "versions": {
+        "2": "Rogers, der Begründer der humanistischen Psychotherapie, macht eine bestimmte Qualität von Beziehung zur Bedingung von Wachstum. Sein Schlüsselbegriff ist die [[bedingungslose positive Wertschätzung: Rogers' Begriff für die Annahme eines Menschen ohne Vorbedingung — nicht ›ich mag dich, wenn‹, sondern ›ich nehme dich an, weil du bist‹]]: ein Mensch entfaltet sich dann, wenn er angenommen wird, ohne sich dafür verbiegen zu müssen. Heilung und Veränderung geschehen für Rogers nicht durch Technik, sondern durch eine echte, wertschätzende Begegnung. Damit sitzt Rogers oben rechts, nahe bei Winnicott: Die nährende Beziehung ist der Boden, auf dem ein Mensch wird, der er sein kann.",
+        "4": "Rogers ist die therapeutische Konkretion der rechten oberen Tableau-Hälfte und verbindet sich eng mit seinem Auftritt im Selbst-Tableau, wo seine Aktualisierungstendenz steht. Hier liegt der Akzent auf der *Beziehung* als Bedingung dieser Tendenz: Der organische Zug zum Wachstum entfaltet sich nur in einem Klima von Echtheit, Empathie und Wertschätzung. Rogers gibt damit der Frage ›Geschenk oder Zumutung‹ eine praktische Wendung — die nährende Begegnung ist nicht nur ein philosophisches Ideal, sondern eine herstellbare Bedingung. Darin trifft er sich mit Fromm (Beziehung als Können) und unterscheidet sich von Buber (Begegnung als nicht herstellbares Geschehen)."
+      },
+      "lectio_brief": "Rogers hat beobachtet, dass ein Mensch aufblüht, wenn er bedingungslos angenommen wird — nicht ›ich mag dich, wenn‹, sondern ›ich nehme dich an, weil du bist‹. Heilung und Wachstum geschehen nicht durch Technik, sondern durch echte, wertschätzende Begegnung. Wer sich so begegnet fühlt, öffnet sich zurück."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "ich-du",
+      "name": "Ich-Du / Ich-Es",
+      "type": "axiom",
+      "firstLevel": 1,
+      "x": 84,
+      "y": 78,
+      "related_topics": [
+        "existenzialismus"
+      ],
+      "versions": {
+        "1": "Bubers zentrale Unterscheidung. Es gibt zwei Grundworte, mit denen der Mensch zur Welt steht. Im Ich-Es ist der andere ein Gegenstand: beobachtet, eingeordnet, gebraucht. Im Ich-Du ist der andere als ganzes Wesen anwesend, in einer Begegnung, die nicht festgehalten werden kann. Die Pointe: Beide Haltungen sind möglich gegenüber demselben Menschen — und es entscheidet sich an ihnen, ob Beziehung Geschenk oder Vergegenständlichung wird.",
+        "3": "Ich-Du ist als Axiom des Tableaus gesetzt, weil aus ihm die ganze rechte Hälfte folgt. Sobald man annimmt, dass der Mensch erst am Du zum Ich wird, verschiebt sich der Ausgangspunkt von der Subjektphilosophie weg. Das Konzept ist zugleich ein Echo aus dem Existenzialismus-Tableau, wo Ich-Du als Bubers orthogonale Randstimme erscheint — hier, im Beziehungs-Tableau, ist es nicht mehr orthogonal, sondern zentral. Was dort am Rand stand, ist hier der Grund."
+      }
+    },
+    {
+      "id": "antlitz",
+      "name": "Das Antlitz",
+      "type": "concept",
+      "firstLevel": 4,
+      "x": 90,
+      "y": 26,
+      "versions": {
+        "4": "Lévinas' Begriff für die Weise, in der der Andere mir begegnet: nicht als Bild, Gestalt oder Gegenstand der Wahrnehmung, sondern als unmittelbarer ethischer Anspruch. Das Antlitz ›spricht‹, noch bevor ein Wort fällt, und sein erstes Wort ist ein Verbot: Du sollst mich nicht töten. Im Antlitz bricht eine Unendlichkeit ein, die sich meinem Zugriff entzieht — ich kann den Anderen nicht auf einen Begriff bringen. Das Antlitz ist der Punkt, an dem Beziehung zur Ethik wird, noch vor jeder Entscheidung."
+      }
+    },
+    {
+      "id": "anerkennung",
+      "name": "Anerkennung",
+      "type": "theory",
+      "firstLevel": 3,
+      "x": 80,
+      "y": 45,
+      "versions": {
+        "3": "Von Hegel zu Honneth durchläuft das Tableau eine Theorie der Anerkennung: Das Ich braucht die Bestätigung durch den Anderen, um zu sich zu kommen. Anerkennung ist keine Höflichkeit, sondern eine Existenzbedingung — sie schafft Selbstvertrauen, Selbstachtung und Selbstschätzung. Ihr Entzug, die Missachtung, ist entsprechend keine Kränkung am Rande, sondern eine Verletzung im Kern. Die Theorie erklärt, warum derselbe Andere nähren *und* verletzen kann: weil beides aus derselben Angewiesenheit stammt."
+      }
+    },
+    {
+      "id": "der-blick",
+      "name": "Der Blick des Anderen",
+      "type": "phenomenon",
+      "firstLevel": 2,
+      "x": 16,
+      "y": 26,
+      "versions": {
+        "2": "Sartres Phänomen: die Erfahrung, vom Anderen angesehen zu werden. Solange ich allein handle, bin ich freies Subjekt, Zentrum meiner Welt. Sobald mich ein Blick trifft, werde ich zum Objekt in der Welt eines Anderen — etwas, das beurteilt, eingeordnet, festgelegt wird. Das klassische Beispiel: Ich spähe durch ein Schlüsselloch, ganz in meine Handlung versunken — bis Schritte hinter mir mich zum Ertappten machen. Der Blick ist die alltägliche Erfahrung, an der Sartre zeigt, dass der Andere meine Freiheit bedroht.",
+        "4": "Der Blick ist das phänomenologische Kernstück der unteren linken Tableau-Hälfte und die schärfste Gegenfigur zu Bubers Ich-Du. Wo bei Buber die Begegnung mich werden lässt, lässt der Blick bei Sartre mich erstarren. Beide beschreiben dasselbe Faktum — dass ich durch den Anderen vermittelt bin —, aber Sartre erlebt es als Verlust, Buber als Gewinn. Die ganze vertikale Spannung des Tableaus (Geschenk ↔ Zumutung) lässt sich an diesem einen Unterschied ablesen."
+      }
+    },
+    {
+      "id": "disponibilite",
+      "name": "Disponibilité (Verfügbarkeit)",
+      "type": "concept",
+      "firstLevel": 3,
+      "x": 68,
+      "y": 64,
+      "versions": {
+        "3": "Marcels Begriff für die Bereitschaft, für den Anderen wirklich da zu sein — sich ihm zu öffnen, statt ihn auf Abstand zu halten. Verfügbarkeit ist das Gegenteil der Verschlossenheit, in der ich den Anderen als Problem behandle, das mich nicht betrifft. Wer verfügbar ist, lässt sich vom Anderen angehen und verändern. Damit ist disponibilité die Haltung, die Marcels Mysterium-Begriff praktisch macht: Sie ist die Weise, in der ich einem Du begegne, statt ein Es zu verwalten."
+      }
+    },
+    {
+      "id": "wahres-falsches-selbst",
+      "name": "Wahres und falsches Selbst",
+      "type": "theory",
+      "firstLevel": 2,
+      "x": 62,
+      "y": 92,
+      "versions": {
+        "2": "Winnicotts Unterscheidung. Das wahre Selbst ist das spontane, lebendige Zentrum eines Menschen — das, was sich anfühlt wie er selbst. Es kann sich nur in einer ausreichend guten, haltenden Beziehung entfalten. Wo dieses Halten fehlt, bildet sich ein falsches Selbst: eine angepasste Fassade, die den Erwartungen anderer entspricht und das verletzliche wahre Selbst schützt. Die Theorie zeigt, dass das, was wir für unseren innersten Kern halten, von der Qualität früher Beziehungen abhängt — der Grund ist relational, nicht innerlich."
+      }
+    },
+    {
+      "id": "zweites-selbst",
+      "name": "Der Freund als zweites Selbst",
+      "type": "concept",
+      "firstLevel": 3,
+      "x": 22,
+      "y": 74,
+      "related_topics": [
+        "lebenskunst"
+      ],
+      "versions": {
+        "3": "Aristoteles' Bild für die vollendete Freundschaft: Der wahre Freund ist ein ›anderes Selbst‹. In ihm erkenne ich mich wieder, an ihm sehe ich mein eigenes Leben wie von außen, mit ihm teile ich das, was mir am wichtigsten ist. Aber — und darin liegt die kuratorische Pointe des Tableaus — dieser Freund vollendet ein Selbst, das schon besteht. Er macht mich nicht erst zum Ich (wie das Du bei Buber), sondern verdoppelt und bestätigt ein bereits tugendhaftes Ich. Der Andere als Geschenk an einen, der seiner nicht bedarf, um zu sein."
+      }
+    },
+    {
+      "id": "missachtung",
+      "name": "Missachtung",
+      "type": "phenomenon",
+      "firstLevel": 4,
+      "x": 86,
+      "y": 40,
+      "versions": {
+        "4": "Honneths Gegenbegriff zur Anerkennung und der Punkt, an dem die rechte Tableau-Hälfte nach unten kippt. Missachtung — Misshandlung, Entrechtung, Entwürdigung — verletzt einen Menschen in genau den Sphären, in denen Anerkennung ihn aufbaut. Weil der Mensch auf Anerkennung angewiesen ist, ist ihr Entzug keine bloße Unannehmlichkeit, sondern ein Angriff auf das Selbstverhältnis. Missachtung zeigt, dass die nährende und die bedrohliche Seite des Anderen nicht zwei verschiedene Andere sind, sondern zwei Möglichkeiten derselben Angewiesenheit."
+      }
+    }
+  ],
+  "influences": [
+    {
+      "from": "hegel",
+      "to": "sartre",
+      "type": "influence",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Sartre übernimmt Hegels Einsicht, dass Selbstbewusstsein durch den Anderen vermittelt ist — aber er deutet den Kampf um Anerkennung als unauflösbaren Konflikt. Was bei Hegel eine Durchgangsstufe zur Versöhnung ist, wird bei Sartre zur Dauerstruktur: Der Blick des Anderen versklavt, ohne dass eine höhere Einheit in Sicht käme."
+      }
+    },
+    {
+      "from": "hegel",
+      "to": "honneth",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Honneth ist der direkte Erbe von Hegels Anerkennungsbegriff. Er holt ihn aus der spekulativen Logik heraus und macht ihn empirisch fruchtbar: Die drei Sphären der Anerkennung sind eine Ausbuchstabierung dessen, was bei Hegel als Bewegung des Selbstbewusstseins angelegt ist. Honneth zeigt, dass der Kampf um Anerkennung nicht im Herr-Knecht-Verhältnis endet, sondern die Triebfeder sozialen Fortschritts ist."
+      }
+    },
+    {
+      "from": "buber",
+      "to": "levinas",
+      "type": "influence",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Lévinas knüpft an Bubers Umkehrung an — der Andere zuerst —, kritisiert aber die Symmetrie des Ich-Du. Für Lévinas ist die Wechselseitigkeit der Begegnung schon zu viel Gleichheit: Das Verhältnis zum Anderen ist grundlegend asymmetrisch, meine Verantwortung geht jeder Gegenseitigkeit voraus. Lévinas radikalisiert Buber, indem er die Begegnung von der Ethik her denkt statt von der Gegenseitigkeit."
+      }
+    },
+    {
+      "from": "buber",
+      "to": "marcel",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Buber und Marcel erreichen aus verschiedenen Traditionen — jüdischer Chassidismus, katholische Theologie — verwandte Positionen: Begegnung als Grundstruktur, Beziehung vor Subjekt, der Andere als nicht-objektivierbares Mysterium. Beide stehen gegen die existenzialistische Verabsolutierung des Einzelnen, beide denken den Anderen als das, was den Menschen erst ganz macht."
+      }
+    },
+    {
+      "from": "sartre",
+      "to": "buber",
+      "type": "critique",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Die zentrale Streitlinie des Tableaus, als Critique-Kante markiert. Für Buber wäre Sartres ›Die Hölle, das sind die anderen‹ die präzise Beschreibung der Ich-Es-Welt — aber eben nur einer Möglichkeit, nicht der menschlichen Grundverfassung. Sartre hält dagegen: Die Ich-Du-Begegnung ist eine schöne Illusion, die über die ontologische Unmöglichkeit echter Verbindung hinwegtröstet. Hier prallen die obere und die untere Tableau-Hälfte direkt aufeinander."
+      }
+    },
+    {
+      "from": "sartre",
+      "to": "de-beauvoir",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "De Beauvoir teilt Sartres Grundstruktur — das freie Subjekt und der vergegenständlichende Blick des Anderen —, wendet sie aber ins Soziale und Politische. Wo Sartre den Konflikt ontologisch fasst, zeigt de Beauvoir ihn als Machtverhältnis zwischen Gruppen, das historisch geworden und darum veränderbar ist."
+      }
+    },
+    {
+      "from": "levinas",
+      "to": "sartre",
+      "type": "critique",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Lévinas' schärfste Frontstellung. Wo Sartre den Blick des Anderen als Versklavung erfährt, sieht Lévinas in der Verantwortung für den Anderen den Ursprung der Menschlichkeit. Dieselbe Grunderfahrung — vom Anderen in Anspruch genommen zu werden — deutet Sartre als Verlust der Freiheit, Lévinas als deren ethische Erfüllung. Die beiden besetzen damit die äußersten Enden der Y-Achse."
+      }
+    },
+    {
+      "from": "winnicott",
+      "to": "rogers",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Winnicott und Rogers teilen die Überzeugung, dass das Selbst nur in einer tragenden Beziehung gedeiht. Winnicotts ›ausreichend gute‹ Bezugsperson und Rogers' wertschätzendes therapeutisches Klima beschreiben dieselbe Bedingung aus zwei Praxisfeldern — Kinderentwicklung und Psychotherapie. Beide geben der nährenden Tableau-Hälfte ihre empirische Grundlage."
+      }
+    },
+    {
+      "from": "winnicott",
+      "to": "buber",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Was Buber philosophisch behauptet — der Mensch wird am Du zum Ich —, beschreibt Winnicott entwicklungspsychologisch: Es gibt kein Selbst ohne die haltende Beziehung. Die beiden stützen einander über die Grenze von Philosophie und Psychologie hinweg und bilden gemeinsam das Zentrum der oberen rechten Tableau-Hälfte."
+      }
+    },
+    {
+      "from": "fromm",
+      "to": "buber",
+      "type": "critique",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Ein feiner, aber wichtiger Dissens. Für Buber geschieht die Ich-Du-Begegnung, sie ist nicht herstellbar. Fromm hält dagegen: Lieben ist eine Kunst, die man übt und lernt. Damit steht die Frage im Raum, ob echte Begegnung Gnade oder Praxis ist — eine Spannung, die das Tableau offen hält, statt sie aufzulösen."
+      }
+    },
+    {
+      "from": "aristoteles",
+      "to": "buber",
+      "type": "critique",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Die stille Gegenüberstellung, die die X-Achse trägt. Für Aristoteles ist der Freund ein zweites Selbst — ein Geschenk an einen, der schon ein tugendhaftes Ich besitzt. Für Buber ist das Du das, woraus das Ich überhaupt erst hervorgeht. Beide schätzen den Anderen hoch, aber sie streiten darüber, ob er ein bestehendes Selbst vollendet (Aristoteles) oder es allererst stiftet (Buber). An dieser Differenz entscheidet sich links gegen rechts."
+      }
+    },
+    {
+      "from": "hegel",
+      "to": "de-beauvoir",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "De Beauvoir greift Hegels Herr-Knecht-Dialektik auf, um das Verhältnis der Geschlechter zu analysieren: Der Mann nimmt die Position des wesentlichen Selbstbewusstseins ein, die Frau wird zum unwesentlichen Anderen gemacht. Anders als bei Hegel ist hier kein dialektischer Ausgleich vorgesehen — die Anerkennung bleibt einseitig verweigert, solange die Machtverhältnisse bestehen."
+      }
+    },
+    {
+      "from": "honneth",
+      "to": "rogers",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Honneth und Rogers treffen sich an einem überraschenden Punkt: Beide sehen in der bestätigenden Beziehung die Bedingung eines gelingenden Selbstverhältnisses. Was Honneth gesellschaftstheoretisch als Anerkennung fasst, beschreibt Rogers therapeutisch als bedingungslose Wertschätzung. Die eine Theorie blickt auf Institutionen, die andere auf die Zweierbeziehung — aber beide sagen: Ohne das Ja des Anderen kommt der Mensch nicht zu sich."
+      }
+    }
+  ]
+}
