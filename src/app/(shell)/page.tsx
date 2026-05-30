@@ -1,6 +1,17 @@
 import Link from 'next/link'
+import { getTopic } from '@/lib/data'
+import HeroTableau, { type HeroPoint } from '@/components/HeroTableau'
+
+const FEATURED_ID = 'das-selbst'
+// Konzepte, deren Namen aufs Feld geschrieben werden (über die Quadranten verteilt)
+const FEATURED_LABELS = ['atman', 'anatta', 'individuation', 'ego-tunnel']
 
 export default function LandingPage() {
+  // Hero-Daten auf dem Server aus dem echten Tableau ziehen
+  const featured = getTopic(FEATURED_ID)
+  const heroPoints: HeroPoint[] = featured
+    ? featured.concepts.map(c => ({ id: c.id, name: c.name, x: c.x, y: c.y, firstLevel: c.firstLevel }))
+    : []
   return (
     <section className="px-8 md:px-12 py-16 md:py-28 max-w-[820px] mx-auto">
 
@@ -27,7 +38,7 @@ export default function LandingPage() {
         vom Einstieg bis zur Synthese.
       </p>
 
-      <div className="flex flex-wrap gap-4 mb-16">
+      <div className="flex flex-wrap gap-4 mb-12">
         <Link
           href="/themen"
           className="inline-flex items-center gap-2 px-5 py-3 border font-ui text-[12px] tracking-[0.18em] uppercase
@@ -41,6 +52,25 @@ export default function LandingPage() {
           <span aria-hidden>→</span>
         </Link>
       </div>
+
+      {/* ── Lebendiges Tableau — zeigt, was der Text verspricht ── */}
+      {featured && (
+        <div className="mb-16">
+          <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint] mb-3 flex items-center gap-2">
+            <span className="inline-block w-[5px] h-[5px] rounded-full" style={{ background: 'var(--accent)', opacity: 0.7 }} aria-hidden />
+            Lebendiges Tableau · {featured.topic.title}
+          </p>
+          <div className="border border-[--hairline] bg-[--bg-sunk] px-6 pt-5 pb-6">
+            <HeroTableau
+              quadrants={featured.topic.quadrants}
+              levels={featured.levels}
+              points={heroPoints}
+              labelIds={FEATURED_LABELS}
+              topicTitle={featured.topic.title}
+            />
+          </div>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-10 border-t border-[--hairline]">
         {[
