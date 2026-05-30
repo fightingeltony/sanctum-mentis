@@ -33,24 +33,29 @@
   },
   "levels": [
     {
-      "level": 1,
-      "label": "Einstieg"
+      "id": 1,
+      "label": "Einstieg",
+      "short": "L1"
     },
     {
-      "level": 2,
-      "label": "Vertiefung"
+      "id": 2,
+      "label": "Vertiefung",
+      "short": "L2"
     },
     {
-      "level": 3,
-      "label": "Hauptkörper"
+      "id": 3,
+      "label": "Hauptkörper",
+      "short": "L3"
     },
     {
-      "level": 4,
-      "label": "Spezialisierung"
+      "id": 4,
+      "label": "Spezialisierung",
+      "short": "L4"
     },
     {
-      "level": 5,
-      "label": "Synthese"
+      "id": 5,
+      "label": "Synthese",
+      "short": "L5"
     }
   ],
   "schools": [
