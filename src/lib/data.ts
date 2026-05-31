@@ -19,6 +19,7 @@ import findestDuOderMachstDuRaw            from '../../data/lectio/findest-du-od
 import ruheOderRauschRaw                   from '../../data/lectio/ruhe-oder-rausch.json'
 import derWegDesMenschenRaw                from '../../data/lectio/der-weg-des-menschen.json'
 import istDerAndereHoelleOderHeimatRaw     from '../../data/lectio/ist-der-andere-hoelle-oder-heimat.json'
+import verstehenOderWeitergehenRaw         from '../../data/lectio/verstehen-oder-weitergehen.json'
 import schmerzRaw                          from '../../data/lebensfragen/schmerz.json'
 import todRaw                              from '../../data/lebensfragen/tod.json'
 
@@ -69,6 +70,7 @@ const LECTIOS: Record<string, Lectio> = {
   'ruhe-oder-rausch':            ruheOderRauschRaw             as unknown as Lectio,
   'der-weg-des-menschen':        derWegDesMenschenRaw          as unknown as Lectio,
   'ist-der-andere-hoelle-oder-heimat': istDerAndereHoelleOderHeimatRaw as unknown as Lectio,
+  'verstehen-oder-weitergehen':        verstehenOderWeitergehenRaw     as unknown as Lectio,
 }
 
 export function getLectio(id: string): Lectio | null {
