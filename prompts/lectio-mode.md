@@ -247,7 +247,7 @@ Eine Sanctum-Lectio darf eine Haltung haben, aber keine Wahrheit verkünden. Die
 }
 ```
 
-**`path_type`-Werte:** `"narrativ-historisch"` | `"konkurrierend-konfrontativ"` | `"emotional-kumulativ"` | `"destruktiv-aufbauend"` | `"kontemplativ-vertiefend"` (Datenwert, noch nicht kanonisierter Methoden-Typ — wartet auf zweiten Fall).
+**`path_type`-Werte:** `"narrativ-historisch"` | `"konkurrierend-konfrontativ"` | `"emotional-kumulativ"` | `"destruktiv-aufbauend"` | `"kontemplativ-vertiefend"` (Datenwert, noch nicht kanonisierter Methoden-Typ — wartet auf zweiten, unabhängigen Fall; sobald ein zweiter kontemplativ-vertiefender Bau vorliegt, wird dieser Typ in Punkt 9 als vollständige Methoden-Konvention aufgenommen und die Warnung hier entfernt).
 
 **`ton`-Werte:** `"expositorisch"` (Default, wenn Feld fehlt) | `"erzählend-erfahrend"` (in Validierung — erster Fall: `wer-bist-du-wenn-du-alles-weglaesst`; eigene Render-Komponente `LectioNarrativeViewer`, eigenes `narrative`-Interface pro Station; Kanonisierung nach Partnerin-Test).
 

@@ -72,7 +72,7 @@
 
 ## Was mich aktuell beschäftigt
 
-Der Partnerin-Test läuft — drei Lectios (darunter die neue erzählende Form `wer-bist-du-wenn-du-alles-weglaesst` im direkten Vergleich mit `wer-beobachtet`). Was auf dem Spiel steht: nicht Schönheit, sondern Tiefe. Bleibt jemand dran? Erkennt sich jemand in einer Stimme wieder? Das Ergebnis entscheidet, ob der erzählende Ton zum neuen Standard wird und die anderen ~10 Lectios in dieselbe Form überführt werden. Der Test existiert bisher nur als Ereignis — noch nicht in `feedback-runde-1.md` eingetragen.
+Der Partnerin-Test läuft — drei Lectios (darunter die neue erzählende Form `wer-bist-du-wenn-du-alles-weglaesst` im direkten Vergleich mit `wer-beobachtet`). Was auf dem Spiel steht: nicht Schönheit, sondern Tiefe. Bleibt jemand dran? Erkennt sich jemand in einer Stimme wieder? Das Ergebnis entscheidet, ob der erzählende Ton zum neuen Standard wird und die anderen ~10 Lectios in dieselbe Form überführt werden. **Sobald ein Ergebnis vorliegt, gehört es nach `feedback-runde-1.md`** — dort lebt die Feedback-Geschichte, hier nur der Stand.
 
 Die Sammlung hat jetzt zehn Tableaus, fünf Spuren, dreizehn Lectios und eine neue Lectio-Form. Was ich nicht weiß: Ob der Discovery-Pfad (Bibliothek → Tableau → Lectio) für jemanden ohne Vorwissen trägt. Der formale User-Test — zwei Personen aus der Persona, ohne Erklärung beobachten — ist weiterhin ausständig.
 
