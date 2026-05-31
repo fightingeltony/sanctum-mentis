@@ -419,7 +419,8 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           background: radial-gradient(120% 100% at 50% 34%, var(--bg) 0%, var(--bg) 44%, var(--bg-deep) 100%);
         }
         .station {
-          position: absolute; inset: 0;
+          position: absolute; left: 0; right: 0; bottom: 0;
+          top: 60px; /* unterhalb Header — Content scrollt nie in die Chrome-Zone */
           display: flex; overflow-y: auto; overflow-x: hidden;
           opacity: 0; visibility: hidden;
           transition: opacity .7s ease; scrollbar-width: none;
@@ -428,7 +429,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         .station.active { opacity: 1; visibility: visible; }
         .station-inner {
           margin: 0 auto; width: 100%;
-          padding: 92px 32px 150px; text-align: center;
+          padding: 40px 32px 150px; text-align: center;
           display: flex; flex-direction: column; align-items: center;
         }
 
@@ -600,9 +601,10 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         }
         @media (max-width: 640px) {
           .niche { width: 104px; height: 132px; border-radius: 52px 52px 6px 6px; }
-          .station-inner { padding: 110px 22px 160px; }
-          .brand { top: 18px; left: 18px; }
-          .lc-counter { top: 18px; right: 18px; }
+          .station { top: 52px; }
+          .station-inner { padding: 28px 22px 160px; }
+          .brand { top: 16px; left: 18px; }
+          .lc-counter { top: 16px; right: 18px; }
         }
       `}</style>
     </>
