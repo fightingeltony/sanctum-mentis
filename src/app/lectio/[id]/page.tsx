@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getLectio, getLectioIds, getTopic } from '@/lib/data'
 import LectioViewer from '@/components/LectioViewer'
+import LectioNarrativeViewer from '@/components/LectioNarrativeViewer'
 
 interface Props {
   params: Promise<{ id: string }>
@@ -28,6 +29,10 @@ export default async function LectioPage({ params }: Props) {
 
   const topicData = getTopic(lectio.tableauId)
   if (!topicData) notFound()
+
+  if (lectio.ton === 'erzählend-erfahrend') {
+    return <LectioNarrativeViewer lectio={lectio} topicData={topicData} />
+  }
 
   return <LectioViewer lectio={lectio} topicData={topicData} />
 }

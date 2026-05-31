@@ -144,6 +144,14 @@ export interface LevelState {
 
 // ─── Lectio Types ────────────────────────────────────────────
 
+/** Erzählende Ergänzung für eine Lectio-Station (ton: 'erzählend-erfahrend') */
+export interface LectioNarrative {
+  hook: string;     // Einstieg über Alltagserfahrung
+  body: string[];   // 1–3 Absätze, Lehre erzählend
+  kernel: string;   // EXAKTER Teilstring aus body → als <em class="kernel"> hervorheben
+  bridge: string;   // Übergang; identisch mit step.transition
+}
+
 /** Eine Station im Lectio-Pfad */
 export interface LectioStep {
   nodeId: string | string[];
@@ -153,6 +161,7 @@ export interface LectioStep {
                          // (Ein-Werk-Lectio: derselbe Knoten an mehreren Stationen
                          // mit verschiedenem Text). Annotationsfrei, wie lectio_brief.
                          // Nur für Einzelknoten-Stationen — nicht bei Doppelstationen.
+  narrative?: LectioNarrative;  // erzählende Form — nur bei ton: 'erzählend-erfahrend'
   transition: string;
 }
 
@@ -166,6 +175,7 @@ export interface Lectio {
   path_type?: string;    // u.a. 'narrativ-historisch', 'konkurrierend-konfrontativ',
                          // 'emotional-kumulativ', 'destruktiv-aufbauend',
                          // 'kontemplativ-vertiefend' — bisher implizit, jetzt benennbar
+  ton?: 'expositorisch' | 'erzählend-erfahrend';  // fehlendes Feld = expositorisch
   level: number;
   estimated_minutes: number;
   intro: string;

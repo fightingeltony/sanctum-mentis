@@ -1,0 +1,75 @@
+{
+  "id": "wer-bist-du-wenn-du-alles-weglaesst",
+  "tableauId": "das-selbst",
+  "title": "Wer bist du, wenn du alles weglässt?",
+  "focus": "Vier Stimmen zur Frage nach dem Kern — erzählt von der Erfahrung her, nicht von der Lehre",
+  "thesis": "Es gibt einen Moment, in dem du bemerkst, dass du denkst. Vier Traditionen deuten ihn völlig verschieden — und welche sich für dich richtig anfühlt, ist deine eigene Antwort auf die Frage, ob du einen Kern hast.",
+  "path_type": "konkurrierend-konfrontativ",
+  "ton": "erzählend-erfahrend",
+  "level": 2,
+  "estimated_minutes": 12,
+  "intro": "Es gibt einen Moment, den fast jeder kennt, aber kaum jemand benennt. Du bist mitten in etwas — einem Streit, einem Gedanken, einer Sorge — und plötzlich, für einen Augenblick, bemerkst du, dass du mittendrin bist. Du trittst einen halben Schritt zurück, ohne dich zu bewegen. Vier Stimmen aus zweitausendfünfhundert Jahren haben sich gefragt, was dieser Moment bedeutet. Sie widersprechen einander. Du musst keiner recht geben. Lies langsam — und schau, welche sich anfühlt, als spräche sie von dir.",
+
+  "path": [
+    {
+      "nodeId": "vedanta",
+      "nodeType": "thinker",
+      "narrative": {
+        "hook": "Kennst du den Moment kurz vor dem Einschlafen, wenn die Gedanken noch laufen — der Tag, ein Gespräch, eine offene Sorge —, und dann fällt dir auf, dass sie laufen? Für einen Augenblick bist du nicht mehr im Gedanken drin. Du bemerkst ihn nur.",
+        "body": [
+          "Die älteste der vier Stimmen, die Vedanta-Tradition Indiens, macht aus diesem kleinen Riss eine große Behauptung. Das, was da bemerkt — ruhig, ohne mitzulaufen —, das bist eigentlich du. Nicht die Gedanken, nicht die Gefühle, nicht einmal dein Name. Sondern der stille Zeuge dahinter, der immer schon da ist und sich nie verändert.",
+          "Du musst diesen Zeugen nicht herstellen, sagt Vedanta. Er liegt längst unter allem. Du musst ihn nur wiederfinden."
+        ],
+        "kernel": "Du musst ihn nur wiederfinden.",
+        "bridge": "Vielleicht erkennst du den Moment. Vielleicht ist dir die Behauptung zu groß. Beides ist eine Antwort — und die nächste Stimme widerspricht ihr von Grund auf."
+      },
+      "transition": "Vielleicht erkennst du den Moment. Vielleicht ist dir die Behauptung zu groß. Beides ist eine Antwort — und die nächste Stimme widerspricht ihr von Grund auf."
+    },
+    {
+      "nodeId": "buddhismus",
+      "nodeType": "thinker",
+      "narrative": {
+        "hook": "Wenn dir der ruhige Zeuge zu viel behauptet war — du bist in guter Gesellschaft, und zwar in sehr alter.",
+        "body": [
+          "Der Buddha schaut auf denselben Moment vor dem Einschlafen und sieht das Gegenteil. Da ist kein Zeuge. Such ihn — du wirst ihn nicht finden. Was du findest, ist nur wieder ein Gedanke: der Gedanke „ich bemerke gerade etwas“. Und der vergeht auch, wie alle anderen.",
+          "Was du Ich nennst, sagt der Buddhismus, ist kein Ding und kein Kern. Es ist ein Strom. Wahrnehmungen, Empfindungen, Gedanken — sie steigen auf und vergehen, ununterbrochen, und nirgendwo sitzt jemand, der bleibt. Das klingt zuerst kalt. Aber es heißt nicht, dass nichts existiert. Es heißt nur: kein fester Kern, nur Bewegung."
+        ],
+        "kernel": "kein fester Kern, nur Bewegung.",
+        "bridge": "Wenn du je gedacht hast „ich beobachte mich doch nicht beim Denken, ich denke einfach“ — dann hat eine zweieinhalbtausend Jahre alte Tradition genau das gemeint."
+      },
+      "transition": "Wenn du je gedacht hast „ich beobachte mich doch nicht beim Denken, ich denke einfach“ — dann hat eine zweieinhalbtausend Jahre alte Tradition genau das gemeint."
+    },
+    {
+      "nodeId": "jung",
+      "nodeType": "thinker",
+      "narrative": {
+        "hook": "Die ersten beiden Stimmen streiten, ob es einen Kern gibt. Die dritte stellt die Frage anders: Vielleicht ist der Kern nichts, was man hat — sondern etwas, das langsam entsteht.",
+        "body": [
+          "Denk an einen Menschen mit sechzig, der durch Verluste, Krisen, durch die Auseinandersetzung mit dem, was er an sich lange nicht sehen wollte, mehr er selbst geworden ist als mit zwanzig. Nicht glatter — eher ganzer. Genau das meinte der Psychologe C. G. Jung. Im Lauf eines Lebens bildet sich, oft erst in der zweiten Hälfte, ein Zentrum, das größer ist als das alltägliche Ich. Er nannte es das Selbst.",
+          "Für Jung ist dieses Selbst nicht kühl und nicht bloße Funktion. Es ist etwas, das einen ergreifen kann — in einem Traum, in einer Krise, in einem Moment, in dem plötzlich alles zusammenpasst. Kein Ausgangspunkt, an den man zurückfindet. Ein Ziel, auf das man zugeht, ohne je ganz anzukommen."
+        ],
+        "kernel": "Ein Ziel, auf das man zugeht, ohne je ganz anzukommen.",
+        "bridge": "Der Kern ist nicht gegeben — er wird. Das ist ein dritter Weg zwischen den ersten beiden. Die vierte Stimme nimmt ihn wieder weg."
+      },
+      "transition": "Der Kern ist nicht gegeben — er wird. Das ist ein dritter Weg zwischen den ersten beiden. Die vierte Stimme nimmt ihn wieder weg."
+    },
+    {
+      "nodeId": "metzinger",
+      "nodeType": "thinker",
+      "narrative": {
+        "hook": "Die jüngste Stimme kommt nicht aus einem Kloster, sondern aus der Hirnforschung — und sie ist die nüchternste von allen.",
+        "body": [
+          "Stell dir vor, du trägst eine Brille so lange, dass du vergisst, dass du eine Brille trägst. Du hältst, was du durch sie siehst, einfach für die Welt. Genau das, sagt der Philosoph Thomas Metzinger, macht dein Gehirn mit deinem Ich. Es erzeugt ein Modell von dir selbst — und dieses Modell ist so überzeugend, dass du nie merkst, dass es ein Modell ist. Du hältst es für dich.",
+          "Niemand war je ein Selbst, sagt Metzinger. Es gibt keinen, der hinter deinen Augen sitzt. Nur einen Vorgang, der sich selbst ein Bild von sich macht. Das klingt nach Verlust — ist aber für ihn fast eine Erleichterung: Wer begreift, dass das Ich ein Modell ist, muss es nicht mehr so verbissen verteidigen."
+        ],
+        "kernel": "Niemand war je ein Selbst",
+        "bridge": "Das Erstaunliche: Ein moderner Hirnforscher landet fast genau dort, wo der Buddha vor zweitausendfünfhundert Jahren stand. Zwei völlig verschiedene Wege, dieselbe Beobachtung."
+      },
+      "transition": "Das Erstaunliche: Ein moderner Hirnforscher landet fast genau dort, wo der Buddha vor zweitausendfünfhundert Jahren stand. Zwei völlig verschiedene Wege, dieselbe Beobachtung."
+    }
+  ],
+
+  "closing_synthesis": "Vier Antworten auf einen einzigen Moment — den, in dem du bemerkst, dass du denkst. Vedanta sagt: Da ist ein stiller Zeuge, und er ist dein wahres Selbst. Der Buddhismus sagt: Da ist kein Zeuge, nur der Strom. Jung sagt: Der Kern ist nicht da — er wächst ein Leben lang. Und Metzinger sagt: Es ist ein Modell, das dein Gehirn so gut macht, dass du es für dich hältst. Du musst dich nicht entscheiden. Aber vielleicht hast du beim Lesen gemerkt, dass eine der Stimmen sich angefühlt hat, als spräche sie von dir — und eine andere, als spräche sie an dir vorbei. Das ist kein Zufall. Das ist deine eigene Antwort, die du längst hattest, bevor die Frage gestellt wurde.",
+
+  "closing_question": "Wer bist du, wenn du alles weglässt — ein Kern, den du findest? Oder das Weglassen selbst?"
+}

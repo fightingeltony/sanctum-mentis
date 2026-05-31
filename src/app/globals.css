@@ -9,6 +9,8 @@
   --bg:               oklch(0.94 0.022 85);
   --bg-raised:        oklch(0.97 0.018 82);
   --bg-sunk:          oklch(0.91 0.025 80);
+  --bg-deep:          oklch(0.865 0.028 78);   /* tiefstes Pergament — Lectio-Gradient */
+  --paper:            oklch(0.945 0.020 82);
 
   --fg:               oklch(0.24 0.022 65);
   --fg-muted:         oklch(0.40 0.022 65);
