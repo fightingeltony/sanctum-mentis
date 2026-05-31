@@ -155,7 +155,8 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Update 29.5.26:** Bedingung erfüllt — alle drei Spuren haben nun ≥2 Tableaus (Erkenntnis 3, Handlung 2, Existenz 2). Explizite Sichtbarkeits-Lösung kann jetzt umgesetzt werden.
 **Update 31.5.26:** Bedingung wieder gebrochen — vierte Spur (Wandlung) hat nur 1 Tableau. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt auch für vier Spuren.
 **Update 31.5.26 (später):** Gut/Böse eröffnet **fünfte Spur (Menschenbild, hue 345)**. Bedingung weiterhin nicht erfüllt — jetzt *zwei* Ein-Tableau-Spuren (Wandlung + Menschenbild). Section-Header warten, bis beide ≥2 Tableaus haben.
-**Nächster Schritt:** Section-Header / Trennstriche / Spur-Filter implementieren, sobald alle Spuren ≥2 Tableaus tragen.
+**Update 1.6.26:** Verwandlung live → Wandlung-Spur hat jetzt **2 Tableaus** (hue 152 + 156). Section-Header-Bedingung für Wandlung-Spur erfüllt. Noch fehlend: zweites Menschenbild-Tableau.
+**Nächster Schritt:** Section-Header implementieren sobald auch Menschenbild ≥2 Tableaus hat. Oder schon jetzt für Wandlung allein einschalten und Menschenbild nachziehen lassen.
 
 ---
 
@@ -529,6 +530,18 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 
 ---
 
+### [x] Verwandlung — zweites Wandlung-Tableau
+**Status:** implementiert 1.6.26 (Mild-Modus, externe Prüfung bestanden)
+**Anker:** Gewachsen — *„Was muss geschehen, damit ein Mensch nicht repariert, sondern ein anderer wird?"* Rilkes „Du mußt dein Leben ändern" als innerer Ankerpunkt.
+**Abgrenzung:** Wandlung (erstes Tableau) fragt *Was heilt?* — Verwandlung fragt *Was verwandelt grundlegend?* Trennlinie Reparatur vs. Metamorphose. Weitet die Spur von „therapeutisch" auf „allgemein".
+**Ergebnis:** 10 Denker (Rilke als **erster Dichter-Knoten der Sammlung**, Eckhart als Scharnier-Hub mit Kantengrad 4), 6 Konzepte, 8 Schulen (eine Drei-Denker-Schule: `kontemplative-tradition`), 13 Influences. Achsen: Krise↔Praxis / Selbst-getrieben↔Welt-getroffen. Hue 156 (Staffelung innerhalb des Wandlung-Bands 150–160°). Alle 5 Stufen belegt; L1–L2 mit zwei Influence-Kanten aktiv (rilke→james L1, james→frankl L2).
+**Externe Prüfung:** „strukturell und tonal das sauberste Tableau der Serie." Y-Achse + Tolle-Ton unabhängig bestätigt. Ein Befund eingearbeitet: zwei Ein-Denker-Schulen zu `kontemplative-tradition` zusammengelegt.
+**Dichter-Knoten-Pattern etabliert:** Stimme über `lectio_brief` + atmosphärische versions, Schule als bewusste Ein-Denker-Ausnahme (`lebensdichtung`). Wiederverwendbar für künftige nicht-argumentierende Stimmen.
+**Bibliotheks-Bedingung:** Wandlung-Spur hat jetzt 2 Tableaus → **Section-Header-Bedingung für diese Spur erfüllt**. Menschenbild bleibt bei 1.
+**Bugs behoben beim Integration (1.6.26):** (1) `manualLayout` in InfluenceGraph.tsx: graphX/graphY waren absolute statt zentrumsrelative Koordinaten → +W/2, +H/2 eingefügt. (2) `thinkerListStyle: "cards"` aus JSON entfernt → fällt auf grouped-Default zurück. (3) leftHint/rightHint gekürzt (78→54 Zeichen) → kein Overlap mit Y-Achsenbeschriftung.
+
+---
+
 ### [x] Wandlung — Tableau + erste Lectio
 **Status:** implementiert 31.5.26 (Mild-Modus, externe Prüfung bestanden)
 **Anker:** Gewachsen — *"Was muss geschehen, damit ein Mensch ein anderer wird?"* — aus eigener Transformationsarbeit, trifft Moniques Wortfeld (Veränderungsprozess).
@@ -558,12 +571,9 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 
 ---
 
-### [ ] Rilke als fehlender Knoten (priorisiert)
-**Status:** neu, 31.5.26
-**Kontext:** Rilke fehlt bisher in der gesamten Sammlung. Als Dichter-Denker passt er nicht ins klassische Denker-Schema, aber sein Denken über Einsamkeit, Verwandlung, Offenheit (*Briefe an einen jungen Dichter*, *Archaischer Torso Apollos*) ist kuratorisch relevant — besonders für Wandlung-Spur und Existenz-Spur.
-**Optionen:** (a) Als Denker in ein bestehendes Tableau (Wandlung? Begegnung?), (b) als Lectio-Knoten ohne Tableau-Anker, (c) als Stimme in einer Lebensfrage.
-**Spur-Signal:** Wenn Rilke in Wandlung passt (Verwandlung als zentrales Motiv), wäre er der erste Dichter-Knoten der Sammlung — das ist eine kuratorische Entscheidung, nicht nur ein Content-Entscheid.
-**Nächster Schritt:** Konkrete Achsen-Position prüfen: Wo säße Rilke im Wandlung-Tableau? Falls Koordinaten stimmig → nächstes Wandlung-Update oder eigene Lectio.
+### [x] Rilke als fehlender Knoten
+**Status:** gelöst 1.6.26 im Verwandlung-Tableau
+**Ergebnis:** Rilke ist Hub im Verwandlung-Tableau (x:28, y:16 — Krise × Welt-getroffen, Hub mit Kantengrad 4, drei Textstufen). Schule `lebensdichtung` als bewusste Ein-Denker-Ausnahme. L5-Pointe: „Du mußt dein Leben ändern" ist reinste Passivität als Imperativ — unterläuft die Y-Achse. **Dichter-Knoten-Pattern etabliert** — wiederverwendbar für Hölderlin, Celan etc. Rilke ist als Quelle auch für Einsamkeit-Lebensfrage verfügbar (`aus: {tableau: verwandlung, knoten: rilke}`).
 
 ---
 
