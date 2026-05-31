@@ -1,12 +1,12 @@
 # Wo stehe ich — Sanctum Mentis
 
-**Stand:** 30.5.26
+**Stand:** 31.5.26
 
 ---
 
 ## Was live ist
 
-**Acht Tableaus** — alle auf Vercel, alle vollständig ausgebaut:
+**Neun Tableaus** — alle auf Vercel, alle vollständig ausgebaut:
 
 - **Philosophie des Geistes** — Hard-Modus, 16 Denker. Das akademisch dichteste Tableau. Einstieg über Descartes historisch korrekt, aber möglicherweise kopflastig für Nicht-Akademiker.
 - **Die Landkarte des Selbst** — Mild-Modus, 15 Denker. Meditativer Ton, gut gelungen. Vedanta/Buddhismus als gleichwertige Stimmen.
@@ -16,8 +16,9 @@
 - **Politische Philosophie** — Mild-Modus, 13 Denker. Zweites Tableau der Handlungs-Spur — macht die Handlungs-Spur erstmals zur echten Gruppe.
 - **Lebenskunst** — Mild-Modus, 14 Denker. Existenz-Spur (hue 65). Vier Ecken klar besetzt (Epikur, Aristoteles, Stoa, Montaigne/Mill/Csíkszentmihályi). Erster systematischer Einsatz des `related_topics`-Musters.
 - **Begegnung** — Mild-Modus, 11 Denker. Existenz-Spur (hue 35). Buber als Haupt-Hub, Sartre als negativer Gegen-Hub. Reifstes Tableau der Serie (externe Prüfung: Koordinatentest auf Anhieb bestanden, keine Strukturfehler).
+- **Wandlung** — Mild-Modus, 11 Denker. Wandlung-Spur (hue 152, erdig-grün) — eröffnet die **vierte Sammlungs-Spur**. Freud/Rogers/Perls/Kabat-Zinn als Hubs. Achsen: Verstehen ↔ Erfahren / individuell ↔ relational.
 
-**Neun Lectios** — geführte Pfade, alle live:
+**Elf Lectios** — geführte Pfade, alle live:
 
 - `hard-problem` — Geist, narrativ-historisch, L2, 6 Stationen
 - `wer-beobachtet` — Selbst, konkurrierend-konfrontativ, L3, 4 Stationen
@@ -28,6 +29,8 @@
 - `warum-gehorchst-du` — Politische Philosophie, L3, 5 Stationen
 - `ruhe-oder-rausch` — Lebenskunst, L2, 4 Stationen
 - `der-weg-des-menschen` — Begegnung, kontemplativ-vertiefend, L2, 4 Stationen — erste Ein-Werk-Lectio der Sammlung (drei Stationen durch denselben Buber-Knoten, je eine Stufe von „Der Weg des Menschen")
+- `ist-der-andere-hoelle-oder-heimat` — Begegnung, konkurrierend-konfrontativ, L3, 4 Stationen (Sartre → Hegel → Buber+Marcel → Lévinas)
+- `verstehen-oder-weitergehen` — Wandlung, narrativ-historisch, L3, 5 Stationen (Freud → van der Kolk → Adler → Rogers → Prochaska/DiClemente)
 
 **Lectio-Methode:** `prompts/lectio-mode.md` v1.9 — zehn Entscheidungen, vier kanonisierte Pfad-Typen. Ein fünfter, *kontemplativ-vertiefend*, ist mit Begegnung als Datenwert entstanden, aber bewusst noch nicht in die Methode aufgenommen (nur ein Fall — wartet auf einen zweiten, dann v1.10). Das Schema-Feld `step_brief` (pro-Station-Text) ermöglicht die Ein-Werk-Lectio.
 
@@ -38,7 +41,7 @@
 ## Was sich gut anfühlt
 
 - Die Erkenntnis-Trias ist geschlossen (Geist / Selbst / Realismus). Beide Handlungs-Tableaus stehen (Ethik + Politische Philosophie), und die Existenz-Spur ist mit drei Tableaus (Existenzialismus, Lebenskunst, Begegnung) die breiteste geworden.
-- Alle drei Sammlungs-Spuren tragen jetzt mindestens zwei Tableaus. Die Bedingung für die *explizite* Library-Sichtbarkeit (Section-Header / Trennstriche / Spur-Filter) ist damit erfüllt — die Architektur ist gewachsen, nicht konstruiert.
+- Mit Wandlung ist die **vierte Sammlungs-Spur** eröffnet. Die Library-Sichtbarkeits-Bedingung (alle Spuren ≥2 Tableaus) ist damit wieder gebrochen — Wandlung trägt bisher nur ein Tableau. Die explizite Sichtbarkeitslösung (Section-Header / Trennstriche / Spur-Filter) wartet damit erneut, bis die Wandlung-Spur ein zweites Tableau hat.
 - Die Existenz-Palette ist abgeschlossen: drei warme Hues mit klarer Staffelung (Begegnung 35 · Existenzialismus 45 · Lebenskunst 65). Die Farb-Frage, die monatelang offen war, ist gelöst.
 - Die Lectio-Methode hat sich in neun Durchläufen bewährt. Mit Begegnung ist die erste Ein-Werk-Lectio entstanden — ein neuer Pfad-Typ, den ich bewusst *nicht* sofort kanonisiert habe. Das fühlt sich nach kuratorischer Reife an: erst destillieren, wenn ein zweiter Fall ihn bestätigt, nicht beim ersten Wurf postulieren.
 - Begegnung ist das reifste Tableau der Serie. Der gewachsene Anker (Bubers „Weg des Menschen", die Retraite-Erfahrung „Wo bist du?") trägt bis in die Lectio hinein, die zum Eingangsmotiv zurückkehrt.
@@ -48,7 +51,7 @@
 
 ## Was noch offen ist
 
-**User-Test:** Noch immer nicht gemacht. Erste Außen-Stimmen (Monique, Bekannter) — positives Bauchgefühl, aber kein systematisches Feedback. Mit acht Tableaus und neun Lectios ist der überfällige Schritt — zwei echte Personen aus der Persona einladen, beobachten ohne Erklärung — dringlicher als je zuvor.
+**Außenfeedback (erste Runde):** Monique (Coach, Persona-Kern) hat in zwei Runden substantielles Feedback geliefert — siehe `feedback-runde-1.md`. Sie hat die Lectio-Form als tragend bestätigt, die Lebensfragen-Frage ausgelöst und die Wahrheitsanspruchs-Konvention von außen erfahren (nicht gelesen). Das ist kein formaler User-Test, aber echte Persona-Resonanz mit konkreten Konsequenzen (Selbst-Lectio II, Lebensfragen-Form). Der **formale User-Test** (zwei Personen aus der Persona, ohne Erklärung beobachten) ist damit noch ausständig — bleibt priorisierter nächster Schritt.
 
 **Library-Architektur sichtbar machen:** Bedingung erfüllt (alle Spuren ≥2 Tableaus). Die explizite Lösung (Section-Header / Trennstriche / Spur-Filter) ist jetzt umsetzbar — bisher trägt nur die implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow).
 

@@ -153,7 +153,8 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Nächster Schritt:** Nach zweitem Handlungs-Tableau aufnehmen.
 **Update 23.5.26:** Implizite Spur-Sichtbarkeit umgesetzt — Farb-Architektur als Familien-Signal, Spur-Reihenfolge in library.json, Eyebrow-Markierung pro Card (Spur-Name in Spur-Farbe, uppercase, 11px). Explizite Sichtbarkeits-Lösung (Section-Header / Trennstriche / Spur-Filter) bleibt offen, ausgelöst sobald alle Spuren mindestens zwei Tableaus tragen.
 **Update 29.5.26:** Bedingung erfüllt — alle drei Spuren haben nun ≥2 Tableaus (Erkenntnis 3, Handlung 2, Existenz 2). Explizite Sichtbarkeits-Lösung kann jetzt umgesetzt werden.
-**Nächster Schritt:** Section-Header / Trennstriche / Spur-Filter implementieren.
+**Update 31.5.26:** Bedingung wieder gebrochen — vierte Spur (Wandlung) hat nur 1 Tableau. Explizite Lösung wartet erneut, bis Wandlung-Spur ein zweites Tableau hat. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt auch für vier Spuren.
+**Nächster Schritt:** Section-Header / Trennstriche / Spur-Filter implementieren, sobald Wandlung ≥2 Tableaus hat.
 
 ---
 
@@ -511,13 +512,48 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 
 ---
 
-### [ ] Diagonal-Lectio „Ist der Andere Hölle oder Heimat?" (Begegnung)
-**Status:** geplant 30.5.26 — zweiter Strang des Begegnung-Tableaus
-**Pfad-Typ:** konkurrierend-konfrontativ (Gegentyp zur stillen „Wo bist du?")
-**Stationen (4):** Sartre (der Blick versklavt) → Hegel (Anerkennung nur durch Kampf) → Buber+Marcel (das Du, das werden lässt) → Lévinas (der Andere als unendlicher Anspruch). Schreitet die Diagonale + Y-Achse des Tableaus ab (Zumutung ↔ Geschenk).
-**Knoten existieren alle** — kein Nachbau nötig. lectio_briefs prüfen: Hegel/Honneth/Sartre/de Beauvoir/Lévinas brauchen ggf. noch Briefs (nur Buber/Marcel/Rogers haben sie).
-**Wäre KEIN zweiter Beleg für kontemplativ-vertiefend** (anderer Typ) — die v1.10-Frage bleibt davon unberührt.
-**Nächster Schritt:** In frischem Chat bauen, mit vollem Kontext aber ohne Session-Ballast.
+### [x] Lectio „Ist der Andere Hölle oder Heimat?" (Begegnung)
+**Status:** implementiert 31.5.26
+**Pfad-Typ:** konkurrierend-konfrontativ · L3 · 4 Stationen · ~15 Min.
+**Stationen:** Sartre → Hegel → Buber+Marcel → Lévinas. Schreitet die Diagonal-Achse des Tableaus ab (Zumutung ↔ Geschenk). Alle vier Stationen mit dichten lectio_brief-Feldern (Sartre, Hegel, Lévinas neu; Marcel ersetzt nach Prüfer-Empfehlung). Station 1 zusätzlich via step_brief in der Lectio-Datei.
+**Gegentyp zur stillen „Wo bist du?"** — die beiden Begegnung-Lectios ergänzen sich (kontemplativ vs. konfrontativ).
+
+---
+
+### [x] Wandlung — Tableau + erste Lectio
+**Status:** implementiert 31.5.26 (Mild-Modus, externe Prüfung bestanden)
+**Anker:** Gewachsen — *"Was muss geschehen, damit ein Mensch ein anderer wird?"* — aus eigener Transformationsarbeit, trifft Moniques Wortfeld (Veränderungsprozess).
+**Tableau:** 11 Denker, 8 Konzepte, 8 Schulen, 25 Annotationen. Hubs: Freud/Rogers/Perls/Kabat-Zinn (je Kantengrad 4, je 3 Textstufen). Achsen: Verstehen↔Erfahren / individuell↔relational. Spur: Wandlung (hue 152, erdig-grün) — **vierte Sammlungs-Spur eröffnet**.
+**Abgrenzungen:** Wandlung prozessual (wie verändert sich ein Mensch), Selbst ontologisch (was IST das Selbst). Jung/Kohut/IFS bewusst nicht übernommen. Relationale Pol maßvoll gehalten (grenzt von Begegnung ab).
+**Lectio:** `verstehen-oder-weitergehen` — narrativ-historisch, L3, 5 Stationen: Freud → van der Kolk → Adler → Rogers → Prochaska/DiClemente. Alle via step_brief. Bogen: von ›woher kommt mein Leiden?‹ zu ›wohin will ich?‹ — gebrochen durch das Stufenmodell am Ende.
+**Bibliotheks-Bedingung:** Library-Sichtbarkeits-Bedingung wieder gebrochen (vierte Spur mit 1 Tableau). Explizite Section-Header warten bis Wandlung-Spur ein zweites Tableau hat.
+
+---
+
+### [ ] Gut und Böse — Tableau (priorisiert)
+**Status:** neu, 31.5.26
+**Anker:** offen — gewachsen oder architektonisch? Klären vor Bau.
+**Spur-Entscheidung offen:** Gehört Gut/Böse zur Handlungs-Spur (moralische Handlung, Nähe zu Ethik) oder eröffnet es eine **fünfte anthropologische Spur** (Menschenbild, das Böse als ontologische Frage)? Am Material entscheiden — nicht vorab festlegen. Wenn die Achsen eher normativ sind → Handlung; wenn die Achsen eher anthropologisch sind (gut/böse als Wesensbestimmung des Menschen) → neue Spur.
+**Abgrenzung zu Ethik:** Ethik fragt *Was soll ich tun?* — Gut/Böse fragt *Was ist der Mensch überhaupt, dass er zu beidem fähig ist?* Verschiedene Fragen, legitim nebeneinander.
+**Nächster Schritt:** Anker prüfen, zwei Achsen-Skizzen, dann Spur-Entscheidung.
+
+---
+
+### [ ] Einsamkeit — Lebensfrage (priorisiert)
+**Status:** neu, 31.5.26
+**Form:** Lebensfrage (tableau-übergreifend, analog zu „Was tue ich mit Schmerz?")
+**Anker:** Lebensweltlich sehr hoch. Brücke zwischen Existenz-Spur (Heidegger, Sartre, Buber), Selbst-Tableau (Kohut, IFS) und eventuell Wandlung (Einsamkeit als Transformationsraum).
+**Mögliche Stimmen:** Heidegger (das In-der-Welt-sein und die Verlorenheit), Sartre (die Freiheit, die isoliert), Buber (Einsamkeit als Weg zum Du), Winnicott (alleine sein in Gegenwart des anderen), Fromm (Einsamkeit als Triebkraft der Liebe).
+**Nächster Schritt:** Stimmen aus bestehenden Tableaus auflisten, prüfen ob ≥5 gut verfügbar; dann bauen analog zu Schmerz.
+
+---
+
+### [ ] Rilke als fehlender Knoten (priorisiert)
+**Status:** neu, 31.5.26
+**Kontext:** Rilke fehlt bisher in der gesamten Sammlung. Als Dichter-Denker passt er nicht ins klassische Denker-Schema, aber sein Denken über Einsamkeit, Verwandlung, Offenheit (*Briefe an einen jungen Dichter*, *Archaischer Torso Apollos*) ist kuratorisch relevant — besonders für Wandlung-Spur und Existenz-Spur.
+**Optionen:** (a) Als Denker in ein bestehendes Tableau (Wandlung? Begegnung?), (b) als Lectio-Knoten ohne Tableau-Anker, (c) als Stimme in einer Lebensfrage.
+**Spur-Signal:** Wenn Rilke in Wandlung passt (Verwandlung als zentrales Motiv), wäre er der erste Dichter-Knoten der Sammlung — das ist eine kuratorische Entscheidung, nicht nur ein Content-Entscheid.
+**Nächster Schritt:** Konkrete Achsen-Position prüfen: Wo säße Rilke im Wandlung-Tableau? Falls Koordinaten stimmig → nächstes Wandlung-Update oder eigene Lectio.
 
 ---
 
@@ -529,6 +565,7 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 2. **Referenz-Integrität:** jede schoolId → existierende Schule, jeder influence-Endpunkt → existierender Knoten, jeder Lectio-nodeId → Tableau-Knoten, kuratiert_aus_tableaus == genutzte aus.tableau. (Genau die Checks, die in der Session manuell liefen.)
 3. **Koordinaten-Plausibilität:** Y-Konvention gegen einen BEKANNT-KORREKTEN Anker-Knoten kalibrieren (nicht gegen Label-Intuition — sonst kodiert der Validator den Y-Inversions-Bug mit). Der Bug ist 4× aufgetreten; dieser Check verhindert den 5.
 **Bündelt:** die früheren losen Prüfer-Vorschläge „mechanischer Koordinaten-Validator" (Lebenskunst-Review) und „Schul-Heuristik: Schule = geteilte Begründungsstruktur, nicht geteiltes Thema" (Begegnung-Review). Letztere als Lint-Warnung bei Ein-Denker-Schulen.
+**Konkreter Beleg aus Session 31.5.26:** Die manuellen Checks beim Wandlung-Bau (Referenz-Integrität aller 12 Influence-Kanten, Hub==dreistufig für 4 Hubs, Y-Plausibilität gegen bekannte Anker, Annotationszahl 25) sind exakt die vier Prüfklassen, die der Validator automatisieren soll. Jeder neue Tableau-Bau läuft denselben manuellen Aufwand. Das ist der Aufwand, der einmalig in Tooling verwandelt werden müsste.
 **Läuft beim Build, nicht zur Laufzeit.**
 
 ---
