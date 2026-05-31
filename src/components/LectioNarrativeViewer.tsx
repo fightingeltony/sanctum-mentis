@@ -420,7 +420,8 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         .station {
           position: absolute; left: 0; right: 0; bottom: 0;
           top: 60px; /* unterhalb Header — Content scrollt nie in die Chrome-Zone */
-          display: flex; overflow-y: auto; overflow-x: hidden;
+          display: block; overflow-y: scroll; overflow-x: hidden;
+          -webkit-overflow-scrolling: touch; touch-action: pan-y;
           opacity: 0; visibility: hidden;
           transition: opacity .7s ease; scrollbar-width: none;
         }
@@ -601,7 +602,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         @media (max-width: 640px) {
           .niche { width: 104px; height: 132px; border-radius: 52px 52px 6px 6px; }
           .station { top: 52px; }
-          .station-inner { padding: 28px 22px 160px; }
+          .station-inner { padding: 28px 22px 200px; }
           .brand { top: 16px; left: 16px; }
           .brand-text { display: none; } /* nur Diamond-Glyph, kein Text */
           .lc-counter { top: 16px; right: 16px; }
