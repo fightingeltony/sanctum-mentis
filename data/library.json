@@ -92,11 +92,11 @@
     "title": "Gut und Böse",
     "subtitle": "Die Frage vor allen Fragen — bist du von Natur aus gut?",
     "era": "Antike – Gegenwart",
-    "themeColor": "oklch(0.43 0.11 114)",
+    "themeColor": "oklch(0.43 0.11 345)",
     "status": "available",
-    "spur": "handlung",
-    "desc": "Von Mengzi bis Milgram — ob der Mensch von Natur aus gut ist, gefährdet oder formbar: der deskriptive Sockel unter Ethik und Politik.",
-    "tags": ["Menschenbild", "Erbsünde", "Banalität des Bösen", "Anthropologie"]
+    "spur": "menschenbild",
+    "desc": "Von Mengzi bis zur Kooperationsforschung — ob der Mensch von Natur gut, gefährdet oder formbar ist, und ob das überhaupt die richtige Frage ist.",
+    "tags": ["Menschennatur", "gut und böse", "Anthropologie", "Erbsünde"]
   },
   {
     "id": "wandlung",

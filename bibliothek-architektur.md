@@ -107,7 +107,7 @@ Akzentfarben werden ab 23.5.26 nicht mehr pro Tableau einzeln vergeben, sondern 
 
 **Update 30.5.26 (Wandlung):** Vierte Spur eröffnet. Wandlung (hue 152, erdig-grün) belegt das frühere Reserve-Band (110–160°). Abstand zu Handlung (oliv 100–128°): 24° — beim Live-Klick prüfen; ggf. auf ~158° ausweichen. Library-Sichtbarkeits-Bedingung (alle Spuren ≥2 Tableaus) wieder gebrochen — explizite Section-Header warten bis Wandlung-Spur ein zweites Tableau hat.
 
-**Update 31.5.26 (Gut und Böse):** Drittes Handlungs-Tableau eingebunden. Gut/Böse (hue 114) sitzt mittig im Handlungs-Band (Ethik 100 · Gut/Böse 114 · Politik 128), je ~14° Abstand — am Live-Bild prüfen ob ausreichend. Sonderstellung: deskriptiver Sockel der Handlungs-Spur (nicht normativ). Handlungs-Spur jetzt mit drei Tableaus — breiteste Handlungs-Gruppe der Sammlung.
+**Update 31.5.26 (Gut und Böse — Menschenbild-Spur):** Fünfte Spur eröffnet. Gut/Böse (hue 345, magenta-pink) — nach eigenem Entscheidungskriterium: Achsen deskriptiv-anthropologisch → neue Spur, nicht Handlung. Erkenntnis-Band endet bei 295°, Abstand 50°, sauber frei. Zwei Ein-Tableau-Spuren jetzt (Wandlung + Menschenbild) — Library-Sichtbarkeits-Bedingung erneut nicht erfüllt; Section-Header warten bis beide ≥2 Tableaus. Hue 345 provisorisch — Live-Klick-Punkt.
 
 | Spur | Hue-Band | Symbolik (provisorisch) |
 |---|---|---|
@@ -115,6 +115,7 @@ Akzentfarben werden ab 23.5.26 nicht mehr pro Tableau einzeln vergeben, sondern 
 | Handlungs-Spur | 100°–128° (oliv-grün) | Handlung als geerdet, nüchtern — *zu präzisieren* |
 | Existenz-Spur | 35°–70° (warm amber-gold) | Existenz als Unmittelbarkeit, gelebtes Dasein — *zu präzisieren* |
 | Wandlung-Spur | 150°–160° (erdig-grün) | Wandlung als Wachstum, Lebendigkeit — *zu präzisieren* |
+| Menschenbild-Spur | 340°–350° (magenta-pink) | *zu präzisieren* |
 
 **Reserve:** Offen ca. 180°+ (Magenta-Pink, Cyan-Blau, Gelb) für künftige Spuren.
 
@@ -131,8 +132,8 @@ Existenzialismus         oklch(0.42 0.10  45)   Existenz-Spur
 Lebenskunst              oklch(0.44 0.11  65)   Existenz-Spur
 Politische Philosophie   oklch(0.44 0.12 128)   Handlungs-Spur
 Ethik                    oklch(0.45 0.12 100)   Handlungs-Spur
-Gut und Böse             oklch(0.43 0.11 114)   Handlungs-Spur     ← NEU
 Wandlung                 oklch(0.43 0.11 152)   Wandlung-Spur
+Gut und Böse             oklch(0.43 0.11 345)   Menschenbild-Spur  ← NEU (5. Spur)
 ```
 
 **Verhältnis zu „Library-Architektur sichtbar machen":** Die Farb-Architektur ist *implizite* Spur-Sichtbarmachung. Explizite Sichtbarmachung (Trennstriche, Header, zwei Reihen) bleibt eigenes Backlog-Item, ausgelöst sobald JEDE Spur ≥2 live-Tableaus hat (Wandlung hat derzeit 1).

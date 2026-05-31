@@ -5,10 +5,19 @@
 ## Anker
 „Ist der Mensch von Grund auf gut?" — gewachsener Anker (vom Kurator priorisiert, verknotet mit der Selbst/Wandlung-Frage „kann sich der Mensch ändern?"). Nicht bloß architektonisch.
 
-## Verortung (die zentrale Entscheidung)
-**Handlungs-Spur, Option (a)** — deskriptiver Sockel unter Ethik und Politik, nicht ihr drittes normatives Tableau. Fünfte „anthropologische" Spur **verworfen**: Die Frage „Was ist der Mensch?" läuft horizontal quer durch Selbst (ontologisch), Wandlung (prozessual) und dieses Tableau — sie ist Lebensfrage-Stoff, nicht Spur-Stoff. Eine Spur würde einsperren, was als Lebensfrage frei schweben soll.
+**Spur:** Menschenbild (fünfte Spur, **am 31.5.26 eröffnet**) · **Modus:** Mild · Hue 345 (magenta-pink, provisorisch)
 
-Die deskriptiv/normativ-Reibung ist **zum Strukturmerkmal gemacht**, nicht wegerklärt (im `meta` explizit), damit ein Prüfer den Einwand nicht als Fund meldet.
+## Verortung (REVIDIERT — die Entscheidung wurde umgestoßen)
+**Erste Entscheidung:** Handlungs-Spur, als deskriptiver Sockel unter Ethik/Politik.
+**Revidiert zu:** Eigene fünfte Spur „Menschenbild".
+
+**Warum die Revision:** Die erste Verortung übersprang das vorab gesetzte Entscheidungskriterium. Im Bau-Backlog stand: „Wenn die Achsen normativ sind → Handlung; wenn die Achsen anthropologisch sind → neue Spur." Die gebauten Achsen (gut↔gefährdet, fest↔formbar) sind beide deskriptiv-anthropologisch — sie fragen „wie *ist* der Mensch", nicht „was soll er tun". Nach dem eigenen Kriterium zeigt das Material auf eine neue Spur. Der Sockel-Gedanke beweist zu viel: Nach derselben Logik wäre auch die Landkarte des Selbst ein Sockel der Handlungs-Spur — sie wohnt aber in der Erkenntnis-Trias.
+
+**Lehre über den Prozess (fürs Backlog):** Eine kluge Meta-Überlegung (horizontal/vertikal) hatte ein konkretes, vorab gesetztes Materialkriterium überschrieben. Die Achsen waren längst gebaut und zeigten in die andere Richtung. Konsequenz: Bei Spur-Entscheidungen zuerst das Achsen-Kriterium anwenden, dann erst Meta-Argumente. Die fünfte Spur war nicht „voreilig verworfen" — sie war durch ein elegantes Argument am falschen Objekt verdeckt.
+
+**Menschenbild ≠ Lebensfrage:** Die Spur (vertikal, ein Feld in die Tiefe: philosophische Anthropologie) und die Lebensfrage „Kann ich ein anderer werden?" (horizontal, quer durch Selbst/Wandlung/Gut-Böse) koexistieren — kanonische Architektur, kein Widerspruch.
+
+**Kosten (bewusst):** Zweite Ein-Tableau-Spur neben Wandlung. Library-Section-Header bleiben blockiert, bis beide ≥2 Tableaus tragen. Zweites Menschenbild-Tableau bald nötig (Leib/Seele, Freiheit↔Determinismus, Gehlen/Plessner/Scheler).
 
 ## Achsen
 - **X: gut ↔ gefährdet von Natur** (die klassische Hauptspannung)

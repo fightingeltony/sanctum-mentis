@@ -4,5 +4,6 @@ export const SPUR_LABELS: Record<Spur, string> = {
   erkenntnis: 'Erkenntnis',
   handlung:   'Handlung',
   existenz:   'Existenz',
-  wandlung:   'Wandlung',
+  wandlung:     'Wandlung',
+  menschenbild: 'Menschenbild',
 }

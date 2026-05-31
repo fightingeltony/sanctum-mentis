@@ -5,14 +5,15 @@ import type { Spur } from '@/lib/types'
 import type { LibraryEntry } from '@/lib/data'
 
 // Spur-Reihenfolge — kanonisch wie in library.json und bibliothek-architektur.md
-const SPUR_ORDER: Spur[] = ['erkenntnis', 'handlung', 'existenz', 'wandlung']
+const SPUR_ORDER: Spur[] = ['erkenntnis', 'handlung', 'existenz', 'wandlung', 'menschenbild']
 
 // Kurz-Beschreibung pro Spur — die kuratorische Klammer, sichtbar im Header
 const SPUR_BLURB: Record<Spur, string> = {
-  erkenntnis: 'Was ist Erkennen, wer erkennt, was wird erkannt — die Trias der Erkenntnis.',
-  handlung:   'Vom Wissen zum Tun — was wir sollen und wie wir zusammenleben.',
-  existenz:   'Das gelebte Dasein — Freiheit, Sinn und die Kunst, gut zu leben.',
-  wandlung:   'Wie verändert sich ein Mensch — was heilt, was transformiert, was lässt ihn ein anderer werden.',
+  erkenntnis:   'Was ist Erkennen, wer erkennt, was wird erkannt — die Trias der Erkenntnis.',
+  handlung:     'Vom Wissen zum Tun — was wir sollen und wie wir zusammenleben.',
+  existenz:     'Das gelebte Dasein — Freiheit, Sinn und die Kunst, gut zu leben.',
+  wandlung:     'Wie verändert sich ein Mensch — was heilt, was transformiert, was lässt ihn ein anderer werden.',
+  menschenbild: 'Was ist der Mensch? — die anthropologische Grundfrage, die unter allem Handeln und Erkennen liegt.',
 }
 
 function groupBySpur(entries: LibraryEntry[]): { spur: Spur; items: LibraryEntry[] }[] {
