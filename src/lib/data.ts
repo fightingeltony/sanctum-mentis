@@ -9,6 +9,7 @@ import lebenskunstRaw                      from '../../data/lebenskunst.json'
 import begegnungRaw                         from '../../data/begegnung.json'
 import wandlungRaw                          from '../../data/wandlung.json'
 import gutUndBoeseRaw                       from '../../data/gut-und-boese.json'
+import verwandlungRaw                       from '../../data/verwandlung.json'
 import libraryRaw                          from '../../data/library.json'
 import hardProblemRaw                      from '../../data/lectio/hard-problem.json'
 import werBeobachtetRaw                    from '../../data/lectio/wer-beobachtet.json'
@@ -37,6 +38,7 @@ const TOPICS: Record<string, TopicData> = {
   'begegnung':                        begegnungRaw                    as unknown as TopicData,
   'wandlung':                         wandlungRaw                     as unknown as TopicData,
   'gut-und-boese':                    gutUndBoeseRaw                  as unknown as TopicData,
+  'verwandlung':                      verwandlungRaw                  as unknown as TopicData,
 }
 
 export function getTopic(id: string): TopicData | null {

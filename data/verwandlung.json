@@ -1,0 +1,516 @@
+{
+  "topic": {
+    "id": "verwandlung",
+    "title": "Verwandlung",
+    "subtitle": "Verwandlung — Was verwandelt einen Menschen von Grund auf?",
+    "intro": "Bricht das alte Leben auf, weil etwas dich trifft — oder weil du dich Tag um Tag in ein anderes übst?",
+    "era": "Antike – Gegenwart",
+    "synthesis": "Dieses Tableau fragt nicht, was einen Menschen heilt, sondern was ihn grundlegend verwandelt — vom Reparieren eines Schadens zum Anderswerden des ganzen Lebens. Zwei Streitlinien tragen das Feld. Die erste: Kommt Verwandlung als Krise oder als Praxis? Die eine Seite sagt, nur der Bruch verwandelt wirklich — die Grenzsituation, das Leid, der Augenblick, in dem nichts mehr weitergeht (Jaspers, James, Rilke, Augustinus). Die andere sagt, Verwandlung ist kein Ereignis, sondern ein Weg: tägliche Übung, geduldige Disziplin, bis das Neue zur zweiten Natur wird (Stoa, Tolle, Eckhart, Thich Nhat Hanh). Quer dazu die zweite Frage: Wer verwandelt hier eigentlich? Ergreife ich die Verwandlung — oder werde ich von ihr ergriffen? Manche Stimmen legen alles in den Willen, andere bestehen darauf, dass das Entscheidende einem zustößt, nicht gelingt. Auffällig ist, dass die stärksten Stimmen die Trennung unterlaufen: Augustinus ringt und wird doch überwältigt; Frankl wählt eine Haltung gerade dort, wo ihm alles genommen ist; Rilke wird vom Kunstwerk getroffen und hört daraus einen Imperativ. Vielleicht ist Verwandlung weder reine Krise noch reine Praxis, sondern das Aufrechtstehen in dem, was einem widerfährt — und die Übung, sich davon nicht abzuwenden.",
+    "theme": {
+      "accent": "oklch(0.43 0.11 156)",
+      "accentSoft": "oklch(0.93 0.03 156)"
+    },
+    "spur": "wandlung",
+    "complexityLevels": 5,
+    "graphLayout": "manual",
+    "thinkerListStyle": "cards",
+    "quadrants": {
+      "axisX": {
+        "label": "Was löst Verwandlung aus?",
+        "left": "Krise",
+        "leftHint": "Verwandlung durch Bruch, Leid, Grenzerfahrung — etwas reißt das alte Leben auf",
+        "right": "Praxis",
+        "rightHint": "Verwandlung durch Übung, Weg, Disziplin — der lange, gewollte Prozess"
+      },
+      "axisY": {
+        "label": "Wer treibt die Verwandlung?",
+        "top": "Selbst-getrieben",
+        "topHint": "Ich ergreife die Verwandlung — sie ist mein Werk",
+        "bottom": "Welt-getroffen",
+        "bottomHint": "Etwas verwandelt mich — ich werde ergriffen, nicht ich ergreife"
+      }
+    },
+    "meta": {
+      "ankertyp": "gewachsen",
+      "ankerfrage": "Was muss geschehen, damit ein Mensch nicht repariert, sondern ein anderer wird? Innerer Ankerpunkt: Rilkes 'Du mußt dein Leben ändern' — die Erfahrung, von etwas so getroffen zu werden, dass das alte Leben nicht weitergehen kann.",
+      "spurHinweis": "Zweites Tableau der Wandlung-Spur (erdig-grün). Erbt die Spur, weicht aber im Hue bewusst leicht ab (156° statt 152°) — innerhalb des Spur-Bands 150–160°, um sich vom ersten Wandlung-Tableau optisch zu staffeln, analog zur Existenz-Spur-Staffelung. Beim Live-Klick prüfen, ob 156° sich von 152° (erstes Wandlung-Tableau) UND von Handlung (oliv 100–128°) abhebt; ggf. innerhalb 150–160° nachjustieren.",
+      "abgrenzungErstesWandlung": "Das erste Wandlung-Tableau fragt 'Was heilt einen Menschen?' (therapeutisch, Reparatur — X: Verstehen↔Erfahren, Y: im Einzelnen↔in Beziehung; Hubs Freud/Rogers/Perls/Kabat-Zinn). Dieses zweite fragt 'Was verwandelt grundlegend?' (existenziell/geistige Metamorphose — X: Krise↔Praxis, Y: Selbst-getrieben↔Welt-getroffen). Trennlinie: REPARATUR vs. METAMORPHOSE. Damit weitet dieses Tableau die Spur von 'therapeutisch' auf 'allgemein', wie die Meta-Notiz des ersten Tableaus es ausdrücklich vorsieht.",
+      "wanderndeKnoten": "Frankl (Hauptsitz Existenzialismus, auch erstes Wandlung-Tableau) und Jung (Hauptsitz 'Das Selbst') erscheinen hier unter der Verwandlungs-Frage, NICHT als Wiedergänger. Frankl: nicht 'Sinn als Therapie', sondern 'die selbst gewählte Haltung im Unabänderlichen verwandelt den Menschen'. Jung: nicht 'was IST das Selbst', sondern 'Individuation als lebenslange Verwandlung'. related_topics gesetzt, Knoten NICHT gedoppelt. Stoa erscheint mit verschobenem Akzent zu Lebenskunst (dort Glück/Ataraxie, hier Verwandlung durch askesis).",
+      "rilkeSonderrolle": "Rilke ist der ERSTE Dichter-Knoten der gesamten Sammlung. Bewusst keine 'Theorie der Verwandlung' referiert (er hat keine), sondern dichte Stimme über lectio_brief + atmosphärische versions-Texte. Als Hub gesetzt (Kantengrad 4, drei Textstufen), weil gewachsener Anker. Kuratorische Erweiterung, nicht Content-Detail.",
+      "tonDisziplin": "Spirituelle Stimmen (Tolle, Eckhart, Thich Nhat Hanh) sind gleichgewichtig zu den philosophischen besetzt. Sie werden AUSGESTELLT, nicht verkündet: phänomenologische Formulierung ('Tolle behauptet/erfährt …'), nie 'Präsenz löst das Leiden'. James und Jaspers sind die Brücken — sie behandeln religiös-existenzielle Erfahrung beschreibend und ziehen den Ton der spirituellen Nachbarn ins Phänomenologische.",
+      "balanceHinweis": "Gleichgewichtig spirituell/philosophisch. Offener kontemplativer Platz wurde mit Thich Nhat Hanh besetzt (nicht Rohr): Rohr berührt die noch unentschiedene Paradox/Non-dual-Reifefrage und würde sie vorwegnehmen — bleibt für später frei.",
+      "quadrantenVerteilung": "Krise×Welt-getroffen: Rilke, Jaspers, James (3). Krise×Selbst-getrieben: Augustinus, Frankl (2). Praxis×Selbst-getrieben: Stoa, Tolle, Eckhart (3). Praxis×Welt-getroffen/Mitte: Thich Nhat Hanh, Jung (2). Kein systematisch leerer Quadrant.",
+      "schoolExceptions": "Nach Prüfbefund zusammengelegt: 'mystik-kontemplation' und 'achtsamkeitspraxis' sind zu einer Schule 'Kontemplative Tradition' (Eckhart, Tolle, Thich Nhat Hanh) vereint — die Trennung war künstlich, da Eckhart Tolle direkt inspiriert (siehe Influence eckhart->tolle) und alle drei dieselbe Linie der Übungs-/Loslass-Verwandlung vertreten. Verbleibende Ein-Denker-Schulen (existenzphilosophie, lebensdichtung, pragmatismus-religionspsychologie, christliche-konversion, logotherapie, stoische-praxis, tiefenpsychologie) sind reale, erweiterbare Traditionen, im Mild-Umfang einstimmig besetzt — Schul-Lint soll warnen, nicht blockieren. lebensdichtung (nur Rilke) ist die bewussteste Ausnahme: erster Dichter der Sammlung, künftige zweite Stimme denkbar (z.B. Hölderlin, Celan). Damit 7 Schulen bei 10 Denkern (eine Drei-Denker-Schule, sechs Ein-Denker-Schulen).",
+      "konzeptHinweis": "6 Konzepte = unteres Ende des Mild-Korridors (8–12), bewusst NICHT aufgefüllt. Alle sechs sind mehrstufig, getypt (phenomenon/concept/method/theory) und tragen echte Tiefe. Auffüllen auf den Korridor wäre Vollständigkeitsreflex (mild-mode: 'abschlussfähiger, nicht vollständiger') — das Feld ist mit diesen sechs abschlussfähig. Kuratorische Untergrenze, kein Mangel."
+    }
+  },
+  "levels": [
+    {
+      "id": 1,
+      "label": "Einstieg",
+      "short": "L1",
+      "filled": false
+    },
+    {
+      "id": 2,
+      "label": "Grundlagen",
+      "short": "L2",
+      "filled": false
+    },
+    {
+      "id": 3,
+      "label": "Vertiefung",
+      "short": "L3",
+      "filled": false
+    },
+    {
+      "id": 4,
+      "label": "Analyse",
+      "short": "L4",
+      "filled": false
+    },
+    {
+      "id": 5,
+      "label": "Synthese",
+      "short": "L5",
+      "filled": false
+    }
+  ],
+  "schools": [
+    {
+      "id": "existenzphilosophie",
+      "label": "Existenzphilosophie",
+      "color": "oklch(0.42 0.11 156)",
+      "glyph": "✕",
+      "gx": -290,
+      "gy": -190,
+      "labelDir": "NW"
+    },
+    {
+      "id": "lebensdichtung",
+      "label": "Lebensdichtung",
+      "color": "oklch(0.45 0.12 150)",
+      "glyph": "❦",
+      "gx": -120,
+      "gy": -230,
+      "labelDir": "N"
+    },
+    {
+      "id": "pragmatismus-religionspsychologie",
+      "label": "Pragmatismus & Religionspsychologie",
+      "color": "oklch(0.40 0.10 162)",
+      "glyph": "◔",
+      "gx": -300,
+      "gy": -90,
+      "labelDir": "W"
+    },
+    {
+      "id": "christliche-konversion",
+      "label": "Christliche Konversion",
+      "color": "oklch(0.41 0.11 145)",
+      "glyph": "✝",
+      "gx": -210,
+      "gy": 180,
+      "labelDir": "SW"
+    },
+    {
+      "id": "logotherapie",
+      "label": "Logotherapie",
+      "color": "oklch(0.43 0.11 140)",
+      "glyph": "✦",
+      "gx": -120,
+      "gy": 220,
+      "labelDir": "S"
+    },
+    {
+      "id": "stoische-praxis",
+      "label": "Stoische Praxis",
+      "color": "oklch(0.44 0.11 168)",
+      "glyph": "◈",
+      "gx": 290,
+      "gy": -180,
+      "labelDir": "NE"
+    },
+    {
+      "id": "kontemplative-tradition",
+      "label": "Kontemplative Tradition",
+      "color": "oklch(0.45 0.10 156)",
+      "glyph": "○",
+      "gx": 280,
+      "gy": 40,
+      "labelDir": "E"
+    },
+    {
+      "id": "tiefenpsychologie",
+      "label": "Tiefenpsychologie",
+      "color": "oklch(0.42 0.12 135)",
+      "glyph": "☉",
+      "gx": 120,
+      "gy": 230,
+      "labelDir": "S"
+    }
+  ],
+  "thinkers": [
+    {
+      "id": "rilke",
+      "name": "Rainer Maria Rilke",
+      "lifespan": "1875–1926",
+      "firstLevel": 1,
+      "schoolId": "lebensdichtung",
+      "x": 28,
+      "y": 16,
+      "graphX": -130,
+      "graphY": -160,
+      "lectio_brief": "Rilke beschreibt keinen Weg und keine Methode. Er beschreibt einen Augenblick: Du stehst vor etwas — einem Kunstwerk, einer Landschaft, einem Menschen —, und es sieht dich an. Aus dem archaischen Steintorso, der keinen Kopf und keine Augen mehr hat, bricht ein Satz hervor, der dir gilt: Du mußt dein Leben ändern. Nicht weil du es dir vorgenommen hast. Sondern weil das, was dich getroffen hat, kein Zurück mehr lässt.",
+      "versions": {
+        "1": "Der Dichter Rainer Maria Rilke ist die erste Stimme dieser Sammlung, die nicht argumentiert, sondern spricht. Seine berühmteste Zeile steht am Ende eines Gedichts über eine antike Statue ohne Kopf — und endet überraschend mit einer Forderung an den Betrachter: [[Du mußt dein Leben ändern:Schlusszeile von Rilkes Gedicht 'Archaïscher Torso Apollos' (1908) — der Imperativ kommt nicht vom Dichter, sondern scheinbar vom Kunstwerk selbst]]. Verwandlung ist für Rilke kein Vorsatz und kein Programm. Sie beginnt damit, dass etwas dich so anschaut, dass du nicht mehr derselbe bleiben kannst.",
+        "3": "Im Tableau sitzt Rilke unten links — Krise und Welt-getroffen in Reinform, der Gegenpol zu jeder Übungs- und Willenslogik. Das Besondere: Sein 'Du mußt' ist ein Imperativ, der nicht aus dem Willen des Subjekts stammt, sondern aus dem Getroffensein. Genau das macht ihn zum Hub des unteren Feldes — er verbindet sich mit Jaspers (die Grenzsituation, die das Dasein aufreißt), mit Eckhart (die Offenheit, in der etwas einbrechen kann) und mit Jung (die Wandlung, die sich dem bloßen Wollen entzieht). Rilke ist der Punkt, an dem die Sammlung erstmals zulässt, dass eine dichterische Stimme dasselbe Gewicht trägt wie ein Argument.",
+        "5": "Rilkes Pointe ist die feinste Spannung des ganzen Tableaus: Der Imperativ 'Du mußt dein Leben ändern' klingt nach höchster Selbst-Aktivität — und ist doch reine Passivität, ein Befehl, der einem widerfährt. Damit unterläuft Rilke die Y-Achse, statt sie zu bestätigen. Er zeigt, dass die schärfste Form der Verwandlung dort liegt, wo das Getroffenwerden und das Sich-Ändern-Müssen in einem einzigen Augenblick zusammenfallen. In den [[Briefe an einen jungen Dichter:Rilkes Briefwechsel 1903–1908, in dem Einsamkeit, Geduld und das 'Leben der Fragen' zentrale Motive sind]] entfaltet er die Geduld-Seite desselben Gedankens: Verwandlung lässt sich nicht erzwingen, nur vorbereiten — man muss die Fragen selbst leben, bis man eines fernen Tages in die Antwort hineinlebt."
+      }
+    },
+    {
+      "id": "jaspers",
+      "name": "Karl Jaspers",
+      "lifespan": "1883–1969",
+      "firstLevel": 3,
+      "schoolId": "existenzphilosophie",
+      "x": 14,
+      "y": 30,
+      "graphX": -280,
+      "graphY": -180,
+      "lectio_brief": "Jaspers nennt sie Grenzsituationen: Tod, Leid, Kampf, Schuld. Es sind die Lagen, aus denen man nicht heraustreten und die man nicht ändern kann. Im Alltag weichen wir ihnen aus. Aber wenn sie uns mit voller Wucht treffen, zerbricht das gewohnte Dasein — und genau in diesem Zerbrechen, sagt Jaspers, kann der Mensch zu sich selbst erwachen.",
+      "versions": {
+        "3": "Der Philosoph und Psychiater Karl Jaspers prägte den Begriff der [[Grenzsituation:Lagen wie Tod, Leid, Kampf und Schuld, die man nicht überwinden, sondern nur durchstehen kann — und die das gewohnte Selbstverständnis aufbrechen]]. Solange das Leben glatt läuft, lebt der Mensch an der Oberfläche seiner Möglichkeiten. Erst wo etwas Unausweichliches einbricht — eine tödliche Diagnose, ein unverschuldeter Verlust, eine Schuld, die nicht gutzumachen ist —, wird er aus der Selbstverständlichkeit gerissen. Diese Erschütterung ist für Jaspers keine Störung, sondern die Chance auf das, was er Existenz nennt: ein bewusstes, eigenes Dasein.",
+        "5": "Jaspers sitzt nahe bei Rilke, unten links: Verwandlung als Widerfahrnis, nicht als Werk. Aber er fügt eine entscheidende Wendung hinzu. Die Grenzsituation verwandelt nicht von selbst — sie eröffnet nur die Möglichkeit. Man kann ihr ausweichen, sie betäuben, sie verleugnen. Oder man kann sie 'ergreifen', sie als die eigene annehmen. Damit liegt Jaspers exakt auf der Bruchlinie der Y-Achse: Das Auslösende ist welt-getroffen (die Situation kommt über mich), das Entscheidende ist selbst-getrieben (ob ich sie annehme). Diese Doppelstruktur macht ihn zur Brücke zwischen dem unteren und dem oberen Feld — und zum philosophischen Verwandten von Frankls 'trotzdem Ja zum Leben'."
+      }
+    },
+    {
+      "id": "james",
+      "name": "William James",
+      "lifespan": "1842–1910",
+      "firstLevel": 1,
+      "schoolId": "pragmatismus-religionspsychologie",
+      "x": 22,
+      "y": 42,
+      "graphX": -290,
+      "graphY": -60,
+      "lectio_brief": "James sammelte hunderte Berichte von Menschen, die sich von Grund auf gewandelt hatten — Bekehrungen, Erweckungen, plötzliche Umschwünge. Er fragte nicht, ob ihr Gott existiert. Er fragte, was mit ihnen geschah und woran man eine echte Verwandlung erkennt. Seine Antwort war nüchtern und respektvoll zugleich: an ihren Früchten, nicht an ihren Wurzeln.",
+      "versions": {
+        "1": "Der amerikanische Psychologe und Philosoph William James untersuchte als einer der Ersten religiöse Verwandlungen wissenschaftlich — ohne sie wegzuerklären. In seinem Werk [[Die Vielfalt religiöser Erfahrung:'The Varieties of Religious Experience' (1902) — James' Sammlung und Analyse von Bekehrungs- und Erweckungsberichten als psychologische Phänomene]] beschreibt er Bekehrungserlebnisse als reale seelische Ereignisse: Ein zerrissener, unglücklicher Mensch wird mit einem Mal geeint, sicher, glücklich. James wertet diese Erfahrungen nicht als wahr oder falsch — er fragt, was sie bewirken. Eine Verwandlung erkennt man für ihn an ihren Folgen im Leben, nicht an der Lehre, die sie begleitet.",
+        "3": "James ist die methodische Brücke des Tableaus: Er behandelt das, was Augustinus von innen erlebt und Tolle als Lehre verkündet, von außen — beschreibend, vergleichend, ohne Glaubensanspruch. Im Quadranten sitzt er bei Krise und Welt-getroffen, aber weiter zur Mitte hin als Rilke und Jaspers, weil er zwischen der plötzlichen ('lytischen') und der allmählichen Verwandlung unterscheidet und damit schon zur Praxis-Seite hinüberweist. Sein [[Pragmatismus:philosophische Haltung, die den Wert einer Überzeugung an ihren praktischen Folgen misst, nicht an ihrer theoretischen Wahrheit]] liefert dem ganzen Tableau seinen Maßstab: Nicht woher die Verwandlung kommt, entscheidet über ihren Wert, sondern wohin sie führt."
+      }
+    },
+    {
+      "id": "augustinus",
+      "name": "Augustinus",
+      "lifespan": "354–430",
+      "firstLevel": 3,
+      "schoolId": "christliche-konversion",
+      "x": 34,
+      "y": 70,
+      "graphX": -200,
+      "graphY": 170,
+      "lectio_brief": "Augustinus rang jahrelang mit sich: Er wollte ein anderer werden und konnte nicht. Sein Wille war gespalten — er wollte und wollte zugleich nicht. Dann, im Garten, eine Kinderstimme: 'Nimm und lies.' Er schlug die Schrift auf, las einen Satz, und die Spaltung war fort. Was sein Wille jahrelang nicht erzwingen konnte, geschah in einem Augenblick — und doch hatte all sein Ringen daraufhin gearbeitet.",
+      "versions": {
+        "3": "Augustinus schildert in seinen [[Bekenntnisse:'Confessiones' (um 397) — die erste große Autobiografie des Abendlands, geschrieben als Anrede an Gott]] eine der berühmtesten Verwandlungen der Geschichte: seine Bekehrung im Garten von Mailand. Jahrelang hatte er ein neues Leben gewollt und sich zugleich daran gehindert — er beschreibt es als einen Willen, der gegen sich selbst gespalten ist. Die Lösung kommt nicht durch noch mehr Anstrengung, sondern durch ein Ereignis: eine Kinderstimme, ein aufgeschlagener Vers, und plötzlich ist der Zwiespalt verschwunden. Verwandlung ist hier beides — erkämpft und geschenkt.",
+        "5": "Augustinus sitzt oben links: Krise und selbst-getrieben — aber er ist der Knoten, der diese Verortung zugleich in Frage stellt. Sein Ringen ist höchste Selbst-Aktivität (er will, kämpft, betet), doch der entscheidende Umschwung widerfährt ihm (die Gnade, das Geschenk). Damit ist Augustinus der theologische Zwilling von Jaspers' Doppelstruktur: Das Ereignis kommt von außen, aber es fällt auf einen, der lange darauf hingearbeitet hat. Die [[Gnade:in der christlichen Lehre das unverdiente Geschenk Gottes, das der Mensch nicht erzwingen, nur empfangen kann]] ist sein Name für das, was Rilke das Getroffenwerden nennt und Eckhart das Loslassen — drei Sprachen für dieselbe Einsicht, dass das Tiefste sich nicht machen lässt."
+      }
+    },
+    {
+      "id": "frankl",
+      "name": "Viktor Frankl",
+      "lifespan": "1905–1997",
+      "firstLevel": 2,
+      "schoolId": "logotherapie",
+      "x": 30,
+      "y": 56,
+      "graphX": -110,
+      "graphY": 200,
+      "lectio_brief": "Frankl überlebte vier Konzentrationslager und stellte danach eine Behauptung auf, die kaum jemand mit solcher Glaubwürdigkeit aufstellen konnte: Man kann einem Menschen alles nehmen — bis auf eines. Die Freiheit, zu wählen, wie er sich zu dem stellt, was ihm widerfährt. Diese letzte Freiheit ist für Frankl der Ort, an dem selbst im Unabänderlichen noch Verwandlung möglich ist.",
+      "versions": {
+        "2": "Viktor Frankl, Wiener Psychiater und Überlebender der nationalsozialistischen Lager, lehrt, dass der Mensch sich selbst dort noch verwandeln kann, wo er an seiner Lage nichts mehr ändern kann. Wenn das Leid unausweichlich ist, bleibt die Frage, welche Haltung man zu ihm einnimmt — und in dieser Haltung liegt eine Freiheit, die niemand nehmen kann. Aus dieser Einsicht entwickelte Frankl die [[Logotherapie:von ihm begründete Therapierichtung, die im Finden von Sinn — nicht im Auflösen von Symptomen — den Kern der Heilung sieht]]. Verwandlung heißt für ihn: nicht die Umstände ändern, sondern den eigenen Stand zu ihnen.",
+        "4": "Frankl erscheint auch im Existenzialismus-Tableau und im ersten Wandlung-Tableau — hier aber unter einer eigenen Frage. Nicht 'Sinn als Therapie' (so im therapeutischen Tableau) und nicht 'Sinn finden statt machen' (so im Existenzialismus-Streit mit Sartre), sondern: die selbst gewählte Haltung im Unabänderlichen ist selbst schon die Verwandlung. Darum sitzt er oben, bei den Selbst-getriebenen — aber weit links, im Feld der Krise, weil seine Haltung erst dort gefragt ist, wo das Leid unausweichlich geworden ist. Frankl ist der nüchterne Gegenpol zu jeder Verwandlungs-Euphorie: Er verspricht keine Erlösung, nur die unzerstörbare Freiheit der Haltung."
+      }
+    },
+    {
+      "id": "stoa",
+      "name": "Die Stoa (Epiktet, Mark Aurel)",
+      "lifespan": "3. Jh. v.Chr. – 2. Jh. n.Chr.",
+      "firstLevel": 2,
+      "schoolId": "stoische-praxis",
+      "x": 78,
+      "y": 82,
+      "graphX": 280,
+      "graphY": -170,
+      "lectio_brief": "Die Stoiker glaubten nicht an die große Wandlung in einem Augenblick. Sie glaubten an die tägliche Übung. Jeden Morgen sich auf das vorbereiten, was kommen mag; jeden Abend prüfen, was man getan hat; immer wieder unterscheiden zwischen dem, was in der eigenen Macht steht, und dem, was nicht. Verwandlung ist für sie kein Ereignis, sondern eine Gewohnheit, die langsam zur zweiten Natur wird.",
+      "versions": {
+        "2": "Die Stoa — vertreten etwa durch den Sklaven Epiktet und den Kaiser Mark Aurel — sieht Verwandlung als lebenslange Übung. Im Zentrum steht eine einzige Unterscheidung: Manches steht in unserer Macht (unsere Urteile, Absichten, Reaktionen), das meiste nicht (Krankheit, Verlust, das Verhalten anderer). Wer lernt, sich nur um das Erste zu sorgen und das Zweite gelassen hinzunehmen, wird allmählich ein anderer Mensch. Diese Übung heißt [[askesis:griechisch 'Übung, Training' — die systematische seelische Disziplin der Stoiker, Ursprung des Wortes 'Askese']]: tägliches, geduldiges Arbeiten an der eigenen Haltung.",
+        "4": "Die Stoa sitzt oben rechts — Praxis und selbst-getrieben in Reinform, der direkte Gegenpol zu Rilke. Wo Rilkes Verwandlung in einem Augenblick einbricht, ist die stoische ein Weg ohne Endpunkt. Die Stoa erscheint auch im Lebenskunst-Tableau, dort unter der Frage nach dem guten Leben (Ataraxie, Seelenruhe); hier ist der Akzent verschoben auf die Verwandlung selbst — nicht der Zustand der Ruhe, sondern der Prozess des Anders-Werdens durch Übung. Sie ist der Beleg des Tableaus, dass nicht jede tiefe Verwandlung eine Krise braucht: Manche geschieht in tausend kleinen, unspektakulären Wiederholungen."
+      }
+    },
+    {
+      "id": "tolle",
+      "name": "Eckhart Tolle",
+      "lifespan": "*1948",
+      "firstLevel": 4,
+      "schoolId": "kontemplative-tradition",
+      "x": 88,
+      "y": 64,
+      "graphX": 300,
+      "graphY": -30,
+      "lectio_brief": "Tolle behauptet, fast alles menschliche Leiden entstehe dadurch, dass wir uns mit dem unaufhörlichen Denken in unserem Kopf identifizieren — er nennt es das 'Ego'. Verwandlung heißt für ihn nicht, ein besseres Ich zu werden, sondern aus der Identifikation mit dem Ich überhaupt herauszutreten, in die schlichte Gegenwart des Augenblicks. Ob das trägt, mag jeder selbst prüfen; Tolle stellt es als Weg dar, nicht als Beweis.",
+      "versions": {
+        "4": "Der zeitgenössische spirituelle Lehrer Eckhart Tolle vertritt die These, dass Verwandlung im Austritt aus dem Denken liegt. Was wir 'Ich' nennen, sei zum großen Teil ein Strom zwanghafter Gedanken über Vergangenheit und Zukunft — er nennt ihn das [[Ego:bei Tolle die Identifikation mit dem fortlaufenden Denken und mit Rollen, Besitz und Vergangenheit — nicht der psychoanalytische Begriff]]. Die Verwandlung geschieht, wenn man diesen Strom bemerkt und sich von ihm löst, indem man ganz in die Gegenwart tritt. Tolle stellt dies als Übung dar — als wiederholtes Zurückkehren in den 'gegenwärtigen Augenblick', bis die Identifikation mit dem Denken sich lockert.",
+        "5": "Tolle sitzt oben rechts, nahe der Stoa: Praxis und selbst-getrieben. Im Tableau ist er bewusst als der zeitgenössisch-populäre Pol der kontemplativen Tradition gesetzt — was Eckhart der Mystiker im 14. Jahrhundert und der Buddhismus über Jahrtausende lehrten, formuliert Tolle für ein modernes Massenpublikum neu. Genau das macht ihn zum kuratorisch heikelsten Knoten: Seine Sprache ist die einer Lehre, die einen Weg verkündet, während das Tableau Positionen ausstellt, ohne sie zu beglaubigen. Hier wird er darum als Behauptung geführt — als eine einflussreiche zeitgenössische Stimme zur Frage, wie Verwandlung durch Übung geschieht, nicht als deren Wahrheit. Die kritische Gegenstimme liefert das Tableau selbst: Eckhart und der ältere kontemplative Strom denken dasselbe ohne das Versprechen sofortiger Befreiung."
+      }
+    },
+    {
+      "id": "eckhart",
+      "name": "Meister Eckhart",
+      "lifespan": "um 1260–1328",
+      "firstLevel": 3,
+      "schoolId": "kontemplative-tradition",
+      "x": 70,
+      "y": 52,
+      "graphX": 200,
+      "graphY": -20,
+      "lectio_brief": "Meister Eckhart predigte eine Verwandlung durch Subtraktion, nicht durch Zuwachs. Nicht mehr erreichen, mehr werden, mehr haben — sondern lassen. Er nannte es Gelassenheit und Abgeschiedenheit: ein Loslassen des eigenen Willens, der eigenen Bilder von Gott und Selbst, bis ein Raum entsteht, in dem das Göttliche geboren werden kann. Übung und Geschehen-Lassen fallen bei ihm in eins.",
+      "versions": {
+        "3": "Der mittelalterliche Dominikaner und Mystiker Meister Eckhart lehrt Verwandlung als Weg des Loslassens. Seine Schlüsselworte sind [[Gelassenheit:bei Eckhart das aktive Sich-Lassen, das Loslassen des eigenen Willens und Habenwollens]] und [[Abgeschiedenheit:die innere Freiheit von allem Geschaffenen, der leere Raum, in dem nach Eckhart Gott wirken kann]]. Nicht durch Anstrengung wird der Mensch verwandelt, sondern indem er aufhört, festzuhalten — an Vorstellungen, am Willen, sogar an seinen Bildern von Gott. Eckhart steht damit zwischen den Polen: Das Loslassen ist eine Übung (Praxis), aber sein Ziel ist, dass etwas geschieht, das man nicht machen kann.",
+        "5": "Eckhart ist der Scharnier-Knoten zwischen oberem und unterem Feld, deshalb sitzt er nahe der Mitte. Seine Gelassenheit ist beides zugleich: aktives Üben (ich lasse los — Praxis, selbst-getrieben) und passives Empfangen (damit etwas einbrechen kann — Krise, welt-getroffen). Damit ist er der kontemplative Zwilling von Augustinus' Gnade und Rilkes Getroffenwerden — drei Traditionen, die unabhängig zu derselben paradoxen Einsicht kommen: Das Entscheidende lässt sich nur dadurch herbeiführen, dass man aufhört, es herbeiführen zu wollen. Eckhart liefert dem Tableau seine tiefste Pointe: Die schärfste Übung ist die, das Üben loszulassen.",
+        "4": "Im Tableau ist Eckhart der Knoten mit den meisten Verbindungen — er bindet Tolle (den er selbst inspiriert), Augustinus (dessen Innerlichkeit er radikalisiert), Jung (der ihn psychologisch übersetzt) und Rilke (den verwandten Raum der Offenheit) aneinander. Diese zentrale Stellung ist kein Zufall: Eckharts Gelassenheit ist die Formel, auf die fast alle anderen Verwandlungswege des Felds zulaufen — das Loslassen des Machen-Wollens, ohne das weder Krise noch Praxis ans Tiefste reichen."
+      }
+    },
+    {
+      "id": "thich-nhat-hanh",
+      "name": "Thich Nhat Hanh",
+      "lifespan": "1926–2022",
+      "firstLevel": 4,
+      "schoolId": "kontemplative-tradition",
+      "x": 80,
+      "y": 34,
+      "graphX": 240,
+      "graphY": 170,
+      "lectio_brief": "Thich Nhat Hanh lehrte Verwandlung im Allergewöhnlichsten: im Atmen, im Gehen, im Abwasch. Nicht der spektakuläre Durchbruch verwandelt, sondern die geduldige Rückkehr in den gegenwärtigen Moment, tausendmal am Tag. Achtsamkeit ist für ihn kein Rückzug aus der Welt, sondern eine andere Weise, ganz in ihr zu sein — und gerade darin liegt die langsame, stetige Wandlung.",
+      "versions": {
+        "4": "Der vietnamesische Zen-Mönch Thich Nhat Hanh brachte die buddhistische Achtsamkeit in einen alltagsnahen, weltzugewandten Stil. Verwandlung geschieht für ihn nicht im Kloster und nicht im großen Erwachen, sondern in der [[Achtsamkeit:das bewusste, nicht-wertende Gewahrsein des gegenwärtigen Augenblicks, geübt an alltäglichen Tätigkeiten]] des konkreten Augenblicks — beim Atmen, beim Gehen, beim Geschirrspülen. Die kleine, wiederholte Übung, immer wieder in die Gegenwart zurückzukehren, verwandelt über die Zeit, wie ein Mensch in der Welt steht. Sein Stil ist sanft und praktisch, nicht doktrinär.",
+        "5": "Thich Nhat Hanh sitzt rechts unten — Praxis, aber stärker welt-getroffen und welt-zugewandt als Stoa, Tolle und Eckhart. Das ist seine eigene Pointe gegen die anderen Übungs-Stimmen: Verwandlung ist für ihn kein Rückzug ins Innere und kein Austritt aus dem Denken, sondern ein tieferes Eintreten in die gemeinsame Wirklichkeit ([[Intersein:Thich Nhat Hanhs Begriff dafür, dass nichts für sich allein existiert — alles ist mit allem verwoben]]). Er besetzt damit den Quadranten, der bei den anderen kontemplativen Stimmen dünn bliebe, und hält das Tableau davon ab, Praxis mit Weltflucht gleichzusetzen. Im Stil ist er die ruhigste Brücke zwischen der spirituellen und der lebensweltlichen Hälfte des Felds."
+      }
+    },
+    {
+      "id": "jung",
+      "name": "C. G. Jung",
+      "lifespan": "1875–1961",
+      "firstLevel": 5,
+      "schoolId": "tiefenpsychologie",
+      "x": 58,
+      "y": 40,
+      "graphX": 110,
+      "graphY": 210,
+      "lectio_brief": "Für Jung ist Verwandlung das eigentliche Lebensprogramm: Individuation, das langsame Werden zu dem, der man im Kern schon ist. Sie geschieht weder durch reinen Willen noch durch ein einzelnes Ereignis, sondern in der lebenslangen Auseinandersetzung mit dem, was man von sich verdrängt hat — dem Schatten, den Träumen, den Bildern aus der Tiefe. Man treibt diesen Prozess und wird zugleich von ihm getrieben.",
+      "versions": {
+        "5": "Jung sitzt in der Mitte des Tableaus, leicht rechts und mittig auf der Y-Achse — und das ist seine Aussage: Individuation unterläuft beide Achsen. Sie ist Praxis (geduldige Arbeit an Träumen, Symbolen, dem Schatten) und Widerfahrnis (das Unbewusste meldet sich von selbst, oft in der Krise der Lebensmitte). Sie ist selbst-getrieben (ich stelle mich dem Prozess) und welt-getroffen (die Bilder kommen aus einer Tiefe, die nicht mein Wille ist). Damit ist Jung der psychologische Generalist des Felds — der Knoten, der Krise und Praxis, Wollen und Geschehenlassen in einem einzigen Lebensbogen zusammenbindet. Er steht zur nüchternen Stufen-Logik des ersten Wandlung-Tableaus wie ein Gegenbild: nicht Wandlung als kreisendes Hin und Her zwischen Rückfall und Fortschritt, sondern als zielgerichtete Reifung zu einer ganzen Person."
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "id": "du-musst-dein-leben-aendern",
+      "name": "Du mußt dein Leben ändern",
+      "type": "phenomenon",
+      "primaryThinker": "rilke",
+      "firstLevel": 1,
+      "x": 20,
+      "y": 8,
+      "lectio_brief": "Der Satz, mit dem ein kopfloser Steintorso den Betrachter anspricht. Kein Ratschlag, keine Moral — ein Imperativ, der aus dem Getroffensein kommt, nicht aus dem Willen.",
+      "versions": {
+        "1": "Die berühmte Schlusszeile von Rilkes Gedicht über eine antike Statue. Das Erstaunliche: Der Befehl kommt nicht vom Dichter und nicht von einer Autorität, sondern scheinbar vom Kunstwerk selbst. Verwandlung beginnt hier als ein Angesprochen-Werden — etwas sieht dich an und lässt kein Weiterleben wie bisher zu.",
+        "4": "Als Phänomen markiert dieser Satz den äußersten Pol des Tableaus: Verwandlung als reines Widerfahrnis, das sich doch als Imperativ an die Freiheit richtet. Er ist der Prüfstein für die ganze Y-Achse — denn er zeigt, dass Getroffenwerden und Sich-ändern-Müssen kein Gegensatz sein müssen, sondern in einem Augenblick zusammenfallen können."
+      }
+    },
+    {
+      "id": "grenzsituation",
+      "name": "Grenzsituation",
+      "type": "concept",
+      "primaryThinker": "jaspers",
+      "firstLevel": 2,
+      "x": 10,
+      "y": 24,
+      "versions": {
+        "2": "Jaspers' Begriff für Lagen, die man nicht überwinden, sondern nur durchstehen kann: Tod, Leid, Kampf, Schuld. Im Alltag weicht man ihnen aus; treffen sie mit voller Wucht, zerbricht das gewohnte Dasein — und eröffnet die Möglichkeit echter Existenz.",
+        "4": "Die Grenzsituation ist der Mechanismus der krisengetriebenen Verwandlung: Sie verwandelt nicht selbst, sondern reißt eine Tür auf, durch die der Mensch gehen kann oder nicht. Damit ist sie das begriffliche Scharnier zwischen 'welt-getroffen' (die Situation kommt über mich) und 'selbst-getrieben' (ob ich sie ergreife)."
+      }
+    },
+    {
+      "id": "konversion",
+      "name": "Konversion",
+      "type": "phenomenon",
+      "primaryThinker": "james",
+      "firstLevel": 2,
+      "x": 28,
+      "y": 56,
+      "versions": {
+        "2": "Der plötzliche, tiefgreifende Umschwung eines Menschen — religiös, weltanschaulich oder existenziell. James beschreibt ihn als reales seelisches Ereignis, bei dem ein zerrissenes Selbst mit einem Mal geeint wird. Er unterscheidet die plötzliche von der allmählichen Konversion.",
+        "5": "Als Phänomen verbindet die Konversion die obere Hälfte des Krise-Feldes: Augustinus erlebt sie von innen als Gnade, James beschreibt sie von außen als Psychologie, Jaspers deutet ihre Bedingung als Grenzsituation. Drei Zugriffe auf denselben Vorgang — gelebt, beschrieben, gedeutet."
+      }
+    },
+    {
+      "id": "askesis",
+      "name": "Askesis (Übung)",
+      "type": "method",
+      "primaryThinker": "stoa",
+      "firstLevel": 1,
+      "x": 82,
+      "y": 86,
+      "versions": {
+        "1": "Griechisch für 'Übung, Training'. Bei den Stoikern die systematische tägliche Arbeit an der eigenen Haltung — morgendliche Vorbereitung, abendliche Prüfung, ständiges Unterscheiden zwischen dem, was in meiner Macht steht, und dem, was nicht. Ursprung des Wortes 'Askese'.",
+        "3": "Als Methode ist die askesis der Gegenentwurf zum Konversions-Phänomen: Wo dort der Augenblick verwandelt, verwandelt hier die Wiederholung. Sie ist das verbindende Prinzip der ganzen rechten Tableau-Hälfte — Stoa, Tolle, Thich Nhat Hanh und selbst Eckharts Loslassen sind Spielarten der Übung, die über Zeit einen anderen Menschen formt."
+      }
+    },
+    {
+      "id": "gelassenheit",
+      "name": "Gelassenheit",
+      "type": "concept",
+      "primaryThinker": "eckhart",
+      "firstLevel": 3,
+      "x": 66,
+      "y": 48,
+      "versions": {
+        "3": "Eckharts Wort für das aktive Sich-Lassen: das Loslassen des eigenen Willens, Habenwollens und der eigenen Bilder. Anders als bloße Passivität ist Gelassenheit eine Übung — aber eine, deren Ziel das Aufhören des Machen-Wollens ist.",
+        "5": "Gelassenheit ist der begriffliche Ort, an dem die beiden Achsen des Tableaus sich kreuzen: aktives Üben und passives Empfangen in einem. Sie benennt das Paradox, das Augustinus 'Gnade' und Rilke 'Getroffenwerden' nennt — dass das Tiefste sich nur einstellt, wenn man aufhört, es zu erzwingen."
+      }
+    },
+    {
+      "id": "individuation",
+      "name": "Individuation",
+      "type": "theory",
+      "primaryThinker": "jung",
+      "firstLevel": 3,
+      "x": 56,
+      "y": 44,
+      "versions": {
+        "3": "Jungs Modell der lebenslangen Verwandlung: der Prozess, in dem ein Mensch zu seiner ganzen, ungeteilten Persönlichkeit wird, indem er das Verdrängte (den Schatten) integriert statt bekämpft. Kein Ziel, das man erreicht, sondern ein Weg, der ein Leben lang dauert.",
+        "5": "Als Theorie ist Individuation der umfassendste Verwandlungsbegriff des Tableaus — sie nimmt Krise und Praxis, Wollen und Geschehenlassen in einen einzigen Lebensbogen auf. Gerade dadurch ist sie auch die Position, die der nüchternen Stufen-Logik des therapeutischen Wandlung-Tableaus am stärksten widerspricht: Reifung statt kreisendem Hin und Her."
+      }
+    }
+  ],
+  "influences": [
+    {
+      "from": "rilke",
+      "to": "jaspers",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Rilke und Jaspers beschreiben dasselbe von zwei Seiten: das Aufbrechen des gewohnten Lebens durch ein Widerfahrnis. Rilke dichtet den Augenblick des Getroffenwerdens, Jaspers begreift ihn als Grenzsituation. Beide besetzen den unteren linken Pol — Verwandlung, die einem zustößt."
+      }
+    },
+    {
+      "from": "rilke",
+      "to": "eckhart",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Eine stille Verwandtschaft über sechs Jahrhunderte: Eckharts Gelassenheit und Rilkes Getroffenwerden meinen beide einen Zustand der Offenheit, in dem etwas einbrechen kann, das man nicht selbst herstellt. Wo Eckhart das Loslassen übt, hält Rilke sich offen für das, was ihn anspricht — zwei Wege in denselben empfangenden Raum."
+      }
+    },
+    {
+      "from": "rilke",
+      "to": "jung",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Rilke und Jung waren Zeitgenossen und teilen die Überzeugung, dass das Entscheidende aus einer Tiefe kommt, die der Wille nicht beherrscht. Was Rilke als Anruf des Kunstwerks erfährt, deutet Jung als Stimme des Unbewussten — beide misstrauen der bloßen Selbst-Optimierung und setzen auf eine Wandlung, die mehr empfangen als gemacht ist."
+      }
+    },
+    {
+      "from": "jaspers",
+      "to": "frankl",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Jaspers' Grenzsituation und Frankls unausweichliches Leid sind dieselbe Lage, philosophisch und psychologisch gefasst. Beide ziehen denselben Schluss: Das Entscheidende ist nicht die Situation, sondern ob und wie der Mensch sie ergreift. Frankl hat Jaspers' Gedanken im Lager am eigenen Leib erprobt."
+      }
+    },
+    {
+      "from": "augustinus",
+      "to": "james",
+      "type": "influence",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Augustinus' Bekehrung ist der klassische Fall, an dem James seine Psychologie der Konversion entwickelt. Wo Augustinus von innen als Gnade erlebt, was ihm geschieht, beschreibt James es von außen als seelisches Phänomen — die Bekehrung als Einigung eines zerrissenen Selbst, unabhängig von ihrer theologischen Deutung."
+      }
+    },
+    {
+      "from": "james",
+      "to": "frankl",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "James' pragmatischer Maßstab — eine Verwandlung erkennt man an ihren Früchten, nicht an ihrer Lehre — kehrt bei Frankl wieder: Nicht die Theorie des Sinns zählt, sondern dass das Festhalten an einem Sinn einen Menschen real trägt und verwandelt. Beide messen Verwandlung an ihrer Wirkung im gelebten Leben."
+      }
+    },
+    {
+      "from": "stoa",
+      "to": "tolle",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Tolles Lehre vom Heraustreten aus dem zwanghaften Denken ist eine moderne, populäre Variante der stoischen Unterscheidung zwischen dem, was in meiner Macht steht (meine Reaktion, meine Gegenwärtigkeit), und dem, was nicht. Was die Stoa als nüchterne Urteils-Disziplin lehrt, formuliert Tolle als spirituelle Präsenz-Übung."
+      }
+    },
+    {
+      "from": "stoa",
+      "to": "thich-nhat-hanh",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Stoa und Thich Nhat Hanh teilen das Vertrauen in die kleine, wiederholte Übung gegen die Sehnsucht nach dem großen Durchbruch. Beide verwandeln durch Disziplin im Gewöhnlichen — die einen durch morgendliche und abendliche Selbstprüfung, der andere durch achtsames Atmen und Gehen. Verwandlung als Gewohnheit, nicht als Ereignis."
+      }
+    },
+    {
+      "from": "eckhart",
+      "to": "tolle",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Tolle beruft sich selbst auf Meister Eckhart (sein Künstlername spielt darauf an). Eckharts Gelassenheit und Tolles Präsenz teilen den Kern — das Loslassen der Ich-Identifikation. Der Unterschied ist der Ton: Eckhart predigt in die Spannung von Übung und Gnade hinein, Tolle verspricht eine erreichbare Befreiung. Das Tableau führt Eckhart als die ältere, vorsichtigere Stimme desselben Gedankens."
+      }
+    },
+    {
+      "from": "eckhart",
+      "to": "augustinus",
+      "type": "influence",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Eckhart steht in der von Augustinus geprägten Tradition christlicher Innerlichkeit — und radikalisiert sie. Augustinus' Gnade, die man nicht erzwingen kann, wird bei Eckhart zur Gelassenheit, die den Raum für das Ungemachte öffnet. Beide bestehen darauf, dass das Entscheidende sich dem Willen entzieht, gerade indem es ihn voraussetzt."
+      }
+    },
+    {
+      "from": "jung",
+      "to": "eckhart",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Jung las und schätzte die Mystiker. Eckharts Loslassen des Ich und Jungs Integration des Unbewussten zielen auf verwandte Erfahrungen: ein Zentrum jenseits des bewussten Willens, dem man sich öffnet statt es zu beherrschen. Jung übersetzt die mystische Sprache in eine psychologische — aus Gott wird das Selbst, aus Gelassenheit die Hinwendung zum Unbewussten."
+      }
+    },
+    {
+      "from": "frankl",
+      "to": "jung",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Frankl und Jung, beide aus der Tiefenpsychologie kommend, teilen die Überzeugung, dass Verwandlung an einem Sinn hängt, der größer ist als das Ich. Bei Frankl ist es der zu findende Sinn im Unabänderlichen, bei Jung das Selbst als Ziel der Individuation. Beide widersprechen der bloßen Symptom-Reparatur — Verwandlung ist Hinwendung zu etwas, nicht nur Lösung von etwas."
+      }
+    },
+    {
+      "from": "rilke",
+      "to": "james",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Rilke und James nähern sich dem Umschwung von zwei Seiten: James sammelt und beschreibt die Berichte derer, denen eine Verwandlung widerfährt; Rilke spricht aus dem Inneren eines solchen Augenblicks. Wo James fragt, woran man die echte Konversion erkennt, gibt Rilke die Erfahrung selbst — den Moment, in dem das Getroffensein keinen Aufschub mehr duldet."
+      }
+    }
+  ]
+}

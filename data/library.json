@@ -108,5 +108,16 @@
     "spur": "wandlung",
     "desc": "Von Freud bis Kabat-Zinn — was Therapie, Achtsamkeit und Körperarbeit über Veränderung wissen: Einsicht, Erfahrung, Beziehung.",
     "tags": ["Therapie", "Transformation", "Heilung", "Veränderung"]
+  },
+  {
+    "id": "verwandlung",
+    "title": "Verwandlung",
+    "subtitle": "Verwandlung — Was verwandelt einen Menschen von Grund auf?",
+    "era": "Antike – Gegenwart",
+    "themeColor": "oklch(0.43 0.11 156)",
+    "status": "available",
+    "spur": "wandlung",
+    "desc": "Von Rilke bis Jung — Krise oder Praxis, Getroffenwerden oder Wollen: was einen Menschen nicht repariert, sondern grundlegend verwandelt.",
+    "tags": ["Krise", "Praxis", "Metamorphose", "Rilke"]
   }
 ]
