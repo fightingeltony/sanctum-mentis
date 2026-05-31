@@ -1,0 +1,40 @@
+{
+  "id": "stell-die-frage-anders",
+  "tableauId": "gut-und-boese",
+  "title": "Stell die Frage anders",
+  "focus": "Die Menschennatur-Frage — von drei festen Antworten über ihren Einsturz bis zu einem Denker, der nicht mehr nach der Anlage fragt, sondern nach der Freiheit",
+  "thesis": "Ist der Mensch von Natur gut oder schlecht? Diese Lectio führt durch drei Antworten, die fest behaupten zu wissen, was im Menschen angelegt ist — und durch zwei, die zeigen, dass die Frage selbst vielleicht falsch gestellt war.",
+  "path_type": "destruktiv-aufbauend",
+  "level": 3,
+  "estimated_minutes": 15,
+  "intro": "Es ist die vielleicht älteste Frage über uns selbst: Ist der Mensch im Grunde gut — oder gefährlich? Fast jeder trägt eine stille Antwort darauf mit sich, und sie färbt, wie er anderen begegnet. Diese Lectio nimmt drei große Antworten ernst, die alle behaupten, den Grund des Menschen zu kennen — und führt dich dann an eine Stelle, an der dieser Grund zu wanken beginnt. Am Ende steht kein Sieger, sondern ein Denker, der aufhört zu fragen, was im Menschen angelegt ist, und anfängt zu fragen, was er aus sich macht.",
+  "path": [
+    {
+      "nodeId": "mengzi",
+      "nodeType": "thinker",
+      "transition": "Mengzis Bild ist schön, und es trifft etwas — wir kennen den Impuls zu helfen, der vor jeder Überlegung da ist. Aber er beschreibt einen ungestörten Menschen. Was, wenn man den Menschen unter Druck betrachtet, ohne schützende Ordnung? Hobbes hat genau das getan und kommt zur entgegengesetzten Antwort."
+    },
+    {
+      "nodeId": "hobbes",
+      "nodeType": "thinker",
+      "transition": "Zwei Denker, zwei Naturzustände, zwei Menschen — und beide können nur einen gesehen haben. Auffällig ist: Beide projizieren in den unbeobachteten Menschen, was sie ohnehin vermuteten. Es gibt eine dritte Stimme, die den Grund noch tiefer legt — nicht in die Furcht, sondern in eine Beschädigung, die der Mensch schon mitbringt, bevor er handelt."
+    },
+    {
+      "nodeId": "augustinus",
+      "nodeType": "thinker",
+      "transition": "Mit Augustinus scheint der härteste Boden erreicht: Das Böse ist nicht Wahl, nicht Lage, sondern Erbe — es sitzt im Menschen, bevor er irgendetwas tut. Drei Stationen, drei feste Antworten über die Anlage des Menschen. Und jetzt kommt eine Beobachtung, die nicht eine vierte Antwort gibt, sondern fragt, ob die Anlage überhaupt der richtige Ort war, um zu suchen."
+    },
+    {
+      "nodeId": "arendt",
+      "nodeType": "thinker",
+      "transition": "Was Arendt im Gerichtssaal dachte, hat die Sozialpsychologie zur selben Zeit im Labor gemessen: Gewöhnliche Menschen verabreichten auf Anweisung scheinbar gefährliche Stromstöße, gewöhnliche Studenten eskalierten in zugewiesenen Rollen. Wenn dieselbe Anlage zum Täter und zum Helfer führt, je nach Lage, dann verschiebt sich der ganze Grund der Frage — weg von dem, was im Menschen sitzt, hin zu dem, in welche Lage er gerät und ob er in ihr noch denkt. Die drei festen Antworten vom Anfang wirken plötzlich, als hätten sie am falschen Ort gegraben. Bleibt eine letzte Stimme — eine, die den Boden nicht wiederherstellt, sondern die Frage umstellt."
+    },
+    {
+      "nodeId": "kant",
+      "nodeType": "thinker",
+      "transition": "Kant gibt keine Antwort auf ›gut oder böse‹ — er verweigert sie. Nicht die Anlage entscheidet, sagt er, sondern die Freiheit: Der Hang zum Bösen ist real, aber er ist nie das letzte Wort, weil der Mensch ihm widerstehen kann. Damit ist die Frage nicht beantwortet, sondern verschoben — weg von dem, was du bist, hin zu dem, was du mit dir anfängst. Du musst dem nicht folgen. Aber du hast die andere Frage gesehen."
+    }
+  ],
+  "closing_synthesis": "Fünf Stationen, eine Bewegung vom festen Grund weg. Mengzi sieht im Menschen die guten Keime, Hobbes die Furcht, Augustinus die ererbte Beschädigung — drei Antworten, die alle wissen wollen, was im Menschen angelegt ist. Dann zeigen Arendt und die Experimente der Sozialpsychologie etwas Beunruhigendes: dass dieselbe Anlage zum Helfer und zum Täter führen kann, je nach Lage. Und Kant stellt am Ende nicht die bessere Antwort bereit, sondern eine andere Frage — ob es überhaupt die Anlage ist, auf die es ankommt, oder die Freiheit, die mit ihr umgeht. Was die Lectio dir zurücklässt, ist keine Theorie der Menschennatur. Es ist der Verdacht, dass ›gut oder böse von Natur‹ vielleicht nie die Frage war, die zählt.",
+  "closing_question": "Denk an einen Menschen, den du für ›im Grunde gut‹ oder ›im Grunde schwierig‹ hältst. Woher weißt du das — hast du seine Natur gesehen? Oder die Lagen, in die er geraten ist, und was er in ihnen gemacht hat?"
+}
