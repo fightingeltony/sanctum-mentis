@@ -1,0 +1,552 @@
+{
+  "topic": {
+    "id": "gut-und-boese",
+    "title": "Gut und Böse",
+    "subtitle": "Die Frage vor allen Fragen — bist du von Natur aus gut?",
+    "intro": "Wenn niemand zusähe und nichts dich strafte — was würdest du tun?",
+    "theme": {
+      "accent": "oklch(0.43 0.11 114)",
+      "accentSoft": "oklch(0.43 0.11 114 / 0.15)"
+    },
+    "complexityLevels": 5,
+    "quadrants": {
+      "axisX": {
+        "label": "Die ursprüngliche Anlage",
+        "left": "Von Natur gut",
+        "leftHint": "der Mensch bringt eine wohlwollende Anlage mit, die verdorben werden kann",
+        "right": "Von Natur gefährdet",
+        "rightHint": "der Mensch bringt eine gefährliche oder mangelhafte Anlage mit, die gebändigt werden muss"
+      },
+      "axisY": {
+        "label": "Ist die Natur Schicksal?",
+        "top": "Fest",
+        "topHint": "die Anlage ist gegeben und bleibt — sie lässt sich höchstens beherrschen, nicht ändern",
+        "bottom": "Formbar",
+        "bottomHint": "die Anlage ist Ausgangspunkt, nicht Verhängnis — Erziehung, Verhältnisse, Übung formen sie"
+      }
+    },
+    "synthesis": "Dieses Tableau stellt die Frage, die unter Ethik und Politik liegt, bevor sie selbst beginnen: Was ist der Mensch überhaupt, dass er zu Gut und Böse fähig ist? Zwei Schnitte ordnen das Feld. Der erste, waagerecht: Ist die Anlage wohlwollend (Mengzi, Rousseau) oder gefährdet (Xunzi, Hobbes, Augustinus)? Der zweite, senkrecht — und hier liegt die eigentliche Pointe: Ist diese Anlage ein festes Schicksal oder formbar? Genau an dieser zweiten Achse zeigt sich, dass die schärfste Spaltung nicht zwischen 'gut' und 'böse' verläuft, sondern zwischen denen, die den Menschen für festgelegt halten, und denen, die ihn für bildbar halten. Und eine dritte Stimme, quer zu beiden Achsen, bestreitet die Frage selbst: Vielleicht entscheidet nicht die Natur, sondern die Lage — der gewöhnliche Mensch wird zum Täter oder zum Helfer, je nachdem, in welche Situation man ihn stellt. Wer dieses Tableau verlässt, hat keine Antwort auf 'ist der Mensch gut?'. Aber er weiß, ob er den Streit über die Anlage führt oder über ihre Formbarkeit — und ob die Frage überhaupt die richtige war.",
+    "meta": "VERORTUNG (kuratorisch, 31.5.26): Gut und Böse ist die anthropologische Grundlegung der Handlungs-Spur — nicht ihr drittes normatives Tableau, sondern ihr deskriptiver Sockel. Ethik fragt 'Was soll ich tun?', Politische Philosophie 'Wie wollen wir zusammenleben?'; beide setzen stillschweigend ein Menschenbild voraus (Hobbes' Wolf trägt seinen Staat, Rousseaus guter Naturmensch seine Gesellschaftskritik). Dieses Tableau legt jenen vorausgesetzten Sockel frei. Die Sonderstellung ist bewusst: eine DESKRIPTIVE Frage (wie IST der Mensch) in einer sonst NORMATIVEN Spur. Das ist kein Einordnungsfehler, sondern Strukturmerkmal — der deskriptive Grund, von dem die normativen Tableaus abheben. Verworfen wurde eine fünfte 'anthropologische' Spur: Die Frage 'Was ist der Mensch?' läuft horizontal quer durch Selbst (ontologisch), Wandlung (prozessual) und dieses Tableau — sie ist Lebensfrage-Stoff (horizontal), nicht Spur-Stoff (vertikal). Sie als Spur einzusperren würde ihre Natur verfehlen (gleiche Logik wie wandernde Knoten über related_topics statt Doppelung). KNOTEN-DISZIPLIN: bewusst auf der Menschennatur-Achse gehalten — Augustinus nur als anthropologische These (Erbsünde als Aussage über die verdorbene Natur, NICHT Gnadenlehre/Soteriologie), Arendt nur als These über die Natur des Bösen (Banalität, NICHT Geschichtsphilosophie/Totalitarismusanalyse), damit der Sockel nicht größer wird als das Haus, in das er eingelassen ist. ÜBERSCHNEIDUNG mit Politische Philosophie: Hobbes, Rousseau, Locke wohnen dort bereits — aber dort ist ihr Menschenbild MITTEL (Prämisse der Herrschaftsfrage), hier ist es GEGENSTAND (die Natur selbst ist die Frage). Läuft über related_topics, nicht über doppelte Knoten. Die Y-Achse (fest↔formbar) ist bewusst die Substanz↔Prozess-Achse aus Selbst und Wandlung — sie verankert die geplante Lebensfrage 'Kann ich ein anderer werden?' strukturell im Achsenkreuz. SCHULEN: Erbsündenlehre und Pelagianismus sind historisch antagonistische Einzelpositionen, hier aber als Eingänge in das Feld 'theologische Anthropologie' gesetzt — bewusste Ausnahme zur Ein-Denker-Schul-Regel, da sie sinnvoll filtern (christliche Menschenbild-Debatte). related_topics: ethik, politische-philosophie, das-selbst, wandlung. SCHUL-NACHTRAG: vertragstheoretische-anthropologie trägt aktuell nur Hobbes (Ein-Denker), weil sein Menschenbild eine eigene, nicht-theologische und nicht-konfuzianische Tradition des anthropologischen Pessimismus eröffnet, die bei Erweiterung (Machiavelli, Schopenhauer, Freuds Triebpessimismus) sinnvoll füllt — Eingang in ein erweiterbares Feld, kein umetikettierter Einzelner. sozialpsychologie gruppiert Arendt + das Milgram/Zimbardo-Konzept (situationistisches Lager). Beide bewusst gesetzt, vgl. Wandlung-Präzedenz. IMAGO-DEI-NACHTRAG (31.5.26, kuratorischer Befund): Konzept-Knoten 'imago-dei' ergänzt, weil das christliche Menschenbild zuvor nur durch die Erbsünde (Pessimismus) und den verurteilten Pelagius (Häresie-Außenseiter) vertreten war — 'christlich' erschien faktisch als 'verdorbene Natur'. Die imago Dei (Gen 1,27) ist die orthodoxe Mehrheitslehre der guten, geschenkten Anlage und die eigentliche Gegenstimme INNERHALB der Tradition. Bewusst als anthropologische These gehalten (Ebenbild = gut angelegt), NICHT als Schöpfungsdogmatik — gleiche Knoten-Disziplin-Grenze wie bei Augustinus (keine Gnadenlehre). Besetzt den zuvor dünnen gut+fest-Quadranten (natürlichere Bewohnerin als Mengzi, dessen Keime erst kultiviert werden). An Erbsünde aufgehängt: zwei feste Anlagen, entgegengesetztes Vorzeichen, dieselbe Quelle.",
+    "related_topics": [
+      "ethik",
+      "politische-philosophie",
+      "das-selbst",
+      "wandlung"
+    ]
+  },
+  "levels": [
+    {
+      "id": 1,
+      "label": "Einstieg",
+      "short": "L1",
+      "filled": false
+    },
+    {
+      "id": 2,
+      "label": "Grundlagen",
+      "short": "L2",
+      "filled": false
+    },
+    {
+      "id": 3,
+      "label": "Vertiefung",
+      "short": "L3",
+      "filled": false
+    },
+    {
+      "id": 4,
+      "label": "Analyse",
+      "short": "L4",
+      "filled": false
+    },
+    {
+      "id": 5,
+      "label": "Synthese",
+      "short": "L5",
+      "filled": false
+    }
+  ],
+  "schools": [
+    {
+      "id": "konfuzianische-anthropologie",
+      "label": "Konfuzianische Anthropologie",
+      "color": "oklch(0.42 0.12 130)",
+      "glyph": "性",
+      "gx": -300,
+      "gy": -200,
+      "labelDir": "NW"
+    },
+    {
+      "id": "vertragstheoretische-anthropologie",
+      "label": "Vertragstheoretisches Menschenbild",
+      "color": "oklch(0.42 0.11 110)",
+      "glyph": "⊏",
+      "gx": 300,
+      "gy": -210,
+      "labelDir": "NE"
+    },
+    {
+      "id": "erbsuendenlehre",
+      "label": "Erbsündenlehre",
+      "color": "oklch(0.40 0.10 95)",
+      "glyph": "✝",
+      "gx": 320,
+      "gy": -120,
+      "labelDir": "E"
+    },
+    {
+      "id": "pelagianismus",
+      "label": "Pelagianismus",
+      "color": "oklch(0.44 0.11 145)",
+      "glyph": "☧",
+      "gx": -320,
+      "gy": -110,
+      "labelDir": "W"
+    },
+    {
+      "id": "aufklaerungs-anthropologie",
+      "label": "Aufklärungs-Anthropologie",
+      "color": "oklch(0.43 0.12 120)",
+      "glyph": "Λ",
+      "gx": -310,
+      "gy": 120,
+      "labelDir": "SW"
+    },
+    {
+      "id": "sozialpsychologie",
+      "label": "Sozialpsychologie",
+      "color": "oklch(0.41 0.10 105)",
+      "glyph": "◉",
+      "gx": -90,
+      "gy": 270,
+      "labelDir": "S"
+    },
+    {
+      "id": "evolutionaere-anthropologie",
+      "label": "Evolutionäre Anthropologie",
+      "color": "oklch(0.44 0.12 138)",
+      "glyph": "❉",
+      "gx": 300,
+      "gy": 180,
+      "labelDir": "SE"
+    }
+  ],
+  "thinkers": [
+    {
+      "id": "mengzi",
+      "name": "Mengzi (Menzius)",
+      "lifespan": "~372–289 v. Chr.",
+      "firstLevel": 1,
+      "schoolId": "konfuzianische-anthropologie",
+      "x": 18,
+      "y": 44,
+      "graphX": -270,
+      "graphY": -180,
+      "versions": {
+        "1": "Mengzi, der bedeutendste Nachfolger des Konfuzius, vertritt die berühmteste These für die natürliche Güte des Menschen: Jeder Mensch trägt von Geburt an [[vier Anfänge:die 'vier Keime' — angeborene Ansätze zu Mitgefühl, Scham, Bescheidenheit und Unterscheidung von richtig und falsch]] in sich, aus denen die Tugenden wachsen können. Sein berühmtes Bild: Wer ein Kind am Rand eines Brunnens straucheln sieht, erschrickt unwillkürlich — nicht aus Berechnung, sondern weil Mitgefühl im Menschen angelegt ist. Das Böse entsteht nicht aus der Natur, sondern wenn diese Keime verkümmern, weil niemand sie pflegt. Der Mensch ist gut wie Wasser von Natur nach unten fließt — man kann es stauen, aber das ist nicht seine Natur.",
+        "3": "Mengzi besetzt im Tableau den Pol 'von Natur gut, aber formbar' — und das ist eine feine, oft übersehene Position. Die vier Keime sind angelegt, aber nicht fertig: Sie müssen kultiviert werden wie Setzlinge, sonst verdorren sie. Damit steht Mengzi nicht im Quadranten der reinen Festlegung, sondern an der Naht zwischen guter Anlage und notwendiger Bildung. Diese Doppelstruktur — gut von Natur, aber nur als Keim, der Pflege braucht — macht ihn zum eigentlichen Gegenspieler seines konfuzianischen Landsmanns Xunzi, der dieselbe Tradition teilt und doch zur entgegengesetzten Diagnose kommt. Der Streit Mengzi–Xunzi ist die chinesische Parallele zum westlichen Streit Rousseau–Hobbes, vier Jahrhunderte vor Christus und mit einer wichtigen Differenz: Beide bleiben innerhalb des Konfuzianismus, beide wollen Tugend, sie streiten nur über ihren Ausgangspunkt."
+      }
+    },
+    {
+      "id": "xunzi",
+      "name": "Xunzi",
+      "lifespan": "~310–235 v. Chr.",
+      "firstLevel": 2,
+      "schoolId": "konfuzianische-anthropologie",
+      "x": 74,
+      "y": 38,
+      "graphX": 270,
+      "graphY": -150,
+      "versions": {
+        "2": "Xunzi, ebenfalls Konfuzianer, widerspricht Mengzi direkt: Die Natur des Menschen ist schlecht — was an ihm gut ist, ist [[bewusste Tätigkeit:wei — das durch Übung, Erziehung und Ritual Erworbene, im Gegensatz zur rohen Naturanlage]]. Von Natur aus folgt der Mensch seinem Begehren, dem Gewinn, dem Neid; überließe man ihn sich selbst, entstünde Streit und Unordnung. Die Tugend ist kein Keim, der wächst, sondern ein Werk, das gegen die Natur errichtet wird — wie ein Handwerker krummes Holz dämpft und biegt, bis es gerade ist. Riten und Lehrer sind nötig, weil die Natur sie nicht von selbst hervorbringt.",
+        "4": "Xunzi steht im Tableau rechts (gefährdete Anlage), aber nicht oben bei den Festlegungs-Denkern — und das ist seine eigentliche Pointe. Anders als Hobbes oder Augustinus glaubt Xunzi, dass die schlechte Natur vollständig umgeformt werden kann: durch Riten, Bildung, Übung wird aus jedem Menschen ein Weiser möglich. Seine Position ist damit 'von Natur gefährdet, aber radikal formbar' — eine Kombination, die im Westen selten so klar vertreten wurde. Das Holz ist krumm, aber es lässt sich gerade biegen, und das Geradebiegen ist die ganze Kultur. Xunzi ist deshalb das Scharnier des Tableaus: Er teilt mit Hobbes die düstere Anlage-Diagnose und mit Locke das Vertrauen in die Formung — und zeigt damit, dass die beiden Achsen wirklich unabhängig sind."
+      }
+    },
+    {
+      "id": "rousseau",
+      "name": "Jean-Jacques Rousseau",
+      "lifespan": "1712–1778",
+      "firstLevel": 1,
+      "schoolId": "aufklaerungs-anthropologie",
+      "x": 26,
+      "y": 30,
+      "graphX": -240,
+      "graphY": 120,
+      "versions": {
+        "1": "Rousseau gibt der modernen Welt ihre einflussreichste Formel für die natürliche Güte: Der Mensch ist von Natur gut, die Gesellschaft verdirbt ihn. Im Naturzustand lebt der Mensch in unschuldiger Selbstgenügsamkeit, geleitet von Selbsterhaltung und einem natürlichen [[Mitleid:pitié — die angeborene Abneigung, ein anderes fühlendes Wesen leiden zu sehen]]. Erst Eigentum, Vergleich und Ungleichheit erzeugen Neid, Eitelkeit und Bosheit. Das Böse ist also nicht im Menschen angelegt, sondern eine Folge falscher Verhältnisse — eine Diagnose, die bis heute jede Erziehungs- und Gesellschaftskritik prägt.",
+        "3": "Rousseau steht im Tableau links unten — gute Anlage, aber formbar — und ist damit der westliche Zwilling Mengzis, durch zwei Jahrtausende getrennt. Beide sehen die ursprüngliche Anlage als wohlwollend, beide machen die Verhältnisse für das Böse verantwortlich. Rousseaus Pointe ist jedoch schärfer politisch: Wenn der Mensch gut ist und die Gesellschaft ihn verdirbt, dann ist nicht der Mensch zu bessern, sondern die Gesellschaft umzubauen. Hier wird die anthropologische These zur politischen Sprengkraft — und genau an dieser Stelle verlässt Rousseau dieses Tableau und betritt die Politische Philosophie (siehe related_topics), wo sein Menschenbild zur Grundlage der Volkssouveränität wird. Im Gut-und-Böse-Feld zählt nur die Wurzel: gut geboren, schlecht gemacht.",
+        "5": "Rousseau ist der strukturelle Haupt-Hub des Tableaus — der Knoten mit den meisten Verbindungen, und das aus gutem Grund: Er ist der Anker der ganzen 'gut'-Seite, an dem sich alle anderen abarbeiten. Hobbes ist sein Gegenpol (dieselbe Methode, entgegengesetzte Anlage), Mengzi sein interkultureller Zwilling (gleiche Intuition, zwei Jahrtausende früher), Kant sein kritischer Erbe (übernimmt die Würde, verweigert die Güte), Tomasello sein empirischer Nachfahre (gibt der Intuition Daten und beschneidet sie zugleich). In dieser Hub-Stellung zeigt sich, warum die optimistische Anthropologie keine naive Position ist, sondern eine produktive: Sie zwingt jede Gegenposition, sich an ihr zu begründen. Wer den Menschen für gefährdet hält, muss erklären, woher das Mitgefühl kommt; wer ihn für formbar hält, muss erklären, warum die Formung so oft misslingt. Rousseaus eigene Pointe bleibt dabei die unbequemste: Wenn der Mensch gut geboren und schlecht gemacht wird, ist nicht der Mensch zu bessern, sondern die Gesellschaft umzubauen — und genau hier verlässt die anthropologische These das Tableau und wird zur politischen Sprengkraft (siehe related_topics). Im Gut-und-Böse-Feld bleibt nur die Wurzel: gut geboren, schlecht gemacht — die folgenreichste Diagnose der Moderne."
+      }
+    },
+    {
+      "id": "hobbes",
+      "name": "Thomas Hobbes",
+      "lifespan": "1588–1679",
+      "firstLevel": 1,
+      "schoolId": "vertragstheoretische-anthropologie",
+      "x": 80,
+      "y": 78,
+      "graphX": 280,
+      "graphY": -190,
+      "versions": {
+        "1": "Hobbes liefert das berühmteste düstere Menschenbild der Neuzeit: Im Naturzustand, ohne Macht, die alle in Schach hält, herrscht der [[Krieg aller gegen alle:bellum omnium contra omnes — Hobbes' Bild des staatenlosen Zustands, in dem jeder jedem zum Feind wird]]. Nicht weil der Mensch besonders boshaft wäre, sondern weil Furcht, Konkurrenz und Ehrgeiz ihn antreiben, und weil in einer Lage ohne Sicherheit der erste Schlag vernünftig wird. Das Leben des Menschen wäre dann 'einsam, armselig, scheußlich, tierisch und kurz'. Der Mensch ist von Natur kein Gemeinschaftswesen, sondern ein Einzelner, der sich vor anderen Einzelnen fürchtet.",
+        "3": "Hobbes besetzt im Tableau den Pol oben rechts — gefährdete Anlage, fest — und ist der härteste Gegenpol zu Rousseau. Wichtig für die anthropologische Lesart: Hobbes' Pessimismus ist nicht moralisch, sondern strukturell. Der Mensch ist nicht 'böse' im Sinne von Bosheit, sondern gefährlich im Sinne von Furcht und Selbsterhaltung — das Böse ist eine Folge der Lage, nicht eines verdorbenen Herzens. Diese Verschiebung macht Hobbes anschlussfähig an die Sozialpsychologie (Milgram), die das Böse ganz aus der Anlage herauslöst. Anders als bei Augustinus gibt es bei Hobbes kein erbliches Verhängnis — nur eine nüchterne Mechanik der Angst. Dass Hobbes auch in der Politischen Philosophie wohnt (siehe related_topics), ist kein Zufall: Sein Menschenbild IST der Grund seines absoluten Staates. Hier interessiert nur die Wurzel, nicht der Staat, der daraus folgt."
+      }
+    },
+    {
+      "id": "augustinus",
+      "name": "Augustinus",
+      "lifespan": "354–430",
+      "firstLevel": 2,
+      "schoolId": "erbsuendenlehre",
+      "x": 88,
+      "y": 88,
+      "graphX": 300,
+      "graphY": -110,
+      "versions": {
+        "2": "Augustinus gibt der westlichen Tradition die Lehre, die ihr Menschenbild über tausend Jahre prägt: die [[Erbsünde:die Vorstellung, dass die Verkehrtheit des menschlichen Willens seit dem Sündenfall an alle Menschen weitergegeben wird]]. Der Mensch ist nicht erst durch eigene Taten schuldig, sondern bringt eine verkehrte Anlage mit — der Wille ist gespalten, er will das Gute und tut doch das Böse. Augustinus erkennt diese Spaltung an sich selbst: Schon der Diebstahl von Birnen als Jugendlicher, ganz ohne Hunger, nur aus Lust am Verbotenen, zeigt ihm einen Hang zum Bösen, der keinen vernünftigen Grund hat. Die menschliche Natur ist beschädigt — nicht zerstört, aber aus eigener Kraft nicht zu heilen.",
+        "4": "Augustinus besetzt im Tableau den äußersten Pol oben rechts: gefährdete Anlage, fest — fester als bei jedem anderen Denker, weil die Beschädigung ererbt und aus eigener Kraft unaufhebbar ist. Hier ist die kuratorische Grenze entscheidend: Augustinus sitzt in diesem Tableau ausschließlich als Anthropologe, nicht als Theologe. Seine Antwort auf die Beschädigung — die Gnade — gehört nicht hierher; sie wäre Soteriologie, nicht Menschenbild. Was bleibt, ist die reine anthropologische These: Der Mensch ist von Natur zum Guten unfähig, ohne dass ihm dafür eine einzelne Tat vorzuwerfen wäre. Diese These ist der schärfste Gegensatz zu Pelagius, der sie frontal bestritt — und der eigentliche Grund, warum die christliche Menschenbild-Debatte überhaupt geführt wurde. Mengzis 'vier Keime' und Augustinus' 'verkehrter Wille' sind die beiden Extreme, zwischen denen das ganze Feld aufgespannt ist."
+      }
+    },
+    {
+      "id": "pelagius",
+      "name": "Pelagius",
+      "lifespan": "~360–418",
+      "firstLevel": 3,
+      "schoolId": "pelagianismus",
+      "x": 30,
+      "y": 18,
+      "graphX": -300,
+      "graphY": -100,
+      "versions": {
+        "3": "Pelagius ist der große Gegenspieler des Augustinus und der Verlierer der Geschichte — seine Lehre wurde als Häresie verurteilt, gerade weil sie so plausibel war. Er bestritt die Erbsünde: Jeder Mensch wird so unschuldig geboren wie Adam vor dem Fall, ohne ererbte Beschädigung. Das Böse wird nicht vererbt, sondern getan; und weil es getan wird, kann es auch gelassen werden. Der Mensch ist frei zum Guten — er muss sich nur entscheiden und üben. Sünde ist Gewohnheit, nicht Schicksal, und Heiligkeit eine menschliche Möglichkeit, kein Geschenk von außen.",
+        "5": "Pelagius besetzt im Tableau den Pol links unten — gute (oder zumindest unbeschädigte) Anlage, formbar — und ist damit der christliche Vorläufer des aufklärerischen Optimismus. Seine Position 'der Mensch ist frei und kann sich zum Guten bilden' ist strukturell dieselbe, die später Locke und die Pädagogik der Aufklärung vertreten, nur in theologischer Sprache. Dass ausgerechnet diese optimistische, verantwortungsbetonte Lehre zur Häresie erklärt wurde, während Augustinus' Pessimismus zur Orthodoxie wurde, ist eine der folgenreichsten Weichenstellungen der abendländischen Anthropologie. Pelagius bleibt in diesem Tableau bewusst auf die anthropologische These reduziert: Es geht nicht um den Gnadenstreit, sondern um die nackte Frage, ob der Mensch aus eigener Kraft gut sein kann. Pelagius sagt ja — und steht damit Seite an Seite mit Mengzi und Rousseau, über alle Traditionsgrenzen hinweg."
+      }
+    },
+    {
+      "id": "locke",
+      "name": "John Locke",
+      "lifespan": "1632–1704",
+      "firstLevel": 2,
+      "schoolId": "aufklaerungs-anthropologie",
+      "x": 44,
+      "y": 14,
+      "graphX": -280,
+      "graphY": 60,
+      "versions": {
+        "2": "Locke verschiebt die Frage von der Anlage auf die Prägung: Der Geist des Neugeborenen ist eine [[tabula rasa:'unbeschriebene Tafel' — Lockes Bild für den Geist bei der Geburt, leer von eingeborenen Ideen und Charakterzügen]], eine unbeschriebene Tafel, auf die Erfahrung und Erziehung erst schreiben. Es gibt keine eingeborenen Prinzipien, weder gute noch böse — was der Mensch wird, macht die Erziehung. 'Von zehn Menschen sind neun das, was sie sind, gut oder böse, nützlich oder nicht, durch ihre Erziehung.' Damit ist die Frage 'gut oder böse von Natur' für Locke fast falsch gestellt: Die Natur gibt kein Vorzeichen, die Bildung gibt es.",
+        "4": "Locke besetzt im Tableau den unteren Mittelbereich — und ist die reinste Verkörperung der Formbarkeits-Achse, fast ohne Festlegung auf gut oder böse. Seine Position ist die radikalste Antwort auf die Y-Achse des Tableaus: Wenn die Tafel leer ist, dann ist die ganze waagerechte Frage (gut oder böse von Natur) zweitrangig geworden, weil die Natur kein Vorzeichen mehr setzt. Damit ist Locke das Gelenk zwischen den Anlage-Denkern und denen, die das Böse ganz in die Verhältnisse verlegen (Rousseau) oder in die Situation (Milgram). Pädagogisch ist Locke der Optimist par excellence — nicht weil der Mensch gut ist, sondern weil er machbar ist. Seine Nähe zu Pelagius und Xunzi liegt nicht im Menschenbild, sondern im Vertrauen auf die Formung: Drei Denker, drei Traditionen, eine geteilte Überzeugung, dass Erziehung über die Natur siegt."
+      }
+    },
+    {
+      "id": "kant",
+      "name": "Immanuel Kant",
+      "lifespan": "1724–1804",
+      "firstLevel": 3,
+      "schoolId": "aufklaerungs-anthropologie",
+      "x": 60,
+      "y": 50,
+      "graphX": -100,
+      "graphY": 150,
+      "versions": {
+        "3": "Kant findet die schwierigste, ehrlichste Position des Feldes. Er spricht von einem [[radikalen Bösen:Kants Begriff für den eingewurzelten Hang des Menschen, das Sittengesetz dem Eigeninteresse unterzuordnen — 'radikal', weil er an der Wurzel der Willensbildung sitzt]] — einem eingewurzelten Hang, das Eigeninteresse über die Pflicht zu stellen. Und doch: 'Aus so krummem Holze, als woraus der Mensch gemacht ist, kann nichts ganz Gerades gezimmert werden.' Aber dieser Hang ist nicht das letzte Wort, denn der Mensch ist frei — und Freiheit heißt, dass er für seinen Hang verantwortlich ist und gegen ihn handeln kann. Der Mensch ist weder gut noch böse von Natur, sondern fähig zu beidem und verpflichtet zum Guten.",
+        "5": "Kant sitzt im Tableau bewusst in der Mitte — und das ist keine Unentschiedenheit, sondern seine systematische Pointe. Er verweigert die Frage in ihrer einfachen Form: 'Gut oder böse von Natur' setzt voraus, dass die Natur entscheidet. Für Kant entscheidet aber die Freiheit, und Freiheit lässt sich nicht auf der Anlage-Achse verorten. Der Hang zum Bösen ist real (das trennt ihn von Rousseau und Pelagius), aber er ist nie Verhängnis (das trennt ihn von Augustinus und Hobbes). Das 'krumme Holz' ist krumm und bleibt es — und gerade deshalb ist die sittliche Aufgabe unendlich. Kant ist damit das vielleicht erwachsenste Wort des Feldes: Er nimmt die düstere Diagnose ernst, ohne in Fatalismus zu fallen, und das Vertrauen in die Besserung, ohne in Schwärmerei zu fallen. Seine Mittelstellung kommentiert die ganze waagerechte Achse: Vielleicht ist nicht die Anlage die Frage, sondern was wir mit ihr anfangen."
+      }
+    },
+    {
+      "id": "arendt",
+      "name": "Hannah Arendt",
+      "lifespan": "1906–1975",
+      "firstLevel": 4,
+      "schoolId": "sozialpsychologie",
+      "x": 54,
+      "y": 30,
+      "graphX": -90,
+      "graphY": 250,
+      "versions": {
+        "4": "Arendt verschiebt mit einer einzigen Beobachtung die ganze Frage. Beim Prozess gegen Eichmann erwartete sie ein Monster und fand einen Bürokraten — und prägte den Begriff der [[Banalität des Bösen:Arendts These, dass die größten Verbrechen nicht von Sadisten begangen werden, sondern von gewöhnlichen Menschen, die aufhören zu denken]]. Das größte Böse, sagt sie, wird nicht von Dämonen getan, sondern von gewöhnlichen Menschen, die aufgehört haben zu denken — die Befehle ausführen, Formulare abzeichnen, sich nicht vorstellen, was ihr Tun für andere bedeutet. Das Böse ist hier nicht tief, sondern flach: kein verdorbenes Herz, sondern eine ausgefallene Urteilskraft.",
+        "5": "Arendt steht im Tableau quer zu beiden Achsen — und das mit Absicht. Ihre These über die Banalität des Bösen lässt sich nicht auf 'gut oder böse von Natur' abbilden, weil sie genau diese Frage für falsch gestellt hält. Das Böse Eichmanns kommt weder aus einer bösen Anlage noch aus verdorbenen Verhältnissen, sondern aus einem Aussetzen des Denkens — einer Leerstelle dort, wo Urteil sein sollte. Damit ist Arendt die philosophische Schwester der Sozialpsychologie (Milgram, der zur selben Zeit dasselbe im Labor fand): Nicht wer der Mensch ist, entscheidet, sondern ob er in der konkreten Lage noch denkt und urteilt. Hier ist die kuratorische Grenze wichtig: Arendt sitzt in diesem Tableau nur als Denkerin der Natur des Bösen, nicht als Totalitarismus-Theoretikerin — ihre Analyse der Herrschaftsformen gehört in die Politische Philosophie, nicht hierher. Was bleibt, ist die beunruhigendste Antwort des Feldes: Vielleicht ist das Böse keine Eigenschaft, sondern ein Versäumnis, zu dem jeder fähig ist."
+      }
+    },
+    {
+      "id": "tomasello",
+      "name": "Michael Tomasello",
+      "lifespan": "*1950",
+      "firstLevel": 4,
+      "schoolId": "evolutionaere-anthropologie",
+      "x": 32,
+      "y": 44,
+      "graphX": 280,
+      "graphY": 150,
+      "versions": {
+        "4": "Tomasello bringt das Labor in die uralte Frage. Seine Experimente mit Kleinkindern und Menschenaffen zeigen: Schon Einjährige helfen spontan, ohne Belohnung, ohne Aufforderung — sie heben einen heruntergefallenen Gegenstand auf, öffnen eine Tür für einen Erwachsenen mit vollen Händen. Diese [[natürliche Kooperation:Tomasellos Befund, dass Hilfsbereitschaft und geteilte Aufmerksamkeit beim Menschen entwicklungspsychologisch früh und kulturübergreifend auftreten]] ist beim Menschen früher und stärker ausgeprägt als bei allen anderen Primaten. Der Mensch ist, so Tomasello, das kooperative Tier — nicht aus erlernter Moral, sondern aus einer evolutionär gewachsenen Anlage, gemeinsam zu handeln und Absichten zu teilen.",
+        "5": "Tomasello besetzt im Tableau den Pol links unten — gute (kooperative) Anlage, aber kulturell formbar — und gibt der alten Mengzi-Rousseau-Intuition zum ersten Mal eine empirische Grundlage. Wo Mengzi das straucheln­de Kind als Gedankenexperiment beschrieb, zeigt Tomasello das helfende Kleinkind im kontrollierten Versuch. Aber seine Position ist differenzierter als bloßer Optimismus: Die kooperative Anlage ist real, doch sie ist gruppengebunden — derselbe Mechanismus, der Hilfe ermöglicht, erzeugt auch das Misstrauen gegen Fremde. Der Mensch ist gut zu den Seinen und potenziell gefährlich gegenüber den Anderen. Damit steht Tomasello zugleich Rousseau nahe (die Anlage ist gut) und Hobbes (zwischen Gruppen herrscht Furcht) — und löst den alten Streit nicht auf, sondern zeigt, warum beide Seiten Belege hatten."
+      }
+    },
+    {
+      "id": "bregman",
+      "name": "Rutger Bregman",
+      "lifespan": "*1988",
+      "firstLevel": 5,
+      "schoolId": "evolutionaere-anthropologie",
+      "x": 22,
+      "y": 40,
+      "graphX": 320,
+      "graphY": 210,
+      "versions": {
+        "5": "Bregman, Historiker und Publizist, sammelt in 'Im Grunde gut' die Gegenbelege zur pessimistischen Tradition und stellt eine provozierende These auf: Die meisten Menschen sind im Kern anständig, und unser Glaube an die böse Natur ist selbst ein Schaden, der sich verstärkt. Er zeigt, dass berühmte Belege für die menschliche Bosheit brüchig sind — die reale Geschichte gestrandeter Jugendlicher endete anders als 'Herr der Fliegen', und an der Echtheit des Stanford-Prison-Experiments sind erhebliche Zweifel laut geworden. Bregman ist im Tableau die jüngste Stimme und bewusst als populäre, streitbare Position gesetzt: Er bündelt die kooperationsoptimistische Forschung zu einer Weltanschauung. Seine Schwäche ist seine Stärke — er argumentiert nicht neutral, sondern als Anwalt einer These, und macht damit sichtbar, dass die Frage 'ist der Mensch gut?' nie nur empirisch ist, sondern immer auch eine Entscheidung darüber, was man im Anderen sehen will. Damit schließt sich der Bogen zum Intro des Tableaus: Was du über die Natur des Menschen glaubst, formt, wie du ihm begegnest — und damit ein Stück weit, was aus ihm wird."
+      }
+    }
+  ],
+  "concepts": [
+    {
+      "id": "vier-anfaenge",
+      "name": "Die vier Anfänge",
+      "type": "axiom",
+      "primaryThinker": "mengzi",
+      "firstLevel": 1,
+      "x": 14,
+      "y": 76,
+      "versions": {
+        "1": "Mengzis Kernbegriff: Im Menschen sind vier 'Keime' angelegt — das Mitgefühl (Wurzel der Menschlichkeit), die Scham (Wurzel der Gerechtigkeit), die Bescheidenheit (Wurzel des Anstands) und der Sinn für richtig und falsch (Wurzel der Weisheit). Sie sind nicht die fertigen Tugenden, sondern ihre Anfänge — wie ein Same noch kein Baum ist. Das Böse entsteht, wo diese Keime verkümmern.",
+        "3": "Die vier Anfänge sind die präziseste Formulierung einer 'gut, aber formbar'-Position im ganzen Feld. Sie behaupten weder, der Mensch sei fertig gut (das wäre naiv), noch er sei eine leere Tafel (das wäre Locke). Die Anlage ist gerichtet — auf das Gute hin —, aber sie braucht Pflege, um sich zu erfüllen. Dieser mittlere Weg ist der Grund, warum Mengzi nicht oben im Festlegungs-Quadranten sitzt: Güte ist Veranlagung plus Kultivierung, nicht Schicksal."
+      }
+    },
+    {
+      "id": "naturzustand-anthropologie",
+      "name": "Der Naturzustand als Spiegel",
+      "type": "method",
+      "primaryThinker": "hobbes",
+      "firstLevel": 2,
+      "x": 64,
+      "y": 62,
+      "versions": {
+        "2": "Der Naturzustand ist kein historischer Ort, sondern ein Gedankenexperiment: Wie wäre der Mensch ohne Staat, ohne Erziehung, ohne Gesellschaft? Die Antwort verrät mehr über den Denker als über die Urzeit. Hobbes sieht Krieg, Rousseau sieht Unschuld, Locke sieht einen Zustand mit Rechten. Derselbe gedankliche Trick — den Menschen 'nackt' denken — bringt entgegengesetzte Menschenbilder hervor.",
+        "4": "Der Naturzustand ist im Tableau das methodische Scharnier, an dem die waagerechte Achse sichtbar wird. Was ein Denker in den hypothetischen Urmenschen hineinsieht, ist genau seine Antwort auf die Frage 'gut oder böse von Natur'. Die Konstruktion ist deshalb verdächtig: Sie enthält das Ergebnis schon im Ansatz. Wer den Naturmenschen friedlich denkt, wird eine gute Anlage 'finden'; wer ihn furchtsam denkt, eine gefährliche. Genau hier setzen Tomasello und die Empirie an — sie ersetzen das Gedankenexperiment durch Beobachtung und zeigen, dass beide Lager selektiv gesehen haben."
+      }
+    },
+    {
+      "id": "krummes-holz",
+      "name": "Krummes Holz",
+      "type": "concept",
+      "primaryThinker": "kant",
+      "firstLevel": 3,
+      "x": 58,
+      "y": 56,
+      "versions": {
+        "3": "Kants Bild für die menschliche Natur: 'Aus so krummem Holze, als woraus der Mensch gemacht ist, kann nichts ganz Gerades gezimmert werden.' Der Mensch ist nicht gerade zu biegen wie ein Brett — der Hang zum Eigeninteresse bleibt. Aber das Bild ist nicht fatalistisch: Aus krummem Holz lässt sich bauen, nur nichts Vollkommenes. Die sittliche Aufgabe bleibt, gerade weil sie nie ganz gelingt."
+      }
+    },
+    {
+      "id": "banalitaet-des-boesen",
+      "name": "Banalität des Bösen",
+      "type": "phenomenon",
+      "primaryThinker": "arendt",
+      "firstLevel": 4,
+      "x": 50,
+      "y": 30,
+      "versions": {
+        "4": "Arendts berühmteste und meistmissverstandene Formel. Sie behauptet nicht, das Böse sei harmlos, sondern dass seine Täter es oft sind: gewöhnliche Menschen ohne dämonische Motive, die durch Gedankenlosigkeit und Gehorsam zu Mittätern werden. Das Böse braucht keine bösen Menschen — es braucht nur genug, die aufhören zu fragen, was sie tun. Damit löst der Begriff das Böse von der Anlage und bindet es an eine Tätigkeit, die jeder unterlassen kann: das Denken.",
+        "5": "Die Banalität des Bösen ist im Tableau der Begriff, der die Frage selbst umstellt. Solange man fragt 'ist der Mensch gut oder böse?', sucht man eine Eigenschaft. Arendt antwortet: Sucht keine Eigenschaft, sucht eine Praxis. Das Böse ist kein Zustand der Natur, sondern ein Ausfall des Urteils — und genau deshalb gefährlicher, als jede Anlage-Theorie zugibt, weil es keine besonderen Menschen voraussetzt. Der Begriff bildet mit Milgrams Experiment ein Paar: Was Arendt am Schreibtisch des Gerichts dachte, hat Milgram im Labor gemessen."
+      }
+    },
+    {
+      "id": "milgram-zimbardo",
+      "name": "Gehorsam und Situation (Milgram / Zimbardo)",
+      "type": "phenomenon",
+      "primaryThinker": "arendt",
+      "firstLevel": 4,
+      "x": 46,
+      "y": 22,
+      "schoolId": "sozialpsychologie",
+      "versions": {
+        "4": "Die berühmtesten Experimente der Sozialpsychologie scheinen die düstere These zu bestätigen — und tun es doch anders, als man denkt. In Milgrams Versuch verabreichten gewöhnliche Versuchspersonen auf Anweisung einer Autorität scheinbar gefährliche Stromstöße. Zimbardos Gefängnis-Experiment ließ Studenten in Wärter- und Häftlingsrollen eskalieren. Die naheliegende Lesart: In jedem steckt ein Täter. Die genauere Lesart: Nicht die Anlage, sondern die Situation, die Autorität und die Rolle erzeugen das Verhalten. Das Böse ist kein Charakterzug, sondern eine Funktion der Umstände.",
+        "5": "Dieses Knoten-Paar steht im Tableau bewusst ganz unten, quer zur waagerechten Achse — es bestreitet, dass 'gut oder böse von Natur' überhaupt die richtige Frage ist. Wenn die Situation entscheidet, ist die Anlage zweitrangig. Doch die Forschung selbst ist Teil des Streits geworden: Zimbardos Experiment gilt heute als methodisch schwer beschädigt (die Wärter wurden teils instruiert), und auch Milgrams Zahlen sind umstritten. Diese Brüchigkeit ist kein Makel des Tableaus, sondern seine ehrlichste Stelle: Selbst die scheinbar härtesten empirischen Belege über die Natur des Menschen sind umkämpft — Bregman macht genau daraus seine Gegenthese. Wer hier steht, sieht: Die Frage nach Gut und Böse lässt sich nicht ins Labor auslagern, weil schon die Wahl des Experiments eine Antwort enthält."
+      }
+    },
+    {
+      "id": "tabula-rasa",
+      "name": "Tabula rasa",
+      "type": "concept",
+      "primaryThinker": "locke",
+      "firstLevel": 2,
+      "x": 40,
+      "y": 10,
+      "versions": {
+        "2": "Lockes Bild vom Geist bei der Geburt: eine unbeschriebene Tafel. Keine eingeborenen Ideen, kein angelegter Charakter, kein moralisches Vorzeichen — alles, was der Mensch wird, schreibt die Erfahrung. Das Bild ist der Gründungsmythos der Erziehungs-Optimisten: Wenn nichts vorgegeben ist, kann alles gebildet werden.",
+        "4": "Die tabula rasa ist im Tableau die reinste Setzung auf die Formbarkeits-Achse — und zugleich ihre angreifbarste. Sie macht Erziehung allmächtig, aber um den Preis, jede Anlage zu leugnen, was die moderne Entwicklungspsychologie (Tomasello) nicht mehr mitträgt: Kleinkinder sind eben nicht leer, sie kommen mit kooperativen Tendenzen zur Welt. Die tabula rasa bleibt dennoch ein Eckpunkt, weil sie die Frage radikal verschiebt: Nicht 'wie ist die Natur?', sondern 'was machen wir aus dem, was die Natur offen lässt?'"
+      }
+    },
+    {
+      "id": "natuerliche-kooperation",
+      "name": "Natürliche Kooperation",
+      "type": "theory",
+      "primaryThinker": "tomasello",
+      "firstLevel": 4,
+      "x": 28,
+      "y": 48,
+      "versions": {
+        "4": "Tomasellos zentraler Befund: Hilfsbereitschaft und das Teilen von Aufmerksamkeit und Absicht sind beim Menschen entwicklungspsychologisch früh und kulturübergreifend angelegt. Schon bevor Erziehung greift, helfen Kinder spontan. Kooperation ist damit keine kulturelle Errungenschaft gegen die Natur (wie bei Xunzi), sondern Teil der Natur selbst — der Mensch ist das Tier, das von Grund auf gemeinsam handelt.",
+        "5": "Die natürliche Kooperation ist im Tableau die empirische Wende der ältesten Frage. Sie gibt dem 'gut von Natur'-Pol erstmals Daten statt Intuition — aber sie schärft ihn auch: Die Anlage ist nicht grenzenlos gut, sondern gruppengebunden. Derselbe Mechanismus, der Solidarität nach innen schafft, schafft Misstrauen nach außen. Damit erklärt der Begriff, warum Optimisten und Pessimisten beide Belege fanden: Sie sahen denselben Menschen, einmal unter Seinesgleichen, einmal gegenüber Fremden. Die Kooperation ist echt — und genau deshalb auch die Quelle des Konflikts."
+      }
+    },
+    {
+      "id": "erbsuende",
+      "name": "Erbsünde",
+      "type": "axiom",
+      "primaryThinker": "augustinus",
+      "firstLevel": 2,
+      "x": 84,
+      "y": 82,
+      "versions": {
+        "2": "Die Lehre, dass die Verkehrtheit des menschlichen Willens nicht je neu erworben, sondern seit dem Sündenfall weitergegeben wird — jeder Mensch kommt schon mit einer beschädigten Natur zur Welt. Sie ist die radikalste Festlegung des Tableaus: Das Böse ist nicht Tat, sondern Erbe, und keine eigene Anstrengung kann es aufheben. Wichtig für die anthropologische Lesart: Hier interessiert nur die These über die Natur, nicht die theologische Antwort darauf.",
+        "4": "Die Erbsünde ist im Tableau der äußerste Pol der Y-Achse — fester als jede andere Position, weil die Festlegung nicht nur gegeben, sondern vererbt und unaufhebbar ist. Ihre kuratorische Pointe: Sie macht die waagerechte Frage (gut oder böse) zur senkrechten (fest oder formbar). Denn wer das Böse für ererbt hält, hat die Formbarkeit von vornherein verneint. Genau hier setzte Pelagius an — und verlor. Dass die unfreieste Anthropologie zur Orthodoxie wurde und die freieste zur Häresie, ist die folgenreichste Weichenstellung des abendländischen Menschenbildes."
+      }
+    },
+    {
+      "id": "kultivierung",
+      "name": "Kultivierung (Formung gegen die Natur)",
+      "type": "method",
+      "primaryThinker": "xunzi",
+      "firstLevel": 3,
+      "x": 50,
+      "y": 24,
+      "versions": {
+        "3": "Der Gedanke, dass der Mensch nicht ist, was er von Natur mitbringt, sondern was Übung, Erziehung und Form aus ihm machen. Bei Xunzi heißt das [[wei:bewusste Tätigkeit — das durch Riten und Übung Erworbene, im Gegensatz zur rohen Naturanlage]]: Tugend ist Werk, nicht Wuchs. Bei Locke ist es Erziehung auf die leere Tafel, bei Pelagius die freie Übung zum Guten. Drei Traditionen, ein Verfahren — die Natur ist Rohstoff, nicht Schicksal.",
+        "5": "Die Kultivierung ist im Tableau der Begriff, der die ganze untere Hälfte zusammenhält und die eigentliche zweite Dimension des Feldes sichtbar macht. Sie zeigt, dass die Formbarkeits-Frage unabhängig von der Anlage-Frage ist: Man kann die Natur für schlecht halten (Xunzi), für leer (Locke) oder für gut (Pelagius) — und doch dieselbe Überzeugung teilen, dass Formung über Geburt siegt. Damit ist die Kultivierung der direkte Gegenbegriff zur Erbsünde: Wo die eine das Böse für unaufhebbar erklärt, erklärt die andere die Natur für überwindbar. Zwischen diesen beiden Polen spannt sich die senkrechte Achse — und an ihr, nicht an 'gut gegen böse', verläuft die tiefste Spaltung des Feldes."
+      }
+    },
+    {
+      "id": "imago-dei",
+      "name": "Imago Dei (Ebenbild Gottes)",
+      "type": "axiom",
+      "primaryThinker": "augustinus",
+      "firstLevel": 3,
+      "x": 24,
+      "y": 80,
+      "versions": {
+        "3": "Die ältere und grundlegendere Aussage der christlichen Anthropologie, lange vor der Erbsünde: Der Mensch ist [[als Ebenbild Gottes:imago Dei — die Lehre aus Genesis 1,27, dass der Mensch nach dem Bild Gottes geschaffen ist und darin eine unverlierbare Würde trägt]] geschaffen. Daraus folgt eine ursprüngliche Güte und Würde, die keinem Menschen genommen werden kann — nicht erworben, nicht verdient, sondern mit der Schöpfung gegeben. In diesem Tableau zählt allein die anthropologische These: Die Anlage des Menschen ist gut, weil sie göttlichen Ursprungs ist. Das ist keine Häresie wie bei Pelagius, sondern kirchliche Mehrheitslehre — und genau deshalb die wichtigste Gegenstimme zur Erbsünde innerhalb derselben Tradition.",
+        "5": "Die Imago Dei ist im Tableau der Knoten, der zeigt, dass 'christlich' nicht gleich 'verdorbene Natur' heißt. Die orthodoxe Tradition hält beides zugleich: Der Mensch ist Ebenbild Gottes (gut angelegt) und gefallen (beschädigt) — die Erbsünde verdunkelt die imago Dei, löscht sie aber nicht. Damit ist der Streit Augustinus–Pelagius in Wahrheit kein Streit, ob der Mensch gut oder schlecht ist, sondern welche der beiden gleichzeitig wahren Aussagen das letzte Wort behält: die geschenkte Würde oder die ererbte Beschädigung. Augustinus selbst leugnet die Ebenbildlichkeit nicht — er sagt nur, sie sei aus eigener Kraft nicht mehr zu klären. Die Imago Dei besetzt den Pol oben links (gute Anlage, fest): gut, weil göttlichen Ursprungs; fest, weil geschenkt und nicht durch Erziehung gemacht. Sie ist damit die spiegelbildliche Antwort auf die Erbsünde am selben senkrechten Pol — zwei feste Anlagen, entgegengesetzt im Vorzeichen, beide aus derselben Quelle."
+      }
+    }
+  ],
+  "influences": [
+    {
+      "from": "mengzi",
+      "to": "xunzi",
+      "type": "critique",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Der grundlegende Streit des Tableaus, innerhalb einer Tradition. Xunzi widerspricht Mengzi frontal: Was Mengzi für angelegte Keime der Güte hält, ist für Xunzi Wunschdenken — von Natur folgt der Mensch dem Begehren, und nur Erziehung macht ihn gut. Beide sind Konfuzianer, beide wollen Tugend; sie streiten nicht über das Ziel, sondern über den Ausgangspunkt. Damit ist ihr Disput die reinste Form der waagerechten Achse: gleiche Tradition, entgegengesetzte Diagnose der Anlage."
+      }
+    },
+    {
+      "from": "augustinus",
+      "to": "pelagius",
+      "type": "rejection",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Der folgenreichste anthropologische Streit des Abendlandes. Augustinus behauptet die ererbte Beschädigung der Natur, Pelagius bestreitet sie: Jeder Mensch sei so frei und unbeschädigt geboren wie Adam vor dem Fall. Augustinus setzte sich durch — Pelagius wurde als Häretiker verurteilt —, aber die Frage blieb offen und kehrt in jeder Generation zurück. Im Tableau spannen die beiden die waagerechte Achse auf der theologischen Ebene auf: verkehrte Natur gegen freie Natur, fast genau parallel zum Streit Hobbes–Rousseau auf der weltlichen."
+      }
+    },
+    {
+      "from": "hobbes",
+      "to": "rousseau",
+      "type": "critique",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Die berühmteste Gegenüberstellung der Neuzeit, hier rein anthropologisch gelesen. Wo Hobbes den Naturmenschen als furchtsamen Krieger sieht, sieht Rousseau ihn als unschuldig und mitfühlend. Beide benutzen dasselbe Werkzeug — den gedachten Naturzustand —, aber sie füllen ihn entgegengesetzt. Die Differenz ist nicht empirisch (keiner war dabei), sondern eine Grundentscheidung darüber, was man im Menschen vermutet, wenn man ihn sich allein denkt."
+      }
+    },
+    {
+      "from": "rousseau",
+      "to": "mengzi",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Über zwei Jahrtausende und zwei Kulturen hinweg dieselbe Grundintuition: Der Mensch ist von Natur gut, das Böse kommt von außen. Mengzi macht die verkümmerten Keime verantwortlich, Rousseau die verderbende Gesellschaft — aber beide verteidigen die ursprüngliche Anlage gegen den Verdacht, sie sei schlecht. Die Parallele zeigt, dass die optimistische Anthropologie keine westliche Erfindung der Aufklärung ist, sondern eine wiederkehrende menschliche Möglichkeit."
+      }
+    },
+    {
+      "from": "pelagius",
+      "to": "locke",
+      "type": "influence",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Eine unterirdische Verbindung über die Konfessionsgrenze hinweg. Pelagius' These, der Mensch sei frei zum Guten und durch Übung formbar, kehrt bei Locke in säkularer Form wieder: nicht Gnade, sondern Erziehung macht den Menschen. Beide trauen dem Menschen die Selbstformung zu, beide verlegen das Böse von der Anlage in die Gewohnheit. Was bei Pelagius Häresie war, wird bei Locke pädagogische Selbstverständlichkeit."
+      }
+    },
+    {
+      "from": "xunzi",
+      "to": "locke",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Eine überraschende Allianz quer durch die waagerechte Achse. Xunzi hält die Natur für schlecht, Locke für leer — entgegengesetzte Diagnosen. Und doch teilen sie die entscheidende Überzeugung der Y-Achse: Was der Mensch wird, macht die Formung, nicht die Geburt. Bei Xunzi sind es Riten und Lehrer, bei Locke Erfahrung und Erziehung. Die Parallele zeigt, dass die Formbarkeits-These unabhängig davon ist, ob man die Anlage gut, schlecht oder leer nennt — sie ist die eigentliche zweite Dimension des Feldes."
+      }
+    },
+    {
+      "from": "kant",
+      "to": "augustinus",
+      "type": "critique",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Kant erbt von Augustinus die Ernsthaftigkeit gegenüber dem Bösen — das radikale Böse ist nicht weit von der verkehrten Natur entfernt —, aber er bricht an der entscheidenden Stelle: Wo Augustinus die Beschädigung für ererbt und aus eigener Kraft unaufhebbar hält, besteht Kant auf der Freiheit. Der Hang ist real, aber er ist zugerechnet, nicht vererbt; und weil er der Freiheit entspringt, kann ihm die Freiheit auch widerstehen. Kant rettet die düstere Diagnose vor dem Fatalismus, indem er sie an die Verantwortung bindet."
+      }
+    },
+    {
+      "from": "kant",
+      "to": "rousseau",
+      "type": "critique",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Kant verehrte Rousseau — und widersprach ihm doch im Kern. Er übernimmt von Rousseau die Würde des Menschen, aber er kann ihm die natürliche Güte nicht abnehmen: Der Hang zum Bösen ist zu offensichtlich, um ihn nur den Verhältnissen anzulasten. Kants Mittelposition ist die direkte Antwort auf Rousseaus Optimismus — nicht gut von Natur, sondern frei und damit für das eigene Böse verantwortlich. Die Verhältnisse entschuldigen nicht."
+      }
+    },
+    {
+      "from": "arendt",
+      "to": "milgram-zimbardo",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Philosophie und Labor finden zur selben Zeit dasselbe. Arendt beobachtet im Gerichtssaal von Jerusalem den gedankenlosen Schreibtischtäter; Milgram misst im Labor von Yale, wie weit gewöhnliche Menschen auf Anweisung gehen. Beide lösen das Böse von der Anlage und binden es an Gehorsam, Rolle und das Aussetzen des eigenen Urteils. Die Konvergenz zweier so verschiedener Methoden — Zeugin im Prozess, Experimentator im Versuch — macht die situationistische These zur stärksten Herausforderung jeder Anlage-Theorie."
+      }
+    },
+    {
+      "from": "tomasello",
+      "to": "rousseau",
+      "type": "influence",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Tomasello gibt Rousseaus Intuition zum ersten Mal ein empirisches Fundament — und korrigiert sie zugleich. Das helfende Kleinkind bestätigt, dass eine wohlwollende Anlage da ist, früher als jede Erziehung. Aber Tomasellos Befund ist nüchterner: Die Anlage ist gruppengebunden, nicht universell. Rousseaus reiner Naturmensch wird damit zur halben Wahrheit — gut zu den Seinen, misstrauisch gegen Fremde. Die Empirie rettet den Optimismus und beschneidet ihn im selben Atemzug."
+      }
+    },
+    {
+      "from": "tomasello",
+      "to": "hobbes",
+      "type": "critique",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Tomasello widerlegt Hobbes' Ausgangspunkt mit Daten — und gibt ihm zugleich teilweise recht. Der Mensch beginnt nicht im Krieg aller gegen alle: Kooperation ist die frühere, tiefere Anlage. Aber dieselbe Forschung zeigt, dass die Kooperation an der Gruppengrenze endet, und dort kehrt etwas von Hobbes' Furcht zurück. So entscheidet das Labor den alten Streit nicht zugunsten einer Seite, sondern zeigt, dass Hobbes und Rousseau verschiedene Ausschnitte desselben Tieres beschrieben."
+      }
+    },
+    {
+      "from": "bregman",
+      "to": "milgram-zimbardo",
+      "type": "critique",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Bregman macht aus den Zweifeln an den berühmten Experimenten ein Programm. Wenn Zimbardos Wärter teils instruiert waren und Milgrams Zahlen geschönt, dann ruht ein Großteil unseres Glaubens an die böse Natur auf brüchigem Grund. Bregman dreht die Beweislast um: Nicht die Güte muss sich rechtfertigen, sondern der Pessimismus. Seine Kritik ist selbst streitbar — er wählt seine Belege so selektiv wie die Gegenseite —, aber sie legt die entscheidende Pointe des Tableaus frei: Was wir über die Natur des Menschen zu wissen glauben, hängt davon ab, welchen Experimenten wir glauben wollen."
+      }
+    },
+    {
+      "from": "imago-dei",
+      "to": "erbsuende",
+      "type": "critique",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Die beiden Hälften der christlichen Anthropologie, am selben senkrechten Pol und doch entgegengesetzt. Die Imago Dei sagt: Der Mensch ist als Ebenbild Gottes gut angelegt. Die Erbsünde sagt: Diese Anlage ist gefallen und verdunkelt. Die orthodoxe Tradition behauptet beides zugleich — der Mensch ist geschenkte Würde und ererbte Beschädigung in einem. Was wie Widerspruch aussieht, ist die Spannung, die das christliche Menschenbild über Jahrhunderte trägt: nicht 'gut oder böse', sondern 'gut geschaffen und doch beschädigt'. Der Streit Augustinus–Pelagius dreht sich nicht um das Ob, sondern um das Welche-zuerst."
+      }
+    }
+  ]
+}

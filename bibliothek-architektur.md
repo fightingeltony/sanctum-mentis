@@ -107,6 +107,8 @@ Akzentfarben werden ab 23.5.26 nicht mehr pro Tableau einzeln vergeben, sondern 
 
 **Update 30.5.26 (Wandlung):** Vierte Spur eröffnet. Wandlung (hue 152, erdig-grün) belegt das frühere Reserve-Band (110–160°). Abstand zu Handlung (oliv 100–128°): 24° — beim Live-Klick prüfen; ggf. auf ~158° ausweichen. Library-Sichtbarkeits-Bedingung (alle Spuren ≥2 Tableaus) wieder gebrochen — explizite Section-Header warten bis Wandlung-Spur ein zweites Tableau hat.
 
+**Update 31.5.26 (Gut und Böse):** Drittes Handlungs-Tableau eingebunden. Gut/Böse (hue 114) sitzt mittig im Handlungs-Band (Ethik 100 · Gut/Böse 114 · Politik 128), je ~14° Abstand — am Live-Bild prüfen ob ausreichend. Sonderstellung: deskriptiver Sockel der Handlungs-Spur (nicht normativ). Handlungs-Spur jetzt mit drei Tableaus — breiteste Handlungs-Gruppe der Sammlung.
+
 | Spur | Hue-Band | Symbolik (provisorisch) |
 |---|---|---|
 | Erkenntnis-Trias | 165°–295° (grün bis blau-violett) | Erkenntnis als distanzierende Operation |
@@ -129,7 +131,8 @@ Existenzialismus         oklch(0.42 0.10  45)   Existenz-Spur
 Lebenskunst              oklch(0.44 0.11  65)   Existenz-Spur
 Politische Philosophie   oklch(0.44 0.12 128)   Handlungs-Spur
 Ethik                    oklch(0.45 0.12 100)   Handlungs-Spur
-Wandlung                 oklch(0.43 0.11 152)   Wandlung-Spur      ← NEU (4. Spur)
+Gut und Böse             oklch(0.43 0.11 114)   Handlungs-Spur     ← NEU
+Wandlung                 oklch(0.43 0.11 152)   Wandlung-Spur
 ```
 
 **Verhältnis zu „Library-Architektur sichtbar machen":** Die Farb-Architektur ist *implizite* Spur-Sichtbarmachung. Explizite Sichtbarmachung (Trennstriche, Header, zwei Reihen) bleibt eigenes Backlog-Item, ausgelöst sobald JEDE Spur ≥2 live-Tableaus hat (Wandlung hat derzeit 1).
