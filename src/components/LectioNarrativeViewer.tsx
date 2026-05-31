@@ -427,7 +427,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         .station::-webkit-scrollbar { width: 0; height: 0; }
         .station.active { opacity: 1; visibility: visible; }
         .station-inner {
-          margin: auto; width: 100%;
+          margin: 0 auto; width: 100%;
           padding: 92px 32px 150px; text-align: center;
           display: flex; flex-direction: column; align-items: center;
         }
@@ -600,7 +600,9 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         }
         @media (max-width: 640px) {
           .niche { width: 104px; height: 132px; border-radius: 52px 52px 6px 6px; }
-          .station-inner { padding: 82px 22px 148px; }
+          .station-inner { padding: 110px 22px 160px; }
+          .brand { top: 18px; left: 18px; }
+          .lc-counter { top: 18px; right: 18px; }
         }
       `}</style>
     </>
