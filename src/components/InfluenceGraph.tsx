@@ -26,7 +26,7 @@ function manualLayout(thinkers: Thinker[], schools: School[]): {
   const positions: Record<string, { x: number; y: number }> = {}
   for (const t of thinkers) {
     if (t.graphX === undefined || t.graphY === undefined) return null
-    positions[t.id] = { x: t.graphX, y: t.graphY }
+    positions[t.id] = { x: W / 2 + t.graphX, y: H / 2 + t.graphY }
   }
   const clusters = schools
     .filter(s => s.cluster)
