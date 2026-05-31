@@ -154,7 +154,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
       {/* Brand (oben links) */}
       <div className="brand" aria-hidden>
         <span className="glyph" />
-        Sanctum Mentis · Lectio
+        <span className="brand-text">Sanctum Mentis · Lectio</span>
       </div>
 
       {/* Counter (oben rechts) */}
@@ -389,8 +389,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
       </div>
 
       <style jsx>{`
-        /* ── Layout-Tokens — erben vom Shell-Theme ── */
-        :global(body) { overflow: hidden; }
+        /* Stage ist position:fixed — body braucht kein overflow:hidden */
 
         .grain {
           position: fixed; inset: 0; z-index: 0; pointer-events: none;
@@ -603,8 +602,9 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           .niche { width: 104px; height: 132px; border-radius: 52px 52px 6px 6px; }
           .station { top: 52px; }
           .station-inner { padding: 28px 22px 160px; }
-          .brand { top: 16px; left: 18px; }
-          .lc-counter { top: 16px; right: 18px; }
+          .brand { top: 16px; left: 16px; }
+          .brand-text { display: none; } /* nur Diamond-Glyph, kein Text */
+          .lc-counter { top: 16px; right: 16px; }
         }
       `}</style>
     </>
