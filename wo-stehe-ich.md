@@ -6,7 +6,7 @@
 
 ## Was live ist
 
-**Neun Tableaus** — alle auf Vercel, alle vollständig ausgebaut:
+**Zehn Tableaus** — alle auf Vercel, alle vollständig ausgebaut:
 
 - **Philosophie des Geistes** — Hard-Modus, 16 Denker. Das akademisch dichteste Tableau. Einstieg über Descartes historisch korrekt, aber möglicherweise kopflastig für Nicht-Akademiker.
 - **Die Landkarte des Selbst** — Mild-Modus, 15 Denker. Meditativer Ton, gut gelungen. Vedanta/Buddhismus als gleichwertige Stimmen.
@@ -17,22 +17,27 @@
 - **Lebenskunst** — Mild-Modus, 14 Denker. Existenz-Spur (hue 65). Vier Ecken klar besetzt (Epikur, Aristoteles, Stoa, Montaigne/Mill/Csíkszentmihályi). Erster systematischer Einsatz des `related_topics`-Musters.
 - **Begegnung** — Mild-Modus, 11 Denker. Existenz-Spur (hue 35). Buber als Haupt-Hub, Sartre als negativer Gegen-Hub. Reifstes Tableau der Serie (externe Prüfung: Koordinatentest auf Anhieb bestanden, keine Strukturfehler).
 - **Wandlung** — Mild-Modus, 11 Denker. Wandlung-Spur (hue 152, erdig-grün) — eröffnet die **vierte Sammlungs-Spur**. Freud/Rogers/Perls/Kabat-Zinn als Hubs. Achsen: Verstehen ↔ Erfahren / individuell ↔ relational.
+- **Gut und Böse** — Mild-Modus, 11 Denker. Menschenbild-Spur (hue 345, Magenta) — eröffnet die **fünfte Sammlungs-Spur**. Achsen: Menschenbild (gut ↔ böse von Natur) / Ebene (individuell-ontologisch ↔ sozial-situativ). Lectio `stell-die-frage-anders` (destruktiv-aufbauend, L3, 5 Stationen).
 
-**Elf Lectios** — geführte Pfade, alle live:
+**Dreizehn Lectios** — geführte Pfade, alle live:
 
 - `hard-problem` — Geist, narrativ-historisch, L2, 6 Stationen
-- `wer-beobachtet` — Selbst, konkurrierend-konfrontativ, L3, 4 Stationen
+- `wer-beobachtet` — Selbst, konkurrierend-konfrontativ, L3, 4 Stationen (expositorischer Ton)
 - `findest-du-oder-machst-du` — Selbst, dialektisch-revidierend, L3, 5 Stationen
 - `wenn-die-welt-wackelt` — Realismus, emotional-kumulativ, L2, 6 Stationen
 - `warum-sollst-du` — Ethik, destruktiv-aufbauend, L2, 4 Stationen
 - `wenn-nichts-vorgegeben` — Existenzialismus, narrativ-historisch, L2, 5 Stationen (Nietzsche → Kierkegaard → Sartre → Frankl → Camus)
 - `warum-gehorchst-du` — Politische Philosophie, L3, 5 Stationen
 - `ruhe-oder-rausch` — Lebenskunst, L2, 4 Stationen
-- `der-weg-des-menschen` — Begegnung, kontemplativ-vertiefend, L2, 4 Stationen — erste Ein-Werk-Lectio der Sammlung (drei Stationen durch denselben Buber-Knoten, je eine Stufe von „Der Weg des Menschen")
+- `der-weg-des-menschen` — Begegnung, kontemplativ-vertiefend, L2, 4 Stationen — erste Ein-Werk-Lectio (drei Stationen durch denselben Buber-Knoten via `step_brief`)
 - `ist-der-andere-hoelle-oder-heimat` — Begegnung, konkurrierend-konfrontativ, L3, 4 Stationen (Sartre → Hegel → Buber+Marcel → Lévinas)
-- `verstehen-oder-weitergehen` — Wandlung, narrativ-historisch, L3, 5 Stationen (Freud → van der Kolk → Adler → Rogers → Prochaska/DiClemente)
+- `verstehen-oder-weitergehen` — Wandlung, narrativ-historisch, L3, 5 Stationen (alle via step_brief)
+- `stell-die-frage-anders` — Gut/Böse, destruktiv-aufbauend, L3, 5 Stationen
+- `wer-bist-du-wenn-du-alles-weglaesst` — Selbst, konkurrierend-konfrontativ, L2, 4 Stationen — **erster Test des erzählend-erfahrenden Tons** (Vergleichsfall zu `wer-beobachtet`; eigene Render-Komponente `LectioNarrativeViewer`)
 
-**Lectio-Methode:** `prompts/lectio-mode.md` v1.9 — zehn Entscheidungen, vier kanonisierte Pfad-Typen. Ein fünfter, *kontemplativ-vertiefend*, ist mit Begegnung als Datenwert entstanden, aber bewusst noch nicht in die Methode aufgenommen (nur ein Fall — wartet auf einen zweiten, dann v1.10). Das Schema-Feld `step_brief` (pro-Station-Text) ermöglicht die Ein-Werk-Lectio.
+**Lectio-Methode:** `prompts/lectio-mode.md` v1.9 — zehn Entscheidungen, vier kanonisierte Pfad-Typen. Schema-Erweiterungen seit v1.9: `step_brief` (pro-Station-Text), `path_type` (Datenwert), `ton` (expositorisch / erzählend-erfahrend), `LectioNarrative`-Interface. *Kontemplativ-vertiefend* ist als Datenwert gesetzt (Begegnung), noch nicht in der Methode kanonisiert — wartet auf 2. Fall. *Erzählend-erfahrend* ist im Code vollständig gebaut, wartet auf Test-Bestätigung für v1.10.
+
+**Landing Page** hat ein lebendiges Tableau (HeroTableau-Komponente: animiert Das-Selbst-Konzepte Band für Band), eine Lectio-Sektion und erklärt den Unterschied zwischen Karte und Lectio.
 
 **Landing Page** hat eine Lectio-Sektion ("Zwei Wege durch jedes Thema") und erklärt den Unterschied zwischen Karte und Lectio ohne Versprechen.
 
@@ -41,7 +46,7 @@
 ## Was sich gut anfühlt
 
 - Die Erkenntnis-Trias ist geschlossen (Geist / Selbst / Realismus). Beide Handlungs-Tableaus stehen (Ethik + Politische Philosophie), und die Existenz-Spur ist mit drei Tableaus (Existenzialismus, Lebenskunst, Begegnung) die breiteste geworden.
-- Mit Wandlung ist die **vierte Sammlungs-Spur** eröffnet. Die Library-Sichtbarkeits-Bedingung (alle Spuren ≥2 Tableaus) ist damit wieder gebrochen — Wandlung trägt bisher nur ein Tableau. Die explizite Sichtbarkeitslösung (Section-Header / Trennstriche / Spur-Filter) wartet damit erneut, bis die Wandlung-Spur ein zweites Tableau hat.
+- Mit Wandlung ist die **vierte Sammlungs-Spur** eröffnet, mit Gut/Böse die **fünfte (Menschenbild)**. Die Library-Sichtbarkeits-Bedingung (alle Spuren ≥2 Tableaus) ist nicht erfüllt — Wandlung und Menschenbild tragen je nur ein Tableau. Explizite Section-Header warten, bis beide ≥2 Tableaus haben.
 - Die Existenz-Palette ist abgeschlossen: drei warme Hues mit klarer Staffelung (Begegnung 35 · Existenzialismus 45 · Lebenskunst 65). Die Farb-Frage, die monatelang offen war, ist gelöst.
 - Die Lectio-Methode hat sich in neun Durchläufen bewährt. Mit Begegnung ist die erste Ein-Werk-Lectio entstanden — ein neuer Pfad-Typ, den ich bewusst *nicht* sofort kanonisiert habe. Das fühlt sich nach kuratorischer Reife an: erst destillieren, wenn ein zweiter Fall ihn bestätigt, nicht beim ersten Wurf postulieren.
 - Begegnung ist das reifste Tableau der Serie. Der gewachsene Anker (Bubers „Weg des Menschen", die Retraite-Erfahrung „Wo bist du?") trägt bis in die Lectio hinein, die zum Eingangsmotiv zurückkehrt.
@@ -53,7 +58,7 @@
 
 **Außenfeedback (erste Runde):** Monique (Coach, Persona-Kern) hat in zwei Runden substantielles Feedback geliefert — siehe `feedback-runde-1.md`. Sie hat die Lectio-Form als tragend bestätigt, die Lebensfragen-Frage ausgelöst und die Wahrheitsanspruchs-Konvention von außen erfahren (nicht gelesen). Das ist kein formaler User-Test, aber echte Persona-Resonanz mit konkreten Konsequenzen (Selbst-Lectio II, Lebensfragen-Form). Der **formale User-Test** (zwei Personen aus der Persona, ohne Erklärung beobachten) ist damit noch ausständig — bleibt priorisierter nächster Schritt.
 
-**Library-Architektur sichtbar machen:** Bedingung erfüllt (alle Spuren ≥2 Tableaus). Die explizite Lösung (Section-Header / Trennstriche / Spur-Filter) ist jetzt umsetzbar — bisher trägt nur die implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow).
+**Library-Architektur sichtbar machen:** Bedingung noch nicht erfüllt — Wandlung und Menschenbild tragen je nur ein Tableau. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt für fünf Spuren. Explizite Lösung (Section-Header / Trennstriche / Spur-Filter) umsetzbar, sobald alle Spuren ≥2 Tableaus haben.
 
 **Methoden-Hygiene (lectio-mode.md):** Steht auf v1.9. Drei Klarstellungen aus dem Existenzialismus-Bau warten weiter auf Aufnahme (Pfad-Typ-Destillation, narrativ-historisch ≠ chronologisch streng, Reserve-Brief-Dokumentation). Dazu neu: der fünfte Pfad-Typ *kontemplativ-vertiefend* + die `step_brief`-Disziplin — Aufnahme als v1.10, sobald eine zweite kontemplativ-vertiefende Lectio existiert.
 
@@ -67,6 +72,8 @@
 
 ## Was mich aktuell beschäftigt
 
-Der User-Test ist nach wie vor der nächste echte Schritt — und mit acht Tableaus drängender denn je. Die Sammlung hat jetzt eine sichtbare Architektur (drei Spuren, alle gefüllt), eine in neun Durchläufen erprobte Methode und mit der Ein-Werk-Lectio sogar eine neue Form. Was ich nicht weiß: Ob der Discovery-Pfad (Bibliothek → Tableau → Lectio) für jemanden ohne Vorwissen trägt. Ich hab ihn noch nie mit fremden Augen gesehen.
+Der Partnerin-Test läuft — drei Lectios (darunter die neue erzählende Form `wer-bist-du-wenn-du-alles-weglaesst` im direkten Vergleich mit `wer-beobachtet`). Was auf dem Spiel steht: nicht Schönheit, sondern Tiefe. Bleibt jemand dran? Erkennt sich jemand in einer Stimme wieder? Das Ergebnis entscheidet, ob der erzählende Ton zum neuen Standard wird und die anderen ~10 Lectios in dieselbe Form überführt werden. Der Test existiert bisher nur als Ereignis — noch nicht in `feedback-runde-1.md` eingetragen.
 
-Die Farb-Frage, die hier lange als leise drängend stand, hat sich beruhigt — die Existenz-Palette ist gesetzt, das Entscheidungsfenster ist nicht zugefallen, sondern bewusst durchschritten. Was an ihre Stelle tritt, ist eine ruhigere Frage: Wann hört eine Spur auf zu wachsen? Die Existenz-Spur hat jetzt drei Tableaus — ich spüre, dass sie voll ist, ohne es begründen zu können. Vielleicht ist genau das die nächste kuratorische Aufgabe: nicht weiterzubauen, weil es ginge, sondern zu erkennen, wann ein Feld genug gesagt hat.
+Die Sammlung hat jetzt zehn Tableaus, fünf Spuren, dreizehn Lectios und eine neue Lectio-Form. Was ich nicht weiß: Ob der Discovery-Pfad (Bibliothek → Tableau → Lectio) für jemanden ohne Vorwissen trägt. Der formale User-Test — zwei Personen aus der Persona, ohne Erklärung beobachten — ist weiterhin ausständig.
+
+Die Farb-Frage hat sich beruhigt, die Existenz-Spur fühlt sich voll an (drei Tableaus). Die offene Frage ist jetzt: Wann hört eine Spur auf zu wachsen? Das ist keine technische Frage, sondern eine kuratorische — und sie ist für Wandlung und Menschenbild noch nicht gestellt worden, weil beide Spuren gerade erst begonnen haben.

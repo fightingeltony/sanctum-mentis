@@ -1,6 +1,6 @@
 # Lectio-Modus — Sanctum-Standard für geführte Pfade
 
-**Status:** Konvention v1.9, Mai 2026
+**Status:** Konvention v1.10, Mai 2026
 **Anwendungsbereich:** Alle Lectio-Bauten in Sanctum Mentis.
 
 ---
@@ -185,6 +185,12 @@ Lectios können nach zwei Mustern aufgebaut sein:
 
 **Hinweis zur Pfad-Länge in konfrontativen Lectios:** Hier ist die Antagonismus-Asymmetrie aus den Größen-Richtwerten besonders relevant — 4 Stationen können vollständig sein, jede weitere verwässert die Konfrontation.
 
+**Methodische Klarstellung 1 — Pfad-Typ-Destillation:** Pfad-Typen entstehen *nach* überraschenden Lectios, nicht *beim* Bau. Wenn ein Bau das vorhandene Vokabular nicht braucht, ist das ein Signal — kein Defizit. Wenn ein Bau wirklich etwas Neues tut, wird der Typ nach dem Bau destilliert, nicht vorab postuliert. Nur ein belegter Fall rechtfertigt noch keinen neuen Typ — erst der zweite, unabhängige Fall sichert die Destillation. Auslöser: Existenzialismus-Bau (25.5.26) versuchte vorab Typ „existenziell-zugespitzt" zu postulieren — nach Prüfung zurückgezogen.
+
+**Methodische Klarstellung 2 — narrativ-historisch ≠ chronologisch streng:** Narrativ-historische Pfade dürfen historisch leicht versetzt sein (Beispiel: Nietzsche vor Kierkegaard im Existenzialismus-Pfad), wenn zwei Bedingungen erfüllt sind: (a) die phänomenologische Reihenfolge trägt besser als die historische, (b) der Übergangstext macht die Versetzung explizit. Die Lectio ist ein Bogen, kein Geschichtsbuch.
+
+**Methodische Klarstellung 3 — Reserve-Briefs dokumentieren:** `lectio_brief`-Felder dürfen vorausschauend für Stationen künftiger Lectios geschrieben werden (Reserve-Briefs), wenn (a) das Material trägt, (b) die künftige Lectio im Backlog steht, (c) der Reserve-Brief in der Begleitnotiz explizit als solcher benannt wird. Nicht dokumentierte Reserve-Briefs sind unsichtbare Schulden.
+
 ---
 
 ### 10. Offener Ausgang — Sanctum verkündet keine Wahrheit
@@ -215,6 +221,8 @@ Eine Sanctum-Lectio darf eine Haltung haben, aber keine Wahrheit verkünden. Die
   "title": "Titel des Pfades — benennt den Pfad, nicht das Tableau",
   "focus": "Kurzer Halbsatz zum kuratorischen Ausschnitt",
   "thesis": "Ein Satz — worum es in dieser Lectio wirklich geht",
+  "path_type": "narrativ-historisch",
+  "ton": "expositorisch",
   "level": 2,
   "estimated_minutes": 15,
   "intro": "Kuratorischer Einstieg, du-Ton, 3–5 Sätze. Benennt die Frage, die die Lectio trägt.",
@@ -223,7 +231,8 @@ Eine Sanctum-Lectio darf eine Haltung haben, aber keine Wahrheit verkünden. Die
     {
       "nodeId": "knoten-id",
       "nodeType": "thinker",
-      "transition": "Übergangstext nach diesem Schritt. Du-Ton, kuratorisch bewertet, 1–3 Sätze."
+      "transition": "Übergangstext nach diesem Schritt. Du-Ton, kuratorisch bewertet, 1–3 Sätze.",
+      "step_brief": "Optionaler Text, der den Knoten-Text NUR für diese Station überschreibt. Nur für Einzelknoten. Annotationsfrei."
     },
     {
       "nodeId": ["knoten-id-a", "knoten-id-b"],
@@ -237,6 +246,12 @@ Eine Sanctum-Lectio darf eine Haltung haben, aber keine Wahrheit verkünden. Die
   "closing_question": "Die Schlussfrage. Öffnet emotional, was kognitiv geschlossen wurde. Keine Antwort erwartet."
 }
 ```
+
+**`path_type`-Werte:** `"narrativ-historisch"` | `"konkurrierend-konfrontativ"` | `"emotional-kumulativ"` | `"destruktiv-aufbauend"` | `"kontemplativ-vertiefend"` (Datenwert, noch nicht kanonisierter Methoden-Typ — wartet auf zweiten Fall).
+
+**`ton`-Werte:** `"expositorisch"` (Default, wenn Feld fehlt) | `"erzählend-erfahrend"` (in Validierung — erster Fall: `wer-bist-du-wenn-du-alles-weglaesst`; eigene Render-Komponente `LectioNarrativeViewer`, eigenes `narrative`-Interface pro Station; Kanonisierung nach Partnerin-Test).
+
+**`step_brief`:** Überschreibt den Knoten-Text *nur für diese eine Station* — ermöglicht Ein-Werk-Lectios (derselbe Knoten an mehreren Stationen mit verschiedenem Text). Engine-Priorität: `step_brief` → `lectio_brief` → `versions[level]` → Fallback. Nur für Einzelknoten, nicht für Doppelstationen.
 
 ---
 
@@ -317,5 +332,6 @@ Daraus folgt die Bau-Regel: Eine Lectio darf nie Tableau-Grenzen überschreiten 
 - **v1.5 (Mai 2026):** Methodische Revision von Punkt 4 nach Live-Test der Selbst-Lectio. Tableau-Knoten-Texte erzeugen mit der Lectio-Stimme Redundanz, nicht Stilbruch — Lectio-Stimme paraphrasiert den Knoten-Text. Lösung: neues Feld `lectio_brief` (2–3 Sätze, atmosphärisch, dicht) als eigene Knoten-Stimme im Lectio-Modus. Punkt 5 entsprechend angepasst (`level` wird Fallback statt Default). Sektion 4.1 dokumentiert die Revision explizit.
 - **v1.6 (Mai 2026):** Dritter Pfad-Typ aus dem Realismus-Skript: emotional-kumulativ. Stationen kumulieren in einer emotionalen Bewegung (Festigkeit → Erschütterung → Schwindel → Reife), nicht in Argumentation oder Konfrontation. Punkt 9 entsprechend erweitert, mit Konvention zum Schwindel-Indikator in jedem Übergang. Realismus-Skript: vier Übergänge nachgezogen (Berkeley respektvoller, Kuhn mit Schwindel-Indikator, Rorty mit Vokabular-Erfahrung, Closing Synthesis mit klarem Adressaten).
 - **v1.7 (Mai 2026):** Konvention Wortmotiv ergänzt (Gemini-Impuls): emotional-kumulative Lectios tragen einen wiederkehrenden Wortteppich durch den ganzen Bogen, der den Titel als Textur einlöst. Realismus-Skript: Closing Question um Bild "im Schwindel zu stehen" geschärft.
+- **v1.10 (Mai 2026):** Vier Zuflüsse aus der Bauserie Mai 2026. (1) Punkt 9 um drei methodische Klarstellungen erweitert: Pfad-Typ-Destillation (Typen entstehen nach, nicht vor dem Bau; Auslöser: Existenzialismus), narrativ-historisch ≠ chronologisch streng (leichte Versetzung erlaubt, wenn im Übergang explizit), Reserve-Brief-Dokumentation (vorausschauende lectio_briefs nur mit Begleitnotiz-Eintrag). (2) Schema um `path_type`, `ton`, `step_brief` ergänzt und kanonisiert. (3) `ton: 'erzählend-erfahrend'` als neue Lectio-Dimension eingeführt — erster Fall `wer-bist-du-wenn-du-alles-weglaesst`, eigene Render-Komponente, in Validierung (Partnerin-Test ausstehend). (4) `kontemplativ-vertiefend` als Datenwert dokumentiert — methodisch noch nicht kanonisiert, wartet auf 2. Fall.
 - **v1.9 (Mai 2026):** Kanon-Block „Tableau / Lectio / Lebensfrage — die drei Formen" aufgenommen (wortgleich in `bibliothek-architektur.md` und `mild-mode.md`). Stellt klar: Lectio ist Tiefe *in einem* Feld und wohnt im Tableau; Lebensfrage ist Breite *über* Felder und wohnt neben der Bibliothek. Bau-Regel ergänzt: Lectio überschreitet nie Tableau-Grenzen.
 - **v1.8 (Mai 2026):** Vierte Schicht aus der Ethik-Lectio. Punkt 9 um Variante "destruktiv-aufbauend" erweitert (Stationen demontieren das Fundament, letzte Station bietet qualitativ anderen Zugang). Punkt 10 neu: Offener Ausgang — Sanctum verkündet keine Wahrheit, kuratorisch stärkste Position darf spürbar sein, aber nicht als finale Antwort markiert werden. Phänomenologische statt ontologische Formulierungen. Diese Konvention betrifft alle Pfad-Typen, wurde aber bei Ethik sichtbar, weil Levinas eine attraktive Lösung anbietet. Ethik-Skript entsprechend an drei Stellen geöffnet: Thesis, Intro, Closing Synthesis.

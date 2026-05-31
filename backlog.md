@@ -153,8 +153,9 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Nächster Schritt:** Nach zweitem Handlungs-Tableau aufnehmen.
 **Update 23.5.26:** Implizite Spur-Sichtbarkeit umgesetzt — Farb-Architektur als Familien-Signal, Spur-Reihenfolge in library.json, Eyebrow-Markierung pro Card (Spur-Name in Spur-Farbe, uppercase, 11px). Explizite Sichtbarkeits-Lösung (Section-Header / Trennstriche / Spur-Filter) bleibt offen, ausgelöst sobald alle Spuren mindestens zwei Tableaus tragen.
 **Update 29.5.26:** Bedingung erfüllt — alle drei Spuren haben nun ≥2 Tableaus (Erkenntnis 3, Handlung 2, Existenz 2). Explizite Sichtbarkeits-Lösung kann jetzt umgesetzt werden.
-**Update 31.5.26:** Bedingung wieder gebrochen — vierte Spur (Wandlung) hat nur 1 Tableau. Explizite Lösung wartet erneut, bis Wandlung-Spur ein zweites Tableau hat. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt auch für vier Spuren.
-**Nächster Schritt:** Section-Header / Trennstriche / Spur-Filter implementieren, sobald Wandlung ≥2 Tableaus hat.
+**Update 31.5.26:** Bedingung wieder gebrochen — vierte Spur (Wandlung) hat nur 1 Tableau. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt auch für vier Spuren.
+**Update 31.5.26 (später):** Gut/Böse eröffnet **fünfte Spur (Menschenbild, hue 345)**. Bedingung weiterhin nicht erfüllt — jetzt *zwei* Ein-Tableau-Spuren (Wandlung + Menschenbild). Section-Header warten, bis beide ≥2 Tableaus haben.
+**Nächster Schritt:** Section-Header / Trennstriche / Spur-Filter implementieren, sobald alle Spuren ≥2 Tableaus tragen.
 
 ---
 
@@ -245,15 +246,23 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 ### [x] Lectio-Modus — von Nice-to-Have zu Kernfeature
 **Status:** vollständig implementiert und live, Stand 22.5.26
 **Kontext:** Geführte Tour durchs Tableau (zeitliche Sequenz statt räumlicher Karte). Frontend live (`/lectio/[id]`), Discovery-Abschnitt in Tableau-Köpfen, `lectio_brief`-Schema, progressives Reveal mit Fade-in.
-**Skripte im Repo (4 live):**
-- `data/lectio/hard-problem.json` — Geist, narrativ-historisch, L2, 6 Stationen
-- `data/lectio/wer-beobachtet.json` — Selbst, konfrontativ, L3, 4 Stationen (Vedanta / Buddhismus / Metzinger / Jung)
-- `data/lectio/wenn-die-welt-wackelt.json` — Realismus, emotional-kumulativ, L2, 6 Stationen (Aristoteles → Berkeley → Kant → Kuhn → Rorty → Gabriel)
-- `data/lectio/warum-sollst-du.json` — Ethik, destruktiv-aufbauend, L2, 4 Stationen (Kant → Hume → Nietzsche → Levinas)
-- `data/lectio/wenn-nichts-vorgegeben.json` — Existenzialismus, narrativ-historisch, L2, 5 Stationen (Nietzsche → Kierkegaard → Sartre → Frankl → Camus)
-**Methode:** `prompts/lectio-mode.md` v1.8 — zehn methodische Entscheidungen. Neu in v1.6–v1.8: Pfad-Typ emotional-kumulativ (Realismus), Wortmotiv-Konvention, Variante destruktiv-aufbauend (Ethik), Punkt 10 Offener Ausgang (Sanctum verkündet keine Wahrheit — phänomenologische Sprache, Schlussfrage öffnet statt schließt).
-**lectio_brief-Felder gepflegt (27 total):** Geist (8), Selbst (4), Realismus (6), Ethik (4), Existenzialismus (5 + 2 Reserve)
-**Nächster Schritt:** User-Test Lectio live; nächste Existenz-Spur-Lectio planen (Tod und Endlichkeit / Heidegger-Brief liegt vor).
+**Skripte im Repo (13 live):**
+- `hard-problem` — Geist, narrativ-historisch, L2, 6 Stationen
+- `wer-beobachtet` — Selbst, konkurrierend-konfrontativ, L3, 4 Stationen
+- `findest-du-oder-machst-du` — Selbst, dialektisch-revidierend, L3, 5 Stationen (via path[].brief)
+- `wenn-die-welt-wackelt` — Realismus, emotional-kumulativ, L2, 6 Stationen
+- `warum-sollst-du` — Ethik, destruktiv-aufbauend, L2, 4 Stationen
+- `wenn-nichts-vorgegeben` — Existenzialismus, narrativ-historisch, L2, 5 Stationen
+- `warum-gehorchst-du` — Politische Philosophie, L3, 5 Stationen
+- `ruhe-oder-rausch` — Lebenskunst, L2, 4 Stationen
+- `der-weg-des-menschen` — Begegnung, kontemplativ-vertiefend, L2, 4 Stationen (Ein-Werk-Lectio, step_brief)
+- `ist-der-andere-hoelle-oder-heimat` — Begegnung, konkurrierend-konfrontativ, L3, 4 Stationen
+- `verstehen-oder-weitergehen` — Wandlung, narrativ-historisch, L3, 5 Stationen (alle step_brief)
+- `stell-die-frage-anders` — Gut/Böse, destruktiv-aufbauend, L3, 5 Stationen (alle lectio_brief)
+- `wer-bist-du-wenn-du-alles-weglaesst` — Selbst, konkurrierend-konfrontativ, L2, 4 Stationen (**ton: erzählend-erfahrend** — erster Test-Fall, neue Render-Form `LectioNarrativeViewer`)
+**Methode:** `prompts/lectio-mode.md` v1.9 — zehn methodische Entscheidungen. Schema-Erweiterungen: `step_brief` (pro-Station-Text), `path_type` (Datenwert), `ton` (expositorisch / erzählend-erfahrend), `LectioNarrative`-Interface (hook/body/kernel/bridge).
+**lectio_brief-Felder (ca. 40 total):** Geist (8), Selbst (4+), Realismus (6), Ethik (4), Existenzialismus (5+2), Politik (5), Lebenskunst (4), Begegnung (6), Wandlung (0, alles step_brief), Gut/Böse (5)
+**Nächster Schritt:** Partnerin-Test (erzählende Lectio + Vergleichsfall `wer-beobachtet`) — Ergebnis entscheidet, ob erzählender Ton zum Standard wird. lectio-mode v1.10 schreiben.
 **Folgearbeit:**
 - Tableau-übergreifende Lectios (Schema-Erweiterung: tableauId als Array)
 - Bei Bedarf weitere Lectios pro Tableau
@@ -530,12 +539,13 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 
 ---
 
-### [ ] Gut und Böse — Tableau (priorisiert)
-**Status:** neu, 31.5.26
-**Anker:** offen — gewachsen oder architektonisch? Klären vor Bau.
-**Spur-Entscheidung offen:** Gehört Gut/Böse zur Handlungs-Spur (moralische Handlung, Nähe zu Ethik) oder eröffnet es eine **fünfte anthropologische Spur** (Menschenbild, das Böse als ontologische Frage)? Am Material entscheiden — nicht vorab festlegen. Wenn die Achsen eher normativ sind → Handlung; wenn die Achsen eher anthropologisch sind (gut/böse als Wesensbestimmung des Menschen) → neue Spur.
-**Abgrenzung zu Ethik:** Ethik fragt *Was soll ich tun?* — Gut/Böse fragt *Was ist der Mensch überhaupt, dass er zu beidem fähig ist?* Verschiedene Fragen, legitim nebeneinander.
-**Nächster Schritt:** Anker prüfen, zwei Achsen-Skizzen, dann Spur-Entscheidung.
+### [x] Gut und Böse — Tableau + erste Lectio
+**Status:** implementiert 31.5.26 (Mild-Modus, externe Prüfung bestanden)
+**Anker:** Gewachsen — *"Was ist der Mensch überhaupt, dass er zu beidem fähig ist?"* Achsen anthropologisch, nicht normativ → eröffnet **fünfte Sammlungs-Spur: Menschenbild** (hue 345, Magenta).
+**Abgrenzung zu Ethik:** Ethik fragt *Was soll ich tun?* — Gut/Böse fragt *Was ist der Mensch?* Verschiedene Fragen, legitim nebeneinander. Spur-Entscheidung am Material gefällt.
+**Ergebnis:** 11 Denker, Achsen: Menschenbild X = von Natur aus gut ↔ von Natur aus böse / Y = individuell-ontologisch ↔ sozial-situativ. Spur: Menschenbild (hue 345). 5 lectio_briefs (Mengzi, Hobbes, Augustinus, Arendt, Kant).
+**Lectio:** `stell-die-frage-anders` — destruktiv-aufbauend, L3, 5 Stationen (Mengzi → Hobbes → Augustinus → Arendt → Kant). Alle Stationen via lectio_brief. Begleitnotiz: `gut-und-boese-begleitnotiz.md`.
+**Bibliotheks-Bedingung:** Library-Sichtbarkeits-Bedingung weiterhin nicht erfüllt — jetzt zwei Ein-Tableau-Spuren (Wandlung + Menschenbild). Explizite Section-Header warten bis beide Spuren ≥2 Tableaus haben.
 
 ---
 
