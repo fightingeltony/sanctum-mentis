@@ -13,7 +13,6 @@
     "spur": "wandlung",
     "complexityLevels": 5,
     "graphLayout": "manual",
-    "thinkerListStyle": "cards",
     "quadrants": {
       "axisX": {
         "label": "Was löst Verwandlung aus?",
