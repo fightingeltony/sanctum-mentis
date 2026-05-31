@@ -229,9 +229,9 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           const ordinal = ORDINAL[vi] ?? `${vi + 1}.`
 
           // Denker-Name aus topicData; Fallback: nodeId kapitalisiert
-          const thinkerNode = topicData?.thinkers.find(t => t.id === nodeId)
-            ?? topicData?.schools.find(s => s.id === nodeId)
-          const displayName = thinkerNode?.name
+          const thinkerMatch = topicData?.thinkers.find(t => t.id === nodeId)
+          const schoolMatch = !thinkerMatch ? topicData?.schools.find(s => s.id === nodeId) : undefined
+          const displayName = thinkerMatch?.name ?? schoolMatch?.label
             ?? (nodeId.charAt(0).toUpperCase() + nodeId.slice(1).replace(/-/g, ' '))
 
           return (
