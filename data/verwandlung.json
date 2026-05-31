@@ -444,9 +444,9 @@
       "from": "james",
       "to": "frankl",
       "type": "parallel",
-      "firstLevel": 4,
+      "firstLevel": 2,
       "versions": {
-        "4": "James' pragmatischer Maßstab — eine Verwandlung erkennt man an ihren Früchten, nicht an ihrer Lehre — kehrt bei Frankl wieder: Nicht die Theorie des Sinns zählt, sondern dass das Festhalten an einem Sinn einen Menschen real trägt und verwandelt. Beide messen Verwandlung an ihrer Wirkung im gelebten Leben."
+        "2": "James und Frankl teilen einen nüchternen Maßstab: Eine Verwandlung zeigt sich nicht in der Lehre, die sie begleitet, sondern in dem, was sie im Leben bewirkt. James nennt es die Früchte der Erfahrung, Frankl das Festhalten an einem Sinn, der einen Menschen trägt. Beide messen Verwandlung an ihrer Wirkung, nicht an ihrer Begründung."
       }
     },
     {
@@ -507,9 +507,9 @@
       "from": "rilke",
       "to": "james",
       "type": "parallel",
-      "firstLevel": 3,
+      "firstLevel": 1,
       "versions": {
-        "3": "Rilke und James nähern sich dem Umschwung von zwei Seiten: James sammelt und beschreibt die Berichte derer, denen eine Verwandlung widerfährt; Rilke spricht aus dem Inneren eines solchen Augenblicks. Wo James fragt, woran man die echte Konversion erkennt, gibt Rilke die Erfahrung selbst — den Moment, in dem das Getroffensein keinen Aufschub mehr duldet."
+        "1": "Rilke und William James schauen auf denselben Vorgang von zwei Seiten. James sammelt die Berichte von Menschen, denen eine Verwandlung widerfahren ist, und fragt, woran man eine echte erkennt. Rilke spricht aus dem Augenblick selbst — dem Moment, in dem etwas dich so trifft, dass das alte Leben nicht weitergeht. Der eine beschreibt von außen, der andere von innen."
       }
     }
   ]
