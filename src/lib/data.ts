@@ -27,6 +27,7 @@ import werBistDuRaw                        from '../../data/lectio/wer-bist-du-w
 import schmerzRaw                          from '../../data/lebensfragen/schmerz.json'
 import todRaw                              from '../../data/lebensfragen/tod.json'
 import einsamkeitRaw                       from '../../data/lebensfragen/einsamkeit.json'
+import veraenderungRaw                     from '../../data/lebensfragen/veraenderung.json'
 
 const TOPICS: Record<string, TopicData> = {
   'das-selbst':                       dasSelbstRaw                    as unknown as TopicData,
@@ -95,7 +96,8 @@ export function getLectioIds(): string[] {
 const LEBENSFRAGEN: Record<string, Lebensfrage> = {
   'schmerz':    schmerzRaw    as unknown as Lebensfrage,
   'tod':        todRaw        as unknown as Lebensfrage,
-  'einsamkeit': einsamkeitRaw as unknown as Lebensfrage,
+  'einsamkeit':   einsamkeitRaw   as unknown as Lebensfrage,
+  'veraenderung': veraenderungRaw as unknown as Lebensfrage,
 }
 
 export function getLebensfrage(id: string): Lebensfrage | null {

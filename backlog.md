@@ -712,8 +712,8 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 - C) Sehr selektive dynamische Register mit Pflege-Disziplin — max. 3–4 Lebensfragen, klare Pflege-Regel bei neuen Tableaus
 
 **Entscheidung:** Weg B umgesetzt. "Was tue ich mit Schmerz?" als erste Lebensfrage live — Route `/lebensfragen/schmerz`, `LebensfrageViewer`-Komponente, statisch geladene Stimmen aus drei Tableaus.
-**Stand 1.6.26:** Zweite Lebensfrage "Einsamkeit" live. Dritte "Tod" bereits vorhanden. **Library-Sektion-Bedingung erfüllt** — Lebensfragen sollten aus dem provisorischen Footer-Link in eine echte Library-Sektion wandern.
-**Nächster Schritt:** Library-Sektion für Lebensfragen bauen (war an zweite Lebensfrage geknüpft — diese Bedingung ist jetzt erfüllt).
+**Stand 1.6.26:** Vierte Lebensfrage "Veränderung" live (8 Stimmen, 5 Tableaus — breiteste der Sammlung). Gesamt: Schmerz · Einsamkeit · Veränderung · Tod. **Library-Sektion-Bedingung erfüllt** — Lebensfragen können aus dem provisorischen Footer-Link in eine echte Library-Sektion wandern.
+**Nächster Schritt:** Library-Sektion für Lebensfragen bauen (war an zweite Lebensfrage geknüpft — diese Bedingung ist seit Einsamkeit erfüllt).
 
 ---
 
