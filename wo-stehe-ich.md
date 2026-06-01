@@ -59,7 +59,7 @@
 
 **Außenfeedback (erste Runde):** Monique (Coach, Persona-Kern) hat in zwei Runden substantielles Feedback geliefert — siehe `feedback-runde-1.md`. Sie hat die Lectio-Form als tragend bestätigt, die Lebensfragen-Frage ausgelöst und die Wahrheitsanspruchs-Konvention von außen erfahren (nicht gelesen). Das ist kein formaler User-Test, aber echte Persona-Resonanz mit konkreten Konsequenzen (Selbst-Lectio II, Lebensfragen-Form). Der **formale User-Test** (zwei Personen aus der Persona, ohne Erklärung beobachten) ist damit noch ausständig — bleibt priorisierter nächster Schritt.
 
-**Lebensfragen-Library-Sektion:** Bedingung erfüllt — vier Lebensfragen live (Schmerz · Einsamkeit · Veränderung · Tod). Veränderung ist mit 8 Stimmen aus 5 Tableaus (verwandlung, existenzialismus, wandlung, begegnung, das-selbst) die breiteste der Sammlung. Lebensfragen können aus dem provisorischen Footer-Link in eine echte Library-Sektion wandern. Das ist der nächste fällige UI-Schritt auf der Lebensfragen-Spur.
+**Lebensfragen-Library-Sektion:** Live — vier Lebensfragen in eigener Sektion „Ein Weg quer hindurch" (Schmerz · Tod · Einsamkeit · Veränderung). Veränderung ist mit 8 Stimmen aus 5 Tableaus die breiteste der Sammlung. Footer-Link-Phase abgeschlossen.
 
 **Library-Architektur sichtbar machen (Tableau-Spuren):** Bedingung fast erfüllt — Wandlung hat jetzt 2 Tableaus, nur Menschenbild steht noch bei 1. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt für fünf Spuren. Explizite Lösung (Section-Header / Trennstriche / Spur-Filter) umsetzbar, sobald alle Spuren ≥2 Tableaus haben.
 

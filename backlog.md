@@ -568,7 +568,7 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 **Anker:** Lebensweltlich sehr hoch. Brücke zwischen Existenz-Spur (Heidegger, Sartre, Buber), Selbst-Tableau (Kohut, IFS) und Wandlung (Rilke als einziger Gegenpol).
 **Stimmen:** Heidegger (das Man / Vereinzelung), Sartre (Freiheit isoliert), Buber (fehlendes Zwischen), Winnicott (Spur früh fehlenden Haltens), Fromm (Mangel als Antrieb), Rilke (Einsamkeit hüten — einziger Gegenpol).
 **Dreipolige Spannung:** Mangel (Buber/Winnicott) · Grundverfassung (Heidegger/Sartre) · Bedingung (Rilke) — Fromm als Brücke.
-**Nebennutzen:** Dies ist die **zweite Lebensfrage** — Library-Sektion-Bedingung erfüllt. Lebensfragen können aus dem provisorischen Footer-Link in eine echte Library-Sektion.
+**Nebennutzen:** War die zweite Lebensfrage — hat die Library-Sektion-Bedingung erfüllt. Sektion „Ein Weg quer hindurch" ist live (vier Lebensfragen).
 
 ---
 
@@ -712,8 +712,7 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 - C) Sehr selektive dynamische Register mit Pflege-Disziplin — max. 3–4 Lebensfragen, klare Pflege-Regel bei neuen Tableaus
 
 **Entscheidung:** Weg B umgesetzt. "Was tue ich mit Schmerz?" als erste Lebensfrage live — Route `/lebensfragen/schmerz`, `LebensfrageViewer`-Komponente, statisch geladene Stimmen aus drei Tableaus.
-**Stand 1.6.26:** Vierte Lebensfrage "Veränderung" live (8 Stimmen, 5 Tableaus — breiteste der Sammlung). Gesamt: Schmerz · Einsamkeit · Veränderung · Tod. **Library-Sektion-Bedingung erfüllt** — Lebensfragen können aus dem provisorischen Footer-Link in eine echte Library-Sektion wandern.
-**Nächster Schritt:** Library-Sektion für Lebensfragen bauen (war an zweite Lebensfrage geknüpft — diese Bedingung ist seit Einsamkeit erfüllt).
+**Stand 1.6.26:** Vier Lebensfragen live (Schmerz · Tod · Einsamkeit · Veränderung). Library-Sektion „Ein Weg quer hindurch" bereits vorhanden und befüllt — Footer-Link-Phase abgeschlossen. Kein weiterer UI-Schritt nötig.
 
 ---
 
