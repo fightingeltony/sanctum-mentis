@@ -26,6 +26,7 @@ import stellDieFrageAndersRaw              from '../../data/lectio/stell-die-fra
 import werBistDuRaw                        from '../../data/lectio/wer-bist-du-wenn-du-alles-weglaesst.json'
 import schmerzRaw                          from '../../data/lebensfragen/schmerz.json'
 import todRaw                              from '../../data/lebensfragen/tod.json'
+import einsamkeitRaw                       from '../../data/lebensfragen/einsamkeit.json'
 
 const TOPICS: Record<string, TopicData> = {
   'das-selbst':                       dasSelbstRaw                    as unknown as TopicData,
@@ -92,8 +93,9 @@ export function getLectioIds(): string[] {
 // ─── Lebensfragen Loader ─────────────────────────────────────
 
 const LEBENSFRAGEN: Record<string, Lebensfrage> = {
-  'schmerz': schmerzRaw as unknown as Lebensfrage,
-  'tod':     todRaw     as unknown as Lebensfrage,
+  'schmerz':    schmerzRaw    as unknown as Lebensfrage,
+  'tod':        todRaw        as unknown as Lebensfrage,
+  'einsamkeit': einsamkeitRaw as unknown as Lebensfrage,
 }
 
 export function getLebensfrage(id: string): Lebensfrage | null {

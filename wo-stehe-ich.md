@@ -1,6 +1,6 @@
 # Wo stehe ich — Sanctum Mentis
 
-**Stand:** 1.6.26
+**Stand:** 1.6.26 (aktualisiert nach Einsamkeit-Lebensfrage)
 
 ---
 
@@ -59,7 +59,9 @@
 
 **Außenfeedback (erste Runde):** Monique (Coach, Persona-Kern) hat in zwei Runden substantielles Feedback geliefert — siehe `feedback-runde-1.md`. Sie hat die Lectio-Form als tragend bestätigt, die Lebensfragen-Frage ausgelöst und die Wahrheitsanspruchs-Konvention von außen erfahren (nicht gelesen). Das ist kein formaler User-Test, aber echte Persona-Resonanz mit konkreten Konsequenzen (Selbst-Lectio II, Lebensfragen-Form). Der **formale User-Test** (zwei Personen aus der Persona, ohne Erklärung beobachten) ist damit noch ausständig — bleibt priorisierter nächster Schritt.
 
-**Library-Architektur sichtbar machen:** Bedingung fast erfüllt — Wandlung hat jetzt 2 Tableaus, nur Menschenbild steht noch bei 1. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt für fünf Spuren. Explizite Lösung (Section-Header / Trennstriche / Spur-Filter) umsetzbar, sobald alle Spuren ≥2 Tableaus haben.
+**Lebensfragen-Library-Sektion:** Bedingung erfüllt — zwei Lebensfragen live (Schmerz + Einsamkeit), drei insgesamt (+ Tod). Lebensfragen können aus dem provisorischen Footer-Link in eine echte Library-Sektion wandern. Das ist der nächste fällige UI-Schritt auf der Lebensfragen-Spur.
+
+**Library-Architektur sichtbar machen (Tableau-Spuren):** Bedingung fast erfüllt — Wandlung hat jetzt 2 Tableaus, nur Menschenbild steht noch bei 1. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt für fünf Spuren. Explizite Lösung (Section-Header / Trennstriche / Spur-Filter) umsetzbar, sobald alle Spuren ≥2 Tableaus haben.
 
 **Methoden-Hygiene (lectio-mode.md):** Steht auf v1.9. Drei Klarstellungen aus dem Existenzialismus-Bau warten weiter auf Aufnahme (Pfad-Typ-Destillation, narrativ-historisch ≠ chronologisch streng, Reserve-Brief-Dokumentation). Dazu neu: der fünfte Pfad-Typ *kontemplativ-vertiefend* + die `step_brief`-Disziplin — Aufnahme als v1.10, sobald eine zweite kontemplativ-vertiefende Lectio existiert.
 

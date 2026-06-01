@@ -562,12 +562,13 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 
 ---
 
-### [ ] Einsamkeit — Lebensfrage (priorisiert)
-**Status:** neu, 31.5.26
+### [x] Einsamkeit — Lebensfrage (priorisiert)
+**Status:** live 1.6.26 — Route `/lebensfragen/einsamkeit`
 **Form:** Lebensfrage (tableau-übergreifend, analog zu „Was tue ich mit Schmerz?")
-**Anker:** Lebensweltlich sehr hoch. Brücke zwischen Existenz-Spur (Heidegger, Sartre, Buber), Selbst-Tableau (Kohut, IFS) und eventuell Wandlung (Einsamkeit als Transformationsraum).
-**Mögliche Stimmen:** Heidegger (das In-der-Welt-sein und die Verlorenheit), Sartre (die Freiheit, die isoliert), Buber (Einsamkeit als Weg zum Du), Winnicott (alleine sein in Gegenwart des anderen), Fromm (Einsamkeit als Triebkraft der Liebe).
-**Nächster Schritt:** Stimmen aus bestehenden Tableaus auflisten, prüfen ob ≥5 gut verfügbar; dann bauen analog zu Schmerz.
+**Anker:** Lebensweltlich sehr hoch. Brücke zwischen Existenz-Spur (Heidegger, Sartre, Buber), Selbst-Tableau (Kohut, IFS) und Wandlung (Rilke als einziger Gegenpol).
+**Stimmen:** Heidegger (das Man / Vereinzelung), Sartre (Freiheit isoliert), Buber (fehlendes Zwischen), Winnicott (Spur früh fehlenden Haltens), Fromm (Mangel als Antrieb), Rilke (Einsamkeit hüten — einziger Gegenpol).
+**Dreipolige Spannung:** Mangel (Buber/Winnicott) · Grundverfassung (Heidegger/Sartre) · Bedingung (Rilke) — Fromm als Brücke.
+**Nebennutzen:** Dies ist die **zweite Lebensfrage** — Library-Sektion-Bedingung erfüllt. Lebensfragen können aus dem provisorischen Footer-Link in eine echte Library-Sektion.
 
 ---
 
@@ -711,8 +712,8 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 - C) Sehr selektive dynamische Register mit Pflege-Disziplin — max. 3–4 Lebensfragen, klare Pflege-Regel bei neuen Tableaus
 
 **Entscheidung:** Weg B umgesetzt. "Was tue ich mit Schmerz?" als erste Lebensfrage live — Route `/lebensfragen/schmerz`, `LebensfrageViewer`-Komponente, statisch geladene Stimmen aus drei Tableaus.
-**UI-Wohnort:** Provisorisch via Footer-Link ("Lebensfragen (im Aufbau): Was tue ich mit Schmerz?"). Keine Library-Card, keine Library-Sektion — "eine Gruppe aus einem ist keine Gruppe."
-**Nächster Schritt:** Sichtbare Library-Sektion folgt, sobald eine zweite Lebensfrage existiert.
+**Stand 1.6.26:** Zweite Lebensfrage "Einsamkeit" live. Dritte "Tod" bereits vorhanden. **Library-Sektion-Bedingung erfüllt** — Lebensfragen sollten aus dem provisorischen Footer-Link in eine echte Library-Sektion wandern.
+**Nächster Schritt:** Library-Sektion für Lebensfragen bauen (war an zweite Lebensfrage geknüpft — diese Bedingung ist jetzt erfüllt).
 
 ---
 
