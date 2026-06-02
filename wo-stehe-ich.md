@@ -6,7 +6,7 @@
 
 ## Was live ist
 
-**Elf Tableaus** — alle auf Vercel, alle vollständig ausgebaut:
+**Zwölf Tableaus** — alle auf Vercel, alle vollständig ausgebaut:
 
 - **Philosophie des Geistes** — Hard-Modus, 16 Denker. Das akademisch dichteste Tableau. Einstieg über Descartes historisch korrekt, aber möglicherweise kopflastig für Nicht-Akademiker.
 - **Die Landkarte des Selbst** — Mild-Modus, 15 Denker. Meditativer Ton, gut gelungen. Vedanta/Buddhismus als gleichwertige Stimmen.
@@ -19,6 +19,7 @@
 - **Wandlung** — Mild-Modus, 11 Denker. Wandlung-Spur (hue 152) — eröffnet die **vierte Sammlungs-Spur**. Freud/Rogers/Perls/Kabat-Zinn als Hubs. Achsen: Verstehen ↔ Erfahren / individuell ↔ relational.
 - **Verwandlung** — Mild-Modus, 10 Denker. Wandlung-Spur (hue 156) — **zweites Wandlung-Tableau**. Rilke als erster Dichter-Knoten der Sammlung (Hub, lectio_brief-Stimme). Eckhart als Scharnier-Hub. Achsen: Krise ↔ Praxis / Selbst-getrieben ↔ Welt-getroffen. Drei-Denker-Schule `kontemplative-tradition` (Eckhart/Tolle/Thich Nhat Hanh). Externe Prüfung: „strukturell und tonal das sauberste Tableau der Serie." Wandlung-Spur hat jetzt 2 Tableaus — **Section-Header-Bedingung für diese Spur erfüllt**.
 - **Gut und Böse** — Mild-Modus, 11 Denker. Menschenbild-Spur (hue 345, Magenta) — eröffnet die **fünfte Sammlungs-Spur**. Achsen: Menschenbild (gut ↔ böse von Natur) / Ebene (individuell-ontologisch ↔ sozial-situativ). Lectio `stell-die-frage-anders` (destruktiv-aufbauend, L3, 5 Stationen).
+- **Das Selbstverhältnis** — Mild-Modus, 11 Denker. Existenz-Spur (hue 71) — staffelt eng an Lebenskunst 65 an. Achsen: Annehmen ↔ Überwinden / Gabe ↔ Errungen. Zwei Quersteller (Buddhismus + IFS) plus Metzinger (L5) als naturalistische Außenanfrage. Zwei Prüfrunden: Stufenverteilung L1–L5 vollständig belegt, Adler gestrichen (Achsen-Konsistenz), `bedingungslose-wertschaetzung` gestrichen. Existenz-Spur hat jetzt vier Tableaus.
 
 **Dreizehn Lectios** — geführte Pfade, alle live:
 

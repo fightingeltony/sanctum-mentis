@@ -77,6 +77,17 @@
     "tags": ["Der Andere", "Anerkennung", "Beziehung", "Intersubjektivität"]
   },
   {
+    "id": "selbstverhaeltnis",
+    "title": "Das Selbstverhältnis",
+    "subtitle": "Die Haltung zu dir selbst — sollst du dich nehmen, wie du bist, oder werden, der du sein könntest?",
+    "era": "Antike – Gegenwart",
+    "themeColor": "oklch(0.43 0.11 71)",
+    "status": "available",
+    "spur": "existenz",
+    "desc": "Von Rogers bis Nietzsche, von Kabat-Zinn bis Metzinger — ob du dich annehmen oder überwinden sollst, und ob das Selbst überhaupt eine Gabe ist oder ein Werk.",
+    "tags": ["Selbstannahme", "Selbstüberwindung", "Identität", "Psychologie"]
+  },
+  {
     "id": "ethik",
     "title": "Ethik",
     "subtitle": "Das Gewicht deiner Freiheit.",

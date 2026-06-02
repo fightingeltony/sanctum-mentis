@@ -156,6 +156,7 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Update 31.5.26:** Bedingung wieder gebrochen — vierte Spur (Wandlung) hat nur 1 Tableau. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt auch für vier Spuren.
 **Update 31.5.26 (später):** Gut/Böse eröffnet **fünfte Spur (Menschenbild, hue 345)**. Bedingung weiterhin nicht erfüllt — jetzt *zwei* Ein-Tableau-Spuren (Wandlung + Menschenbild). Section-Header warten, bis beide ≥2 Tableaus haben.
 **Update 1.6.26:** Verwandlung live → Wandlung-Spur hat jetzt **2 Tableaus** (hue 152 + 156). Section-Header-Bedingung für Wandlung-Spur erfüllt. Noch fehlend: zweites Menschenbild-Tableau.
+**Update 1.6.26 (Selbstverhältnis):** Existenz-Spur auf **vier Tableaus** gewachsen (Begegnung 35 · Existenzialismus 45 · Lebenskunst 65 · Selbstverhältnis 71).
 **Nächster Schritt:** Section-Header implementieren sobald auch Menschenbild ≥2 Tableaus hat. Oder schon jetzt für Wandlung allein einschalten und Menschenbild nachziehen lassen.
 
 ---
@@ -527,6 +528,14 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 **Pfad-Typ:** konkurrierend-konfrontativ · L3 · 4 Stationen · ~15 Min.
 **Stationen:** Sartre → Hegel → Buber+Marcel → Lévinas. Schreitet die Diagonal-Achse des Tableaus ab (Zumutung ↔ Geschenk). Alle vier Stationen mit dichten lectio_brief-Feldern (Sartre, Hegel, Lévinas neu; Marcel ersetzt nach Prüfer-Empfehlung). Station 1 zusätzlich via step_brief in der Lectio-Datei.
 **Gegentyp zur stillen „Wo bist du?"** — die beiden Begegnung-Lectios ergänzen sich (kontemplativ vs. konfrontativ).
+
+---
+
+### [x] Das Selbstverhältnis — viertes Existenz-Tableau
+**Status:** live 1.6.26 (Mild-Modus, zwei Prüfrunden)
+**Anker:** *„Wenn du an dir leidest — ist die Antwort, dich anzunehmen, oder dich zu überwinden?"*
+**Ergebnis:** 11 Denker, 8 Konzepte, 8 Schulen, 14 Influences. Existenz-Spur (hue 71). Achsen: Annehmen↔Überwinden / Gabe↔Errungen. Zwei Quersteller (Buddhismus: ontologisch; IFS: Multiplizität) plus Metzinger (L5, naturalistisch). Stufenverteilung L1–L5 vollständig belegt. Adler gestrichen (Achsen-Konsistenz), `bedingungslose-wertschaetzung` gestrichen (Rogers-Schlagseite). Synthese: „Sie teilen keine Schule, nur die Frage."
+**Nebennutzen:** Existenz-Spur hat jetzt **vier Tableaus** (Begegnung 35 · Existenzialismus 45 · Lebenskunst 65 · Selbstverhältnis 71).
 
 ---
 

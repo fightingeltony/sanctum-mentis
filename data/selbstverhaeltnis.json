@@ -1,0 +1,581 @@
+{
+  "topic": {
+    "id": "selbstverhaeltnis",
+    "title": "Das Selbstverhältnis",
+    "subtitle": "Die Haltung zu dir selbst — sollst du dich nehmen, wie du bist, oder werden, der du sein könntest?",
+    "intro": "Wenn du an dir leidest — ist die Antwort, dich anzunehmen, oder dich zu überwinden?",
+    "theme": {
+      "accent": "oklch(0.43 0.11 71)",
+      "accentSoft": "oklch(0.43 0.11 71 / 0.15)"
+    },
+    "complexityLevels": 5,
+    "spur": "existenz",
+    "quadrants": {
+      "axisX": {
+        "label": "Die Haltung zum Selbst",
+        "left": "Annehmen",
+        "leftHint": "nimm dich, wie du bist",
+        "right": "Überwinden",
+        "rightHint": "werde, der du sein könntest"
+      },
+      "axisY": {
+        "label": "Woher das Selbst kommt",
+        "top": "Gabe",
+        "topHint": "schon da, freizulegen — nicht zu machen",
+        "bottom": "Errungen",
+        "bottomHint": "erst hervorzubringen — kein Fund, sondern Werk"
+      }
+    },
+    "synthesis": "Dieses Tableau fragt nicht, was das Selbst ist, sondern wie man zu ihm stehen soll — und es findet keinen Frieden darüber. Der waagerechte Schnitt trennt zwei Grundhaltungen: sich annehmen, wie man ist (Rogers, die Stoa, Kohut), oder sich überwinden, hin zu dem, was noch nicht ist (Nietzsche, Foucault). Der senkrechte Schnitt fragt, woraus die Haltung schöpft: aus einem Selbst, das als Gabe schon da ist und nur freigelegt werden muss, oder aus einem, das erst hervorgebracht wird. An der Diagonale dieser beiden Achsen stehen sich die beiden schärfsten Stimmen gegenüber — Rogers, für den Annahme die Bedingung allen Wachstums ist, und Nietzsche, für den dieselbe Annahme der Anfang des Niedergangs ist. Dazwischen liegen die Vermittlungen: die kontemplative Überwindung hin zu einer Gabe (Rohr, Hadot) und die annehmende Übung, die sich ihr Annehmen erst erarbeitet (Kabat-Zinn). Und quer zu allem stehen zwei Stimmen, die die Frage selbst bestreiten: Der Buddhismus löst das Selbst nach unten auf — kein Kern, nur ein Strom, zu dem man nicht Stellung beziehen muss. Internal Family Systems vervielfältigt es nach innen — nicht ein Selbst, sondern viele Teile, deren Frage nicht ist, wie man sich annimmt, sondern wie man moderiert. Auffällig ist, dass diese Stimmen aus sehr verschiedenen Häusern kommen — antike Stoa, humanistische Therapie, französische Lebensphilosophie, Achtsamkeit, christliche Kontemplation. Sie teilen keine Schule, nur die Frage. Wer dieses Tableau verlässt, hat keine Antwort auf ›wie soll ich zu mir stehen?‹. Aber er weiß, ob sein Streit über das Annehmen geht oder über das Überwinden — und ob er überhaupt glaubt, dass da ein einzelnes Selbst ist, zu dem er stehen müsste.",
+    "meta": "VERORTUNG (kuratorisch): Existenz-Spur (hue 71, Revision der zuvor als abgeschlossen deklarierten Existenz-Palette Begegnung 35 / Existenzialismus 45 / Lebenskunst 65 — Selbstverhältnis staffelt eng an Lebenskunst an). Die Achsen sind imperativisch-praktisch (X: Annehmen<->Ueberwinden = Selbstformungs-Haltung) und entdeckungs-/erschaffungstheoretisch (Y: Gabe<->Errungen = Foucaults 'Entdeckung oder Erfindung', woertlich aus dem selbstsorge-Knoten der Lebenskunst). Beide sind Lebenskunst-Grammatik: das Tableau ist die INNERE WENDUNG der Lebenskunst (Lebenskunst fragt 'wie lebe ich gut?', Selbstverhaeltnis 'wie stehe ich zu dem, der da lebt, und ist dieses Selbst gegeben oder gemacht?'). Menschenbild wurde als Spur VERWORFEN: die Achsen sind nicht deskriptiv-anthropologisch ('wie IST der Mensch'), sondern wertend-praktisch ('wie soll ich mich zu mir verhalten'). Der Section-Header-Nebennutzen (Menschenbild bekaeme ein zweites Tableau) ist derselbe Fehlschluss, der bei Gut/Boese revidiert wurde — Achsen-Kriterium vor Eleganz. ACHSEN-AUFLAGE (Orthogonalitaet): X und Y korrelieren auf der Haupt-Diagonale (Nietzsche unten-rechts Ueberwinden/Errungen, Rogers oben-links Annehmen/Gabe). Die Off-Diagonal-Quadranten sind bewusst geankert, damit das Feld nicht eindimensional kollabiert: Kabat-Zinn = Annehmen/Errungen (unten-links), Rohr/Hadot = Ueberwinden/Gabe (oben-rechts). Diese Ankerung ist Struktur, kein Zufall — beim Pruefen nicht als 'duenn besetzt' lesen. ABGRENZUNG: 'Das Selbst' fragt ontologisch (was IST das Selbst, Erkenntnis-Trias), 'Wandlung' prozessual (wie veraendert sich ein Mensch, Wandlung-Spur), 'Selbstverhaeltnis' wertend (wie soll ich mich zu mir verhalten). Mehrere Denker wandern (related_topics, Bestand unangetastet): Rogers (das-selbst/wandlung/begegnung), Marc Aurel & Hadot & Foucault (lebenskunst, Marc Aurel auch ethik), Kohut & Adler & IFS & Buddhismus & wahres-selbst (das-selbst). Kein gedoppelter Knoten. HONNETH bewusst NICHT aufgenommen: auf der getesteten Y-Achse (Gabe<->Errungen) verliert die Anerkennungs-These ihren klaren Ort (sie ist 'durch andere', eine Dimension, die diese Achse nicht abbildet); die Anerkennungs-Dimension bleibt dem Begegnung-Tableau ueberlassen, wo sie ueber die Honneth->Rogers-Kante wohnt. QUERSTELLER-PAAR (Staerke des Tableaus): Buddhismus sprengt die Achse ontologisch (kein Selbst), IFS sprengt die Einheit (viele Teile, dritte Option 'moderieren') — bewusst beide drin, von verschiedenen Seiten. IFS traegt eine Doppelrolle: sitzt nominell in Annehmen/Errungen (x35/y40), wirkt aber als Quersteller; Buddhismus sitzt ganz aus dem Raster (x15/y52, y-mittig 'die Achse greift hier nicht'). TON-DISZIPLIN: ausstellen, nicht verkuenden — die psychologischen/kontemplativen Stimmen (Rogers, Kabat-Zinn, IFS, Rohr) zielen auf Wirkung und brauchen die staerkste phaenomenologische Brechung ('Schwartz vertritt das Modell, dass…', nicht 'du bestehst aus Teilen'). Rohr ist als axiom gefuehrt (nicht als Person), um die Verkuendungs-Naehe des lebenden Praktikers zu entschaerfen. Nietzsche und Stoa sind die Gegengewichte, die das Tableau aus dem therapeutischen Konsens reissen.",
+    "schoolExceptions": {
+      "stoa": "Ein-Denker-Schule (nur Marc Aurel). Bewusst. Kuenftige zweite Stimme: Epiktet (existiert im Lebenskunst-Tableau, 'in unserer Macht / nicht' traegt eine Selbstverhaeltnis-Lesart).",
+      "individualpsychologie": "Ein-Denker-Schule (nur Adler). Bewusst. Adler und IFS teilen die Errungen-Position, aber NICHT die Begruendungsstruktur (Adler: Selbst als soziale Bewegungsrichtung; IFS: Selbst als innere Vielzahl). Getrennt gehalten nach 'Schule = geteilte Begruendung, nicht geteiltes Thema'. Kuenftige zweite Stimme denkbar: Frankl.",
+      "integrative-psychotherapie": "Ein-Denker-Schule (nur IFS/Schwartz). Bewusst. Siehe individualpsychologie zur Abgrenzung von Adler.",
+      "achtsamkeitsbasierte-verfahren": "Ein-Denker-Schule (nur Kabat-Zinn). Bewusst. Kuenftige zweite Stimme denkbar: Segal/Williams (MBCT) oder Sharon Salzberg.",
+      "kontemplative-tradition-vermerk": "Das Wahre Selbst ist als axiom mit primaryThinker rohr gefuehrt, ohne eigene Schule. Falls das Tableau spaeter um Almaas/Eckhart waechst, waere rohr der Kern einer Schule 'kontemplative-tradition'.",
+      "schul-vielfalt": "Sieben Schulen fuer elf Stimmen, davon vier Ein-Denker-Schulen — mehr Schul-Splitter als Begegnung (1 Ausnahme) oder Lebenskunst (0). Das ist das ehrliche Gesicht einer wertenden Frage, die quer durch disparate Traditionen laeuft, kein Baufehler. In der Synthese benannt ('Sie teilen keine Schule, nur die Frage')."
+    }
+  },
+  "levels": [
+    {
+      "id": 1,
+      "label": "Einstieg",
+      "short": "L1"
+    },
+    {
+      "id": 2,
+      "label": "Grundlagen",
+      "short": "L2"
+    },
+    {
+      "id": 3,
+      "label": "Vertiefung",
+      "short": "L3"
+    },
+    {
+      "id": 4,
+      "label": "Analyse",
+      "short": "L4"
+    },
+    {
+      "id": 5,
+      "label": "Synthese",
+      "short": "L5"
+    }
+  ],
+  "schools": [
+    {
+      "id": "humanistische-psychologie",
+      "label": "Humanistische Psychologie",
+      "color": "oklch(0.43 0.11 71)",
+      "glyph": "❀",
+      "gx": -280,
+      "gy": -180,
+      "labelDir": "NW"
+    },
+    {
+      "id": "lebensphilosophie",
+      "label": "Lebensphilosophie",
+      "color": "oklch(0.42 0.12 55)",
+      "glyph": "✦",
+      "gx": 290,
+      "gy": 200,
+      "labelDir": "SE"
+    },
+    {
+      "id": "stoa",
+      "label": "Stoa",
+      "color": "oklch(0.44 0.10 85)",
+      "glyph": "▲",
+      "gx": -300,
+      "gy": -120,
+      "labelDir": "W"
+    },
+    {
+      "id": "integrative-psychotherapie",
+      "label": "Internal Family Systems",
+      "color": "oklch(0.43 0.10 60)",
+      "glyph": "⌘",
+      "gx": -180,
+      "gy": 200,
+      "labelDir": "SW"
+    },
+    {
+      "id": "achtsamkeitsbasierte-verfahren",
+      "label": "Achtsamkeitsbasierte Verfahren",
+      "color": "oklch(0.44 0.09 95)",
+      "glyph": "◯",
+      "gx": -300,
+      "gy": 120,
+      "labelDir": "SW"
+    },
+    {
+      "id": "buddhismus",
+      "label": "Buddhismus",
+      "color": "oklch(0.45 0.08 80)",
+      "glyph": "☸",
+      "gx": -320,
+      "gy": 20,
+      "labelDir": "W"
+    },
+    {
+      "id": "essentielle-psychologie",
+      "label": "Essentielle Psychologie",
+      "color": "oklch(0.43 0.10 78)",
+      "glyph": "◆",
+      "gx": -260,
+      "gy": 60,
+      "labelDir": "W"
+    },
+    {
+      "id": "neurophilosophie",
+      "label": "Neurophilosophie",
+      "color": "oklch(0.42 0.11 50)",
+      "glyph": "⊘",
+      "gx": 300,
+      "gy": -40,
+      "labelDir": "E"
+    }
+  ],
+  "thinkers": [
+    {
+      "id": "rogers",
+      "name": "Carl Rogers",
+      "lifespan": "1902–1987",
+      "firstLevel": 1,
+      "schoolId": "humanistische-psychologie",
+      "x": 18,
+      "y": 82,
+      "related_topics": [
+        "das-selbst",
+        "wandlung",
+        "begegnung"
+      ],
+      "versions": {
+        "1": "Rogers traut dem Selbst. Seine Grundbeobachtung: In jedem Menschen wirkt ein Zug zum Wachstum — wie eine Pflanze zum Licht —, und dieser Zug braucht keine Korrektur, sondern Bedingungen, unter denen er sich entfalten kann. Die wichtigste Bedingung ist eine Haltung zu sich selbst, die Rogers [[bedingungslose positive Wertschätzung:die Annahme eines Menschen ohne Vorbedingung — nicht ›ich tauge etwas, wenn‹, sondern ›ich nehme mich an, weil ich bin‹]] nennt. Wer sich nur unter Bedingungen annimmt, gerät in [[Inkongruenz:die Kluft zwischen dem, was man wirklich erlebt, und dem Bild, das man von sich aufrechterhalten muss, um sich annehmbar zu finden]] — und leidet. Die heilsame Bewegung ist nicht, sich zu verbessern, sondern aufzuhören, sich die Annahme zu verdienen.",
+        "3": "Im Selbstverhältnis-Tableau trägt Rogers die reine Annahme-Position — anders als im Selbst-Tableau, wo seine Aktualisierungstendenz die Frage nach dem Kern beantwortet, und anders als in Wandlung und Begegnung, wo der Akzent auf der heilenden Beziehung liegt. Hier zählt allein die Haltung des Menschen zu sich selbst: Das Selbst ist für Rogers eine Gabe, kein Werk. Es ist schon da, organisch, wachstumsfähig — man muss es nicht herstellen, sondern ihm die Erlaubnis geben, zu sein. Damit besetzt Rogers die Ecke Annehmen × Gabe und steht im schärfsten Gegensatz zu Nietzsche: Wo dieser im Sich-Annehmen eine Kapitulation sieht, sieht Rogers darin die einzige Bedingung, unter der ein Mensch sich überhaupt verändern kann. Beide können nicht zugleich recht haben — und das Tableau löst den Streit nicht auf.",
+        "5": "Rogers' Position ist die einflussreichste und zugleich umstrittenste des Tableaus, weil sie eine Voraussetzung macht, die andere Stimmen bestreiten: dass im Menschen etwas Gutes angelegt ist, dem man trauen kann. Metzinger fragt von außen, was da eigentlich wachse, wenn es kein Selbst gebe; Nietzsche fragt von innen, ob das Vertrauen in den Organismus nicht nur die Selbstzufriedenheit adle. Rogers' Antwort liegt nicht in einer Metaphysik, sondern in einer Beobachtung: Menschen, die sich angenommen fühlen, ändern sich — nicht weil man sie dazu treibt, sondern weil die Annahme die Blockade löst, die das Wachstum aufhielt. Das ist die paradoxe Pointe, die ihn mit Kabat-Zinn verbindet: Erst das Aufhören, an sich zu arbeiten, macht Veränderung möglich. Ob das eine tiefe Wahrheit über die menschliche Natur ist oder ein optimistischer Sonderfall, der bei schwerer Beschädigung versagt, bleibt die offene Frage hinter seiner Stimme."
+      },
+      "lectio_brief": "Rogers traut dem, was in dir schon angelegt ist. Wachstum, sagt er, braucht keine Korrektur, sondern Annahme — die Erlaubnis, zu sein, was du bist, ohne sie dir verdienen zu müssen. Wer sich nur unter Bedingungen annimmt, leidet an der Kluft zwischen dem, was er erlebt, und dem, was er sein zu müssen glaubt. Die heilsame Wendung ist nicht, sich zu bessern, sondern aufzuhören, sich die Annahme zu verdienen."
+    },
+    {
+      "id": "marc-aurel",
+      "name": "Marc Aurel",
+      "lifespan": "121–180 n. Chr.",
+      "firstLevel": 2,
+      "schoolId": "stoa",
+      "x": 30,
+      "y": 70,
+      "related_topics": [
+        "ethik",
+        "lebenskunst"
+      ],
+      "versions": {
+        "3": "Im Selbstverhältnis-Tableau besetzt Marc Aurel die Ecke Annehmen × Gabe — anders als in der Ethik, wo er die stoische Tugendposition trägt, und anders als in der Lebenskunst, wo seine Gelassenheit gegen Aristoteles' soziale Eudaimonie steht. Hier zählt die Haltung zur eigenen Natur: Sie ist gegeben, vernünftig geordnet, im Kern gut — man muss sie nicht erschaffen, sondern ihr gemäß leben. Damit steht die Stoa nahe bei Rogers (das Selbst ist eine Gabe, der man trauen kann), trennt sich aber in einem Punkt: Wo Rogers auf das organische Wachstum vertraut, das von selbst geschieht, verlangt die Stoa die tägliche Übung am Urteil. Die Annahme ist bei Marc Aurel kein Geschehenlassen, sondern eine Disziplin — was ihn leicht nach unten, Richtung Errungen, zieht und ihn von der reinen Gabe-Position unterscheidet.",
+        "5": "Marc Aurels Position zeigt auf der höchsten Stufe ihre Spannung mit dem Rest des Tableaus: Die stoische Annahme der eigenen Natur ruht auf einer Voraussetzung, die fast keine andere Stimme teilt — dass die Natur, auch die eigene, vernünftig geordnet und im Grund gut sei. Nimmt man diese Voraussetzung weg, wird die gelassene Annahme zur bloßen Fügung. Nietzsche hat genau hier angesetzt: Die stoische Gelassenheit sei eine vornehme Form der Schwäche, ein Sich-Abfinden, das sich als Weisheit ausgibt. Die Stoa antwortet, dass die Unterscheidung zwischen dem Eigenen und dem Fremden gerade die Freiheit sichert, die Nietzsche sucht — nur ohne dessen Pathos der Steigerung. Ob das stoische Annehmen die reifste Haltung zum Selbst ist oder eine, die zu früh aufhört zu fragen, bleibt zwischen beiden offen.",
+        "2": "Die Stoa unterscheidet, was in deiner Macht steht und was nicht — und wendet das auf dich selbst an. Vieles an dir hast du nicht gewählt: dein Temperament, deine Herkunft, die ersten Regungen von Furcht oder Zorn. Marc Aurel rät, dies gelassen anzunehmen, statt mit der eigenen Natur zu hadern. Aber die Annahme ist keine Resignation: Was in deiner Macht steht — deine Urteile, deine Haltung —, daran sollst du täglich arbeiten. Das Selbst ist hier eine Gabe der Natur, an der man eine bestimmte, vorgesehene Arbeit verrichtet. Du nimmst an, was du bist, und formst nur das, was sich formen lässt."
+      },
+      "lectio_brief": "Manches an dir liegt in deiner Macht, das meiste nicht. Marc Aurel zieht daraus die Haltung zum eigenen Selbst: Nimm an, was du nicht gewählt hast — dein Temperament, deine ersten Regungen —, und arbeite nur an dem, was sich ändern lässt, deinen Urteilen. Die eigene Natur ist eine Gabe, vernünftig geordnet; man hadert nicht mit ihr, man lebt ihr gemäß. Das ist Annahme, aber Annahme als tägliche Übung."
+    },
+    {
+      "id": "kohut",
+      "name": "Heinz Kohut",
+      "lifespan": "1913–1981",
+      "firstLevel": 3,
+      "schoolId": "humanistische-psychologie",
+      "x": 25,
+      "y": 74,
+      "related_topics": [
+        "das-selbst"
+      ],
+      "versions": {
+        "3": "Kohut beschreibt, woher die Haltung zu sich selbst kommt — und seine Antwort ist: von außen, früh, lange bevor man wählen konnte. Das Kind braucht [[Selbstobjekte:in Kohuts Theorie die frühen Bezugspersonen, die das Kind bestätigen, bewundern lassen und tragen — Voraussetzung dafür, dass sich ein stabiles Selbstgefühl bildet]] — Menschen, die es bewundernd spiegeln, die es idealisieren darf, die es halten. Wie ein Mensch später zu sich steht — ob mit Wohlwollen oder mit Härte —, ist die Spur dieser frühen Spiegelung. Das Selbstverhältnis ist damit eine Gabe im strengsten Sinn: empfangen, nicht erarbeitet. Wer früh getragen wurde, trägt sich selbst; wo die Spiegelung fehlte, bleibt ein brüchiges Verhältnis zu sich, das auch der erwachsene Wille nicht einfach umstellen kann.",
+        "4": "Im Selbstverhältnis-Tableau besetzt Kohut die Ecke Annehmen × Gabe, dicht bei Rogers — anders als im Selbst-Tableau, wo seine Frage lautet, wie das Selbst überhaupt entsteht. Hier liegt der Akzent auf der Herkunft der Haltung: Selbstannahme ist nicht in erster Linie eine Entscheidung, sondern ein Erbe. Das schärft die Gabe-Position über Rogers hinaus: Bei Rogers ist die Annahme ein eingebauter Zug, der sich entfalten will; bei Kohut ist sie das Resultat dessen, was andere einem entgegengebracht haben. Damit stellt Kohut eine unbequeme Frage an das ganze Tableau: Wenn die Fähigkeit, sich anzunehmen, selbst von früher Spiegelung abhängt — ist dann die Aufforderung, sich anzunehmen, überhaupt an den Willen adressierbar? Oder verlangt sie etwas, das man entweder mitbekommen hat oder nicht?",
+        "5": "Kohuts Stimme legt auf der höchsten Stufe eine Grenze des ganzen Tableaus frei. Annehmen und Überwinden, Gabe und Werk — all diese Haltungen unterstellen ein Subjekt, das wählen kann, wie es zu sich steht. Kohut zeigt, dass diese Wahlfreiheit selbst eine Voraussetzung hat, die nicht jeder gleichermaßen besitzt: ein früh genug getragenes Selbstgefühl. Damit steht er quer zu Nietzsches Selbstüberwindung (die einen tragfähigen Willen voraussetzt, den nicht jeder hat) und relativiert zugleich Rogers' Optimismus (die Aktualisierungstendenz braucht ein Klima, das vielen gefehlt hat). Die Therapie ist für Kohut der Ort, an dem versäumte Spiegelung nachgeholt werden kann — ein zweiter Anlauf auf eine Gabe, die beim ersten Mal ausblieb. Ob ein Selbstverhältnis, das früh beschädigt wurde, später wirklich neu gegründet werden kann, ist die hoffnungsvolle und ungesicherte Annahme hinter seiner Praxis."
+      },
+      "lectio_brief": "Wie du zu dir stehst, hast du dir nicht ausgesucht. Kohut zeigt: Das Kind braucht Spiegelung — Menschen, die es bewundernd ansehen, die es tragen —, um überhaupt ein Selbstgefühl zu bilden. Wer früh getragen wurde, trägt sich später selbst; wo das fehlte, bleibt ein brüchiges Verhältnis zu sich. Selbstannahme ist dann kein Entschluss, sondern ein Erbe. Und die offene Frage ist, ob sich ein solches Erbe später noch nachholen lässt."
+    },
+    {
+      "id": "kabat-zinn",
+      "name": "Jon Kabat-Zinn",
+      "lifespan": "1944–",
+      "firstLevel": 2,
+      "schoolId": "achtsamkeitsbasierte-verfahren",
+      "x": 22,
+      "y": 30,
+      "related_topics": [
+        "wandlung"
+      ],
+      "versions": {
+        "3": "Im Selbstverhältnis-Tableau besetzt Kabat-Zinn die Ecke Annehmen × Errungen und ist damit eine Stimme, die das Feld vor dem Zusammenfallen bewahrt: Er nimmt sich an wie Rogers, aber er hält dieses Annehmen für ein Können, nicht für eine Gabe. Wo Rogers darauf vertraut, dass das Wachstum von selbst geschieht, sobald die Annahme da ist, setzt Kabat-Zinn die Annahme selbst als Übung an — sie ist das Ergebnis von Praxis, nicht ihre Voraussetzung. Damit steht er zwischen den Polen: gegen Nietzsche, weil er nichts erzwingen oder steigern will; gegen Rogers, weil ihm Annahme nicht zufällt, sondern abverlangt wird. Die nicht-wertende Aufmerksamkeit ist das, was Rogers' wertschätzende Haltung nach innen wendet — nur dass man sie sich nicht schenken lassen, sondern selbst herstellen muss.",
+        "5": "Kabat-Zinn ist die Stimme, die den Grundstreit des Tableaus nicht entscheidet, sondern unterläuft. Annehmen oder Überwinden — die Frage setzt voraus, dass man zu seinem Selbst eine wertende Stellung beziehen müsse. Die Achtsamkeit bietet eine vierte Möglichkeit an: das Selbst weder annehmen noch überwinden, sondern beobachten, ohne Urteil. Das ist kein Ausweichen, sondern eine eigene Wette darüber, worauf es ankommt — nicht auf den Inhalt des Selbst und nicht auf seine Verbesserung, sondern auf die Lockerung der Identifikation mit ihm. Hier rückt Kabat-Zinn nah an den Buddhismus, aus dem seine Praxis stammt: Wenn das Beobachten lange genug geübt wird, beginnt die Frage ›wie soll ich zu mir stehen?‹ ihre Dringlichkeit zu verlieren — weil das feste Ich, zu dem man Stellung beziehen müsste, im Beobachten durchlässig wird. Die Übung führt an die Grenze, an der das Tableau selbst sich auflöst.",
+        "2": "Kabat-Zinn teilt Rogers' Annahme — aber bei ihm ist sie nichts, was man hat, sondern etwas, das man übt. [[Achtsamkeit:das absichtsvolle, nicht-wertende Aufmerken auf das, was im gegenwärtigen Augenblick geschieht — bei Kabat-Zinn eine trainierbare Fähigkeit, kein Gemütszustand]] heißt, dem eigenen Erleben — den Gedanken, Gefühlen, dem Schmerz — zu begegnen, ohne sofort zu urteilen oder zu reagieren. Das Selbstverhältnis ist hier weder Annahme dessen, was schon gut ist, noch Arbeit an einem besseren Ich, sondern eine dritte Bewegung: das nicht-wertende Beobachten dessen, was ohnehin da ist. Diese Haltung fällt niemandem zu — sie entsteht durch Wiederholung, durch Sitzen, durch tägliche Übung."
+      },
+      "lectio_brief": "Kabat-Zinn nimmt sich an wie Rogers — aber Annahme ist für ihn kein Geschenk, sondern eine Übung. Achtsamkeit heißt, dem eigenen Erleben zu begegnen, ohne zu urteilen, ohne zu reagieren. Nicht das Selbst annehmen, wie es ist, und nicht es überwinden, sondern es beobachten, bis die Frage, wie man zu ihm stehen soll, ihre Schwere verliert. Das fällt niemandem zu. Man sitzt dafür."
+    },
+    {
+      "id": "ifs",
+      "name": "Internal Family Systems",
+      "lifespan": "1990er –",
+      "firstLevel": 3,
+      "schoolId": "integrative-psychotherapie",
+      "x": 35,
+      "y": 40,
+      "related_topics": [
+        "das-selbst"
+      ],
+      "versions": {
+        "3": "IFS unterläuft die Frage des Tableaus auf eine zweite Weise. ›Wie soll ich zu mir stehen?‹ unterstellt ein einzelnes Ich, das die Haltung einnimmt. Richard Schwartz vertritt das Modell, dass im Inneren viele [[Teile:in Schwartz' Modell die inneren Anteile mit eigenen Aufgaben — Manager, die kontrollieren, Feuerwehrleute, die in Krisen ablenken, und Verbannte, die verletzte junge Anteile tragen]] leben, jeder mit eigener Geschichte und eigenem Anliegen. Die Frage ist dann nicht, wie ich mich zu einem Ganzen verhalte, sondern wie die Teile miteinander umgehen. An die Stelle von Annehmen oder Überwinden tritt eine dritte Bewegung: moderieren — den Teilen aus einem ruhigen Zentrum, dem [[Self:bei Schwartz das gelassene innere Zentrum aus Klarheit, Mitgefühl und Neugier, von dem aus den Teilen begegnet wird — nicht selbst ein Teil]] heraus, mit Neugier und Mitgefühl begegnen, statt sie anzunehmen oder zu überwinden.",
+        "4": "Im Selbstverhältnis-Tableau ist IFS der zweite Quersteller — anders als im Selbst-Tableau, wo das Modell mit Vedanta und der kontemplativen Tradition um die Frage des unzerstörbaren Kerns ringt. Hier zählt nicht, ob das Self real ist, sondern was die Vielzahl der Teile mit der Frage macht: Sie löst die Einheit des Subjekts auf, an die annehmen und überwinden gleichermaßen gebunden sind. Darum sitzt IFS zwar in der Ecke Annehmen × Errungen — die Self-Haltung ist annehmend, und ihr Zugang wird in der Arbeit errungen —, aber seine eigentliche Wirkung ist quer: Es macht aus der Zwei-Pole-Frage eine Drei-Wege-Frage. Wo Rogers das eine Selbst annimmt und Nietzsche das eine Selbst überwindet, fragt IFS, wer ›ich‹ überhaupt ist, der annehmen oder überwinden soll — und antwortet: eine innere Vielzahl, die moderiert werden will. Schwartz vertritt das als Modell, nicht als Tatsache; die phänomenologische Vorsicht gehört zur Sache.",
+        "5": "Auf der höchsten Stufe zeigt sich, wie IFS und der Buddhismus die Achse von entgegengesetzten Seiten unterlaufen — und genau darin die Stärke des Tableaus bilden. Der Buddhismus löst das Selbst nach unten auf: kein Kern, nur Strom, die Frage verliert ihren Gegenstand. IFS vervielfältigt es nach innen: nicht keins, sondern viele, die Frage verliert ihre Einzahl. Beide treffen die Voraussetzung der übrigen Stimmen — dass da ein einzelnes Selbst sei, zu dem man Stellung bezieht —, aber von verschiedenen Richtungen. Was IFS dabei eigentümlich macht: Es behält im Self ein Zentrum, von dem aus die Moderation geschieht, und steht damit der kontemplativen Wahres-Selbst-Position näher, als sein Quersteller-Charakter vermuten lässt. Die offene Frage, die es zurücklässt: Ob das Self, das die Teile leitet, nicht doch wieder das eine Selbst ist, das die Frage gesucht hatte — nur unter anderem Namen."
+      },
+      "lectio_brief": "Wer ist ›ich‹, der zu sich stehen soll? Schwartz vertritt das Modell, dass in dir viele Teile leben — Beschützer, Verbannte, Manager —, jeder mit eigener Geschichte. Dann ist die Frage nicht, wie du dich zu einem Ganzen verhältst, sondern wie die Teile miteinander umgehen. Nicht annehmen, nicht überwinden, sondern moderieren: ihnen aus einem ruhigen Zentrum mit Mitgefühl begegnen. Das Self leitet keine Einheit. Es leitet eine Familie."
+    },
+    {
+      "id": "buddhismus",
+      "name": "Buddhismus",
+      "lifespan": "~500 v. Chr. –",
+      "firstLevel": 1,
+      "schoolId": "buddhismus",
+      "x": 15,
+      "y": 52,
+      "related_topics": [
+        "das-selbst"
+      ],
+      "versions": {
+        "1": "Der Buddhismus stellt die Frage des Tableaus auf den Kopf. ›Wie soll ich zu mir selbst stehen?‹ setzt voraus, dass es ein Selbst gibt, zu dem man Stellung beziehen könnte. Genau das bestreitet die Lehre vom [[Anatta:Pali für ›Nicht-Selbst‹ — die Einsicht, dass das, was wir ›Ich‹ nennen, kein fester Kern ist, sondern ein wechselnder Strom von Empfindungen, Wahrnehmungen und Gedanken]]. Es gibt kein bleibendes Ich, das man annehmen oder überwinden müsste — nur ein Muster, das sich von Augenblick zu Augenblick neu bildet. Wer das sieht, dem löst sich die ganze Anstrengung des Selbstverhältnisses, das Ringen um die richtige Haltung zu sich, in dem Maße auf, wie das feste Gegenüber verschwindet, mit dem man rang.",
+        "3": "Der Buddhismus ist im Tableau der Quersteller, der die Achse nicht von einem Pol her, sondern von unten unterläuft: Er bestreitet, dass es das Subjekt gibt, das annehmen oder überwinden soll. Darum sitzt er nicht in einem Quadranten — er steht quer zu beiden Achsen. Annehmen, Überwinden, Vergeben, Aushalten: All das sind Weisen, sich zu einem Selbst zu verhalten, das man für gegeben hält. Fällt die Annahme eines festen Ich weg, fällt auch die Dringlichkeit der Frage. Das ist nicht dasselbe wie Selbstannahme — Rogers nimmt ein Selbst an, der Buddhismus zeigt, dass keines da ist, das angenommen werden müsste. Und es ist nicht Selbstüberwindung — Nietzsche formt ein Selbst, der Buddhismus löst die Fiktion eines zu formenden Selbst auf. Die Befreiung liegt nicht in der richtigen Haltung zum Selbst, sondern im Nachlassen des Festhaltens an einem Selbst überhaupt.",
+        "5": "Auf der höchsten Stufe zeigt sich, wie radikal der Quersteller ist: Er entzieht dem Tableau nicht eine Antwort, sondern seine Frage. Die übrigen Stimmen streiten darüber, ob das Selbst gegeben oder gemacht, anzunehmen oder zu überwinden sei — der Buddhismus antwortet, dass dieser Streit auf einer Verwechslung beruht, dem Festhalten an einem Substanzkern, den es nicht gibt. Damit steht er in nächster Nähe zu Kabat-Zinn, dessen Achtsamkeitspraxis aus eben dieser Tradition stammt und an deren Grenze führt, wo das beobachtete Ich durchlässig wird. Und er steht im schärfsten Gegensatz zur kontemplativen Wahres-Selbst-Position, die unter den Konstruktionen einen unzerstörbaren Kern findet, wo der Buddhismus nur weiteres Fließen sieht — derselbe Streit, der ihn im Selbst-Tableau von Vedanta trennt, hier auf die Haltungsfrage gewendet. Ob die Auflösung des Selbst eine Befreiung ist oder ein Verlust dessen, der frei werden sollte, bleibt die Frage, die der Buddhismus offen zurücklässt."
+      },
+      "lectio_brief": "Wie soll ich zu mir selbst stehen? Der Buddhismus fragt zurück: zu welchem Selbst? Was du dein Ich nennst, ist kein Ding, sondern ein Strom — von Augenblick zu Augenblick neu, ohne bleibenden Kern. Es gibt kein festes Selbst, das man annehmen oder überwinden müsste. Und in dem Maß, wie du das siehst, verliert die Frage, mit der du gekommen bist, ihre Schwere."
+    },
+    {
+      "id": "hadot",
+      "name": "Pierre Hadot",
+      "lifespan": "1922–2010",
+      "firstLevel": 3,
+      "schoolId": "lebensphilosophie",
+      "x": 64,
+      "y": 70,
+      "related_topics": [
+        "lebenskunst"
+      ],
+      "versions": {
+        "3": "Hadot liest die antike Philosophie als ein System [[geistiger Übungen:Hadots Begriff (exercices spirituels) für die praktischen Verfahren — Meditation, Selbstprüfung, Blick aufs Ganze —, mit denen die antiken Schulen das eigene Selbst umformten]], mit denen ein Mensch sich selbst umformt. Das verlangt Arbeit, Anstrengung, ein Über-sich-Hinausgehen — insofern steht Hadot auf der Überwindungs-Seite. Aber das Ziel dieser Überwindung ist kein selbstgemachtes Werk: Es ist die Einordnung des kleinen Ich in ein größeres Ganzes — die Natur, den Kosmos, die Vernunft, die schon da sind. Man überschreitet das enge Selbst, um zu etwas zu finden, das man nicht erfindet, sondern dem man sich angleicht. Darum sitzt Hadot in der Ecke Überwinden × Gabe: tätige Selbstüberschreitung hin zu einer vorgegebenen Ordnung.",
+        "5": "Hadots Position gewinnt ihre Schärfe im Tableau aus seinem Streit mit Foucault, der dieselbe antike Selbstsorge ganz anders liest. Für Foucault sind die geistigen Übungen Selbst-Gestaltung ohne überindividuelles Ziel — man macht aus dem eigenen Leben ein Werk. Für Hadot sind sie Selbst-Überschreitung — man geht über sich hinaus, um in einem größeren Ganzen aufzugehen. Genau diese Differenz spannt die rechte Hälfte des Tableaus auf: dieselbe Bewegung der Überwindung, einmal hin zu einem Werk (Foucault, Nietzsche, unten), einmal hin zu einer Gabe (Hadot, Rohr, oben). Hadot teilt damit mit der kontemplativen Wahres-Selbst-Position die Grundfigur — anstrengen, um zu finden, nicht um zu machen —, bleibt aber, anders als Rohr, im philosophischen statt im theologischen Register. Ob die Selbstüberschreitung zu einer realen Ordnung führt oder zu einer schönen, die man sich nur leiht, ist die Frage, die Hadot offen lässt und Foucault verneint."
+      },
+      "lectio_brief": "Antike Philosophie, sagt Hadot, war keine Theorie, sondern Übung — geistige Übungen, mit denen man sich selbst umformte. Das verlangt Anstrengung, ein Über-sich-Hinausgehen. Aber das Ziel ist kein selbstgemachtes Ich: Man überschreitet das enge Selbst, um in etwas Größerem aufzugehen — Natur, Vernunft, Kosmos —, das schon da ist. Nicht erschaffen, sondern sich einordnen. Überwindung hin zu einer Gabe."
+    },
+    {
+      "id": "foucault",
+      "name": "Michel Foucault",
+      "lifespan": "1926–1984",
+      "firstLevel": 2,
+      "schoolId": "lebensphilosophie",
+      "x": 70,
+      "y": 30,
+      "related_topics": [
+        "lebenskunst"
+      ],
+      "versions": {
+        "2": "Foucault zieht die radikalste Konsequenz auf der Erschaffungs-Seite: Es gibt kein wahres Selbst, das unter den Schichten darauf wartet, freigelegt zu werden. Was du bist, ist das Ergebnis von Praktiken — von [[Selbsttechniken:Foucaults Begriff (technologies du soi) für die Verfahren, mit denen Menschen sich selbst formen — Übungen, Geständnisse, Disziplinen, durch die ein Subjekt überhaupt erst entsteht]], durch die ein Mensch sich überhaupt erst zu einem bestimmten macht. Damit verschiebt sich die Frage des Tableaus: Nicht ›wie soll ich zu meinem Selbst stehen‹, sondern ›welche Praktiken formen welche Art von Subjekt‹. Das Selbstverhältnis ist kein Verhältnis zu einem Vorgefundenen, sondern eine [[Ästhetik der Existenz:Foucaults Idee, das eigene Leben wie ein Material zu behandeln, dem man bewusst eine Form gibt — ohne Vorbild, das man nur nachzeichnen müsste]] — das eigene Leben als Werk, dem man eine Form gibt, ohne dass ein wahres Vorbild es schon festlegt.",
+        "3": "Im Selbstverhältnis-Tableau besetzt Foucault die Ecke Überwinden × Errungen, dicht bei Nietzsche — anders als im Lebenskunst-Tableau, wo er die Meta-Stimme der Weltzuwendung ist. Hier ist er Nietzsches systematischer Erbe in einem Punkt: Das Selbst ist Werk, nicht Fund. Wo Nietzsche das aus dem Pathos der Selbstüberwindung gewinnt, gewinnt Foucault es nüchtern-historisch — er zeigt an den antiken Quellen, dass Selbstformung immer schon Praxis war, nicht Selbstfindung. Damit ist er der schärfste Gegenpol zur ganzen oberen rechten Hälfte: Gegen Hadot, mit dem ihn der Streit verbindet, sagt Foucault, dass die Selbstüberschreitung kein vorgegebenes Ganzes erreicht, sondern nur eine selbstgesetzte Form. Gegen Rohr und die kontemplative Tradition bestreitet er, dass es ein Wahres Selbst zu finden gäbe. Das Selbst ist durch und durch errungen — und genau das ist seine Freiheit.",
+        "5": "Foucaults Position liefert dem Tableau seine selbstreflexive Klammer und zugleich seine schärfste Konsequenz. Wenn das Selbst restlos Produkt von Praktiken ist, dann ist auch die Haltung, die man zu sich einnimmt — Annehmen, Überwinden, Moderieren —, selbst eine Selbsttechnik, durch die ein bestimmtes Subjekt entsteht. Das relativiert das ganze Feld: Keine der Haltungen ist die wahre, weil es kein wahres Selbst gibt, an dem sie sich messen ließe; jede formt nur ein anderes Subjekt. Darin trifft sich Foucault überraschend mit dem Buddhismus — auch dort kein Substanzkern — und trennt sich zugleich scharf von ihm: Wo der Buddhismus aus der Leere das Loslassen folgert, folgert Foucault die Gestaltung. Ob die Freiheit, sich zu erschaffen, eine Befreiung ist oder eine Last ohne Maßstab — die gleiche Frage, die Sartres Existenzialismus offen ließ —, bleibt auch bei Foucault unentschieden."
+      },
+      "lectio_brief": "Es gibt kein wahres Selbst unter den Schichten, sagt Foucault — nur eines, das du erschaffst. Was du bist, ist das Ergebnis von Praktiken, von Selbsttechniken, durch die ein Subjekt überhaupt erst entsteht. Die Frage ist dann nicht, wie du zu deinem Selbst stehst, sondern welche Übungen welche Art von Mensch formen. Dein Leben wird zum Material, dem du Form gibst — ohne Vorbild, das du nur nachzeichnen müsstest. Selbst durch und durch errungen."
+    },
+    {
+      "id": "nietzsche",
+      "name": "Friedrich Nietzsche",
+      "lifespan": "1844–1900",
+      "firstLevel": 1,
+      "schoolId": "lebensphilosophie",
+      "x": 82,
+      "y": 18,
+      "related_topics": [
+        "existenzialismus",
+        "lebenskunst"
+      ],
+      "versions": {
+        "1": "Nietzsche traut der Selbstannahme nicht. Wer sagt ›ich nehme mich, wie ich bin‹, hat sich für ihn meist nur mit dem Mittelmaß abgefunden, das die Umstände aus ihm gemacht haben. Sein Gegenwort heißt [[Selbstüberwindung:bei Nietzsche nicht Selbstunterdrückung, sondern das Über-sich-Hinauswachsen — der Mensch als etwas, das überwunden werden soll, nicht als Zustand, der bewahrt wird]]: Du bist nicht da, um dich zu bewahren, sondern um aus dir etwas zu machen, das es noch nicht gibt. ›Werde, der du bist‹ — der Satz klingt nach Selbstfindung, meint aber das Gegenteil von Ruhe: Das Selbst ist keine Gabe, die man freilegt, sondern eine Aufgabe, an der man sich abarbeitet. Wer sich annimmt, bevor er sich geformt hat, verschenkt die einzige Freiheit, die er hat.",
+        "3": "Im Selbstverhältnis-Tableau trägt Nietzsche den schärfsten Gegenpol zur therapeutischen Annahme — anders als im Existenzialismus, wo er die Sinn-Diagnose stellt, und anders als in der Lebenskunst, wo sein amor fati gegen die stoische Gelassenheit steht. Hier richtet sich seine Spitze gegen die Idee, das Selbst sei etwas Vorhandenes, das man wertschätzen oder freilegen könne. Für Nietzsche gibt es kein wahres Selbst unter dem Geformten — es gibt nur das, was du aus dir machst. Damit besetzt er die Ecke Überwinden × Errungen: Das Selbstverhältnis ist kein Empfangen, sondern ein Bilden, und sein Maß ist nicht das Wohlbefinden, sondern die Gestalt, die dabei entsteht. Rogers' bedingungslose Wertschätzung wäre ihm der Anfang des Niedergangs: eine Erlaubnis, sich nicht mehr zu steigern. Der Streit zwischen beiden ist im Tableau nicht zu schlichten — er ist die Achse selbst.",
+        "5": "Nietzsches Position ist die unbequemste des Tableaus, weil sie die Voraussetzung fast aller anderen Stimmen bestreitet: dass Annahme heilsam sei. Er kennt den Preis seiner Forderung — die Selbstüberwindung ist kein Programm für jeden, und sie kann scheitern, ins Selbstquälerische kippen, sich mit der Verachtung verwechseln, die sie überwinden wollte. Genau diese Gefahr macht ihn unentbehrlich: Ohne Nietzsche kippt das Tableau in den Konsens, dass Selbstannahme einfach gut sei. Mit ihm bleibt die Frage offen, ob ein Selbstverhältnis, das sich zufriedengibt, nicht eine Form der Aufgabe ist. Foucault wird diese Linie aufnehmen — das Selbst als Werk, nicht als Fund —, aber ohne Nietzsches Härte gegen das Bestehende. Wer Nietzsche zu schnell als Selbstoptimierer liest, verfehlt ihn: Es geht nicht um ein besseres Ich, sondern um die Weigerung, das Ich für fertig zu erklären."
+      },
+      "lectio_brief": "Nimm dich an, wie du bist? Nietzsche hört darin eine Kapitulation. Der Mensch, sagt er, ist nichts, das man bewahrt — er ist etwas, das überwunden werden soll. ›Werde, der du bist‹ ist keine Einladung zur Ruhe, sondern zur Arbeit an sich: Das Selbst ist keine Gabe, die unter dem Geformten liegt, sondern eine Gestalt, die du erst hervorbringst. Wer sich zu früh annimmt, hört zu früh auf."
+    },
+    {
+      "id": "almaas",
+      "name": "A.H. Almaas",
+      "lifespan": "1944–",
+      "firstLevel": 4,
+      "schoolId": "essentielle-psychologie",
+      "x": 40,
+      "y": 72,
+      "related_topics": [
+        "das-selbst"
+      ],
+      "versions": {
+        "4": "Almaas vertieft die Gabe-Seite an der Stelle, an der sie sich gegen den Verdacht wehren muss, bloße Behauptung zu sein. Seine These im Diamond Approach: Unter den Ego-Schichten liegt die [[Essenz:bei Almaas der unzerstörbare Kern der Person — nicht ein abstrakter Zustand, sondern eine Vielzahl direkt erfahrbarer Qualitäten wie Liebe, Stärke, Frieden, Wille]], und sie ist nicht zu erschaffen, sondern freizulegen. Damit steht er bei Rohr und der kontemplativen Tradition — das Selbst als Gabe —, verschiebt aber den Akzent: Die Essenz wird nicht geglaubt, sondern berührt. Man legt sie frei, indem man die Ego-Schichten mit Neugier durchleuchtet, statt sie zu bekämpfen. Das ist eine annehmende Bewegung (kein Überwinden im Nietzsche-Sinn), aber sie verlangt Arbeit — darum sitzt Almaas zwischen der reinen Gabe oben und der erarbeiteten Annahme unten links. Seine Pointe für das Tableau: Die Gabe ist nicht nur zu vertrauen (Rogers) oder zu freizulegen durch Überwindung (Rohr), sondern direkt erfahrbar — wenn man genau genug hinschaut.",
+        "5": "Auf der höchsten Stufe ist Almaas der Test, ob die Übersetzung zwischen psychologischer und spiritueller Diktion gelingt — und damit eine Spezialisierung, die erst Sinn ergibt, wenn der Grundstreit des Tableaus schon steht. Er teilt mit IFS die Topologie ›Schichten plus Kern‹, mit Rohr die Annahme eines unzerstörbaren Wahren, mit Kabat-Zinn die nicht-bekämpfende Aufmerksamkeit. Aber er insistiert auf etwas, das die anderen offenlassen: dass die Essenz konkret erfahrbar ist, als Qualität im Körper, nicht als Glaubenssatz und nicht als bloßes Modell. Genau hier wird er angreifbar — Metzinger würde fragen, ob diese ›Berührung der Essenz‹ nicht selbst eine besonders überzeugende Konstruktion ist, ein Erleben ohne Erlebten. Almaas hätte darauf keine Beweis-Antwort, nur die Einladung, selbst hinzuschauen. Ob das eine Erkenntnis ist oder ein besonders tiefes Sich-Täuschen, bleibt die Frage, an der seine Position und die naturalistische Außenanfrage sich scheiden."
+      },
+      "lectio_brief": "Unter dem, was du dir aufgebaut hast, liegt nach Almaas eine Essenz — nicht ein abstrakter Zustand, sondern erfahrbare Qualitäten: Liebe, Stärke, Frieden, Wille. Du musst sie nicht erschaffen und nicht glauben, sondern freilegen, indem du die Schichten mit Neugier durchleuchtest statt sie zu bekämpfen. Eine annehmende Bewegung, die dennoch Arbeit verlangt — und die darauf besteht, dass das Eigentliche berührbar ist, nicht bloß behauptet."
+    },
+    {
+      "id": "metzinger",
+      "name": "Thomas Metzinger",
+      "lifespan": "1958–",
+      "firstLevel": 5,
+      "schoolId": "neurophilosophie",
+      "x": 48,
+      "y": 15,
+      "related_topics": [
+        "das-selbst",
+        "philosophie-des-geistes"
+      ],
+      "versions": {
+        "5": "Metzinger tritt auf der Syntheseebene als die naturalistische Außenanfrage an das ganze Tableau heran — die Stimme, die nicht eine weitere Haltung zum Selbst anbietet, sondern fragt, ob die Frage ihren Gegenstand hat. Seine These: Niemand war je ein Selbst. Das Gehirn erzeugt ein [[Selbstmodell:in Metzingers Theorie die Repräsentation des eigenen Zustands, die das Gehirn erzeugt und die wir faelschlich für ein reales Ich halten — ein Modell ohne abgebildetes Ding]], das wir für ein Ich halten, weil wir seinen Modellcharakter nicht bemerken. Damit trifft Metzinger die Voraussetzung fast aller anderen Stimmen: Rogers' Aktualisierungstendenz, Nietzsches zu formendes Selbst, Almaas' Essenz, sogar das Self von IFS — sie alle setzen ein Subjekt, das es laut Metzinger gar nicht gibt. Er steht damit dem Buddhismus nahe (auch dort kein Substanzkern), aber von der entgegengesetzten Seite: nicht kontemplativ erfahren, sondern naturwissenschaftlich erschlossen. Wo der Buddhismus von oben in die Leere blickt, blickt Metzinger von unten, aus der Hirnforschung. Die Frage, die er offen zurücklässt: Wenn es kein Selbst gibt, zu dem man stehen könnte — ist die Sorge um das Selbstverhältnis dann gegenstandslos, oder bleibt sie als gelebte Erfahrung wahr, auch wenn ihr Gegenstand ein Modell ist? Metzinger selbst zieht die mildere Konsequenz: Wer versteht, dass das Selbst ein Modell ist, kann mit weniger defensivem Ego durch sein Leben gehen — eine Haltung, die der buddhistischen Gelassenheit ähnelt, ohne ihre Metaphysik zu teilen."
+      },
+      "lectio_brief": "Niemand war je ein Selbst, sagt Metzinger. Das Gehirn erzeugt ein Modell des eigenen Zustands, und wir halten es für ein Ich, weil wir nicht bemerken, dass es ein Modell ist. Dann hätte die Frage, wie man zu sich stehen soll, keinen festen Gegenstand — nur ein Modell, zu dem man Stellung bezieht. Metzinger zieht daraus keine Verzweiflung, sondern eine Erleichterung: Wer das durchschaut, trägt sein Ego weniger schwer."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "wahres-selbst",
+      "name": "Das Wahre Selbst",
+      "type": "axiom",
+      "primaryThinker": "rohr",
+      "firstLevel": 3,
+      "x": 70,
+      "y": 80,
+      "related_topics": [
+        "das-selbst"
+      ],
+      "versions": {
+        "3": "Die kontemplative Tradition macht eine Unterscheidung, die das Tableau quer durchschneidet: zwischen dem [[Falschen Selbst:die aus Rollen, Leistungen und Abwehr gebaute Identität — notwendig, aber nicht das Wesentliche]] und dem [[Wahren Selbst:in dieser Tradition das, was ein Mensch vor und unter allen Leistungen schon ist — als gegeben, nicht als gemacht gedacht]]. Sie verlangt beides zugleich: überwinden und empfangen. Das Falsche Selbst — die Fassade, die man sich erarbeitet hat — soll überwunden werden; aber nicht, um ein besseres Ich zu bauen, sondern um etwas freizulegen, das schon da ist. Darum besetzt diese Position die seltene Ecke Überwinden × Gabe: Die Bewegung ist Arbeit (Loslassen, Entleerung, [[Kenosis:griechisch ›Entleerung‹ — in der christlichen Mystik der Weg der Selbstentleerung, der das Wahre Selbst freilegt]]), aber ihr Ziel ist kein Werk, sondern ein Fund.",
+        "5": "Diese Stimme ist die paradoxeste des Tableaus, weil sie die beiden Achsen gegeneinander verschränkt, statt sich für einen Pol zu entscheiden. Gegen Nietzsche sagt sie: Du erschaffst dich nicht, du legst frei, was du vor allem Erschaffen schon bist. Gegen Rogers sagt sie: Annahme genügt nicht, das Falsche Selbst muss tatsächlich überwunden werden — es löst sich nicht durch Wertschätzung auf. Und gegen Kabat-Zinn: Das Beobachten ist nur der Anfang, am Ende steht nicht durchlässige Identifikation, sondern ein gefundenes Wesen. Die Tradition steht in struktureller Nähe zu IFS (das Self unter den Teilen) und zu Vedantas Atman (der Zeuge unter den Zuständen) — verschiedene Sprachen für dieselbe Topologie: ein Kern, der nicht gemacht, sondern entdeckt wird. Ob dieser Kern existiert oder ob er die tröstlichste Erfindung der Selbst-Geschichte ist, bleibt die Frage, an der sich diese Position und der Buddhismus unversöhnlich scheiden."
+      },
+      "lectio_brief": "Es gibt, sagt die kontemplative Tradition, ein Selbst unter dem Selbst: nicht das, was du aus Rollen und Leistungen gebaut hast, sondern das, was du vor allem Bauen schon bist. Der Weg dahin verlangt Arbeit — das Falsche Selbst muss losgelassen, entleert werden. Aber das Ziel ist kein Werk. Es ist ein Fund. Du erschaffst dich nicht. Du hörst auf, dir im Weg zu stehen."
+    },
+    {
+      "id": "selbstueberwindung",
+      "name": "Selbstüberwindung",
+      "type": "concept",
+      "primaryThinker": "nietzsche",
+      "firstLevel": 2,
+      "x": 80,
+      "y": 20,
+      "versions": {
+        "2": "Nietzsches Schlüsselbegriff für die Haltung zum eigenen Selbst: nicht sich bewahren, sondern über sich hinauswachsen. Selbstüberwindung ist nicht Selbstunterdrückung — es geht nicht darum, sich zu quälen oder Triebe zu ersticken, sondern darum, aus dem Vorgefundenen eine Gestalt zu formen, die es noch nicht gibt. Der Mensch ist für Nietzsche kein Zustand, den man annimmt, sondern ein Übergang. Das Konzept besetzt den äußersten Punkt der Überwinden-Seite und ist der direkte Widerpart zur Selbstannahme.",
+        "4": "Auf der höheren Stufe zeigt sich die Zweischneidigkeit des Begriffs. Selbstüberwindung kann die vornehmste Geste sein — der Wille, sich nicht mit dem Mittelmaß abzufinden — oder ihre Verkehrung: ein nie endendes Ungenügen, das sich mit der Selbstverachtung verwechselt, die es überwinden wollte. Nietzsche selbst hielt beide Möglichkeiten offen; er kannte die Last, die er empfahl. Im Tableau ist Selbstüberwindung darum kein Rezept, sondern eine Wette: dass die Weigerung, sich für fertig zu erklären, mehr Leben freisetzt, als sie kostet. Ob das stimmt, entscheidet sich nicht am Begriff, sondern am einzelnen Leben."
+      }
+    },
+    {
+      "id": "aktualisierungstendenz",
+      "name": "Aktualisierungstendenz",
+      "type": "axiom",
+      "primaryThinker": "rogers",
+      "firstLevel": 1,
+      "x": 20,
+      "y": 80,
+      "versions": {
+        "1": "Rogers' Grundannahme: In jedem Menschen wirkt ein eingebauter Zug zu Wachstum und Entfaltung — so wie eine Pflanze zum Licht strebt. Daraus folgt die Haltung zum eigenen Selbst: Man muss sich nicht reparieren oder umbauen, sondern die Bedingungen schaffen, unter denen dieser Zug sich entfalten kann. Selbstannahme ist hier kein Sich-Abfinden, sondern das Vertrauen, dass im Selbst etwas Gutes angelegt ist, dem man die Erlaubnis zum Wachsen geben kann.",
+        "3": "Die Aktualisierungstendenz ist das Axiom, auf dem die ganze Gabe-Seite des Tableaus ruht: Das Selbst ist nicht von Natur aus konfliktgesteuert oder mangelhaft, sondern grundsätzlich wachstumsorientiert. Leiden entsteht, wenn die Tendenz blockiert wird — etwa durch die Kluft zwischen dem organischen Erleben und dem Selbstbild, das man aufrechterhalten muss, um sich annehmbar zu finden. Die heilsame Haltung räumt die Blockade weg, statt eine Lösung zu liefern. Genau hier liegt der Streit mit der Überwinden-Seite: Wo Nietzsche fragt, ob dieses Vertrauen nicht die Selbstzufriedenheit adle, antwortet Rogers, die Aktualisierung sei beobachtbar — Menschen, die sich angenommen fühlen, wachsen, ob man dem Selbst nun traut oder nicht."
+      }
+    },
+    {
+      "id": "nicht-wertendes-gewahrsein",
+      "name": "Nicht-wertendes Gewahrsein",
+      "type": "method",
+      "primaryThinker": "kabat-zinn",
+      "firstLevel": 2,
+      "x": 22,
+      "y": 28,
+      "versions": {
+        "2": "Kabat-Zinns Praxis und zugleich seine Haltung zum Selbst: dem eigenen Erleben — Gedanken, Gefühlen, Empfindungen — aufmerksam zu begegnen, ohne es sofort zu bewerten, zu bekämpfen oder ihm zu folgen. Anders als die Annahme bei Rogers, die zufällt, und anders als die Überwindung bei Nietzsche, die antreibt, ist das Gewahrsein eine dritte Bewegung: weder annehmen noch überwinden, sondern beobachten. Und es ist eine Methode — etwas, das man übt, durch Sitzen, Wiederholung, tägliche Disziplin. Darum sitzt es auf der Errungen-Seite, obwohl seine Haltung annehmend ist.",
+        "4": "Auf der höheren Stufe zeigt das Gewahrsein seine unterlaufende Kraft. Die Frage des Tableaus — annehmen oder überwinden — setzt voraus, dass man zum Selbst eine wertende Stellung beziehen müsse. Das nicht-wertende Gewahrsein verweigert genau diese Wertung: Es nimmt das Selbst nicht an und überwindet es nicht, sondern lockert die Identifikation mit ihm. Damit ist es die methodische Brücke zum buddhistischen Quersteller — lange genug geübt, führt es an die Grenze, an der das feste Ich, zu dem man Stellung beziehen müsste, durchlässig wird. Die Methode trägt eine Wette in sich: dass nicht der Inhalt des Selbst zählt und nicht seine Verbesserung, sondern die Art, wie man bei ihm anwesend ist."
+      }
+    },
+    {
+      "id": "self-und-teile",
+      "name": "Self und Teile",
+      "type": "theory",
+      "primaryThinker": "ifs",
+      "firstLevel": 2,
+      "x": 37,
+      "y": 42,
+      "versions": {
+        "2": "Das Modell, das Richard Schwartz vertritt: Im Inneren leben viele Teile — Manager, die kontrollieren und planen, Feuerwehrleute, die in Krisen ablenken, und Verbannte, die verletzte junge Anteile tragen. Unter ihnen liegt das Self, ein ruhiges Zentrum aus Klarheit, Mitgefühl und Neugier, das selbst kein Teil ist. Die Theorie verschiebt die Frage des Tableaus: Nicht, wie ich mich zu einem Ganzen verhalte, sondern wie die Teile miteinander umgehen — und wie das Self sie moderiert, statt sie anzunehmen oder zu überwinden.",
+        "5": "Auf der höchsten Stufe ist Self und Teile die theoretische Gestalt des zweiten Querstellers. Die Theorie pluralisiert das Subjekt der Frage: Wenn ›ich‹ viele bin, dann ist die Haltung zum Selbst keine Zwei-Pole-Wahl mehr, sondern eine innere Moderation. Das ist die dritte Option neben Annehmen und Überwinden. Ihre Eigentümlichkeit — und ihre offene Flanke — ist das Self: ein Zentrum, das die Teile leitet und damit der kontemplativen Wahres-Selbst-Position näher steht, als der Quersteller-Charakter vermuten lässt. Die Frage, die das Modell offen lässt: Ob das Self, von dem aus moderiert wird, nicht doch wieder das eine Selbst ist, dessen Einheit IFS gerade bestritten hatte. Schwartz vertritt es als klinisch wirksames Modell, nicht als bewiesene Tatsache — die Brechung gehört zur Sache."
+      }
+    },
+    {
+      "id": "geistige-uebungen",
+      "name": "Geistige Übungen",
+      "type": "method",
+      "primaryThinker": "hadot",
+      "firstLevel": 3,
+      "x": 62,
+      "y": 68,
+      "versions": {
+        "3": "Hadots Begriff für die praktischen Verfahren der antiken Philosophie — Meditation über den Tod, Selbstprüfung am Abend, der Blick von oben auf das eigene kleine Leben im Ganzen des Kosmos. Sie sind eine Methode der Selbstumformung, aber mit einem besonderen Ziel: nicht ein selbstgemachtes Ich, sondern die Einordnung in eine Ordnung, die schon da ist. Geistige Übungen verlangen Arbeit (darum Überwinden) und richten sie auf etwas Vorgegebenes (darum Gabe). Sie sind das methodische Gegenstück zu Kabat-Zinns Gewahrsein — beide Übung, aber die eine löst die Identifikation, die andere ordnet das Ich in ein Größeres ein.",
+        "5": "Auf der höchsten Stufe markieren die geistigen Übungen die Bruchlinie zwischen Hadot und Foucault — und damit die Spannung der ganzen oberen rechten Ecke. Dieselbe Übung, dieselbe antike Quelle, zwei Deutungen: Für Hadot überschreitet man das Selbst, um in der Vernunft, der Natur, dem Kosmos aufzugehen; für Foucault gestaltet man es zu einem Werk ohne übergeordnetes Ziel. Die Methode entscheidet den Streit nicht — sie macht ihn nur scharf. Wer übt, überschreitet sich; ob er dabei etwas findet oder etwas macht, bleibt die Frage, die das Tableau in dieser Ecke offen hält."
+      }
+    },
+    {
+      "id": "aesthetik-der-existenz",
+      "name": "Ästhetik der Existenz",
+      "type": "concept",
+      "primaryThinker": "foucault",
+      "firstLevel": 3,
+      "x": 68,
+      "y": 32,
+      "versions": {
+        "3": "Foucaults Begriff für die Idee, das eigene Leben wie ein Material zu behandeln, dem man bewusst eine Form gibt — ohne ein wahres Vorbild, das man nur nachzuzeichnen hätte. Das Selbst ist hier kein Vorgefundenes, sondern ein Werk; die Haltung zu ihm ist die eines Gestalters, nicht eines Finders. Damit besetzt das Konzept die Errungen-Seite in ihrer nüchternsten Form: Wo Nietzsche aus Pathos formt, formt Foucault, weil es ohnehin nichts zu finden gibt. Selbstgestaltung ist kein Sollen, sondern die Konsequenz daraus, dass kein wahres Selbst existiert.",
+        "5": "Auf der höchsten Stufe wird die Ästhetik der Existenz zur selbstreflexiven Klammer des Tableaus. Wenn das Selbst restlos gestaltet ist, dann ist auch jede Haltung zu ihm — Annehmen, Überwinden, Moderieren — selbst eine Gestaltung, eine Selbsttechnik, die ein bestimmtes Subjekt hervorbringt. Keine der Haltungen ist dann die wahre, weil es kein wahres Selbst gibt, an dem sie sich messen ließe. Das Konzept trifft sich darin überraschend mit dem Buddhismus (kein Substanzkern) und scheidet sich zugleich von ihm: Wo der Buddhismus aus der Leere das Loslassen folgert, folgert Foucault die Form. Die Freiheit, sich zu erschaffen, ist dieselbe, die Sartre meinte — und sie trägt dieselbe Last: einen Maßstab, den niemand vorgibt."
+      }
+    },
+    {
+      "id": "anatta",
+      "name": "Anatta (Das Nicht-Selbst)",
+      "type": "axiom",
+      "primaryThinker": "buddhismus",
+      "firstLevel": 2,
+      "x": 15,
+      "y": 55,
+      "versions": {
+        "2": "Die buddhistische Grundeinsicht: Was wir ›Ich‹ nennen, ist kein fester Kern, sondern ein wechselnder Strom aus Körper, Empfindung, Wahrnehmung, Geistesregungen und Bewusstsein — vergleichbar einer Flamme, die von Moment zu Moment keine identische ist und doch brennt. Für das Selbstverhältnis hat das eine radikale Folge: Es gibt kein bleibendes Selbst, das man annehmen oder überwinden müsste. Anatta ist kein Nihilismus — es existiert etwas, aber kein Substanzding. Das Festhalten an einem festen Ich ist nach buddhistischer Diagnose selbst eine Quelle des Leidens.",
+        "3": "Anatta ist der begriffliche Anker des ontologischen Querstellers. Es sitzt nicht in einem Quadranten, weil es die Voraussetzung beider Achsen bestreitet: dass da ein Selbst sei, zu dem man Stellung bezieht. Annehmen unterstellt ein Selbst, das man annimmt; Überwinden unterstellt eines, das man formt; beide setzen die Einheit und das Bestehen des Ich voraus. Fällt diese Annahme weg, fällt die Dringlichkeit der ganzen Frage. Das unterscheidet Anatta scharf von der Selbstannahme: Rogers nimmt ein Selbst an, Anatta zeigt, dass keines da ist, das angenommen werden müsste. Die Befreiung liegt nicht in der richtigen Haltung, sondern im Nachlassen des Festhaltens an einem Selbst überhaupt."
+      }
+    }
+  ],
+  "influences": [
+    {
+      "from": "nietzsche",
+      "to": "rogers",
+      "type": "critique",
+      "firstLevel": 1,
+      "versions": {
+        "1": "Der zentrale Streit des Tableaus, und er ist nicht zu schlichten. Rogers sieht in der Selbstannahme die Bedingung, unter der ein Mensch überhaupt wachsen kann; Nietzsche sieht in derselben Annahme die Gefahr, dass ein Mensch aufhört, aus sich etwas zu machen. Beide meinen dieselbe Geste — sich nehmen, wie man ist — und bewerten sie entgegengesetzt: für Rogers die Lösung, für Nietzsche der Anfang des Niedergangs. An dieser Differenz hängt die ganze X-Achse: annehmen oder überwinden. Sie bleibt offen.",
+        "3": "Genauer betrachtet streiten die beiden über die Richtung der heilsamen Bewegung. Rogers: Erst wer sich annimmt, hört auf, sich zu verbiegen, und wächst von selbst — die Annahme löst die Blockade. Nietzsche: Erst wer sich nicht zufriedengibt, wächst über sich hinaus — die Annahme zementiert das Mittelmaß. Die Pointe ist, dass beide auf ›Wachstum‹ zielen, aber Unvereinbares darunter verstehen: organische Entfaltung eines Gegebenen (Rogers) gegen gestaltende Überwindung des Gegebenen (Nietzsche). Es ist der Streit zwischen der Gabe- und der Werk-Seite, geführt an der Frage, was Annahme bewirkt."
+      }
+    },
+    {
+      "from": "buddhismus",
+      "to": "ifs",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Die beiden Quersteller unterlaufen die Frage des Tableaus von entgegengesetzten Seiten — und stützen einander gerade darin. Der Buddhismus löst das Selbst nach unten auf: kein Kern, nur ein Strom, die Frage ›wie stehe ich zu mir‹ verliert ihren Gegenstand. IFS vervielfältigt es nach innen: nicht keins, sondern viele Teile, die Frage verliert ihre Einzahl. Beide treffen dieselbe Voraussetzung der übrigen Stimmen — dass da ein einzelnes Selbst sei, zu dem man Stellung bezieht. Ihr Unterschied: IFS behält im Self ein moderierendes Zentrum, der Buddhismus lässt auch dieses fallen."
+      }
+    },
+    {
+      "from": "wahres-selbst",
+      "to": "buddhismus",
+      "type": "critique",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Derselbe Streit, der im Selbst-Tableau Vedanta und Buddhismus trennt, hier auf die Haltungsfrage gewendet. Die kontemplative Wahres-Selbst-Position findet unter den Konstruktionen einen unzerstörbaren Kern, den man durch Überwindung des Falschen freilegt. Der Buddhismus sieht dort, wo jene den Kern findet, nur weiteres Fließen — kein Wahres Selbst, das man bergen könnte, sondern eine letzte, subtile Form des Anhaftens. Für die eine Seite ist der Kern die Erlösung von der Konstruktion, für die andere die raffinierteste Konstruktion. Beide eint die Skepsis gegen das Falsche Selbst, beide trennt, ob darunter etwas wartet."
+      }
+    },
+    {
+      "from": "nietzsche",
+      "to": "foucault",
+      "type": "influence",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Foucault ist Nietzsches systematischer Erbe auf der Werk-Seite. Beide bestreiten, dass es ein wahres Selbst zu finden gäbe; beide halten das Selbst für etwas, das hervorgebracht wird. Der Unterschied liegt im Ton und in der Begründung: Wo Nietzsche aus dem Pathos der Selbstüberwindung schöpft — der Einzelne, der sich gegen die Herde formt —, argumentiert Foucault nüchtern-historisch, indem er an den antiken Quellen zeigt, dass Selbstformung immer schon Praxis war. Aus Nietzsches einsamer Geste wird bei Foucault ein Repertoire von Selbsttechniken."
+      }
+    },
+    {
+      "from": "foucault",
+      "to": "hadot",
+      "type": "critique",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Der Streit, der die rechte Hälfte des Tableaus aufspannt — dieselbe antike Selbstsorge, zwei entgegengesetzte Deutungen. Für Foucault sind die geistigen Übungen Selbst-Gestaltung ohne überindividuelles Ziel: Man macht aus dem eigenen Leben ein Werk, das kein Vorbild nachzeichnet. Für Hadot sind sie Selbst-Überschreitung: Man geht über das enge Ich hinaus, um in einem größeren Ganzen aufzugehen, das schon da ist. Dieselbe Bewegung der Überwindung, einmal hin zu einem Werk (unten, bei Nietzsche), einmal hin zu einer Gabe (oben, bei Rohr). Ist Lebenskunst Erschaffung des eigenen Selbst oder Hingabe an etwas Größeres?"
+      }
+    },
+    {
+      "from": "wahres-selbst",
+      "to": "hadot",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Rohr und Hadot teilen die seltene Grundfigur der oberen rechten Ecke: anstrengen, um zu finden, nicht um zu machen. Beide verlangen eine Überwindung des engen, geformten Selbst — und beide richten sie auf etwas Vorgegebenes, das man nicht erfindet, sondern dem man sich angleicht. Sie trennt das Register: Hadot bleibt philosophisch (Natur, Kosmos, Vernunft), Rohr theologisch (das, was Gott in uns kennt). Gemeinsam bilden sie den Gegenpol zu Foucault und Nietzsche: Überwindung ja, aber als Weg zu einer Gabe, nicht zu einem Werk."
+      }
+    },
+    {
+      "from": "kohut",
+      "to": "rogers",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Kohut und Rogers besetzen gemeinsam die annehmende Gabe-Ecke, von zwei Seiten der humanistischen Psychologie. Beide gründen die Selbstannahme im Relationalen: Rogers im Klima bedingungsloser Wertschätzung, Kohut in der frühen Spiegelung durch Selbstobjekte. Ihre Differenz ist fein, aber wichtig — Rogers vertraut auf einen eingebauten Wachstumszug, der sich entfaltet, sobald die Annahme da ist; Kohut betont, dass die Fähigkeit zur Selbstannahme selbst von früher Spiegelung abhängt und vielen darum nicht gleichermaßen offensteht. Optimismus des Zutrauens gegen die Nüchternheit der Herkunft."
+      }
+    },
+    {
+      "from": "marc-aurel",
+      "to": "rogers",
+      "type": "parallel",
+      "firstLevel": 3,
+      "versions": {
+        "3": "Stoa und humanistische Psychologie treffen sich auf der Gabe-Seite und trennen sich im Wie. Beide trauen dem Selbst als etwas im Grund Gutem — Marc Aurel der vernünftig geordneten Natur, Rogers dem organischen Wachstumszug. Beide raten zur Annahme dessen, was man nicht gewählt hat. Aber wo Rogers darauf vertraut, dass das Wachstum von selbst geschieht, sobald die Annahme da ist, verlangt die Stoa die tägliche Übung am Urteil. Annahme als Geschehenlassen gegen Annahme als Disziplin — zweitausend Jahre auseinander, in derselben Ecke."
+      }
+    },
+    {
+      "from": "nietzsche",
+      "to": "marc-aurel",
+      "type": "critique",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Nietzsche hat die stoische Gelassenheit als vornehme Form der Schwäche gelesen — ein Sich-Abfinden, das sich als Weisheit ausgibt. Wer das Unabänderliche gleichmütig annimmt, dichtet sich nach Nietzsche gegen das Leben ab, statt es zu wollen. Die Stoa antwortet, dass gerade die Unterscheidung zwischen dem Eigenen und dem Fremden die Freiheit sichert, die Nietzsche sucht — nur ohne dessen Pathos der Steigerung. Der Streit: Ist die ruhige Annahme der eigenen Natur Reife oder ein zu frühes Aufhören?"
+      }
+    },
+    {
+      "from": "rogers",
+      "to": "kabat-zinn",
+      "type": "influence",
+      "firstLevel": 2,
+      "versions": {
+        "2": "Eine Brücke quer durch die Annehmen-Seite, von der Gabe zur erarbeiteten Übung. Rogers' bedingungslose Wertschätzung und Kabat-Zinns nicht-wertendes Gewahrsein sind dieselbe annehmende Haltung, einmal nach außen, einmal nach innen gewendet — Rogers lässt den Therapeuten dem Klienten so begegnen, Kabat-Zinn lehrt den Menschen, sich selbst so zu begegnen. Beide setzen auf Akzeptanz als paradoxen Anfang der Veränderung. Der Unterschied, der sie auf der Y-Achse trennt: Bei Rogers fällt die Annahme als Klima zu, bei Kabat-Zinn muss sie als Praxis hergestellt werden."
+      }
+    },
+    {
+      "from": "buddhismus",
+      "to": "kabat-zinn",
+      "type": "influence",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Kabat-Zinns Praxis stammt aus der buddhistischen Tradition — er hat die Achtsamkeit aus ihrem religiösen Rahmen gelöst und in ein säkulares, klinisch erprobtes Verfahren überführt. Die Verbindung im Tableau ist darum mehr als Verwandtschaft: Das nicht-wertende Gewahrsein führt, lange genug geübt, an dieselbe Grenze, an der der Buddhismus die Frage auflöst — wo das beobachtete Ich durchlässig wird und das feste Selbst, zu dem man Stellung beziehen müsste, sich nicht mehr finden lässt. Kabat-Zinn bleibt im Quadranten, der Buddhismus tritt heraus; die Übung ist die Brücke zwischen beiden."
+      }
+    },
+    {
+      "from": "wahres-selbst",
+      "to": "almaas",
+      "type": "parallel",
+      "firstLevel": 4,
+      "versions": {
+        "4": "Rohr und Almaas teilen die Diagnose eines unzerstörbaren Kerns unter dem aufgebauten Ego — verschiedene Sprachen für eine verwandte Topologie. Beide beschreiben einen Weg des Loslassens statt des Hinzufügens. Der Unterschied liegt im Register und im Zugang: Rohr arbeitet in der christlichen Kontemplationstradition, mit Hingabe und Entleerung; Almaas in einem erfahrungsbasierten System ohne Glaubensvoraussetzung, mit der direkten Berührung konkreter Essenz-Qualitäten. Wo Rohr glaubt, lädt Almaas zum Hinschauen ein. Beide besetzen die Gabe-Seite, aber Almaas zieht sie aus der theologischen in die erfahrbare Sphäre."
+      }
+    },
+    {
+      "from": "metzinger",
+      "to": "rogers",
+      "type": "critique",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Metzingers schärfste Anfrage trifft Rogers, weil dessen Aktualisierungstendenz am stärksten ein reales Selbst voraussetzt, dem man trauen kann. Metzinger fragt: Was wächst da eigentlich, wenn es kein Selbst gibt — nur ein Modell, das sich für eines hält? Rogers' Antwort wäre, dass die Aktualisierung beobachtbar ist, ob es ein Substanz-Selbst gibt oder nicht: Menschen, die sich angenommen fühlen, entfalten sich, und das genügt der Beobachtung. Der Streit ist nicht zu schlichten — er führt die Gabe-Seite an ihre tiefste Voraussetzung zurück: Muss etwas da sein, dem man traut, oder genügt der Prozess?"
+      }
+    },
+    {
+      "from": "metzinger",
+      "to": "buddhismus",
+      "type": "parallel",
+      "firstLevel": 5,
+      "versions": {
+        "5": "Die beiden Stimmen, die das Selbst bestreiten, treffen sich auf der Syntheseebene von entgegengesetzten Seiten. Der Buddhismus erreicht die Einsicht ›kein fester Kern‹ kontemplativ, durch geübte Innenschau über Jahrtausende; Metzinger erreicht sie naturwissenschaftlich, durch die Theorie des Selbstmodells. Beide kommen zum selben strukturellen Schluss — niemand bewohnt den Tunnel —, und beide ziehen daraus eine verwandte Haltung: weniger defensives Festhalten am Ich. Der Unterschied bleibt der Weg: Erfahrung gegen Erklärung, von innen gegen von außen. Dass zwei so verschiedene Methoden am selben Ort landen, ist die stille Pointe der Syntheseebene."
+      }
+    }
+  ]
+}
