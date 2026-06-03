@@ -47,12 +47,23 @@ export default function ThinkerList({
   thinkers, schools, context, currentLevel,
   listStyle = 'grouped', highlightId, onHighlightDone,
 }: Props) {
-  const [activeFilter, setActiveFilter] = useState<string | null>(null)
+  const [activeFilters, setActiveFilters] = useState<Set<string>>(
+    () => new Set(['neu', 'vertieft'])
+  )
+  const prevLevel = useRef(currentLevel.id)
   const cardRefs = useRef<Map<string, HTMLElement>>(new Map())
+
+  // On level change: reset to NEU + VERTIEFT
+  useEffect(() => {
+    if (prevLevel.current !== currentLevel.id) {
+      prevLevel.current = currentLevel.id
+      setActiveFilters(new Set(['neu', 'vertieft']))
+    }
+  }, [currentLevel.id])
 
   useEffect(() => {
     if (!highlightId) return
-    setActiveFilter(null)
+    setActiveFilters(new Set())
     const raf = requestAnimationFrame(() => {
       const el = cardRefs.current.get(highlightId)
       if (!el) return
@@ -74,13 +85,21 @@ export default function ThinkerList({
   const newCount      = thinkers.filter(t => t.isNew).length
   const deepenedCount = thinkers.filter(t => t.isDeepened).length
 
-  const filtered = activeFilter === 'neu'
-    ? thinkers.filter(t => t.isNew)
-    : activeFilter === 'vertieft'
-      ? thinkers.filter(t => t.isDeepened)
-      : activeFilter
-        ? thinkers.filter(t => t.schoolId === activeFilter)
-        : thinkers
+  const toggleFilter = (key: string) => {
+    setActiveFilters(prev => {
+      const next = new Set(prev)
+      if (next.has(key)) { next.delete(key) } else { next.add(key) }
+      return next
+    })
+  }
+
+  const filtered = activeFilters.size === 0
+    ? thinkers
+    : thinkers.filter(t =>
+        (activeFilters.has('neu') && t.isNew) ||
+        (activeFilters.has('vertieft') && t.isDeepened) ||
+        (t.schoolId && activeFilters.has(t.schoolId))
+      )
 
   const schoolOrder = schools.map(s => s.id)
   const sorted = [...filtered].sort(
@@ -116,9 +135,9 @@ export default function ThinkerList({
           Filter
         </span>
         <button
-          onClick={() => setActiveFilter(null)}
+          onClick={() => setActiveFilters(new Set())}
           className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors
-            ${activeFilter === null
+            ${activeFilters.size === 0
               ? 'border-[--gold-soft] text-[--gold] bg-[var(--accent-soft)]'
               : 'border-[--hairline] text-[--fg-faint] hover:text-[--fg-muted] hover:border-[--hairline-strong]'
             }`}
@@ -128,9 +147,9 @@ export default function ThinkerList({
         </button>
         {newCount > 0 && (
           <button
-            onClick={() => setActiveFilter(activeFilter === 'neu' ? null : 'neu')}
+            onClick={() => toggleFilter('neu')}
             className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
-              ${activeFilter === 'neu'
+              ${activeFilters.has('neu')
                 ? 'border-[--gold-soft] text-[--gold] bg-[var(--accent-soft)]'
                 : 'border-[--hairline] text-[--fg-faint] hover:text-[--fg-muted] hover:border-[--hairline-strong]'
               }`}
@@ -142,9 +161,9 @@ export default function ThinkerList({
         )}
         {deepenedCount > 0 && (
           <button
-            onClick={() => setActiveFilter(activeFilter === 'vertieft' ? null : 'vertieft')}
+            onClick={() => toggleFilter('vertieft')}
             className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
-              ${activeFilter === 'vertieft'
+              ${activeFilters.has('vertieft')
                 ? 'border-[--gold-soft] text-[--gold] bg-[var(--accent-soft)]'
                 : 'border-[--hairline] text-[--fg-faint] hover:text-[--fg-muted] hover:border-[--hairline-strong]'
               }`}
@@ -156,11 +175,11 @@ export default function ThinkerList({
         )}
         {visibleSchools.map(s => {
           const count = thinkers.filter(t => t.schoolId === s.id).length
-          const isActive = activeFilter === s.id
+          const isActive = activeFilters.has(s.id)
           return (
             <button
               key={s.id}
-              onClick={() => setActiveFilter(isActive ? null : s.id)}
+              onClick={() => toggleFilter(s.id)}
               className="font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2"
               style={{
                 borderColor: isActive ? s.color : 'var(--hairline)',
