@@ -151,11 +151,11 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
       {/* Grain overlay */}
       <div aria-hidden className="grain" />
 
-      {/* Brand (oben links) */}
-      <div className="brand" aria-hidden>
+      {/* Brand (oben links) — Link zurück zum Tableau */}
+      <Link href={`/thema/${lectio.tableauId}`} className="brand" aria-label="Zurück zum Tableau">
         <span className="glyph" />
         <span className="brand-text">Sanctum Mentis · Lectio</span>
-      </div>
+      </Link>
 
       {/* Counter (oben rechts) */}
       <div className="lc-counter" aria-live="polite" aria-atomic>
@@ -363,28 +363,38 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
 
       </div>{/* /stage */}
 
-      {/* Fuß: weiter + Dots */}
+      {/* Fuß: zurück · Dots · weiter */}
       <div className="lc-foot">
-        <button
-          className={`weiter${idx === totalStations - 1 ? ' hide' : ''}`}
-          onClick={e => { e.stopPropagation(); next() }}
-          aria-label="Nächste Station"
-        >
-          <span>weiter</span>
-          <span className="arr" aria-hidden>↓</span>
-        </button>
-        <div className="dots" role="tablist" aria-label="Stationen">
-          {Array.from({ length: totalStations }).map((_, i) => (
-            <button
-              key={i}
-              role="tab"
-              aria-selected={i === idx}
-              aria-label={`Station ${i + 1}`}
-              onClick={e => { e.stopPropagation(); show(i) }}
-            >
-              <span className="mark" />
-            </button>
-          ))}
+        <div className="foot-row">
+          <button
+            className={`zurueck${idx === 0 ? ' hide' : ''}`}
+            onClick={e => { e.stopPropagation(); prev() }}
+            aria-label="Vorherige Station"
+          >
+            <span className="arr-l" aria-hidden>↑</span>
+            <span>zurück</span>
+          </button>
+          <div className="dots" role="tablist" aria-label="Stationen">
+            {Array.from({ length: totalStations }).map((_, i) => (
+              <button
+                key={i}
+                role="tab"
+                aria-selected={i === idx}
+                aria-label={`Station ${i + 1}`}
+                onClick={e => { e.stopPropagation(); show(i) }}
+              >
+                <span className="mark" />
+              </button>
+            ))}
+          </div>
+          <button
+            className={`weiter${idx === totalStations - 1 ? ' hide' : ''}`}
+            onClick={e => { e.stopPropagation(); next() }}
+            aria-label="Nächste Station"
+          >
+            <span>weiter</span>
+            <span className="arr" aria-hidden>↓</span>
+          </button>
         </div>
       </div>
 
@@ -401,7 +411,11 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           position: fixed; top: 26px; left: 30px; z-index: 6;
           font-size: 10px; letter-spacing: 0.34em; text-transform: uppercase;
           color: var(--fg-faint); display: flex; align-items: center; gap: 9px;
+          text-decoration: none; cursor: pointer;
+          transition: color .3s;
         }
+        .brand:hover { color: var(--fg-muted); }
+        .brand:hover .glyph { opacity: 1; }
         .glyph {
           width: 7px; height: 7px; border: 1px solid var(--accent);
           transform: rotate(45deg); opacity: 0.8; display: inline-block;
@@ -550,25 +564,32 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         .lc-foot {
           position: fixed; left: 0; right: 0; bottom: 0; z-index: 6;
           padding: 52px 0 26px;
-          display: flex; flex-direction: column; align-items: center; gap: 16px;
+          display: flex; flex-direction: column; align-items: center;
           pointer-events: none;
           background: linear-gradient(to top,
             var(--bg-deep) 38%,
             color-mix(in oklch, var(--bg-deep) 55%, transparent) 70%,
             transparent);
         }
-        .weiter {
-          pointer-events: auto; background: none; border: none; cursor: pointer;
+        .foot-row {
+          pointer-events: auto;
+          display: flex; align-items: center;
+          width: 100%; max-width: 380px; padding: 0 28px;
+        }
+        .weiter, .zurueck {
+          background: none; border: none; cursor: pointer;
           display: inline-flex; flex-direction: column; align-items: center; gap: 7px;
           color: var(--fg-dim); font-family: inherit;
           font-size: 9.5px; letter-spacing: 0.26em; text-transform: uppercase;
           transition: color .3s, opacity .4s;
+          min-width: 56px;
         }
-        .weiter:hover { color: var(--voice); }
+        .weiter:hover, .zurueck:hover { color: var(--voice); }
         .arr { animation: nudge 3.6s ease-in-out infinite; }
-        .weiter.hide { opacity: 0; pointer-events: none; }
+        .arr-l { animation: nudge-up 3.6s ease-in-out infinite; }
+        .weiter.hide, .zurueck.hide { opacity: 0; pointer-events: none; }
 
-        .dots { pointer-events: auto; display: flex; align-items: center; gap: 12px; }
+        .dots { flex: 1; display: flex; justify-content: center; align-items: center; gap: 12px; }
         .dots button {
           width: 8px; height: 8px; padding: 0; border: none; background: none;
           cursor: pointer; display: grid; place-items: center;
@@ -593,10 +614,14 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           0%,100% { transform: translateY(0); opacity: .65; }
           50%      { transform: translateY(4px); opacity: 1; }
         }
+        @keyframes nudge-up {
+          0%,100% { transform: translateY(0); opacity: .65; }
+          50%      { transform: translateY(-4px); opacity: 1; }
+        }
 
         @media (prefers-reduced-motion: reduce) {
           .station.active .reveal { transition: none; opacity: 1; transform: none; }
-          .halo, .breath, .arr { animation: none; }
+          .halo, .breath, .arr, .arr-l { animation: none; }
           .station { transition: none; }
         }
         @media (max-width: 640px) {
