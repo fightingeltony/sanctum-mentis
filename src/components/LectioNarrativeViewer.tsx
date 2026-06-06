@@ -158,10 +158,10 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
       {/* Grain overlay */}
       <div aria-hidden className="grain" />
 
-      {/* Brand (oben links) — Link zurück zum Tableau */}
+      {/* Exit — Link zurück zum Tableau */}
       <Link href={`/thema/${lectio.tableauId}`} className="brand" aria-label="Zurück zum Tableau">
-        <span className="glyph" />
-        <span className="brand-text">Sanctum Mentis · Lectio</span>
+        <span className="exit-arrow" aria-hidden>←</span>
+        <span className="brand-text">Verlassen</span>
       </Link>
 
       {/* Counter (oben rechts) */}
@@ -416,17 +416,16 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
 
         .brand {
           position: fixed; top: 26px; left: 30px; z-index: 6;
-          font-size: 10px; letter-spacing: 0.34em; text-transform: uppercase;
-          color: var(--fg-faint); display: flex; align-items: center; gap: 9px;
+          font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+          color: var(--fg-muted); display: flex; align-items: center; gap: 7px;
           text-decoration: none; cursor: pointer;
           transition: color .3s;
+          border-bottom: 1px solid color-mix(in oklch, var(--fg-muted) 25%, transparent);
+          padding-bottom: 1px;
         }
-        .brand:hover { color: var(--fg-muted); }
-        .brand:hover .glyph { opacity: 1; }
-        .glyph {
-          width: 7px; height: 7px; border: 1px solid var(--accent);
-          transform: rotate(45deg); opacity: 0.8; display: inline-block;
-        }
+        .brand:hover { color: var(--fg); border-bottom-color: var(--fg-muted); }
+        .exit-arrow { font-size: 12px; line-height: 1; transition: transform .25s; }
+        .brand:hover .exit-arrow { transform: translateX(-3px); }
         .lc-counter {
           position: fixed; top: 26px; right: 30px; z-index: 6;
           font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
