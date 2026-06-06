@@ -6,10 +6,17 @@ import type { Lectio, LectioNarrative, TopicData } from '@/lib/types'
 
 // --voice per Stimme (Schul-Farben aus dem Design-Handoff)
 const VOICE_COLORS: Record<string, string> = {
+  // das-selbst
   vedanta:     'oklch(0.48 0.13 55)',
   buddhismus:  'oklch(0.44 0.11 75)',
-  jung:        'oklch(0.40 0.09 200)',
+  jung:        'oklch(0.42 0.12 135)',
   metzinger:   'oklch(0.40 0.10 240)',
+  // verwandlung
+  augustinus:  'oklch(0.41 0.11 145)',
+  stoa:        'oklch(0.44 0.11 168)',
+  rilke:       'oklch(0.45 0.12 150)',
+  eckhart:     'oklch(0.45 0.10 156)',
+  james:       'oklch(0.40 0.10 162)',
 }
 
 // Ordinalzahlen für das Stimmen-Label
