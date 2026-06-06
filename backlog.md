@@ -246,9 +246,9 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 ---
 
 ### [x] Lectio-Modus — von Nice-to-Have zu Kernfeature
-**Status:** vollständig implementiert und live, Stand 22.5.26
+**Status:** vollständig implementiert und live, Stand 22.5.26 — aktualisiert 6.6.26
 **Kontext:** Geführte Tour durchs Tableau (zeitliche Sequenz statt räumlicher Karte). Frontend live (`/lectio/[id]`), Discovery-Abschnitt in Tableau-Köpfen, `lectio_brief`-Schema, progressives Reveal mit Fade-in.
-**Skripte im Repo (13 live):**
+**Skripte im Repo (14 live):**
 - `hard-problem` — Geist, narrativ-historisch, L2, 6 Stationen
 - `wer-beobachtet` — Selbst, konkurrierend-konfrontativ, L3, 4 Stationen
 - `findest-du-oder-machst-du` — Selbst, dialektisch-revidierend, L3, 5 Stationen (via path[].brief)
@@ -262,9 +262,11 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 - `verstehen-oder-weitergehen` — Wandlung, narrativ-historisch, L3, 5 Stationen (alle step_brief)
 - `stell-die-frage-anders` — Gut/Böse, destruktiv-aufbauend, L3, 5 Stationen (alle lectio_brief)
 - `wer-bist-du-wenn-du-alles-weglaesst` — Selbst, konkurrierend-konfrontativ, L2, 4 Stationen (**ton: erzählend-erfahrend** — erster Test-Fall, neue Render-Form `LectioNarrativeViewer`)
+- `vom-wissen-zum-glauben` — Verwandlung, konkurrierend-konfrontativ, L3, 6 Stationen (**ton: erzählend-erfahrend** — zweiter Belegfall; Augustinus→Stoa→Rilke→Eckhart→James→Jung; Tonwechsel bei James ausdrücklich markiert; durchlaufende Figur: die Scheibe)
 **Methode:** `prompts/lectio-mode.md` v1.9 — zehn methodische Entscheidungen. Schema-Erweiterungen: `step_brief` (pro-Station-Text), `path_type` (Datenwert), `ton` (expositorisch / erzählend-erfahrend), `LectioNarrative`-Interface (hook/body/kernel/bridge).
 **lectio_brief-Felder (ca. 40 total):** Geist (8), Selbst (4+), Realismus (6), Ethik (4), Existenzialismus (5+2), Politik (5), Lebenskunst (4), Begegnung (6), Wandlung (0, alles step_brief), Gut/Böse (5)
-**Nächster Schritt:** Partnerin-Test (erzählende Lectio + Vergleichsfall `wer-beobachtet`) — Ergebnis entscheidet, ob erzählender Ton zum Standard wird. lectio-mode v1.10 schreiben.
+**Navigation (6.6.26):** `LectioNarrativeViewer` hat sichtbaren Zurück-Button (Footer drei Spalten: ← zurück · Dots · weiter →) + Brand als Exit-Link zurück zum Tableau.
+**Nächster Schritt:** Zwei Belegfälle liegen vor — lectio-mode v1.10 schreiben (erzählend-erfahrend kanonisieren), sobald Feedback-Runde abgeschlossen.
 **Folgearbeit:**
 - Tableau-übergreifende Lectios (Schema-Erweiterung: tableauId als Array)
 - Bei Bedarf weitere Lectios pro Tableau

@@ -1,6 +1,6 @@
 # Wo stehe ich — Sanctum Mentis
 
-**Stand:** 1.6.26 (aktualisiert nach Einsamkeit-Lebensfrage)
+**Stand:** 6.6.26 (aktualisiert nach vom-wissen-zum-glauben + Lectio-Navigation)
 
 ---
 
@@ -21,7 +21,7 @@
 - **Gut und Böse** — Mild-Modus, 11 Denker. Menschenbild-Spur (hue 345, Magenta) — eröffnet die **fünfte Sammlungs-Spur**. Achsen: Menschenbild (gut ↔ böse von Natur) / Ebene (individuell-ontologisch ↔ sozial-situativ). Lectio `stell-die-frage-anders` (destruktiv-aufbauend, L3, 5 Stationen).
 - **Das Selbstverhältnis** — Mild-Modus, 11 Denker. Existenz-Spur (hue 71) — staffelt eng an Lebenskunst 65 an. Achsen: Annehmen ↔ Überwinden / Gabe ↔ Errungen. Zwei Quersteller (Buddhismus + IFS) plus Metzinger (L5) als naturalistische Außenanfrage. Zwei Prüfrunden: Stufenverteilung L1–L5 vollständig belegt, Adler gestrichen (Achsen-Konsistenz), `bedingungslose-wertschaetzung` gestrichen. Existenz-Spur hat jetzt vier Tableaus.
 
-**Dreizehn Lectios** — geführte Pfade, alle live:
+**Vierzehn Lectios** — geführte Pfade, alle live:
 
 - `hard-problem` — Geist, narrativ-historisch, L2, 6 Stationen
 - `wer-beobachtet` — Selbst, konkurrierend-konfrontativ, L3, 4 Stationen (expositorischer Ton)
@@ -36,8 +36,11 @@
 - `verstehen-oder-weitergehen` — Wandlung, narrativ-historisch, L3, 5 Stationen (alle via step_brief)
 - `stell-die-frage-anders` — Gut/Böse, destruktiv-aufbauend, L3, 5 Stationen
 - `wer-bist-du-wenn-du-alles-weglaesst` — Selbst, konkurrierend-konfrontativ, L2, 4 Stationen — **erster Test des erzählend-erfahrenden Tons** (Vergleichsfall zu `wer-beobachtet`; eigene Render-Komponente `LectioNarrativeViewer`)
+- `vom-wissen-zum-glauben` — Verwandlung, konkurrierend-konfrontativ, L3, 6 Stationen — **zweiter Belegfall erzählend-erfahrend** (Augustinus → Stoa → Rilke → Eckhart → James → Jung; Tonwechsel bei James bewusst markiert; durchlaufende Figur: die Scheibe)
 
-**Lectio-Methode:** `prompts/lectio-mode.md` v1.9 — zehn Entscheidungen, vier kanonisierte Pfad-Typen. Schema-Erweiterungen seit v1.9: `step_brief` (pro-Station-Text), `path_type` (Datenwert), `ton` (expositorisch / erzählend-erfahrend), `LectioNarrative`-Interface. *Kontemplativ-vertiefend* ist als Datenwert gesetzt (Begegnung), noch nicht in der Methode kanonisiert — wartet auf 2. Fall. *Erzählend-erfahrend* ist im Code vollständig gebaut, wartet auf Test-Bestätigung für v1.10.
+**Lectio-Navigation:** `LectioNarrativeViewer` hat jetzt sichtbaren Zurück-Button im Footer (drei Spalten: ← zurück · Dots · weiter →) und Brand oben links als Exit-Link zurück zum Tableau.
+
+**Lectio-Methode:** `prompts/lectio-mode.md` v1.9 — zehn Entscheidungen, vier kanonisierte Pfad-Typen. Schema-Erweiterungen seit v1.9: `step_brief` (pro-Station-Text), `path_type` (Datenwert), `ton` (expositorisch / erzählend-erfahrend), `LectioNarrative`-Interface. *Kontemplativ-vertiefend* ist als Datenwert gesetzt (Begegnung), noch nicht in der Methode kanonisiert — wartet auf 2. Fall. *Erzählend-erfahrend* hat jetzt zwei Belegfälle (Selbst + Verwandlung) — bereit für Kanonisierung als v1.10, sobald Nutzer-Feedback vorliegt.
 
 **Landing Page** hat ein lebendiges Tableau (HeroTableau-Komponente: animiert Das-Selbst-Konzepte Band für Band), eine Lectio-Sektion und erklärt den Unterschied zwischen Karte und Lectio.
 
