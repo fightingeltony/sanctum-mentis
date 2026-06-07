@@ -38,7 +38,7 @@ const TYPE_FILTERS: Array<{
   label:      string
   color:      string
   dash?:      string
-  lineCap?:   'round' | 'butt'
+  lineCap?:   'round' | 'butt' | 'square'
   rejection?: boolean
 }> = [
   { type: 'influence',  label: 'Einfluss',   color: LINE_COLOR_RESOLVED.influence                                        },
