@@ -249,7 +249,7 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
                     </span>
                   </span>
                   <span className="flex items-center gap-2 shrink-0">
-                    {l.ton === 'erzählend-erfahrend' && (
+                    {(l.ton === 'erzählend-erfahrend' || l.ton === 'gemischt') && (
                       <span
                         className="font-ui text-[9px] tracking-[0.16em] uppercase px-1.5 py-0.5"
                         style={{
