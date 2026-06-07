@@ -15,27 +15,37 @@ const MW = 640, MH = 884, MPAD_X = 64, MPAD_Y = 128
 const mMapX = (x: number) => MPAD_X + (x / 100) * (MW - 2 * MPAD_X)
 const mMapY = (y: number) => MH - MPAD_Y - (y / 100) * (MH - 2 * MPAD_Y)
 
-const LINE_COLOR: Record<string, string> = {
-  influence:    'var(--line-influence)',
-  'student-of': 'var(--line-influence)',
-  parallel:     'var(--line-parallel)',
-  critique:     'var(--line-critique)',
-  rejection:    'var(--line-rejection)',
-}
 // Resolved values for SVG attributes (CSS vars don't work in stroke attribute in some browsers)
 const LINE_COLOR_RESOLVED: Record<string, string> = {
-  influence:    'oklch(0.30 0.03 65)',
-  'student-of': 'oklch(0.30 0.03 65)',
-  parallel:     'oklch(0.42 0.05 235)',
-  critique:     'oklch(0.46 0.10 45)',
-  rejection:    'oklch(0.47 0.14 30)',
+  influence: 'oklch(0.30 0.03 65)',
+  parallel:  'oklch(0.42 0.05 235)',
+  critique:  'oklch(0.46 0.10 45)',
+  rejection: 'oklch(0.47 0.14 30)',
 }
+// Styles per type — aligned with Tab-II legend:
+// influence=solid, critique=dotted, parallel=long-dash, rejection=short-dash+break
 const DASH: Record<string, string | undefined> = {
-  influence: undefined, 'student-of': undefined,
-  parallel: '1 3.5', critique: '6 3', rejection: '2 3.5',
+  influence: undefined,
+  parallel:  '8 4',
+  critique:  '2 2.5',
+  rejection: '2 3.5',
 }
 
 const RKEY = 'sanctum-stern-read'
+
+const TYPE_FILTERS: Array<{
+  type:       string
+  label:      string
+  color:      string
+  dash?:      string
+  lineCap?:   'round' | 'butt'
+  rejection?: boolean
+}> = [
+  { type: 'influence',  label: 'Einfluss',   color: LINE_COLOR_RESOLVED.influence                                        },
+  { type: 'parallel',   label: 'Parallel',   color: LINE_COLOR_RESOLVED.parallel,  dash: '8 4',   lineCap: 'round'      },
+  { type: 'critique',   label: 'Kritik',     color: LINE_COLOR_RESOLVED.critique,  dash: '2 2.5', lineCap: 'square'     },
+  { type: 'rejection',  label: 'Verwerfung', color: LINE_COLOR_RESOLVED.rejection, dash: '2 3.5', rejection: true       },
+]
 
 // ─── Helpers ──────────────────────────────────────────────────
 
@@ -259,6 +269,9 @@ export default function StarChart({
 
   const [mode,               setMode]             = useState<'axis' | 'school'>('axis')
   const [showLines,          setShowLines]         = useState(true)
+  const [activeTypes,        setActiveTypes]       = useState<Set<string>>(
+    () => new Set(['influence', 'parallel', 'critique', 'rejection'])
+  )
   const [selected,           setSelected]          = useState<string | null>(null)
   const [selectedConceptId,  setSelectedConceptId] = useState<string | null>(null)
   const [readSet,            setReadSet]           = useState<Set<string>>(new Set())
@@ -859,15 +872,57 @@ export default function StarChart({
     <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
 
       {/* ── Controls ── */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 8 : 16, padding: isMobile ? '2px 4px 8px' : '4px 4px 12px' }}>
-        <div className="sc-modeswitch">
-          <button className={mode === 'axis'   ? 'sc-on' : ''} onClick={() => morph('axis')}>Karte</button>
-          <button className={mode === 'school' ? 'sc-on' : ''} onClick={() => morph('school')}>Schulen</button>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: isMobile ? '2px 4px 8px' : '4px 4px 10px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 8 : 16 }}>
+          <div className="sc-modeswitch">
+            <button className={mode === 'axis'   ? 'sc-on' : ''} onClick={() => morph('axis')}>Karte</button>
+            <button className={mode === 'school' ? 'sc-on' : ''} onClick={() => morph('school')}>Schulen</button>
+          </div>
+          <label className="sc-lines-toggle">
+            <input type="checkbox" checked={showLines} onChange={e => setShowLines(e.target.checked)} />
+            Linien
+          </label>
         </div>
-        <label className="sc-lines-toggle">
-          <input type="checkbox" checked={showLines} onChange={e => setShowLines(e.target.checked)} />
-          Linien
-        </label>
+        {/* ── Type filter row ── */}
+        <div style={{
+          display: 'flex', flexWrap: 'wrap', gap: '3px 12px',
+          opacity: showLines ? 1 : 0.35,
+          pointerEvents: showLines ? 'auto' : 'none',
+          paddingLeft: 2,
+        }}>
+          {TYPE_FILTERS.map(({ type, label, color, dash, lineCap, rejection: rej }) => (
+            <label
+              key={type}
+              style={{ display: 'flex', alignItems: 'center', gap: 5, fontSize: 10.5, cursor: 'pointer', color: 'var(--fg-muted)', userSelect: 'none' }}
+            >
+              <input
+                type="checkbox"
+                checked={activeTypes.has(type)}
+                disabled={!showLines}
+                onChange={e => {
+                  setActiveTypes(prev => {
+                    const next = new Set(prev)
+                    if (e.target.checked) next.add(type); else next.delete(type)
+                    return next
+                  })
+                }}
+                style={{ accentColor: color, cursor: 'pointer' }}
+              />
+              <svg width="22" height={rej ? 5 : 2} viewBox={`0 0 22 ${rej ? 5 : 2}`} style={{ flexShrink: 0 }}>
+                <line x1="0" y1={rej ? 2.5 : 1} x2="22" y2={rej ? 2.5 : 1}
+                  stroke={color} strokeWidth="1.6" strokeDasharray={dash}
+                  strokeLinecap={lineCap ?? (rej ? 'butt' : 'round')}/>
+                {rej && (
+                  <>
+                    <line x1="9"  y1="0" x2="9"  y2="5" stroke={color} strokeWidth="1.2"/>
+                    <line x1="13" y1="0" x2="13" y2="5" stroke={color} strokeWidth="1.2"/>
+                  </>
+                )}
+              </svg>
+              {label}
+            </label>
+          ))}
+        </div>
       </div>
 
       {/* ── Stage ── */}
@@ -1005,10 +1060,12 @@ export default function StarChart({
                   const eid = `${inf.from}→${inf.to}`
                   const col  = LINE_COLOR_RESOLVED[inf.type] ?? LINE_COLOR_RESOLVED.influence
                   const dash = DASH[inf.type]
+                  const typeVisible = activeTypes.has(inf.type)
                   return (
                     <g
                       key={eid}
                       className="sc-edge-g"
+                      style={typeVisible ? undefined : { display: 'none' }}
                       ref={el => {
                         if (!edgeRefs.current[eid]) {
                           edgeRefs.current[eid] = { g: null, line: null, hit: null, brk: [null, null] }
@@ -1257,14 +1314,6 @@ export default function StarChart({
               ? `${visibleCount} von ${totalThinkers} Sternen sichtbar · ${hiddenCount} im Dunst`
               : `Alle ${totalThinkers} Sterne sichtbar`}
           </div>
-          {showLines && (
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 14px' }}>
-              <LegendKey color={LINE_COLOR_RESOLVED.influence} label="Linie · Einfluss"/>
-              <LegendKey color={LINE_COLOR_RESOLVED.parallel}  label="Parallele · verwandt" dash="1 3"/>
-              <LegendKey color={LINE_COLOR_RESOLVED.critique}  label="Kritik · widerspricht" dash="5 3"/>
-              <LegendKey color={LINE_COLOR_RESOLVED.rejection} label="Verwerfung · Bruch"    dash="2 3" rejection/>
-            </div>
-          )}
         </div>
         </div>
       </div>
@@ -1492,24 +1541,3 @@ function CartoucheContent({
   )
 }
 
-// ─── Legend key ───────────────────────────────────────────────
-
-function LegendKey({ color, label, dash, rejection }: {
-  color: string; label: string; dash?: string; rejection?: boolean
-}) {
-  const h = rejection ? 4 : 2
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 10, color: 'var(--fg-muted)', letterSpacing: '0.02em' }}>
-      <svg width="26" height={h} viewBox={`0 0 26 ${h}`} preserveAspectRatio="none" style={{ flexShrink: 0 }}>
-        <line x1="0" y1={h / 2} x2="26" y2={h / 2} stroke={color} strokeWidth="1.6" strokeDasharray={dash}/>
-        {rejection && (
-          <>
-            <line x1="12" y1="0" x2="12" y2="4" stroke={color} strokeWidth="1.2"/>
-            <line x1="15" y1="0" x2="15" y2="4" stroke={color} strokeWidth="1.2"/>
-          </>
-        )}
-      </svg>
-      {label}
-    </div>
-  )
-}
