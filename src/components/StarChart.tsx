@@ -925,6 +925,11 @@ export default function StarChart({
         </div>
       </div>
 
+      {/* ── Lede ── */}
+      <p style={{ margin: '0 0 6px', padding: '0 2px', fontSize: 11.5, lineHeight: 1.55, color: 'var(--fg-dim)', fontStyle: 'italic' }}>
+        {thinkers.length} Denker an ihren Positionen — Konzepte beim Antippen, Schulen im Schulen-Modus.
+      </p>
+
       {/* ── Stage ── */}
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%', minWidth: 0, maxWidth: isMobile ? '100%' : `calc(78vh * ${W} / ${H})` }}>
@@ -1467,17 +1472,24 @@ function CartoucheContent({
       </div>
       {/* Anchored concepts — accordion */}
       {anchoredConcepts.length > 0 && (
-        <div style={{ borderTop: '1px solid var(--hairline)' }}>
+        <div style={{ borderTop: '2px solid var(--hairline-strong)' }}>
           <button
             onClick={() => setConceptsOpen(o => !o)}
             style={{
               width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               padding: '9px 14px', background: 'none', border: 'none', cursor: 'pointer',
-              fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-faint)',
+              fontSize: 9.5, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--fg-muted)',
             }}
           >
-            <span>Konzepte · {anchoredConcepts.length}</span>
-            <span style={{ fontSize: 10, transition: 'transform 200ms', transform: conceptsOpen ? 'rotate(180deg)' : 'none' }}>▾</span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              {!conceptsOpen && (
+                <span style={{ fontSize: 10, color: 'oklch(0.48 0.08 50)', letterSpacing: 1 }}>
+                  {anchoredConcepts.slice(0, 3).map(c => CONCEPT_GLYPH[c.type]).join(' ')}
+                </span>
+              )}
+              Konzepte · {anchoredConcepts.length}
+            </span>
+            <span style={{ fontSize: 12, fontWeight: 600, transition: 'transform 200ms', transform: conceptsOpen ? 'rotate(180deg)' : 'none', color: 'var(--fg-muted)' }}>▾</span>
           </button>
           {conceptsOpen && (
             <ul style={{ listStyle: 'none', margin: 0, padding: '0 14px 12px', display: 'flex', flexDirection: 'column', gap: 10 }}>
