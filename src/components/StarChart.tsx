@@ -1311,9 +1311,10 @@ function CartoucheContent({
           ✕
         </button>
       </div>
+      {/* Scroll wrapper — desktop: maxHeight caps everything below header; sheet: outer handles it */}
+      <div style={isSheet ? {} : { maxHeight: 340, overflowY: 'auto' as const }}>
       {/* Body */}
-      {/* isSheet: no inner cap — the outer flex-scroll wrapper in .sc-sheet handles it */}
-      <div style={{ padding: '13px 14px 12px', fontSize: 13, lineHeight: 1.62, color: 'var(--fg-muted)', ...(isSheet ? {} : { maxHeight: 232, overflowY: 'auto' as const }) }}>
+      <div style={{ padding: '13px 14px 12px', fontSize: 13, lineHeight: 1.62, color: 'var(--fg-muted)' }}>
         {selectedContent
           ? <Annotated text={selectedContent} level={levelId}/>
           : <span style={{ color: 'var(--fg-dim)', fontStyle: 'italic' }}>—</span>
@@ -1380,6 +1381,7 @@ function CartoucheContent({
           </ul>
         </div>
       )}
+      </div>{/* /scroll wrapper */}
     </>
   )
 }
