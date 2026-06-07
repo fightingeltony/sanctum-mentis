@@ -18,6 +18,7 @@ import wennDieWeltWackeltRaw               from '../../data/lectio/wenn-die-welt
 import warumSollstDuRaw                    from '../../data/lectio/warum-sollst-du.json'
 import wennNichtsVorgegebenRaw             from '../../data/lectio/wenn-nichts-vorgegeben.json'
 import warumGehorchstDuRaw                from '../../data/lectio/warum-gehorchst-du.json'
+import warumGehorchstDuExpositorischRaw   from '../../data/lectio/warum-gehorchst-du-expositorisch.json'
 import findestDuOderMachstDuRaw            from '../../data/lectio/findest-du-oder-machst-du.json'
 import ruheOderRauschRaw                   from '../../data/lectio/ruhe-oder-rausch.json'
 import derWegDesMenschenRaw                from '../../data/lectio/der-weg-des-menschen.json'
@@ -76,7 +77,8 @@ const LECTIOS: Record<string, Lectio> = {
   'wenn-die-welt-wackelt': wennDieWeltWackeltRaw   as unknown as Lectio,
   'warum-sollst-du':       warumSollstDuRaw        as unknown as Lectio,
   'wenn-nichts-vorgegeben':       wennNichtsVorgegebenRaw       as unknown as Lectio,
-  'warum-gehorchst-du':          warumGehorchstDuRaw           as unknown as Lectio,
+  'warum-gehorchst-du':                  warumGehorchstDuRaw                   as unknown as Lectio,
+  'warum-gehorchst-du-expositorisch':    warumGehorchstDuExpositorischRaw      as unknown as Lectio,
   'findest-du-oder-machst-du':   findestDuOderMachstDuRaw      as unknown as Lectio,
   'ruhe-oder-rausch':            ruheOderRauschRaw             as unknown as Lectio,
   'der-weg-des-menschen':        derWegDesMenschenRaw          as unknown as Lectio,
