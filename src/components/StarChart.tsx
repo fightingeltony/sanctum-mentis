@@ -681,28 +681,24 @@ export default function StarChart({
     )
   }
 
-  // Vertical pole — mobile X-poles rotated -90° into side gutters
-  function renderPoleVertical(gx: number, label: string, hint: string | undefined) {
+  // Vertical pole — mobile X-poles rotated -90° into side gutters.
+  // No wrapping (dy direction flips after rotation → overlap) and no hint (gutter too narrow).
+  function renderPoleVertical(gx: number, label: string, _hint: string | undefined) {
     const yc = MH / 2
-    const lines = wrapLabel(label.toUpperCase(), 16)
-    const multi = lines.length > 1
-    const labelY = yc - (multi ? 8 : 0)
     return (
       <g>
         <text
-          x={gx} y={labelY} textAnchor="middle" className="sc-pole"
+          x={gx} y={yc} textAnchor="middle" className="sc-pole"
           transform={`rotate(-90,${gx},${yc})`}
         >
-          {lines.map((ln, i) => (
-            <tspan key={i} x={gx} dy={i === 0 ? undefined : 12}>{ln}</tspan>
-          ))}
+          {label.toUpperCase()}
         </text>
-        {hint && (
+        {false && (
           <text
             x={gx + 16} y={yc} textAnchor="middle" className="sc-pole-hint"
             transform={`rotate(-90,${gx + 16},${yc})`}
           >
-            {hint}
+            {label}
           </text>
         )}
       </g>
@@ -992,8 +988,8 @@ export default function StarChart({
             </svg>
           </div>
 
-          {/* ── Zoom controls ── */}
-          <div
+          {/* ── Zoom controls — desktop only; mobile uses pinch ── */}
+          {!isMobile && <div
             data-nopan
             style={{
               position: 'absolute', right: 10, bottom: 10,
@@ -1019,7 +1015,7 @@ export default function StarChart({
                 {icon}
               </button>
             ))}
-          </div>
+          </div>}
 
           {/* ── Desktop cartouche — hidden on mobile (replaced by bottom-sheet) ── */}
           {!isMobile && selectedThinker && (
@@ -1074,10 +1070,12 @@ export default function StarChart({
         <>
           <div className="sc-sheet-scrim" onClick={deselect} />
           <div className="sc-sheet" onClick={e => e.stopPropagation()}>
-            {/* Drag handle */}
-            <div style={{ display: 'flex', justifyContent: 'center', padding: '10px 0 4px' }}>
+            {/* Drag handle — fixed at top, not scrolled */}
+            <div style={{ flex: '0 0 auto', display: 'flex', justifyContent: 'center', padding: '10px 0 4px' }}>
               <div style={{ width: 36, height: 4, borderRadius: 2, background: 'var(--hairline-strong)' }} />
             </div>
+            {/* Scrollable content region */}
+            <div style={{ flex: '1 1 auto', minHeight: 0, overflowY: 'auto', WebkitOverflowScrolling: 'touch' }}>
             <CartoucheContent
               selectedThinker={selectedThinker}
               selectedSchool={selectedSchool}
@@ -1088,6 +1086,7 @@ export default function StarChart({
               deselect={deselect}
               selectStar={selectStar}
             />
+            </div>
           </div>
         </>
       )}

@@ -566,8 +566,9 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
   border-radius: 16px 16px 0 0;
   border-top: 1px solid var(--hairline-strong);
   box-shadow: 0 -8px 32px -8px oklch(0.22 0.02 65 / 0.28);
-  max-height: 64vh;
-  overflow-y: auto;
+  max-height: 64dvh;
+  display: flex;
+  flex-direction: column;
   animation: scSlideUp 340ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
