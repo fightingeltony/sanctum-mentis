@@ -353,6 +353,7 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
               allThinkers={data.thinkers}
               influences={state.influences}
               schools={data.schools}
+              concepts={state.concepts}
               levelId={levelId}
               levels={data.levels}
               quadrants={data.topic.quadrants}

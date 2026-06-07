@@ -1,8 +1,9 @@
 'use client'
 
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
-import type { Thinker, Influence, School, Quadrants, Level } from '@/lib/types'
+import type { Thinker, Influence, School, Quadrants, Level, Concept } from '@/lib/types'
 import { Annotated } from '@/lib/annotations'
+import { CONCEPT_GLYPH } from '@/lib/conceptTypes'
 
 // ─── Constants — Desktop ──────────────────────────────────────
 const W = 980, H = 760, PAD_X = 200, PAD_Y = 80
@@ -237,11 +238,14 @@ interface EdgeRefs {
   brk:  [SVGLineElement | null, SVGLineElement | null]
 }
 
+type ConceptWithDesc = Concept & { description: string }
+
 interface Props {
   thinkers:    ThinkerWithDesc[]
   influences:  InfluenceWithDesc[]
   allThinkers: Thinker[]
   schools:     School[]
+  concepts:    ConceptWithDesc[]
   levelId:     number
   levels:      Level[]
   quadrants:   Quadrants
@@ -250,7 +254,7 @@ interface Props {
 // ─── Component ────────────────────────────────────────────────
 
 export default function StarChart({
-  thinkers, influences, allThinkers, schools, levelId, levels, quadrants,
+  thinkers, influences, allThinkers, schools, concepts, levelId, levels, quadrants,
 }: Props) {
 
   const [mode,      setMode]      = useState<'axis' | 'school'>('axis')
@@ -307,6 +311,31 @@ export default function StarChart({
     schools.forEach(s => { m[s.id] = s })
     return m
   }, [schools])
+
+  // ── Concept classification ─────────────────────────────────
+  // visibleThinkerIds: set of thinker IDs currently shown (after level filter)
+  const visibleThinkerIds = useMemo(() => new Set(thinkers.map(t => t.id)), [thinkers])
+
+  // orphanConcepts: no primaryThinker, or primaryThinker not visible → own marker
+  const orphanConcepts = useMemo(
+    () => concepts.filter(c =>
+      c.x !== undefined && c.y !== undefined &&
+      (!c.primaryThinker || !visibleThinkerIds.has(c.primaryThinker))
+    ),
+    [concepts, visibleThinkerIds],
+  )
+
+  // anchoredByThinker: thinker-id → concepts anchored to that thinker
+  const anchoredByThinker = useMemo(() => {
+    const m: Record<string, ConceptWithDesc[]> = {}
+    concepts.forEach(c => {
+      if (c.primaryThinker && visibleThinkerIds.has(c.primaryThinker)) {
+        if (!m[c.primaryThinker]) m[c.primaryThinker] = []
+        m[c.primaryThinker].push(c)
+      }
+    })
+    return m
+  }, [concepts, visibleThinkerIds])
 
   const adjacency = useMemo(() => {
     const adj: Record<string, Array<{
@@ -1006,6 +1035,39 @@ export default function StarChart({
                 })}
               </g>
 
+              {/* Concept markers — orphans only, axis mode only */}
+              {mode === 'axis' && (
+                <g pointerEvents="none">
+                  {orphanConcepts.map(c => {
+                    const cx = vMapX(c.x), cy = vMapY(c.y)
+                    const glyph = CONCEPT_GLYPH[c.type] ?? '◆'
+                    const fs = isMobile ? 11 : 9
+                    return (
+                      <g key={c.id}>
+                        <circle cx={cx} cy={cy} r={isMobile ? 9 : 7}
+                          fill="oklch(0.94 0.020 65)"
+                          stroke="oklch(0.48 0.08 50)" strokeWidth={0.8} opacity={0.85}
+                        />
+                        <text x={cx} y={cy} textAnchor="middle" dominantBaseline="central"
+                          fontSize={fs} fill="oklch(0.35 0.08 50)" fontFamily="sans-serif"
+                        >
+                          {glyph}
+                        </text>
+                        <text x={cx} y={cy + (isMobile ? 14 : 11)}
+                          textAnchor="middle" dominantBaseline="hanging"
+                          fontSize={isMobile ? 9 : 7.5}
+                          fill="oklch(0.40 0.06 65)"
+                          fontFamily="var(--font-ui, sans-serif)"
+                          letterSpacing="0.02em"
+                        >
+                          {c.name}
+                        </text>
+                      </g>
+                    )
+                  })}
+                </g>
+              )}
+
               {/* Stars */}
               <g>
                 {thinkers.map(t => {
@@ -1139,6 +1201,7 @@ export default function StarChart({
                 selectedContent={selectedContent}
                 selectedRelations={selectedRelations}
                 thinkerById={thinkerById}
+                anchoredConcepts={anchoredByThinker[selectedThinker.id] ?? []}
                 levelId={levelId}
                 deselect={deselect}
                 selectStar={selectStar}
@@ -1186,6 +1249,7 @@ export default function StarChart({
               selectedContent={selectedContent}
               selectedRelations={selectedRelations}
               thinkerById={thinkerById}
+              anchoredConcepts={anchoredByThinker[selectedThinker.id] ?? []}
               levelId={levelId}
               deselect={deselect}
               selectStar={selectStar}
@@ -1208,6 +1272,7 @@ interface CartoucheContentProps {
   selectedContent:   string
   selectedRelations: Array<{ edgeId: string; otherId: string; dir: 'in' | 'out'; edge: InfluenceWithDesc }>
   thinkerById:       Record<string, ThinkerWithDesc>
+  anchoredConcepts:  ConceptWithDesc[]
   levelId:           number
   deselect:          () => void
   selectStar:        (id: string) => void
@@ -1215,7 +1280,7 @@ interface CartoucheContentProps {
 
 function CartoucheContent({
   selectedThinker, selectedSchool, selectedContent, selectedRelations,
-  thinkerById, levelId, deselect, selectStar, isSheet,
+  thinkerById, anchoredConcepts, levelId, deselect, selectStar, isSheet,
 }: CartoucheContentProps) {
   return (
     <>
@@ -1254,6 +1319,29 @@ function CartoucheContent({
           : <span style={{ color: 'var(--fg-dim)', fontStyle: 'italic' }}>—</span>
         }
       </div>
+      {/* Anchored concepts */}
+      {anchoredConcepts.length > 0 && (
+        <div style={{ padding: '0 14px 12px', borderTop: '1px solid var(--hairline)' }}>
+          <p style={{ fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-faint)', margin: '10px 0 8px' }}>
+            Konzepte
+          </p>
+          <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
+            {anchoredConcepts.map(c => (
+              <li key={c.id}>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, marginBottom: 3 }}>
+                  <span style={{ fontSize: 11, color: 'oklch(0.48 0.08 50)' }}>{CONCEPT_GLYPH[c.type]}</span>
+                  <span style={{ fontSize: 12, fontWeight: 500, color: 'var(--fg)', letterSpacing: '0.01em' }}>{c.name}</span>
+                </div>
+                {c.description && (
+                  <p style={{ margin: 0, fontSize: 12, lineHeight: 1.55, color: 'var(--fg-muted)' }}>
+                    <Annotated text={c.description} level={levelId} />
+                  </p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       {/* Relations */}
       {selectedRelations.length > 0 && (
         <div style={{ padding: '0 14px 14px' }}>
