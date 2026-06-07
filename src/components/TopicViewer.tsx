@@ -246,11 +246,25 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
                       {l.title}
                     </span>
                   </span>
-                  <span
-                    className="font-ui text-[11px] tracking-[0.02em] shrink-0"
-                    style={{ color: 'var(--fg-faint)' }}
-                  >
-                    {l.stationCount} St. · ~{l.estimated_minutes} Min
+                  <span className="flex items-center gap-2 shrink-0">
+                    {l.ton === 'erzählend-erfahrend' && (
+                      <span
+                        className="font-ui text-[9px] tracking-[0.16em] uppercase px-1.5 py-0.5"
+                        style={{
+                          color: 'var(--accent)',
+                          border: '1px solid color-mix(in oklch, var(--accent) 35%, transparent)',
+                          borderRadius: '2px',
+                        }}
+                      >
+                        Erzählend
+                      </span>
+                    )}
+                    <span
+                      className="font-ui text-[11px] tracking-[0.02em]"
+                      style={{ color: 'var(--fg-faint)' }}
+                    >
+                      {l.stationCount} St. · ~{l.estimated_minutes} Min
+                    </span>
                   </span>
                 </Link>
               ))}

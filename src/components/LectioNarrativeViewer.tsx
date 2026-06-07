@@ -192,6 +192,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
             >
               {lectio.tableauId === 'das-selbst' ? 'Die Landkarte des Selbst' : lectio.title}
               {' · '}{voiceSteps.length} Stimmen{' · '}~{lectio.estimated_minutes} Min
+              {lectio.ton === 'erzählend-erfahrend' && ' · Erzählend'}
             </p>
             <h1
               className="frage serif reveal"
@@ -415,17 +416,24 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         }
 
         .brand {
-          position: fixed; top: 26px; left: 30px; z-index: 6;
-          font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
-          color: var(--fg-muted); display: flex; align-items: center; gap: 7px;
+          position: fixed; top: 22px; left: 26px; z-index: 6;
+          font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+          color: oklch(0.44 0.03 65);
+          display: flex; align-items: center; gap: 6px;
           text-decoration: none; cursor: pointer;
-          transition: color .3s;
-          border-bottom: 1px solid color-mix(in oklch, var(--fg-muted) 25%, transparent);
-          padding-bottom: 1px;
+          padding: 5px 11px;
+          border: 1px solid oklch(0.44 0.03 65 / 0.35);
+          border-radius: 3px;
+          background: oklch(0.44 0.03 65 / 0.05);
+          transition: color .25s, border-color .25s, background .25s;
         }
-        .brand:hover { color: var(--fg); border-bottom-color: var(--fg-muted); }
-        .exit-arrow { font-size: 12px; line-height: 1; transition: transform .25s; }
-        .brand:hover .exit-arrow { transform: translateX(-3px); }
+        .brand:hover {
+          color: oklch(0.30 0.04 65);
+          border-color: oklch(0.44 0.03 65 / 0.65);
+          background: oklch(0.44 0.03 65 / 0.10);
+        }
+        .exit-arrow { font-size: 11px; line-height: 1; transition: transform .25s; }
+        .brand:hover .exit-arrow { transform: translateX(-2px); }
         .lc-counter {
           position: fixed; top: 26px; right: 30px; z-index: 6;
           font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
@@ -634,8 +642,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           .niche { width: 104px; height: 132px; border-radius: 52px 52px 6px 6px; }
           .station { top: 52px; }
           .station-inner { padding: 28px 22px 200px; }
-          .brand { top: 16px; left: 16px; }
-          .brand-text { display: none; } /* nur Diamond-Glyph, kein Text */
+          .brand { top: 14px; left: 14px; padding: 4px 9px; font-size: 9px; }
           .lc-counter { top: 16px; right: 16px; }
         }
       `}</style>

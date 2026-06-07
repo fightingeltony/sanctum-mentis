@@ -191,6 +191,7 @@ export interface LectioSummary {
   focus: string;
   estimated_minutes: number;
   stationCount: number;
+  ton?: string;
 }
 
 // ─── Lebensfragen Types ──────────────────────────────────────

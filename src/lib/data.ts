@@ -125,5 +125,6 @@ export function getLectiosByTableauId(tableauId: string): LectioSummary[] {
       focus:            l.focus,
       estimated_minutes: l.estimated_minutes,
       stationCount:     l.path.length,
+      ton:              l.ton,
     }))
 }
