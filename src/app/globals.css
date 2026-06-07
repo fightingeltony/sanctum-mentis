@@ -531,4 +531,52 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
   .sc-edge-g, .sc-edge, .sc-star-body, .sc-sname, .sc-brk { transition: none; }
   .sc-star.sc-unread .sc-pulse-halo { animation: none; }
   .sc-star.sc-active .sc-halo-pulse { animation: none; }
+  .sc-sheet { animation: none; }
+  .sc-sheet-scrim { animation: none; }
+}
+
+/* ── Mobile overrides (≤640px) ── */
+@media (max-width: 640px) {
+  /* Larger fonts in the SVG coordinate space */
+  .sc-sname   { font-size: 17px; }
+  .sc-slife   { font-size: 12px; }
+  .sc-pole    { font-size: 17px; }
+
+  /* School mode: hide star names — school title labels the cluster, name shows in sheet */
+  svg.sc-mode-school .sc-sname,
+  svg.sc-mode-school .sc-slife { opacity: 0 !important; transition: opacity 200ms; }
+}
+
+/* ── Mobile bottom-sheet cartouche ── */
+.sc-sheet-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  background: oklch(0.22 0.02 65 / 0.38);
+  animation: scFadeIn 220ms ease-out;
+}
+
+.sc-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 41;
+  background: var(--bg-raised);
+  border-radius: 16px 16px 0 0;
+  border-top: 1px solid var(--hairline-strong);
+  box-shadow: 0 -8px 32px -8px oklch(0.22 0.02 65 / 0.28);
+  max-height: 64vh;
+  overflow-y: auto;
+  animation: scSlideUp 340ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes scFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scSlideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0);    }
 }

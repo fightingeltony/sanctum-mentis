@@ -4,11 +4,15 @@ import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import type { Thinker, Influence, School, Quadrants, Level } from '@/lib/types'
 import { Annotated } from '@/lib/annotations'
 
-// ─── Constants ────────────────────────────────────────────────
-
+// ─── Constants — Desktop ──────────────────────────────────────
 const W = 980, H = 760, PAD_X = 200, PAD_Y = 80
 const mapX = (x: number) => PAD_X + (x / 100) * (W - 2 * PAD_X)
 const mapY = (y: number) => H - PAD_Y - (y / 100) * (H - 2 * PAD_Y)
+
+// ─── Constants — Mobile (portrait) ───────────────────────────
+const MW = 640, MH = 884, MPAD_X = 64, MPAD_Y = 128
+const mMapX = (x: number) => MPAD_X + (x / 100) * (MW - 2 * MPAD_X)
+const mMapY = (y: number) => MH - MPAD_Y - (y / 100) * (MH - 2 * MPAD_Y)
 
 const LINE_COLOR: Record<string, string> = {
   influence:    'var(--line-influence)',
@@ -53,8 +57,7 @@ function wrapLabel(str: string, max: number): string[] {
 
 type Pos = { x: number; y: number }
 
-// Stable school cluster layout — computed from ALL thinkers (not just visible) so
-// positions don't jump when new thinkers appear at higher levels.
+// Desktop: adaptive ellipse, scales with school count
 function computeSchoolLayout(thinkers: Thinker[]): {
   present: string[]
   centers: Record<string, Pos>
@@ -63,8 +66,6 @@ function computeSchoolLayout(thinkers: Thinker[]): {
   const present: string[] = []
   thinkers.forEach(t => { if (!present.includes(t.schoolId)) present.push(t.schoolId) })
   const ccx = W / 2, ccy = H / 2 - 6
-  // Cluster ellipse scales with school count: compact for a handful of schools,
-  // wide enough to keep (wrapped) titles from colliding when there are many.
   const n = present.length
   const RX = Math.max(210, Math.min(410, 156 + 18.75 * n))
   const RY = Math.max(180, Math.min(300, 157 + 10.6  * n))
@@ -81,6 +82,41 @@ function computeSchoolLayout(thinkers: Thinker[]): {
       layout[members[0].id] = { x: c.x, y: c.y }
     } else {
       const rr = 22 + members.length * 7
+      members.forEach((m, j) => {
+        const a = (-90 + j * (360 / members.length)) * Math.PI / 180
+        layout[m.id] = { x: c.x + Math.cos(a) * rr, y: c.y + Math.sin(a) * rr }
+      })
+    }
+  })
+  return { present, centers, layout }
+}
+
+// Mobile: 2-column grid — robust on narrow portrait screens
+function computeMobileSchoolLayout(thinkers: Thinker[]): {
+  present: string[]
+  centers: Record<string, Pos & { col: number }>
+  layout:  Record<string, Pos>
+} {
+  const present: string[] = []
+  thinkers.forEach(t => { if (!present.includes(t.schoolId)) present.push(t.schoolId) })
+  const COLS = 2
+  const rows  = Math.ceil(present.length / COLS)
+  const gMX = 34, gTop = 70, gBot = MH - 44
+  const colW = (MW - 2 * gMX) / COLS
+  const rowH = (gBot - gTop) / rows
+  const centers: Record<string, Pos & { col: number }> = {}
+  const layout:  Record<string, Pos> = {}
+  present.forEach((sid, i) => {
+    const c = i % COLS, r = Math.floor(i / COLS)
+    centers[sid] = { x: gMX + colW * (c + 0.5), y: gTop + rowH * (r + 0.5), col: c }
+  })
+  present.forEach(sid => {
+    const members = thinkers.filter(t => t.schoolId === sid)
+    const c = centers[sid]
+    if (members.length === 1) {
+      layout[members[0].id] = { x: c.x, y: c.y }
+    } else {
+      const rr = 18 + members.length * 6
       members.forEach((m, j) => {
         const a = (-90 + j * (360 / members.length)) * Math.PI / 180
         layout[m.id] = { x: c.x + Math.cos(a) * rr, y: c.y + Math.sin(a) * rr }
@@ -120,10 +156,8 @@ interface EdgeRefs {
 }
 
 interface Props {
-  // Visible at current level (from computeLevelState)
   thinkers:    ThinkerWithDesc[]
   influences:  InfluenceWithDesc[]
-  // All in topic — for stable school layout + total count
   allThinkers: Thinker[]
   schools:     School[]
   levelId:     number
@@ -141,6 +175,7 @@ export default function StarChart({
   const [showLines, setShowLines] = useState(true)
   const [selected,  setSelected]  = useState<string | null>(null)
   const [readSet,   setReadSet]   = useState<Set<string>>(new Set())
+  const [isMobile,  setIsMobile]  = useState(false)
 
   // ── Refs ──────────────────────────────────────────────────
   const svgRef      = useRef<SVGSVGElement | null>(null)
@@ -148,14 +183,11 @@ export default function StarChart({
   const cameraRef   = useRef<HTMLDivElement | null>(null)
   const starGRefs   = useRef<Record<string, SVGGElement | null>>({})
   const edgeRefs    = useRef<Record<string, EdgeRefs>>({})
-  // Animated positions (mutable — bypasses React state for rAF performance)
   const posRef      = useRef<Record<string, Pos>>({})
   const drawnPosRef = useRef<Record<string, Pos>>({})
   const morphRafRef = useRef<number | null>(null)
-  // Mutable copies so animation closures always see current values
   const modeRef     = useRef<'axis' | 'school'>('axis')
   const selectedRef = useRef<string | null>(null)
-  // Pan/zoom state (handles both mouse and multi-touch pinch)
   const panRef    = useRef({ scale: 1, tx: 0, ty: 0 })
   const ptrsRef   = useRef(new Map<number, Pos>())
   const dragRef   = useRef<{ x: number; y: number; tx: number; ty: number } | null>(null)
@@ -164,10 +196,23 @@ export default function StarChart({
   const suppressClickRef = useRef(false)
   const deselectRef = useRef<() => void>(() => {})
 
+  // ── isMobile detection ────────────────────────────────────
+  useEffect(() => {
+    const mq = matchMedia('(max-width: 640px)')
+    setIsMobile(mq.matches)
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches)
+    mq.addEventListener('change', handler)
+    return () => mq.removeEventListener('change', handler)
+  }, [])
+
   // ── Derived data ──────────────────────────────────────────
 
-  // School layout computed from ALL thinkers (stable as level increases)
   const schoolLayout = useMemo(() => computeSchoolLayout(allThinkers), [allThinkers])
+  const mobileSchoolLayout = useMemo(() => computeMobileSchoolLayout(allThinkers), [allThinkers])
+  const activeSchoolLayout = useMemo(
+    () => isMobile ? mobileSchoolLayout : schoolLayout,
+    [isMobile, mobileSchoolLayout, schoolLayout],
+  )
 
   const thinkerById = useMemo(() => {
     const m: Record<string, ThinkerWithDesc> = {}
@@ -181,7 +226,6 @@ export default function StarChart({
     return m
   }, [schools])
 
-  // Adjacency list for visible thinkers (from visible influences)
   const adjacency = useMemo(() => {
     const adj: Record<string, Array<{
       edgeId:  string
@@ -247,7 +291,6 @@ export default function StarChart({
       refs.line?.setAttribute('d', d)
       refs.hit ?.setAttribute('d', d)
       if (inf.type === 'rejection' && refs.brk[0] && refs.brk[1]) {
-        // Break marks at ~mid of the Bézier curve
         const mx  = 0.25 * x1 + 0.5 * cxp + 0.25 * x2
         const my  = 0.25 * y1 + 0.5 * cyp + 0.25 * y2
         const off = 2.4, half = 4.5
@@ -268,13 +311,13 @@ export default function StarChart({
       const drawn = drawnPosRef.current[t.id]
       if (!drawn) return
       const target = modeRef.current === 'school'
-        ? (schoolLayout.layout[t.id] ?? drawn)
+        ? (activeSchoolLayout.layout[t.id] ?? drawn)
         : drawn
       posRef.current[t.id] = { ...target }
     })
     updateStarTransforms()
     renderEdges()
-  }, [thinkers, schoolLayout, updateStarTransforms, renderEdges])
+  }, [thinkers, activeSchoolLayout, updateStarTransforms, renderEdges])
 
   // ── Apply label side (axis: x>55→left; school: outward) ──
   const applyLabelSides = useCallback((m: 'axis' | 'school') => {
@@ -283,35 +326,45 @@ export default function StarChart({
       if (!g) return
       let side: 'left' | 'right'
       if (m === 'school') {
-        const lay = schoolLayout.layout[t.id]
-        const c   = schoolLayout.centers[t.schoolId]
-        side = lay && c && lay.x < c.x - 0.5 ? 'left' : 'right'
+        const c = activeSchoolLayout.centers[t.schoolId] as Pos & { col?: number }
+        if (isMobile) {
+          // Grid: left column → left side, right column → right side
+          side = c && c.x < MW / 2 ? 'left' : 'right'
+        } else {
+          const lay = activeSchoolLayout.layout[t.id]
+          side = lay && c && lay.x < c.x - 0.5 ? 'left' : 'right'
+        }
       } else {
         side = (t.x !== undefined && t.x > 55) ? 'left' : 'right'
       }
       const drawnCx = drawnPosRef.current[t.id]?.x ?? 0
-      const R       = 7.4 - (t.firstLevel - 1) * 0.7
-      const ldx     = side === 'left' ? -(R + 6) : (R + 6)
-      const anc     = side === 'left' ? 'end' : 'start'
+      const R   = isMobile
+        ? 12 - (t.firstLevel - 1) * 1.1
+        : 7.4 - (t.firstLevel - 1) * 0.7
+      const off = isMobile ? 8 : 6
+      const ldx = side === 'left' ? -(R + off) : (R + off)
+      const anc = side === 'left' ? 'end' : 'start'
       const name = g.querySelector<SVGTextElement>('.sc-sname')
       const life = g.querySelector<SVGTextElement>('.sc-slife')
       if (name) { name.setAttribute('x', String(drawnCx + ldx)); name.setAttribute('text-anchor', anc) }
       if (life) { life.setAttribute('x', String(drawnCx + ldx)); life.setAttribute('text-anchor', anc) }
     })
-  }, [thinkers, schoolLayout])
+  }, [thinkers, activeSchoolLayout, isMobile])
 
-  // ── Update drawnPos when thinkers change (level change) ──
+  // ── Update drawnPos when thinkers/level/isMobile change ──
   useEffect(() => {
     const newDrawn: Record<string, Pos> = {}
     thinkers.forEach(t => {
       if (t.x !== undefined && t.y !== undefined) {
-        newDrawn[t.id] = { x: mapX(t.x), y: mapY(t.y) }
+        newDrawn[t.id] = {
+          x: isMobile ? mMapX(t.x) : mapX(t.x),
+          y: isMobile ? mMapY(t.y) : mapY(t.y),
+        }
       }
     })
     drawnPosRef.current = newDrawn
     syncPositions()
     applyLabelSides(modeRef.current)
-    // Update unread shimmer
     thinkers.forEach(t => {
       const g = starGRefs.current[t.id]
       if (g) {
@@ -320,7 +373,7 @@ export default function StarChart({
       }
     })
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [thinkers, levelId])
+  }, [thinkers, levelId, isMobile])
 
   // ── Update unread state when readSet changes ──────────────
   useEffect(() => {
@@ -331,6 +384,14 @@ export default function StarChart({
       g.classList.toggle('sc-unread', !readSet.has(k))
     })
   }, [readSet, levelId, thinkers])
+
+  // ── Reset pan/zoom on breakpoint change ───────────────────
+  useEffect(() => {
+    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
+    panRef.current = { scale: 1, tx: 0, ty: 0 }
+    const camera = cameraRef.current
+    if (camera) { camera.style.transform = 'translate(0px,0px) scale(1)' }
+  }, [isMobile])
 
   // ── Morph animation ───────────────────────────────────────
   const morph = useCallback((to: 'axis' | 'school') => {
@@ -349,7 +410,7 @@ export default function StarChart({
       starts[t.id] = { ...cur }
       const drawn = drawnPosRef.current[t.id]
       targets[t.id] = to === 'school'
-        ? (schoolLayout.layout[t.id] ?? drawn ?? cur)
+        ? (activeSchoolLayout.layout[t.id] ?? drawn ?? cur)
         : (drawn ?? cur)
     })
     const dur = 820
@@ -368,7 +429,7 @@ export default function StarChart({
       if (k < 1) morphRafRef.current = requestAnimationFrame(frame)
     }
     morphRafRef.current = requestAnimationFrame(frame)
-  }, [thinkers, schoolLayout, syncPositions, applyLabelSides, updateStarTransforms, renderEdges])
+  }, [thinkers, activeSchoolLayout, syncPositions, applyLabelSides, updateStarTransforms, renderEdges])
 
   // Cleanup rAF on unmount
   useEffect(() => () => {
@@ -407,7 +468,6 @@ export default function StarChart({
       ps.ty = my - (my - ps.ty) * (ps.scale / old)
       applyZoom()
     }
-    // Prevent iOS from treating multi-touch as a page gesture
     const onTouchStart = (e: TouchEvent) => {
       if (e.touches.length > 1) e.preventDefault()
     }
@@ -560,7 +620,6 @@ export default function StarChart({
     if (!t) return
     selectedRef.current = id
     setSelected(id)
-    // Reset and re-apply focus
     svgRef.current?.classList.remove('sc-focus')
     Object.values(edgeRefs.current).forEach(r => r?.g?.classList.remove('sc-lit'))
     Object.values(starGRefs.current).forEach(g => g?.classList.remove('sc-active', 'sc-neighbor'))
@@ -587,8 +646,18 @@ export default function StarChart({
   // ── Current level label ───────────────────────────────────
   const currentLevel = levels.find(l => l.id === levelId)
 
-  // ── Axis pole renderer ────────────────────────────────────
-  function renderPole(
+  // ── SVG geometry helpers (branch on isMobile) ────────────
+  const svgW    = isMobile ? MW    : W
+  const svgH    = isMobile ? MH    : H
+  const svgPadX = isMobile ? MPAD_X : PAD_X
+  const svgPadY = isMobile ? MPAD_Y : PAD_Y
+  const vMapX   = isMobile ? mMapX  : mapX
+  const vMapY   = isMobile ? mMapY  : mapY
+
+  // ── Axis pole renderers ───────────────────────────────────
+
+  // Horizontal pole (desktop left/right + mobile top/bottom Y-poles)
+  function renderPoleLine(
     x: number, baseY: number, anchor: 'start' | 'middle' | 'end',
     label: string, hint: string | undefined, wrapMax: number,
   ) {
@@ -612,13 +681,41 @@ export default function StarChart({
     )
   }
 
+  // Vertical pole — mobile X-poles rotated -90° into side gutters
+  function renderPoleVertical(gx: number, label: string, hint: string | undefined) {
+    const yc = MH / 2
+    const lines = wrapLabel(label.toUpperCase(), 16)
+    const multi = lines.length > 1
+    const labelY = yc - (multi ? 8 : 0)
+    return (
+      <g>
+        <text
+          x={gx} y={labelY} textAnchor="middle" className="sc-pole"
+          transform={`rotate(-90,${gx},${yc})`}
+        >
+          {lines.map((ln, i) => (
+            <tspan key={i} x={gx} dy={i === 0 ? undefined : 12}>{ln}</tspan>
+          ))}
+        </text>
+        {hint && (
+          <text
+            x={gx + 16} y={yc} textAnchor="middle" className="sc-pole-hint"
+            transform={`rotate(-90,${gx + 16},${yc})`}
+          >
+            {hint}
+          </text>
+        )}
+      </g>
+    )
+  }
+
   // ─── Render ──────────────────────────────────────────────
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
 
       {/* ── Controls ── */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '4px 4px 12px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 8 : 16, padding: isMobile ? '2px 4px 8px' : '4px 4px 12px' }}>
         <div className="sc-modeswitch">
           <button className={mode === 'axis'   ? 'sc-on' : ''} onClick={() => morph('axis')}>Karte</button>
           <button className={mode === 'school' ? 'sc-on' : ''} onClick={() => morph('school')}>Schulen</button>
@@ -631,7 +728,7 @@ export default function StarChart({
 
       {/* ── Stage ── */}
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <div style={{ display: 'flex', flexDirection: 'column', width: '100%', minWidth: 0, maxWidth: 'calc(78vh * 980 / 760)' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', width: '100%', minWidth: 0, maxWidth: isMobile ? '100%' : `calc(78vh * ${W} / ${H})` }}>
         <div
           ref={stageRef}
           style={{
@@ -639,7 +736,7 @@ export default function StarChart({
             border: '1px solid var(--hairline-strong)',
             background: 'var(--bg-sunk)',
             overflow: 'hidden', cursor: 'grab',
-            aspectRatio: '980 / 760', maxHeight: '78vh',
+            aspectRatio: `${svgW} / ${svgH}`, maxHeight: '78vh',
             boxShadow: 'inset 0 0 0 6px var(--bg-sunk), inset 0 0 0 7px var(--hairline)',
           }}
           onPointerDown={onStagePointerDown}
@@ -650,7 +747,7 @@ export default function StarChart({
           <div ref={cameraRef} style={{ position: 'absolute', inset: 0, transformOrigin: '0 0' }}>
             <svg
               ref={svgRef}
-              viewBox={`0 0 ${W} ${H}`}
+              viewBox={`0 0 ${svgW} ${svgH}`}
               style={{ width: '100%', height: '100%', display: 'block' }}
             >
               <defs>
@@ -674,54 +771,88 @@ export default function StarChart({
               </defs>
 
               {/* Background */}
-              <rect x={0} y={0} width={W} height={H} fill="var(--bg-sunk)"/>
-              <rect x={0} y={0} width={W} height={H} filter="url(#sc-grain)" pointerEvents="none"/>
+              <rect x={0} y={0} width={svgW} height={svgH} fill="var(--bg-sunk)"/>
+              <rect x={0} y={0} width={svgW} height={svgH} filter="url(#sc-grain)" pointerEvents="none"/>
 
               {/* Graticule */}
               <g className="sc-axischrome" pointerEvents="none">
                 {[0.25, 0.5, 0.75].map(t => {
-                  const x = PAD_X + t * (W - 2 * PAD_X)
-                  const y = PAD_Y + t * (H - 2 * PAD_Y)
+                  const x = svgPadX + t * (svgW - 2 * svgPadX)
+                  const y = svgPadY + t * (svgH - 2 * svgPadY)
                   return (
                     <g key={t}>
-                      <line x1={x} y1={PAD_Y}     x2={x}     y2={H - PAD_Y} className={t === 0.5 ? 'sc-axis' : 'sc-grid'}/>
-                      <line x1={PAD_X} y1={y} x2={W - PAD_X} y2={y}         className={t === 0.5 ? 'sc-axis' : 'sc-grid'}/>
+                      <line x1={x} y1={svgPadY}         x2={x}            y2={svgH - svgPadY} className={t === 0.5 ? 'sc-axis' : 'sc-grid'}/>
+                      <line x1={svgPadX} y1={y}          x2={svgW - svgPadX} y2={y}           className={t === 0.5 ? 'sc-axis' : 'sc-grid'}/>
                     </g>
                   )
                 })}
-                <rect x={PAD_X} y={PAD_Y} width={W - 2 * PAD_X} height={H - 2 * PAD_Y} className="sc-frame"/>
+                <rect x={svgPadX} y={svgPadY} width={svgW - 2 * svgPadX} height={svgH - 2 * svgPadY} className="sc-frame"/>
               </g>
 
               {/* Axis labels */}
               <g className="sc-axischrome" pointerEvents="none">
-                {renderPole(PAD_X - 12, H / 2, 'end',   quadrants.axisX.left,  quadrants.axisX.leftHint,  14)}
-                {renderPole(W - PAD_X + 12, H / 2, 'start', quadrants.axisX.right, quadrants.axisX.rightHint, 14)}
-                <text x={W / 2} y={H - PAD_Y + 58} textAnchor="middle" className="sc-axisname">
-                  {`← ${quadrants.axisX.label} →`}
-                </text>
-                {quadrants.axisY.topHint && (
-                  <text x={W / 2} y={PAD_Y - 44} textAnchor="middle" className="sc-pole-hint">
-                    {quadrants.axisY.topHint}
-                  </text>
+                {isMobile ? (
+                  // Mobile: X-poles rotated vertically in narrow side gutters; Y-poles horizontal
+                  <>
+                    {renderPoleVertical(26, quadrants.axisX.left, quadrants.axisX.leftHint)}
+                    {renderPoleVertical(MW - 26, quadrants.axisX.right, quadrants.axisX.rightHint)}
+                    {quadrants.axisY.topHint && (
+                      <text x={MW / 2} y={60} textAnchor="middle" className="sc-pole-hint">
+                        {quadrants.axisY.topHint}
+                      </text>
+                    )}
+                    <text x={MW / 2} y={82} textAnchor="middle" className="sc-pole">
+                      {quadrants.axisY.top?.toUpperCase()}
+                    </text>
+                    <text x={MW / 2} y={MH - MPAD_Y + 46} textAnchor="middle" className="sc-pole">
+                      {quadrants.axisY.bottom?.toUpperCase()}
+                    </text>
+                    {quadrants.axisY.bottomHint && (
+                      <text x={MW / 2} y={MH - MPAD_Y + 66} textAnchor="middle" className="sc-pole-hint">
+                        {quadrants.axisY.bottomHint}
+                      </text>
+                    )}
+                  </>
+                ) : (
+                  // Desktop: horizontal X-poles in wide side margins, Y-axis name rotated
+                  <>
+                    {renderPoleLine(PAD_X - 12,     H / 2, 'end',   quadrants.axisX.left,  quadrants.axisX.leftHint,  14)}
+                    {renderPoleLine(W - PAD_X + 12, H / 2, 'start', quadrants.axisX.right, quadrants.axisX.rightHint, 14)}
+                    <text x={W / 2} y={H - PAD_Y + 58} textAnchor="middle" className="sc-axisname">
+                      {`← ${quadrants.axisX.label} →`}
+                    </text>
+                    {quadrants.axisY.topHint && (
+                      <text x={W / 2} y={PAD_Y - 44} textAnchor="middle" className="sc-pole-hint">
+                        {quadrants.axisY.topHint}
+                      </text>
+                    )}
+                    <text x={W / 2} y={PAD_Y - 28} textAnchor="middle" className="sc-pole">
+                      {quadrants.axisY.top?.toUpperCase()}
+                    </text>
+                    <text x={W / 2} y={H - PAD_Y + 24} textAnchor="middle" className="sc-pole">
+                      {quadrants.axisY.bottom?.toUpperCase()}
+                    </text>
+                    {quadrants.axisY.bottomHint && (
+                      <text x={W / 2} y={H - PAD_Y + 40} textAnchor="middle" className="sc-pole-hint">
+                        {quadrants.axisY.bottomHint}
+                      </text>
+                    )}
+                    <text
+                      x={22} y={H / 2} textAnchor="middle" className="sc-axisname"
+                      transform={`rotate(-90,22,${H / 2})`}
+                    >
+                      {`↑ ${quadrants.axisY.label} ↓`}
+                    </text>
+                    {/* Compass */}
+                    <g transform={`translate(${W - PAD_X - 30},${PAD_Y + 34})`} opacity={0.5}>
+                      <circle r={15} fill="none" stroke="var(--fg-muted)" strokeWidth={0.5} strokeOpacity={0.8}/>
+                      <line x1={0} y1={-15} x2={0} y2={15} stroke="var(--fg-muted)" strokeWidth={0.5}/>
+                      <line x1={-15} y1={0} x2={15} y2={0} stroke="var(--fg-muted)" strokeWidth={0.5}/>
+                      <polygon points="0,-15 2,-6 0,-8 -2,-6" fill="var(--accent)"/>
+                      <text y={-19} textAnchor="middle" className="sc-compass-label" fill="var(--fg-muted)" opacity={0.7}>N</text>
+                    </g>
+                  </>
                 )}
-                <text x={W / 2} y={PAD_Y - 28} textAnchor="middle" className="sc-pole">
-                  {quadrants.axisY.top?.toUpperCase()}
-                </text>
-                <text x={W / 2} y={H - PAD_Y + 24} textAnchor="middle" className="sc-pole">
-                  {quadrants.axisY.bottom?.toUpperCase()}
-                </text>
-                {quadrants.axisY.bottomHint && (
-                  <text x={W / 2} y={H - PAD_Y + 40} textAnchor="middle" className="sc-pole-hint">
-                    {quadrants.axisY.bottomHint}
-                  </text>
-                )}
-                {/* Y-axis name in its own far-left lane — safe from left X-pole because that pole wraps */}
-                <text
-                  x={22} y={H / 2} textAnchor="middle" className="sc-axisname"
-                  transform={`rotate(-90,22,${H / 2})`}
-                >
-                  {`↑ ${quadrants.axisY.label} ↓`}
-                </text>
               </g>
 
               {/* Edges */}
@@ -775,26 +906,19 @@ export default function StarChart({
                 })}
               </g>
 
-              {/* Compass */}
-              <g className="sc-axischrome" transform={`translate(${W - PAD_X - 30},${PAD_Y + 34})`} opacity={0.5} pointerEvents="none">
-                <circle r={15} fill="none" stroke="var(--fg-muted)" strokeWidth={0.5} strokeOpacity={0.8}/>
-                <line x1={0} y1={-15} x2={0} y2={15} stroke="var(--fg-muted)" strokeWidth={0.5}/>
-                <line x1={-15} y1={0} x2={15} y2={0} stroke="var(--fg-muted)" strokeWidth={0.5}/>
-                <polygon points="0,-15 2,-6 0,-8 -2,-6" fill="var(--accent)"/>
-                <text y={-19} textAnchor="middle" className="sc-compass-label" fill="var(--fg-muted)" opacity={0.7}>N</text>
-              </g>
-
               {/* Stars */}
-              {/* Only thinkers[] are shown as stars — concepts[] are intentionally excluded for now */}
               <g>
                 {thinkers.map(t => {
                   if (t.x === undefined || t.y === undefined) return null
-                  const cx    = mapX(t.x), cy = mapY(t.y)
+                  const cx    = vMapX(t.x), cy = vMapY(t.y)
                   const col   = schoolById[t.schoolId]?.color ?? 'oklch(0.42 0.10 65)'
                   const isAnchor = t.firstLevel === 1
-                  const R     = 7.4 - (t.firstLevel - 1) * 0.7
+                  const R     = isMobile
+                    ? 12 - (t.firstLevel - 1) * 1.1
+                    : 7.4 - (t.firstLevel - 1) * 0.7
+                  const off   = isMobile ? 8 : 6
                   const onLeft = t.x > 55
-                  const ldx   = onLeft ? -(R + 6) : (R + 6)
+                  const ldx   = onLeft ? -(R + off) : (R + off)
                   const anc   = onLeft ? 'end' : 'start'
 
                   return (
@@ -807,33 +931,24 @@ export default function StarChart({
                       onClick={e => { e.stopPropagation(); selectStar(t.id) }}
                     >
                       {/* Wide touch / pointer target */}
-                      <circle cx={cx} cy={cy} r={16} fill="transparent"/>
+                      <circle cx={cx} cy={cy} r={isMobile ? 22 : 16} fill="transparent"/>
                       <g className="sc-star-body">
-                        {/* Halo pulse (on active/click) */}
                         <circle className="sc-halo-pulse" cx={cx} cy={cy} r={6} fill="none" stroke={col} strokeWidth={1} opacity={0}/>
-                        {/* Breathe halo (unread) */}
                         <circle
                           className="sc-pulse-halo"
                           cx={cx} cy={cy} r={R * 2.2}
                           fill={`url(#sc-glow-${t.id})`}
                           style={{ transformBox: 'fill-box', transformOrigin: 'center' }}
                         />
-                        {/* Static glow */}
                         <circle className="sc-glow" cx={cx} cy={cy} r={R * 1.7} fill={`url(#sc-glow-${t.id})`}/>
-                        {/* Anchor ring for L1 stars */}
                         {isAnchor && <circle className="sc-ring" cx={cx} cy={cy} r={R + 3.5}/>}
-                        {/* 4-pointed spike */}
                         <path className="sc-spike" d={spikePath(cx, cy, R)}/>
-                        {/* Coloured core */}
                         <circle cx={cx} cy={cy} r={isAnchor ? 2.4 : 1.8} fill={col}/>
-                        {/* Unread dot (top-right of star) */}
                         <circle className="sc-unread-dot" cx={cx + R * 0.9} cy={cy - R * 0.9} r={1.9} fill={col}/>
-                        {/* Name label */}
                         <text className="sc-sname" x={cx + ldx} y={cy - 1} textAnchor={anc as any} dominantBaseline="central">
                           {t.name}
                         </text>
-                        {/* Lifespan (visible on hover/active) */}
-                        <text className="sc-slife" x={cx + ldx} y={cy + 10} textAnchor={anc as any} dominantBaseline="central">
+                        <text className="sc-slife" x={cx + ldx} y={cy + (isMobile ? 18 : 10)} textAnchor={anc as any} dominantBaseline="central">
                           {t.lifespan}
                         </text>
                       </g>
@@ -844,17 +959,18 @@ export default function StarChart({
 
               {/* School name labels — only visible in school mode */}
               <g className="sc-schoollabels" pointerEvents="none">
-                {schoolLayout.present
+                {activeSchoolLayout.present
                   .filter(sid => visibleSchoolIds.has(sid))
                   .map(sid => {
-                    const c   = schoolLayout.centers[sid]
+                    const c   = activeSchoolLayout.centers[sid]
                     const allM = allThinkers.filter(t => t.schoolId === sid)
-                    const rr  = allM.length === 1 ? 18 : (22 + allM.length * 7)
+                    const rr  = isMobile
+                      ? (allM.length === 1 ? 15 : (18 + allM.length * 6))
+                      : (allM.length === 1 ? 18 : (22 + allM.length * 7))
                     const sch = schoolById[sid]
-                    // Wrap long titles so wide labels don't overrun neighbours;
-                    // lift the block by its extra lines so it stays above the cluster.
                     const lines = wrapLabel((sch?.label ?? sid).toUpperCase(), 15)
-                    const baseY = c.y - rr - 13 - (lines.length - 1) * 12
+                    const lineSpacing = isMobile ? 15 : 12
+                    const baseY = c.y - rr - (isMobile ? 12 : 13) - (lines.length - 1) * lineSpacing
                     return (
                       <text
                         key={sid}
@@ -864,7 +980,7 @@ export default function StarChart({
                         fill={sch?.color ?? 'var(--fg-muted)'}
                       >
                         {lines.map((ln, i) => (
-                          <tspan key={i} x={c.x} dy={i === 0 ? undefined : 12}>{ln}</tspan>
+                          <tspan key={i} x={c.x} dy={i === 0 ? undefined : lineSpacing}>{ln}</tspan>
                         ))}
                       </text>
                     )
@@ -872,7 +988,7 @@ export default function StarChart({
               </g>
 
               {/* Vignette overlay */}
-              <rect x={0} y={0} width={W} height={H} fill="url(#sc-vign)" pointerEvents="none"/>
+              <rect x={0} y={0} width={svgW} height={svgH} fill="url(#sc-vign)" pointerEvents="none"/>
             </svg>
           </div>
 
@@ -880,8 +996,8 @@ export default function StarChart({
           <div
             data-nopan
             style={{
-              position: 'absolute', right: 12, bottom: 12,
-              display: 'flex', flexDirection: 'column', gap: 6, zIndex: 4,
+              position: 'absolute', right: 10, bottom: 10,
+              display: 'flex', flexDirection: 'column', gap: 5, zIndex: 4,
             }}
           >
             {[
@@ -905,8 +1021,8 @@ export default function StarChart({
             ))}
           </div>
 
-          {/* ── Cartouche ── */}
-          {selectedThinker && (
+          {/* ── Desktop cartouche — hidden on mobile (replaced by bottom-sheet) ── */}
+          {!isMobile && selectedThinker && (
             <aside
               data-nopan
               onClick={e => e.stopPropagation()}
@@ -917,83 +1033,21 @@ export default function StarChart({
                 boxShadow: '0 16px 40px -24px oklch(0.24 0.02 65 / 0.6)',
               }}
             >
-              {/* Header */}
-              <div style={{
-                display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
-                gap: 10, padding: '14px 14px 10px',
-                borderBottom: '1px solid var(--hairline)',
-              }}>
-                <div style={{ minWidth: 0 }}>
-                  <p style={{ fontSize: '9.5px', letterSpacing: '0.2em', textTransform: 'uppercase', color: selectedSchool?.color ?? 'var(--accent)', margin: 0 }}>
-                    {selectedSchool?.label ?? ''}
-                  </p>
-                  <p style={{ fontFamily: "'Marcellus SC', serif", fontSize: 17, letterSpacing: '0.04em', color: 'var(--fg)', margin: '3px 0 0' }}>
-                    {selectedThinker.name}
-                  </p>
-                  {selectedThinker.lifespan && (
-                    <p style={{ fontStyle: 'italic', fontSize: 11, color: 'var(--fg-faint)', marginTop: 2 }}>
-                      {selectedThinker.lifespan}
-                    </p>
-                  )}
-                </div>
-                <button
-                  onClick={e => { e.stopPropagation(); deselect() }}
-                  aria-label="Schliessen"
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--fg-faint)', fontSize: 14, lineHeight: 1, padding: 2, flexShrink: 0 }}
-                >
-                  ✕
-                </button>
-              </div>
-              {/* Body */}
-              <div style={{ padding: '13px 14px 12px', fontSize: 13, lineHeight: 1.62, color: 'var(--fg-muted)', maxHeight: 232, overflowY: 'auto' }}>
-                {selectedContent
-                  ? <Annotated text={selectedContent} level={levelId}/>
-                  : <span style={{ color: 'var(--fg-dim)', fontStyle: 'italic' }}>—</span>
-                }
-              </div>
-              {/* Relations */}
-              {selectedRelations.length > 0 && (
-                <div style={{ padding: '0 14px 14px' }}>
-                  <p style={{ fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-faint)', margin: '2px 0 8px' }}>
-                    Verbindungen
-                  </p>
-                  <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 6 }}>
-                    {selectedRelations.map(({ edgeId, otherId, dir, edge }) => {
-                      const other = thinkerById[otherId]
-                      if (!other) return null
-                      const isInf = edge.type === 'influence' || edge.type === 'student-of'
-                      const label = isInf
-                        ? (dir === 'out' ? 'Einfluss →' : '← Einfluss')
-                        : (edge.type === 'parallel'  ? 'Parallele'
-                          : edge.type === 'critique'  ? 'Kritik'
-                          : 'Verwerfung')
-                      return (
-                        <li
-                          key={edgeId}
-                          style={{ display: 'flex', alignItems: 'baseline', gap: 8, fontSize: 12, color: 'var(--fg-muted)', cursor: 'pointer' }}
-                          onClick={e => { e.stopPropagation(); selectStar(otherId) }}
-                        >
-                          <span style={{
-                            fontSize: 9, letterSpacing: '0.12em', textTransform: 'uppercase',
-                            width: 80, flexShrink: 0,
-                            color: LINE_COLOR_RESOLVED[edge.type] ?? LINE_COLOR_RESOLVED.influence,
-                          }}>
-                            {label}
-                          </span>
-                          <span style={{ fontFamily: "'Marcellus SC', serif", letterSpacing: '0.02em' }}>
-                            {other.name}
-                          </span>
-                        </li>
-                      )
-                    })}
-                  </ul>
-                </div>
-              )}
+              <CartoucheContent
+                selectedThinker={selectedThinker}
+                selectedSchool={selectedSchool}
+                selectedContent={selectedContent}
+                selectedRelations={selectedRelations}
+                thinkerById={thinkerById}
+                levelId={levelId}
+                deselect={deselect}
+                selectStar={selectStar}
+              />
             </aside>
           )}
         </div>
 
-        {/* ── Legend / counter — below the plate, never overlapping the map ── */}
+        {/* ── Legend / counter — below the plate ── */}
         <div style={{
           display: 'flex', alignItems: 'center', justifyContent: 'space-between',
           flexWrap: 'wrap', gap: '6px 18px', padding: '10px 2px 2px',
@@ -1014,7 +1068,125 @@ export default function StarChart({
         </div>
         </div>
       </div>
+
+      {/* ── Mobile bottom-sheet cartouche ── */}
+      {isMobile && selectedThinker && (
+        <>
+          <div className="sc-sheet-scrim" onClick={deselect} />
+          <div className="sc-sheet" onClick={e => e.stopPropagation()}>
+            {/* Drag handle */}
+            <div style={{ display: 'flex', justifyContent: 'center', padding: '10px 0 4px' }}>
+              <div style={{ width: 36, height: 4, borderRadius: 2, background: 'var(--hairline-strong)' }} />
+            </div>
+            <CartoucheContent
+              selectedThinker={selectedThinker}
+              selectedSchool={selectedSchool}
+              selectedContent={selectedContent}
+              selectedRelations={selectedRelations}
+              thinkerById={thinkerById}
+              levelId={levelId}
+              deselect={deselect}
+              selectStar={selectStar}
+            />
+          </div>
+        </>
+      )}
     </div>
+  )
+}
+
+// ─── Cartouche content (shared by desktop aside + mobile sheet) ──
+
+interface CartoucheContentProps {
+  selectedThinker:   ThinkerWithDesc
+  selectedSchool:    School | null
+  selectedContent:   string
+  selectedRelations: Array<{ edgeId: string; otherId: string; dir: 'in' | 'out'; edge: InfluenceWithDesc }>
+  thinkerById:       Record<string, ThinkerWithDesc>
+  levelId:           number
+  deselect:          () => void
+  selectStar:        (id: string) => void
+}
+
+function CartoucheContent({
+  selectedThinker, selectedSchool, selectedContent, selectedRelations,
+  thinkerById, levelId, deselect, selectStar,
+}: CartoucheContentProps) {
+  return (
+    <>
+      {/* Header */}
+      <div style={{
+        display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+        gap: 10, padding: '14px 14px 10px',
+        borderBottom: '1px solid var(--hairline)',
+      }}>
+        <div style={{ minWidth: 0 }}>
+          <p style={{ fontSize: '9.5px', letterSpacing: '0.2em', textTransform: 'uppercase', color: selectedSchool?.color ?? 'var(--accent)', margin: 0 }}>
+            {selectedSchool?.label ?? ''}
+          </p>
+          <p style={{ fontFamily: "'Marcellus SC', serif", fontSize: 17, letterSpacing: '0.04em', color: 'var(--fg)', margin: '3px 0 0' }}>
+            {selectedThinker.name}
+          </p>
+          {selectedThinker.lifespan && (
+            <p style={{ fontStyle: 'italic', fontSize: 11, color: 'var(--fg-faint)', marginTop: 2 }}>
+              {selectedThinker.lifespan}
+            </p>
+          )}
+        </div>
+        <button
+          onClick={e => { e.stopPropagation(); deselect() }}
+          aria-label="Schliessen"
+          style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--fg-faint)', fontSize: 14, lineHeight: 1, padding: 2, flexShrink: 0 }}
+        >
+          ✕
+        </button>
+      </div>
+      {/* Body */}
+      <div style={{ padding: '13px 14px 12px', fontSize: 13, lineHeight: 1.62, color: 'var(--fg-muted)', maxHeight: 232, overflowY: 'auto' }}>
+        {selectedContent
+          ? <Annotated text={selectedContent} level={levelId}/>
+          : <span style={{ color: 'var(--fg-dim)', fontStyle: 'italic' }}>—</span>
+        }
+      </div>
+      {/* Relations */}
+      {selectedRelations.length > 0 && (
+        <div style={{ padding: '0 14px 14px' }}>
+          <p style={{ fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-faint)', margin: '2px 0 8px' }}>
+            Verbindungen
+          </p>
+          <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 6 }}>
+            {selectedRelations.map(({ edgeId, otherId, dir, edge }) => {
+              const other = thinkerById[otherId]
+              if (!other) return null
+              const isInf = edge.type === 'influence' || edge.type === 'student-of'
+              const label = isInf
+                ? (dir === 'out' ? 'Einfluss →' : '← Einfluss')
+                : (edge.type === 'parallel'  ? 'Parallele'
+                  : edge.type === 'critique'  ? 'Kritik'
+                  : 'Verwerfung')
+              return (
+                <li
+                  key={edgeId}
+                  style={{ display: 'flex', alignItems: 'baseline', gap: 8, fontSize: 12, color: 'var(--fg-muted)', cursor: 'pointer' }}
+                  onClick={e => { e.stopPropagation(); selectStar(otherId) }}
+                >
+                  <span style={{
+                    fontSize: 9, letterSpacing: '0.12em', textTransform: 'uppercase',
+                    width: 80, flexShrink: 0,
+                    color: LINE_COLOR_RESOLVED[edge.type] ?? LINE_COLOR_RESOLVED.influence,
+                  }}>
+                    {label}
+                  </span>
+                  <span style={{ fontFamily: "'Marcellus SC', serif", letterSpacing: '0.02em' }}>
+                    {other.name}
+                  </span>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      )}
+    </>
   )
 }
 
