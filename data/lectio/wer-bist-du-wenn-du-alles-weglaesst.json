@@ -8,61 +8,61 @@
   "ton": "erzählend-erfahrend",
   "level": 2,
   "estimated_minutes": 9,
-  "intro": "Ein gewöhnlicher Abend. Du liegst auf dem Sofa, der Daumen wischt übers Handy. Ein Video, ein Bild, weiter. Du weißt längst nicht mehr, was du vor zehn Sekunden gesehen hast. Und dann, fast nichts: Du hältst inne und denkst — was mache ich hier eigentlich? Eine Sekunde lang bist du nicht der, der scrollt, sondern der, der es bemerkt. Dann wischt der Daumen weiter. Diesen kleinen Riss kennst du. Vier Stimmen schauen darauf und sehen vier verschiedene Dinge. Du musst keiner recht geben. Schau, welche von dir spricht.",
+  "intro": "Ein gewöhnlicher Abend, du liegst auf dem Sofa, und der Daumen wischt übers Handy — ein Video, ein Bild, weiter, und längst weißt du nicht mehr, was du vor zehn Sekunden gesehen hast. Dann, mitten in der Bewegung, hältst du inne: Was mache ich hier eigentlich? Für eine Sekunde bist du nicht mehr der, der scrollt. Sondern der, der es bemerkt. Dann wischt der Daumen weiter, und der Moment ist vorbei — aber diesen kleinen Riss kennst du. Vier Stimmen schauen darauf, und jede sieht etwas anderes. Du musst keiner recht geben. Lies langsam, und schau, welche von dir spricht.",
   "path": [
     {
       "nodeId": "vedanta",
       "nodeType": "thinker",
       "narrative": {
-        "hook": "Bleib einen Moment bei diesem Innehalten. Der Daumen ruht. Etwas in dir hat sich vom Scrollen gelöst und schaut zu — ruhig, unbeteiligt. Es war schon da, bevor du zum Handy griffst.",
+        "hook": "Bleib einen Moment bei diesem Innehalten. Der Daumen ruht, und etwas in dir hat sich vom Scrollen gelöst und schaut zu — ruhig, unbeteiligt, als wäre es nie mitgewischt. Es war schon da, bevor du zum Handy griffst.",
         "body": [
-          "Die Vedanta-Tradition Indiens macht aus diesem Zusehenden eine gewaltige Behauptung. Es ist nicht dein privater Kern, nicht das, was dich von anderen unterscheidet. Es ist in jedem Menschen dasselbe — und eins mit dem Grund von allem, was ist. Gehst du ganz nach innen, findest du dort nicht dich. Du findest etwas Größeres, in dem dein einzelnes Ich verschwindet wie ein Tropfen, der ins Meer fällt und merkt: Ich war immer schon Meer."
+          "Die Vedanta-Tradition Indiens macht aus diesem Zusehenden eine schwindelerregende Behauptung. Es ist nicht dein privater Kern, nicht das, was dich von allen anderen unterscheidet — im Gegenteil. Es ist in jedem Menschen dasselbe, und es ist eins mit dem Grund von allem, was überhaupt ist. Gehst du ganz nach innen, hinter alle Gedanken und Rollen, findest du dort nicht dich, wie du gehofft hast. Du findest etwas, das größer ist als du, in dem dein einzelnes Ich verschwindet wie ein Tropfen, der ins Meer fällt und merkt: Ich war immer schon Meer."
         ],
-        "kernel": "Das Tiefste in dir ist nicht deins — es ist der Grund von allem.",
-        "bridge": "Vielleicht zieht dich das an. Vielleicht ist es dir zu weit weg. Die nächste Stimme schaut auf denselben Moment und bestreitet, dass dort überhaupt ein Zeuge ist."
+        "kernel": "Das Tiefste in dir ist nicht deins. Es ist der Grund von allem.",
+        "bridge": "Vielleicht zieht dich das an, vielleicht ist es dir zu weit weg — beides ist eine Antwort. Die nächste Stimme schaut auf denselben Moment und bestreitet, dass dort überhaupt ein Zeuge ist."
       },
-      "transition": "Vielleicht zieht dich das an. Vielleicht ist es dir zu weit weg. Die nächste Stimme schaut auf denselben Moment und bestreitet, dass dort überhaupt ein Zeuge ist."
+      "transition": "Vielleicht zieht dich das an, vielleicht ist es dir zu weit weg — beides ist eine Antwort. Die nächste Stimme schaut auf denselben Moment und bestreitet, dass dort überhaupt ein Zeuge ist."
     },
     {
       "nodeId": "buddhismus",
       "nodeType": "thinker",
       "narrative": {
-        "hook": "Zurück auf das Sofa, in die Sekunde des Innehaltens. Der Buddhismus fragt: Such den Zeugen. Wer ist es, der da bemerkt, dass du scrollst?",
+        "hook": "Geh zurück auf das Sofa, in die Sekunde des Innehaltens. Der Buddhismus stellt dir eine unbequeme Aufgabe: Such ihn. Such den, der da bemerkt, dass du scrollst.",
         "body": [
-          "Du findest ihn nicht, sagt der Buddha. Du findest nur wieder einen Gedanken — „ich bemerke gerade, dass ich scrolle“ —, und der vergeht so schnell wie das Video davor. Was du Ich nennst, ist kein Kern, sondern ein Strom, wie der Feed selbst: Gedanken und Gefühle steigen auf und vergehen, und niemand sitzt dahinter. Das klingt kalt. Aber wenn kein fester Kern da ist, der verteidigt werden muss, fällt auch eine Last weg."
+          "Du wirst ihn nicht finden, sagt der Buddha. Was du findest, wenn du wirklich hinschaust, ist nur wieder ein Gedanke — „ich bemerke gerade, dass ich scrolle“ —, und der vergeht so schnell wie das Video davor. Suchst du dann den, der diesen Gedanken bemerkt, hast du wieder nur einen Gedanken in der Hand, und so weiter, ohne Boden, auf dem es aufhört. Was du Ich nennst, ist kein Kern, sondern ein Strom: Wahrnehmungen, Gefühle, Gedanken, die aufsteigen und vergehen — wie der Feed selbst, nur dass niemand dahintersitzt und zuschaut. Das klingt zuerst kalt. Aber wenn da kein fester Kern ist, der verteidigt und festgehalten werden muss, dann fällt auch eine Last von dir ab."
         ],
         "kernel": "Kein fester Kern, nur ein Strom — wie der Feed selbst.",
-        "bridge": "Die dritte Stimme gibt weder dem Zeugen noch dem Strom recht. Sie sagt: Ihr sucht beide an der falschen Stelle."
+        "bridge": "Die dritte Stimme gibt weder dem Zeugen noch dem Strom recht. Sie sagt: Ihr sucht beide an der falschen Stelle — denn den Kern gibt es noch gar nicht."
       },
-      "transition": "Die dritte Stimme gibt weder dem Zeugen noch dem Strom recht. Sie sagt: Ihr sucht beide an der falschen Stelle."
+      "transition": "Die dritte Stimme gibt weder dem Zeugen noch dem Strom recht. Sie sagt: Ihr sucht beide an der falschen Stelle — denn den Kern gibt es noch gar nicht."
     },
     {
       "nodeId": "jung",
       "nodeType": "thinker",
       "narrative": {
-        "hook": "Die ersten beiden streiten, ob jetzt ein Kern zu finden ist. Die dritte Stimme dreht die Frage um: Vielleicht ist der Kern nichts, was du schon hast — sondern etwas, das erst wird.",
+        "hook": "Die ersten beiden streiten, ob jetzt, in diesem Moment, ein Kern zu finden ist. Die dritte Stimme dreht die Frage um. Vielleicht ist der Kern nichts, was du schon hast — sondern etwas, das erst wird.",
         "body": [
-          "Stell dir denselben Menschen vor, dreißig Jahre später. Krisen durchgestanden, Verluste, Jahre der Auseinandersetzung mit sich selbst. Gut möglich, dass er mit sechzig nicht glatter, aber ganzer geworden ist. Genau das meinte C. G. Jung: Über ein Leben bildet sich ein Zentrum heraus, größer als das alltägliche Ich, das hier gerade scrollt. Es liegt nicht fertig unter allem, wie Vedanta will. Es ist kein Ausgangspunkt, sondern ein Ziel, auf das man ein Leben lang zugeht."
+          "Stell dir denselben Menschen auf dem Sofa vor, dreißig Jahre später. Vieles, was ihn heute Abend zum Handy greifen ließ — die Unruhe, das Ausweichen —, wird er durchgestanden haben, dazu Verluste, Krisen, Jahre, in denen er sich mit Seiten von sich abgeben musste, die er lange nicht sehen wollte. Und gut möglich, dass er mit sechzig nicht glatter geworden ist, aber ganzer. Genau das meinte C. G. Jung: Über ein ganzes Leben bildet sich ein Zentrum heraus, größer als das alltägliche Ich, das hier gerade scrollt. Es liegt nicht fertig unter allem, wie Vedanta will. Es ist kein Ausgangspunkt, zu dem man zurückkehrt, sondern ein Ziel, auf das man ein Leben lang zugeht, ohne je ganz anzukommen."
         ],
         "kernel": "Kein Ausgangspunkt, zu dem man zurückfindet — ein Ziel, auf das man zugeht.",
-        "bridge": "Der Kern ist nicht gegeben, sagt Jung — er wird. Die vierte Stimme nimmt ihn wieder weg, und kommt aus einer ganz anderen Welt."
+        "bridge": "Der Kern ist nicht gegeben, sagt Jung. Er wird. Die vierte Stimme nimmt ihn wieder weg, und sie kommt aus einer ganz anderen Welt als die drei davor."
       },
-      "transition": "Der Kern ist nicht gegeben, sagt Jung — er wird. Die vierte Stimme nimmt ihn wieder weg, und kommt aus einer ganz anderen Welt."
+      "transition": "Der Kern ist nicht gegeben, sagt Jung. Er wird. Die vierte Stimme nimmt ihn wieder weg, und sie kommt aus einer ganz anderen Welt als die drei davor."
     },
     {
       "nodeId": "metzinger",
       "nodeType": "thinker",
       "narrative": {
-        "hook": "Die letzte Stimme kommt nicht aus einem Kloster, sondern aus der Hirnforschung. Sie schaut auf den Menschen auf dem Sofa so nüchtern wie auf ein Gerät.",
+        "hook": "Die letzte Stimme kommt nicht aus einem Kloster und nicht aus einer Meditationspraxis, sondern aus der Hirnforschung. Und sie schaut auf den Menschen auf dem Sofa so nüchtern wie auf ein Gerät.",
         "body": [
-          "Es fühlte sich an, als wäre da ein Du, das aufwacht und den Daumen ertappt. Der Philosoph Thomas Metzinger sagt: Auch dieses Du ist gemacht. Stell dir eine Brille vor, die du so lange trägst, dass du sie vergisst. Du hältst, was du durch sie siehst, für die Welt selbst. Genau das macht dein Gehirn mit dir: Es erzeugt ein Modell von dir, mühelos und so überzeugend, dass du es für dich hältst. Kein Zuschauer sitzt hinter deinen Augen — auch nicht der, der eben den Daumen bemerkt hat. Wer das begreift, sagt Metzinger, muss das Ich nicht mehr so verbissen verteidigen."
+          "In der Sekunde des Innehaltens fühlte es sich an, als wäre da ein Du, das aufwacht und den Daumen ertappt. Der Philosoph Thomas Metzinger sagt: Auch dieses Du ist gemacht. Denk an eine Brille, die du so lange trägst, dass du sie vergisst — irgendwann hältst du das, was du durch sie siehst, einfach für die Welt. Genau das tut dein Gehirn mit dir. Es erzeugt ein Modell von dir selbst, ununterbrochen und mühelos, und dieses Modell ist so überzeugend, dass du nie bemerkst, dass es eines ist. Kein Zuschauer sitzt hinter deinen Augen, auch nicht der, der eben den Daumen ertappt hat. Und doch, sagt Metzinger, ist das kein Verlust: Wer begreift, dass das Ich ein Bild ist, muss es nicht mehr so verbissen verteidigen."
         ],
         "kernel": "Niemand war je ein Selbst — auch nicht der, der das hier bemerkt.",
-        "bridge": "Das Erstaunliche: Ein Hirnforscher landet fast dort, wo der Buddha vor zweieinhalbtausend Jahren stand. Ein Kloster, ein Labor — dieselbe Beobachtung."
+        "bridge": "Das Erstaunliche: Ein moderner Hirnforscher landet fast genau dort, wo der Buddha vor zweieinhalbtausend Jahren stand. Ein Kloster und ein Labor — und dieselbe Beobachtung über den Menschen auf dem Sofa."
       },
-      "transition": "Das Erstaunliche: Ein Hirnforscher landet fast dort, wo der Buddha vor zweieinhalbtausend Jahren stand. Ein Kloster, ein Labor — dieselbe Beobachtung."
+      "transition": "Das Erstaunliche: Ein moderner Hirnforscher landet fast genau dort, wo der Buddha vor zweieinhalbtausend Jahren stand. Ein Kloster und ein Labor — und dieselbe Beobachtung über den Menschen auf dem Sofa."
     }
   ],
-  "closing_synthesis": "Ein Moment auf dem Sofa, vier Deutungen. Vedanta: Das Bemerkende ist gar nicht dein privates Selbst, sondern der eine Grund von allem. Der Buddhismus: Such es, und du findest nur den nächsten Gedanken — keinen Zeugen, nur den Strom. Jung: Der Kern ist noch nicht da, er wächst dir übers Leben entgegen. Metzinger: Auch das Bemerkende ist ein Bild, das dein Gehirn für dich hält. Du musst dich nicht entscheiden. Aber vielleicht hat sich eine Stimme angefühlt, als spräche sie von dir — und eine andere, als ginge sie an dir vorbei. Das ist deine eigene Antwort, längst in dir, bevor die Frage gestellt wurde.",
-  "closing_question": "Wenn du das nächste Mal den Daumen überm Handy anhältst und bemerkst, dass du scrollst — wer, glaubst du, ist es, der das bemerkt?"
+  "closing_synthesis": "Ein einziger Moment auf dem Sofa, und vier Stimmen sehen darin vier verschiedene Dinge. Für Vedanta ist das Bemerkende gar nicht dein privates Selbst, sondern der eine Grund von allem, in dem dein Ich verschwindet. Der Buddhismus sucht es und findet nur den nächsten Gedanken — keinen Zeugen, nur den Strom. Jung sagt, der Kern sei jetzt noch gar nicht da, er wachse dir über ein Leben entgegen. Und Metzinger sagt, auch das Bemerkende sei ein Bild, das dein Gehirn so gut macht, dass du es für dich hältst. Du musst dich für keine entscheiden. Aber vielleicht hat sich beim Lesen eine der Stimmen angefühlt, als spräche sie von dir — und eine andere, als ginge sie an dir vorbei. Das ist kein Zufall. Es ist deine eigene Antwort, die du längst in dir trägst, bevor die Frage überhaupt gestellt wurde.",
+  "closing_question": "Wenn du das nächste Mal den Daumen überm Handy anhältst und für eine Sekunde bemerkst, dass du scrollst — wer, glaubst du, ist es dann, der das bemerkt?"
 }

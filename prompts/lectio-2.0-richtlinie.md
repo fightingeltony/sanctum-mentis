@@ -16,10 +16,8 @@ Lectio 2.0 holt ab und ist nahbar. Sie erklärt nicht von oben, sie nimmt mit. D
 
 ## Die vier Regeln
 
-### 1. Länge: kurz halten — Referenz ist die ERSTE erzählende Fassung
-Maßstab ist die erste erzählende Fassung der Selbst-Lectio (vor dem Szenen-Ausbau), nicht die ausgebaute. Pro Station: ein knapper erzählender Block, kein Doppel-Absatz. Wenn eine Station länger wird als die Referenz, ist sie zu lang — egal wie schön das Bild ist. Im Zweifel kürzen.
-
-Faustregel `narrative.body`: 1 Absatz, nicht 2–3. Wenige Sätze. Lieber ein starkes Bild als drei.
+### 1. Länge: knapp, aber nicht zerhackt
+Pro Station ein erzählerischer Block (1 Absatz, nicht 2–3) — knapp genug, dass der Herz-Typ nicht abprallt, aber NICHT auf kurze Sätze heruntergebrochen. Die frühere Regel „kurze Sätze" hat aktiv geschadet (Stakkato, abgehackt, Halbsätze wie „Und dann, fast nichts:"). Sie ist gestrichen. Länge steht im Dienst des **Rhythmus**, nicht der Knappheit — Details im Schreib-Skill (`schreib-skill-lectio.md`). Maßstab ist nicht eine Zeichenzahl, sondern: liest es sich, als spräche ein warmer Mensch zu einem einzelnen Zuhörer? Lieber ein starkes Bild als drei.
 
 ### 2. „Mehr Geschichte" heißt mehr Konkretheit, nicht mehr Worte
 Eine Geschichte kann in zwei Sätzen stecken. Nahbarkeit kommt von der *Konkretheit* des Bildes, nicht von seiner Ausführlichkeit. „Dein Daumen hält inne überm Handy" ist nahbar in sieben Worten. Der Scroll-Moment war als kurzer Hook stark — falsch wurde er erst als ausgewalzter Absatz. Bild setzen, dann weiter. Nicht im Bild verweilen, bis es zerredet ist.
@@ -37,8 +35,8 @@ Konsequenz: Der Ton wird nicht gleichmäßig über die Lectio gelegt. Innerhalb 
 
 Test vor dem Erzählen: Schauen die Stimmen auf eine gemeinsame Erfahrung (dann erzählend)? Oder verhandeln sie ein begriffliches Problem (dann nüchtern)?
 
-### 4. Sprache: kurze, klare Sätze
-Die Holprigkeit der langen Fassung kam von Verschachtelung — Bilder, die in lange Sätze gequetscht wurden. Lieber zwei einfache Sätze als einen verschachtelten. Klarer Rhythmus vor Dichte. Wenn ein Satz beim Vorlesen stockt, teilen.
+### 4. Sprache: Rhythmus, nicht Kürze
+Das eigentliche Qualitätsmerkmal. Satzlängen MÜSSEN variieren: ein langer, fließender Satz, der trägt — dann ein kurzer, der trifft. Lauter kurze Sätze klingen mechanisch und abgehackt; lauter lange ermüden. Verschachtelung (Einschübe, die den Satz zerreißen) ist falsch — aber die Lösung ist ein zweiter *fließender* Satz, NICHT fünf kurze. Kein abgebrochener Halbsatz, der Bedeutung vortäuscht. Laut lesen und auf Klang prüfen, nicht auf Länge. Vollständig im Schreib-Skill (`schreib-skill-lectio.md`) — dieser ist beim Schreiben verbindlich zu lesen, BEVOR die Richtlinie zur Kontrolle dient.
 
 ---
 
@@ -63,11 +61,13 @@ Erfahrungsnähe darf nicht ins Ästhetisieren von Leid oder ins Ratgeberhafte ki
 
 ---
 
-## Bild-Konsistenz prüfen (bei jeder Überarbeitung)
+## Bilder: bei Bau UND Überarbeitung
 
 **Architektur:** Jede Station hat genau ein Bild. Die Bilder leben NICHT in der Lectio-JSON — sie sind ein entkoppelter Strom. Workflow: pro Station wird ein **Prompt** geliefert (Grundprompt unten), das Bild wird extern erzeugt (Gemini) und eingefügt. Grundregel des Bild-Modus-Kanons: **Bilder stimmen ein, illustrieren nicht.** Hochformat (~4:5), Nische als Bildsprache, gedämpft, analog, kein digitaler Glanz.
 
-**Der Prüfschritt:** Nach jeder Textüberarbeitung jede Station fragen — *stimmt das bestehende Bild noch auf die NEUE Bedeutung ein?*
+**Beim Neubau einer Lectio gehört pro Station ein Bildprompt zum Liefergegenstand** — nicht als nachgelagerter Extraschritt. Wer eine Lectio baut, liefert Text UND pro Station einen Prompt (Grundprompt unten, Subject-Teil je Station ersetzt). So ist der Bild-Strom von Anfang an vollständig und hängt dem Text nicht hinterher. Der Prompt stimmt auf die *Atmosphäre* der Station ein (was die Station erfahrbar macht), nie auf ihre These. Faustregel für den Subject-Teil: Greife das zentrale BILD/MOTIV der Station auf (Vedanta: Öffnung ins Grenzenlose; Buddhismus: Strom/Fließen; Jung: ein über Zeit Gewachsenes; Metzinger: Schleier/Brille), nicht den Denker und nicht das Argument.
+
+**Der Prüfschritt (bei Überarbeitung):** Nach jeder Textüberarbeitung jede Station fragen — *stimmt das bestehende Bild noch auf die NEUE Bedeutung ein?*
 - **Reine Kürzung / Sprachglättung** (Bedeutung unverändert) → Bild bleibt. Kein neuer Prompt nötig.
 - **Bedeutungsverschiebung** (die Aussage der Station hat sich geändert) → Bild neu denken, neuen Prompt liefern. Das bestehende Bild stimmt sonst auf die alte Lesart ein und arbeitet leise gegen den Text.
 
