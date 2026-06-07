@@ -19,8 +19,9 @@ const VOICE_COLORS: Record<string, string> = {
   james:       'oklch(0.40 0.10 162)',
 }
 
-// Ordinalzahlen für das Stimmen-Label
+// Ordinalzahlen für das Stimmen-Label und den Synthese-Eyebrow
 const ORDINAL = ['Erste', 'Zweite', 'Dritte', 'Vierte', 'Fünfte', 'Sechste', 'Siebte', 'Achte']
+const ORDINAL_GEN = ['einer', 'zwei', 'drei', 'vier', 'fünf', 'sechs', 'sieben', 'acht']
 
 const storageKey = (id: string) => `sanctum-lectio-${id}-station`
 
@@ -242,11 +243,14 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           const displayName = thinkerMatch?.name ?? schoolMatch?.label
             ?? (nodeId.charAt(0).toUpperCase() + nodeId.slice(1).replace(/-/g, ' '))
 
+          const stepTon = step.ton ?? (lectio.ton === 'gemischt' ? 'erzählend-erfahrend' : lectio.ton)
+          const showNiche = stepTon !== 'nüchtern-klar'
+
           return (
             <section
               key={nodeId}
               ref={el => { stationRefs.current[stationIdx] = el }}
-              className={`station voice${isActive ? ' active' : ''}`}
+              className={`station voice${isActive ? ' active' : ''}${showNiche ? '' : ' nuchtern'}`}
               style={{ ['--voice' as string]: voiceColor }}
               aria-hidden={!isActive}
             >
@@ -258,34 +262,36 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
                 >
                   {ordinal} Stimme · {displayName}
                 </p>
-                <div
-                  className="niche-wrap reveal"
-                  style={{ ['--d' as string]: '.3s' }}
-                  key={`nw-${stationIdx}-${revealKey}`}
-                >
-                  <div className="halo" aria-hidden />
-                  <div className="niche">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={`/lectio-images/lectio-${nodeId}.webp`}
-                      alt=""
-                      className="niche-img"
-                    />
+                {showNiche && (
+                  <div
+                    className="niche-wrap reveal"
+                    style={{ ['--d' as string]: '.3s' }}
+                    key={`nw-${stationIdx}-${revealKey}`}
+                  >
+                    <div className="halo" aria-hidden />
+                    <div className="niche">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={`/lectio-images/lectio-${nodeId}.webp`}
+                        alt=""
+                        className="niche-img"
+                      />
+                    </div>
                   </div>
-                </div>
+                )}
                 <h2
                   className="v-name serif reveal"
-                  style={{ ['--d' as string]: '.5s' }}
+                  style={{ ['--d' as string]: showNiche ? '.5s' : '.3s' }}
                   key={`vn-${stationIdx}-${revealKey}`}
                 >
                   {displayName}
                 </h2>
                 <div
                   className="story reveal"
-                  style={{ ['--d' as string]: '.75s' }}
+                  style={{ ['--d' as string]: showNiche ? '.75s' : '.5s' }}
                   key={`vs-${stationIdx}-${revealKey}`}
                 >
-                  <p className="hook">{narrative.hook}</p>
+                  <p className={showNiche ? 'hook' : 'hook-plain'}>{narrative.hook}</p>
                   {narrative.body.map((p, i) => (
                     <StoryParagraph
                       key={i}
@@ -314,7 +320,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
               style={{ ['--d' as string]: '.1s' }}
               key={`sey-${revealKey}`}
             >
-              Nach den vier Stimmen
+              {`Nach den ${ORDINAL_GEN[voiceSteps.length - 1] ?? voiceSteps.length} Stimmen`}
             </p>
             <div
               className="story reveal"
@@ -542,6 +548,10 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           color: var(--fg-muted); margin: 0 0 1.05em;
         }
         .story p.hook { color: var(--fg); }
+        .story p.hook-plain {
+          font-style: italic; color: var(--fg-faint);
+          font-size: clamp(14px, 1.45vw, 16px); margin-bottom: 1.4em;
+        }
         .story p.bridge {
           font-style: italic; color: var(--fg-faint);
           font-size: clamp(15px, 1.5vw, 16.5px); margin-top: 1.3em;

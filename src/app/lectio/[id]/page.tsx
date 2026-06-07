@@ -30,7 +30,7 @@ export default async function LectioPage({ params }: Props) {
   const topicData = getTopic(lectio.tableauId)
   if (!topicData) notFound()
 
-  if (lectio.ton === 'erzählend-erfahrend') {
+  if (lectio.ton === 'erzählend-erfahrend' || lectio.ton === 'gemischt') {
     return <LectioNarrativeViewer lectio={lectio} topicData={topicData} />
   }
 

@@ -163,7 +163,8 @@ export interface LectioStep {
                          // (Ein-Werk-Lectio: derselbe Knoten an mehreren Stationen
                          // mit verschiedenem Text). Annotationsfrei, wie lectio_brief.
                          // Nur für Einzelknoten-Stationen — nicht bei Doppelstationen.
-  narrative?: LectioNarrative;  // erzählende Form — nur bei ton: 'erzählend-erfahrend'
+  ton?: 'erzählend-erfahrend' | 'nüchtern-klar' | 'expositorisch'; // per-Step-Ton (Lectio 2.0 / gemischt)
+  narrative?: LectioNarrative;  // erzählende Form — alle Steps in 'gemischt'-Lectios tragen narrative
   transition: string;
 }
 
@@ -177,7 +178,8 @@ export interface Lectio {
   path_type?: string;    // u.a. 'narrativ-historisch', 'konkurrierend-konfrontativ',
                          // 'emotional-kumulativ', 'destruktiv-aufbauend',
                          // 'kontemplativ-vertiefend' — bisher implizit, jetzt benennbar
-  ton?: 'expositorisch' | 'erzählend-erfahrend';  // fehlendes Feld = expositorisch
+  ton?: 'expositorisch' | 'erzählend-erfahrend' | 'gemischt';  // fehlendes Feld = expositorisch
+                         // 'gemischt' = per-Step ton-Felder aktiv (Lectio 2.0)
   level: number;
   estimated_minutes: number;
   intro: string;
