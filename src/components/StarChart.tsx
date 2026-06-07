@@ -415,6 +415,13 @@ export default function StarChart({
         } else {
           const lay = activeSchoolLayout.layout[t.id]
           side = lay && c && lay.x < c.x - 0.5 ? 'left' : 'right'
+          // Boundary safety: if the label would clip the SVG edge, flip it.
+          // Use the school-layout position (where the star actually is in school mode).
+          const starX  = lay?.x ?? c?.x ?? 0
+          const R_d    = 7.4 - (t.firstLevel - 1) * 0.7
+          const reach  = R_d + 6 + t.name.length * 5.5
+          if (side === 'right' && starX + reach > W - 6) side = 'left'
+          if (side === 'left'  && starX - reach < 6)     side = 'right'
         }
       } else {
         // Axis mode: use collision-free sides (fallback to x>55 heuristic)
@@ -541,6 +548,8 @@ export default function StarChart({
     const stage = stageRef.current
     if (!stage) return
     const onWheel = (e: WheelEvent) => {
+      // Let the cartouche (and any data-nopan child) scroll normally
+      if ((e.target as Element).closest('[data-nopan]')) return
       e.preventDefault()
       const ps  = panRef.current
       const r   = stage.getBoundingClientRect()
