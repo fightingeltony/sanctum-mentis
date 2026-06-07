@@ -551,7 +551,7 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
 .sc-sheet-scrim {
   position: fixed;
   inset: 0;
-  z-index: 40;
+  z-index: 60;   /* above .bottom-tab-bar (z-index:50) */
   background: oklch(0.22 0.02 65 / 0.38);
   animation: scFadeIn 220ms ease-out;
 }
@@ -561,7 +561,7 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 41;
+  z-index: 61;   /* above scrim */
   background: var(--bg-raised);
   border-radius: 16px 16px 0 0;
   border-top: 1px solid var(--hairline-strong);
@@ -569,6 +569,7 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
   max-height: 64dvh;
   display: flex;
   flex-direction: column;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
   animation: scSlideUp 340ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 

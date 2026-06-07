@@ -1169,6 +1169,7 @@ export default function StarChart({
               levelId={levelId}
               deselect={deselect}
               selectStar={selectStar}
+              isSheet
             />
             </div>
           </div>
@@ -1183,6 +1184,7 @@ export default function StarChart({
 interface CartoucheContentProps {
   selectedThinker:   ThinkerWithDesc
   selectedSchool:    School | null
+  isSheet?:          boolean   // mobile bottom-sheet: no inner maxHeight, outer div scrolls
   selectedContent:   string
   selectedRelations: Array<{ edgeId: string; otherId: string; dir: 'in' | 'out'; edge: InfluenceWithDesc }>
   thinkerById:       Record<string, ThinkerWithDesc>
@@ -1193,7 +1195,7 @@ interface CartoucheContentProps {
 
 function CartoucheContent({
   selectedThinker, selectedSchool, selectedContent, selectedRelations,
-  thinkerById, levelId, deselect, selectStar,
+  thinkerById, levelId, deselect, selectStar, isSheet,
 }: CartoucheContentProps) {
   return (
     <>
@@ -1225,7 +1227,8 @@ function CartoucheContent({
         </button>
       </div>
       {/* Body */}
-      <div style={{ padding: '13px 14px 12px', fontSize: 13, lineHeight: 1.62, color: 'var(--fg-muted)', maxHeight: 232, overflowY: 'auto' }}>
+      {/* isSheet: no inner cap — the outer flex-scroll wrapper in .sc-sheet handles it */}
+      <div style={{ padding: '13px 14px 12px', fontSize: 13, lineHeight: 1.62, color: 'var(--fg-muted)', ...(isSheet ? {} : { maxHeight: 232, overflowY: 'auto' as const }) }}>
         {selectedContent
           ? <Annotated text={selectedContent} level={levelId}/>
           : <span style={{ color: 'var(--fg-dim)', fontStyle: 'italic' }}>—</span>
