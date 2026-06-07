@@ -57,6 +57,77 @@ function wrapLabel(str: string, max: number): string[] {
 
 type Pos = { x: number; y: number }
 
+// ─── Collision-free label placement (axis mode) ───────────────
+//
+// Default side: x > 55 → left, else → right.
+// Then: 3 greedy passes — if a label's bounding box overlaps any
+// neighbour's, try flipping to the other side. Keep flip only if
+// the alternative has fewer (or zero) conflicts.
+//
+function computeAxisLabelSides(
+  thinkers: Thinker[],
+  isMobile: boolean,
+): Record<string, 'left' | 'right'> {
+  const CHAR_W = isMobile ? 9.0  : 5.5   // approx px per char at the font-size used
+  const LBL_H  = isMobile ? 26   : 18    // vertical extent of a name label
+  const off     = isMobile ? 8    : 6    // gap between spike tip and label start
+
+  // SVG positions + geometry for each visible thinker
+  const geom: Record<string, { cx: number; cy: number; R: number; nw: number }> = {}
+  thinkers.forEach(t => {
+    if (t.x === undefined || t.y === undefined) return
+    const cx = isMobile ? mMapX(t.x) : mapX(t.x)
+    const cy = isMobile ? mMapY(t.y) : mapY(t.y)
+    const R  = isMobile
+      ? 12 - (t.firstLevel - 1) * 1.1
+      : 7.4 - (t.firstLevel - 1) * 0.7
+    geom[t.id] = { cx, cy, R, nw: t.name.length * CHAR_W }
+  })
+
+  // Default sides
+  const sides: Record<string, 'left' | 'right'> = {}
+  thinkers.forEach(t => {
+    sides[t.id] = (t.x !== undefined && t.x > 55) ? 'left' : 'right'
+  })
+
+  const ids = thinkers.filter(t => t.x !== undefined).map(t => t.id)
+
+  function lbox(id: string, side: 'left' | 'right') {
+    const g = geom[id]; if (!g) return null
+    const reach = g.R + off + g.nw
+    return side === 'left'
+      ? { x1: g.cx - reach,       x2: g.cx - g.R - off, y1: g.cy - LBL_H / 2, y2: g.cy + LBL_H / 2 }
+      : { x1: g.cx + g.R + off,   x2: g.cx + reach,     y1: g.cy - LBL_H / 2, y2: g.cy + LBL_H / 2 }
+  }
+
+  type Box = { x1: number; x2: number; y1: number; y2: number }
+  function hits(a: Box, b: Box) {
+    return a.x1 < b.x2 && a.x2 > b.x1 && a.y1 < b.y2 && a.y2 > b.y1
+  }
+
+  function countConflicts(id: string, side: 'left' | 'right') {
+    const b = lbox(id, side); if (!b) return 0
+    return ids.reduce((n, other) => {
+      if (other === id) return n
+      const ob = lbox(other, sides[other])
+      return ob && hits(b, ob) ? n + 1 : n
+    }, 0)
+  }
+
+  // 3 greedy passes
+  for (let pass = 0; pass < 3; pass++) {
+    for (const id of ids) {
+      const cur = countConflicts(id, sides[id])
+      if (cur === 0) continue
+      const alt     = sides[id] === 'left' ? 'right' : 'left'
+      const altCnt  = countConflicts(id, alt)
+      if (altCnt < cur) sides[id] = alt
+    }
+  }
+
+  return sides
+}
+
 // Desktop: adaptive ellipse, scales with school count
 function computeSchoolLayout(thinkers: Thinker[]): {
   present: string[]
@@ -247,6 +318,17 @@ export default function StarChart({
     [thinkers],
   )
 
+  // Collision-free label sides for axis mode — recomputed when visible
+  // thinkers or breakpoint changes. Stored in ref so applyLabelSides
+  // (a useCallback) can always read the latest value without being
+  // recreated — same pattern as deselectRef.
+  const axisLabelSides = useMemo(
+    () => computeAxisLabelSides(thinkers, isMobile),
+    [thinkers, isMobile],
+  )
+  const axisLabelSidesRef = useRef(axisLabelSides)
+  axisLabelSidesRef.current = axisLabelSides   // always current, no stale-closure risk
+
   // ── Load read set ─────────────────────────────────────────
   useEffect(() => {
     try {
@@ -335,7 +417,9 @@ export default function StarChart({
           side = lay && c && lay.x < c.x - 0.5 ? 'left' : 'right'
         }
       } else {
-        side = (t.x !== undefined && t.x > 55) ? 'left' : 'right'
+        // Axis mode: use collision-free sides (fallback to x>55 heuristic)
+        side = axisLabelSidesRef.current[t.id]
+          ?? ((t.x !== undefined && t.x > 55) ? 'left' : 'right')
       }
       const drawnCx = drawnPosRef.current[t.id]?.x ?? 0
       const R   = isMobile
@@ -913,7 +997,7 @@ export default function StarChart({
                     ? 12 - (t.firstLevel - 1) * 1.1
                     : 7.4 - (t.firstLevel - 1) * 0.7
                   const off   = isMobile ? 8 : 6
-                  const onLeft = t.x > 55
+                  const onLeft = (axisLabelSides[t.id] ?? (t.x > 55 ? 'left' : 'right')) === 'left'
                   const ldx   = onLeft ? -(R + off) : (R + off)
                   const anc   = onLeft ? 'end' : 'start'
 
