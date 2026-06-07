@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import type { Thinker, Influence, School, Quadrants, Level } from '@/lib/types'
 import { Annotated } from '@/lib/annotations'
-import { usePanZoom } from '@/hooks/usePanZoom'
 
 // ─── Constants ────────────────────────────────────────────────
 
@@ -145,6 +144,8 @@ export default function StarChart({
 
   // ── Refs ──────────────────────────────────────────────────
   const svgRef      = useRef<SVGSVGElement | null>(null)
+  const stageRef    = useRef<HTMLDivElement | null>(null)
+  const cameraRef   = useRef<HTMLDivElement | null>(null)
   const starGRefs   = useRef<Record<string, SVGGElement | null>>({})
   const edgeRefs    = useRef<Record<string, EdgeRefs>>({})
   // Animated positions (mutable — bypasses React state for rAF performance)
@@ -154,8 +155,14 @@ export default function StarChart({
   // Mutable copies so animation closures always see current values
   const modeRef     = useRef<'axis' | 'school'>('axis')
   const selectedRef = useRef<string | null>(null)
-  // Pan/zoom — shared hook (Pinch, Pan, Wheel, Double-Tap)
-  const pz = usePanZoom(W, H, { minScale: 1, maxScale: 3.4 })
+  // Pan/zoom state (handles both mouse and multi-touch pinch)
+  const panRef    = useRef({ scale: 1, tx: 0, ty: 0 })
+  const ptrsRef   = useRef(new Map<number, Pos>())
+  const dragRef   = useRef<{ x: number; y: number; tx: number; ty: number } | null>(null)
+  const pinchRef  = useRef<{ dist: number; mx: number; my: number; tx: number; ty: number; scale: number } | null>(null)
+  const didMoveRef = useRef(false)
+  const suppressClickRef = useRef(false)
+  const deselectRef = useRef<() => void>(() => {})
 
   // ── Derived data ──────────────────────────────────────────
 
@@ -368,7 +375,123 @@ export default function StarChart({
     if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
   }, [])
 
-  // Pan/zoom handled by usePanZoom hook (Pinch, Pan, Wheel, Double-Tap)
+  // ── Pan / zoom ────────────────────────────────────────────
+  const applyZoom = useCallback(() => {
+    const ps     = panRef.current
+    const stage  = stageRef.current
+    const camera = cameraRef.current
+    if (!stage || !camera) return
+    const { width, height } = stage.getBoundingClientRect()
+    ps.scale = Math.max(1, Math.min(3.4, ps.scale))
+    const ow = width  * (ps.scale - 1)
+    const oh = height * (ps.scale - 1)
+    ps.tx = Math.max(-ow, Math.min(0, ps.tx))
+    ps.ty = Math.max(-oh, Math.min(0, ps.ty))
+    camera.style.transform = `translate(${ps.tx}px,${ps.ty}px) scale(${ps.scale})`
+    camera.style.transformOrigin = '0 0'
+  }, [])
+
+  // Wheel + touchstart (both need { passive: false })
+  useEffect(() => {
+    const stage = stageRef.current
+    if (!stage) return
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault()
+      const ps  = panRef.current
+      const r   = stage.getBoundingClientRect()
+      const mx  = e.clientX - r.left, my = e.clientY - r.top
+      const old = ps.scale
+      ps.scale *= e.deltaY < 0 ? 1.12 : 0.9
+      applyZoom()
+      ps.tx = mx - (mx - ps.tx) * (ps.scale / old)
+      ps.ty = my - (my - ps.ty) * (ps.scale / old)
+      applyZoom()
+    }
+    // Prevent iOS from treating multi-touch as a page gesture
+    const onTouchStart = (e: TouchEvent) => {
+      if (e.touches.length > 1) e.preventDefault()
+    }
+    stage.addEventListener('wheel',      onWheel,      { passive: false })
+    stage.addEventListener('touchstart', onTouchStart, { passive: false })
+    stage.style.touchAction = 'none'
+    return () => {
+      stage.removeEventListener('wheel',      onWheel)
+      stage.removeEventListener('touchstart', onTouchStart)
+    }
+  }, [applyZoom])
+
+  // Pointer handlers — single-finger pan + two-finger pinch
+  const onStagePointerDown = useCallback((e: React.PointerEvent) => {
+    if ((e.target as Element).closest('[data-nopan], .sc-star, .sc-edge-hit')) return
+    const stage = stageRef.current
+    if (!stage) return
+    const r   = stage.getBoundingClientRect()
+    const pos = { x: e.clientX - r.left, y: e.clientY - r.top }
+    ptrsRef.current.set(e.pointerId, pos)
+    didMoveRef.current = false
+
+    if (ptrsRef.current.size === 1) {
+      dragRef.current  = { x: pos.x, y: pos.y, tx: panRef.current.tx, ty: panRef.current.ty }
+      pinchRef.current = null
+    }
+    if (ptrsRef.current.size === 2) {
+      const [a, b] = [...ptrsRef.current.values()]
+      pinchRef.current = {
+        dist:  Math.hypot(b.x - a.x, b.y - a.y),
+        mx:    (a.x + b.x) / 2, my: (a.y + b.y) / 2,
+        tx:    panRef.current.tx, ty: panRef.current.ty, scale: panRef.current.scale,
+      }
+      stage.setPointerCapture(e.pointerId)
+    }
+  }, [])
+
+  const onStagePointerMove = useCallback((e: React.PointerEvent) => {
+    if (!ptrsRef.current.has(e.pointerId)) return
+    const stage = stageRef.current
+    if (!stage) return
+    const r   = stage.getBoundingClientRect()
+    const pos = { x: e.clientX - r.left, y: e.clientY - r.top }
+    ptrsRef.current.set(e.pointerId, pos)
+
+    if (ptrsRef.current.size === 2 && pinchRef.current) {
+      didMoveRef.current = true
+      const [a, b]  = [...ptrsRef.current.values()]
+      const dist    = Math.hypot(b.x - a.x, b.y - a.y)
+      const mx      = (a.x + b.x) / 2, my = (a.y + b.y) / 2
+      const { dist: d0, mx: mx0, my: my0, tx: tx0, ty: ty0, scale: s0 } = pinchRef.current
+      const factor  = dist / d0
+      panRef.current.scale = s0 * factor
+      panRef.current.tx    = mx - (mx0 - tx0) * factor
+      panRef.current.ty    = my - (my0 - ty0) * factor
+      applyZoom()
+    } else if (ptrsRef.current.size === 1 && dragRef.current) {
+      const dx = pos.x - dragRef.current.x, dy = pos.y - dragRef.current.y
+      if (!didMoveRef.current && Math.hypot(dx, dy) < 5) return
+      didMoveRef.current  = true
+      panRef.current.tx   = dragRef.current.tx + dx
+      panRef.current.ty   = dragRef.current.ty + dy
+      applyZoom()
+    }
+  }, [applyZoom])
+
+  const onStagePointerUp = useCallback((e: React.PointerEvent) => {
+    const wasTap = ptrsRef.current.size === 1 && !didMoveRef.current
+    ptrsRef.current.delete(e.pointerId)
+    if (ptrsRef.current.size === 1) {
+      const [rem] = [...ptrsRef.current.values()]
+      dragRef.current = { x: rem.x, y: rem.y, tx: panRef.current.tx, ty: panRef.current.ty }
+      didMoveRef.current = false
+    }
+    if (ptrsRef.current.size === 0) {
+      pinchRef.current = null
+      if (didMoveRef.current) {
+        suppressClickRef.current = true
+        setTimeout(() => { suppressClickRef.current = false }, 0)
+      }
+      if (wasTap && !suppressClickRef.current) deselectRef.current()
+    }
+    applyZoom()
+  }, [applyZoom])
 
   // ── Focus / hover (imperative — no re-renders) ────────────
   const clearFocus = useCallback(() => {
@@ -430,6 +553,7 @@ export default function StarChart({
     Object.values(edgeRefs.current).forEach(r => r?.g?.classList.remove('sc-lit'))
     Object.values(starGRefs.current).forEach(g => g?.classList.remove('sc-active', 'sc-neighbor'))
   }, [])
+  deselectRef.current = deselect
 
   const selectStar = useCallback((id: string) => {
     const t = thinkerById[id]
@@ -509,7 +633,7 @@ export default function StarChart({
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%', minWidth: 0, maxWidth: 'calc(78vh * 980 / 760)' }}>
         <div
-          ref={pz.containerRef}
+          ref={stageRef}
           style={{
             position: 'relative', width: '100%', minWidth: 0,
             border: '1px solid var(--hairline-strong)',
@@ -518,15 +642,12 @@ export default function StarChart({
             aspectRatio: '980 / 760', maxHeight: '78vh',
             boxShadow: 'inset 0 0 0 6px var(--bg-sunk), inset 0 0 0 7px var(--hairline)',
           }}
-          onPointerDown={e => {
-            if ((e.target as Element).closest('[data-nopan]')) return
-            pz.handlers.onPointerDown(e)
-          }}
-          onPointerMove={pz.handlers.onPointerMove}
-          onPointerUp={e => { pz.handlers.onPointerUp(e); if (!pz.suppressClick.current) deselect() }}
-          onPointerCancel={pz.handlers.onPointerCancel}
+          onPointerDown={onStagePointerDown}
+          onPointerMove={onStagePointerMove}
+          onPointerUp={onStagePointerUp}
+          onPointerCancel={e => { ptrsRef.current.delete(e.pointerId); pinchRef.current = null }}
         >
-          <div ref={pz.wrapperRef} style={{ position: 'absolute', inset: 0, transformOrigin: '0 0' }}>
+          <div ref={cameraRef} style={{ position: 'absolute', inset: 0, transformOrigin: '0 0' }}>
             <svg
               ref={svgRef}
               viewBox={`0 0 ${W} ${H}`}
@@ -764,9 +885,9 @@ export default function StarChart({
             }}
           >
             {[
-              { label: 'Vergrössern',  icon: '+',  fn: pz.zoomIn  },
-              { label: 'Verkleinern',  icon: '−',  fn: pz.zoomOut },
-              { label: 'Zurücksetzen', icon: '⟲',  fn: pz.reset   },
+              { label: 'Vergrössern',  icon: '+',  fn: () => { panRef.current.scale *= 1.25; applyZoom() } },
+              { label: 'Verkleinern',  icon: '−',  fn: () => { panRef.current.scale *= 0.8;  applyZoom() } },
+              { label: 'Zurücksetzen', icon: '⟲',  fn: () => { panRef.current = { scale: 1, tx: 0, ty: 0 }; applyZoom() } },
             ].map(({ label, icon, fn }) => (
               <button
                 key={label}
