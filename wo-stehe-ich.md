@@ -1,6 +1,6 @@
 # Wo stehe ich — Sanctum Mentis
 
-**Stand:** 6.6.26 (aktualisiert nach vom-wissen-zum-glauben + Lectio-Navigation)
+**Stand:** 8.6.26 (aktualisiert nach Schreib-Skill, Erzählend-Badge, Partnerin-Feedback)
 
 ---
 
@@ -36,11 +36,13 @@
 - `verstehen-oder-weitergehen` — Wandlung, narrativ-historisch, L3, 5 Stationen (alle via step_brief)
 - `stell-die-frage-anders` — Gut/Böse, destruktiv-aufbauend, L3, 5 Stationen
 - `wer-bist-du-wenn-du-alles-weglaesst` — Selbst, konkurrierend-konfrontativ, L2, 4 Stationen — **erster Test des erzählend-erfahrenden Tons** (Vergleichsfall zu `wer-beobachtet`; eigene Render-Komponente `LectioNarrativeViewer`)
-- `vom-wissen-zum-glauben` — Verwandlung, konkurrierend-konfrontativ, L3, 6 Stationen — **zweiter Belegfall erzählend-erfahrend** (Augustinus → Stoa → Rilke → Eckhart → James → Jung; Tonwechsel bei James bewusst markiert; durchlaufende Figur: die Scheibe)
+- `vom-wissen-zum-glauben` — Verwandlung, konkurrierend-konfrontativ, L3, 6 Stationen — **zweiter Belegfall erzählend-erfahrend** (Augustinus → Stoa → Rilke → Eckhart → James → Jung; Tonwechsel bei James bewusst markiert; durchlaufende Figur: die Glaswand)
 
-**Lectio-Navigation:** `LectioNarrativeViewer` hat jetzt sichtbaren Zurück-Button im Footer (drei Spalten: ← zurück · Dots · weiter →) und Brand oben links als Exit-Link zurück zum Tableau.
+**Lectio-Navigation:** `LectioNarrativeViewer` hat sichtbaren Zurück-Button im Footer (drei Spalten: ← zurück · Dots · weiter →), `← Verlassen`-Button (Border-Box, top-left), und `Erzählend`-Badge auf Lectio-Karten + in der Schwelle-Metazeile.
 
-**Lectio-Methode:** `prompts/lectio-mode.md` v1.9 — zehn Entscheidungen, vier kanonisierte Pfad-Typen. Schema-Erweiterungen seit v1.9: `step_brief` (pro-Station-Text), `path_type` (Datenwert), `ton` (expositorisch / erzählend-erfahrend), `LectioNarrative`-Interface. *Kontemplativ-vertiefend* ist als Datenwert gesetzt (Begegnung), noch nicht in der Methode kanonisiert — wartet auf 2. Fall. *Erzählend-erfahrend* hat jetzt zwei Belegfälle (Selbst + Verwandlung) — bereit für Kanonisierung als v1.10, sobald Nutzer-Feedback vorliegt.
+**Lectio-Prosa:** `prompts/schreib-skill-lectio.md` (neu) — Handwerkskasten für Lectio-Prosa (Satzrhythmus, Variation, Belegbeispiele, Fehler-Katalog). `prompts/lectio-2.0-richtlinie.md` aktualisiert (Regel 1 + 4: Rhythmus statt Kürze, Schreib-Skill als vorgelagerte Instanz). Beide Lectios rhythmisch überarbeitet (wer-bist-du: Sofa-Intro + alle 4 Stationen; vom-wissen-zum-glauben: Glaswand-Figur + alle 6 Stationen).
+
+**Lectio-Methode:** `prompts/lectio-mode.md` v1.9 — zehn Entscheidungen, vier kanonisierte Pfad-Typen. *Erzählend-erfahrend* hat zwei Belegfälle + Partnerin-Feedback ✓ — **bereit für Kanonisierung als v1.10**. *Kontemplativ-vertiefend* wartet auf 2. Fall.
 
 **Landing Page** hat ein lebendiges Tableau (HeroTableau-Komponente: animiert Das-Selbst-Konzepte Band für Band), eine Lectio-Sektion und erklärt den Unterschied zwischen Karte und Lectio.
 
@@ -61,7 +63,7 @@
 
 ## Was noch offen ist
 
-**Außenfeedback (erste Runde):** Monique (Coach, Persona-Kern) hat in zwei Runden substantielles Feedback geliefert — siehe `feedback-runde-1.md`. Sie hat die Lectio-Form als tragend bestätigt, die Lebensfragen-Frage ausgelöst und die Wahrheitsanspruchs-Konvention von außen erfahren (nicht gelesen). Das ist kein formaler User-Test, aber echte Persona-Resonanz mit konkreten Konsequenzen (Selbst-Lectio II, Lebensfragen-Form). Der **formale User-Test** (zwei Personen aus der Persona, ohne Erklärung beobachten) ist damit noch ausständig — bleibt priorisierter nächster Schritt.
+**Außenfeedback (erste Runde) ✓ abgeschlossen:** Partnerin-Test abgehakt. Erzählend-erfahrend-Ton bestätigt — Kanonisierung als v1.10 kann jetzt erfolgen. Der **formale User-Test** (zwei Personen aus der Persona, ohne Erklärung beobachten) bleibt ausständig.
 
 **Lebensfragen-Library-Sektion:** Live — vier Lebensfragen in eigener Sektion „Ein Weg quer hindurch" (Schmerz · Tod · Einsamkeit · Veränderung). Veränderung ist mit 8 Stimmen aus 5 Tableaus die breiteste der Sammlung. Footer-Link-Phase abgeschlossen.
 

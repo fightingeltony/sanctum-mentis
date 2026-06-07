@@ -262,11 +262,14 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 - `verstehen-oder-weitergehen` — Wandlung, narrativ-historisch, L3, 5 Stationen (alle step_brief)
 - `stell-die-frage-anders` — Gut/Böse, destruktiv-aufbauend, L3, 5 Stationen (alle lectio_brief)
 - `wer-bist-du-wenn-du-alles-weglaesst` — Selbst, konkurrierend-konfrontativ, L2, 4 Stationen (**ton: erzählend-erfahrend** — erster Test-Fall, neue Render-Form `LectioNarrativeViewer`)
-- `vom-wissen-zum-glauben` — Verwandlung, konkurrierend-konfrontativ, L3, 6 Stationen (**ton: erzählend-erfahrend** — zweiter Belegfall; Augustinus→Stoa→Rilke→Eckhart→James→Jung; Tonwechsel bei James ausdrücklich markiert; durchlaufende Figur: die Scheibe)
+- `vom-wissen-zum-glauben` — Verwandlung, konkurrierend-konfrontativ, L3, 6 Stationen (**ton: erzählend-erfahrend** — zweiter Belegfall; Augustinus→Stoa→Rilke→Eckhart→James→Jung; Tonwechsel bei James ausdrücklich markiert; durchlaufende Figur: die Glaswand)
 **Methode:** `prompts/lectio-mode.md` v1.9 — zehn methodische Entscheidungen. Schema-Erweiterungen: `step_brief` (pro-Station-Text), `path_type` (Datenwert), `ton` (expositorisch / erzählend-erfahrend), `LectioNarrative`-Interface (hook/body/kernel/bridge).
+**Lectio-Prosa (8.6.26):** `prompts/schreib-skill-lectio.md` (neu) — Satzrhythmus-Variation, Fehler-Katalog, Before/After-Beispiele. `prompts/lectio-2.0-richtlinie.md` aktualisiert: Regel 1+4 auf Rhythmus-Fokus, Stakkato-Warnung, Schreib-Skill als vorgelagerte Instanz. Beide erzählend-erfahrend-Lectios rhythmisch überarbeitet.
+**Erzählend-Badge (8.6.26):** Lectio-Karten in TopicViewer + Schwelle-Metazeile in LectioNarrativeViewer zeigen `Erzählend` bei ton: erzählend-erfahrend.
 **lectio_brief-Felder (ca. 40 total):** Geist (8), Selbst (4+), Realismus (6), Ethik (4), Existenzialismus (5+2), Politik (5), Lebenskunst (4), Begegnung (6), Wandlung (0, alles step_brief), Gut/Böse (5)
-**Navigation (6.6.26):** `LectioNarrativeViewer` hat sichtbaren Zurück-Button (Footer drei Spalten: ← zurück · Dots · weiter →) + Brand als Exit-Link zurück zum Tableau.
-**Nächster Schritt:** Zwei Belegfälle liegen vor — lectio-mode v1.10 schreiben (erzählend-erfahrend kanonisieren), sobald Feedback-Runde abgeschlossen.
+**Navigation (6.6.26):** `LectioNarrativeViewer` hat sichtbaren Zurück-Button (Footer drei Spalten: ← zurück · Dots · weiter →) + Brand als Exit-Link (Border-Box, top-left) zurück zum Tableau.
+**Partnerin-Feedback ✓ (8.6.26):** Erzählend-erfahrend-Ton bestätigt. Zwei Belegfälle vorhanden.
+**Nächster Schritt:** lectio-mode v1.10 schreiben — erzählend-erfahrend als fünften kanonisierten Ton aufnehmen.
 **Folgearbeit:**
 - Tableau-übergreifende Lectios (Schema-Erweiterung: tableauId als Array)
 - Bei Bedarf weitere Lectios pro Tableau
