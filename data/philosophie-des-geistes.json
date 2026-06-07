@@ -423,7 +423,8 @@
       "versions": {
         "1": "›Ich denke, also bin ich‹ ist Descartes' Kernargument — und eine der bekanntesten Sätze der Philosophie. Die Überlegung: Selbst wer an allem zweifelt, kann nicht daran zweifeln, dass er gerade zweifelt — denn das Zweifeln selbst ist ein Akt des Denkens. [[Performativ: Das Cogito ist kein Schluss von Prämissen auf eine Konklusion, sondern eine Einsicht, die im Vollzug des Denkens selbst unwidersprechlich wird.]] Es etabliert die [[Erste-Person-Perspektive: das ›Ich‹ als epistemischen Ausgangspunkt, der sich selbst nicht wegdenken kann]] als unhintergehbaren Ankerpunkt. Das Cogito beweist nur die Existenz des Denkenden als denkendes Ding — nicht die Existenz eines Körpers oder der Außenwelt. Darin liegt sein Fundament für den Substanzdualismus: Der Geist ist das Gewisseste, und er ist kategorial verschieden vom Körper.",
         "3": "[[Performative Einsicht:nach Jaakko Hintikka — kein logischer Schluss, sondern eine Einsicht, die sich im Vollzug des Zweifelns selbst ereignet]] nach Hintikka — kein rein inferentieller Schluss (›Denken → Existenz‹), sondern eine Einsicht, die im Akt des Zweifelnden selbst vollzogen wird: Wer zweifelt, vollzieht bereits denkendes Sein. Etabliert die Erste-Person-Perspektive als epistemisch unhintergehbaren Ankerpunkt der Moderne. Fundament des Substanzdualismus: Das denkende Ich ist kategorial verschieden von allem Körperlichen — seine Existenz ist sicherer als die des Körpers."
-      }
+      },
+      "primaryThinker": "descartes"
     },
     {
       "id": "kategorienfehler",
@@ -441,7 +442,8 @@
       "versions": {
         "1": "Ein Kategorienfehler entsteht, wenn man ein Konzept in einem logischen Kontext verwendet, in dem es gar nicht anwendbar ist. [[Logische Kategorie: eine Klasse von Dingen oder Ereignissen, über die sinnvoll dieselbe Art von Aussagen gemacht werden kann — z.B. physische Gegenstände vs. Institutionen vs. Dispositionen.]] Ryles klassisches Beispiel: Ein Besucher besichtigt alle Gebäude der Universität — Bibliothek, Mensa, Institute — und fragt am Ende, wo denn die Universität selbst sei. Er sucht sie als ein weiteres Ding, obwohl ›Universität‹ keine einzelne Entität bezeichnet, sondern eine Institution. Descartes macht genau diesen Fehler: Er sucht den ›Geist‹ als ein zweites Ding neben dem Körper. Dabei bezeichnen mentale Begriffe keine innere Substanz, sondern Dispositionen — Arten, wie wir uns verhalten.",
         "3": "Cartesianismus behandelt mentale Begriffe, als bezeichneten sie Entitäten einer zweiten ontologischen Sorte. Tatsächlich gehören sie einer anderen logischen Kategorie an — Dispositionen, keine Zustände. Diagnostisches Grundmuster für die gesamte [[ordinary-language-Tradition:philosophische Schule (Ryle, Austin, später Wittgenstein), die philosophische Probleme durch Analyse des alltäglichen Sprachgebrauchs auflöst]]: Philosophische Probleme entstehen oft durch grammatische Irreführung, nicht durch empirische Schwierigkeiten."
-      }
+      },
+      "primaryThinker": "ryle"
     },
     {
       "id": "privatsprachenargument",
@@ -459,7 +461,8 @@
       "versions": {
         "1": "Stelle dir vor, du willst eine Sprache für deine rein privaten Empfindungen erfinden: ein Wort ›S‹ für eine bestimmte innere Empfindung. Wie weißt du, dass du S morgen für dieselbe Empfindung verwendest wie heute? Du kannst dich auf nichts Äußerliches beziehen. [[Kriterium: ein öffentlich überprüfbarer Maßstab, nach dem entschieden werden kann, ob ein Wort korrekt verwendet wird — etwas, das andere beobachten und bestätigen können.]] Wittgenstein zeigt: Ohne Kriterium kann man zwischen ›richtig erinnern‹ und ›es scheint mir nur richtig‹ nicht unterscheiden. Und das Erscheinen richtig ist nicht dasselbe wie Richtigsein. Eine notwendig private Sprache ist also unmöglich. Daraus folgt: Mentale Begriffe können ihren Sinn nicht aus rein privaten Erlebnissen beziehen — auch wenn diese Erlebnisse real sind.",
         "3": "Philosophische Untersuchungen §§243ff. Zentrale Quelle des Behaviorismus und der ordinary-language-Tradition. Unterläuft die cartesianische Innenwelt nicht durch Materialismus, sondern durch Sprachkritik: Wenn keine private Sprache möglich ist, kann auch das, was sie beschreiben sollte, nicht der Ankerpunkt mentaler Begriffe sein. [[Regel-Folgen-Problem:Wittgensteins Frage, was es überhaupt heißt, einer Regel zu folgen — die Antwort verweist auf geteilte Praxis, nicht auf privaten innerlichen Akt]] im Hintergrund: Was es heißt, einer Regel zu folgen, setzt immer schon eine Praxis voraus."
-      }
+      },
+      "primaryThinker": "wittgenstein"
     },
     {
       "id": "intentionalitaet",
@@ -477,7 +480,8 @@
       "versions": {
         "1": "Intentionalität [[lat. intentio: Ausrichtung, Bezogenheit]] ist das grundlegendste Merkmal von Bewusstsein: Es ist immer ›von etwas‹. Wenn du denkst, denkst du an etwas. Wenn du siehst, siehst du etwas. Wenn du dich wünschst, wünschst du dir etwas. Der Philosoph Franz Brentano hat dieses Merkmal 1874 als das Charakteristikum aller mentalen Phänomene benannt. [[Gegenstandsbezug: der Inhalt, auf den ein mentaler Zustand gerichtet ist — das ›Worüber‹ eines Gedankens, einer Wahrnehmung oder eines Wunsches.]] Physische Dinge haben keine Intentionalität: Ein Stein ist nicht ›von etwas‹. Das Problem: Wie kann ein Zustand im Gehirn auf etwas außerhalb des Gehirns gerichtet sein — wie kann Materie ›meinen‹?",
         "3": "Wurzelbegriff sowohl der Phänomenologie (Husserl) als auch ihrer analytischen Kritik (Searle, Dennett). Streitpunkt: Ist Intentionalität ein irreduzibles Merkmal des Geistigen — wie Brentano und Husserl meinen — oder lässt sie sich [[naturalisieren:auf nicht-intentionale, naturwissenschaftlich beschreibbare Beziehungen zurückführen — Kausalverbindungen, funktionale Rollen, Repräsentationsmechanismen]] auf Kausal-, Funktions- oder Repräsentationsbeziehungen reduzieren? Searles Chinesisches Zimmer zielt auf genau diesen Punkt: Syntaktische Manipulation erzeugt keine genuine Intentionalität."
-      }
+      },
+      "primaryThinker": "husserl"
     },
     {
       "id": "funktionalismus",
@@ -489,7 +493,8 @@
       "versions": {
         "2": "Der Funktionalismus ist die Theorie, die der kognitiven Wissenschaft und der KI-Forschung zugrunde liegt: Mentale Zustände sind durch ihre funktionale Rolle definiert — durch die kausalen Beziehungen zu Inputs, Outputs und anderen mentalen Zuständen. [[Multirealisierbarkeit: dieselbe mentale Funktion kann in völlig verschiedenen physischen Substraten realisiert sein — in Neuronen, Silizium, was auch immer.]] Schmerz ist Schmerz, weil er bestimmte Ursachen hat (Gewebeschäden) und bestimmte Wirkungen (Rückzugsreflexe, Vermeidungsverhalten) — nicht weil er aus C-Fasern besteht. Damit wird Bewusstsein prinzipiell auf Computern realisierbar.",
         "4": "Theoretisches Rückgrat der kognitiven Wissenschaft und der [[starken KI-These:These, dass ein hinreichend komplexer Computer durch reine Funktionsrealisierung tatsächlich Geist und Bewusstsein hätte — nicht nur simuliert]]. Hauptverbreitung 1960–1975 (Putnam, Lewis, Fodor). Drei große Kritiken: Nagels Fledermaus (epistemische Grenze der Dritten-Person-Perspektive), Searles Chinesisches Zimmer (Syntax ≠ Semantik, Funktion ≠ Verstehen), Tononis IIT (gleiches funktionales Profil, unterschiedliches Φ — also unterschiedliches Bewusstsein)."
-      }
+      },
+      "primaryThinker": "dennett"
     },
     {
       "id": "anomaler-monismus",
@@ -507,7 +512,8 @@
       "versions": {
         "2": "Davidsons Anomaler Monismus (1970) verbindet ontologischen Monismus mit konzeptionellem Pluralismus. [[Token-Identität: jedes konkrete mentale Ereignis ist mit einem konkreten physischen Ereignis identisch — aber ohne dass es allgemeine Gesetze gibt, die mentale Typen mit physischen Typen verbinden.]] Das Mentale ist physisch, ohne dass es Brückengesetze braucht. Damit will Davidson zwei Dinge retten: die Einheit der Welt (alles ist physisch) und die Autonomie des Mentalen (Psychologie folgt eigenen normativen Prinzipien). Das Problem: Wenn das Mentale nur kraft seiner physischen Seite kausal wirkt, was leistet die mentale Beschreibung noch?",
         "4": "Verbindet ontologischen Monismus mit konzeptionellem Pluralismus. Token-Identität ohne Type-Identität. Auslöser der Supervenienzdebatte und des [[Kim'schen Exklusionsarguments:Jaegwon Kims Argument: Wenn die physische Welt kausal geschlossen ist, hat das Mentale qua mental keine eigenständige kausale Rolle — es wird durch das Physische ›exkludiert‹]]: Wenn das Physische kausal geschlossen ist, wie kann das Mentale über die physische Realisierung hinaus kausal relevant sein? Anomaler Monismus gibt keine befriedigende Antwort auf das Exklusionsproblem."
-      }
+      },
+      "primaryThinker": "davidson"
     },
     {
       "id": "qualia",
@@ -525,7 +531,8 @@
       "versions": {
         "2": "Qualia [[lat. qualis: von welcher Art]] sind die qualitativen, subjektiven Eigenschaften des Erlebens — das spezifische Rotgefühl von Rot, der konkrete Schmerz eines Schmerzes, das Wie-es-ist von Kaffeeduft. [[Phänomenales Erleben: das ›Innen‹ von Erfahrung, das sich einer rein funktionalen oder physikalischen Beschreibung zu entziehen scheint.]] Was macht Qualia philosophisch interessant: Sie scheinen nicht auf physikalische oder funktionale Eigenschaften reduzierbar zu sein. Man kann sich vorstellen, dass jemand neurologisch und funktional identisch mit uns ist — aber nichts erlebt. Das ist das Zombie-Argument.",
         "4": "Streitobjekt des Feldes: Realisten halten sie für irreduzible Explananda (Nagel, Chalmers, Jackson), Eliminativisten für theoretische Fiktionen (Churchland), [[Repräsentationalisten:Position, dass Qualia keine intrinsischen Eigenschaften des Erlebens sind, sondern repräsentationale Inhalte des Bewusstseinssystems]] für analysierbare Strukturen (Metzinger: Qualia sind Eigenschaften eines transparenten Selbstmodells). Der ontologische Status des Begriffs ist selbst Gegenstand der Kontroverse — ob Qualia als eigenständige Kategorie überhaupt existieren, ist Teil des Hard Problem."
-      }
+      },
+      "primaryThinker": "nagel"
     },
     {
       "id": "wissensargument",
@@ -543,7 +550,8 @@
       "versions": {
         "3": "Jacksons Szenario (1982): Mary ist eine perfekte Farbwissenschaftlerin, die ihr ganzes Leben in einem schwarz-weißen Zimmer verbracht hat. Sie kennt alle physikalischen Fakten über Farbwahrnehmung — Wellenlängen, neuronale Prozesse, alles. Wenn sie das Zimmer verlässt und erstmals Rot sieht, lernt sie etwas Neues: wie Rot sich anfühlt. Falls das stimmt, war ihr physikalisches Wissen unvollständig — also gibt es Tatsachen über Erleben, die physikalische Beschreibungen nicht erfassen.",
         "5": "Epistemisches Anti-Physikalismus-Argument, parallel zu Chalmers' ontologischem Zombie-Argument. Beide zielen auf denselben [[explanatory gap:›Erklärungslücke‹ zwischen physikalischen Tatsachen und phänomenalem Erleben — von Joseph Levine 1983 geprägter Begriff, der Hard Problem strukturell vorweggreift]]. Jacksons spätere Selbstrevision: Er akzeptiert Physikalismus und deutet die neue Erkenntnis als Erwerb einer Fähigkeit — [[ability hypothesis:These, dass Mary nichts Neues weiß, sondern nur etwas Neues kann — sie hat eine neue Fähigkeit erworben, nicht eine neue Tatsache erfasst]] — nicht als neues Faktenwissen. Die Debatte über seine Gründe zur Revision ist eigenständig wertvoll: Sie kartiert die Optionen zwischen Wissen-als-Information und Wissen-als-Fähigkeit."
-      }
+      },
+      "primaryThinker": "jackson"
     },
     {
       "id": "hard-problem",
@@ -561,7 +569,8 @@
       "versions": {
         "3": "Chalmers' Unterscheidung (1995): Die ›easy problems‹ — Diskrimination, Integration, Verhaltenssteuerung, Aufmerksamkeit — sind im Prinzip durch kognitionswissenschaftliche Methoden lösbar. Das Hard Problem ist ein anderes: Warum gehen diese kognitiven Prozesse überhaupt mit Erleben einher? Warum ist es dunkel, wenn man die Augen schließt — statt einfach nichts? Selbst nach vollständiger funktionaler Erklärung bleibt die Frage, warum überhaupt etwas erlebt wird, unbeantwortet.",
         "5": "Definiert die Tagesordnung der Bewusstseinsphilosophie seit 1995. Drei Reaktionen: Metzinger — Das Hard Problem ist kein ontologisches Datum, sondern Symptom struktureller Transparenz der Selbstmodellierung. Dennett — Es existiert nicht, es ist begriffliche Verwirrung über Introspektion. Tononi — Es löst sich, wenn man Bewusstsein mit Φ identifiziert und als fundamentale Eigenschaft kausaler Struktur begreift."
-      }
+      },
+      "primaryThinker": "chalmers"
     },
     {
       "id": "chinesisches-zimmer",
@@ -574,7 +583,8 @@
       "versions": {
         "3": "Searles Gedankenexperiment (1980): Ein Mensch ohne Chinesischkenntnisse sitzt in einem Zimmer mit einem Regelwerk für chinesische Symbole. Er bekommt chinesische Fragen hereingereicht, schlägt die passenden Antworten nach und reicht sie hinaus — ohne ein Wort zu verstehen. Von außen sieht das nach Verstehen aus. Aber der Mensch versteht nichts. Das Argument: Formale Symbolmanipulation — Syntax — allein erzeugt keine Bedeutung, kein Verstehen, kein Bewusstsein. Damit widerlegt Searle den Anspruch starker KI.",
         "5": "Direkte Widerlegung des computationalistischen Funktionalismus. Die [[Systemantwort:der wichtigste Einwand gegen Searle — Verstehen liegt nicht beim Operator im Zimmer, sondern beim Gesamtsystem aus Operator, Regelbuch und Symbolen]] — Verstehen liegt beim Gesamtsystem, nicht beim Operator — ist Searles Hauptgegner. Tononis IIT bestätigt die Richtung: Funktion allein reicht nicht; integrierte kausale Struktur ist entscheidend. Aber IIT widerlegt auch Searles Biologismus: Nicht die Neurochemie ist entscheidend, sondern das Φ."
-      }
+      },
+      "primaryThinker": "searle"
     },
     {
       "id": "heterophaenomenologie",
@@ -592,7 +602,8 @@
       "versions": {
         "3": "Dennetts methodologischer Vorschlag für eine Third-Person-Wissenschaft des Bewusstseins: Berichte über Erleben werden wie ethnographische Texte behandelt — ernst genommen als Daten, ohne ontologisches Commitment auf das Berichtete. Man wertet aus, was jemand sagt, er erlebe, ohne anzunehmen, dass das Berichtete tatsächlich so vorhanden ist. Das erlaubt eine naturalistische Forschungsstrategie, die First-Person-Daten verarbeitet, ohne ihnen konstitutive Autorität zuzuerkennen.",
         "5": "Direkter Antipode zur Husserlschen Epoché: Während die Epoché First-Person-Berichten konstitutive Autorität zugesteht und sie als Ausgangsmaterial phänomenologischer Wesensschau behandelt, nimmt die Heterophänomenologie ihnen diese Autorität — sie sind Symptome zu erklären, keine Evidenz zu akzeptieren. Kern des methodischen Konflikts: ob Innenperspektive Fundament oder Datum wissenschaftlicher Erklärung ist."
-      }
+      },
+      "primaryThinker": "dennett"
     },
     {
       "id": "pc-vs-ac",
@@ -604,7 +615,8 @@
       "versions": {
         "3": "Ned Blocks Distinktion (1995): Phänomenales Bewusstsein ist das qualitative Erleben — das Wie-es-ist. Zugangsbewusstsein ist die Verfügbarkeit mentaler Inhalte für Schlussfolgern, Bericht und Verhaltenssteuerung. Diese beiden müssen begrifflich getrennt werden: Ein System könnte Zugang zu Informationen haben, ohne sie zu erleben — oder umgekehrt, wie in manchen Blindsight-Fällen vermutet.",
         "5": "Strukturiert die gesamte Bewusstseinsdebatte nach Chalmers. Dennett erklärt access consciousness — und bestreitet, dass phenomenal consciousness ein eigenständiges Explanandum ist. Chalmers: Genau das ist das Hard Problem — dass jemand phenomenal consciousness wegdefinieren kann, zeigt die Tiefe des Problems. IIT und [[Global Workspace Theory:Bernard Baars' und Stanislas Dehaenes Theorie — Bewusstsein als globaler Arbeitsraum, der Informationen für viele Module gleichzeitig verfügbar macht; erklärt access consciousness]] verorten sich in dieser Distinktion: GWT erklärt access, IIT zielt auf phenomenal."
-      }
+      },
+      "primaryThinker": "chalmers"
     },
     {
       "id": "epoche",
@@ -622,7 +634,8 @@
       "versions": {
         "4": "Husserls methodischer Kerngriff: Einklammerung aller ontologischen Vorannahmen über die Existenz der Außenwelt — der ›natürlichen Einstellung‹ — um die Strukturen des reinen Bewusstseins freizulegen. Nicht skeptisch gemeint: Es geht nicht darum, die Welt wegzuzweifeln, sondern darum, die Bedingungen ihrer Erscheinung zu untersuchen. Die Epoché legt frei: Intentionalität, Zeitbewusstsein, intersubjektive Konstitution — alles, was für das Auftreten von Erfahrung konstitutiv ist.",
         "5": "Varela/Thompson operationalisieren die Epoché als trainierbare Methode zur Erzeugung präziser First-Person-Daten, kreuzbar mit Neurobiologie ([[Neurophänomenologie:Varelas Forschungsprogramm — Korrelation von neurobiologischen Messungen mit präzisen, phänomenologisch geschulten First-Person-Berichten]]). Diametral zur Heterophänomenologie: Epoché erkennt First-Person-Berichten konstitutive Autorität zu; Heterophänomenologie nimmt sie ihnen. Diese Spannung ist nicht auflösbar durch methodische Kompromisse — sie reflektiert einen tiefen Dissens über den epistemischen Status von Erleben."
-      }
+      },
+      "primaryThinker": "husserl"
     },
     {
       "id": "lebens-geist-kontinuitaet",
@@ -640,7 +653,8 @@
       "versions": {
         "4": "These des Enaktivismus: Sinnstiftung beginnt nicht erst mit dem Gehirn, sondern mit dem Leben — mit der ersten autopoietischen Schließung, die einen intrinsischen Standpunkt erzeugt. Ein Bakterium, das Nährstoffe sucht, hat bereits eine Perspektive: Etwas ist gut oder schlecht für es. Direkter Gegenentwurf zu Metzingers Selbstmodell-Theorie: Subjektivität ist nicht das Produkt von Repräsentation, sondern von Leben.",
         "5": "In 'The Embodied Mind' (1991) verknüpft mit der [[Madhyamaka:zentrale buddhistische Schule (Nagarjuna, 2. Jh.) — Lehre vom mittleren Weg, die Substanz- und Nihilismus-Extreme gleichermaßen ablehnt und auf der wechselseitigen Bedingtheit aller Phänomene besteht]]-buddhistischen Tradition als Quelle des Anti-Repräsentationalismus. Konstitutive Verflechtung von Subjekt und Welt — nicht nur kausale Interaktion. Gegen Clarks Extended Mind: Nicht Erweiterung eines internen Repräsentationssystems, sondern Auflösung der Innen/Außen-Grenze als konzeptuelles Grundproblem."
-      }
+      },
+      "primaryThinker": "varela"
     },
     {
       "id": "predictive-processing",
@@ -657,7 +671,8 @@
       },
       "versions": {
         "5": "[[Bayesianisches:nach Thomas Bayes — Wahrscheinlichkeitsrechnung, die Vorwissen mit neuen Daten verknüpft, um Hypothesen zu aktualisieren; Grundlage moderner statistischer Inferenz]] Rahmenmodell der Kognition: Das Gehirn minimiert kontinuierlich Vorhersagefehler zwischen erwarteten und eintreffenden Signalen über alle hierarchischen Ebenen. Wahrnehmung ist [[aktive Inferenz:Karl Fristons Begriff — Wahrnehmung und Handlung als ineinander verschränkter Prozess der Vorhersagefehler-Minimierung]] — das Gehirn konstruiert eine Hypothese über die Welt und testet sie gegen Sensorik. PP vereint Kognition, Handlung und Affekt in einem Rahmen. Zeitgenössische Erbin des Funktionalismus: bayesianische Architektur statt diskreter Module, substratunabhängiger Reduktionsanspruch bleibt. Im Gegensatz zu Varelas Enaktivismus: aktive Inferenz über Repräsentationen, kein verkörperter Vollzug jenseits von Repräsentation."
-      }
+      },
+      "primaryThinker": "clark"
     },
     {
       "id": "selbstmodell",
@@ -674,7 +689,8 @@
       },
       "versions": {
         "5": "Metzingers Kernkonstrukt: Das Selbst ist kein Ding, sondern ein Repräsentationsprozess. Die entscheidende Eigenschaft: [[Transparenz:in Metzingers Sinn die Eigenschaft eines Repräsentationsmediums, sich selbst nicht als Medium zu zeigen — wir sehen ›durch‹ es hindurch, ohne es als Modell zu bemerken]] — das System erkennt sich selbst nicht als Modell, weil es auf die darunterliegende Repräsentationsebene nicht zugreifen kann. Das führt zum Erleben von Unmittelbarkeit: Was wie rohes Erleben erscheint, ist die introspektive Untererreichbarkeit der Modellierungsebene. Qualia verschwinden nicht wie bei den Churchlands; sie erscheinen neu als Eigenschaften eines Systems, das seinen eigenen Modellcharakter nicht introspizieren kann. Der Ego-Tunnel ist real als Phänomen — aber nicht als Substanz."
-      }
+      },
+      "primaryThinker": "metzinger"
     },
     {
       "id": "iit",
@@ -691,7 +707,8 @@
       },
       "versions": {
         "5": "Tononis formal-empirische Bewusstseinstheorie: Ein System ist bewusst genau dann und in dem Maße, wie es integrierte Information ([[Φ:griechischer Buchstabe ›Phi‹ — Tononis formales Maß für die Menge integrierter, irreduzibler kausaler Information in einem System]]) realisiert — ein mathematisch definiertes Maß für irreduzibel kausal vernetzte Information. IIT weist Substratunabhängigkeit zurück: Zwei Systeme mit identischen Input-Output-Profilen können unterschiedliches Φ haben — eines wäre bewusst, das andere nicht. Damit wird Bewusstsein zur fundamentalen Eigenschaft kausaler Struktur: irreduzibel auf Funktion (gegen Funktionalismus), aber Third-Person messbar (gegen Dualismus). Konsequenz: Ein [[Feedforward-Netz:neuronales Netzwerk ohne Rückkopplungsschleifen — Information fließt nur in eine Richtung; nach IIT trotz gleicher Funktion weniger oder gar nicht bewusst]] wäre bei gleichem Verhalten weniger bewusst als ein rekurrentes."
-      }
+      },
+      "primaryThinker": "tononi"
     }
   ],
   "influences": [

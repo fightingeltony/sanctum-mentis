@@ -290,7 +290,8 @@
       "versions": {
         "1": "Bubers zentrale Unterscheidung. Es gibt zwei Grundworte, mit denen der Mensch zur Welt steht. Im Ich-Es ist der andere ein Gegenstand: beobachtet, eingeordnet, gebraucht. Im Ich-Du ist der andere als ganzes Wesen anwesend, in einer Begegnung, die nicht festgehalten werden kann. Die Pointe: Beide Haltungen sind möglich gegenüber demselben Menschen — und es entscheidet sich an ihnen, ob Beziehung Geschenk oder Vergegenständlichung wird.",
         "3": "Ich-Du ist als Axiom des Tableaus gesetzt, weil aus ihm die ganze rechte Hälfte folgt. Sobald man annimmt, dass der Mensch erst am Du zum Ich wird, verschiebt sich der Ausgangspunkt von der Subjektphilosophie weg. Das Konzept ist zugleich ein Echo aus dem Existenzialismus-Tableau, wo Ich-Du als Bubers orthogonale Randstimme erscheint — hier, im Beziehungs-Tableau, ist es nicht mehr orthogonal, sondern zentral. Was dort am Rand stand, ist hier der Grund."
-      }
+      },
+      "primaryThinker": "buber"
     },
     {
       "id": "antlitz",
@@ -301,7 +302,8 @@
       "y": 26,
       "versions": {
         "4": "Lévinas' Begriff für die Weise, in der der Andere mir begegnet: nicht als Bild, Gestalt oder Gegenstand der Wahrnehmung, sondern als unmittelbarer ethischer Anspruch. Das Antlitz ›spricht‹, noch bevor ein Wort fällt, und sein erstes Wort ist ein Verbot: Du sollst mich nicht töten. Im Antlitz bricht eine Unendlichkeit ein, die sich meinem Zugriff entzieht — ich kann den Anderen nicht auf einen Begriff bringen. Das Antlitz ist der Punkt, an dem Beziehung zur Ethik wird, noch vor jeder Entscheidung."
-      }
+      },
+      "primaryThinker": "levinas"
     },
     {
       "id": "anerkennung",
@@ -312,7 +314,8 @@
       "y": 45,
       "versions": {
         "3": "Von Hegel zu Honneth durchläuft das Tableau eine Theorie der Anerkennung: Das Ich braucht die Bestätigung durch den Anderen, um zu sich zu kommen. Anerkennung ist keine Höflichkeit, sondern eine Existenzbedingung — sie schafft Selbstvertrauen, Selbstachtung und Selbstschätzung. Ihr Entzug, die Missachtung, ist entsprechend keine Kränkung am Rande, sondern eine Verletzung im Kern. Die Theorie erklärt, warum derselbe Andere nähren *und* verletzen kann: weil beides aus derselben Angewiesenheit stammt."
-      }
+      },
+      "primaryThinker": "honneth"
     },
     {
       "id": "der-blick",
@@ -324,7 +327,8 @@
       "versions": {
         "2": "Sartres Phänomen: die Erfahrung, vom Anderen angesehen zu werden. Solange ich allein handle, bin ich freies Subjekt, Zentrum meiner Welt. Sobald mich ein Blick trifft, werde ich zum Objekt in der Welt eines Anderen — etwas, das beurteilt, eingeordnet, festgelegt wird. Das klassische Beispiel: Ich spähe durch ein Schlüsselloch, ganz in meine Handlung versunken — bis Schritte hinter mir mich zum Ertappten machen. Der Blick ist die alltägliche Erfahrung, an der Sartre zeigt, dass der Andere meine Freiheit bedroht.",
         "4": "Der Blick ist das phänomenologische Kernstück der unteren linken Tableau-Hälfte und die schärfste Gegenfigur zu Bubers Ich-Du. Wo bei Buber die Begegnung mich werden lässt, lässt der Blick bei Sartre mich erstarren. Beide beschreiben dasselbe Faktum — dass ich durch den Anderen vermittelt bin —, aber Sartre erlebt es als Verlust, Buber als Gewinn. Die ganze vertikale Spannung des Tableaus (Geschenk ↔ Zumutung) lässt sich an diesem einen Unterschied ablesen."
-      }
+      },
+      "primaryThinker": "sartre"
     },
     {
       "id": "disponibilite",
@@ -335,7 +339,8 @@
       "y": 64,
       "versions": {
         "3": "Marcels Begriff für die Bereitschaft, für den Anderen wirklich da zu sein — sich ihm zu öffnen, statt ihn auf Abstand zu halten. Verfügbarkeit ist das Gegenteil der Verschlossenheit, in der ich den Anderen als Problem behandle, das mich nicht betrifft. Wer verfügbar ist, lässt sich vom Anderen angehen und verändern. Damit ist disponibilité die Haltung, die Marcels Mysterium-Begriff praktisch macht: Sie ist die Weise, in der ich einem Du begegne, statt ein Es zu verwalten."
-      }
+      },
+      "primaryThinker": "marcel"
     },
     {
       "id": "wahres-falsches-selbst",
@@ -346,7 +351,8 @@
       "y": 92,
       "versions": {
         "2": "Winnicotts Unterscheidung. Das wahre Selbst ist das spontane, lebendige Zentrum eines Menschen — das, was sich anfühlt wie er selbst. Es kann sich nur in einer ausreichend guten, haltenden Beziehung entfalten. Wo dieses Halten fehlt, bildet sich ein falsches Selbst: eine angepasste Fassade, die den Erwartungen anderer entspricht und das verletzliche wahre Selbst schützt. Die Theorie zeigt, dass das, was wir für unseren innersten Kern halten, von der Qualität früher Beziehungen abhängt — der Grund ist relational, nicht innerlich."
-      }
+      },
+      "primaryThinker": "winnicott"
     },
     {
       "id": "zweites-selbst",
@@ -360,7 +366,8 @@
       ],
       "versions": {
         "3": "Aristoteles' Bild für die vollendete Freundschaft: Der wahre Freund ist ein ›anderes Selbst‹. In ihm erkenne ich mich wieder, an ihm sehe ich mein eigenes Leben wie von außen, mit ihm teile ich das, was mir am wichtigsten ist. Aber — und darin liegt die kuratorische Pointe des Tableaus — dieser Freund vollendet ein Selbst, das schon besteht. Er macht mich nicht erst zum Ich (wie das Du bei Buber), sondern verdoppelt und bestätigt ein bereits tugendhaftes Ich. Der Andere als Geschenk an einen, der seiner nicht bedarf, um zu sein."
-      }
+      },
+      "primaryThinker": "aristoteles"
     },
     {
       "id": "missachtung",
@@ -371,7 +378,8 @@
       "y": 40,
       "versions": {
         "4": "Honneths Gegenbegriff zur Anerkennung und der Punkt, an dem die rechte Tableau-Hälfte nach unten kippt. Missachtung — Misshandlung, Entrechtung, Entwürdigung — verletzt einen Menschen in genau den Sphären, in denen Anerkennung ihn aufbaut. Weil der Mensch auf Anerkennung angewiesen ist, ist ihr Entzug keine bloße Unannehmlichkeit, sondern ein Angriff auf das Selbstverhältnis. Missachtung zeigt, dass die nährende und die bedrohliche Seite des Anderen nicht zwei verschiedene Andere sind, sondern zwei Möglichkeiten derselben Angewiesenheit."
-      }
+      },
+      "primaryThinker": "honneth"
     }
   ],
   "influences": [
