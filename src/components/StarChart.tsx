@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import type { Thinker, Influence, School, Quadrants, Level } from '@/lib/types'
 import { Annotated } from '@/lib/annotations'
+import { usePanZoom } from '@/hooks/usePanZoom'
 
 // ─── Constants ────────────────────────────────────────────────
 
@@ -144,8 +145,6 @@ export default function StarChart({
 
   // ── Refs ──────────────────────────────────────────────────
   const svgRef      = useRef<SVGSVGElement | null>(null)
-  const stageRef    = useRef<HTMLDivElement | null>(null)
-  const cameraRef   = useRef<HTMLDivElement | null>(null)
   const starGRefs   = useRef<Record<string, SVGGElement | null>>({})
   const edgeRefs    = useRef<Record<string, EdgeRefs>>({})
   // Animated positions (mutable — bypasses React state for rAF performance)
@@ -155,8 +154,8 @@ export default function StarChart({
   // Mutable copies so animation closures always see current values
   const modeRef     = useRef<'axis' | 'school'>('axis')
   const selectedRef = useRef<string | null>(null)
-  // Pan/zoom state
-  const panRef = useRef({ scale: 1, tx: 0, ty: 0, drag: null as Pos | null })
+  // Pan/zoom — shared hook (Pinch, Pan, Wheel, Double-Tap)
+  const pz = usePanZoom(W, H, { minScale: 1, maxScale: 3.4 })
 
   // ── Derived data ──────────────────────────────────────────
 
@@ -369,40 +368,7 @@ export default function StarChart({
     if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
   }, [])
 
-  // ── Pan / zoom ────────────────────────────────────────────
-  const applyZoom = useCallback(() => {
-    const ps    = panRef.current
-    const stage  = stageRef.current
-    const camera = cameraRef.current
-    if (!stage || !camera) return
-    const r  = stage.getBoundingClientRect()
-    ps.scale = Math.max(1, Math.min(3.4, ps.scale))
-    const ow = r.width  * (ps.scale - 1)
-    const oh = r.height * (ps.scale - 1)
-    ps.tx = Math.max(-ow, Math.min(0, ps.tx))
-    ps.ty = Math.max(-oh, Math.min(0, ps.ty))
-    camera.style.transform = `translate(${ps.tx}px,${ps.ty}px) scale(${ps.scale})`
-  }, [])
-
-  // Wheel handler needs { passive: false } — must register via addEventListener
-  useEffect(() => {
-    const stage = stageRef.current
-    if (!stage) return
-    const handler = (e: WheelEvent) => {
-      e.preventDefault()
-      const ps  = panRef.current
-      const r   = stage.getBoundingClientRect()
-      const mx  = e.clientX - r.left, my = e.clientY - r.top
-      const old = ps.scale
-      ps.scale *= e.deltaY < 0 ? 1.12 : 0.9
-      applyZoom()
-      ps.tx = mx - (mx - ps.tx) * (ps.scale / old)
-      ps.ty = my - (my - ps.ty) * (ps.scale / old)
-      applyZoom()
-    }
-    stage.addEventListener('wheel', handler, { passive: false })
-    return () => stage.removeEventListener('wheel', handler)
-  }, [applyZoom])
+  // Pan/zoom handled by usePanZoom hook (Pinch, Pan, Wheel, Double-Tap)
 
   // ── Focus / hover (imperative — no re-renders) ────────────
   const clearFocus = useCallback(() => {
@@ -543,7 +509,7 @@ export default function StarChart({
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%', minWidth: 0, maxWidth: 'calc(78vh * 980 / 760)' }}>
         <div
-          ref={stageRef}
+          ref={pz.containerRef}
           style={{
             position: 'relative', width: '100%', minWidth: 0,
             border: '1px solid var(--hairline-strong)',
@@ -553,23 +519,14 @@ export default function StarChart({
             boxShadow: 'inset 0 0 0 6px var(--bg-sunk), inset 0 0 0 7px var(--hairline)',
           }}
           onPointerDown={e => {
-            const target = e.target as Element
-            if (target.closest('.sc-star, .sc-edge-hit, [data-nopan]')) return
-            const ps = panRef.current
-            ps.drag = { x: e.clientX - ps.tx, y: e.clientY - ps.ty }
-            stageRef.current?.setPointerCapture(e.pointerId)
+            if ((e.target as Element).closest('[data-nopan]')) return
+            pz.handlers.onPointerDown(e)
           }}
-          onPointerMove={e => {
-            const ps = panRef.current
-            if (!ps.drag) return
-            ps.tx = e.clientX - ps.drag.x
-            ps.ty = e.clientY - ps.drag.y
-            applyZoom()
-          }}
-          onPointerUp={() => { panRef.current.drag = null }}
-          onClick={deselect}
+          onPointerMove={pz.handlers.onPointerMove}
+          onPointerUp={e => { pz.handlers.onPointerUp(e); if (!pz.suppressClick.current) deselect() }}
+          onPointerCancel={pz.handlers.onPointerCancel}
         >
-          <div ref={cameraRef} style={{ position: 'absolute', inset: 0, transformOrigin: '0 0' }}>
+          <div ref={pz.wrapperRef} style={{ position: 'absolute', inset: 0, transformOrigin: '0 0' }}>
             <svg
               ref={svgRef}
               viewBox={`0 0 ${W} ${H}`}
@@ -807,9 +764,9 @@ export default function StarChart({
             }}
           >
             {[
-              { label: 'Vergrössern',  icon: '+',  fn: () => { panRef.current.scale *= 1.25; applyZoom() } },
-              { label: 'Verkleinern',  icon: '−',  fn: () => { panRef.current.scale *= 0.8;  applyZoom() } },
-              { label: 'Zurücksetzen', icon: '⟲',  fn: () => { const ps = panRef.current; ps.scale = 1; ps.tx = 0; ps.ty = 0; applyZoom() } },
+              { label: 'Vergrössern',  icon: '+',  fn: pz.zoomIn  },
+              { label: 'Verkleinern',  icon: '−',  fn: pz.zoomOut },
+              { label: 'Zurücksetzen', icon: '⟲',  fn: pz.reset   },
             ].map(({ label, icon, fn }) => (
               <button
                 key={label}
