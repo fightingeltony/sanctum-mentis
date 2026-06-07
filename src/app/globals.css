@@ -410,3 +410,125 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .carta-card-highlight[data-highlight="true"] { animation: none; outline: 2px solid var(--accent); }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   StarChart — Sternkarte des Tableaus
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --line-influence:  oklch(0.30 0.03 65);
+  --line-parallel:   oklch(0.42 0.05 235);
+  --line-critique:   oklch(0.46 0.10 45);
+  --line-rejection:  oklch(0.47 0.14 30);
+}
+
+/* Axis chrome (grid, frame, poles, compass) — fades out in school mode */
+.sc-axischrome { transition: opacity .55s ease; }
+svg.sc-mode-school .sc-axischrome { opacity: 0 !important; }
+
+/* School labels — fade in in school mode */
+.sc-schoollabels { opacity: 0; transition: opacity .55s ease; }
+svg.sc-mode-school .sc-schoollabels { opacity: 1; }
+
+/* School name text */
+.sc-schoolname {
+  font-family: 'Marcellus SC', serif;
+  font-size: 11px; letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+/* Grid & frame */
+.sc-frame { fill: none; stroke: oklch(0.35 0.022 65 / 0.32); stroke-width: .75; }
+.sc-axis  { stroke: oklch(0.35 0.022 65 / 0.5);  stroke-width: 1; }
+.sc-grid  { stroke: oklch(0.35 0.022 65 / 0.16); stroke-width: .6; stroke-dasharray: 2 4; }
+
+/* Pole labels */
+.sc-pole      { font-family: 'Marcellus SC', serif; font-weight: bold; font-size: 12px; letter-spacing: .18em; fill: oklch(0.28 0.022 65 / 0.85); }
+.sc-pole-hint { font-style: italic; font-size: 9px; letter-spacing: .04em; fill: oklch(0.42 0.022 65 / 0.6); }
+.sc-axisname  { font-style: italic; font-size: 10.5px; letter-spacing: .08em; fill: oklch(0.42 0.022 65 / 0.6); }
+.sc-compass-label { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: .1em; }
+
+/* Edges */
+.sc-edge-g { }
+.sc-edge {
+  fill: none;
+  transition: opacity .35s ease, stroke-width .2s ease;
+  opacity: .5;
+}
+.sc-edge-hit { stroke: transparent; stroke-width: 12; fill: none; cursor: pointer; }
+.sc-brk  { stroke-width: 1.1; opacity: .5; transition: opacity .35s; }
+
+/* Focus: dim everything that isn't lit/active/neighbor */
+svg.sc-focus .sc-edge-g:not(.sc-lit) .sc-edge { opacity: .14; }
+svg.sc-focus .sc-edge-g:not(.sc-lit) .sc-brk  { opacity: .14; }
+.sc-edge-g.sc-lit .sc-edge { opacity: 1; stroke-width: 1.7; }
+.sc-edge-g.sc-lit .sc-brk  { opacity: 1; }
+
+/* Stars */
+.sc-star { cursor: pointer; }
+.sc-star-body { opacity: 1; transition: opacity .35s ease; }
+.sc-spike { fill: var(--ink); }
+.sc-ring  { fill: none; stroke: var(--ink); stroke-width: .7; opacity: .5; }
+.sc-glow  { transition: opacity .3s ease; }
+
+.sc-sname {
+  font-family: 'Marcellus SC', serif;
+  font-size: 10px; letter-spacing: .04em; fill: var(--ink);
+  paint-order: stroke; stroke: var(--bg-sunk); stroke-width: 3px; stroke-linejoin: round;
+  opacity: .74; transition: opacity .4s ease;
+}
+.sc-star.sc-anchor .sc-sname { font-weight: bold; letter-spacing: .10em; opacity: .92; }
+.sc-slife {
+  font-style: italic; font-size: 7.5px; fill: var(--fg-faint);
+  paint-order: stroke; stroke: var(--bg-sunk); stroke-width: 2.5px;
+  opacity: 0; transition: opacity .2s;
+}
+
+/* Unread shimmer */
+.sc-pulse-halo { opacity: 0; }
+.sc-star.sc-unread .sc-pulse-halo { animation: sc-breatheHalo 3.6s ease-in-out infinite; }
+@keyframes sc-breatheHalo {
+  0%, 100% { opacity: .16; transform: scale(.82); }
+  50%       { opacity: .46; transform: scale(1.16); }
+}
+.sc-unread-dot { opacity: 0; transition: opacity .45s ease; }
+.sc-star.sc-unread .sc-unread-dot { opacity: .85; }
+
+/* Focus dimming */
+svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-star-body { opacity: .5; }
+svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity: 0; }
+.sc-star.sc-active  .sc-sname { opacity: 1 !important; font-weight: bold; }
+.sc-star.sc-neighbor .sc-sname { opacity: 1 !important; }
+.sc-star.sc-active  .sc-slife { opacity: .9; }
+.sc-star.sc-active  .sc-halo-pulse { animation: sc-halopulse 2s ease-out; }
+@keyframes sc-halopulse { 0% { opacity: .5; r: 6; } 100% { opacity: 0; r: 26; } }
+
+/* Mode switch control */
+.sc-modeswitch {
+  display: flex; border: 1px solid var(--hairline-strong); width: max-content;
+}
+.sc-modeswitch button {
+  font-family: var(--font-ui), 'Inter', sans-serif;
+  font-size: 10px; letter-spacing: .16em; text-transform: uppercase;
+  padding: 5px 14px; background: none; border: none; cursor: pointer;
+  color: var(--fg-faint); transition: background .2s, color .2s;
+}
+.sc-modeswitch button + button { border-left: 1px solid var(--hairline-strong); }
+.sc-modeswitch button.sc-on  { background: var(--accent); color: var(--bg-raised); }
+
+/* Lines toggle */
+.sc-lines-toggle {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--fg-faint); cursor: pointer;
+  user-select: none;
+}
+.sc-lines-toggle input { accent-color: var(--accent); cursor: pointer; }
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .sc-axischrome, .sc-schoollabels,
+  .sc-edge-g, .sc-edge, .sc-star-body, .sc-sname, .sc-brk { transition: none; }
+  .sc-star.sc-unread .sc-pulse-halo { animation: none; }
+  .sc-star.sc-active .sc-halo-pulse { animation: none; }
+}

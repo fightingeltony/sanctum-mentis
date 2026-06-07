@@ -79,6 +79,8 @@ export interface Thinker extends Versioned {
   name: string;
   schoolId: string;
   lifespan?: string;        // z.B. "1724–1804"
+  x?: number;               // 0–100, Position auf den Quadranten-Achsen (für Sternkarte)
+  y?: number;               // 0–100, mathematische Konvention (y=100 oben)
   graphX?: number;          // SVG-Position im Influence-Graph (manual layout)
   graphY?: number;
   lectio_brief?: string;    // optional 2–3-Satz-Ankerpunkt für Lectio-Modus

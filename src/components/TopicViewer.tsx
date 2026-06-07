@@ -8,9 +8,10 @@ import LevelSlider from './LevelSlider'
 import ThinkerList from './ThinkerList'
 import InfluenceGraph from './InfluenceGraph'
 import QuadrantPlot from './QuadrantPlot'
+import StarChart from './StarChart'
 import { useCommandPalette } from './ShellCommandPaletteProvider'
 
-type Tab = 'denker' | 'einfluesse' | 'quadrant'
+type Tab = 'denker' | 'einfluesse' | 'quadrant' | 'sternkarte'
 
 interface Props {
   data: TopicData
@@ -76,6 +77,7 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
     { id: 'denker',     label: 'Denker',    mobileLabel: 'Denker', numeral: 'I',   count: state.thinkers.length },
     { id: 'einfluesse', label: 'Einflüsse', mobileLabel: 'Netz',   numeral: 'II',  count: state.influences.length },
     { id: 'quadrant',   label: 'Konzepte',  mobileLabel: 'Karte',  numeral: 'III', count: state.concepts.length },
+    { id: 'sternkarte', label: 'Sternkarte', mobileLabel: 'Stern', numeral: 'IV',  count: null },
   ]
 
   const activeIdx = Math.max(0, data.levels.findIndex(l => l.id === levelId))
@@ -343,6 +345,19 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
             quadrants={data.topic.quadrants}
             onThinkerClick={(id) => { setTab('denker'); setHighlightId(id) }}
           />
+        )}
+        {tab === 'sternkarte' && (
+          <div className="px-4 sm:px-5 py-4">
+            <StarChart
+              thinkers={state.thinkers}
+              allThinkers={data.thinkers}
+              influences={state.influences}
+              schools={data.schools}
+              levelId={levelId}
+              levels={data.levels}
+              quadrants={data.topic.quadrants}
+            />
+          </div>
         )}
       </main>
 
