@@ -114,15 +114,26 @@ function computeAxisLabelSides(
     }, 0)
   }
 
-  // 3 greedy passes
+  // 3 greedy passes — resolve label-label collisions
   for (let pass = 0; pass < 3; pass++) {
     for (const id of ids) {
       const cur = countConflicts(id, sides[id])
       if (cur === 0) continue
-      const alt     = sides[id] === 'left' ? 'right' : 'left'
-      const altCnt  = countConflicts(id, alt)
+      const alt    = sides[id] === 'left' ? 'right' : 'left'
+      const altCnt = countConflicts(id, alt)
       if (altCnt < cur) sides[id] = alt
     }
+  }
+
+  // Final boundary enforcement — SVG clipping is worse than label-label overlap.
+  // If the greedy passes pushed a label beyond the SVG edge, flip it back.
+  const svgW_ = isMobile ? MW : W
+  const margin = 8
+  for (const id of ids) {
+    const g = geom[id]; if (!g) continue
+    const reach = g.R + off + g.nw
+    if (sides[id] === 'right' && g.cx + reach > svgW_ - margin) sides[id] = 'left'
+    if (sides[id] === 'left'  && g.cx - reach < margin)         sides[id] = 'right'
   }
 
   return sides
