@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
 import type { Thinker, Influence, School, Quadrants, Level, Concept } from '@/lib/types'
 import { Annotated } from '@/lib/annotations'
-import { CONCEPT_GLYPH } from '@/lib/conceptTypes'
+import { CONCEPT_GLYPH, CONCEPT_LABEL } from '@/lib/conceptTypes'
 
 // ─── Constants — Desktop ──────────────────────────────────────
 const W = 980, H = 760, PAD_X = 200, PAD_Y = 80
@@ -257,11 +257,12 @@ export default function StarChart({
   thinkers, influences, allThinkers, schools, concepts, levelId, levels, quadrants,
 }: Props) {
 
-  const [mode,      setMode]      = useState<'axis' | 'school'>('axis')
-  const [showLines, setShowLines] = useState(true)
-  const [selected,  setSelected]  = useState<string | null>(null)
-  const [readSet,   setReadSet]   = useState<Set<string>>(new Set())
-  const [isMobile,  setIsMobile]  = useState(false)
+  const [mode,               setMode]             = useState<'axis' | 'school'>('axis')
+  const [showLines,          setShowLines]         = useState(true)
+  const [selected,           setSelected]          = useState<string | null>(null)
+  const [selectedConceptId,  setSelectedConceptId] = useState<string | null>(null)
+  const [readSet,            setReadSet]           = useState<Set<string>>(new Set())
+  const [isMobile,           setIsMobile]          = useState(false)
 
   // ── Refs ──────────────────────────────────────────────────
   const svgRef      = useRef<SVGSVGElement | null>(null)
@@ -742,17 +743,28 @@ export default function StarChart({
   const deselect = useCallback(() => {
     selectedRef.current = null
     setSelected(null)
+    setSelectedConceptId(null)
     svgRef.current?.classList.remove('sc-focus')
     Object.values(edgeRefs.current).forEach(r => r?.g?.classList.remove('sc-lit'))
     Object.values(starGRefs.current).forEach(g => g?.classList.remove('sc-active', 'sc-neighbor'))
   }, [])
   deselectRef.current = deselect
 
+  const selectConcept = useCallback((id: string) => {
+    selectedRef.current = null
+    setSelected(null)
+    setSelectedConceptId(id)
+    svgRef.current?.classList.remove('sc-focus')
+    Object.values(edgeRefs.current).forEach(r => r?.g?.classList.remove('sc-lit'))
+    Object.values(starGRefs.current).forEach(g => g?.classList.remove('sc-active', 'sc-neighbor'))
+  }, [])
+
   const selectStar = useCallback((id: string) => {
     const t = thinkerById[id]
     if (!t) return
     selectedRef.current = id
     setSelected(id)
+    setSelectedConceptId(null)
     svgRef.current?.classList.remove('sc-focus')
     Object.values(edgeRefs.current).forEach(r => r?.g?.classList.remove('sc-lit'))
     Object.values(starGRefs.current).forEach(g => g?.classList.remove('sc-active', 'sc-neighbor'))
@@ -771,10 +783,13 @@ export default function StarChart({
   const hiddenCount     = totalThinkers - visibleCount
 
   // ── Cartouche data ────────────────────────────────────────
-  const selectedThinker  = selected ? thinkerById[selected]           : null
-  const selectedSchool   = selectedThinker ? schoolById[selectedThinker.schoolId] : null
-  const selectedContent  = selectedThinker ? contentFor(selectedThinker, levelId) : ''
+  const selectedThinker   = selected ? thinkerById[selected]           : null
+  const selectedSchool    = selectedThinker ? schoolById[selectedThinker.schoolId] : null
+  const selectedContent   = selectedThinker ? contentFor(selectedThinker, levelId) : ''
   const selectedRelations = selected ? (adjacency[selected] ?? []) : []
+  const selectedConcept   = selectedConceptId
+    ? orphanConcepts.find(c => c.id === selectedConceptId) ?? null
+    : null
 
   // ── Current level label ───────────────────────────────────
   const currentLevel = levels.find(l => l.id === levelId)
@@ -1037,13 +1052,19 @@ export default function StarChart({
 
               {/* Concept markers — orphans only, axis mode only */}
               {mode === 'axis' && (
-                <g pointerEvents="none">
+                <g>
                   {orphanConcepts.map(c => {
                     const cx = vMapX(c.x), cy = vMapY(c.y)
                     const glyph = CONCEPT_GLYPH[c.type] ?? '◆'
                     const fs = isMobile ? 11 : 9
+                    const isConceptActive = selectedConceptId === c.id
                     return (
-                      <g key={c.id}>
+                      <g key={c.id}
+                        style={{ cursor: 'pointer' }}
+                        onClick={e => { e.stopPropagation(); selectConcept(c.id) }}
+                      >
+                        {/* Touch target */}
+                        <circle cx={cx} cy={cy} r={isMobile ? 22 : 14} fill="transparent"/>
                         <circle cx={cx} cy={cy} r={isMobile ? 9 : 7}
                           fill="oklch(0.94 0.020 65)"
                           stroke="oklch(0.48 0.08 50)" strokeWidth={0.8} opacity={0.85}
@@ -1056,12 +1077,18 @@ export default function StarChart({
                         <text x={cx} y={cy + (isMobile ? 14 : 11)}
                           textAnchor="middle" dominantBaseline="hanging"
                           fontSize={isMobile ? 9 : 7.5}
-                          fill="oklch(0.40 0.06 65)"
+                          fill={isConceptActive ? 'oklch(0.35 0.10 50)' : 'oklch(0.40 0.06 65)'}
                           fontFamily="var(--font-ui, sans-serif)"
                           letterSpacing="0.02em"
+                          fontWeight={isConceptActive ? '600' : undefined}
                         >
                           {c.name}
                         </text>
+                        {isConceptActive && (
+                          <circle cx={cx} cy={cy} r={isMobile ? 12 : 10}
+                            fill="none" stroke="oklch(0.48 0.08 50)" strokeWidth={1.2} opacity={0.6}
+                          />
+                        )}
                       </g>
                     )
                   })}
@@ -1184,7 +1211,7 @@ export default function StarChart({
           </div>}
 
           {/* ── Desktop cartouche — hidden on mobile (replaced by bottom-sheet) ── */}
-          {!isMobile && selectedThinker && (
+          {!isMobile && (selectedThinker || selectedConcept) && (
             <aside
               data-nopan
               onClick={e => e.stopPropagation()}
@@ -1195,17 +1222,27 @@ export default function StarChart({
                 boxShadow: '0 16px 40px -24px oklch(0.24 0.02 65 / 0.6)',
               }}
             >
-              <CartoucheContent
-                selectedThinker={selectedThinker}
-                selectedSchool={selectedSchool}
-                selectedContent={selectedContent}
-                selectedRelations={selectedRelations}
-                thinkerById={thinkerById}
-                anchoredConcepts={anchoredByThinker[selectedThinker.id] ?? []}
-                levelId={levelId}
-                deselect={deselect}
-                selectStar={selectStar}
-              />
+              {selectedThinker && (
+                <CartoucheContent
+                  key={selectedThinker.id}
+                  selectedThinker={selectedThinker}
+                  selectedSchool={selectedSchool}
+                  selectedContent={selectedContent}
+                  selectedRelations={selectedRelations}
+                  thinkerById={thinkerById}
+                  anchoredConcepts={anchoredByThinker[selectedThinker.id] ?? []}
+                  levelId={levelId}
+                  deselect={deselect}
+                  selectStar={selectStar}
+                />
+              )}
+              {selectedConcept && (
+                <ConceptCartoucheContent
+                  concept={selectedConcept}
+                  levelId={levelId}
+                  deselect={deselect}
+                />
+              )}
             </aside>
           )}
         </div>
@@ -1233,7 +1270,7 @@ export default function StarChart({
       </div>
 
       {/* ── Mobile bottom-sheet cartouche ── */}
-      {isMobile && selectedThinker && (
+      {isMobile && (selectedThinker || selectedConcept) && (
         <>
           <div className="sc-sheet-scrim" onClick={deselect} />
           <div className="sc-sheet" onClick={e => e.stopPropagation()}>
@@ -1243,23 +1280,80 @@ export default function StarChart({
             </div>
             {/* Scrollable content region */}
             <div style={{ flex: '1 1 auto', minHeight: 0, overflowY: 'auto', WebkitOverflowScrolling: 'touch' }}>
-            <CartoucheContent
-              selectedThinker={selectedThinker}
-              selectedSchool={selectedSchool}
-              selectedContent={selectedContent}
-              selectedRelations={selectedRelations}
-              thinkerById={thinkerById}
-              anchoredConcepts={anchoredByThinker[selectedThinker.id] ?? []}
-              levelId={levelId}
-              deselect={deselect}
-              selectStar={selectStar}
-              isSheet
-            />
+              {selectedThinker && (
+                <CartoucheContent
+                  key={selectedThinker.id}
+                  selectedThinker={selectedThinker}
+                  selectedSchool={selectedSchool}
+                  selectedContent={selectedContent}
+                  selectedRelations={selectedRelations}
+                  thinkerById={thinkerById}
+                  anchoredConcepts={anchoredByThinker[selectedThinker.id] ?? []}
+                  levelId={levelId}
+                  deselect={deselect}
+                  selectStar={selectStar}
+                  isSheet
+                />
+              )}
+              {selectedConcept && (
+                <ConceptCartoucheContent
+                  concept={selectedConcept}
+                  levelId={levelId}
+                  deselect={deselect}
+                  isSheet
+                />
+              )}
             </div>
           </div>
         </>
       )}
     </div>
+  )
+}
+
+// ─── Concept cartouche (orphan markers) ──────────────────────
+
+function ConceptCartoucheContent({
+  concept, levelId, deselect, isSheet,
+}: {
+  concept: ConceptWithDesc
+  levelId: number
+  deselect: () => void
+  isSheet?: boolean
+}) {
+  return (
+    <>
+      <div style={{
+        display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
+        gap: 10, padding: '14px 14px 10px', borderBottom: '1px solid var(--hairline)',
+      }}>
+        <div style={{ minWidth: 0 }}>
+          <p style={{ fontSize: '9.5px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'oklch(0.48 0.08 50)', margin: 0 }}>
+            {CONCEPT_GLYPH[concept.type]} {CONCEPT_LABEL[concept.type]}
+          </p>
+          <p style={{ fontFamily: "'Marcellus SC', serif", fontSize: 17, letterSpacing: '0.04em', color: 'var(--fg)', margin: '3px 0 0' }}>
+            {concept.name}
+          </p>
+          <p style={{ fontSize: 10.5, color: 'var(--fg-faint)', marginTop: 4, fontStyle: 'italic' }}>
+            Kein Denker-Anker auf diesem Level
+          </p>
+        </div>
+        <button
+          onClick={deselect}
+          aria-label="Schliessen"
+          style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--fg-faint)', fontSize: 14, lineHeight: 1, padding: 2, flexShrink: 0 }}
+        >✕</button>
+      </div>
+      <div style={{
+        padding: '13px 14px 14px', fontSize: 13, lineHeight: 1.62, color: 'var(--fg-muted)',
+        ...(isSheet ? {} : { maxHeight: 280, overflowY: 'auto' as const }),
+      }}>
+        {concept.description
+          ? <Annotated text={concept.description} level={levelId} />
+          : <span style={{ color: 'var(--fg-dim)', fontStyle: 'italic' }}>Keine Beschreibung auf diesem Level.</span>
+        }
+      </div>
+    </>
   )
 }
 
@@ -1282,6 +1376,8 @@ function CartoucheContent({
   selectedThinker, selectedSchool, selectedContent, selectedRelations,
   thinkerById, anchoredConcepts, levelId, deselect, selectStar, isSheet,
 }: CartoucheContentProps) {
+  // Akkordeon: zu wenn Denker-Text vorhanden, offen wenn nur Konzepte
+  const [conceptsOpen, setConceptsOpen] = useState(!selectedContent)
   return (
     <>
       {/* Header */}
@@ -1320,27 +1416,37 @@ function CartoucheContent({
           : <span style={{ color: 'var(--fg-dim)', fontStyle: 'italic' }}>—</span>
         }
       </div>
-      {/* Anchored concepts */}
+      {/* Anchored concepts — accordion */}
       {anchoredConcepts.length > 0 && (
-        <div style={{ padding: '0 14px 12px', borderTop: '1px solid var(--hairline)' }}>
-          <p style={{ fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-faint)', margin: '10px 0 8px' }}>
-            Konzepte
-          </p>
-          <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
-            {anchoredConcepts.map(c => (
-              <li key={c.id}>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, marginBottom: 3 }}>
-                  <span style={{ fontSize: 11, color: 'oklch(0.48 0.08 50)' }}>{CONCEPT_GLYPH[c.type]}</span>
-                  <span style={{ fontSize: 12, fontWeight: 500, color: 'var(--fg)', letterSpacing: '0.01em' }}>{c.name}</span>
-                </div>
-                {c.description && (
-                  <p style={{ margin: 0, fontSize: 12, lineHeight: 1.55, color: 'var(--fg-muted)' }}>
-                    <Annotated text={c.description} level={levelId} />
-                  </p>
-                )}
-              </li>
-            ))}
-          </ul>
+        <div style={{ borderTop: '1px solid var(--hairline)' }}>
+          <button
+            onClick={() => setConceptsOpen(o => !o)}
+            style={{
+              width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+              padding: '9px 14px', background: 'none', border: 'none', cursor: 'pointer',
+              fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-faint)',
+            }}
+          >
+            <span>Konzepte · {anchoredConcepts.length}</span>
+            <span style={{ fontSize: 10, transition: 'transform 200ms', transform: conceptsOpen ? 'rotate(180deg)' : 'none' }}>▾</span>
+          </button>
+          {conceptsOpen && (
+            <ul style={{ listStyle: 'none', margin: 0, padding: '0 14px 12px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+              {anchoredConcepts.map(c => (
+                <li key={c.id}>
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: 6, marginBottom: 3 }}>
+                    <span style={{ fontSize: 11, color: 'oklch(0.48 0.08 50)' }}>{CONCEPT_GLYPH[c.type]}</span>
+                    <span style={{ fontSize: 12, fontWeight: 500, color: 'var(--fg)', letterSpacing: '0.01em' }}>{c.name}</span>
+                  </div>
+                  {c.description && (
+                    <p style={{ margin: 0, fontSize: 12, lineHeight: 1.55, color: 'var(--fg-muted)' }}>
+                      <Annotated text={c.description} level={levelId} />
+                    </p>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
       {/* Relations */}
