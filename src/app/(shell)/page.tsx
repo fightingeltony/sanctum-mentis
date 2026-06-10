@@ -15,23 +15,23 @@ export default function LandingPage() {
   return (
     <section className="px-8 md:px-12 py-16 md:py-28 max-w-[820px] mx-auto">
 
-      <p className="font-ui text-[11px] tracking-[0.30em] uppercase text-[--accent] mb-6">
+      <p className="font-ui text-[11px] tracking-[0.30em] uppercase text-[var(--accent)] mb-6">
         Sanctum Mentis
       </p>
 
       <h1
-        className="font-prose font-medium text-[36px] md:text-[52px] leading-[1.1] text-[--fg] mb-8"
+        className="font-prose font-medium text-[36px] md:text-[52px] leading-[1.1] text-[var(--fg)] mb-8"
         style={{ textWrap: 'balance' } as React.CSSProperties}
       >
         Komplexe Ideen. Endlich klar verortet.
       </h1>
 
-      <p className="font-body text-[18px] md:text-[20px] text-[--fg-muted] leading-relaxed mb-5 max-w-[60ch]">
+      <p className="font-body text-[18px] md:text-[20px] text-[var(--fg-muted)] leading-relaxed mb-5 max-w-[60ch]">
         Bücher, Suchmaschinen, KI — alles Wissen der Welt ist heute zur Hand.
         Was uns fehlt, ist Kontext. Die Möglichkeit, ein Thema einmal zu Ende
         zu verstehen — Punkte zu setzen, Erkenntnisse landen zu lassen.
       </p>
-      <p className="font-body text-[18px] md:text-[20px] text-[--fg-muted] leading-relaxed mb-10 max-w-[60ch]">
+      <p className="font-body text-[18px] md:text-[20px] text-[var(--fg-muted)] leading-relaxed mb-10 max-w-[60ch]">
         Sanctum Mentis macht aus dem Gewirr eine Karte. Jedes Thema der
         Ideengeschichte wird zu einer interaktiven Landschaft, in der Denker,
         Konzepte und ihre Konflikte sichtbar werden. Du wählst die Tiefe —
@@ -56,11 +56,11 @@ export default function LandingPage() {
       {/* ── Lebendiges Tableau — zeigt, was der Text verspricht ── */}
       {featured && (
         <div className="mb-16">
-          <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint] mb-3 flex items-center gap-2">
+          <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[var(--fg-faint)] mb-3 flex items-center gap-2">
             <span className="inline-block w-[5px] h-[5px] rounded-full" style={{ background: 'var(--accent)', opacity: 0.7 }} aria-hidden />
             Lebendiges Tableau · {featured.topic.title}
           </p>
-          <div className="border border-[--hairline] bg-[--bg-sunk] px-6 pt-5 pb-6">
+          <div className="border border-[var(--hairline)] bg-[var(--bg-sunk)] px-6 pt-5 pb-6">
             <HeroTableau
               quadrants={featured.topic.quadrants}
               levels={featured.levels}
@@ -72,7 +72,7 @@ export default function LandingPage() {
         </div>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-10 border-t border-[--hairline]">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-10 border-t border-[var(--hairline)]">
         {[
           {
             num: 'I',
@@ -82,22 +82,22 @@ export default function LandingPage() {
           {
             num: 'II',
             title: 'Die Debatte im Fokus',
-            text: 'Ideen entstehen durch Reibung. Erkenne sofort, wer auf wem aufbaut und wo Weltanschauungen hart aufeinanderprallen. Der abstrakte Streit der Denker wird visuell greifbar.',
+            text: 'Ideen entstehen durch Reibung. Erkenne sofort, wer auf wem aufbaut und wo Weltanschauungen hart aufeinanderprallen — als Linien zwischen den Sternen. Der abstrakte Streit der Denker wird visuell greifbar.',
           },
           {
             num: 'III',
             title: 'Wissen räumlich verankert',
-            text: 'Konzepte schweben nicht länger im luftleeren Raum. Jede Idee findet ihren Platz im Koordinatensystem — und du siehst, wie sie zusammenhängt mit den anderen. Erst dort, im Zusammenhang, lässt sich Wissen zu Ende denken.',
+            text: 'Konzepte schweben nicht im luftleeren Raum. Jede Idee ist bei ihrem Denker verortet und dort abrufbar — die wenigen ankerlosen Konzepte erscheinen eigenständig im Feld. Erst im Zusammenhang lässt sich Wissen zu Ende denken.',
           },
         ].map(item => (
           <div key={item.num} className="flex flex-col gap-2">
-            <span className="font-display text-[12px] tracking-[0.20em] text-[--gold]">
+            <span className="font-display text-[12px] tracking-[0.20em] text-[var(--gold)]">
               {item.num}
             </span>
-            <h3 className="font-prose font-medium text-[16px] text-[--fg]">
+            <h3 className="font-prose font-medium text-[16px] text-[var(--fg)]">
               {item.title}
             </h3>
-            <p className="font-body text-[14px] text-[--fg-muted] leading-relaxed">
+            <p className="font-body text-[14px] text-[var(--fg-muted)] leading-relaxed">
               {item.text}
             </p>
           </div>
@@ -105,11 +105,11 @@ export default function LandingPage() {
       </div>
 
       {/* ── Zwei Wege ── */}
-      <div className="mt-16 pt-10 border-t border-[--hairline]">
-        <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-[--fg] mb-2">
+      <div className="mt-16 pt-10 border-t border-[var(--hairline)]">
+        <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-[var(--fg)] mb-2">
           Zwei Wege durch jedes Thema
         </h2>
-        <p className="font-body italic text-[15px] text-[--fg-muted] mb-8 max-w-[52ch]">
+        <p className="font-body italic text-[15px] text-[var(--fg-muted)] mb-8 max-w-[52ch]">
           Manche Themen liest man besser räumlich, andere als Reise.
         </p>
 
@@ -130,9 +130,9 @@ export default function LandingPage() {
               <circle cx="21" cy="7"  r="1.5" fill="currentColor" fillOpacity="0.45" />
             </svg>
             <div>
-              <h3 className="font-prose font-medium text-[14px] text-[--fg] mb-2">Die Karte</h3>
-              <p className="font-body text-[13px] text-[--fg-muted] leading-relaxed">
-                Die Karte zeigt das ganze Feld auf einmal. Denker, Konzepte, Schulen — alles gleichzeitig sichtbar. Du erkundest selbst, wohin du gehst, wählst die Tiefe und folgst deiner eigenen Frage.
+              <h3 className="font-prose font-medium text-[14px] text-[var(--fg)] mb-2">Die Karte</h3>
+              <p className="font-body text-[13px] text-[var(--fg-muted)] leading-relaxed">
+                Die Sternkarte zeigt das ganze Feld auf einmal: Denker und ihre Konflikte auf einen Blick, Konzepte und Schulen einen Fingertipp entfernt. Du erkundest selbst, wohin du gehst, wählst die Tiefe und folgst deiner eigenen Frage.
               </p>
             </div>
           </div>
@@ -149,8 +149,8 @@ export default function LandingPage() {
               <circle cx="16" cy="25" r="2.5" fill="currentColor" fillOpacity="0.30" />
             </svg>
             <div>
-              <h3 className="font-prose font-medium text-[14px] text-[--fg] mb-2">Die Lectio</h3>
-              <p className="font-body text-[13px] text-[--fg-muted] leading-relaxed">
+              <h3 className="font-prose font-medium text-[14px] text-[var(--fg)] mb-2">Die Lectio</h3>
+              <p className="font-body text-[13px] text-[var(--fg-muted)] leading-relaxed">
                 Die Lectio führt dich durch einen kuratierten Pfad. Vier bis sechs Stationen aus dem Tableau, ein Bogen, ein offenes Ende. Nicht alle Denker, sondern die, die zusammen eine Frage tragen. Die Karte bleibt offen für alles, was die Lectio weglässt.
               </p>
             </div>
@@ -158,17 +158,17 @@ export default function LandingPage() {
 
         </div>
 
-        <p className="font-body italic text-[12px] text-[--fg-faint] mt-5">
+        <p className="font-body italic text-[12px] text-[var(--fg-faint)] mt-5">
           Beide führen durch ein Thema — komplementär, nicht alternativ.
         </p>
       </div>
 
       {/* ── Und ein Weg quer hindurch ── */}
-      <div className="mt-16 pt-10 border-t border-[--hairline]">
-        <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-[--fg] mb-2">
+      <div className="mt-16 pt-10 border-t border-[var(--hairline)]">
+        <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-[var(--fg)] mb-2">
           Ein Weg quer hindurch
         </h2>
-        <p className="font-body italic text-[15px] text-[--fg-muted] mb-8 max-w-[52ch]">
+        <p className="font-body italic text-[15px] text-[var(--fg-muted)] mb-8 max-w-[52ch]">
           Manche Fragen überschreiten ein einzelnes Thema.
         </p>
 
@@ -187,8 +187,8 @@ export default function LandingPage() {
             <circle cx="24" cy="16" r="2"   fill="currentColor" fillOpacity="0.35" />
           </svg>
           <div>
-            <h3 className="font-prose font-medium text-[14px] text-[--fg] mb-2">Die Lebensfrage</h3>
-            <p className="font-body text-[13px] text-[--fg-muted] leading-relaxed">
+            <h3 className="font-prose font-medium text-[14px] text-[var(--fg)] mb-2">Die Lebensfrage</h3>
+            <p className="font-body text-[13px] text-[var(--fg-muted)] leading-relaxed">
               Karte und Lectio bleiben innerhalb eines Feldes. Manche Fragen aber gehören
               keinem Feld allein — sie ziehen quer durch die Bibliothek. Eine gelebte Situation
               — Schmerz, Tod, Freiheit — beleuchtet durch Stimmen aus verschiedenen Feldern.
