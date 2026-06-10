@@ -378,9 +378,12 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
     })
   }
 
+  const { containerRef, wrapperRef, suppressClick, reset, zoomIn, zoomOut, handlers } =
+    usePanZoom(W, H)
+
   if (!thinkers.length) {
     return (
-      <p className="py-14 text-center font-body italic text-[--fg-dim] text-sm">
+      <p className="py-14 text-center font-body italic text-[var(--fg-dim)] text-sm">
         Noch keine Einflüsse bekannt.
       </p>
     )
@@ -423,9 +426,6 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
   }
   const anyFocused = focusId !== null || activeEdge !== null || hoveredSchool !== null
 
-  const { containerRef, wrapperRef, suppressClick, reset, zoomIn, zoomOut, handlers } =
-    usePanZoom(W, H)
-
   function clickNode(id: string) {
     if (suppressClick.current) return
     setActiveEdge(null)
@@ -463,8 +463,8 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
     <div className="tab-content">
 
       <div className="flex items-end justify-between gap-6 mb-6 flex-wrap">
-        <span className="font-display text-2xl tracking-[0.10em] text-[--fg]">Einflüsse</span>
-        <span className="font-body italic text-[14px] text-[--fg-faint] whitespace-nowrap">
+        <span className="font-display text-2xl tracking-[0.10em] text-[var(--fg)]">Einflüsse</span>
+        <span className="font-body italic text-[14px] text-[var(--fg-faint)] whitespace-nowrap">
           Komplexität: {currentLevel.label}
         </span>
       </div>
@@ -477,7 +477,7 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
         {/* Graph stage */}
         <div
           ref={containerRef}
-          className="relative overflow-hidden border border-[--hairline] bg-[--bg-sunk] flex-1 min-w-0"
+          className="relative overflow-hidden border border-[var(--hairline)] bg-[var(--bg-sunk)] flex-1 min-w-0"
           style={{
             height:      'clamp(320px, 60dvh, 650px)',
             cursor:      'grab',
@@ -691,22 +691,22 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
         {/* Side panel (desktop) */}
         {detail && (
           <aside
-            className="hidden sm:flex w-[320px] shrink-0 flex-col border border-[--hairline] border-l-0 bg-[--bg-raised] overflow-y-auto"
+            className="hidden sm:flex w-[320px] shrink-0 flex-col border border-[var(--hairline)] border-l-0 bg-[var(--bg-raised)] overflow-y-auto"
             style={{ maxHeight: 'clamp(320px, 60dvh, 650px)' }}
           >
             {/* Panel header */}
-            <div className="flex items-start justify-between gap-3 p-4 border-b border-[--hairline] shrink-0">
+            <div className="flex items-start justify-between gap-3 p-4 border-b border-[var(--hairline)] shrink-0">
               <div className="flex flex-col gap-0.5 min-w-0">
-                <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint]">{detail.eyebrow}</p>
-                <p className="font-display text-[16px] tracking-[0.08em] text-[--fg] leading-tight">{detail.name}</p>
+                <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[var(--fg-faint)]">{detail.eyebrow}</p>
+                <p className="font-display text-[16px] tracking-[0.08em] text-[var(--fg)] leading-tight">{detail.name}</p>
                 {detail.lifespan && (
-                  <p className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-dim] mt-0.5">{detail.lifespan}</p>
+                  <p className="font-ui text-[10px] tracking-[0.12em] uppercase text-[var(--fg-dim)] mt-0.5">{detail.lifespan}</p>
                 )}
               </div>
               <button
                 onClick={clear}
                 aria-label="Schliessen"
-                className="mt-0.5 shrink-0 text-[--fg-faint] hover:text-[--fg] transition-colors"
+                className="mt-0.5 shrink-0 text-[var(--fg-faint)] hover:text-[var(--fg)] transition-colors"
               >
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
                   <line x1="1" y1="1" x2="11" y2="11" /><line x1="11" y1="1" x2="1" y2="11" />
@@ -715,15 +715,15 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
             </div>
 
             {/* Description */}
-            <div className="p-4 border-b border-[--hairline]">
-              <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">
+            <div className="p-4 border-b border-[var(--hairline)]">
+              <p className="font-prose text-[14px] leading-relaxed text-[var(--fg-muted)]">
                 <Annotated text={detail.desc} level={currentLevel.id} />
               </p>
             </div>
 
             {/* Outgoing influences */}
             {activeNode && outgoingInfluences.length > 0 && (
-              <div className="p-4 border-b border-[--hairline]">
+              <div className="p-4 border-b border-[var(--hairline)]">
                 <p className="section-label mb-2.5">Ausgehende Einflüsse</p>
                 <div className="flex flex-col gap-1.5">
                   {outgoingInfluences.map(inf => {
@@ -733,10 +733,10 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
                         className="flex items-start gap-2 text-left group">
                         <span className="text-[12px] mt-0.5 shrink-0" style={{ color: INFLUENCE_COLOR[inf.type] }}>→</span>
                         <div className="min-w-0">
-                          <span className="font-ui text-[12px] text-[--fg-muted] group-hover:text-[--fg] transition-colors">
+                          <span className="font-ui text-[12px] text-[var(--fg-muted)] group-hover:text-[var(--fg)] transition-colors">
                             {target?.name ?? inf.to}
                           </span>
-                          <span className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] ml-1.5">
+                          <span className="font-ui text-[10px] tracking-[0.12em] uppercase text-[var(--fg-faint)] ml-1.5">
                             {INFLUENCE_LABEL[inf.type]}
                           </span>
                         </div>
@@ -760,10 +760,10 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
                         <span className="text-[12px] mt-0.5 shrink-0 inline-block"
                           style={{ color: INFLUENCE_COLOR[inf.type], transform: 'rotate(180deg)' }}>→</span>
                         <div className="min-w-0">
-                          <span className="font-ui text-[12px] text-[--fg-muted] group-hover:text-[--fg] transition-colors">
+                          <span className="font-ui text-[12px] text-[var(--fg-muted)] group-hover:text-[var(--fg)] transition-colors">
                             {source?.name ?? inf.from}
                           </span>
-                          <span className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] ml-1.5">
+                          <span className="font-ui text-[10px] tracking-[0.12em] uppercase text-[var(--fg-faint)] ml-1.5">
                             {INFLUENCE_LABEL[inf.type]}
                           </span>
                         </div>
@@ -778,17 +778,17 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
         </div>{/* end flex row: canvas + panel */}
 
         {/* Mobile detail card */}
-        <div className="sm:hidden border border-[--hairline] p-4 bg-[--bg-raised]">
+        <div className="sm:hidden border border-[var(--hairline)] p-4 bg-[var(--bg-raised)]">
           {detail ? (
             <>
-              <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint] mb-1.5">{detail.eyebrow}</p>
-              <p className="font-display text-[17px] tracking-[0.08em] text-[--fg] mb-2.5">{detail.name}</p>
-              <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">
+              <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[var(--fg-faint)] mb-1.5">{detail.eyebrow}</p>
+              <p className="font-display text-[17px] tracking-[0.08em] text-[var(--fg)] mb-2.5">{detail.name}</p>
+              <p className="font-prose text-[14px] leading-relaxed text-[var(--fg-muted)]">
                 <Annotated text={detail.desc} level={currentLevel.id} />
               </p>
             </>
           ) : (
-            <p className="font-body italic text-[13px] text-[--fg-dim]">
+            <p className="font-body italic text-[13px] text-[var(--fg-dim)]">
               Denker oder Verbindung antippen für Details.
             </p>
           )}
@@ -798,16 +798,16 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
 
           {/* Schools filter */}
-          <div className="border border-[--hairline] p-4 bg-[--bg-raised] flex flex-col gap-3">
+          <div className="border border-[var(--hairline)] p-4 bg-[var(--bg-raised)] flex flex-col gap-3">
             <div className="flex items-center justify-between">
               <p className="section-label">Schulen</p>
               <div className="flex gap-3">
                 <button onClick={() => setHiddenSchools(new Set())}
-                  className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] hover:text-[--fg-muted] transition-colors">
+                  className="font-ui text-[10px] tracking-[0.12em] uppercase text-[var(--fg-faint)] hover:text-[var(--fg-muted)] transition-colors">
                   Alle
                 </button>
                 <button onClick={() => setHiddenSchools(new Set(visibleSchools.map(s => s.id)))}
-                  className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] hover:text-[--fg-muted] transition-colors">
+                  className="font-ui text-[10px] tracking-[0.12em] uppercase text-[var(--fg-faint)] hover:text-[var(--fg-muted)] transition-colors">
                   Keine
                 </button>
               </div>
@@ -833,16 +833,16 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
           </div>
 
           {/* Influence type filter */}
-          <div className="border border-[--hairline] p-4 bg-[--bg-raised] flex flex-col gap-3">
+          <div className="border border-[var(--hairline)] p-4 bg-[var(--bg-raised)] flex flex-col gap-3">
             <div className="flex items-center justify-between">
               <p className="section-label">Einfluss-Typ</p>
               <div className="flex gap-3">
                 <button onClick={() => setHiddenTypes(new Set())}
-                  className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] hover:text-[--fg-muted] transition-colors">
+                  className="font-ui text-[10px] tracking-[0.12em] uppercase text-[var(--fg-faint)] hover:text-[var(--fg-muted)] transition-colors">
                   Alle
                 </button>
                 <button onClick={() => setHiddenTypes(new Set(Object.keys(INFLUENCE_LABEL) as InfluenceType[]))}
-                  className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-faint] hover:text-[--fg-muted] transition-colors">
+                  className="font-ui text-[10px] tracking-[0.12em] uppercase text-[var(--fg-faint)] hover:text-[var(--fg-muted)] transition-colors">
                   Keine
                 </button>
               </div>

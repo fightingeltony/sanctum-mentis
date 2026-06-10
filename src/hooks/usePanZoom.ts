@@ -173,8 +173,11 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
       const { dist: d0, mx: mx0, my: my0, tx: tx0, ty: ty0, scale: s0 } = pinchStart.current
       const factor   = dist / d0
       const newScale = Math.min(Math.max(s0 * factor, minScale), maxScale)
-      const newTx    = mx - (mx0 - tx0) * factor
-      const newTy    = my - (my0 - ty0) * factor
+      // Translation must use the clamped ratio — with the raw factor the
+      // content keeps sliding once the scale hits min/max.
+      const f        = newScale / s0
+      const newTx    = mx - (mx0 - tx0) * f
+      const newTy    = my - (my0 - ty0) * f
 
       applyDom(clamp(newTx, newTy, newScale))
     }

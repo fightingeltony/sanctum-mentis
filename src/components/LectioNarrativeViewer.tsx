@@ -97,6 +97,9 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
   // Tastatur
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
+      // Buttons/Links nicht kapern — sonst sind Dots, weiter/zurück und
+      // der Verlassen-Link per Enter/Space unbedienbar.
+      if (e.target instanceof HTMLElement && e.target.closest('a, button, input, [role="button"]')) return
       if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
         e.preventDefault(); next()
       } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
