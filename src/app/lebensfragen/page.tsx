@@ -28,11 +28,11 @@ export default function LebensfragenPage() {
         Lebensfragen
       </p>
       <h1 className="font-prose font-medium text-[28px] md:text-[36px] leading-[1.15]
-        text-[--fg] mb-4"
+        text-[var(--fg)] mb-4"
         style={{ textWrap: 'balance' } as React.CSSProperties}>
         Wenn eine Frage dich nicht loslässt
       </h1>
-      <p className="font-body text-[16px] text-[--fg-muted] leading-relaxed mb-14 max-w-[56ch]">
+      <p className="font-body text-[16px] text-[var(--fg-muted)] leading-relaxed mb-14 max-w-[56ch]">
         Keine Tableau-Karte, keine Lectio — sondern eine einzige Frage, die aus mehreren
         Tableaus beantwortet wird. Neun Stimmen, die sich nicht einig sind.
       </p>
@@ -53,11 +53,11 @@ export default function LebensfragenPage() {
               style={{ color: 'var(--fg-faint)' }}>
               {lf.stimmen.length} Stimmen
             </p>
-            <h2 className="font-prose font-medium text-[18px] text-[--fg] mb-2
-              group-hover:text-[--gold] transition-colors">
+            <h2 className="font-prose font-medium text-[18px] text-[var(--fg)] mb-2
+              group-hover:text-[var(--gold)] transition-colors">
               {lf.title}
             </h2>
-            <p className="font-body italic text-[14px] text-[--fg-muted] leading-relaxed">
+            <p className="font-body italic text-[14px] text-[var(--fg-muted)] leading-relaxed">
               {lf.anker}
             </p>
           </Link>

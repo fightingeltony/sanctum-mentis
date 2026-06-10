@@ -20,10 +20,10 @@ export default function LevelSlider({ levels, value, onChange }: Props) {
 
       {/* Label row */}
       <div className="flex items-baseline justify-between gap-3">
-        <span className="font-display text-[13px] tracking-[0.16em] uppercase text-[--gold]">
+        <span className="font-display text-[13px] tracking-[0.16em] uppercase text-[var(--gold)]">
           {current.label}
         </span>
-        <span className="font-ui text-[11px] text-[--fg-faint]">
+        <span className="font-ui text-[11px] text-[var(--fg-faint)]">
           {current.short}
         </span>
       </div>
@@ -49,7 +49,7 @@ export default function LevelSlider({ levels, value, onChange }: Props) {
             onClick={() => onChange(l.id)}
             title={l.filled ? l.label : `${l.label} — noch nicht ausgearbeitet`}
             className={`font-ui text-[9px] tracking-[0.10em] uppercase transition-colors
-              ${l.id === value ? 'text-[--gold]' : l.filled ? 'text-[--fg-dim] hover:text-[--fg-muted]' : 'text-[--fg-dim] opacity-35'}`}
+              ${l.id === value ? 'text-[var(--gold)]' : l.filled ? 'text-[var(--fg-dim)] hover:text-[var(--fg-muted)]' : 'text-[var(--fg-dim)] opacity-35'}`}
           >
             {l.short}
           </button>

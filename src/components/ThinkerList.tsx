@@ -111,19 +111,19 @@ export default function ThinkerList({
 
       {/* View header */}
       <div className="flex items-end justify-between gap-6 mb-6 flex-wrap">
-        <span className="font-display text-2xl tracking-[0.10em] text-[--fg]">Denker</span>
-        <span className="font-body italic text-[14px] text-[--fg-faint] whitespace-nowrap">
+        <span className="font-display text-2xl tracking-[0.10em] text-[var(--fg)]">Denker</span>
+        <span className="font-body italic text-[14px] text-[var(--fg-faint)] whitespace-nowrap">
           Komplexität: {currentLevel.label}
         </span>
       </div>
 
       {/* Context strip */}
       {context && (
-        <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-[--hairline] bg-[--bg-raised] mb-6 items-start">
-          <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-[--gold] pt-0.5">
+        <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-[var(--hairline)] bg-[var(--bg-raised)] mb-6 items-start">
+          <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-[var(--gold)] pt-0.5">
             Lage
           </span>
-          <p className="font-body italic text-[15px] text-[--fg-muted] leading-relaxed">
+          <p className="font-body italic text-[15px] text-[var(--fg-muted)] leading-relaxed">
             {context}
           </p>
         </div>
@@ -131,15 +131,15 @@ export default function ThinkerList({
 
       {/* Filter row */}
       <div className="flex items-center gap-2 flex-wrap mb-6">
-        <span className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint] mr-1">
+        <span className="font-ui text-[10px] tracking-[0.22em] uppercase text-[var(--fg-faint)] mr-1">
           Filter
         </span>
         <button
           onClick={() => setActiveFilters(new Set())}
           className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors
             ${activeFilters.size === 0
-              ? 'border-[--gold-soft] text-[--gold] bg-[var(--accent-soft)]'
-              : 'border-[--hairline] text-[--fg-faint] hover:text-[--fg-muted] hover:border-[--hairline-strong]'
+              ? 'border-[var(--gold-soft)] text-[var(--gold)] bg-[var(--accent-soft)]'
+              : 'border-[var(--hairline)] text-[var(--fg-faint)] hover:text-[var(--fg-muted)] hover:border-[var(--hairline-strong)]'
             }`}
         >
           Alle
@@ -150,11 +150,11 @@ export default function ThinkerList({
             onClick={() => toggleFilter('neu')}
             className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
               ${activeFilters.has('neu')
-                ? 'border-[--gold-soft] text-[--gold] bg-[var(--accent-soft)]'
-                : 'border-[--hairline] text-[--fg-faint] hover:text-[--fg-muted] hover:border-[--hairline-strong]'
+                ? 'border-[var(--gold-soft)] text-[var(--gold)] bg-[var(--accent-soft)]'
+                : 'border-[var(--hairline)] text-[var(--fg-faint)] hover:text-[var(--fg-muted)] hover:border-[var(--hairline-strong)]'
               }`}
           >
-            <span className="w-[5px] h-[5px] rounded-full bg-[--gold] opacity-80" />
+            <span className="w-[5px] h-[5px] rounded-full bg-[var(--gold)] opacity-80" />
             Neu
             <span className="opacity-60">{newCount}</span>
           </button>
@@ -164,8 +164,8 @@ export default function ThinkerList({
             onClick={() => toggleFilter('vertieft')}
             className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
               ${activeFilters.has('vertieft')
-                ? 'border-[--gold-soft] text-[--gold] bg-[var(--accent-soft)]'
-                : 'border-[--hairline] text-[--fg-faint] hover:text-[--fg-muted] hover:border-[--hairline-strong]'
+                ? 'border-[var(--gold-soft)] text-[var(--gold)] bg-[var(--accent-soft)]'
+                : 'border-[var(--hairline)] text-[var(--fg-faint)] hover:text-[var(--fg-muted)] hover:border-[var(--hairline-strong)]'
               }`}
           >
             <span className="font-ui text-[10px]">↑</span>
@@ -196,7 +196,7 @@ export default function ThinkerList({
       </div>
 
       {sorted.length === 0 ? (
-        <p className="py-14 text-center font-body italic text-[--fg-dim] text-sm">
+        <p className="py-14 text-center font-body italic text-[var(--fg-dim)] text-sm">
           Auf diesem Komplexitäts-Level sind noch keine Denker freigeschaltet.
         </p>
       ) : listStyle === 'grouped' ? (
@@ -210,20 +210,20 @@ export default function ThinkerList({
               <div
                 key={t.id}
                 ref={el => { if (el) cardRefs.current.set(t.id, el) }}
-                className="character-card is-alive flex flex-col gap-2 p-4 border border-[--hairline] bg-[--bg-raised]
+                className="character-card is-alive flex flex-col gap-2 p-4 border border-[var(--hairline)] bg-[var(--bg-raised)]
                   transition-colors duration-300 cursor-default carta-card-highlight"
               >
                 <div className="flex items-baseline justify-between gap-3 min-w-0">
-                  <span className="font-prose font-medium text-[16px] text-[--fg] leading-tight inline-flex items-center gap-2">
+                  <span className="font-prose font-medium text-[16px] text-[var(--fg)] leading-tight inline-flex items-center gap-2">
                     <span aria-hidden className="inline-block w-1.5 h-1.5 rounded-full shrink-0" style={{ background: color }} />
                     {t.name}
                   </span>
                   <div className="flex items-baseline gap-2 shrink-0">
                     {t.isNew && (
-                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[--gold]">Neu</span>
+                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[var(--gold)]">Neu</span>
                     )}
                     {t.isDeepened && (
-                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[--fg-dim]">↑ Vertieft</span>
+                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[var(--fg-dim)]">↑ Vertieft</span>
                     )}
                     {school && (
                       <span className="font-ui text-[9px] tracking-[0.16em] uppercase" style={{ color }}>
@@ -233,14 +233,14 @@ export default function ThinkerList({
                   </div>
                 </div>
                 {t.lifespan && (
-                  <span className="font-ui text-[10px] tracking-[0.12em] uppercase text-[--fg-dim]">
+                  <span className="font-ui text-[10px] tracking-[0.12em] uppercase text-[var(--fg-dim)]">
                     {t.lifespan}
                   </span>
                 )}
                 <FadingParagraph
                   text={t.description}
                   level={currentLevel.id}
-                  className="font-prose text-[14px] leading-relaxed text-[--fg-muted]"
+                  className="font-prose text-[14px] leading-relaxed text-[var(--fg-muted)]"
                   style={{ textWrap: 'pretty' } as React.CSSProperties}
                 />
               </div>
@@ -285,7 +285,7 @@ function GroupedList({
               </span>
             </div>
             {s.motto && (
-              <p className="font-ui text-[11px] text-[--fg-dim] italic mb-4 leading-snug">
+              <p className="font-ui text-[11px] text-[var(--fg-dim)] italic mb-4 leading-snug">
                 «{s.motto}»
               </p>
             )}
@@ -297,25 +297,25 @@ function GroupedList({
                   className="flex flex-col gap-1 transition-all duration-300 carta-card-highlight"
                 >
                   <div className="flex items-baseline gap-2 flex-wrap">
-                    <span className="font-ui font-medium text-[15px] text-[--fg] leading-tight">
+                    <span className="font-ui font-medium text-[15px] text-[var(--fg)] leading-tight">
                       {t.name}
                     </span>
                     {t.lifespan && (
-                      <span className="font-ui text-[10px] tracking-[0.10em] uppercase text-[--fg-dim]">
+                      <span className="font-ui text-[10px] tracking-[0.10em] uppercase text-[var(--fg-dim)]">
                         {t.lifespan}
                       </span>
                     )}
                     {t.isNew && (
-                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[--gold]">Neu</span>
+                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[var(--gold)]">Neu</span>
                     )}
                     {t.isDeepened && (
-                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[--fg-dim]">↑ Vertieft</span>
+                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[var(--fg-dim)]">↑ Vertieft</span>
                     )}
                   </div>
                   <FadingParagraph
                     text={t.description}
                     level={level}
-                    className="font-ui text-[13px] leading-relaxed text-[--fg-muted]"
+                    className="font-ui text-[13px] leading-relaxed text-[var(--fg-muted)]"
                     style={{ textWrap: 'pretty' } as React.CSSProperties}
                   />
                 </div>

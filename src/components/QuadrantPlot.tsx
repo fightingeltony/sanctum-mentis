@@ -105,14 +105,14 @@ export default function QuadrantPlot({
 
       {/* Header */}
       <div className="flex items-end justify-between gap-6 flex-wrap">
-        <span className="font-display text-2xl tracking-[0.10em] text-[--fg]">Konzepte</span>
-        <span className="font-body italic text-[14px] text-[--fg-faint] flex items-center gap-3 whitespace-nowrap">
+        <span className="font-display text-2xl tracking-[0.10em] text-[var(--fg)]">Konzepte</span>
+        <span className="font-body italic text-[14px] text-[var(--fg-faint)] flex items-center gap-3 whitespace-nowrap">
           Komplexität: {currentLevel.label}
           {selected && (
             <button
               onClick={() => setSelected(null)}
-              className="font-ui text-[11px] tracking-[0.14em] uppercase text-[--gold]
-                hover:text-[--fg-muted] transition-colors"
+              className="font-ui text-[11px] tracking-[0.14em] uppercase text-[var(--gold)]
+                hover:text-[var(--fg-muted)] transition-colors"
             >
               ✕ Alle
             </button>
@@ -126,7 +126,7 @@ export default function QuadrantPlot({
       {/* Plot stage */}
       <div
         ref={containerRef}
-        className="relative overflow-hidden border border-[--hairline] bg-[--bg-sunk] flex-1 min-w-0"
+        className="relative overflow-hidden border border-[var(--hairline)] bg-[var(--bg-sunk)] flex-1 min-w-0"
         style={{
           aspectRatio: `${W}/${H}`,
           maxHeight:   `${H}px`,
@@ -416,24 +416,24 @@ export default function QuadrantPlot({
       {/* Side panel (desktop) */}
       {selected && (
         <aside
-          className="hidden sm:flex w-[300px] shrink-0 flex-col border border-[--hairline] border-l-0 bg-[--bg-raised] overflow-y-auto"
+          className="hidden sm:flex w-[300px] shrink-0 flex-col border border-[var(--hairline)] border-l-0 bg-[var(--bg-raised)] overflow-y-auto"
           style={{ maxHeight: `${H}px` }}
         >
           {/* Panel header */}
-          <div className="flex items-start justify-between gap-3 p-4 border-b border-[--hairline] shrink-0">
+          <div className="flex items-start justify-between gap-3 p-4 border-b border-[var(--hairline)] shrink-0">
             <div className="flex flex-col gap-0.5 min-w-0">
-              <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint]">
+              <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[var(--fg-faint)]">
                 <span className="mr-1.5 opacity-70">{CONCEPT_GLYPH[selected.type]}</span>
                 {CONCEPT_LABEL[selected.type] ?? 'Konzept'}
               </p>
-              <p className="font-display text-[16px] tracking-[0.08em] text-[--fg] leading-tight">
+              <p className="font-display text-[16px] tracking-[0.08em] text-[var(--fg)] leading-tight">
                 {selected.name}
               </p>
             </div>
             <button
               onClick={() => setSelected(null)}
               aria-label="Schliessen"
-              className="mt-0.5 shrink-0 text-[--fg-faint] hover:text-[--fg] transition-colors"
+              className="mt-0.5 shrink-0 text-[var(--fg-faint)] hover:text-[var(--fg)] transition-colors"
             >
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
                 <line x1="1" y1="1" x2="11" y2="11" /><line x1="11" y1="1" x2="1" y2="11" />
@@ -442,8 +442,8 @@ export default function QuadrantPlot({
           </div>
 
           {/* Description */}
-          <div className="p-4 border-b border-[--hairline]">
-            <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">
+          <div className="p-4 border-b border-[var(--hairline)]">
+            <p className="font-prose text-[14px] leading-relaxed text-[var(--fg-muted)]">
               <Annotated text={selected.description} level={levelId} />
             </p>
           </div>
@@ -458,12 +458,12 @@ export default function QuadrantPlot({
                     <button
                       key={t.id}
                       onClick={() => onThinkerClick(t.id)}
-                      className="font-ui text-[12px] text-left text-[--fg-muted] hover:text-[--gold] transition-colors"
+                      className="font-ui text-[12px] text-left text-[var(--fg-muted)] hover:text-[var(--gold)] transition-colors"
                     >
                       {t.name}
                     </button>
                   ) : (
-                    <span key={t.id} className="font-ui text-[12px] text-[--fg-muted]">{t.name}</span>
+                    <span key={t.id} className="font-ui text-[12px] text-[var(--fg-muted)]">{t.name}</span>
                   )
                 ))}
               </div>
@@ -474,38 +474,38 @@ export default function QuadrantPlot({
       </div>{/* end flex row: canvas + panel */}
 
       {/* Mobile detail card */}
-      <div className="sm:hidden border border-[--hairline] p-4 bg-[--bg-raised]">
+      <div className="sm:hidden border border-[var(--hairline)] p-4 bg-[var(--bg-raised)]">
         {selected ? (
           <>
-            <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint] mb-1.5">
+            <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[var(--fg-faint)] mb-1.5">
               <span className="mr-1.5 opacity-70">{CONCEPT_GLYPH[selected.type]}</span>
               {CONCEPT_LABEL[selected.type] ?? 'Konzept'}
             </p>
-            <p className="font-display text-[16px] tracking-[0.08em] text-[--fg] mb-2.5">{selected.name}</p>
-            <p className="font-prose text-[14px] leading-relaxed text-[--fg-muted]">
+            <p className="font-display text-[16px] tracking-[0.08em] text-[var(--fg)] mb-2.5">{selected.name}</p>
+            <p className="font-prose text-[14px] leading-relaxed text-[var(--fg-muted)]">
               <Annotated text={selected.description} level={levelId} />
             </p>
           </>
         ) : (
-          <p className="font-body italic text-[13px] text-[--fg-dim]">
+          <p className="font-body italic text-[13px] text-[var(--fg-dim)]">
             Konzept antippen für Details.
           </p>
         )}
       </div>
 
       {/* Legend */}
-      <div className="border border-[--hairline] p-4 bg-[--bg-raised]">
+      <div className="border border-[var(--hairline)] p-4 bg-[var(--bg-raised)]">
         <div className="flex flex-wrap gap-x-6 gap-y-2">
           {(Object.entries(CONCEPT_LABEL) as [ConceptType, string][]).map(([type, label]) => (
-            <div key={type} className="flex items-center gap-2 font-ui text-[11px] text-[--fg-faint]">
-              <span className="text-[--gold] opacity-75 text-xs">{CONCEPT_GLYPH[type]}</span>
+            <div key={type} className="flex items-center gap-2 font-ui text-[11px] text-[var(--fg-faint)]">
+              <span className="text-[var(--gold)] opacity-75 text-xs">{CONCEPT_GLYPH[type]}</span>
               <span>{label}</span>
             </div>
           ))}
           <MapHiddenCounter
             hidden={hidden}
             noun={{ singular: 'Konzept', plural: 'Konzepte' }}
-            className="font-body italic text-xs text-[--fg-dim]"
+            className="font-body italic text-xs text-[var(--fg-dim)]"
           />
         </div>
       </div>

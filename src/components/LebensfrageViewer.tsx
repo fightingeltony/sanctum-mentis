@@ -28,7 +28,7 @@ export default function LebensfrageViewer({ lebensfrage, tableauTitles }: Props)
         <Link
           href="/"
           className="inline-flex items-center gap-2 font-ui text-[12px] tracking-[0.06em]
-            text-[--fg-faint] hover:text-[--fg-muted] transition-colors no-underline mb-10"
+            text-[var(--fg-faint)] hover:text-[var(--fg-muted)] transition-colors no-underline mb-10"
         >
           <span style={{ color: 'var(--accent)' }}>←</span>
           Sanctum Mentis
@@ -42,7 +42,7 @@ export default function LebensfrageViewer({ lebensfrage, tableauTitles }: Props)
           >
             {title}
           </h1>
-          <p className="font-body italic text-[15px] text-[--fg-muted] mb-8">
+          <p className="font-body italic text-[15px] text-[var(--fg-muted)] mb-8">
             {anker}
           </p>
           {intro.split('\n\n').map((para, i) => (
@@ -68,13 +68,13 @@ export default function LebensfrageViewer({ lebensfrage, tableauTitles }: Props)
               >
                 {stimme.ueberschrift}
               </h2>
-              <p className="font-body text-[15px] leading-relaxed text-[--fg] mb-3">
+              <p className="font-body text-[15px] leading-relaxed text-[var(--fg)] mb-3">
                 {stimme.text}
               </p>
               <Link
                 href={`/thema/${stimme.aus.tableau}`}
                 className="font-ui text-[11px] tracking-[0.06em] no-underline
-                  text-[--fg-faint] hover:text-[--fg-muted] transition-colors"
+                  text-[var(--fg-faint)] hover:text-[var(--fg-muted)] transition-colors"
               >
                 {tableauTitles[stimme.aus.tableau] ?? stimme.aus.tableau}
               </Link>
@@ -105,7 +105,7 @@ export default function LebensfrageViewer({ lebensfrage, tableauTitles }: Props)
                 {i > 0 && <span className="mr-1">,</span>}
                 <Link
                   href={`/thema/${tableauId}`}
-                  className="no-underline hover:text-[--fg-muted] transition-colors"
+                  className="no-underline hover:text-[var(--fg-muted)] transition-colors"
                 >
                   {tableauTitles[tableauId] ?? tableauId}
                 </Link>

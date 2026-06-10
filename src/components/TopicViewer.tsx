@@ -100,7 +100,7 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
         </button>
 
         <div className="flex flex-col min-w-0 flex-1">
-          <span className="font-display text-[11px] tracking-[0.18em] uppercase text-[--fg] truncate">
+          <span className="font-display text-[11px] tracking-[0.18em] uppercase text-[var(--fg)] truncate">
             {data.topic.title}
           </span>
         </div>
@@ -108,8 +108,8 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
         {/* Search button — opens the global palette via context */}
         <button
           onClick={() => palette?.openPalette()}
-          className="flex items-center justify-center w-8 h-8 text-[--fg-dim]
-            hover:text-[--fg] transition-colors"
+          className="flex items-center justify-center w-8 h-8 text-[var(--fg-dim)]
+            hover:text-[var(--fg)] transition-colors"
           aria-label="Suche öffnen (Cmd+K)"
         >
           <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -130,8 +130,8 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
           <Link
             href="/"
             onClick={closeMenu}
-            className="font-ui text-[10px] tracking-[0.22em] uppercase text-[--fg-faint]
-              hover:text-[--gold] transition-colors no-underline"
+            className="font-ui text-[10px] tracking-[0.22em] uppercase text-[var(--fg-faint)]
+              hover:text-[var(--gold)] transition-colors no-underline"
           >
             Sanctum · Mentis
           </Link>
@@ -141,7 +141,7 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
               background: 'linear-gradient(90deg, var(--gold) 0%, var(--gold) 18px, var(--hairline) 18px)'
             }}
           />
-          <h1 className="font-display text-[18px] tracking-[0.18em] uppercase text-[--fg]">
+          <h1 className="font-display text-[18px] tracking-[0.18em] uppercase text-[var(--fg)]">
             Lern–Companion
           </h1>
         </div>
@@ -150,9 +150,9 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
           <Link
             href="/"
             onClick={closeMenu}
-            className="flex items-center gap-3 py-3 border-b border-[--hairline]
-              font-ui text-[11px] tracking-[0.16em] uppercase text-[--fg-muted]
-              hover:text-[--fg] transition-colors no-underline"
+            className="flex items-center gap-3 py-3 border-b border-[var(--hairline)]
+              font-ui text-[11px] tracking-[0.16em] uppercase text-[var(--fg-muted)]
+              hover:text-[var(--fg)] transition-colors no-underline"
           >
             <span className="text-[14px]">⌂</span>
             Home
@@ -160,9 +160,9 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
           <Link
             href="/themen"
             onClick={closeMenu}
-            className="flex items-center gap-3 py-3 border-b border-[--hairline]
-              font-ui text-[11px] tracking-[0.16em] uppercase text-[--fg-muted]
-              hover:text-[--fg] transition-colors no-underline"
+            className="flex items-center gap-3 py-3 border-b border-[var(--hairline)]
+              font-ui text-[11px] tracking-[0.16em] uppercase text-[var(--fg-muted)]
+              hover:text-[var(--fg)] transition-colors no-underline"
           >
             <span className="text-[14px]">☰</span>
             Alle Themen
@@ -172,18 +172,18 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
         <div className="hidden md:flex flex-col gap-4">
           <div className="flex flex-col gap-1">
             <h2
-              className="font-prose text-[24px] font-medium leading-tight text-[--fg] mt-1.5"
+              className="font-prose text-[24px] font-medium leading-tight text-[var(--fg)] mt-1.5"
               style={{ textWrap: 'balance' } as React.CSSProperties}
             >
               {data.topic.title}
             </h2>
             {data.topic.subtitle && (
-              <p className="font-body italic text-[15px] text-[--fg-muted]">
+              <p className="font-body italic text-[15px] text-[var(--fg-muted)]">
                 {data.topic.subtitle}
               </p>
             )}
             {data.topic.era && (
-              <p className="font-ui text-[11px] tracking-[0.10em] uppercase text-[--fg-dim] mt-2">
+              <p className="font-ui text-[11px] tracking-[0.10em] uppercase text-[var(--fg-dim)] mt-2">
                 {data.topic.era}
               </p>
             )}
@@ -196,10 +196,10 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
               onChange={handleLevelChange}
             />
           </div>
-          <p className="font-ui text-[11px] text-[--fg-faint]">
-            <span className="text-[--fg-muted]">{state.thinkers.length}</span>
+          <p className="font-ui text-[11px] text-[var(--fg-faint)]">
+            <span className="text-[var(--fg-muted)]">{state.thinkers.length}</span>
             {' von '}
-            <span className="text-[--fg-muted]">{data.thinkers.length}</span>
+            <span className="text-[var(--fg-muted)]">{data.thinkers.length}</span>
             {' Denkern freigeschaltet'}
           </p>
         </div>
@@ -220,7 +220,7 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
 
         {lectios && lectios.length > 0 && (
           <div className="px-4 sm:px-5 mb-6">
-            <p className="font-ui text-[11px] tracking-[0.06em] text-[--fg-faint] mb-2">
+            <p className="font-ui text-[11px] tracking-[0.06em] text-[var(--fg-faint)] mb-2">
               Geführte Pfade
             </p>
             <div className="flex flex-col gap-2">
@@ -275,11 +275,11 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
         )}
 
         {levelId === data.topic.complexityLevels && data.topic.synthesis && (
-          <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-[--hairline] bg-[--bg-raised] mb-6 items-start">
-            <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-[--gold] pt-0.5 shrink-0">
+          <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-[var(--hairline)] bg-[var(--bg-raised)] mb-6 items-start">
+            <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-[var(--gold)] pt-0.5 shrink-0">
               Synthese
             </span>
-            <p className="font-body italic text-[15px] text-[--fg-muted] leading-relaxed">
+            <p className="font-body italic text-[15px] text-[var(--fg-muted)] leading-relaxed">
               {data.topic.synthesis}
             </p>
           </div>
@@ -296,18 +296,18 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
                 border-b border-transparent -mb-px transition-colors
                 flex items-center gap-2 whitespace-nowrap shrink-0
                 ${tab === t.id
-                  ? 'text-[--fg] border-[--gold]'
-                  : 'text-[--fg-faint] hover:text-[--fg-muted]'
+                  ? 'text-[var(--fg)] border-[var(--gold)]'
+                  : 'text-[var(--fg-faint)] hover:text-[var(--fg-muted)]'
                 }`}
             >
               <span className={`font-display text-[10px] tracking-[0.15em] mr-0.5
-                ${tab === t.id ? 'text-[--gold]' : 'text-[--fg-dim]'}`}>
+                ${tab === t.id ? 'text-[var(--gold)]' : 'text-[var(--fg-dim)]'}`}>
                 {t.numeral}
               </span>
               <span>{t.label}</span>
               {t.count !== null && (
                 <span className={`font-prose italic text-[12px] tracking-normal normal-case
-                  ${tab === t.id ? 'text-[--gold-soft]' : 'text-[--fg-dim]'}`}>
+                  ${tab === t.id ? 'text-[var(--gold-soft)]' : 'text-[var(--fg-dim)]'}`}>
                   {t.count}
                 </span>
               )}
@@ -365,7 +365,7 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
       {/* ── Mobile bottom bar ── */}
       <div className="bottom-tab-bar">
         <div className="slider-strip">
-          <span className="font-display text-[10px] tracking-[0.14em] uppercase text-[--gold] shrink-0 w-[5.5rem]">
+          <span className="font-display text-[10px] tracking-[0.14em] uppercase text-[var(--gold)] shrink-0 w-[5.5rem]">
             {state.level.label}
           </span>
           <input
@@ -391,16 +391,16 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
               className="bottom-tab-btn"
             >
               <span className={`font-display text-[9px] tracking-[0.12em] transition-colors
-                ${tab === t.id ? 'text-[--gold]' : 'text-[--fg-dim]'}`}>
+                ${tab === t.id ? 'text-[var(--gold)]' : 'text-[var(--fg-dim)]'}`}>
                 {t.numeral}
               </span>
               <span className={`font-ui text-[10px] tracking-[0.12em] transition-colors
-                ${tab === t.id ? 'text-[--fg]' : 'text-[--fg-faint]'}`}>
+                ${tab === t.id ? 'text-[var(--fg)]' : 'text-[var(--fg-faint)]'}`}>
                 {t.mobileLabel}
               </span>
               {t.count !== null && (
                 <span className={`font-prose italic text-[9px] tracking-normal normal-case transition-colors
-                  ${tab === t.id ? 'text-[--gold-soft]' : 'text-[--fg-dim]'}`}>
+                  ${tab === t.id ? 'text-[var(--gold-soft)]' : 'text-[var(--fg-dim)]'}`}>
                   {t.count}
                 </span>
               )}

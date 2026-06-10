@@ -8,7 +8,7 @@ interface Props {
 export function MapHiddenCounter({
   hidden,
   noun = { singular: 'weiterer Ort', plural: 'weitere Orte' },
-  className = 'font-body italic text-xs text-[--fg-dim] mt-4',
+  className = 'font-body italic text-xs text-[var(--fg-dim)] mt-4',
 }: Props) {
   if (hidden <= 0) return null
   return (

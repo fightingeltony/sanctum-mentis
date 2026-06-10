@@ -30,13 +30,13 @@ export default function ThemenPage() {
   return (
     <div className="px-8 md:px-12 py-12 max-w-[1100px] mx-auto">
 
-      <p className="font-ui text-[11px] tracking-[0.30em] uppercase text-[--accent] mb-3">
+      <p className="font-ui text-[11px] tracking-[0.30em] uppercase text-[var(--accent)] mb-3">
         Deine Bibliothek
       </p>
-      <h1 className="font-prose font-medium text-[32px] md:text-[40px] text-[--fg] mb-4 leading-tight">
+      <h1 className="font-prose font-medium text-[32px] md:text-[40px] text-[var(--fg)] mb-4 leading-tight">
         Wähle ein Thema
       </h1>
-      <p className="font-body italic text-[15px] text-[--fg-muted] mb-14 max-w-[58ch]">
+      <p className="font-body italic text-[15px] text-[var(--fg-muted)] mb-14 max-w-[58ch]">
         Die Sammlung ordnet sich in drei Spuren. Jede Spur ist ein Feld von
         Fragen, das nach und nach wächst.
       </p>
@@ -60,11 +60,11 @@ export default function ThemenPage() {
                   style={{ background: spurColor, opacity: 0.28 }}
                   aria-hidden
                 />
-                <span className="font-ui text-[10px] tracking-[0.16em] uppercase text-[--fg-faint] shrink-0">
+                <span className="font-ui text-[10px] tracking-[0.16em] uppercase text-[var(--fg-faint)] shrink-0">
                   {items.length} {items.length === 1 ? 'Tableau' : 'Tableaus'}
                 </span>
               </div>
-              <p className="font-body text-[13px] text-[--fg-dim] mb-7 max-w-[60ch] leading-relaxed">
+              <p className="font-body text-[13px] text-[var(--fg-dim)] mb-7 max-w-[60ch] leading-relaxed">
                 {SPUR_BLURB[spur]}
               </p>
 
@@ -96,7 +96,7 @@ function TopicCard({ topic }: { topic: LibraryEntry }) {
   const available = topic.status === 'available'
   const inner = (
     <div
-      className="flex flex-col gap-3 p-6 border border-[--hairline] bg-[--bg-raised]
+      className="flex flex-col gap-3 p-6 border border-[var(--hairline)] bg-[var(--bg-raised)]
         transition-colors duration-300 h-full"
       style={{
         borderTop: `3px solid ${topic.themeColor}`,
@@ -106,29 +106,29 @@ function TopicCard({ topic }: { topic: LibraryEntry }) {
       {/* Eyebrow-Spur-Markierung entfällt — der Section-Header trägt die Spur jetzt */}
       <div className="flex items-baseline justify-between gap-3">
         <span
-          className="font-display text-[18px] tracking-[0.10em] text-[--fg]"
+          className="font-display text-[18px] tracking-[0.10em] text-[var(--fg)]"
           style={{ color: available ? undefined : 'var(--fg-muted)' }}
         >
           {topic.title}
         </span>
         {!available && (
-          <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[--fg-dim] shrink-0">
+          <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[var(--fg-dim)] shrink-0">
             bald
           </span>
         )}
       </div>
       {topic.subtitle && (
-        <p className="font-body italic text-[14px] text-[--fg-muted] leading-snug">
+        <p className="font-body italic text-[14px] text-[var(--fg-muted)] leading-snug">
           {topic.subtitle}
         </p>
       )}
       {topic.desc && (
-        <p className="font-prose text-[13px] text-[--fg-muted] leading-relaxed">
+        <p className="font-prose text-[13px] text-[var(--fg-muted)] leading-relaxed">
           {topic.desc}
         </p>
       )}
       {topic.era && (
-        <p className="font-ui text-[10px] tracking-[0.14em] uppercase text-[--fg-dim] mt-auto pt-2">
+        <p className="font-ui text-[10px] tracking-[0.14em] uppercase text-[var(--fg-dim)] mt-auto pt-2">
           {topic.era}
         </p>
       )}
