@@ -276,6 +276,7 @@ export default function StarChart({
   const [selectedConceptId,  setSelectedConceptId] = useState<string | null>(null)
   const [readSet,            setReadSet]           = useState<Set<string>>(new Set())
   const [isMobile,           setIsMobile]          = useState(false)
+  const [typeLegendOpen,     setTypeLegendOpen]    = useState(false)
 
   // ── Refs ──────────────────────────────────────────────────
   const svgRef      = useRef<SVGSVGElement | null>(null)
@@ -1311,14 +1312,43 @@ export default function StarChart({
 
         {/* ── Legend / counter — below the plate ── */}
         <div style={{
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
           flexWrap: 'wrap', gap: '6px 18px', padding: '10px 2px 2px',
         }}>
-          <div style={{ fontStyle: 'italic', fontSize: 11, color: 'var(--fg-dim)' }}>
+          <div style={{ fontStyle: 'italic', fontSize: 11, color: 'var(--fg-dim)', paddingTop: 4 }}>
             {hiddenCount > 0
               ? `${visibleCount} von ${totalThinkers} Sternen sichtbar · ${hiddenCount} im Dunst`
               : `Alle ${totalThinkers} Sterne sichtbar`}
           </div>
+          {/* Konzept-Typ-Legende — nur im Karte-Modus (Schulen-Modus zeigt keine Konzepte) */}
+          {mode === 'axis' && (
+            <div className="sc-typelegend">
+              <button
+                type="button"
+                className="sc-tl-head font-ui"
+                aria-expanded={typeLegendOpen}
+                onClick={() => setTypeLegendOpen(o => !o)}
+              >
+                <span className="sc-tl-g" aria-hidden>◆</span>
+                Konzept-Typen
+                <span
+                  className="sc-tl-arrow"
+                  style={{ transform: typeLegendOpen ? 'rotate(180deg)' : 'none' }}
+                  aria-hidden
+                >▾</span>
+              </button>
+              {typeLegendOpen && (
+                <div className="sc-tl-body">
+                  {(Object.keys(CONCEPT_GLYPH) as Array<keyof typeof CONCEPT_GLYPH>).map(t => (
+                    <span key={t} className="sc-tl-item">
+                      <span className="sc-tl-g" aria-hidden>{CONCEPT_GLYPH[t]}</span>
+                      {CONCEPT_LABEL[t]}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </div>
         </div>
       </div>
