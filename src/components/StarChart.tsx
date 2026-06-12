@@ -5,6 +5,15 @@ import type { Thinker, Influence, School, Quadrants, Level, Concept } from '@/li
 import { Annotated } from '@/lib/annotations'
 import { CONCEPT_GLYPH, CONCEPT_LABEL } from '@/lib/conceptTypes'
 
+// ─── Zoom-Konstanten ─────────────────────────────────────────
+const ZOOM_MIN = 1
+const ZOOM_MAX = 3.4
+// Konter-Skalierungs-Dämpfung: Stern-Körper schrumpfen mit k^-DAMP statt 1/k —
+// Labels/Glyphen wachsen netto mit k^(1-DAMP) sanft mit (bei k=3.4 ≈ ×1.5),
+// während die Positionen mit vollem k spreizen. Lesbar bei Maximalzoom,
+// Deklutter gewinnt trotzdem (Spreizung wächst schneller als die Labels).
+const BODY_DAMP = 0.65
+
 // ─── Constants — Desktop ──────────────────────────────────────
 const W = 980, H = 760, PAD_X = 200, PAD_Y = 80
 const mapX = (x: number) => PAD_X + (x / 100) * (W - 2 * PAD_X)
@@ -318,6 +327,10 @@ export default function StarChart({
   const dragRef   = useRef<{ x: number; y: number; tx: number; ty: number } | null>(null)
   const pinchRef  = useRef<{ dist: number; mx: number; my: number; tx: number; ty: number; scale: number } | null>(null)
   const didMoveRef = useRef(false)
+  // true sobald die Gesten-Sequenz je 2 Finger hatte — verhindert, dass das Heben des
+  // zweiten Pinch-Fingers als Tap zählt (Phantom-Deselect/-Doppeltipp), und garantiert
+  // den Deklutter-Pass am Pinch-Ende. Wird beim Erreichen von 0 Pointern verbraucht.
+  const hadPinchRef = useRef(false)
   const suppressClickRef = useRef(false)
   const deselectRef = useRef<() => void>(() => {})
 
@@ -692,7 +705,7 @@ export default function StarChart({
     const camera = cameraRef.current
     if (!stage || !camera) return
     const { width, height } = stage.getBoundingClientRect()
-    ps.scale = Math.max(1, Math.min(3.4, ps.scale))
+    ps.scale = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, ps.scale))
     const ow = width  * (ps.scale - 1)
     const oh = height * (ps.scale - 1)
     ps.tx = Math.max(-ow, Math.min(0, ps.tx))
@@ -700,11 +713,10 @@ export default function StarChart({
     camera.style.transform = `translate(${ps.tx}px,${ps.ty}px) scale(${ps.scale})`
     camera.style.transformOrigin = '0 0'
 
-    // ── A: Counter-scale entire .sc-star-body groups so glyph + labels stay constant size ──
-    // We apply a single transform to the whole .sc-star-body <g> per star:
-    //   translate(cx - cx/k, cy - cy/k) scale(1/k)
-    // where (cx, cy) is the star's drawnPos anchor. This keeps Spike, Glow, Ring, Unread-Dot,
-    // Name and Lifespan all at the same screen size regardless of zoom level.
+    // ── A: Counter-scale entire .sc-star-body groups (gedämpft, BODY_DAMP) ──
+    // Ein Transform pro .sc-star-body <g>: translate + scale(k^-DAMP) um den drawnPos-Anker.
+    // Spike, Glow, Ring, Unread-Dot, Name und Lebensdaten wachsen dadurch netto nur sanft
+    // mit k^(1-DAMP) — lesbar bei Maximalzoom, ohne dass die Spreizung verloren geht.
     // The outer .sc-star group carries the morph translate (dx,dy) — that composes cleanly.
     // The transparent touch-target circle is a sibling of .sc-star-body and deliberately
     // NOT counter-scaled, so it grows with zoom (larger tap area at high zoom — intended).
@@ -733,7 +745,7 @@ export default function StarChart({
       if (k === 1) {
         body?.removeAttribute('transform')
       } else {
-        const inv = 1 / k
+        const inv = Math.pow(k, -BODY_DAMP)   // gedämpft: netto wachsen Körper mit k^(1-DAMP)
         const tx  = cx - cx * inv
         const ty  = cy - cy * inv
         body?.setAttribute('transform', `translate(${tx.toFixed(3)},${ty.toFixed(3)}) scale(${inv.toFixed(4)})`)
@@ -749,7 +761,7 @@ export default function StarChart({
       // Anchor: data-cx / data-cy attributes written on the marker <g>
       const cx  = parseFloat(el.getAttribute('data-cx') ?? '0')
       const cy  = parseFloat(el.getAttribute('data-cy') ?? '0')
-      const inv = 1 / k
+      const inv = Math.pow(k, -BODY_DAMP)
       const tx  = cx - cx * inv
       const ty  = cy - cy * inv
       el.setAttribute('transform', `translate(${tx.toFixed(3)},${ty.toFixed(3)}) scale(${inv.toFixed(4)})`)
@@ -1003,6 +1015,7 @@ export default function StarChart({
     }
     if (ptrsRef.current.size === 2) {
       // Two fingers always mean pinch — regardless of what is under either finger
+      hadPinchRef.current = true   // merkt sich den Pinch über die GANZE Gesten-Sequenz (bis size 0)
       const [a, b] = [...ptrsRef.current.values()]
       pinchRef.current = {
         dist:  Math.hypot(b.x - a.x, b.y - a.y),
@@ -1036,10 +1049,13 @@ export default function StarChart({
       const dist    = Math.hypot(b.x - a.x, b.y - a.y)
       const mx      = (a.x + b.x) / 2, my = (a.y + b.y) / 2
       const { dist: d0, mx: mx0, my: my0, tx: tx0, ty: ty0, scale: s0 } = pinchRef.current
-      const factor  = dist / d0
-      panRef.current.scale = s0 * factor
-      panRef.current.tx    = mx - (mx0 - tx0) * factor
-      panRef.current.ty    = my - (my0 - ty0) * factor
+      // Faktor am Zoom-Limit clampen, BEVOR er in die Translation einfliesst —
+      // sonst driftet die Karte weiter, wenn der Zoom längst am Anschlag steht.
+      const newScale = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, s0 * (dist / d0)))
+      const eff      = newScale / s0
+      panRef.current.scale = newScale
+      panRef.current.tx    = mx - (mx0 - tx0) * eff
+      panRef.current.ty    = my - (my0 - ty0) * eff
       applyZoom()
     } else if (ptrsRef.current.size === 1 && dragRef.current) {
       const dx = pos.x - dragRef.current.x, dy = pos.y - dragRef.current.y
@@ -1088,7 +1104,11 @@ export default function StarChart({
     }
     if (ptrsRef.current.size === 0) {
       pinchRef.current = null
-      if (didMoveRef.current || wasDrag) {
+      // hadPinch verbrauchen: der 2→1-Übergang resettet didMoveRef, dadurch sähe das
+      // Heben des zweiten Pinch-Fingers sonst wie ein Tap aus.
+      const hadPinch = hadPinchRef.current
+      hadPinchRef.current = false
+      if (didMoveRef.current || wasDrag || hadPinch) {
         suppressClickRef.current = true
         setTimeout(() => { suppressClickRef.current = false }, 0)
       }
@@ -1096,7 +1116,7 @@ export default function StarChart({
       // After a capture-redirect drag that started on a node, e.target is the stage element,
       // so closest('.sc-star,...') returns null — but didMove=true → wasTap=false → no deselect.
       const onNode = !!(e.target as Element).closest('.sc-star, .sc-edge-hit, .sc-concept-marker')
-      if (wasTap && !suppressClickRef.current && !onNode) deselectRef.current()
+      if (wasTap && !hadPinch && !suppressClickRef.current && !onNode) deselectRef.current()
 
       // Feature B: momentum decay on drag release
       const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -1130,13 +1150,14 @@ export default function StarChart({
       } else if (wasDrag && reduce) {
         // Reduced motion: no momentum animation, update immediately
         updateLabelVisibility()
-      } else if (wasPinch) {
-        // Pinch ended (last finger lifted) — scale may have changed, update immediately
+      } else if (wasPinch || hadPinch) {
+        // Pinch ended — scale may have changed, update immediately.
+        // hadPinch deckt den Normalfall ab (2→1→0: das letzte Up sieht size===1).
         updateLabelVisibility()
       }
 
-      // Feature C: double-tap zoom (touch only, not on nodes)
-      if (wasTap && pointerType === 'touch' && !onNode) {
+      // Feature C: double-tap zoom (touch only, not on nodes, nie nach einem Pinch)
+      if (wasTap && !hadPinch && pointerType === 'touch' && !onNode) {
         const now = performance.now()
         const r   = stageRef.current?.getBoundingClientRect()
         const tapX = r ? e.clientX - r.left : 0
@@ -1454,6 +1475,11 @@ export default function StarChart({
               didMoveRef.current = false
             } else if (ptrsRef.current.size === 0) {
               dragRef.current = null
+              // Geste ist beendet (vom System abgebrochen) — Pinch-Gedächtnis löschen
+              // und Sichtbarkeit für den erreichten Zoom-Stand aktualisieren.
+              const hadPinch = hadPinchRef.current
+              hadPinchRef.current = false
+              if (hadPinch || didMoveRef.current) requestAnimationFrame(() => updateLabelVisibility())
             }
           }}
         >
