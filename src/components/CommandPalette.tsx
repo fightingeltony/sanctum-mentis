@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Command } from 'cmdk'
-import { buildGlobalSearchIndex, normalize } from '@/lib/searchIndex'
-import type { SearchEntry } from '@/lib/searchIndex'
+import { normalize } from '@/lib/searchTypes'
+import type { SearchEntry } from '@/lib/searchTypes'
 
 interface Props {
   open: boolean
@@ -12,15 +12,48 @@ interface Props {
 }
 
 const TYPE_LABEL: Record<SearchEntry['type'], string> = {
-  thinker: 'Denker',
-  concept: 'Konzept',
-  school:  'Schule',
+  thinker:     'Denker',
+  concept:     'Konzept',
+  school:      'Schule',
+  lectio:      'Lectio',
+  lebensfrage: 'Lebensfrage',
+}
+
+// Module-level cache so the index is fetched only once per session
+let _indexPromise: Promise<SearchEntry[]> | null = null
+
+function fetchIndex(): Promise<SearchEntry[]> {
+  if (!_indexPromise) {
+    _indexPromise = fetch('/api/search-index')
+      .then(r => {
+        if (!r.ok) throw new Error(`search-index fetch failed: ${r.status}`)
+        return r.json() as Promise<SearchEntry[]>
+      })
+      .catch(err => {
+        // Reset so the next open can retry
+        _indexPromise = null
+        throw err
+      })
+  }
+  return _indexPromise
 }
 
 export default function CommandPalette({ open, onClose }: Props) {
-  const router     = useRouter()
-  const allEntries = useMemo(() => buildGlobalSearchIndex(), [])
-  const [search, setSearch] = useState('')
+  const router = useRouter()
+  const [search, setSearch]         = useState('')
+  const [allEntries, setAllEntries] = useState<SearchEntry[] | null>(null)
+  const [indexError, setIndexError] = useState(false)
+  const hasFetched = useRef(false)
+
+  // Fetch index on first open
+  useEffect(() => {
+    if (!open || hasFetched.current) return
+    hasFetched.current = true
+    setIndexError(false)
+    fetchIndex()
+      .then(entries => setAllEntries(entries))
+      .catch(() => setIndexError(true))
+  }, [open])
 
   /* Close on Escape */
   useEffect(() => {
@@ -40,9 +73,18 @@ export default function CommandPalette({ open, onClose }: Props) {
   function handleSelect(entry: SearchEntry) {
     onClose()
 
+    if (entry.type === 'lectio') {
+      router.push(`/lectio/${entry.topicId}`)
+      return
+    }
+    if (entry.type === 'lebensfrage') {
+      router.push(`/lebensfragen/${entry.topicId}`)
+      return
+    }
+
     const params = new URLSearchParams()
     if (entry.type === 'thinker') {
-      params.set('highlight', entry.nodeId)
+      params.set('highlight', entry.nodeId ?? '')
       params.set('tab', 'denker')
     } else if (entry.type === 'concept') {
       params.set('tab', 'quadrant')
@@ -59,9 +101,17 @@ export default function CommandPalette({ open, onClose }: Props) {
 
   if (!open) return null
 
-  const hits = search.trim()
-    ? allEntries.filter(e => normalize(e.name).includes(normalize(search)))
+  const loading = allEntries === null && !indexError
+
+  const hits = !loading && !indexError && search.trim()
+    ? allEntries!.filter(e => normalize(e.name).includes(normalize(search)))
     : []
+
+  // Count only tableau entries for the Tableaus counter
+  const tableauEntries = allEntries?.filter(e =>
+    e.type === 'thinker' || e.type === 'concept' || e.type === 'school'
+  ) ?? []
+  const tableauCount = new Set(tableauEntries.map(e => e.topicId)).size
 
   return (
     <div
@@ -86,7 +136,7 @@ export default function CommandPalette({ open, onClose }: Props) {
               autoFocus
               value={search}
               onValueChange={setSearch}
-              placeholder="Denker, Konzepte, Schulen …"
+              placeholder="Denker, Konzepte, Lectios, Lebensfragen …"
               className="flex-1 bg-transparent outline-none font-prose text-[16px]
                 text-[var(--fg)] placeholder:text-[var(--fg-dim)]"
             />
@@ -98,9 +148,17 @@ export default function CommandPalette({ open, onClose }: Props) {
 
           {/* ── Results ── */}
           <Command.List className="overflow-y-auto p-2" style={{ maxHeight: '420px' }}>
-            {!search.trim() ? (
+            {loading ? (
               <p className="py-10 text-center font-body italic text-[14px] text-[var(--fg-dim)]">
-                Denker, Konzepte oder Schulen suchen …
+                Lade Index …
+              </p>
+            ) : indexError ? (
+              <p className="py-10 text-center font-body italic text-[14px] text-[var(--fg-dim)]">
+                Suche derzeit nicht verfügbar.
+              </p>
+            ) : !search.trim() ? (
+              <p className="py-10 text-center font-body italic text-[14px] text-[var(--fg-dim)]">
+                Denker, Konzepte, Lectios oder Lebensfragen suchen …
               </p>
             ) : hits.length === 0 ? (
               <p className="py-10 text-center font-body italic text-[14px] text-[var(--fg-dim)]">
@@ -109,8 +167,8 @@ export default function CommandPalette({ open, onClose }: Props) {
             ) : (
               hits.map(entry => (
                 <Command.Item
-                  key={`${entry.topicId}-${entry.type}-${entry.nodeId}`}
-                  value={`${entry.topicId}-${entry.type}-${entry.nodeId}`}
+                  key={`${entry.topicId}-${entry.type}-${entry.nodeId ?? entry.topicId}`}
+                  value={`${entry.topicId}-${entry.type}-${entry.nodeId ?? entry.topicId}`}
                   onSelect={() => handleSelect(entry)}
                   className="flex items-center gap-3 px-4 py-3 rounded-[4px] cursor-pointer
                     aria-selected:bg-[var(--bg-sunk)] outline-none"
@@ -151,9 +209,9 @@ export default function CommandPalette({ open, onClose }: Props) {
               ↵ öffnen
             </span>
             <span className="font-ui text-[9px] tracking-[0.12em] uppercase text-[var(--fg-faint)] ml-auto">
-              {allEntries.length} Einträge in {Object.keys(
-                allEntries.reduce((acc, e) => ({ ...acc, [e.topicId]: 1 }), {})
-              ).length} Tableaus
+              {allEntries !== null
+                ? `${allEntries.length} Einträge in ${tableauCount} Tableaus`
+                : '…'}
             </span>
           </div>
 

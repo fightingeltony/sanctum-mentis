@@ -1,13 +1,8 @@
-import { getAllTopics } from './data'
+import { getAllTopics, getLectioIds, getLectio, getTopic, getAllLebensfragen } from './data'
+import type { SearchEntry } from './searchTypes'
 
-export interface SearchEntry {
-  type: 'thinker' | 'concept' | 'school'
-  name: string
-  topicId: string
-  topicTitle: string
-  nodeId: string
-  firstLevel?: number
-}
+export type { SearchEntry }
+export { normalize } from './searchTypes'
 
 /** Lazily built, cached for the lifetime of the module */
 let _cache: SearchEntry[] | null = null
@@ -16,6 +11,8 @@ export function buildGlobalSearchIndex(): SearchEntry[] {
   if (_cache) return _cache
 
   const entries: SearchEntry[] = []
+
+  // ─── Tableau entries (thinkers, concepts, schools) ───────────────────────
   for (const data of getAllTopics()) {
     for (const t of data.thinkers) {
       entries.push({
@@ -49,11 +46,31 @@ export function buildGlobalSearchIndex(): SearchEntry[] {
     }
   }
 
+  // ─── Lectio entries ───────────────────────────────────────────────────────
+  for (const id of getLectioIds()) {
+    const lectio = getLectio(id)
+    if (!lectio) continue
+    const tableau = getTopic(lectio.tableauId)
+    entries.push({
+      type: 'lectio',
+      name: lectio.title,
+      topicId: lectio.id,
+      topicTitle: tableau ? tableau.topic.title : lectio.tableauId,
+      // no nodeId, no firstLevel for lectios
+    })
+  }
+
+  // ─── Lebensfragen entries ─────────────────────────────────────────────────
+  for (const lf of getAllLebensfragen()) {
+    entries.push({
+      type: 'lebensfrage',
+      name: lf.title,
+      topicId: lf.id,
+      topicTitle: 'Quer durch die Bibliothek',
+      // no nodeId, no firstLevel
+    })
+  }
+
   _cache = entries
   return entries
-}
-
-/** Strips diacritics and lowercases — used for accent-insensitive matching */
-export function normalize(str: string): string {
-  return str.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase()
 }

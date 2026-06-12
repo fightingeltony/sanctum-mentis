@@ -1,3 +1,4 @@
+import 'server-only'
 import type { TopicData, Lectio, LectioSummary, Spur, Lebensfrage } from './types'
 import dasSelbstRaw                        from '../../data/das-selbst.json'
 import philosophieDesGeistesRaw            from '../../data/philosophie-des-geistes.json'

@@ -55,7 +55,7 @@ export default function LandingPage() {
             <span className="inline-block w-[5px] h-[5px] rounded-full" style={{ background: 'var(--accent)', opacity: 0.7 }} aria-hidden />
             Die Sternkarte · {featured.topic.title}
           </p>
-          <LandingStarChart topicId={FEATURED_ID} />
+          <LandingStarChart data={featured} />
         </div>
       )}
 

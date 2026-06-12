@@ -1,7 +1,9 @@
 'use client'
 
 import { createContext, useCallback, useContext, useEffect, useState } from 'react'
-import CommandPalette from './CommandPalette'
+import dynamic from 'next/dynamic'
+
+const CommandPalette = dynamic(() => import('./CommandPalette'), { ssr: false })
 
 interface PaletteCtx {
   openPalette: () => void
@@ -15,9 +17,10 @@ export function useCommandPalette(): PaletteCtx | null {
 }
 
 export default function ShellCommandPaletteProvider({ children }: { children: React.ReactNode }) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen]           = useState(false)
+  const [everOpened, setEverOpened] = useState(false)
 
-  const openPalette  = useCallback(() => setOpen(true), [])
+  const openPalette  = useCallback(() => { setOpen(true); setEverOpened(true) }, [])
   const closePalette = useCallback(() => setOpen(false), [])
 
   /* Global Cmd+K / Ctrl+K shortcut */
@@ -25,7 +28,10 @@ export default function ShellCommandPaletteProvider({ children }: { children: Re
     function onKey(e: KeyboardEvent) {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault()
-        setOpen(prev => !prev)
+        setOpen(prev => {
+          if (!prev) setEverOpened(true)
+          return !prev
+        })
       }
     }
     window.addEventListener('keydown', onKey)
@@ -35,7 +41,9 @@ export default function ShellCommandPaletteProvider({ children }: { children: Re
   return (
     <Ctx.Provider value={{ openPalette }}>
       {children}
-      <CommandPalette open={open} onClose={closePalette} />
+      {everOpened && (
+        <CommandPalette open={open} onClose={closePalette} />
+      )}
     </Ctx.Provider>
   )
 }

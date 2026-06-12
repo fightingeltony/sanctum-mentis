@@ -1,14 +1,11 @@
 'use client'
 
 // LandingStarChart — selbstspielende Sternkarte für die Landing-Page.
-// Lädt Daten clientseitig via getTopic (data.ts steckt über die CommandPalette
-// ohnehin schon im Client-Bundle — keine doppelte Payload im RSC-Stream).
-// Bei künftigem Bundle-Schnitt von data.ts muss diese Komponente mit umgestellt werden.
+// Daten kommen als Server-Prop; data.ts ist server-only.
 
 import {
   useState, useEffect, useRef, useMemo, useCallback,
 } from 'react'
-import { getTopic } from '@/lib/data'
 import { computeLevelState } from '@/lib/complexityEngine'
 import StarChart from '@/components/StarChart'
 import type { TopicData, Level } from '@/lib/types'
@@ -16,7 +13,7 @@ import type { TopicData, Level } from '@/lib/types'
 // ─── Props ───────────────────────────────────────────────────────────────────
 
 interface Props {
-  topicId: string
+  data: TopicData
 }
 
 // ─── Tour state ──────────────────────────────────────────────────────────────
@@ -28,14 +25,11 @@ interface TourHandle {
 
 // ─── Component ───────────────────────────────────────────────────────────────
 
-export default function LandingStarChart({ topicId }: Props) {
-  // ── Data (clientside — no RSC waterfall) ──────────────────────────────────
-  const data = useMemo<TopicData | null>(() => getTopic(topicId) ?? null, [topicId])
-
+export default function LandingStarChart({ data }: Props) {
   // ── Level state ───────────────────────────────────────────────────────────
   const [levelId, setLevelId] = useState(1)
   const state = useMemo(
-    () => (data ? computeLevelState(data, levelId) : null),
+    () => computeLevelState(data, levelId),
     [data, levelId],
   )
 
@@ -134,7 +128,7 @@ export default function LandingStarChart({ topicId }: Props) {
 
   const runTour = useCallback(async () => {
     if (prefersReducedMotion.current) { setLevelId(4); return }
-    if (!wrapRef.current || !data) return
+    if (!wrapRef.current) return
 
     // Fix #1: Generation-token pattern — each invocation owns its LOCAL handle.
     // Cancel any previous tour first, then install the new handle.
@@ -277,7 +271,6 @@ export default function LandingStarChart({ topicId }: Props) {
 
   // ── IntersectionObserver — start/stop tour on visibility ─────────────────
   useEffect(() => {
-    if (!data) return
     if (prefersReducedMotion.current) {
       setLevelId(4)
       return
@@ -344,7 +337,7 @@ export default function LandingStarChart({ topicId }: Props) {
       ? 'Nochmal abspielen'
       : 'Tour abspielen'
 
-  if (!data || !state) {
+  if (!state) {
     return (
       <div style={{ padding: '24px 0', color: 'var(--fg-dim)', fontStyle: 'italic', fontSize: 13 }}>
         Lade…
