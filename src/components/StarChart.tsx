@@ -321,6 +321,23 @@ export default function StarChart({
   const suppressClickRef = useRef(false)
   const deselectRef = useRef<() => void>(() => {})
 
+  // ── Kinetics (momentum + double-tap tween) ────────────────
+  // vx/vy: smoothed velocity in px/ms during single-finger pan
+  const velRef      = useRef({ vx: 0, vy: 0, t: 0 })
+  // rAF handle for momentum decay or double-tap tween
+  const kineticsRaf = useRef<number | null>(null)
+  // last tap for double-tap detection (touch only)
+  const lastTapRef  = useRef<{ x: number; y: number; t: number } | null>(null)
+
+  // ── cancelKinetics — stops momentum decay or double-tap tween ──
+  // Declared early (before morph/wheel handlers) because it's called by both.
+  // Plain function (not useCallback): only reads stable refs — never stale.
+  const cancelKinetics = () => {
+    if (kineticsRaf.current) { cancelAnimationFrame(kineticsRaf.current); kineticsRaf.current = null }
+    velRef.current.vx = 0
+    velRef.current.vy = 0
+  }
+
   // ── isMobile detection ────────────────────────────────────
   useEffect(() => {
     const mq = matchMedia('(max-width: 640px)')
@@ -584,6 +601,7 @@ export default function StarChart({
   // ── Morph animation ───────────────────────────────────────
   const morph = useCallback((to: 'axis' | 'school') => {
     if (to === modeRef.current) return
+    cancelKinetics()
     modeRef.current = to
     setMode(to)
     svgRef.current?.classList.toggle('sc-mode-school', to === 'school')
@@ -622,6 +640,7 @@ export default function StarChart({
   // Cleanup rAF on unmount
   useEffect(() => () => {
     if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
+    if (kineticsRaf.current)  cancelAnimationFrame(kineticsRaf.current)
   }, [])
 
   // ── Pan / zoom ────────────────────────────────────────────
@@ -652,6 +671,7 @@ export default function StarChart({
       // Let the cartouche (and any data-nopan child) scroll normally
       if ((e.target as Element).closest('[data-nopan]')) return
       e.preventDefault()
+      cancelKinetics()
       const ps  = panRef.current
       const r   = stage.getBoundingClientRect()
       const mx  = e.clientX - r.left, my = e.clientY - r.top
@@ -680,21 +700,26 @@ export default function StarChart({
     if ((e.target as Element).closest('[data-nopan]')) return
     const stage = stageRef.current
     if (!stage) return
+
+    // Any new touch interrupts ongoing momentum / tween
+    cancelKinetics()
+
     const r   = stage.getBoundingClientRect()
     const pos = { x: e.clientX - r.left, y: e.clientY - r.top }
-
-    // Detect whether this pointer landed on an interactive star/edge/concept element
-    const onNode = !!(e.target as Element).closest('.sc-star, .sc-edge-hit, .sc-concept-marker')
 
     // Always register the pointer — pinch needs both fingers tracked regardless of landing target
     ptrsRef.current.set(e.pointerId, pos)
     didMoveRef.current = false
 
     if (ptrsRef.current.size === 1) {
-      // Single finger: only start a pan drag when NOT on a star/edge/concept
-      // (tap semantics on nodes are handled by React onClick — don't interfere)
-      dragRef.current  = onNode ? null : { x: pos.x, y: pos.y, tx: panRef.current.tx, ty: panRef.current.ty }
+      // Feature A: dragRef always initialized — even on nodes.
+      // Tap-vs-drag distinction is done by the 5px threshold in onStagePointerMove,
+      // not by the landing target. React onClick on nodes still fires for real taps
+      // because we only setPointerCapture *after* the threshold is crossed.
+      dragRef.current  = { x: pos.x, y: pos.y, tx: panRef.current.tx, ty: panRef.current.ty }
       pinchRef.current = null
+      // Reset velocity tracking
+      velRef.current = { vx: 0, vy: 0, t: performance.now() }
     }
     if (ptrsRef.current.size === 2) {
       // Two fingers always mean pinch — regardless of what is under either finger
@@ -739,15 +764,41 @@ export default function StarChart({
     } else if (ptrsRef.current.size === 1 && dragRef.current) {
       const dx = pos.x - dragRef.current.x, dy = pos.y - dragRef.current.y
       if (!didMoveRef.current && Math.hypot(dx, dy) < 5) return
+
+      // Feature A: on first threshold crossing, capture this pointer so that
+      // subsequent pointerup/click events are re-targeted to the stage element —
+      // this prevents React's onClick on star/edge/concept elements from firing
+      // after a drag that happened to start on a node.
+      if (!didMoveRef.current) {
+        try { stage.setPointerCapture(e.pointerId) } catch { /* synthetic — ignore */ }
+      }
+
       didMoveRef.current  = true
-      panRef.current.tx   = dragRef.current.tx + dx
-      panRef.current.ty   = dragRef.current.ty + dy
+
+      // Feature B: smooth velocity estimate — exponential moving average
+      // Measure velocity from (post-clamp) pan delta / time to correctly handle boundary bounce.
+      const now   = performance.now()
+      const dt    = now - velRef.current.t
+      const oldTx = panRef.current.tx
+      const oldTy = panRef.current.ty
+      panRef.current.tx = dragRef.current.tx + dx
+      panRef.current.ty = dragRef.current.ty + dy
       applyZoom()
+      if (dt > 0) {
+        const instVx = (panRef.current.tx - oldTx) / dt
+        const instVy = (panRef.current.ty - oldTy) / dt
+        const ALPHA  = 0.8
+        velRef.current.vx = ALPHA * velRef.current.vx + (1 - ALPHA) * instVx
+        velRef.current.vy = ALPHA * velRef.current.vy + (1 - ALPHA) * instVy
+        velRef.current.t  = now
+      }
     }
   }, [applyZoom])
 
   const onStagePointerUp = useCallback((e: React.PointerEvent) => {
-    const wasTap = ptrsRef.current.size === 1 && !didMoveRef.current
+    const wasTap      = ptrsRef.current.size === 1 && !didMoveRef.current
+    const wasDrag     = ptrsRef.current.size === 1 && didMoveRef.current
+    const pointerType = e.pointerType
     ptrsRef.current.delete(e.pointerId)
     if (ptrsRef.current.size === 1) {
       const [rem] = [...ptrsRef.current.values()]
@@ -756,15 +807,89 @@ export default function StarChart({
     }
     if (ptrsRef.current.size === 0) {
       pinchRef.current = null
-      if (didMoveRef.current) {
+      if (didMoveRef.current || wasDrag) {
         suppressClickRef.current = true
         setTimeout(() => { suppressClickRef.current = false }, 0)
       }
       // Deselect only when tapping on empty canvas — not on a node/edge/concept.
-      // Node taps are handled by React onClick (with stopPropagation) — deselecting here
-      // would cause a visible flicker (deselect → immediate re-select).
+      // After a capture-redirect drag that started on a node, e.target is the stage element,
+      // so closest('.sc-star,...') returns null — but didMove=true → wasTap=false → no deselect.
       const onNode = !!(e.target as Element).closest('.sc-star, .sc-edge-hit, .sc-concept-marker')
       if (wasTap && !suppressClickRef.current && !onNode) deselectRef.current()
+
+      // Feature B: momentum decay on drag release
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (wasDrag && !reduce) {
+        const speed = Math.hypot(velRef.current.vx, velRef.current.vy)
+        if (speed > 0.25) {
+          let lastT = performance.now()
+          const decay = () => {
+            const now  = performance.now()
+            const dt   = now - lastT
+            lastT = now
+            panRef.current.tx += velRef.current.vx * dt
+            panRef.current.ty += velRef.current.vy * dt
+            applyZoom()  // clamps tx/ty against boundaries
+            velRef.current.vx *= Math.exp(-dt / 325)
+            velRef.current.vy *= Math.exp(-dt / 325)
+            const spd = Math.hypot(velRef.current.vx, velRef.current.vy)
+            if (spd > 0.02) {
+              kineticsRaf.current = requestAnimationFrame(decay)
+            } else {
+              kineticsRaf.current = null
+            }
+          }
+          kineticsRaf.current = requestAnimationFrame(decay)
+        }
+      }
+
+      // Feature C: double-tap zoom (touch only, not on nodes)
+      if (wasTap && pointerType === 'touch' && !onNode) {
+        const now = performance.now()
+        const r   = stageRef.current?.getBoundingClientRect()
+        const tapX = r ? e.clientX - r.left : 0
+        const tapY = r ? e.clientY - r.top  : 0
+        const last = lastTapRef.current
+        const isDoubleTap = last
+          && (now - last.t < 300)
+          && Math.hypot(tapX - last.x, tapY - last.y) < 30
+        if (isDoubleTap) {
+          lastTapRef.current = null
+          const ps = panRef.current
+          const targetScale = ps.scale < 1.7 ? 2.2 : 1
+          const targetTx    = targetScale === 1 ? 0 : tapX - (tapX - ps.tx) * (targetScale / ps.scale)
+          const targetTy    = targetScale === 1 ? 0 : tapY - (tapY - ps.ty) * (targetScale / ps.scale)
+          const reduceC = matchMedia('(prefers-reduced-motion: reduce)').matches
+          if (reduceC) {
+            panRef.current.scale = targetScale
+            panRef.current.tx    = targetTx
+            panRef.current.ty    = targetTy
+            applyZoom()
+          } else {
+            cancelKinetics()
+            const dur  = 260
+            const t0   = performance.now()
+            const s0   = ps.scale, tx0 = ps.tx, ty0 = ps.ty
+            const tween = () => {
+              const elapsed = performance.now() - t0
+              const k  = Math.min(1, elapsed / dur)
+              const ek = 1 - Math.pow(1 - k, 3)   // ease-out-cubic
+              panRef.current.scale = s0  + (targetScale - s0)  * ek
+              panRef.current.tx    = tx0 + (targetTx    - tx0) * ek
+              panRef.current.ty    = ty0 + (targetTy    - ty0) * ek
+              applyZoom()
+              if (k < 1) {
+                kineticsRaf.current = requestAnimationFrame(tween)
+              } else {
+                kineticsRaf.current = null
+              }
+            }
+            kineticsRaf.current = requestAnimationFrame(tween)
+          }
+        } else {
+          lastTapRef.current = { x: tapX, y: tapY, t: now }
+        }
+      }
     }
     applyZoom()
   }, [applyZoom])
@@ -1020,12 +1145,14 @@ export default function StarChart({
           onPointerMove={onStagePointerMove}
           onPointerUp={onStagePointerUp}
           onPointerCancel={e => {
+            cancelKinetics()
             ptrsRef.current.delete(e.pointerId)
             pinchRef.current = null
             if (ptrsRef.current.size === 1) {
               // 2→1 transition after cancel: reinitialise drag from the surviving pointer
               const [rem] = [...ptrsRef.current.values()]
               dragRef.current = { x: rem.x, y: rem.y, tx: panRef.current.tx, ty: panRef.current.ty }
+              velRef.current  = { vx: 0, vy: 0, t: performance.now() }
               didMoveRef.current = false
             } else if (ptrsRef.current.size === 0) {
               dragRef.current = null
