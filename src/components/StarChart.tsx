@@ -676,26 +676,44 @@ export default function StarChart({
 
   // Pointer handlers — single-finger pan + two-finger pinch
   const onStagePointerDown = useCallback((e: React.PointerEvent) => {
-    if ((e.target as Element).closest('[data-nopan], .sc-star, .sc-edge-hit')) return
+    // [data-nopan] = cartouche / zoom buttons — never pan/pinch there
+    if ((e.target as Element).closest('[data-nopan]')) return
     const stage = stageRef.current
     if (!stage) return
     const r   = stage.getBoundingClientRect()
     const pos = { x: e.clientX - r.left, y: e.clientY - r.top }
+
+    // Detect whether this pointer landed on an interactive star/edge/concept element
+    const onNode = !!(e.target as Element).closest('.sc-star, .sc-edge-hit, .sc-concept-marker')
+
+    // Always register the pointer — pinch needs both fingers tracked regardless of landing target
     ptrsRef.current.set(e.pointerId, pos)
     didMoveRef.current = false
 
     if (ptrsRef.current.size === 1) {
-      dragRef.current  = { x: pos.x, y: pos.y, tx: panRef.current.tx, ty: panRef.current.ty }
+      // Single finger: only start a pan drag when NOT on a star/edge/concept
+      // (tap semantics on nodes are handled by React onClick — don't interfere)
+      dragRef.current  = onNode ? null : { x: pos.x, y: pos.y, tx: panRef.current.tx, ty: panRef.current.ty }
       pinchRef.current = null
     }
     if (ptrsRef.current.size === 2) {
+      // Two fingers always mean pinch — regardless of what is under either finger
       const [a, b] = [...ptrsRef.current.values()]
       pinchRef.current = {
         dist:  Math.hypot(b.x - a.x, b.y - a.y),
         mx:    (a.x + b.x) / 2, my: (a.y + b.y) / 2,
         tx:    panRef.current.tx, ty: panRef.current.ty, scale: panRef.current.scale,
       }
-      stage.setPointerCapture(e.pointerId)
+      dragRef.current = null
+      // Capture both pointers so move/up events keep arriving even if fingers slide off the element.
+      // setPointerCapture throws InvalidPointerId for synthetic/already-ended pointers — swallow defensively.
+      try { stage.setPointerCapture(e.pointerId) } catch { /* synthetic pointer — ignore */ }
+      // Also capture the other pointer that was already down
+      for (const [pid] of ptrsRef.current) {
+        if (pid !== e.pointerId) {
+          try { stage.setPointerCapture(pid) } catch { /* synthetic pointer — ignore */ }
+        }
+      }
     }
   }, [])
 
@@ -742,7 +760,11 @@ export default function StarChart({
         suppressClickRef.current = true
         setTimeout(() => { suppressClickRef.current = false }, 0)
       }
-      if (wasTap && !suppressClickRef.current) deselectRef.current()
+      // Deselect only when tapping on empty canvas — not on a node/edge/concept.
+      // Node taps are handled by React onClick (with stopPropagation) — deselecting here
+      // would cause a visible flicker (deselect → immediate re-select).
+      const onNode = !!(e.target as Element).closest('.sc-star, .sc-edge-hit, .sc-concept-marker')
+      if (wasTap && !suppressClickRef.current && !onNode) deselectRef.current()
     }
     applyZoom()
   }, [applyZoom])
@@ -997,7 +1019,18 @@ export default function StarChart({
           onPointerDown={onStagePointerDown}
           onPointerMove={onStagePointerMove}
           onPointerUp={onStagePointerUp}
-          onPointerCancel={e => { ptrsRef.current.delete(e.pointerId); pinchRef.current = null }}
+          onPointerCancel={e => {
+            ptrsRef.current.delete(e.pointerId)
+            pinchRef.current = null
+            if (ptrsRef.current.size === 1) {
+              // 2→1 transition after cancel: reinitialise drag from the surviving pointer
+              const [rem] = [...ptrsRef.current.values()]
+              dragRef.current = { x: rem.x, y: rem.y, tx: panRef.current.tx, ty: panRef.current.ty }
+              didMoveRef.current = false
+            } else if (ptrsRef.current.size === 0) {
+              dragRef.current = null
+            }
+          }}
         >
           <div ref={cameraRef} style={{ position: 'absolute', inset: 0, transformOrigin: '0 0' }}>
             <svg
