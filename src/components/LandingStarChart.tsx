@@ -38,18 +38,20 @@ export default function LandingStarChart({ data }: Props) {
   const cursorRef   = useRef<HTMLDivElement>(null)
   const captionRef  = useRef<HTMLDivElement>(null)
   const tourRef     = useRef<TourHandle>({ cancel: true, timers: new Set() })
+  const runTourRef  = useRef<() => void>(() => {}) // stable ref so the loop can self-schedule
   const [tourRunning,  setTourRunning]  = useState(false)
   const [tourDone,     setTourDone]     = useState(false)
   const userPausedRef = useRef(false)
 
   // ── Reduced-motion detection ──────────────────────────────────────────────
   const prefersReducedMotion = useRef(false)
-  // Fix #4: useState(false) avoids SSR/client hydration mismatch
+  // useState(false) avoids SSR/client hydration mismatch; set once after mount
   const [rmq, setRmq] = useState(false)
   useEffect(() => {
     const matches = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     prefersReducedMotion.current = matches
-    setRmq(matches)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setRmq(matches) // Client-only init: reads matchMedia unavailable during SSR
   }, [])
 
   // ── Tour helpers ──────────────────────────────────────────────────────────
@@ -238,12 +240,17 @@ export default function LandingStarChart({ data }: Props) {
       setTourRunning(false)
       setTourDone(true)
       if (!userPausedRef.current) {
-        // Loop — small pause then restart
-        const loopId = setTimeout(() => runTour(), 600)
+        // Loop — use runTourRef to avoid the forward-reference lint error
+        const loopId = setTimeout(() => runTourRef.current(), 600)
         h.timers.add(loopId)
       }
     }
   }, [data, cancelTour, moveCursorTo, tap, say, hideSay, hideCursor, dispatch, qs])
+
+  // Keep the ref in sync after each render so the loop setTimeout always calls the latest version
+  useEffect(() => {
+    runTourRef.current = runTour
+  })
 
   // ── User-interaction pause ────────────────────────────────────────────────
   const handleUserInteract = useCallback((e: Event) => {

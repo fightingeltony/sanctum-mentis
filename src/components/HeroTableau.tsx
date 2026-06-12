@@ -49,7 +49,11 @@ export default function HeroTableau({
 
   useEffect(() => {
     const reduce = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false
-    if (reduce) { setLevel(maxLevel); return }
+    if (reduce) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setLevel(maxLevel) // Client-only init for reduced-motion: show max level statically
+      return
+    }
 
     let cancelled = false
     let timer: ReturnType<typeof setTimeout>

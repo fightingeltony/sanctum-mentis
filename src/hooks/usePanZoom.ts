@@ -66,7 +66,7 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
     const tx = (width  - svgW * s) / 2
     const ty = (height - svgH * s) / 2
     applyDom({ tx, ty, scale: s })
-  }, [svgW, svgH]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [svgW, svgH])
 
   useEffect(() => {
     if (containerRef.current) containerRef.current.style.touchAction = 'none'
@@ -146,7 +146,7 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
     const pos = clientToContainer(e)
     ptrs.current.set(e.pointerId, pos)
 
-    const { tx, ty, scale } = pz.current
+    const { scale } = pz.current
 
     if (ptrs.current.size === 1) {
       const dx = pos.x - dragStart.current.x

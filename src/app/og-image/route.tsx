@@ -1,9 +1,19 @@
 import { ImageResponse } from 'next/og'
+import { readFile }     from 'fs/promises'
+import { join }         from 'path'
 
-export const runtime     = 'edge'
+// Node runtime — fonts via fs.readFile, can be statically pre-rendered
+export const dynamic     = 'force-static'
 export const contentType = 'image/png'
 
 export async function GET() {
+  const dir = join(process.cwd(), 'src/app/og-image')
+
+  const [marcellusData, geistData] = await Promise.all([
+    readFile(join(dir, 'MarcellusSC-Regular.ttf')),
+    readFile(join(dir, 'Geist-Regular.ttf')),
+  ])
+
   return new ImageResponse(
     (
       <div
@@ -14,91 +24,96 @@ export async function GET() {
           flexDirection:   'column',
           alignItems:      'center',
           justifyContent:  'center',
-          backgroundColor: '#F5EAD0',
+          backgroundColor: '#F2EAD8',
           position:        'relative',
           overflow:        'hidden',
         }}
       >
-        {/* Subtle grain overlay via nested box */}
-        <div
-          style={{
-            position:        'absolute',
-            inset:           0,
-            backgroundColor: 'transparent',
-            backgroundImage: 'none',
-          }}
-        />
+        {/* ── Background: faint quadrant grid ── */}
 
-        {/* Quadrant cross — Option C hybrid, very faint */}
-        {/* Horizontal */}
+        {/* Horizontal axis */}
         <div
           style={{
             position:        'absolute',
             top:             '50%',
-            left:            '7%',
-            right:           '7%',
+            left:            '6%',
+            right:           '6%',
             height:          '1px',
-            backgroundColor: 'rgba(139, 82, 30, 0.14)',
+            backgroundColor: 'rgba(139, 82, 30, 0.13)',
           }}
         />
-        {/* Vertical */}
+        {/* Vertical axis */}
         <div
           style={{
             position:        'absolute',
             left:            '50%',
-            top:             '7%',
-            bottom:          '7%',
+            top:             '6%',
+            bottom:          '6%',
             width:           '1px',
-            backgroundColor: 'rgba(139, 82, 30, 0.14)',
+            backgroundColor: 'rgba(139, 82, 30, 0.13)',
           }}
         />
 
-        {/* Corner tick marks — minimal quadrant reference */}
-        {/* Top-left tick */}
-        <div style={{ position: 'absolute', top: '7%',  left: '50%',  width: '8px',  height: '1px', backgroundColor: 'rgba(139, 82, 30, 0.22)', marginLeft: '-4px' }} />
-        <div style={{ position: 'absolute', top: '7%',  left: '50%',  width: '1px',  height: '8px', backgroundColor: 'rgba(139, 82, 30, 0.22)', marginTop:  '0px' }} />
-        {/* Bottom-right tick */}
-        <div style={{ position: 'absolute', bottom: '7%', left: '50%', width: '8px', height: '1px', backgroundColor: 'rgba(139, 82, 30, 0.22)', marginLeft: '-4px' }} />
-        <div style={{ position: 'absolute', bottom: '7%', left: '50%', width: '1px', height: '8px', backgroundColor: 'rgba(139, 82, 30, 0.22)', marginBottom: '0px' }} />
+        {/* Scatter dots — starmap suggestion */}
+        {/* Top-left quadrant */}
+        <div style={{ position: 'absolute', top: '22%',  left:  '18%', width: '5px', height: '5px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.28)' }} />
+        <div style={{ position: 'absolute', top: '35%',  left:  '28%', width: '3px', height: '3px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.18)' }} />
+        <div style={{ position: 'absolute', top: '15%',  left:  '33%', width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.22)' }} />
+        {/* Top-right quadrant */}
+        <div style={{ position: 'absolute', top: '18%',  left:  '62%', width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.22)' }} />
+        <div style={{ position: 'absolute', top: '30%',  left:  '74%', width: '6px', height: '6px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.30)' }} />
+        <div style={{ position: 'absolute', top: '38%',  left:  '58%', width: '3px', height: '3px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.16)' }} />
+        {/* Bottom-left quadrant */}
+        <div style={{ position: 'absolute', top: '62%',  left:  '22%', width: '5px', height: '5px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.24)' }} />
+        <div style={{ position: 'absolute', top: '72%',  left:  '14%', width: '3px', height: '3px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.16)' }} />
+        <div style={{ position: 'absolute', top: '78%',  left:  '36%', width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.20)' }} />
+        {/* Bottom-right quadrant */}
+        <div style={{ position: 'absolute', top: '66%',  left:  '68%', width: '4px', height: '4px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.20)' }} />
+        <div style={{ position: 'absolute', top: '75%',  left:  '80%', width: '5px', height: '5px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.26)' }} />
+        <div style={{ position: 'absolute', top: '58%',  left:  '76%', width: '3px', height: '3px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.16)' }} />
 
-        {/* Main content block */}
+        {/* Subtle connector lines between some dots */}
+        <div style={{ position: 'absolute', top: '22%', left: '18%', width: '108px', height: '1px', backgroundColor: 'rgba(139, 82, 30, 0.09)', transform: 'rotate(18deg)', transformOrigin: 'left center' }} />
+        <div style={{ position: 'absolute', top: '30%', left: '74%', width: '80px',  height: '1px', backgroundColor: 'rgba(139, 82, 30, 0.09)', transform: 'rotate(-25deg)', transformOrigin: 'left center' }} />
+        <div style={{ position: 'absolute', top: '66%', left: '68%', width: '96px',  height: '1px', backgroundColor: 'rgba(139, 82, 30, 0.09)', transform: 'rotate(22deg)', transformOrigin: 'left center' }} />
+
+        {/* ── Main content block ── */}
         <div
           style={{
-            display:        'flex',
-            flexDirection:  'column',
-            alignItems:     'center',
-            textAlign:      'center',
-            padding:        '0 100px',
-            position:       'relative',
-            zIndex:         1,
+            display:       'flex',
+            flexDirection: 'column',
+            alignItems:    'center',
+            textAlign:     'center',
+            padding:       '0 100px',
+            position:      'relative',
+            zIndex:        1,
           }}
         >
-          {/* Eyebrow — small sienna label */}
+          {/* Eyebrow */}
           <div
             style={{
-              fontSize:      18,
+              fontSize:      17,
               color:         '#9B5C2A',
-              letterSpacing: '0.22em',
-              textTransform: 'uppercase',
-              fontFamily:    'Georgia, serif',
-              marginBottom:  '28px',
-              opacity:       0.8,
+              letterSpacing: '0.18em',
+              fontFamily:    'Geist',
+              fontWeight:    400,
+              marginBottom:  '30px',
+              opacity:       0.75,
             }}
           >
             Philosophie · Denker · Konzepte
           </div>
 
-          {/* Title */}
+          {/* Title — Marcellus SC, mixed case (not all-caps) */}
           <div
             style={{
-              fontSize:      86,
-              fontFamily:    'Georgia, "Times New Roman", serif',
+              fontSize:      92,
+              fontFamily:    'MarcellusSC',
               fontWeight:    400,
               color:         '#2C1600',
-              letterSpacing: '0.06em',
+              letterSpacing: '0.05em',
               lineHeight:    1,
-              textTransform: 'uppercase',
-              marginBottom:  '32px',
+              marginBottom:  '34px',
             }}
           >
             Sanctum Mentis
@@ -107,39 +122,40 @@ export async function GET() {
           {/* Sienna divider */}
           <div
             style={{
-              width:           '56px',
+              width:           '52px',
               height:          '2px',
               backgroundColor: '#9B5C2A',
-              marginBottom:    '32px',
+              marginBottom:    '30px',
             }}
           />
 
-          {/* Description */}
+          {/* Tagline — italic, Geist */}
           <div
             style={{
               fontSize:   28,
-              fontFamily: 'Georgia, serif',
+              fontFamily: 'Geist',
+              fontWeight: 400,
               color:      '#5C3820',
               lineHeight: 1.55,
-              maxWidth:   '820px',
+              maxWidth:   '800px',
               fontStyle:  'italic',
             }}
           >
-            Eine Bibliothek der großen Fragen — Kontext, der hilft, ein Thema zu Ende zu denken.
+            Komplexe Ideen. Endlich klar verortet.
           </div>
         </div>
 
-        {/* URL watermark bottom-right */}
+        {/* URL watermark */}
         <div
           style={{
             position:      'absolute',
             bottom:        '36px',
-            right:         '56px',
-            fontSize:      15,
-            fontFamily:    'Georgia, serif',
+            right:         '52px',
+            fontSize:      14,
+            fontFamily:    'Geist',
             color:         '#9B5C2A',
             letterSpacing: '0.06em',
-            opacity:       0.55,
+            opacity:       0.50,
           }}
         >
           sanctum-mentis.vercel.app
@@ -149,6 +165,20 @@ export async function GET() {
     {
       width:  1200,
       height: 630,
+      fonts:  [
+        {
+          name:   'MarcellusSC',
+          data:   marcellusData,
+          weight: 400,
+          style:  'normal',
+        },
+        {
+          name:   'Geist',
+          data:   geistData,
+          weight: 400,
+          style:  'normal',
+        },
+      ],
     },
   )
 }

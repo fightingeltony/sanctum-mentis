@@ -63,7 +63,8 @@ export default function ThinkerList({
 
   useEffect(() => {
     if (!highlightId) return
-    setActiveFilters(new Set())
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setActiveFilters(new Set()) // Clear filters so the highlighted card is visible
     const raf = requestAnimationFrame(() => {
       const el = cardRefs.current.get(highlightId)
       if (!el) return

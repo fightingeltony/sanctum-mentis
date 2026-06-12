@@ -67,7 +67,8 @@ export default function CommandPalette({ open, onClose }: Props) {
 
   /* Reset search when palette opens */
   useEffect(() => {
-    if (open) setSearch('')
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (open) setSearch('') // Clears stale search term each time the palette re-opens
   }, [open])
 
   function handleSelect(entry: SearchEntry) {

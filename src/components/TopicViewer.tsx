@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import type { TopicData, LectioSummary } from '@/lib/types'
 import { computeLevelState } from '@/lib/complexityEngine'
 import LevelSlider from './LevelSlider'
@@ -13,19 +14,27 @@ import { useCommandPalette } from './ShellCommandPaletteProvider'
 
 type Tab = 'denker' | 'einfluesse' | 'quadrant' | 'sternkarte'
 
+const VALID_TABS = ['denker', 'einfluesse', 'quadrant', 'sternkarte'] as const
+
 interface Props {
   data: TopicData
-  /** nodeId to scroll-highlight after mount — set by CommandPalette navigation */
-  initialHighlight?: string
-  /** Level to activate after mount — set by CommandPalette navigation */
-  initialLevel?: number
-  /** Tab to activate after mount — set by CommandPalette navigation */
-  initialTab?: Tab
   /** Lectios for this tableau — shown as guided-path discovery in the header */
   lectios?: LectioSummary[]
 }
 
-export default function TopicViewer({ data, initialHighlight, initialLevel, initialTab, lectios }: Props) {
+export default function TopicViewer({ data, lectios }: Props) {
+  const searchParams = useSearchParams()
+
+  // Read URL params client-side — keeps the page as SSG
+  const rawTab    = searchParams.get('tab') ?? undefined
+  const rawLevel  = searchParams.get('level') ?? undefined
+  const rawHighlight = searchParams.get('highlight') ?? undefined
+
+  const initialTab: Tab | undefined = (VALID_TABS as readonly string[]).includes(rawTab ?? '')
+    ? rawTab as Tab
+    : undefined
+  const initialLevel  = rawLevel ? Number(rawLevel) : undefined
+  const initialHighlight = rawHighlight
   const [levelId, setLevelId] = useState(1)
   const [tab, setTab]         = useState<Tab>('denker')
   const [menuOpen, setMenuOpen]     = useState(false)
@@ -37,20 +46,22 @@ export default function TopicViewer({ data, initialHighlight, initialLevel, init
   useEffect(() => {
     if (initialLevel !== undefined && !isNaN(initialLevel) && initialLevel >= 1) {
       const n = Math.min(initialLevel, data.topic.complexityLevels)
-      setLevelId(n)
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setLevelId(n) // Client-only init from URL param — runs once on mount, not cascading
       localStorage.setItem(`mentis:level:${data.topic.id}`, String(n))
     } else {
       const saved = localStorage.getItem(`mentis:level:${data.topic.id}`)
       if (saved !== null) {
         const n = Math.min(Number(saved), data.topic.complexityLevels)
-        if (n >= 1) setLevelId(n)
+        if (n >= 1) setLevelId(n) // Client-only init from localStorage — runs once on mount
       }
     }
   }, [data.topic.id, data.topic.complexityLevels, initialLevel])
 
   /* ── Tab + highlight from URL params ── */
   useEffect(() => {
-    if (initialTab) setTab(initialTab)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    if (initialTab) setTab(initialTab) // Client-only init from URL param — runs once on mount
     if (initialHighlight) {
       // Defer highlight until level has re-rendered so the card is in the DOM
       const t = setTimeout(() => setHighlightId(initialHighlight), 0)

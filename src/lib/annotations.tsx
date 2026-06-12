@@ -100,7 +100,7 @@ function renderItalic(text: string, keyPrefix: string): React.ReactNode[] {
   })
 }
 
-export function Annotated({ text, level: _level }: { text: string; level: number }) {
+export function Annotated({ text }: { text: string; level?: number }) {
   const parts = text.split(/(\[\[.*?\]\])/g)
   const nodes: React.ReactNode[] = []
 

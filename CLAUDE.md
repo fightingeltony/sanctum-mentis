@@ -107,8 +107,11 @@ Konzept-Positionen `x`/`y` sind 0–100, mathematische Konvention (y=0 unten, y=
 - `data/das-selbst.json` — Beispiel-Themengebiet (Mild-Modus)
 - `src/lib/types.ts` — Datenmodell
 - `src/lib/complexityEngine.ts` — Kern-Logik (Versioned/getVersion)
-- `src/lib/data.ts` — Topic-Loader
+- `src/lib/data.ts` — Topic-/Lectio-/Lebensfragen-Loader. **`server-only`** — darf nie aus Client-Komponenten importiert werden; Client-Komponenten bekommen Daten als Server-Props
+- `src/lib/searchIndex.ts` (server) + `src/lib/searchTypes.ts` (client-sicher) — globaler Suchindex (Denker, Konzepte, Schulen, Lectios, Lebensfragen), ausgeliefert über die statische Route `src/app/api/search-index/route.ts`, gefetcht erst beim ersten Öffnen der CommandPalette
 - `src/components/TopicViewer.tsx` — Top-Level-Container
+- `src/components/StarChart.tsx` — Sternkarten-Tab (Denker als Sterne, Einflüsse als Linien, Konzepte im Akkordeon/als Waisen-Marker, Schulen-Morph). Trägt `data-`-Anker (data-star-id, data-sc-mode, …), über die die Landing-Tour sie steuert — beim Ändern nicht entfernen
+- `src/components/LandingStarChart.tsx` — selbstspielende Sternkarten-Tour auf der Landing (DOM-Director über die data-Anker, pausiert bei isTrusted-Interaktion, reduced-motion → statisch L4)
 - `src/components/QuadrantPlot.tsx` — 4-Quadranten-SVG-Karte (basierend auf WesterosMap-Muster)
 - `src/components/InfluenceGraph.tsx` — Beziehungs-Graph (kann auto/manual layout)
 
@@ -155,7 +158,7 @@ Sicherheitsnetz auf oberster Ebene — verhindert horizontales Scrollen der gesa
 
 ## QuadrantPlot — Render-Konvention
 
-- Stage: 700×700 SVG mit `PAD = 60` Margin
+- Stage: 980×760 SVG mit `PAD_X = 200` / `PAD_Y = 80` Margin (breite Seitenränder für Achsen-Labels ausserhalb des Rahmens)
 - Achsenkreuz horizontal+vertikal durch die Mitte
 - Konzept-Positionen 0–100, y mathematisch (y=100 = oben)
 - Marker-Glyph aus `CONCEPT_GLYPH[type]` (Diamond, Symbol etc.), Farbe immer dunkles Sienna
@@ -200,7 +203,7 @@ Ergänzend zu Tableau-Bauten gibt es Lectios — geführte Pfade durch ein Table
 
 **`lectio_brief`-Feld:** Optionales Feld `lectio_brief` auf Thinker/Concept/School im Tableau-JSON. Wenn vorhanden, wird es in der Lectio statt des `versions`-Texts gezeigt — 2–3 dichte Sätze, keine Annotationen. Bei neuen Tableaus mit geplanter Lectio direkt beim Knoten mitschreiben.
 
-**Schema-Feld `step_brief` (seit 30.5.26):** Optionales Feld auf LectioStep. Wenn gesetzt, überschreibt es den Knoten-Text NUR für diese Station — ermöglicht Ein-Werk-Lectios, bei denen derselbe Knoten an mehreren Stationen mit verschiedenem Text erscheint. Engine-Priorität in lectioEngine.ts: step_brief → lectio_brief → versions[level] → Fallback. Nur für Einzelknoten-Stationen, nicht für Doppelstationen (Array-nodeId). Erste Anwendung: der-weg-des-menschen.json.
+**Schema-Feld `step_brief` (seit 30.5.26):** Optionales Feld auf LectioStep. Wenn gesetzt, überschreibt es den Knoten-Text NUR für diese Station — ermöglicht Ein-Werk-Lectios, bei denen derselbe Knoten an mehreren Stationen mit verschiedenem Text erscheint. Engine-Priorität in lectioEngine.ts: step_brief → lectio_brief → versions[level] → Fallback. Nur für Einzelknoten-Stationen, nicht für Doppelstationen (Array-nodeId). Anwendungen: der-weg-des-menschen.json, findest-du-oder-machst-du.json. Das Legacy-Feld `step.brief` wurde am 12.6.26 auf `step_brief` konsolidiert — es gibt nur noch dieses eine Feld.
 
 **Feld `path_type` (Datenwert, seit 30.5.26):** Beschreibt den Pfad-Typ einer Lectio im JSON (narrativ-historisch / konkurrierend-konfrontativ / emotional-kumulativ / destruktiv-aufbauend / kontemplativ-vertiefend). ACHTUNG: kontemplativ-vertiefend ist als DATENWERT gesetzt, aber NOCH NICHT als Methoden-Konvention in lectio-mode aufgenommen (nur ein Fall; wartet auf zweiten — Befund #2 „destillieren, nicht postulieren"). lectio-mode bleibt v1.9.
 
@@ -208,7 +211,7 @@ Ergänzend zu Tableau-Bauten gibt es Lectios — geführte Pfade durch ein Table
 
 **Datenort:** `data/lectio/[id].json`. Loader in `src/lib/data.ts` (LECTIOS-Dictionary), Route `/lectio/[id]`.
 
-**Bestehende Lectios:** `hard-problem` (Geist) · `wer-beobachtet` (Selbst) · `findest-du-oder-machst-du` (Selbst) · `wenn-die-welt-wackelt` (Realismus) · `warum-sollst-du` (Ethik) · `wenn-nichts-vorgegeben` (Existenzialismus) · `warum-gehorchst-du` (Politische Philosophie) · `ruhe-oder-rausch` (Lebenskunst) · `der-weg-des-menschen` (Begegnung — Ein-Werk-Lectio, kontemplativ-vertiefend) · `ist-der-andere-hoelle-oder-heimat` (Begegnung — konkurrierend-konfrontativ) · `verstehen-oder-weitergehen` (Wandlung — narrativ-historisch) · `stell-die-frage-anders` (Gut und Böse — destruktiv-aufbauend) · `wer-bist-du-wenn-du-alles-weglaesst` (Selbst — konkurrierend-konfrontativ, **ton: erzählend-erfahrend** — erster Test des erzählenden Tons, Vergleichsfall zu `wer-beobachtet`).
+**Bestehende Lectios:** `hard-problem` (Geist) · `wer-beobachtet` (Selbst) · `findest-du-oder-machst-du` (Selbst) · `wenn-die-welt-wackelt` (Realismus) · `warum-sollst-du` (Ethik) · `wenn-nichts-vorgegeben` (Existenzialismus) · `warum-gehorchst-du` (Politische Philosophie) · `ruhe-oder-rausch` (Lebenskunst) · `der-weg-des-menschen` (Begegnung — Ein-Werk-Lectio, kontemplativ-vertiefend) · `ist-der-andere-hoelle-oder-heimat` (Begegnung — konkurrierend-konfrontativ) · `verstehen-oder-weitergehen` (Wandlung — narrativ-historisch) · `stell-die-frage-anders` (Gut und Böse — destruktiv-aufbauend) · `wer-bist-du-wenn-du-alles-weglaesst` (Selbst — konkurrierend-konfrontativ, **ton: erzählend-erfahrend** — erster Test des erzählenden Tons, Vergleichsfall zu `wer-beobachtet`) · `warum-gehorchst-du-expositorisch` (Politische Philosophie — Original-Variante als Vergleichsfall: expositorisch/destruktiv-aufbauend neben der gemischten 2.0-Fassung) · `vom-wissen-zum-glauben` (Verwandlung — erzählend-erfahrend, L3, 6 Stationen: Augustinus→Stoa→Rilke→Eckhart→James→Jung).
 
 ---
 

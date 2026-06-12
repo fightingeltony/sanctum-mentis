@@ -366,14 +366,14 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
   function toggleType(type: InfluenceType) {
     setHiddenTypes(prev => {
       const next = new Set(prev)
-      next.has(type) ? next.delete(type) : next.add(type)
+      if (next.has(type)) { next.delete(type) } else { next.add(type) }
       return next
     })
   }
   function toggleSchool(id: string) {
     setHiddenSchools(prev => {
       const next = new Set(prev)
-      next.has(id) ? next.delete(id) : next.add(id)
+      if (next.has(id)) { next.delete(id) } else { next.add(id) }
       return next
     })
   }

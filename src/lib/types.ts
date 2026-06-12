@@ -158,7 +158,6 @@ export interface LectioNarrative {
 export interface LectioStep {
   nodeId: string | string[];
   nodeType: 'thinker' | 'concept' | 'school';
-  brief?: string;
   step_brief?: string;   // überschreibt den Knoten-Text NUR für diese Station
                          // (Ein-Werk-Lectio: derselbe Knoten an mehreren Stationen
                          // mit verschiedenem Text). Annotationsfrei, wie lectio_brief.

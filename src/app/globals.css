@@ -491,6 +491,17 @@ svg.sc-focus .sc-edge-g:not(.sc-lit) .sc-brk  { opacity: .14; }
 
 /* Stars */
 .sc-star { cursor: pointer; }
+.sc-star:focus { outline: none; }
+.sc-star:focus-visible .sc-spike {
+  /* Sienna-Akzent-Ring als focus-visible-Indikator — sichtbar auch ohne Hover-Gerät */
+  filter: drop-shadow(0 0 3px oklch(0.52 0.12 50)) drop-shadow(0 0 6px oklch(0.52 0.12 50 / 0.5));
+}
+/* Orphan-Konzept-Marker focus-visible */
+.sc-concept-marker:focus { outline: none; }
+.sc-concept-marker:focus-visible circle:first-of-type {
+  stroke: oklch(0.52 0.12 50);
+  stroke-width: 2.5;
+}
 .sc-star-body { opacity: 1; transition: opacity .35s ease; }
 .sc-spike { fill: var(--ink); }
 .sc-ring  { fill: none; stroke: var(--ink); stroke-width: .7; opacity: .5; }

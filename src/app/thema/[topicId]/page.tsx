@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { notFound } from 'next/navigation'
 import { getTopic, getLectiosByTableauId, library } from '@/lib/data'
 import TopicViewer from '@/components/TopicViewer'
 
 interface Props {
-  params:       Promise<{ topicId: string }>
-  searchParams: Promise<{ highlight?: string; level?: string; tab?: string }>
+  params: Promise<{ topicId: string }>
 }
 
 export function generateStaticParams() {
@@ -40,28 +40,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function TopicPage({ params, searchParams }: Props) {
+export default async function TopicPage({ params }: Props) {
   const { topicId } = await params
-  const sp          = await searchParams
   const data        = getTopic(topicId)
   if (!data) notFound()
 
   const lectios = getLectiosByTableauId(topicId)
 
-  const VALID_TABS = ['denker', 'einfluesse', 'quadrant', 'sternkarte'] as const
-  type Tab = typeof VALID_TABS[number]
-  const rawTab = sp?.tab
-  const initialTab: Tab | undefined = (VALID_TABS as readonly string[]).includes(rawTab ?? '')
-    ? rawTab as Tab
-    : undefined
-
+  // TopicViewer reads URL params via useSearchParams() (Client Component).
+  // Suspense boundary required by Next.js when useSearchParams is used below
+  // a Server Component without a searchParams prop.
   return (
-    <TopicViewer
-      data={data}
-      lectios={lectios}
-      initialHighlight={sp?.highlight}
-      initialLevel={sp?.level ? Number(sp.level) : undefined}
-      initialTab={initialTab}
-    />
+    <Suspense>
+      <TopicViewer data={data} lectios={lectios} />
+    </Suspense>
   )
 }

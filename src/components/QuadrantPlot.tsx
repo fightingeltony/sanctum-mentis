@@ -80,7 +80,8 @@ export default function QuadrantPlot({
     prevLevel.current = levelId
     const newIds = concepts.filter(c => c.isNew).map(c => c.id)
     if (!newIds.length) return
-    setPulsing(new Set(newIds))
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setPulsing(new Set(newIds)) // Triggers pulse animation on newly visible concepts
     const t = setTimeout(() => setPulsing(new Set()), 2400)
     return () => clearTimeout(t)
   }, [levelId, concepts])

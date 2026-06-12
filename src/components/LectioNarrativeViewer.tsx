@@ -75,7 +75,8 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
     reducedMotion.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const saved = parseInt(localStorage.getItem(storageKey(lectio.id)) ?? '', 10)
     if (!isNaN(saved) && saved >= 0 && saved < totalStations) {
-      setIdx(saved)
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setIdx(saved)    // Client-only init from localStorage — runs once on mount
       setActive(saved)
     }
   }, [totalStations, lectio.id])
@@ -194,7 +195,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
               style={{ ['--d' as string]: '.1s' }}
               key={`meta-${revealKey}`}
             >
-              {lectio.tableauId === 'das-selbst' ? 'Die Landkarte des Selbst' : lectio.title}
+              {lectio.title}
               {' · '}{voiceSteps.length} Stimmen{' · '}~{lectio.estimated_minutes} Min
               {lectio.ton === 'erzählend-erfahrend' && ' · Erzählend'}
             </p>
@@ -240,10 +241,11 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           const isActive = active === stationIdx
           const ordinal = ORDINAL[vi] ?? `${vi + 1}.`
 
-          // Denker-Name aus topicData; Fallback: nodeId kapitalisiert
+          // Denker-Name aus topicData; Konzepte und Schulen werden ebenfalls aufgelöst
           const thinkerMatch = topicData?.thinkers.find(t => t.id === nodeId)
-          const schoolMatch = !thinkerMatch ? topicData?.schools.find(s => s.id === nodeId) : undefined
-          const displayName = thinkerMatch?.name ?? schoolMatch?.label
+          const conceptMatch = !thinkerMatch ? topicData?.concepts?.find(c => c.id === nodeId) : undefined
+          const schoolMatch = !thinkerMatch && !conceptMatch ? topicData?.schools.find(s => s.id === nodeId) : undefined
+          const displayName = thinkerMatch?.name ?? conceptMatch?.name ?? schoolMatch?.label
             ?? (nodeId.charAt(0).toUpperCase() + nodeId.slice(1).replace(/-/g, ' '))
 
           const stepTon = step.ton ?? (lectio.ton === 'gemischt' ? 'erzählend-erfahrend' : lectio.ton)
@@ -330,17 +332,9 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
               style={{ ['--d' as string]: '.4s' }}
               key={`ss-${revealKey}`}
             >
-              {synthParagraphs.map((p, i) => {
-                const isLast = i === synthParagraphs.length - 1
-                if (isLast) {
-                  return (
-                    <p key={i}>
-                      {renderWithKernel(p, 'Das ist deine eigene Antwort, die du längst hattest, bevor die Frage gestellt wurde.')}
-                    </p>
-                  )
-                }
-                return <p key={i} className={i === 0 ? 'hook' : undefined}>{p}</p>
-              })}
+              {synthParagraphs.map((p, i) => (
+                <p key={i} className={i === 0 ? 'hook' : undefined}>{p}</p>
+              ))}
             </div>
             <p
               className="kicker serif reveal"

@@ -236,6 +236,30 @@ function contentFor(t: Thinker, levelId: number): string {
   return t.versions[Number(k)] ?? t.lectio_brief ?? ''
 }
 
+// ─── Zoom button helper ───────────────────────────────────────
+
+function ZoomButton({ label, icon, onClick, small }: {
+  label:   string
+  icon:    string
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
+  small?:  boolean
+}) {
+  return (
+    <button
+      aria-label={label}
+      onClick={onClick}
+      style={{
+        width: 30, height: 30, border: '1px solid var(--hairline-strong)',
+        background: 'var(--bg-raised)', color: 'var(--fg-muted)',
+        fontSize: small ? 12 : 15, cursor: 'pointer',
+        display: 'grid', placeItems: 'center',
+      }}
+    >
+      {icon}
+    </button>
+  )
+}
+
 // ─── Types ────────────────────────────────────────────────────
 
 type ThinkerWithDesc = Thinker & { description: string }
@@ -264,7 +288,7 @@ interface Props {
 // ─── Component ────────────────────────────────────────────────
 
 export default function StarChart({
-  thinkers, influences, allThinkers, schools, concepts, levelId, levels, quadrants,
+  thinkers, influences, allThinkers, schools, concepts, levelId, quadrants,
 }: Props) {
 
   const [mode,               setMode]             = useState<'axis' | 'school'>('axis')
@@ -300,6 +324,7 @@ export default function StarChart({
   // ── isMobile detection ────────────────────────────────────
   useEffect(() => {
     const mq = matchMedia('(max-width: 640px)')
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time hydration from matchMedia on mount; not a cascade
     setIsMobile(mq.matches)
     const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches)
     mq.addEventListener('change', handler)
@@ -382,12 +407,16 @@ export default function StarChart({
     [thinkers, isMobile],
   )
   const axisLabelSidesRef = useRef(axisLabelSides)
-  axisLabelSidesRef.current = axisLabelSides   // always current, no stale-closure risk
+  // Intentional render-time ref write: axisLabelSidesRef must be current *before* applyLabelSides
+  // runs in the same commit cycle. Moving to useLayoutEffect causes a one-frame lag in the morph.
+  // eslint-disable-next-line react-hooks/refs
+  axisLabelSidesRef.current = axisLabelSides
 
   // ── Load read set ─────────────────────────────────────────
   useEffect(() => {
     try {
       const saved = JSON.parse(localStorage.getItem(RKEY) || '[]') as string[]
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage hydration on mount; SSR-safe pattern (no localStorage during SSR)
       setReadSet(new Set(saved))
     } catch { /* storage unavailable */ }
   }, [])
@@ -611,6 +640,10 @@ export default function StarChart({
     camera.style.transformOrigin = '0 0'
   }, [])
 
+  const zoomIn    = useCallback(() => { panRef.current.scale *= 1.25; applyZoom() }, [applyZoom])
+  const zoomOut   = useCallback(() => { panRef.current.scale *= 0.8;  applyZoom() }, [applyZoom])
+  const zoomReset = useCallback(() => { panRef.current = { scale: 1, tx: 0, ty: 0 }; applyZoom() }, [applyZoom])
+
   // Wheel + touchstart (both need { passive: false })
   useEffect(() => {
     const stage = stageRef.current
@@ -775,6 +808,10 @@ export default function StarChart({
     Object.values(edgeRefs.current).forEach(r => r?.g?.classList.remove('sc-lit'))
     Object.values(starGRefs.current).forEach(g => g?.classList.remove('sc-active', 'sc-neighbor'))
   }, [])
+  // Intentional render-time ref write: deselectRef is read inside onStagePointerUp (pointer
+  // event handler) which can't use React state. Ref-as-stable-callback-alias is the standard
+  // pattern for breaking stale-closure cycles without re-creating the handler on every render.
+  // eslint-disable-next-line react-hooks/refs
   deselectRef.current = deselect
 
   const selectConcept = useCallback((id: string) => {
@@ -801,8 +838,18 @@ export default function StarChart({
 
   // Auto-deselect if selected thinker no longer visible
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- deselect() also cleans up DOM class state (sc-focus/sc-active/sc-neighbor); cannot be replaced by a derived value
     if (selected && !thinkerById[selected]) deselect()
   }, [thinkers, selected, thinkerById, deselect])
+
+  // Escape closes the cartouche
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && (selected || selectedConceptId)) deselect()
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [selected, selectedConceptId, deselect])
 
   // ── Counts ────────────────────────────────────────────────
   const totalThinkers   = allThinkers.length
@@ -817,9 +864,6 @@ export default function StarChart({
   const selectedConcept   = selectedConceptId
     ? orphanConcepts.find(c => c.id === selectedConceptId) ?? null
     : null
-
-  // ── Current level label ───────────────────────────────────
-  const currentLevel = levels.find(l => l.id === levelId)
 
   // ── SVG geometry helpers (branch on isMobile) ────────────
   const svgW    = isMobile ? MW    : W
@@ -858,7 +902,7 @@ export default function StarChart({
 
   // Vertical pole — mobile X-poles rotated -90° into side gutters.
   // No wrapping (dy direction flips after rotation → overlap) and no hint (gutter too narrow).
-  function renderPoleVertical(gx: number, label: string, _hint: string | undefined) {
+  function renderPoleVertical(gx: number, label: string) {
     const yc = MH / 2
     return (
       <g>
@@ -868,14 +912,6 @@ export default function StarChart({
         >
           {label.toUpperCase()}
         </text>
-        {false && (
-          <text
-            x={gx + 16} y={yc} textAnchor="middle" className="sc-pole-hint"
-            transform={`rotate(-90,${gx + 16},${yc})`}
-          >
-            {label}
-          </text>
-        )}
       </g>
     )
   }
@@ -888,9 +924,9 @@ export default function StarChart({
       {/* ── Controls ── */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: isMobile ? '2px 4px 8px' : '4px 4px 10px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 8 : 16 }}>
-          <div className="sc-modeswitch">
-            <button data-sc-mode="axis"   className={mode === 'axis'   ? 'sc-on' : ''} onClick={() => morph('axis')}>Karte</button>
-            <button data-sc-mode="school" className={mode === 'school' ? 'sc-on' : ''} onClick={() => morph('school')}>Schulen</button>
+          <div className="sc-modeswitch" role="group" aria-label="Ansicht wählen">
+            <button data-sc-mode="axis"   className={mode === 'axis'   ? 'sc-on' : ''} aria-pressed={mode === 'axis'}   onClick={() => morph('axis')}>Karte</button>
+            <button data-sc-mode="school" className={mode === 'school' ? 'sc-on' : ''} aria-pressed={mode === 'school'} onClick={() => morph('school')}>Schulen</button>
           </div>
           <label className="sc-lines-toggle">
             <input type="checkbox" checked={showLines} onChange={e => setShowLines(e.target.checked)} />
@@ -1013,8 +1049,8 @@ export default function StarChart({
                 {isMobile ? (
                   // Mobile: X-poles rotated vertically in narrow side gutters; Y-poles horizontal
                   <>
-                    {renderPoleVertical(26, quadrants.axisX.left, quadrants.axisX.leftHint)}
-                    {renderPoleVertical(MW - 26, quadrants.axisX.right, quadrants.axisX.rightHint)}
+                    {renderPoleVertical(26, quadrants.axisX.left)}
+                    {renderPoleVertical(MW - 26, quadrants.axisX.right)}
                     {quadrants.axisY.topHint && (
                       <text x={MW / 2} y={60} textAnchor="middle" className="sc-pole-hint">
                         {quadrants.axisY.topHint}
@@ -1137,8 +1173,16 @@ export default function StarChart({
                     const isConceptActive = selectedConceptId === c.id
                     return (
                       <g key={c.id}
+                        className="sc-concept-marker"
                         style={{ cursor: 'pointer' }}
+                        tabIndex={0}
+                        role="button"
+                        aria-label={c.name + ', ' + CONCEPT_LABEL[c.type]}
                         onClick={e => { e.stopPropagation(); selectConcept(c.id) }}
+                        onKeyDown={e => {
+                          if (e.key === 'Enter') { e.stopPropagation(); selectConcept(c.id) }
+                          if (e.key === ' ')     { e.preventDefault(); e.stopPropagation(); selectConcept(c.id) }
+                        }}
                       >
                         {/* Touch target */}
                         <circle cx={cx} cy={cy} r={isMobile ? 22 : 14} fill="transparent"/>
@@ -1185,7 +1229,7 @@ export default function StarChart({
                   const off   = isMobile ? 8 : 6
                   const onLeft = (axisLabelSides[t.id] ?? (t.x > 55 ? 'left' : 'right')) === 'left'
                   const ldx   = onLeft ? -(R + off) : (R + off)
-                  const anc   = onLeft ? 'end' : 'start'
+                  const anc: 'start' | 'end' = onLeft ? 'end' : 'start'
 
                   return (
                     <g
@@ -1193,9 +1237,18 @@ export default function StarChart({
                       data-star-id={t.id}
                       className={`sc-star${isAnchor ? ' sc-anchor' : ''}`}
                       ref={el => { starGRefs.current[t.id] = el }}
+                      tabIndex={0}
+                      role="button"
+                      aria-label={t.name + (t.lifespan ? ', ' + t.lifespan : '')}
                       onMouseEnter={() => focusStar(t.id)}
                       onMouseLeave={clearFocus}
+                      onFocus={() => focusStar(t.id)}
+                      onBlur={clearFocus}
                       onClick={e => { e.stopPropagation(); selectStar(t.id) }}
+                      onKeyDown={e => {
+                        if (e.key === 'Enter') { e.stopPropagation(); selectStar(t.id) }
+                        if (e.key === ' ')     { e.preventDefault(); e.stopPropagation(); selectStar(t.id) }
+                      }}
                     >
                       {/* Wide touch / pointer target */}
                       <circle cx={cx} cy={cy} r={isMobile ? 22 : 16} fill="transparent"/>
@@ -1212,10 +1265,10 @@ export default function StarChart({
                         <path className="sc-spike" d={spikePath(cx, cy, R)}/>
                         <circle cx={cx} cy={cy} r={isAnchor ? 2.4 : 1.8} fill={col}/>
                         <circle className="sc-unread-dot" cx={cx + R * 0.9} cy={cy - R * 0.9} r={1.9} fill={col}/>
-                        <text className="sc-sname" x={cx + ldx} y={cy - 1} textAnchor={anc as any} dominantBaseline="central">
+                        <text className="sc-sname" x={cx + ldx} y={cy - 1} textAnchor={anc} dominantBaseline="central">
                           {t.name}
                         </text>
-                        <text className="sc-slife" x={cx + ldx} y={cy + (isMobile ? 18 : 10)} textAnchor={anc as any} dominantBaseline="central">
+                        <text className="sc-slife" x={cx + ldx} y={cy + (isMobile ? 18 : 10)} textAnchor={anc} dominantBaseline="central">
                           {t.lifespan}
                         </text>
                       </g>
@@ -1267,25 +1320,9 @@ export default function StarChart({
               display: 'flex', flexDirection: 'column', gap: 5, zIndex: 4,
             }}
           >
-            {[
-              { label: 'Vergrössern',  icon: '+',  fn: () => { panRef.current.scale *= 1.25; applyZoom() } },
-              { label: 'Verkleinern',  icon: '−',  fn: () => { panRef.current.scale *= 0.8;  applyZoom() } },
-              { label: 'Zurücksetzen', icon: '⟲',  fn: () => { panRef.current = { scale: 1, tx: 0, ty: 0 }; applyZoom() } },
-            ].map(({ label, icon, fn }) => (
-              <button
-                key={label}
-                aria-label={label}
-                onClick={e => { e.stopPropagation(); fn() }}
-                style={{
-                  width: 30, height: 30, border: '1px solid var(--hairline-strong)',
-                  background: 'var(--bg-raised)', color: 'var(--fg-muted)',
-                  fontSize: icon === '⟲' ? 12 : 15, cursor: 'pointer',
-                  display: 'grid', placeItems: 'center',
-                }}
-              >
-                {icon}
-              </button>
-            ))}
+            <ZoomButton label="Vergrössern"  icon="+"  onClick={e => { e.stopPropagation(); zoomIn()    }}/>
+            <ZoomButton label="Verkleinern"  icon="−"  onClick={e => { e.stopPropagation(); zoomOut()   }}/>
+            <ZoomButton label="Zurücksetzen" icon="⟲"  onClick={e => { e.stopPropagation(); zoomReset() }} small/>
           </div>}
 
           {/* ── Desktop cartouche — hidden on mobile (replaced by bottom-sheet) ── */}
@@ -1371,8 +1408,8 @@ export default function StarChart({
       {/* ── Mobile bottom-sheet cartouche ── */}
       {isMobile && (selectedThinker || selectedConcept) && (
         <>
-          <div className="sc-sheet-scrim" onClick={deselect} />
-          <div className="sc-sheet" onClick={e => e.stopPropagation()}>
+          <div className="sc-sheet-scrim" onClick={deselect} aria-hidden />
+          <div className="sc-sheet" role="dialog" aria-label={selectedThinker ? selectedThinker.name : selectedConcept?.name} onClick={e => e.stopPropagation()}>
             {/* Drag handle — fixed at top, not scrolled */}
             <div style={{ flex: '0 0 auto', display: 'flex', justifyContent: 'center', padding: '10px 0 4px' }}>
               <div style={{ width: 36, height: 4, borderRadius: 2, background: 'var(--hairline-strong)' }} />
