@@ -329,6 +329,20 @@ export default function StarChart({
   // last tap for double-tap detection (touch only)
   const lastTapRef  = useRef<{ x: number; y: number; t: number } | null>(null)
 
+  // ── Label element cache (Konter-Skalierung + Deklutter) ───
+  // Maps thinker-id → { name: SVGTextElement, life: SVGTextElement | null }
+  // Built lazily in applyZoom / updateLabelVisibility to avoid querySelector per frame.
+  const labelElemsRef = useRef<Record<string, { name: SVGTextElement | null; life: SVGTextElement | null }>>({})
+  // Maps orphan-concept-id → label SVGTextElement
+  const conceptLabelElemsRef = useRef<Record<string, SVGTextElement | null>>({})
+  // Debounce timer for wheel-end detection
+  const wheelVisTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  // Stable ref-as-callback for updateLabelVisibility (defined later in the component).
+  // Render-time ref write (see deselectRef pattern) — intentional, eslint-disable not needed.
+  const updateLabelVisibilityRef = useRef<() => void>(() => {})
+  // Convenience trampoline — stable identity, calls the current implementation.
+  const updateLabelVisibility = () => updateLabelVisibilityRef.current()
+
   // ── cancelKinetics — stops momentum decay or double-tap tween ──
   // Declared early (before morph/wheel handlers) because it's called by both.
   // Plain function (not useCallback): only reads stable refs — never stale.
@@ -568,6 +582,9 @@ export default function StarChart({
       }
     })
     drawnPosRef.current = newDrawn
+    // Invalidate label-element caches so applyZoom/updateLabelVisibility pick up new DOM elements
+    labelElemsRef.current = {}
+    conceptLabelElemsRef.current = {}
     syncPositions()
     applyLabelSides(modeRef.current)
     thinkers.forEach(t => {
@@ -577,8 +594,20 @@ export default function StarChart({
         g.classList.toggle('sc-unread', !readSet.has(k))
       }
     })
+    // Schedule visibility pass after paint (DOM must be up-to-date)
+    requestAnimationFrame(() => { updateLabelVisibility() })
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [thinkers, levelId, isMobile])
+
+  // ── Re-run declutter once webfonts arrive (first visit: Marcellus swaps in
+  //    after the initial pass and shifts label metrics) ──────────────────────
+  useEffect(() => {
+    let stale = false
+    document.fonts?.ready?.then(() => {
+      if (!stale) requestAnimationFrame(() => { updateLabelVisibility() })
+    })
+    return () => { stale = true }
+  }, [])
 
   // ── Update unread state when readSet changes ──────────────
   useEffect(() => {
@@ -607,7 +636,7 @@ export default function StarChart({
     svgRef.current?.classList.toggle('sc-mode-school', to === 'school')
     applyLabelSides(to)
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduce) { syncPositions(); return }
+    if (reduce) { syncPositions(); requestAnimationFrame(updateLabelVisibility); return }
     const starts:  Record<string, Pos> = {}
     const targets: Record<string, Pos> = {}
     thinkers.forEach(t => {
@@ -632,7 +661,13 @@ export default function StarChart({
       })
       updateStarTransforms()
       renderEdges()
-      if (k < 1) morphRafRef.current = requestAnimationFrame(frame)
+      if (k < 1) {
+        morphRafRef.current = requestAnimationFrame(frame)
+      } else {
+        morphRafRef.current = null
+        // Morph ended — update label visibility after positions are final
+        updateLabelVisibility()
+      }
     }
     morphRafRef.current = requestAnimationFrame(frame)
   }, [thinkers, activeSchoolLayout, syncPositions, applyLabelSides, updateStarTransforms, renderEdges])
@@ -657,11 +692,155 @@ export default function StarChart({
     ps.ty = Math.max(-oh, Math.min(0, ps.ty))
     camera.style.transform = `translate(${ps.tx}px,${ps.ty}px) scale(${ps.scale})`
     camera.style.transformOrigin = '0 0'
-  }, [])
 
-  const zoomIn    = useCallback(() => { panRef.current.scale *= 1.25; applyZoom() }, [applyZoom])
-  const zoomOut   = useCallback(() => { panRef.current.scale *= 0.8;  applyZoom() }, [applyZoom])
-  const zoomReset = useCallback(() => { panRef.current = { scale: 1, tx: 0, ty: 0 }; applyZoom() }, [applyZoom])
+    // ── A: Counter-scale star labels so they stay the same screen size ──
+    // Each text element is translated to its star anchor and then scaled by 1/k.
+    // The star group has a translate(dx,dy) from the morph — labels are positioned
+    // relative to drawnPos (their x= attribute is set by applyLabelSides to
+    // drawnCx ± offset). We counter-scale around the drawnPos anchor (cx, cy).
+    const k = ps.scale
+    const cache = labelElemsRef.current
+    thinkers.forEach(t => {
+      if (t.x === undefined || t.y === undefined) return
+      const drawn = drawnPosRef.current[t.id]
+      if (!drawn) return
+      const cx = drawn.x, cy = drawn.y
+
+      // Lazily build element cache per star
+      if (!cache[t.id]) {
+        const g = starGRefs.current[t.id]
+        cache[t.id] = {
+          name: g?.querySelector<SVGTextElement>('.sc-sname') ?? null,
+          life: g?.querySelector<SVGTextElement>('.sc-slife') ?? null,
+        }
+      }
+      const { name, life } = cache[t.id]
+      if (k === 1) {
+        name?.removeAttribute('transform')
+        life?.removeAttribute('transform')
+      } else {
+        // transform = translate(cx - cx/k, cy - cy/k) scale(1/k)
+        // This scales around the local star origin (cx,cy in drawn-pos space).
+        const inv = 1 / k
+        const tx  = cx - cx * inv
+        const ty  = cy - cy * inv
+        const tr  = `translate(${tx.toFixed(3)},${ty.toFixed(3)}) scale(${inv.toFixed(4)})`
+        name?.setAttribute('transform', tr)
+        life?.setAttribute('transform', tr)
+      }
+    })
+
+    // Counter-scale orphan concept label texts
+    const cCache = conceptLabelElemsRef.current
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    Object.entries(cCache).forEach(([cid, el]) => {
+      if (!el) return
+      if (k === 1) {
+        el.removeAttribute('transform')
+        return
+      }
+      // Anchor: the x/y of the text element itself (set by React render)
+      const ex = parseFloat(el.getAttribute('x') ?? '0')
+      const ey = parseFloat(el.getAttribute('y') ?? '0')
+      const inv = 1 / k
+      const tx  = ex - ex * inv
+      const ty  = ey - ey * inv
+      el.setAttribute('transform', `translate(${tx.toFixed(3)},${ty.toFixed(3)}) scale(${inv.toFixed(4)})`)
+    })
+  // applyZoom closes over thinkers for counter-scaling; recreated when thinkers changes.
+  }, [thinkers])
+
+  const zoomIn    = useCallback(() => { panRef.current.scale *= 1.25; applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
+  const zoomOut   = useCallback(() => { panRef.current.scale *= 0.8;  applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
+  const zoomReset = useCallback(() => { panRef.current = { scale: 1, tx: 0, ty: 0 }; applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
+
+  // ── B: Priority deklutter — hide overlapping labels, reveal on zoom ──
+  // Runs ONLY at rest (after gestures/tweens end), never during live pan/pinch frames.
+  // Uses getBoundingClientRect for ground-truth measurements that include counter-scaling,
+  // label-side placement, and morph position automatically.
+  // eslint-disable-next-line react-hooks/refs
+  updateLabelVisibilityRef.current = () => {
+    // Sort thinkers by priority: firstLevel ascending (anchors first), then array order.
+    // firstLevel-1 stars always keep their label (never culled).
+    const sorted = [...thinkers].sort((a, b) => a.firstLevel - b.firstLevel)
+
+    type Rect = { left: number; right: number; top: number; bottom: number }
+    const PAD = 2 // px gap between label blocks
+    const accepted: Rect[] = []
+
+    function overlaps(r: Rect): boolean {
+      return accepted.some(a =>
+        r.left   - PAD < a.right  &&
+        r.right  + PAD > a.left   &&
+        r.top    - PAD < a.bottom &&
+        r.bottom + PAD > a.top
+      )
+    }
+
+    function unionRect(a: DOMRect | null, b: DOMRect | null): Rect | null {
+      if (!a && !b) return null
+      if (!a) return b ? { left: b.left, right: b.right, top: b.top, bottom: b.bottom } : null
+      if (!b) return { left: a.left, right: a.right, top: a.top, bottom: a.bottom }
+      return {
+        left:   Math.min(a.left,   b.left),
+        right:  Math.max(a.right,  b.right),
+        top:    Math.min(a.top,    b.top),
+        bottom: Math.max(a.bottom, b.bottom),
+      }
+    }
+
+    for (const t of sorted) {
+      const cache = labelElemsRef.current
+      if (!cache[t.id]) {
+        const g = starGRefs.current[t.id]
+        cache[t.id] = {
+          name: g?.querySelector<SVGTextElement>('.sc-sname') ?? null,
+          life: g?.querySelector<SVGTextElement>('.sc-slife') ?? null,
+        }
+      }
+      const { name, life } = cache[t.id]
+      if (!name) continue
+
+      const isSelected = selectedRef.current === t.id
+      const isAnchor   = t.firstLevel === 1
+
+      // Temporarily ensure label is visible so getBoundingClientRect is accurate
+      // (culled labels have opacity: 0 via CSS class but are not display:none)
+      const nameRect = name.getBoundingClientRect()
+      const lifeRect = life?.getBoundingClientRect() ?? null
+      const block    = unionRect(nameRect, lifeRect)
+      if (!block || (block.right - block.left < 0.5 && block.bottom - block.top < 0.5)) {
+        // Zero-size rect means element is not rendered / has no geometry yet — skip
+        continue
+      }
+
+      const cull = !isAnchor && !isSelected && overlaps(block)
+
+      if (cull) {
+        name.classList.add('sc-label-culled')
+        life?.classList.add('sc-label-culled')
+      } else {
+        name.classList.remove('sc-label-culled')
+        life?.classList.remove('sc-label-culled')
+        accepted.push(block)
+      }
+    }
+
+    // Orphan concept labels — lowest priority
+    orphanConcepts.forEach(c => {
+      const el = conceptLabelElemsRef.current[c.id]
+      if (!el) return
+      const r = el.getBoundingClientRect()
+      if (r.width < 0.5) return
+      const block: Rect = { left: r.left, right: r.right, top: r.top, bottom: r.bottom }
+      if (overlaps(block)) {
+        el.classList.add('sc-label-culled')
+      } else {
+        el.classList.remove('sc-label-culled')
+        accepted.push(block)
+      }
+    })
+  }
 
   // Wheel + touchstart (both need { passive: false })
   useEffect(() => {
@@ -681,6 +860,9 @@ export default function StarChart({
       ps.tx = mx - (mx - ps.tx) * (ps.scale / old)
       ps.ty = my - (my - ps.ty) * (ps.scale / old)
       applyZoom()
+      // Debounced visibility pass — ~160ms after the last wheel event
+      if (wheelVisTimerRef.current) clearTimeout(wheelVisTimerRef.current)
+      wheelVisTimerRef.current = setTimeout(updateLabelVisibility, 160)
     }
     const onTouchStart = (e: TouchEvent) => {
       if (e.touches.length > 1) e.preventDefault()
@@ -798,6 +980,7 @@ export default function StarChart({
   const onStagePointerUp = useCallback((e: React.PointerEvent) => {
     const wasTap      = ptrsRef.current.size === 1 && !didMoveRef.current
     const wasDrag     = ptrsRef.current.size === 1 && didMoveRef.current
+    const wasPinch    = ptrsRef.current.size === 2 && pinchRef.current !== null
     const pointerType = e.pointerType
     ptrsRef.current.delete(e.pointerId)
     if (ptrsRef.current.size === 1) {
@@ -837,10 +1020,21 @@ export default function StarChart({
               kineticsRaf.current = requestAnimationFrame(decay)
             } else {
               kineticsRaf.current = null
+              // Momentum ended — run visibility pass (pan only, scale unchanged)
+              updateLabelVisibility()
             }
           }
           kineticsRaf.current = requestAnimationFrame(decay)
+        } else {
+          // Low-velocity drag: no momentum, but we still released — update visibility
+          updateLabelVisibility()
         }
+      } else if (wasDrag && reduce) {
+        // Reduced motion: no momentum animation, update immediately
+        updateLabelVisibility()
+      } else if (wasPinch) {
+        // Pinch ended (last finger lifted) — scale may have changed, update immediately
+        updateLabelVisibility()
       }
 
       // Feature C: double-tap zoom (touch only, not on nodes)
@@ -865,6 +1059,7 @@ export default function StarChart({
             panRef.current.tx    = targetTx
             panRef.current.ty    = targetTy
             applyZoom()
+            updateLabelVisibility()
           } else {
             cancelKinetics()
             const dur  = 260
@@ -882,6 +1077,8 @@ export default function StarChart({
                 kineticsRaf.current = requestAnimationFrame(tween)
               } else {
                 kineticsRaf.current = null
+                // Double-tap tween ended — update label visibility
+                updateLabelVisibility()
               }
             }
             kineticsRaf.current = requestAnimationFrame(tween)
@@ -1362,6 +1559,7 @@ export default function StarChart({
                           fontFamily="var(--font-ui, sans-serif)"
                           letterSpacing="0.02em"
                           fontWeight={isConceptActive ? '600' : undefined}
+                          ref={el => { conceptLabelElemsRef.current[c.id] = el }}
                         >
                           {c.name}
                         </text>

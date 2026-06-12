@@ -561,6 +561,30 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
 }
 .sc-lines-toggle input { accent-color: var(--accent); cursor: pointer; }
 
+/* ── B: Priority deklutter — hide overlapping labels, reveal on zoom/focus ── */
+.sc-sname,
+.sc-slife {
+  transition: opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* Culled labels are invisible but still measurable (no display:none) */
+.sc-label-culled {
+  opacity: 0 !important;
+}
+/* Always reveal the label of the selected/focused star */
+.sc-star.sc-active .sc-sname.sc-label-culled,
+.sc-star.sc-active .sc-slife.sc-label-culled,
+.sc-star:focus-visible .sc-sname.sc-label-culled,
+.sc-star:focus-visible .sc-slife.sc-label-culled {
+  opacity: 1 !important;
+}
+/* Hover reveal — only on pointer devices */
+@media (hover: hover) {
+  .sc-star:hover .sc-sname.sc-label-culled,
+  .sc-star:hover .sc-slife.sc-label-culled {
+    opacity: 0.85 !important;
+  }
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .sc-axischrome, .sc-schoollabels,
@@ -569,6 +593,9 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
   .sc-star.sc-active .sc-halo-pulse { animation: none; }
   .sc-sheet { animation: none; }
   .sc-sheet-scrim { animation: none; }
+  /* Deklutter transition also disabled */
+  .sc-sname,
+  .sc-slife { transition: none; }
 }
 
 /* ── Mobile overrides (≤640px) ── */
