@@ -311,7 +311,7 @@ function curveD(ax: number, ay: number, bx: number, by: number) {
 
 export default function InfluenceGraph({ thinkers, influences, schools, currentLevel, topic }: Props) {
   const [activeNode, setActiveNode] = useState<string | null>(null)
-  const [activeEdge, setActiveEdge] = useState<InfluenceWithDesc | null>(null)
+  const [activeEdgeKey, setActiveEdgeKey] = useState<string | null>(null)
   const [hoveredNode, setHoveredNode] = useState<string | null>(null)
   const [hoveredSchool, setHoveredSchool] = useState<string | null>(null)
   const [hiddenTypes, setHiddenTypes] = useState<Set<InfluenceType>>(new Set())
@@ -378,6 +378,11 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
     })
   }
 
+  // Resolve activeEdge from key each render — prevents stale object reference after level change
+  const activeEdge = activeEdgeKey
+    ? influences.find(i => `${i.from}::${i.to}` === activeEdgeKey) ?? null
+    : null
+
   const { containerRef, wrapperRef, suppressClick, reset, zoomIn, zoomOut, handlers } =
     usePanZoom(W, H)
 
@@ -410,7 +415,7 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
 
   function isEdgeFocused(rel: InfluenceWithDesc) {
     if (focusId) return rel.from === focusId || rel.to === focusId
-    if (activeEdge) return rel === activeEdge
+    if (activeEdgeKey) return `${rel.from}::${rel.to}` === activeEdgeKey
     if (hoveredSchool) return false
     return false
   }
@@ -424,21 +429,22 @@ export default function InfluenceGraph({ thinkers, influences, schools, currentL
     if (hoveredSchool) return thinkers.find(t => t.id === id)?.schoolId === hoveredSchool
     return false
   }
-  const anyFocused = focusId !== null || activeEdge !== null || hoveredSchool !== null
+  const anyFocused = focusId !== null || activeEdgeKey !== null || hoveredSchool !== null
 
   function clickNode(id: string) {
     if (suppressClick.current) return
-    setActiveEdge(null)
+    setActiveEdgeKey(null)
     setActiveNode(prev => prev === id ? null : id)
   }
   function clickEdge(rel: InfluenceWithDesc) {
     if (suppressClick.current) return
     setActiveNode(null)
-    setActiveEdge(prev => prev === rel ? null : rel)
+    const key = `${rel.from}::${rel.to}`
+    setActiveEdgeKey(prev => prev === key ? null : key)
   }
   function clear() {
     if (suppressClick.current) return
-    setActiveNode(null); setActiveEdge(null)
+    setActiveNode(null); setActiveEdgeKey(null)
   }
 
   const hoveredTooltip = (() => {

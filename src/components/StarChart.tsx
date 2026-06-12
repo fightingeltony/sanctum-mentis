@@ -452,9 +452,22 @@ export default function StarChart({
         : drawn
       posRef.current[t.id] = { ...target }
     })
+    // Orphan concept positions — axis mode only (school mode hides concept markers)
+    if (modeRef.current === 'axis') {
+      orphanConcepts.forEach(c => {
+        if (c.x === undefined || c.y === undefined) return
+        posRef.current[c.id] = {
+          x: isMobile ? mMapX(c.x) : mapX(c.x),
+          y: isMobile ? mMapY(c.y) : mapY(c.y),
+        }
+      })
+    } else {
+      // Remove concept positions so edges to them don't render in school mode
+      orphanConcepts.forEach(c => { delete posRef.current[c.id] })
+    }
     updateStarTransforms()
     renderEdges()
-  }, [thinkers, activeSchoolLayout, updateStarTransforms, renderEdges])
+  }, [thinkers, activeSchoolLayout, orphanConcepts, isMobile, updateStarTransforms, renderEdges])
 
   // ── Apply label side (axis: x>55→left; school: outward) ──
   const applyLabelSides = useCallback((m: 'axis' | 'school') => {
@@ -1505,6 +1518,7 @@ function CartoucheContent({
         <div style={{ borderTop: '2px solid var(--hairline-strong)' }}>
           <button
             onClick={() => setConceptsOpen(o => !o)}
+            aria-expanded={conceptsOpen}
             style={{
               width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               padding: '9px 14px', background: 'none', border: 'none', cursor: 'pointer',

@@ -48,13 +48,20 @@ export default async function TopicPage({ params, searchParams }: Props) {
 
   const lectios = getLectiosByTableauId(topicId)
 
+  const VALID_TABS = ['denker', 'einfluesse', 'quadrant', 'sternkarte'] as const
+  type Tab = typeof VALID_TABS[number]
+  const rawTab = sp?.tab
+  const initialTab: Tab | undefined = (VALID_TABS as readonly string[]).includes(rawTab ?? '')
+    ? rawTab as Tab
+    : undefined
+
   return (
     <TopicViewer
       data={data}
       lectios={lectios}
       initialHighlight={sp?.highlight}
       initialLevel={sp?.level ? Number(sp.level) : undefined}
-      initialTab={sp?.tab as 'denker' | 'einfluesse' | 'quadrant' | undefined}
+      initialTab={initialTab}
     />
   )
 }

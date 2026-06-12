@@ -65,7 +65,9 @@ function wrapHint(hint: string, maxLen = 32): [string] | [string, string] {
 export default function QuadrantPlot({
   concepts, totalConcepts, thinkers = [], levelId, currentLevel, quadrants, onThinkerClick,
 }: Props) {
-  const [selected, setSelected] = useState<ConceptWithDesc | null>(null)
+  const [selectedId, setSelectedId] = useState<string | null>(null)
+  // Resolve per-render — prevents stale object reference after level change
+  const selected = selectedId ? (concepts.find(c => c.id === selectedId) ?? null) : null
   const [hovered, setHovered]   = useState<string | null>(null)
   const [pulsing, setPulsing]   = useState<Set<string>>(new Set())
   const prevLevel = useRef(levelId)
@@ -85,11 +87,11 @@ export default function QuadrantPlot({
 
   function toggle(c: ConceptWithDesc) {
     if (suppressClick.current) return
-    setSelected(prev => prev?.id === c.id ? null : c)
+    setSelectedId(prev => prev === c.id ? null : c.id)
   }
   function clearSelection() {
     if (suppressClick.current) return
-    setSelected(null)
+    setSelectedId(null)
   }
 
   const hidden = totalConcepts - concepts.length
@@ -110,7 +112,7 @@ export default function QuadrantPlot({
           Komplexität: {currentLevel.label}
           {selected && (
             <button
-              onClick={() => setSelected(null)}
+              onClick={() => setSelectedId(null)}
               className="font-ui text-[11px] tracking-[0.14em] uppercase text-[var(--gold)]
                 hover:text-[var(--fg-muted)] transition-colors"
             >
@@ -431,7 +433,7 @@ export default function QuadrantPlot({
               </p>
             </div>
             <button
-              onClick={() => setSelected(null)}
+              onClick={() => setSelectedId(null)}
               aria-label="Schliessen"
               className="mt-0.5 shrink-0 text-[var(--fg-faint)] hover:text-[var(--fg)] transition-colors"
             >

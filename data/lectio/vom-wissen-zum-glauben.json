@@ -18,7 +18,7 @@
         "body": [
           "Augustinus kannte diesen gespaltenen Willen so genau, dass er ihm einen Namen gab: Ich will, und ich will zugleich nicht. Jahrelang wollte er ein anderer werden und hinderte sich im selben Moment daran, und kein noch so großes Mehr an Anstrengung löste den Knoten. Dann, im Garten, eine spielende Kinderstimme, ein aufgeschlagenes Buch, ein einzelner Satz — und die Glaswand war fort. Was sein Wille über Jahre nicht hatte erzwingen können, geschah in einem einzigen Augenblick. Und doch, sagt er, hatte all das Ringen davor genau darauf hingearbeitet."
         ],
-        "kernel": "Was der Wille jahrelang nicht erzwingen konnte, geschah in einem Augenblick — und doch hatte alles Ringen daraufhin gearbeitet.",
+        "kernel": "Was sein Wille über Jahre nicht hatte erzwingen können, geschah in einem einzigen Augenblick.",
         "bridge": "Augustinus' Lösung kam wie ein Blitz. Die nächste Stimme glaubt nicht an Blitze. Sie glaubt an Wiederholung."
       },
       "transition": "Augustinus' Lösung kam wie ein Blitz. Die nächste Stimme glaubt nicht an Blitze. Sie glaubt an Wiederholung."
@@ -31,7 +31,7 @@
         "body": [
           "Epiktet war ein Sklave und Mark Aurel ein Kaiser, und doch lehrten beide dasselbe: Verwandlung ist kein Ereignis, sondern eine Übung. Jeden Tag dieselbe schlichte Unterscheidung — was steht in meiner Macht und was nicht, mein eigenes Urteil über mich oder das Urteil der anderen. Wer das wieder und wieder einübt, wird allmählich ein anderer. Nicht im Durchbruch, sondern in tausend unscheinbaren Wiederholungen, bis aus der Übung eine zweite Natur geworden ist."
         ],
-        "kernel": "Kein Durchbruch, sondern tausend Wiederholungen, bis aus der Übung eine zweite Natur wird.",
+        "kernel": "bis aus der Übung eine zweite Natur geworden ist.",
         "bridge": "Üben kann man nur, was in der eigenen Macht steht. Die dritte Stimme sagt: Das Entscheidende steht gerade nicht in deiner Macht — es kommt von außen."
       },
       "transition": "Üben kann man nur, was in der eigenen Macht steht. Die dritte Stimme sagt: Das Entscheidende steht gerade nicht in deiner Macht — es kommt von außen."
@@ -44,7 +44,7 @@
         "body": [
           "Rilke hat genau das beschrieben, in einem Gedicht über eine antike Statue, der der Kopf fehlt. Sie hat keine Augen und sieht dich trotzdem an, und aus dem alten Stein bricht ein Satz hervor, mit dem niemand gerechnet hat: Du mußt dein Leben ändern. Nicht weil du es dir vorgenommen hättest, sondern weil etwas dich so getroffen hat, dass kein Zurück mehr bleibt. Manchmal wird das Gute nicht geglaubt, weil du dich dafür entschieden hast — sondern weil ein Mensch, ein Blick, eine Liebe die Glaswand von außen einschlägt."
         ],
-        "kernel": "Nicht weil du es dir vornimmst — sondern weil etwas dich trifft und kein Zurück mehr lässt.",
+        "kernel": "weil ein Mensch, ein Blick, eine Liebe die Glaswand von außen einschlägt.",
         "bridge": "Getroffenwerden kann man nicht erzwingen. Aber kann man etwas tun, damit es geschehen kann? Die vierte Stimme antwortet: ja — aufhören zu drücken."
       },
       "transition": "Getroffenwerden kann man nicht erzwingen. Aber kann man etwas tun, damit es geschehen kann? Die vierte Stimme antwortet: ja — aufhören zu drücken."
@@ -57,7 +57,7 @@
         "body": [
           "Meister Eckhart kannte einen Ausweg, und er ist unbequem, weil er nach nichts aussieht — nicht mehr wollen, nicht mehr erreichen, nicht fester glauben, sondern lassen. Er nannte es Gelassenheit: das Loslassen des eigenen Willens und der eigenen Bilder, bis ein leerer Raum entsteht, in dem etwas geschehen kann, das man nicht machen kann. Das ist keine Passivität, sagt Eckhart, sondern die schwerste Übung von allen — die Übung, das Erzwingen sein zu lassen. Für ihn glaubt man das Gute nicht durch Anstrengung, sondern indem man aufhört, daran festzuhalten, dass man es erzwingen müsste."
         ],
-        "kernel": "Für Eckhart ist die schwerste Übung, das Erzwingen sein zu lassen.",
+        "kernel": "die schwerste Übung von allen — die Übung, das Erzwingen sein zu lassen.",
         "bridge": "Loslassen, getroffen werden, ein Blitz im Garten — woran erkennst du, dass wirklich etwas geschehen ist und du es dir nicht nur einredest? Die fünfte Stimme prüft genau das."
       },
       "transition": "Loslassen, getroffen werden, ein Blitz im Garten — woran erkennst du, dass wirklich etwas geschehen ist und du es dir nicht nur einredest? Die fünfte Stimme prüft genau das."
@@ -70,7 +70,7 @@
         "body": [
           "William James sammelte hunderte Berichte von Menschen, die sich von Grund auf gewandelt hatten, und er fragte nicht, ob ihr Glaube wahr war oder woher er kam, sondern allein: Was hat sich in ihrem Leben tatsächlich verändert? Eine echte Verwandlung erkennt man für James nicht an ihrer Quelle, sondern an ihren Früchten. Ob das Gute wirklich in dir angekommen ist, zeigt sich dann nicht im Gefühl eines einzelnen Augenblicks, sondern daran, ob du danach anders lebst. Das ist die kühlste der sechs Stimmen und zugleich die ehrlichste: Sie verspricht dir keinen Durchbruch, sie gibt dir einen Maßstab."
         ],
-        "kernel": "Ob es angekommen ist, erkennst du nicht am Gefühl, sondern daran, ob du danach anders lebst.",
+        "kernel": "ob du danach anders lebst.",
         "bridge": "James prüft den einzelnen Umschwung. Die letzte Stimme zoomt heraus und sieht etwas anderes: kein Ereignis, sondern ein ganzes Leben."
       },
       "transition": "James prüft den einzelnen Umschwung. Die letzte Stimme zoomt heraus und sieht etwas anderes: kein Ereignis, sondern ein ganzes Leben."
@@ -83,7 +83,7 @@
         "body": [
           "Für C. G. Jung ist Verwandlung kein einzelnes Ereignis, sondern das stille Programm eines ganzen Lebens, das er Individuation nannte: das langsame Werden zu dem, der man im Kern schon ist. Es geschieht nicht durch reinen Willen und nicht im Blitz, sondern in der jahrelangen Auseinandersetzung mit allem, was man je von sich weggeschoben hat, und das Eigentümliche daran ist, dass man diesen Prozess treibt und zugleich von ihm getrieben wird. Die Glaswand verschwindet nicht an einem Tag. Sie wird über ein ganzes Leben durchlässig — mal durch Übung, mal durch ein Getroffenwerden, mal durch Loslassen, und keiner dieser Wege genügt für sich allein."
         ],
-        "kernel": "Nicht an einem Tag, sondern über ein Leben durchlässig — und keiner der Wege allein genügt.",
+        "kernel": "Sie wird über ein ganzes Leben durchlässig — mal durch Übung, mal durch ein Getroffenwerden, mal durch Loslassen, und keiner dieser Wege genügt für sich allein.",
         "bridge": "Sechs Stimmen, eine Glaswand. Keine hat das letzte Wort."
       },
       "transition": "Sechs Stimmen, eine Glaswand. Keine hat das letzte Wort."
