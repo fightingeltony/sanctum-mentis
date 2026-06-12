@@ -889,8 +889,8 @@ export default function StarChart({
       <div style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: isMobile ? '2px 4px 8px' : '4px 4px 10px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: isMobile ? 8 : 16 }}>
           <div className="sc-modeswitch">
-            <button className={mode === 'axis'   ? 'sc-on' : ''} onClick={() => morph('axis')}>Karte</button>
-            <button className={mode === 'school' ? 'sc-on' : ''} onClick={() => morph('school')}>Schulen</button>
+            <button data-sc-mode="axis"   className={mode === 'axis'   ? 'sc-on' : ''} onClick={() => morph('axis')}>Karte</button>
+            <button data-sc-mode="school" className={mode === 'school' ? 'sc-on' : ''} onClick={() => morph('school')}>Schulen</button>
           </div>
           <label className="sc-lines-toggle">
             <input type="checkbox" checked={showLines} onChange={e => setShowLines(e.target.checked)} />
@@ -949,6 +949,7 @@ export default function StarChart({
         <div style={{ display: 'flex', flexDirection: 'column', width: '100%', minWidth: 0, maxWidth: isMobile ? '100%' : `calc(78vh * ${W} / ${H})` }}>
         <div
           ref={stageRef}
+          data-sc-stage
           style={{
             position: 'relative', width: '100%', minWidth: 0,
             border: '1px solid var(--hairline-strong)',
@@ -1189,6 +1190,7 @@ export default function StarChart({
                   return (
                     <g
                       key={t.id}
+                      data-star-id={t.id}
                       className={`sc-star${isAnchor ? ' sc-anchor' : ''}`}
                       ref={el => { starGRefs.current[t.id] = el }}
                       onMouseEnter={() => focusStar(t.id)}
@@ -1436,6 +1438,7 @@ function ConceptCartoucheContent({
           </p>
         </div>
         <button
+          data-sc-close
           onClick={deselect}
           aria-label="Schliessen"
           style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--fg-faint)', fontSize: 14, lineHeight: 1, padding: 2, flexShrink: 0 }}
@@ -1497,6 +1500,7 @@ function CartoucheContent({
           )}
         </div>
         <button
+          data-sc-close
           onClick={e => { e.stopPropagation(); deselect() }}
           aria-label="Schliessen"
           style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--fg-faint)', fontSize: 14, lineHeight: 1, padding: 2, flexShrink: 0 }}
@@ -1505,7 +1509,7 @@ function CartoucheContent({
         </button>
       </div>
       {/* Scroll wrapper — desktop: maxHeight caps everything below header; sheet: outer handles it */}
-      <div style={isSheet ? {} : { maxHeight: 340, overflowY: 'auto' as const }}>
+      <div data-sc-cart-scroll style={isSheet ? {} : { maxHeight: 340, overflowY: 'auto' as const }}>
       {/* Body */}
       <div style={{ padding: '13px 14px 12px', fontSize: 13, lineHeight: 1.62, color: 'var(--fg-muted)' }}>
         {selectedContent
@@ -1517,6 +1521,7 @@ function CartoucheContent({
       {anchoredConcepts.length > 0 && (
         <div style={{ borderTop: '2px solid var(--hairline-strong)' }}>
           <button
+            data-sc-acc-head
             onClick={() => setConceptsOpen(o => !o)}
             aria-expanded={conceptsOpen}
             style={{

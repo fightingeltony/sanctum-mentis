@@ -385,6 +385,19 @@ body {
   .wm-pulse-ring { animation: none; opacity: 0; }
 }
 
+/* ── LandingStarChart — Tour-Cursor tap-pulse & Caption fade ── */
+@keyframes lsc-cursor-tap {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(0.58); }
+  100% { transform: scale(1); }
+}
+.lsc-cursor-tap {
+  animation: lsc-cursor-tap 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .lsc-cursor-tap { animation: none; }
+}
+
 /* ── Lectio step fade-in ── */
 @keyframes lectio-fade-in {
   from { opacity: 0; transform: translateY(12px); }
