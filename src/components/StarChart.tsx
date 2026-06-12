@@ -329,11 +329,16 @@ export default function StarChart({
   // last tap for double-tap detection (touch only)
   const lastTapRef  = useRef<{ x: number; y: number; t: number } | null>(null)
 
-  // ── Label element cache (Konter-Skalierung + Deklutter) ───
-  // Maps thinker-id → { name: SVGTextElement, life: SVGTextElement | null }
+  // ── Element caches (Konter-Skalierung + Deklutter) ──────
+  // Maps thinker-id → the .sc-star-body <g> element (whole body, including glyph + labels).
   // Built lazily in applyZoom / updateLabelVisibility to avoid querySelector per frame.
+  const bodyElemsRef = useRef<Record<string, SVGGElement | null>>({})
+  // Alias kept so updateLabelVisibilityRef can read name/life for declutter rect measurements.
+  // Maps thinker-id → { name, life } text elements (for getBoundingClientRect in deklutter pass).
   const labelElemsRef = useRef<Record<string, { name: SVGTextElement | null; life: SVGTextElement | null }>>({})
-  // Maps orphan-concept-id → label SVGTextElement
+  // Maps orphan-concept-id → the whole marker <g> element (for counter-scaling)
+  const conceptBodyElemsRef = useRef<Record<string, SVGGElement | null>>({})
+  // Maps orphan-concept-id → label SVGTextElement (for deklutter rect measurement only)
   const conceptLabelElemsRef = useRef<Record<string, SVGTextElement | null>>({})
   // Debounce timer for wheel-end detection
   const wheelVisTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -582,8 +587,10 @@ export default function StarChart({
       }
     })
     drawnPosRef.current = newDrawn
-    // Invalidate label-element caches so applyZoom/updateLabelVisibility pick up new DOM elements
+    // Invalidate element caches so applyZoom/updateLabelVisibility pick up new DOM elements
+    bodyElemsRef.current = {}
     labelElemsRef.current = {}
+    conceptBodyElemsRef.current = {}
     conceptLabelElemsRef.current = {}
     syncPositions()
     applyLabelSides(modeRef.current)
@@ -693,58 +700,58 @@ export default function StarChart({
     camera.style.transform = `translate(${ps.tx}px,${ps.ty}px) scale(${ps.scale})`
     camera.style.transformOrigin = '0 0'
 
-    // ── A: Counter-scale star labels so they stay the same screen size ──
-    // Each text element is translated to its star anchor and then scaled by 1/k.
-    // The star group has a translate(dx,dy) from the morph — labels are positioned
-    // relative to drawnPos (their x= attribute is set by applyLabelSides to
-    // drawnCx ± offset). We counter-scale around the drawnPos anchor (cx, cy).
+    // ── A: Counter-scale entire .sc-star-body groups so glyph + labels stay constant size ──
+    // We apply a single transform to the whole .sc-star-body <g> per star:
+    //   translate(cx - cx/k, cy - cy/k) scale(1/k)
+    // where (cx, cy) is the star's drawnPos anchor. This keeps Spike, Glow, Ring, Unread-Dot,
+    // Name and Lifespan all at the same screen size regardless of zoom level.
+    // The outer .sc-star group carries the morph translate (dx,dy) — that composes cleanly.
+    // The transparent touch-target circle is a sibling of .sc-star-body and deliberately
+    // NOT counter-scaled, so it grows with zoom (larger tap area at high zoom — intended).
     const k = ps.scale
-    const cache = labelElemsRef.current
+    const bodyCache = bodyElemsRef.current
     thinkers.forEach(t => {
       if (t.x === undefined || t.y === undefined) return
       const drawn = drawnPosRef.current[t.id]
       if (!drawn) return
       const cx = drawn.x, cy = drawn.y
 
-      // Lazily build element cache per star
-      if (!cache[t.id]) {
+      // Lazily build body-element cache per star
+      if (!bodyCache[t.id]) {
         const g = starGRefs.current[t.id]
-        cache[t.id] = {
+        bodyCache[t.id] = g?.querySelector<SVGGElement>('.sc-star-body') ?? null
+      }
+      // Also keep label cache warm for the deklutter pass
+      if (!labelElemsRef.current[t.id]) {
+        const g = starGRefs.current[t.id]
+        labelElemsRef.current[t.id] = {
           name: g?.querySelector<SVGTextElement>('.sc-sname') ?? null,
           life: g?.querySelector<SVGTextElement>('.sc-slife') ?? null,
         }
       }
-      const { name, life } = cache[t.id]
+      const body = bodyCache[t.id]
       if (k === 1) {
-        name?.removeAttribute('transform')
-        life?.removeAttribute('transform')
+        body?.removeAttribute('transform')
       } else {
-        // transform = translate(cx - cx/k, cy - cy/k) scale(1/k)
-        // This scales around the local star origin (cx,cy in drawn-pos space).
         const inv = 1 / k
         const tx  = cx - cx * inv
         const ty  = cy - cy * inv
-        const tr  = `translate(${tx.toFixed(3)},${ty.toFixed(3)}) scale(${inv.toFixed(4)})`
-        name?.setAttribute('transform', tr)
-        life?.setAttribute('transform', tr)
+        body?.setAttribute('transform', `translate(${tx.toFixed(3)},${ty.toFixed(3)}) scale(${inv.toFixed(4)})`)
       }
     })
 
-    // Counter-scale orphan concept label texts
-    const cCache = conceptLabelElemsRef.current
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    Object.entries(cCache).forEach(([cid, el]) => {
+    // Counter-scale orphan concept marker groups (glyph circle + label text)
+    const cBodyCache = conceptBodyElemsRef.current
+    Object.keys(cBodyCache).forEach(cid => {
+      const el = cBodyCache[cid]
       if (!el) return
-      if (k === 1) {
-        el.removeAttribute('transform')
-        return
-      }
-      // Anchor: the x/y of the text element itself (set by React render)
-      const ex = parseFloat(el.getAttribute('x') ?? '0')
-      const ey = parseFloat(el.getAttribute('y') ?? '0')
+      if (k === 1) { el.removeAttribute('transform'); return }
+      // Anchor: data-cx / data-cy attributes written on the marker <g>
+      const cx  = parseFloat(el.getAttribute('data-cx') ?? '0')
+      const cy  = parseFloat(el.getAttribute('data-cy') ?? '0')
       const inv = 1 / k
-      const tx  = ex - ex * inv
-      const ty  = ey - ey * inv
+      const tx  = cx - cx * inv
+      const ty  = cy - cy * inv
       el.setAttribute('transform', `translate(${tx.toFixed(3)},${ty.toFixed(3)}) scale(${inv.toFixed(4)})`)
     })
   // applyZoom closes over thinkers for counter-scaling; recreated when thinkers changes.
@@ -789,6 +796,47 @@ export default function StarChart({
       }
     }
 
+    // D: Pre-populate accepted[] with glyph bounding rects of all visible stars and
+    // orphan concept markers. Labels must not overlap a FOREIGN star's glyph.
+    // Buffer: 2px so labels don't hug the glyph edge.
+    const GLYPH_PAD = 2
+    thinkers.forEach(t => {
+      const body = bodyElemsRef.current[t.id]
+      if (!body) {
+        const g = starGRefs.current[t.id]
+        bodyElemsRef.current[t.id] = g?.querySelector<SVGGElement>('.sc-star-body') ?? null
+      }
+      const spike = bodyElemsRef.current[t.id]?.querySelector('.sc-spike')
+      if (!spike) return
+      const r = spike.getBoundingClientRect()
+      if (r.width < 0.5 && r.height < 0.5) return
+      accepted.push({
+        left:   r.left   - GLYPH_PAD,
+        right:  r.right  + GLYPH_PAD,
+        top:    r.top    - GLYPH_PAD,
+        bottom: r.bottom + GLYPH_PAD,
+      })
+    })
+    // Orphan concept marker glyphs (the small circle)
+    orphanConcepts.forEach(c => {
+      const body = conceptBodyElemsRef.current[c.id]
+      if (!body) return
+      // Use the first <circle> inside the body group as the glyph indicator
+      const glyph = body.querySelector('circle')
+      if (!glyph) return
+      const r = glyph.getBoundingClientRect()
+      if (r.width < 0.5 && r.height < 0.5) return
+      accepted.push({
+        left:   r.left   - GLYPH_PAD,
+        right:  r.right  + GLYPH_PAD,
+        top:    r.top    - GLYPH_PAD,
+        bottom: r.bottom + GLYPH_PAD,
+      })
+    })
+    // Keep a snapshot of the glyph-only obstacles so we can restore after each label decision.
+    // Label rects are added during the star-loop below; glyph rects stay permanent.
+    const glyphOnlyCount = accepted.length
+
     for (const t of sorted) {
       const cache = labelElemsRef.current
       if (!cache[t.id]) {
@@ -814,7 +862,44 @@ export default function StarChart({
         continue
       }
 
-      const cull = !isAnchor && !isSelected && overlaps(block)
+      // D: anchor labels (firstLevel === 1) are never culled, even if they overlap a foreign
+      // glyph — anchors take priority. But we still need to exempt the own-star glyph from
+      // the obstacle list while testing this label's collision. We do this by temporarily
+      // removing the own-star's glyph rect. The glyph rects were pushed in thinker order, so
+      // we find and exclude the one belonging to this star by matching the spike element.
+      // Implementation: instead of mutating accepted[], we check overlap manually, skipping
+      // the own-star's glyph entry (identified by index).
+      let ownGlyphIdx = -1
+      {
+        const body = bodyElemsRef.current[t.id]
+        const spike = body?.querySelector('.sc-spike')
+        if (spike) {
+          const spR = spike.getBoundingClientRect()
+          for (let i = 0; i < glyphOnlyCount; i++) {
+            const a = accepted[i]
+            // Match by center proximity (2px tolerance handles rounding)
+            const aCx = (a.left + a.right)  / 2
+            const aCy = (a.top  + a.bottom) / 2
+            const sCx = (spR.left + spR.right)  / 2
+            const sCy = (spR.top  + spR.bottom) / 2
+            if (Math.abs(aCx - sCx) < 2 && Math.abs(aCy - sCy) < 2) { ownGlyphIdx = i; break }
+          }
+        }
+      }
+
+      function overlapsExcluding(r: Rect, excludeIdx: number): boolean {
+        return accepted.some((a, i) => {
+          if (i === excludeIdx) return false
+          return (
+            r.left   - PAD < a.right  &&
+            r.right  + PAD > a.left   &&
+            r.top    - PAD < a.bottom &&
+            r.bottom + PAD > a.top
+          )
+        })
+      }
+
+      const cull = !isAnchor && !isSelected && overlapsExcluding(block, ownGlyphIdx)
 
       if (cull) {
         name.classList.add('sc-label-culled')
@@ -867,12 +952,25 @@ export default function StarChart({
     const onTouchStart = (e: TouchEvent) => {
       if (e.touches.length > 1) e.preventDefault()
     }
+    // C: prevent page scroll while a pan/pinch gesture is active.
+    // passive:false is required to call preventDefault on touchmove.
+    // [data-nopan] targets (cartouche) are exempted so they can still scroll.
+    const onTouchMove = (e: TouchEvent) => {
+      if (ptrsRef.current.size === 0) return
+      if ((e.target as Element).closest('[data-nopan]')) return
+      e.preventDefault()
+    }
     stage.addEventListener('wheel',      onWheel,      { passive: false })
     stage.addEventListener('touchstart', onTouchStart, { passive: false })
+    stage.addEventListener('touchmove',  onTouchMove,  { passive: false })
+    // Note: touchAction is also set declaratively on the stage div (inline style).
+    // The useEffect assignment below is kept as a belt-and-suspenders fallback for
+    // browsers that ignore the React style prop on the initial render.
     stage.style.touchAction = 'none'
     return () => {
       stage.removeEventListener('wheel',      onWheel)
       stage.removeEventListener('touchstart', onTouchStart)
+      stage.removeEventListener('touchmove',  onTouchMove)
     }
   }, [applyZoom])
 
@@ -1337,6 +1435,9 @@ export default function StarChart({
             overflow: 'hidden', cursor: 'grab',
             aspectRatio: `${svgW} / ${svgH}`, maxHeight: '78vh',
             boxShadow: 'inset 0 0 0 6px var(--bg-sunk), inset 0 0 0 7px var(--hairline)',
+            // C: prevent page scroll during all touch gestures on the chart
+            touchAction: 'none',
+            overscrollBehavior: 'contain',
           }}
           onPointerDown={onStagePointerDown}
           onPointerMove={onStagePointerMove}
@@ -1393,12 +1494,12 @@ export default function StarChart({
                   const y = svgPadY + t * (svgH - 2 * svgPadY)
                   return (
                     <g key={t}>
-                      <line x1={x} y1={svgPadY}         x2={x}            y2={svgH - svgPadY} className={t === 0.5 ? 'sc-axis' : 'sc-grid'}/>
-                      <line x1={svgPadX} y1={y}          x2={svgW - svgPadX} y2={y}           className={t === 0.5 ? 'sc-axis' : 'sc-grid'}/>
+                      <line x1={x} y1={svgPadY}         x2={x}            y2={svgH - svgPadY} className={t === 0.5 ? 'sc-axis' : 'sc-grid'} vectorEffect="non-scaling-stroke"/>
+                      <line x1={svgPadX} y1={y}          x2={svgW - svgPadX} y2={y}           className={t === 0.5 ? 'sc-axis' : 'sc-grid'} vectorEffect="non-scaling-stroke"/>
                     </g>
                   )
                 })}
-                <rect x={svgPadX} y={svgPadY} width={svgW - 2 * svgPadX} height={svgH - 2 * svgPadY} className="sc-frame"/>
+                <rect x={svgPadX} y={svgPadY} width={svgW - 2 * svgPadX} height={svgH - 2 * svgPadY} className="sc-frame" vectorEffect="non-scaling-stroke"/>
               </g>
 
               {/* Axis labels */}
@@ -1493,6 +1594,7 @@ export default function StarChart({
                         strokeWidth={1.1}
                         strokeLinecap="round"
                         strokeDasharray={dash}
+                        vectorEffect="non-scaling-stroke"
                         ref={el => { if (edgeRefs.current[eid]) edgeRefs.current[eid].line = el }}
                       />
                       {inf.type === 'rejection' && (
@@ -1500,17 +1602,20 @@ export default function StarChart({
                           <line
                             className="sc-brk"
                             stroke={col}
+                            vectorEffect="non-scaling-stroke"
                             ref={el => { if (edgeRefs.current[eid]) edgeRefs.current[eid].brk[0] = el }}
                           />
                           <line
                             className="sc-brk"
                             stroke={col}
+                            vectorEffect="non-scaling-stroke"
                             ref={el => { if (edgeRefs.current[eid]) edgeRefs.current[eid].brk[1] = el }}
                           />
                         </>
                       )}
                       <path
                         className="sc-edge-hit"
+                        vectorEffect="non-scaling-stroke"
                         ref={el => { if (edgeRefs.current[eid]) edgeRefs.current[eid].hit = el }}
                         onMouseEnter={() => focusEdge(eid, inf.from, inf.to)}
                         onMouseLeave={clearFocus}
@@ -1541,8 +1646,14 @@ export default function StarChart({
                           if (e.key === ' ')     { e.preventDefault(); e.stopPropagation(); selectConcept(c.id) }
                         }}
                       >
-                        {/* Touch target */}
+                        {/* Wide touch / pointer target — sibling of body, NOT counter-scaled (stays large at zoom) */}
                         <circle cx={cx} cy={cy} r={isMobile ? 22 : 14} fill="transparent"/>
+                        {/* Marker body — counter-scaled in applyZoom around (cx,cy) */}
+                        <g
+                          data-cx={cx}
+                          data-cy={cy}
+                          ref={el => { conceptBodyElemsRef.current[c.id] = el }}
+                        >
                         <circle cx={cx} cy={cy} r={isMobile ? 9 : 7}
                           fill="oklch(0.94 0.020 65)"
                           stroke="oklch(0.48 0.08 50)" strokeWidth={0.8} opacity={0.85}
@@ -1568,6 +1679,7 @@ export default function StarChart({
                             fill="none" stroke="oklch(0.48 0.08 50)" strokeWidth={1.2} opacity={0.6}
                           />
                         )}
+                        </g>
                       </g>
                     )
                   })}
