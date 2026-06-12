@@ -184,6 +184,7 @@ export interface Lectio {
   intro: string;
   path: LectioStep[];
   closing_synthesis: string;
+  closing_kernel?: string;   // optional: exakter Teilstring des letzten Synthese-Absatzes → Hervorhebung
   closing_question: string;
 }
 

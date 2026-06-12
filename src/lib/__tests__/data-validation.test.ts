@@ -156,7 +156,45 @@ describe('Kernel-Substring in narrative.body', () => {
   }
 })
 
-// ─── 3. Bild-Existenz ─────────────────────────────────────────
+// ─── 3. closing_kernel-Substring ─────────────────────────────
+
+describe('closing_kernel ist Teilstring der closing_synthesis', () => {
+  it('alle gesetzten closing_kernel sind Teilstrings des letzten Synthese-Absatzes', () => {
+    const lectioFiles = getLectioFiles()
+    let checked = 0
+
+    for (const filename of lectioFiles) {
+      const lectio = loadLectio(filename)
+      const lectioId = lectio.id as string
+      const closingKernel = lectio.closing_kernel as string | undefined
+
+      // Leeres oder fehlendes closing_kernel → kein Fehler
+      if (!closingKernel) continue
+
+      const closingSynthesis = lectio.closing_synthesis as string
+      expect(
+        closingSynthesis,
+        `${lectioId}: closing_synthesis fehlt oder ist kein String`
+      ).toBeTruthy()
+
+      // closing_kernel muss im LETZTEN Absatz der closing_synthesis vorkommen
+      const synthParagraphs = closingSynthesis.split('\n').filter(Boolean)
+      const lastParagraph = synthParagraphs[synthParagraphs.length - 1] ?? ''
+
+      expect(
+        lastParagraph.includes(closingKernel),
+        `${lectioId}: closing_kernel ist kein Teilstring des letzten Synthese-Absatzes.\n  closing_kernel: "${closingKernel.slice(0, 80)}"\n  letzter Absatz: "${lastParagraph.slice(0, 120)}"`
+      ).toBe(true)
+
+      checked++
+    }
+
+    // Informeller Nachweis: wie viele wurden geprüft (0 = kein Kernel gesetzt, erlaubt)
+    expect(checked).toBeGreaterThanOrEqual(0)
+  })
+})
+
+// ─── 5. Bild-Existenz ─────────────────────────────────────────
 
 describe('Bild-Existenz in public/', () => {
   const lectioFiles = getLectioFiles()
@@ -205,7 +243,7 @@ describe('Bild-Existenz in public/', () => {
   })
 })
 
-// ─── 4. Influence-Endpunkte ───────────────────────────────────
+// ─── 6. Influence-Endpunkte ───────────────────────────────────
 
 describe('Influence from/to sind gültige Knoten-IDs', () => {
   for (const tableauId of TABLEAU_IDS) {
@@ -231,7 +269,7 @@ describe('Influence from/to sind gültige Knoten-IDs', () => {
   }
 })
 
-// ─── 5. primaryThinker ist nicht-leerer String ────────────────
+// ─── 7. primaryThinker ist nicht-leerer String ────────────────
 
 describe('Concept.primaryThinker ist nicht-leerer String', () => {
   for (const tableauId of TABLEAU_IDS) {

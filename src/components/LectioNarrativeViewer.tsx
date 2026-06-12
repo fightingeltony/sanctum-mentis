@@ -195,7 +195,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
               style={{ ['--d' as string]: '.1s' }}
               key={`meta-${revealKey}`}
             >
-              {lectio.title}
+              {topicData?.topic.title ?? lectio.title}
               {' · '}{voiceSteps.length} Stimmen{' · '}~{lectio.estimated_minutes} Min
               {lectio.ton === 'erzählend-erfahrend' && ' · Erzählend'}
             </p>
@@ -332,9 +332,15 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
               style={{ ['--d' as string]: '.4s' }}
               key={`ss-${revealKey}`}
             >
-              {synthParagraphs.map((p, i) => (
-                <p key={i} className={i === 0 ? 'hook' : undefined}>{p}</p>
-              ))}
+              {synthParagraphs.map((p, i) => {
+                const isLastPara = i === synthParagraphs.length - 1
+                const content = (isLastPara && lectio.closing_kernel)
+                  ? renderWithKernel(p, lectio.closing_kernel)
+                  : p
+                return (
+                  <p key={i} className={i === 0 ? 'hook' : undefined}>{content}</p>
+                )
+              })}
             </div>
             <p
               className="kicker serif reveal"
