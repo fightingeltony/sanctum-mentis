@@ -165,6 +165,18 @@ Sicherheitsnetz auf oberster Ebene — verhindert horizontales Scrollen der gesa
 - Labels in `Marcellus SC bold 0.08em letter-spacing` mit Pergament-Halo (textShadow)
 - `usePanZoom` Hook für Pan/Pinch/Wheel — generisch verwendet von InfluenceGraph + QuadrantPlot
 
+## Sternkarte — Gesten- & Atlas-Konvention (Soll-Verhalten, seit 12.6.26)
+
+Die StarChart-Gestenschicht ist handimplementiert (Migration auf `usePanZoom` ist geplante Hygiene) — bei jedem Umbau MUSS dieses Verhalten erhalten bleiben:
+
+- **Zwei Finger heissen immer Pinch** — egal was unter den Fingern liegt (nur `[data-nopan]` ausgenommen). Faktor wird VOR der Translation geclampt (`ZOOM_MIN`/`ZOOM_MAX`), sonst driftet die Karte am Anschlag. `hadPinchRef` merkt sich den Pinch über die ganze Gesten-Sequenz — das Heben des zweiten Fingers ist kein Tap.
+- **Pan ab überall:** 5px-Schwelle trennt Tap (Auswahl) von Drag (Pan); ab der Schwelle Pointer-Capture aufs Stage-Element → kein Fehl-Select nach echtem Ziehen. Momentum per exponentiellem Decay (τ=325ms), Doppeltipp-Zoom ×2.2/zurück (nur Touch, nicht auf Nodes). Kinetik bricht bei pointerdown/wheel/pinch/morph/unmount ab. `prefers-reduced-motion`: kein Momentum, keine Tweens.
+- **Atlas-Prinzip:** Stern-Körper (`.sc-star-body`) werden in `applyZoom` gedämpft konter-skaliert (`BODY_DAMP = 0.65` → Marker/Labels wachsen netto mit k^0.35, Positionen spreizen mit vollem k). Kanten/Gitter mit `vector-effect: non-scaling-stroke`. BODY_DAMP ist der Tuning-Hebel für Label-Grösse bei Vollzoom.
+- **Prioritäts-Deklutter:** `updateLabelVisibility` läuft NUR an Gesten-Enden (nie pro Frame) + nach Mount/Level-Wechsel/Morph-Ende/`document.fonts.ready`. Misst echte DOM-Rects (Name+Daten als Block, Stern-Glyphen als Hindernisse), cullt nach `firstLevel`-Priorität via `.sc-label-culled` (opacity, nie display:none — Rects müssen messbar bleiben). L1-Anker und Auswahl sind nie gecullt; Tap/Fokus/Hover enthüllt das eigene Label.
+- **Seiten-Scroll-Lock:** `touch-action: none` + `overscroll-behavior: contain` auf der Stage plus nicht-passiver `touchmove`-preventDefault bei aktiver Geste.
+- **`data-`-Anker nicht entfernen** (data-star-id, data-sc-mode, data-sc-acc-head, data-sc-close, data-sc-cart-scroll, data-sc-stage) — die Landing-Tour (LandingStarChart) steuert die Komponente darüber.
+- **Dev-Hygiene:** `npm run build` über laufendem Dev-Server verkeilt dessen `.next` (stale CSS, keine Hydration) — danach Dev-Server neu starten, Befunde nur auf frischem Server bewerten.
+
 ## Tableau-Bau — Workflow-Konvention
 
 ### Mild-Modus (Default)
