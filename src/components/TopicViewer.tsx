@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useMemo, useCallback } from 'react'
+import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import type { TopicData, LectioSummary } from '@/lib/types'
@@ -39,6 +39,10 @@ export default function TopicViewer({ data, lectios }: Props) {
   const [tab, setTab]         = useState<Tab>('denker')
   const [menuOpen, setMenuOpen]     = useState(false)
   const [highlightId, setHighlightId] = useState<string | null>(null)
+  // Signal NUR für nutzerinitiierte Level-Wechsel (nicht für URL/localStorage-Restore):
+  // 'up' fokussiert die Denker-Liste auf Neu/Vertieft, 'down' öffnet zurück auf „Alle".
+  const [levelAction, setLevelAction] = useState<{ dir: 'up' | 'down'; tick: number } | null>(null)
+  const levelTick = useRef(0)
 
   const palette = useCommandPalette()
 
@@ -70,6 +74,10 @@ export default function TopicViewer({ data, lectios }: Props) {
   }, [initialHighlight, initialTab])
 
   function handleLevelChange(id: number) {
+    if (id !== levelId) {
+      levelTick.current += 1
+      setLevelAction({ dir: id > levelId ? 'up' : 'down', tick: levelTick.current })
+    }
     setLevelId(id)
     localStorage.setItem(`mentis:level:${data.topic.id}`, String(id))
   }
@@ -276,7 +284,7 @@ export default function TopicViewer({ data, lectios }: Props) {
                       className="font-ui text-[11px] tracking-[0.02em]"
                       style={{ color: 'var(--fg-faint)' }}
                     >
-                      {l.stationCount} St. · ~{l.estimated_minutes} Min
+                      {l.stationCount} Stationen · ~{l.estimated_minutes} Min
                     </span>
                   </span>
                 </Link>
@@ -332,6 +340,7 @@ export default function TopicViewer({ data, lectios }: Props) {
             schools={data.schools}
             context={state.context}
             currentLevel={state.level}
+            levelAction={levelAction}
             listStyle={data.topic.thinkerListStyle}
             highlightId={highlightId}
             onHighlightDone={() => setHighlightId(null)}

@@ -444,7 +444,8 @@ export default function LandingStarChart({ data }: Props) {
           transition: 'opacity 350ms cubic-bezier(0.22, 1, 0.36, 1), transform 350ms cubic-bezier(0.22, 1, 0.36, 1)',
           maxWidth: '80%',
           textAlign: 'center',
-          whiteSpace: 'nowrap',
+          // kein nowrap — auf Mobile darf die Pille mehrzeilig umbrechen
+          overflowWrap: 'break-word',
           fontFamily: 'var(--font-ui), Inter, system-ui, sans-serif',
         }}
       />

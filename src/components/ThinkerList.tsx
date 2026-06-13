@@ -38,28 +38,30 @@ interface Props {
   schools: School[]
   context: string | null
   currentLevel: Level
+  levelAction?: { dir: 'up' | 'down'; tick: number } | null
   listStyle?: 'cards' | 'grouped'
   highlightId?: string | null
   onHighlightDone?: () => void
 }
 
 export default function ThinkerList({
-  thinkers, schools, context, currentLevel,
+  thinkers, schools, context, currentLevel, levelAction,
   listStyle = 'grouped', highlightId, onHighlightDone,
 }: Props) {
+  // Erstansicht: „Alle" — der Besucher sieht das volle Feld als ersten Eindruck.
+  // (Auch nach URL/localStorage-Restore: das löst kein levelAction-Signal aus.)
   const [activeFilters, setActiveFilters] = useState<Set<string>>(
-    () => new Set(['neu', 'vertieft'])
+    () => new Set()
   )
-  const prevLevel = useRef(currentLevel.id)
   const cardRefs = useRef<Map<string, HTMLElement>>(new Map())
 
-  // On level change: reset to NEU + VERTIEFT
+  // Nur bei nutzerinitiiertem Level-Wechsel: Hochstufen fokussiert auf NEU + VERTIEFT
+  // (was dieser Schritt freischaltet), Runterstufen öffnet zurück auf „Alle".
   useEffect(() => {
-    if (prevLevel.current !== currentLevel.id) {
-      prevLevel.current = currentLevel.id
-      setActiveFilters(new Set(['neu', 'vertieft']))
-    }
-  }, [currentLevel.id])
+    if (!levelAction) return
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setActiveFilters(levelAction.dir === 'up' ? new Set(['neu', 'vertieft']) : new Set())
+  }, [levelAction])
 
   useEffect(() => {
     if (!highlightId) return
