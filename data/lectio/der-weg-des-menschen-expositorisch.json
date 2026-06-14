@@ -1,0 +1,38 @@
+{
+  "id": "der-weg-des-menschen-expositorisch",
+  "tableauId": "begegnung",
+  "title": "Wo bist du?",
+  "focus": "Ein kontemplativer Abstieg in ein einziges Werk — Bubers ›Der Weg des Menschen‹ — von der Frage, wo du stehst, bis zur Erfahrung, dass ein offenes Herz beim Anderen offene Türen findet. Marcel und Rogers bezeugen die letzte Wende.",
+  "thesis": "Dies ist keine Wanderung durch viele streitende Stimmen, sondern ein Abstieg in einen einzigen kurzen Text: Martin Bubers ›Der Weg des Menschen‹. Drei Stationen folgen Bubers eigener Bewegung — sich besinnen, bei sich beginnen, sich aber nicht in sich selbst verschließen. Eine letzte Station holt zwei Zeugen hinzu, die bestätigen, was an Bubers Wende geschieht: dass Begegnung nicht über den prüfenden Kopf läuft, sondern über das geöffnete Herz.",
+  "path_type": "kontemplativ-vertiefend",
+  "level": 2,
+  "estimated_minutes": 16,
+  "intro": "Diese Lectio ist anders als die übrigen. Sie führt dich nicht durch das ganze Feld, sondern steigt in einen einzigen, kurzen Text hinab — Martin Bubers ›Der Weg des Menschen‹, gespeist aus chassidischen Geschichten. Drei der vier Stationen sind Buber selbst, in seiner eigenen Schrittfolge gelesen; die letzte stellt ihm zwei verwandte Stimmen zur Seite. Es geht um eine Bewegung, die fast jeder kennt und kaum jemand benennt: vom Verstecktsein über das Bei-sich-Ankommen hin zu dem Augenblick, in dem man sich einem anderen Menschen öffnet — und merkt, dass dort schon jemand wartet. Lies langsam. Diese Lectio will weniger erklären als dich an einen Ort führen, an dem du selbst nachsehen kannst.",
+  "path": [
+    {
+      "nodeId": "buber",
+      "nodeType": "thinker",
+      "step_brief": "Buber erzählt von einem Rabbi im Gefängnis. Der Wärter fragt ihn, wie die Schrift es meine, dass Gott den ersten Menschen ruft: »Wo bist du?« — Gott weiß doch alles. Der Rabbi antwortet: Die Frage gilt nicht nur Adam, sondern jedem Menschen, zu jeder Zeit. Gott fragt nicht, weil er den Ort nicht kennt, sondern damit der Mensch ihn sich selbst eingesteht. Wo bist du in deiner Welt? Wie weit bist du gekommen in deinen Jahren?",
+      "transition": "Bleib einen Moment bei dieser Frage, bevor du weitergehst. Sie ist nicht als Vorwurf gemeint, sondern als Tür. Solange man keine Antwort wagt, sagt Buber, lebt man im Versteck."
+    },
+    {
+      "nodeId": "buber",
+      "nodeType": "thinker",
+      "step_brief": "Wer sich vor der Frage versteckt, baut sich immer neue Verstecke — aus Geschäftigkeit, aus Meinungen, aus Ausreden. Buber nennt das die Flucht vor der eigenen Verantwortung. Der Gegenweg ist die Umkehr: sich sammeln, bei sich selbst ankommen, die zerstreute Seele einigen. Und er ist für jeden ein anderer — es gibt keinen allgemeinen Weg, sagt Buber mit den Chassidim, jeder hat den seinen zu finden.",
+      "transition": "Das klingt zunächst nach Rückzug, nach Arbeit allein an sich selbst. Aber genau hier kommt die Wende, an der Bubers ganzes Denken sich entscheidet — und sie zeigt in die entgegengesetzte Richtung."
+    },
+    {
+      "nodeId": "buber",
+      "nodeType": "thinker",
+      "step_brief": "»Bei sich beginnen, aber nicht bei sich enden« — so fasst Buber den Sinn der ganzen Bewegung. Die Selbstbesinnung ist nicht das Ziel, sondern der Anfang. Wer nur bei sich bleibt, sich nur mit sich selbst beschäftigt, bleibt im Verlies des Ich gefangen. Der Sinn des Bei-sich-Anfangens ist die Wendung nach außen: zum anderen Menschen, zur Aufgabe, zur Welt. Erst dort vollendet sich, was in der Sammlung begann.",
+      "transition": "Und hier zeigt deine eigene Erfahrung, was Buber meint: Diese Wendung nach außen geschieht nicht über den prüfenden Verstand, sondern über ein geöffnetes Herz. Zwei Stimmen aus diesem Tableau bezeugen, was dann passiert."
+    },
+    {
+      "nodeId": ["marcel", "rogers"],
+      "nodeType": "thinker",
+      "transition": "Marcel gibt dieser Offenheit einen Namen — disponibilité, Verfügbarkeit: für den anderen wirklich da sein, statt ihn auf Abstand zu prüfen. Und Rogers beschreibt, was geschieht, wenn ein Mensch so begegnet wird: Er entfaltet sich, er öffnet sich zurück. Vielleicht hast du es erlebt — dass du, kaum hattest du dich wirklich gezeigt, bei einem anderen offene Türen eingerannt bist. Buber, Marcel und Rogers sagen aus drei Richtungen dasselbe: Nicht die Logik öffnet den anderen, sondern die Bereitschaft, sich selbst zu zeigen."
+    }
+  ],
+  "closing_synthesis": "Vier Stationen, eine einzige Bewegung. Buber führt von der Frage »Wo bist du?« über die Sammlung bei sich selbst zu der Wende, die alles trägt: bei sich beginnen, aber nicht bei sich enden. Marcel und Rogers bezeugen, was an dieser Wende geschieht — dass die Öffnung zum anderen nicht erarbeitet, sondern gewagt wird, und dass das Wagnis oft erwidert wird. Keine dieser Stimmen verspricht, dass jede Tür aufgeht. Sie sagen nur: Verschlossen bleibt, wer sich nicht zeigt.",
+  "closing_question": "Wenn jetzt, an dem Ort, wo du gerade stehst, die alte Frage an dich ginge — wo bist du? — und wenn der nächste Schritt nicht mehr Nachdenken wäre, sondern ein offenes Wort an einen Menschen: Wem würdest du es sagen?"
+}

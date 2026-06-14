@@ -1,0 +1,42 @@
+{
+  "id": "wenn-nichts-vorgegeben-expositorisch",
+  "tableauId": "existenzialismus",
+  "title": "Wenn nichts mehr vorgegeben ist",
+  "focus": "Die Sinn-Frage des Existenzialismus — von Nietzsches Diagnose über die Wahl, die Antwort und die Verweigerung der Frage",
+  "thesis": "Du weißt, dass dir niemand mehr sagt, wozu du da bist. Diese Lectio führt durch die zentralen Antworten des Existenzialismus auf die Lage — drei davon stehen am Ende nebeneinander, ohne dass eine die anderen einholt: Sartre setzt, Frankl antwortet, Camus bejaht das Sinnlose.",
+  "level": 2,
+  "estimated_minutes": 16,
+  "intro": "Es gibt eine Erfahrung, die fast jeder kennt, der in der westlichen Moderne aufgewachsen ist: Du merkst irgendwann, dass dir niemand mehr richtig sagt, wozu du da bist. Die Religion, die Tradition, die Familie, die Ideale — irgendwann tragen sie nicht mehr selbstverständlich. Vielleicht spürst du noch ihre Reste, aber den vollen Halt liefern sie nicht. Diese Lectio führt durch fünf Antworten auf diese Lage. Sie folgt der historischen Bewegung von Nietzsches Diagnose bis zu drei Antworten des 20. Jahrhunderts, die sich gegenseitig nicht auflösen. Was diese Lectio dir nicht gibt: eine richtige Antwort. Was sie dir zeigen kann: dass auch nicht-zu-antworten eine Antwort ist — und welchen Preis sie hat.",
+
+  "path": [
+    {
+      "nodeId": "nietzsche",
+      "nodeType": "thinker",
+      "transition": "Nietzsche ist der Diagnostiker, nicht der Tröster. Er sieht den Verlust, ohne zu beschönigen, und er weigert sich, einen Ersatz zu erfinden, an den niemand mehr wirklich glauben kann. Aber er stellt auch die nächste Frage: Wenn nichts mehr vorgegeben ist, wer fühlt das zuerst, lange bevor die Diagnose ausgesprochen wird? Die Antwort hatte ein anderer schon Jahrzehnte vorher gegeben."
+    },
+    {
+      "nodeId": "kierkegaard",
+      "nodeType": "thinker",
+      "transition": "Kierkegaard zeigt dir, dass diese Lage nicht erst mit dem Tod Gottes anfängt. Auch wer noch glaubt, steht vor einer Wahl, die niemand für ihn treffen kann — und sie ist nicht leichter, sondern schwerer, weil die Garantie fehlt. Die Angst, die er beschreibt, ist nicht pathologisch. Sie ist die korrekte Reaktion auf das, was du bist: ein Wesen, das wählen muss und nichts hat, worauf es sich letztgültig stützen könnte. Aber was machst du damit? Das 20. Jahrhundert hat drei verschiedene Antworten gegeben, die einander nicht einholen."
+    },
+    {
+      "nodeId": "sartre",
+      "nodeType": "thinker",
+      "transition": "Sartre nimmt die Lage ohne Restbestände. Es gibt keinen Sinn, du machst ihn — jede Wahl ist ein Setzungsakt, jede Ausrede ist mauvaise foi. Das ist eine harte, ehrliche Antwort, und sie hat einen Preis: Du trägst alles allein. Aber genau hier setzt der Streit ein. Ein anderer Mann, der Auschwitz überlebt hatte, hat Sartres Position direkt widersprochen."
+    },
+    {
+      "nodeId": "frankl",
+      "nodeType": "thinker",
+      "transition": "Frankl bestreitet nicht, dass es keine vorgegebenen Sinn-Strukturen gibt. Er bestreitet, dass daraus folgt, dass du den Sinn machst. Sinn, sagt Frankl, ruft dich an — durch eine konkrete Aufgabe, einen konkreten Menschen, eine konkrete Situation. Du findest ihn nicht durch Suchen, sondern durch Antworten. Das ist eine andere Bewegung als bei Sartre — nicht Setzung, sondern Adressierung. Beide haben extreme historische Erfahrungen im Rücken. Beide kommen zu gegensätzlichen Antworten. Und ein dritter Denker hat sich der ganzen Frage verweigert."
+    },
+    {
+      "nodeId": "camus",
+      "nodeType": "thinker",
+      "transition": "Camus zeigt, dass die Frage ›Wie machst du Sinn?‹ oder ›Wie findest du Sinn?‹ noch nicht die ganze Lage erschöpft. Es gibt eine dritte Möglichkeit: das Sinnlose bejahen, ohne es zu beschönigen, ohne ihm einen Sinn unterzuschieben, den es nicht hat. Sisyphos, der seinen Stein einen Berg hinaufrollt, von dem er immer wieder herunterrollt — Camus dreht den Mythos um: Man muss sich Sisyphos als glücklichen Menschen vorstellen. Das ist keine Lösung der Frage. Das ist die Weigerung, die Frage so zu beantworten, wie sie gestellt wurde."
+    }
+  ],
+
+  "closing_synthesis": "Fünf Stationen, vier Antworten, drei davon nebeneinander. Nietzsche stellt die Diagnose: Die alten Sinnstrukturen tragen nicht mehr. Kierkegaard beschreibt, was diese Lage in dir auslöst: den Schwindel der Freiheit, die Angst, der niemand davonkommt. Was dann? Sartre setzt — du machst den Sinn, du bist verurteilt zur Freiheit. Frankl antwortet — der Sinn ruft dich an, du findest ihn im Tun dessen, was zu tun ist. Camus bejaht — auch das Sinnlose lässt sich leben, ohne es zu beschönigen. Drei Antworten, kein gemeinsamer Schluss. Diese Lectio führt dich an die Stelle, an der du selbst stehen musst — und gibt dir nicht vor, wo das ist.",
+
+  "closing_question": "Wenn du an die letzte Woche denkst — die Entscheidungen, die du getroffen hast, die Aufgaben, die du erledigt hast, die Momente, an denen du gezögert hast: Welche der drei Antworten beschreibt am besten, wie du gelebt hast? Hast du gesetzt, geantwortet oder bejaht? Und wenn du es zum ersten Mal so siehst — würdest du es so weiterleben wollen?"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "verstehen-oder-weitergehen-expositorisch",
+  "tableauId": "wandlung",
+  "title": "Musst du verstehen, woher es kommt?",
+  "focus": "Die Bewegung von der Ursache zum Ziel — und die nüchterne Einsicht, dass Wandlung kein Pfeil ist",
+  "thesis": "Die Therapiegeschichte wandert von der Frage ›woher kommt mein Leiden?‹ zur Frage ›wohin will ich?‹ — aber wer genau hinsieht, merkt, dass keine der beiden Fragen allein heilt und dass Wandlung selten geradeaus verläuft.",
+  "path_type": "narrativ-historisch",
+  "level": 3,
+  "estimated_minutes": 17,
+  "intro": "Etwas in deinem Leben soll anders werden — eine Angst, ein Muster, eine Art, dir selbst im Weg zu stehen. Und sofort meldet sich eine Stimme, die sagt: Erst musst du verstehen, woher das kommt. Grab in der Kindheit, find die Wurzel, dann löst es sich. Aber es gibt eine andere Stimme, die sagt: Vergiss das Woher. Es genügt zu wissen, wohin du willst — geh einfach anders weiter. Zwischen diesen beiden Stimmen verläuft die ganze Geschichte der Psychotherapie. Wir gehen sie ab, von der einen zur anderen. Aber erwarte am Ende keinen Sieger — und keinen geraden Weg.",
+  "path": [
+    {
+      "nodeId": "freud",
+      "nodeType": "thinker",
+      "step_brief": "Am Anfang steht Freud, und mit ihm die Überzeugung, die bis heute prägt, was viele unter Heilung verstehen: Was dich heute quält, hat seine Wurzel in der Vergangenheit — meist in der Kindheit, meist im Verborgenen. Das Symptom ist eine verschlüsselte Botschaft aus dem Unbewussten. Heilung heißt: das Verdrängte ans Licht holen, verstehen, durcharbeiten. Erst wer den Grund seines Leidens durchschaut, wird frei davon. Das ist der Urgrund der ganzen ›sprechenden Kur‹ — und der reinste Fall der ersten Stimme: Du musst verstehen, woher es kommt.",
+      "transition": "Freuds Versprechen ist mächtig: Verstehen befreit. Jahrzehntelang war das die Therapie schlechthin. Doch dann kamen Menschen, bei denen das Sprechen nicht half — Traumatisierte, die alles verstanden hatten und trotzdem nachts hochschreckten. Bei ihnen zeigte sich eine Grenze des Verstehens, an einem Ort, den die Einsicht nicht erreicht."
+    },
+    {
+      "nodeId": "van-der-kolk",
+      "nodeType": "thinker",
+      "step_brief": "Van der Kolk hat mit der Trauma-Forschung gezeigt, was Freuds Erben übersahen: Manche Wunden sitzen nicht im Gedächtnis, sondern im Körper — im Nervensystem, das in Daueralarm steht, lange nachdem der Verstand alles begriffen hat. Darum hilft Reden traumatisierten Menschen oft erstaunlich wenig. Das Trauma sitzt unterhalb der Sprache. Heilung läuft hier nicht über Einsicht, sondern über den Körper: über Atem, Bewegung, neue Erfahrungen von Sicherheit. Van der Kolk bleibt rückwärtsgewandt wie Freud — es geht noch immer um die Vergangenheit —, aber er bricht mit dem Glauben, dass Verstehen genügt.",
+      "transition": "Damit ist die erste Stimme erschüttert, aber noch nicht verlassen: Es geht weiter um das Woher, nur nicht mehr ums Verstehen. Den eigentlichen Schwenk macht erst jemand, der die Blickrichtung umdreht — weg von der Ursache, hin zum Ziel. Und das tat, früh und fast unbemerkt, ein Abtrünniger aus Freuds eigenem Kreis."
+    },
+    {
+      "nodeId": "adler",
+      "nodeType": "thinker",
+      "step_brief": "Adler, Freuds früher Weggefährte, brach mit ihm in genau diesem Punkt. Für Adler ist der Mensch nicht von seiner Vergangenheit geschoben, sondern von Zielen gezogen. Wir fragen zu oft ›warum bin ich so geworden?‹ — und zu selten ›wohin will ich eigentlich?‹. Jeder entwickelt früh einen Lebensstil, eine Strategie, mit Minderwertigkeit umzugehen und dazuzugehören; aber dieser Stil ist auf eine Zukunft gerichtet, nicht in der Kindheit festgenagelt. Heilung heißt für Adler: erkennen, wohin man strebt, und diese Richtung auf die anderen hin öffnen. Hier kippt der Bogen — von rückwärts nach vorwärts.",
+      "transition": "Adler dreht den Blick um, aber er bleibt ein Deutender — er will die Richtung noch verstehen. Die radikalste Form der zweiten Stimme verzichtet sogar darauf. Sie sagt: Du musst gar nichts mehr ausgraben, weder Ursache noch Ziel. Schaff die Bedingungen, unter denen Wachstum von selbst geschieht."
+    },
+    {
+      "nodeId": "rogers",
+      "nodeType": "thinker",
+      "step_brief": "Rogers vertraut auf eine Kraft, die in jedem Menschen wirkt: die Aktualisierungstendenz, den eingebauten Zug zu wachsen, sobald die Bedingungen stimmen — wie eine Pflanze zum Licht. Man muss den Menschen nicht aufschlüsseln oder reparieren. Man muss ihm echte Wertschätzung, Einfühlung und Ehrlichkeit entgegenbringen, und die Bewegung beginnt von selbst. Das ist die zweite Stimme in ihrer reinsten Form: nicht das Woher, nicht einmal das Wohin als Plan — sondern das Weitergehen, ermöglicht durch eine tragende Beziehung. Verstehen ist hier fast nebensächlich geworden.",
+      "transition": "Von Freud bis Rogers sieht es aus wie ein sauberer Weg: von der vergrabenen Vergangenheit zur offenen Zukunft, vom Durchschauen zum Weitergehen. Man möchte den Bogen hier schließen und sagen: Seht, die Therapie ist erwachsen geworden. Aber eine letzte Stimme tritt aus der Reihe heraus und sieht auf das Ganze — und sie macht den geraden Weg krumm."
+    },
+    {
+      "nodeId": "prochaska-diclemente",
+      "nodeType": "thinker",
+      "step_brief": "Prochaska und DiClemente haben nicht gefragt, welche Schule recht hat, sondern wie Veränderung überhaupt abläuft — quer durch alle Verfahren. Ihr Befund ist nüchtern: Wandlung ist kein Pfeil. Sie verläuft in Stufen — vom Noch-gar-nicht-Sehen über das ambivalente Erwägen zur Handlung und zur Aufrechterhaltung — und fast immer gehört der Rückfall dazu, nicht als Scheitern, sondern als normaler Teil der Schleife. Damit löst sich der ganze Bogen, den wir gerade gegangen sind, auf eine demütige Weise auf: Es geht nicht darum, ob du verstehst, woher es kommt, oder weißt, wohin du willst. Es geht darum, auf welcher Stufe du gerade stehst — und dass du wieder zurückfallen darfst, ohne von vorn zu beginnen.",
+      "transition": null
+    }
+  ],
+  "closing_synthesis": "Wir sind von Freud zu Rogers gewandert, von ›verstehen, woher es kommt‹ zu ›einfach anders weitergehen‹ — und am Ende hat Prochaska den geraden Weg in eine Schleife gebogen. Vielleicht ist das die ehrlichste Auskunft, die das Feld zu geben hat: Beide Stimmen haben recht und keine genügt allein. Manchmal musst du der Wurzel nachgehen — wenn sie dich sonst immer wieder einholt. Manchmal musst du das Graben lassen und weitergehen — wenn es dich nur tiefer festhält. Und fast immer wirst du beides mehrmals tun, vorwärts und zurück, bis sich etwas wirklich verschiebt. Wandlung ist kein Durchbruch, den man einmal schafft. Sie ist ein Weg, den man mehrmals geht.",
+  "closing_question": "Bei dem, was sich in dir ändern soll — willst du gerade verstehen, woher es kommt, oder bist du bereit, einfach anders weiterzugehen?"
+}

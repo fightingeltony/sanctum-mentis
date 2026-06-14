@@ -22,9 +22,14 @@ import warumGehorchstDuRaw                from '../../data/lectio/warum-gehorchs
 import warumGehorchstDuExpositorischRaw   from '../../data/lectio/warum-gehorchst-du-expositorisch.json'
 import findestDuOderMachstDuRaw            from '../../data/lectio/findest-du-oder-machst-du.json'
 import ruheOderRauschRaw                   from '../../data/lectio/ruhe-oder-rausch.json'
+import ruheOderRauschExpositorischRaw      from '../../data/lectio/ruhe-oder-rausch-expositorisch.json'
 import derWegDesMenschenRaw                from '../../data/lectio/der-weg-des-menschen.json'
+import derWegDesMenschenExpositorischRaw   from '../../data/lectio/der-weg-des-menschen-expositorisch.json'
 import istDerAndereHoelleOderHeimatRaw     from '../../data/lectio/ist-der-andere-hoelle-oder-heimat.json'
+import istDerAndereExpositorischRaw        from '../../data/lectio/ist-der-andere-hoelle-oder-heimat-expositorisch.json'
 import verstehenOderWeitergehenRaw         from '../../data/lectio/verstehen-oder-weitergehen.json'
+import verstehenExpositorischRaw           from '../../data/lectio/verstehen-oder-weitergehen-expositorisch.json'
+import wennNichtsVorgegebenExpositorischRaw from '../../data/lectio/wenn-nichts-vorgegeben-expositorisch.json'
 import stellDieFrageAndersRaw              from '../../data/lectio/stell-die-frage-anders.json'
 import werBistDuRaw                        from '../../data/lectio/wer-bist-du-wenn-du-alles-weglaesst.json'
 import vomWissenZumGlaubenRaw              from '../../data/lectio/vom-wissen-zum-glauben.json'
@@ -81,10 +86,15 @@ const LECTIOS: Record<string, Lectio> = {
   'warum-gehorchst-du':                  warumGehorchstDuRaw                   as unknown as Lectio,
   'warum-gehorchst-du-expositorisch':    warumGehorchstDuExpositorischRaw      as unknown as Lectio,
   'findest-du-oder-machst-du':   findestDuOderMachstDuRaw      as unknown as Lectio,
-  'ruhe-oder-rausch':            ruheOderRauschRaw             as unknown as Lectio,
-  'der-weg-des-menschen':        derWegDesMenschenRaw          as unknown as Lectio,
-  'ist-der-andere-hoelle-oder-heimat': istDerAndereHoelleOderHeimatRaw as unknown as Lectio,
-  'verstehen-oder-weitergehen':        verstehenOderWeitergehenRaw     as unknown as Lectio,
+  'ruhe-oder-rausch':                      ruheOderRauschRaw                  as unknown as Lectio,
+  'ruhe-oder-rausch-expositorisch':        ruheOderRauschExpositorischRaw     as unknown as Lectio,
+  'wenn-nichts-vorgegeben-expositorisch':  wennNichtsVorgegebenExpositorischRaw as unknown as Lectio,
+  'der-weg-des-menschen':                  derWegDesMenschenRaw               as unknown as Lectio,
+  'der-weg-des-menschen-expositorisch':    derWegDesMenschenExpositorischRaw  as unknown as Lectio,
+  'ist-der-andere-hoelle-oder-heimat':          istDerAndereHoelleOderHeimatRaw   as unknown as Lectio,
+  'ist-der-andere-hoelle-oder-heimat-expositorisch': istDerAndereExpositorischRaw as unknown as Lectio,
+  'verstehen-oder-weitergehen':            verstehenOderWeitergehenRaw        as unknown as Lectio,
+  'verstehen-oder-weitergehen-expositorisch': verstehenExpositorischRaw       as unknown as Lectio,
   'stell-die-frage-anders':            stellDieFrageAndersRaw          as unknown as Lectio,
   'wer-bist-du-wenn-du-alles-weglaesst': werBistDuRaw                  as unknown as Lectio,
   'vom-wissen-zum-glauben':              vomWissenZumGlaubenRaw        as unknown as Lectio,

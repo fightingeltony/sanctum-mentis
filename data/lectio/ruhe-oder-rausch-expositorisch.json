@@ -1,0 +1,37 @@
+{
+  "id": "ruhe-oder-rausch-expositorisch",
+  "tableauId": "lebenskunst",
+  "title": "Ruhe oder Rausch?",
+  "focus": "Der Bruch zwischen antiker Seelenruhe und moderner Lebensintensität — vom Ideal der Unerschütterlichkeit bis zu Nietzsches Umkehrung",
+  "thesis": "Fast die gesamte antike Lebenskunst hatte ein Ziel: die Unerschütterlichkeit der Seele, die Ruhe, die nichts mehr aus der Bahn wirft. Diese Lectio baut dieses Ideal Schritt für Schritt auf — und lässt es dann von einer einzigen Frage erschüttern: Ist Ruhe wirklich das Beste, was ein Leben erreichen kann, oder ist sie nur eine elegante Art, sich gegen das Leben abzudichten?",
+  "level": 2,
+  "estimated_minutes": 14,
+  "intro": "Du kennst das Wort ›runterkommen‹. Nach einer harten Woche willst du Ruhe, Entspannung, einen Zustand, in dem dich nichts mehr zerrt. Die ganze Wellness-Industrie verkauft dir diese eine Sache: Gelassenheit. Und sie ist nicht neu — sie ist das älteste Versprechen der Philosophie. Fast alle antiken Schulen der Lebenskunst zielten auf denselben Zustand: die Seelenruhe, die Unerschütterlichkeit. Diese Lectio führt dich durch dieses Ideal, bis du ganz darin angekommen bist — und stellt dir dann die Frage, die ein einzelner Denker dagegen gestellt hat: Was, wenn die Ruhe gar nicht das Ziel sein sollte?",
+  "path": [
+    {
+      "nodeId": "epikur",
+      "nodeType": "thinker",
+      "transition": "Epikurs Rezept klingt bescheiden und ist radikal: Wer wenig braucht, ist schwer zu erschüttern. Aber halte einen Moment inne — er kauft die Ruhe mit einem Verzicht. Je weniger du willst, desto weniger kann dich treffen. Ist das Freiheit, oder ist es schon ein erster Rückzug aus dem Leben?"
+    },
+    {
+      "nodeId": "ataraxie",
+      "nodeType": "concept",
+      "transition": "Es ist nicht nur Epikur. Die Stoa sucht dieselbe Ruhe durch Kontrolle der Urteile, die Skepsis sogar durch das Aufgeben aller Urteile. Drei rivalisierende Schulen, ein gemeinsames Ziel — das zeigt, wie selbstverständlich die Antike annahm, dass das gute Leben ein ruhiges sei. Diese Selbstverständlichkeit ist es, die gleich erschüttert wird. Aber zuerst die Schule, die die Ruhe am weitesten treibt."
+    },
+    {
+      "nodeId": [
+        "marc-aurel",
+        "epiktet"
+      ],
+      "nodeType": "thinker",
+      "transition": "Die Stoa bringt das Ruhe-Ideal an seine Grenze: Nichts Äußeres — nicht Krankheit, nicht Verlust, nicht der Tod — soll deine innere Festung erschüttern dürfen. Das ist die vollkommene Unverwundbarkeit. Und genau hier wird die unbequeme Frage laut: Wer sich gegen jeden Schmerz abdichtet, dichtet er sich nicht auch gegen jede Freude ab? Ein Denker hat genau das behauptet."
+    },
+    {
+      "nodeId": "nietzsche",
+      "nodeType": "thinker",
+      "transition": "Nietzsche dreht zweitausend Jahre Lebenskunst um. Die Ruhe der Alten, sagt er, ist im Grunde eine Angst vor dem Leben — eine Technik, nicht mehr zu leiden, um den Preis, nicht mehr voll zu leben. Sein Gegenideal ist nicht Unerschütterlichkeit, sondern amor fati: das eigene Leben so leidenschaftlich wollen, mit allem Schmerz, dass du es unendlich oft wiederholen würdest. Nicht aushalten — wollen."
+    }
+  ],
+  "closing_synthesis": "Vier Stationen, und ein Ideal hat sich in sein Gegenteil verkehrt. Epikur baut die Ruhe aus dem Verzicht, die Ataraxie zeigt sie als gemeinsames Ziel fast aller antiken Schulen, die Stoa treibt sie zur völligen Unverwundbarkeit — und Nietzsche fragt, ob diese ganze Bewegung nicht eine Flucht war. Die Antike wollte nicht mehr leiden und nannte das Weisheit; Nietzsche will das ganze Leben, auch den Schmerz, und nennt das Stärke. Was diese Lectio dir zurücklässt, ist keine Entscheidung darüber, wer recht hat. Es ist die Frage, ob das gute Leben ein ruhiges ist, das dich vor dem Sturm schützt — oder ein intensives, das in den Sturm hineingeht. Du musst dich nicht entscheiden. Aber du hast gesehen, dass die Ruhe, die uns heute als Glück verkauft wird, einen sehr alten Preis hat.",
+  "closing_question": "Denk noch einmal an das ›Runterkommen‹, nach dem du dich nach einer harten Woche sehnst. Suchst du in diesem Moment wirklich die Ruhe — oder suchst du nur eine Pause, um danach wieder voll hineinzugehen? Und wenn du wählen müsstest: ein Leben, das dich nie mehr erschüttert, oder eines, das dich erschüttert, weil du es ganz lebst?"
+}
