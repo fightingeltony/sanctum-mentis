@@ -1,6 +1,6 @@
 # Lectio-Modus — Sanctum-Standard für geführte Pfade
 
-**Status:** Konvention v1.10, Mai 2026
+**Status:** Konvention v1.11, Mai 2026. **Ersetzt durch `prompts/lectio-anleitung.md` (Stand 2026-06-14). Bleibt als historische Detailreferenz erhalten.**
 **Anwendungsbereich:** Alle Lectio-Bauten in Sanctum Mentis.
 
 ---

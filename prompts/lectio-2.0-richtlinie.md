@@ -1,5 +1,7 @@
 # Lectio 2.0 — Überarbeitungs-Richtlinie
 
+**Status:** Aufgegangen in `prompts/lectio-anleitung.md` (Stand 2026-06-14). Archiv.
+
 **Zweck:** Leitfaden für die Überarbeitung bestehender Lectios in den erzählend-erfahrenden Ton. Entstanden aus dem Partnerin-Test (Herz-Typ) an der Selbst-Lectio „Wer bist du, wenn du alles weglässt?" plus zwei Stil-Proben am Geist-Tableau.
 
 **Status:** in Erprobung. Die bestehenden (expositorischen) Lectios bleiben vorerst parallel live — Rückweg offen, falls 2.0 sich nicht bewährt. Belegfall vor Kanonisierung.
