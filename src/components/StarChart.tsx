@@ -2102,7 +2102,7 @@ function CartoucheContent({
             {selectedRelations.map(({ edgeId, otherId, dir, edge }) => {
               const other = thinkerById[otherId]
               if (!other) return null
-              const isInf = edge.type === 'influence' || edge.type === 'student-of'
+              const isInf = edge.type === 'influence'
               const label = isInf
                 ? (dir === 'out' ? 'Einfluss →' : '← Einfluss')
                 : (edge.type === 'parallel'  ? 'Parallele'

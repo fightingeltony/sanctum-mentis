@@ -89,10 +89,9 @@ export interface Thinker extends Versioned {
 /** Beziehungstypen zwischen Denkern bzw. zwischen Denkern und Konzepten */
 export type InfluenceType =
   | 'influence'    // X beeinflusste Y
-  | 'critique'     // Y kritisierte X
-  | 'student-of'   // Y war Schüler von X
+  | 'critique'     // Konfrontation; from/to undirektional (siehe schema-referenz.md)
   | 'parallel'     // entwickelten unabhängig Ähnliches
-  | 'rejection'    // Y verwarf X komplett
+  | 'rejection'    // Verwerfung; from/to undirektional (siehe schema-referenz.md)
 
 /** Eine Beziehung zwischen zwei Denkern */
 export interface Influence extends Versioned {

@@ -69,7 +69,7 @@ Das letzte Wort vor `[[` wird als Term verwendet. Führende Satzzeichen (z.B. `(
 | Denker           | `Thinker`    | Philosoph, Theoretiker — gehört zu einer Schule      |
 | Schule           | `School`     | Strömung mit Farbe und Glyph (Empirismus, …)         |
 | Konzept          | `Concept`    | Prinzip, Methode, Argument, Unterscheidung — verortet im Quadranten-Raum |
-| Einfluss         | `Influence`  | Beziehung zwischen Denkern (influence/critique/student-of/parallel/rejection) |
+| Einfluss         | `Influence`  | Beziehung zwischen Denkern (influence/critique/parallel/rejection) |
 
 ## Schools-Konvention
 
