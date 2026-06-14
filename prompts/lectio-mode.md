@@ -212,6 +212,22 @@ Eine Sanctum-Lectio darf eine Haltung haben, aber keine Wahrheit verkünden. Die
 
 ---
 
+### 10.1 `closing_kernel` — Schreib-Disziplin
+
+Der `closing_kernel` ist Punkt 10, sichtbar gemacht: Das Frontend hebt genau diesen Teilstring im letzten Absatz der `closing_synthesis` hervor. Das macht die Wahl konsequenzreich — der hervorgehobene Satz bekommt mehr Gewicht als der Rest der Synthese.
+
+**Grundregel:** Wähle den Satz, der die Frage am weitesten offen hält, nicht den, der die meiste Deutung liefert. Der `closing_kernel` hebt die offene Haltung hervor, nie die Deutung.
+
+**Belegte Fehlerformen:**
+
+**(1) Kein Satz, der eine Position krönt.** Hervorgehoben macht er aus gleichberechtigten Stimmen heimlich eine Antwort. — Beleg: „Wer bist du wenn du alles weglässt", verworfener Kandidat B: *„deine eigene Antwort, die du längst in dir trägst"* legt dem Leser eine Gewissheit in den Mund, die die konfrontativ-gleichberechtigte Synthese nicht trägt.
+
+**(2) Kein Satz, der eine beiläufige These der Synthese ausstellt.** Ein Satz, der im Fließtext nur als Beobachtung tragbar war, kippt hervorgehoben in Verkündung. — Beleg: „Vom Wissen zum Glauben", verworfener Kandidat C: *„auffällig, wohin sie zeigen"* macht die Gruppierung hervorgehoben zur Pointe.
+
+**Tendenz (ein Fall, noch kein Kanon):** Der stärkste `closing_kernel` ist die spezifischste offene Beobachtung, die dieser Pfad erlaubt — nicht die allgemeinste Erlaubnis, die jede Lectio teilen könnte. Offen — bestätigt oder verworfen durch den nächsten Fall.
+
+---
+
 ## Das Lectio-Schema
 
 ```json
@@ -242,6 +258,8 @@ Eine Sanctum-Lectio darf eine Haltung haben, aber keine Wahrheit verkünden. Die
   ],
 
   "closing_synthesis": "3–5 Sätze. Lectio-eigene Landung — keine Leihgabe aus dem Tableau. Nennt nur Knoten aus dem Pfad.",
+
+  "closing_kernel": "Optionaler Teilstring des letzten Absatzes der closing_synthesis — wird im Frontend hervorgehoben. Schreib-Disziplin: Punkt 10.1.",
 
   "closing_question": "Die Schlussfrage. Öffnet emotional, was kognitiv geschlossen wurde. Keine Antwort erwartet."
 }
@@ -332,6 +350,7 @@ Daraus folgt die Bau-Regel: Eine Lectio darf nie Tableau-Grenzen überschreiten 
 - **v1.5 (Mai 2026):** Methodische Revision von Punkt 4 nach Live-Test der Selbst-Lectio. Tableau-Knoten-Texte erzeugen mit der Lectio-Stimme Redundanz, nicht Stilbruch — Lectio-Stimme paraphrasiert den Knoten-Text. Lösung: neues Feld `lectio_brief` (2–3 Sätze, atmosphärisch, dicht) als eigene Knoten-Stimme im Lectio-Modus. Punkt 5 entsprechend angepasst (`level` wird Fallback statt Default). Sektion 4.1 dokumentiert die Revision explizit.
 - **v1.6 (Mai 2026):** Dritter Pfad-Typ aus dem Realismus-Skript: emotional-kumulativ. Stationen kumulieren in einer emotionalen Bewegung (Festigkeit → Erschütterung → Schwindel → Reife), nicht in Argumentation oder Konfrontation. Punkt 9 entsprechend erweitert, mit Konvention zum Schwindel-Indikator in jedem Übergang. Realismus-Skript: vier Übergänge nachgezogen (Berkeley respektvoller, Kuhn mit Schwindel-Indikator, Rorty mit Vokabular-Erfahrung, Closing Synthesis mit klarem Adressaten).
 - **v1.7 (Mai 2026):** Konvention Wortmotiv ergänzt (Gemini-Impuls): emotional-kumulative Lectios tragen einen wiederkehrenden Wortteppich durch den ganzen Bogen, der den Titel als Textur einlöst. Realismus-Skript: Closing Question um Bild "im Schwindel zu stehen" geschärft.
+- **v1.11 (Jun 2026):** Punkt 10.1 `closing_kernel` — Schreib-Disziplin ergänzt. Zwei unabhängige Baufälle belegten die Lücke: Anleitung hatte nur die Mechanik (Substring-Validierung), keine Wahl-Regel. Grundregel: offene Haltung hervorheben, nie die Deutung. Zwei belegte Fehlerformen dokumentiert (krönende Position, beiläufige These). Tendenz (ein Fall) notiert. `closing_kernel` neu im Schema-Block.
 - **v1.10 (Mai 2026):** Vier Zuflüsse aus der Bauserie Mai 2026. (1) Punkt 9 um drei methodische Klarstellungen erweitert: Pfad-Typ-Destillation (Typen entstehen nach, nicht vor dem Bau; Auslöser: Existenzialismus), narrativ-historisch ≠ chronologisch streng (leichte Versetzung erlaubt, wenn im Übergang explizit), Reserve-Brief-Dokumentation (vorausschauende lectio_briefs nur mit Begleitnotiz-Eintrag). (2) Schema um `path_type`, `ton`, `step_brief` ergänzt und kanonisiert. (3) `ton: 'erzählend-erfahrend'` als neue Lectio-Dimension eingeführt — erster Fall `wer-bist-du-wenn-du-alles-weglaesst`, eigene Render-Komponente, in Validierung (Partnerin-Test ausstehend). (4) `kontemplativ-vertiefend` als Datenwert dokumentiert — methodisch noch nicht kanonisiert, wartet auf 2. Fall.
 - **v1.9 (Mai 2026):** Kanon-Block „Tableau / Lectio / Lebensfrage — die drei Formen" aufgenommen (wortgleich in `bibliothek-architektur.md` und `mild-mode.md`). Stellt klar: Lectio ist Tiefe *in einem* Feld und wohnt im Tableau; Lebensfrage ist Breite *über* Felder und wohnt neben der Bibliothek. Bau-Regel ergänzt: Lectio überschreitet nie Tableau-Grenzen.
 - **v1.8 (Mai 2026):** Vierte Schicht aus der Ethik-Lectio. Punkt 9 um Variante "destruktiv-aufbauend" erweitert (Stationen demontieren das Fundament, letzte Station bietet qualitativ anderen Zugang). Punkt 10 neu: Offener Ausgang — Sanctum verkündet keine Wahrheit, kuratorisch stärkste Position darf spürbar sein, aber nicht als finale Antwort markiert werden. Phänomenologische statt ontologische Formulierungen. Diese Konvention betrifft alle Pfad-Typen, wurde aber bei Ethik sichtbar, weil Levinas eine attraktive Lösung anbietet. Ethik-Skript entsprechend an drei Stellen geöffnet: Thesis, Intro, Closing Synthesis.

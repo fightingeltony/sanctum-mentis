@@ -27,6 +27,7 @@ import verstehenOderWeitergehenRaw         from '../../data/lectio/verstehen-ode
 import stellDieFrageAndersRaw              from '../../data/lectio/stell-die-frage-anders.json'
 import werBistDuRaw                        from '../../data/lectio/wer-bist-du-wenn-du-alles-weglaesst.json'
 import vomWissenZumGlaubenRaw              from '../../data/lectio/vom-wissen-zum-glauben.json'
+import annehmenOderUeberwindenRaw          from '../../data/lectio/annehmen-oder-ueberwinden.json'
 import schmerzRaw                          from '../../data/lebensfragen/schmerz.json'
 import todRaw                              from '../../data/lebensfragen/tod.json'
 import einsamkeitRaw                       from '../../data/lebensfragen/einsamkeit.json'
@@ -86,6 +87,7 @@ const LECTIOS: Record<string, Lectio> = {
   'stell-die-frage-anders':            stellDieFrageAndersRaw          as unknown as Lectio,
   'wer-bist-du-wenn-du-alles-weglaesst': werBistDuRaw                  as unknown as Lectio,
   'vom-wissen-zum-glauben':              vomWissenZumGlaubenRaw        as unknown as Lectio,
+  'annehmen-oder-ueberwinden':           annehmenOderUeberwindenRaw    as unknown as Lectio,
 }
 
 export function getLectio(id: string): Lectio | null {
