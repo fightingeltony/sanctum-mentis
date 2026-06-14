@@ -2,6 +2,18 @@
 
 ## Zuletzt abgeschlossen
 
+### [x] Lectio-Anleitung konsolidiert — maßgeblich (Stand 14.6.26)
+**Datum:** 14.6.26
+**Resultat:** `prompts/lectio-anleitung.md` — neue maßgebliche Bau-Anleitung, vereint lectio-mode v1.10, lectio-2.0-richtlinie und Schreib-Skill-Referenz. Bewährt durch vollen Lectio-Bau `annehmen-oder-ueberwinden` (Selbstverhältnis) + zwei closing_kernel-Bauten. `lectio-mode.md` als historische Detailreferenz markiert (v1.11), `lectio-2.0-richtlinie.md` als Archiv. Vier Nachträge in lectio-anleitung.md: Punkt 10.1 closing_kernel-Schreibdisziplin (zwei belegte Fehlerformen), Schluss-Station-bridge-Konvention, Typografie-Warnung Kernels, image_prompt Pflicht / Bild optional.
+
+### [x] Neue Lectio live: annehmen-oder-ueberwinden (Selbstverhältnis)
+**Datum:** 14.6.26
+**Resultat:** Dritter Belegfall erzählend-erfahrend. Konkurrierend-konfrontativ, L2, 4 Stationen (Rogers → Nietzsche → Marc Aurel → Buddhismus). Abendszene als durchlaufende Figur. Mit image_prompts pro Station. closing_kernel: „Welche, das weißt nur du." — 58/58 Vitest grün, gepusht.
+
+### [x] closing_kernel auf zwei Lectios gesetzt
+**Datum:** 14.6.26
+**Resultat:** `wer-bist-du-wenn-du-alles-weglaesst` (kernel: „Du musst dich für keine entscheiden.") + `vom-wissen-zum-glauben` (in Bau-Chat gesetzt). Schreibdisziplin aus zwei unabhängigen Fällen destilliert → lectio-anleitung.md Punkt 10.1. Typografie-Falle dokumentiert (Build-Fehler bei unsichtbaren Zeichenunterschieden).
+
 ### [x] Y-Achsen-Inversionsbug in drei Mild-Tableaus
 **Datum:** 26.5.26
 **Resultat:** Bug in drei Mild-Tableaus entdeckt: Existenzialismus (separater Commit), Realismus und Ethik (dieser Commit). Y-Werte aller Denker und Konzepte invertiert via y_neu = 100 - y_alt. Methodische Härtung in mild-mode.md v2.2: Y-Konvention explizit (y=100 oben, y=0 unten), Pflicht-Plausibilitätstest mit drei Anker-Knoten nach Koordinaten-Setzung eingeführt. Parallel-Eintrag in hard-mode.md. Geist und Selbst (Vollmodus) waren nicht betroffen.
@@ -110,12 +122,8 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] Synthese-Texte auf L5 einführen
-**Status:** vorgeschlagen 10.5.26, dringend
-**Kontext:** Aktuelle Tableaus zeigen auf L5 alle Knoten und Spannungen, aber ohne expliziten Erkenntnis-Landungs-Moment. Die Sanctum-Vision ("Wissen zur Ruhe kommen lassen") verlangt einen Ort, an dem der Bogen sichtbar geschlossen wird. Der Slider-Zustand "Synthese" suggeriert das, aber liefert es nicht.
-**Schema:** Neues Feld `synthesis` im topic-Block, drei bis fünf Sätze, sichtbar nur auf L5. Nicht ein neues Summary, sondern eine kuratorische Einordnung — *"Hier ist die Spannung, die du jetzt verstehst."*
-**Aufwand:** Pro Tableau eine halbe Stunde Schreibarbeit. Frontend: minimal.
-**Nächster Schritt:** Bei beiden Bestandstableaus retroaktiv ergänzen, dann als Standard für neue Tableaus.
+### [x] Synthese-Texte auf L5 einführen
+**Status:** implementiert 12.5.26 — Duplikat-Eintrag, abgehakt 14.6.26 (vgl. [x]-Eintrag weiter oben)
 
 ---
 
@@ -373,6 +381,41 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 ---
 
 ---
+
+### [ ] Zweite Selbstverhältnis-Lectio: Werk/Gabe-Diagonale
+**Status:** vorgemerkt 14.6.26
+**Kontext:** Der erste Selbstverhältnis-Bau (Annehmen/Überwinden) hat bewusst an der Gabe-Diagonale vorbeigefügt — Foucault (Selbstpraktiken), Hadot (Übung als Weg), Wahres Selbst als Begriff, Almaas bringen die ankerlose Konstruktion des Kerns zentral. Das ist ein eigener Bogen.
+**Nächster Schritt:** Anker prüfen; Bau nach dem nächsten Tableau oder als eigenständige Session.
+
+### [ ] Zehnte Vitest-Regel: bridge === transition (Doppelung ungesichert)
+**Status:** identifiziert 14.6.26
+**Kontext:** `narrative.bridge` und `step.transition` tragen wortgleichen Inhalt — gewollte Doppelung, solange beide Render-Pfade leben. Wird derzeit von Hand gepflegt; Build prüft Konsistenz nicht. Wenn die Werte auseinanderdriften, zeigen Narrative-Viewer und expositorischer Viewer verschiedene Übergangstexte ohne Fehler.
+**Nächster Schritt:** Als Vitest-Regel ergänzen (Regel 10: bridge === transition für alle Stationen mit beiden Feldern). Erst nach vollständiger Migration obsolet.
+
+### [ ] Notiz closing_kernel: dritter Fall ausstehend
+**Status:** Tendenz dokumentiert 14.6.26, noch kein Kanon
+**Kontext:** „Spezifischste offene Beobachtung vor allgemeinster Erlaubnis" — aus zwei Fällen als Tendenz destilliert, nicht als Regel kanonisiert. Wartet auf dritten unabhängigen Fall zur Bestätigung oder Verwerfung. Notiz steht in lectio-anleitung.md Punkt 10.1.
+**Nächster Schritt:** Beim nächsten closing_kernel-Bau bewusst prüfen; danach Kanon-Entscheidung.
+
+### [ ] Tableau-Bau-Anleitung — fehlt
+**Status:** Bestandsbefund 14.6.26
+**Kontext:** Es gibt mild-mode.md und hard-mode.md als Tableau-Prompts, aber keine eigenständige Bau-Anleitung analog zu lectio-anleitung.md. Zwei vollständige Begleitnotizen (existenzialismus-begleitnotiz.md, gut-und-boese-begleitnotiz.md) enthalten die Prozess-Erkenntnisse bereits — sie müssen nur destilliert werden.
+**Nächster Schritt:** Beim nächsten Tableau-Bau mitschreiben; nach dem Bau aus den zwei Begleitnotizen destillieren.
+
+### [ ] Lebensfragen-Bau-Anleitung — fehlt
+**Status:** Bestandsbefund 14.6.26
+**Kontext:** Vier Lebensfragen existieren, kein Bau-Standard. Analog zu lectio-anleitung.md aus den vier bestehenden Lebensfragen rekonstruieren.
+**Nächster Schritt:** Beim nächsten Lebensfragen-Bau mitschreiben; danach destillieren.
+
+### [ ] Grundhaltung/Kanon braucht eigenen Ort — kanon.md
+**Status:** Bestandsbefund 14.6.26
+**Kontext:** „Bibliothek mit Haltung, ohne Wahrheitsanspruch" ist 3× eingebettet (bibliothek-architektur.md, lectio-anleitung.md, mild-mode.md) — kein eigener kanonischer Ort. Ändert sich ein Satz, muss er dreimal nachgezogen werden.
+**Nächster Schritt:** kanon.md anlegen, kanonische Blöcke dort als Single Source of Truth, in den anderen Dateien als Verweis.
+
+### [ ] Prozess-Erkenntnisse fürs Rollen-Briefing
+**Status:** vorgemerkt 14.6.26
+**Kontext:** Zwei Erkenntnisse aus der Session-Serie, noch nicht systematisch festgehalten: (a) Bau-Chat braucht Ziel-Datei(en) von Anfang an + Ankunft der Grundlagen als lesbaren Inhalt verifizieren, nicht nur als Datei-Abgabe; (b) drei Rollen statt sechs Chats — Bauen / Prüfen / Ausführen, Rolle bestimmt das Briefing.
+**Nächster Schritt:** In einem Prozess-Dokument festhalten; beim nächsten Lectio-Bau aktiv anwenden.
 
 ### [ ] Pfad-Typ-Definition — Wann ist ein neuer Typ destilliert?
 **Status:** Methoden-Beobachtung 23.5.26

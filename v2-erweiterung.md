@@ -1,5 +1,7 @@
 # v2-Erweiterung aller Tableaus — Etappenabschluss
 
+**Status:** Archiv — aufgegangen in mild-mode v2 (Stand Mai 2026).
+
 **Datum:** 18.–19.5.26
 **Umfang:** Vier Tableaus (Ethik, Selbst, Realismus, Geist)
 **Anlass:** Tooltip-Renderer-Bug bei Ethik, Selbstbeobachtung am Live-Tool: Slider ab L3 ohne Wirkung

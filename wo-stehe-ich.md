@@ -1,6 +1,6 @@
 # Wo stehe ich — Sanctum Mentis
 
-**Stand:** 8.6.26 (aktualisiert nach Schreib-Skill, Erzählend-Badge, Partnerin-Feedback)
+**Stand:** 14.6.26 (aktualisiert nach Selbstverhältnis-Lectio + Lectio-Anleitung maßgeblich)
 
 ---
 
@@ -21,7 +21,7 @@
 - **Gut und Böse** — Mild-Modus, 11 Denker. Menschenbild-Spur (hue 345, Magenta) — eröffnet die **fünfte Sammlungs-Spur**. Achsen: Menschenbild (gut ↔ böse von Natur) / Ebene (individuell-ontologisch ↔ sozial-situativ). Lectio `stell-die-frage-anders` (destruktiv-aufbauend, L3, 5 Stationen).
 - **Das Selbstverhältnis** — Mild-Modus, 11 Denker. Existenz-Spur (hue 71) — staffelt eng an Lebenskunst 65 an. Achsen: Annehmen ↔ Überwinden / Gabe ↔ Errungen. Zwei Quersteller (Buddhismus + IFS) plus Metzinger (L5) als naturalistische Außenanfrage. Zwei Prüfrunden: Stufenverteilung L1–L5 vollständig belegt, Adler gestrichen (Achsen-Konsistenz), `bedingungslose-wertschaetzung` gestrichen. Existenz-Spur hat jetzt vier Tableaus.
 
-**Vierzehn Lectios** — geführte Pfade, alle live:
+**Fünfzehn Lectios** — geführte Pfade, alle live (15 aktiv; 6 deaktivierte -expositorisch-Varianten im Ordner, nicht eingebunden):
 
 - `hard-problem` — Geist, narrativ-historisch, L2, 6 Stationen
 - `wer-beobachtet` — Selbst, konkurrierend-konfrontativ, L3, 4 Stationen (expositorischer Ton)
@@ -37,12 +37,13 @@
 - `stell-die-frage-anders` — Gut/Böse, destruktiv-aufbauend, L3, 5 Stationen
 - `wer-bist-du-wenn-du-alles-weglaesst` — Selbst, konkurrierend-konfrontativ, L2, 4 Stationen — **erster Test des erzählend-erfahrenden Tons** (Vergleichsfall zu `wer-beobachtet`; eigene Render-Komponente `LectioNarrativeViewer`)
 - `vom-wissen-zum-glauben` — Verwandlung, konkurrierend-konfrontativ, L3, 6 Stationen — **zweiter Belegfall erzählend-erfahrend** (Augustinus → Stoa → Rilke → Eckhart → James → Jung; Tonwechsel bei James bewusst markiert; durchlaufende Figur: die Glaswand)
+- `annehmen-oder-ueberwinden` — Selbstverhältnis, konkurrierend-konfrontativ, L2, 4 Stationen — **dritter Belegfall erzählend-erfahrend** (Rogers → Nietzsche → Marc Aurel → Buddhismus; Abendszene als durchlaufende Figur; mit image_prompts)
 
 **Lectio-Navigation:** `LectioNarrativeViewer` hat sichtbaren Zurück-Button im Footer (drei Spalten: ← zurück · Dots · weiter →), `← Verlassen`-Button (Border-Box, top-left), und `Erzählend`-Badge auf Lectio-Karten + in der Schwelle-Metazeile.
 
 **Lectio-Prosa:** `prompts/schreib-skill-lectio.md` (neu) — Handwerkskasten für Lectio-Prosa (Satzrhythmus, Variation, Belegbeispiele, Fehler-Katalog). `prompts/lectio-2.0-richtlinie.md` aktualisiert (Regel 1 + 4: Rhythmus statt Kürze, Schreib-Skill als vorgelagerte Instanz). Beide Lectios rhythmisch überarbeitet (wer-bist-du: Sofa-Intro + alle 4 Stationen; vom-wissen-zum-glauben: Glaswand-Figur + alle 6 Stationen).
 
-**Lectio-Methode:** `prompts/lectio-mode.md` v1.9 — zehn Entscheidungen, vier kanonisierte Pfad-Typen. *Erzählend-erfahrend* hat zwei Belegfälle + Partnerin-Feedback ✓ — **bereit für Kanonisierung als v1.10**. *Kontemplativ-vertiefend* wartet auf 2. Fall.
+**Lectio-Methode:** `prompts/lectio-anleitung.md` — **maßgebliche Bau-Anleitung** (Stand 14.6.26), konsolidiert aus lectio-mode v1.10 + 2.0-Richtlinie + Schreib-Skill. Bewährt durch vollen Bau `annehmen-oder-ueberwinden` + zwei closing_kernel-Bauten. `lectio-mode.md` (v1.11) und `lectio-2.0-richtlinie.md` als Archiv markiert. `closing_kernel` auf zwei Lectios gesetzt (wer-bist-du + vom-wissen-zum-glauben). *Kontemplativ-vertiefend* wartet auf 2. Fall.
 
 **Landing Page** hat ein lebendiges Tableau (HeroTableau-Komponente: animiert Das-Selbst-Konzepte Band für Band), eine Lectio-Sektion und erklärt den Unterschied zwischen Karte und Lectio.
 
@@ -81,8 +82,6 @@
 
 ## Was mich aktuell beschäftigt
 
-Der Partnerin-Test läuft — drei Lectios (darunter die neue erzählende Form `wer-bist-du-wenn-du-alles-weglaesst` im direkten Vergleich mit `wer-beobachtet`). Was auf dem Spiel steht: nicht Schönheit, sondern Tiefe. Bleibt jemand dran? Erkennt sich jemand in einer Stimme wieder? Das Ergebnis entscheidet, ob der erzählende Ton zum neuen Standard wird und die anderen ~10 Lectios in dieselbe Form überführt werden. **Sobald ein Ergebnis vorliegt, gehört es nach `feedback-runde-1.md`** — dort lebt die Feedback-Geschichte, hier nur der Stand.
+Die Lectio-Methode ist konsolidiert und maßgeblich. Die offene Arbeit ist jetzt Bau, nicht Methode: Die zweite Selbstverhältnis-Lectio (Werk/Gabe-Diagonale — Foucault, Hadot, Wahres Selbst, Almaas) liegt im Backlog, das erste Selbstverhältnis-Bau hat bewusst daran vorbeigefügt. Daneben fehlt noch das zweite Menschenbild-Tableau für die Section-Header-Bedingung.
 
-Die Sammlung hat jetzt elf Tableaus, fünf Spuren, dreizehn Lectios und eine neue Lectio-Form. Was ich nicht weiß: Ob der Discovery-Pfad (Bibliothek → Tableau → Lectio) für jemanden ohne Vorwissen trägt. Der formale User-Test — zwei Personen aus der Persona, ohne Erklärung beobachten — ist weiterhin ausständig.
-
-Die Farb-Frage hat sich beruhigt, die Existenz-Spur fühlt sich voll an (drei Tableaus). Die offene Frage ist jetzt: Wann hört eine Spur auf zu wachsen? Das ist keine technische Frage, sondern eine kuratorische — und sie ist für Wandlung und Menschenbild noch nicht gestellt worden, weil beide Spuren gerade erst begonnen haben.
+Die Sammlung hat jetzt zwölf Tableaus, fünf Spuren, fünfzehn Lectios. Was ich nicht weiß: Ob der Discovery-Pfad (Bibliothek → Tableau → Lectio) für jemanden ohne Vorwissen trägt. Der formale User-Test — zwei Personen aus der Persona, ohne Erklärung beobachten — ist weiterhin ausständig.

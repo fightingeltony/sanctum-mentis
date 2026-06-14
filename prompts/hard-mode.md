@@ -1,6 +1,6 @@
 # Hard-Mode — Sanctum-Standard für akademisch volle Tableau-Bauten
 
-**Status:** Konvention, gültig seit v2-Etappe (Mai 2026)
+**Status:** Konvention, gültig seit v2-Etappe (Mai 2026). **Ungetestet — nie in echtem Tableau-Bau verwendet.**
 **Anwendungsbereich:** Tableau-Bauten, bei denen akademische Vollständigkeit als Erfolgsmaßstab gelten muss.
 **Default:** Nein. Default ist Mild (`mild-mode.md`).
 
