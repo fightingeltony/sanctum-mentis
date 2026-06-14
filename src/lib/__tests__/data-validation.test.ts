@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Sanctum Mentis — Daten-Validierungs-Tests
  *
  * Prüft alle Tableau-JSONs und Lectio-JSONs auf Konsistenz:
@@ -267,6 +267,67 @@ describe('Influence from/to sind gültige Knoten-IDs', () => {
       }
     })
   }
+})
+
+// ─── 8. brief vs. step_brief (Legacy-Erkennung) ──────────────
+
+describe('brief-Feld (Legacy) vs. step_brief', () => {
+  it('keine Station verwendet noch das Legacy-Feld "brief"', () => {
+    const lectioFiles = getLectioFiles()
+    const legacyFound: string[] = []
+
+    for (const filename of lectioFiles) {
+      const lectio = loadLectio(filename)
+      const lectioId = lectio.id as string
+      const path_   = (lectio.path as Array<Record<string, unknown>>) ?? []
+
+      for (let i = 0; i < path_.length; i++) {
+        const step = path_[i]
+        if ('brief' in step) {
+          const nodeId = Array.isArray(step.nodeId)
+            ? (step.nodeId as string[]).join('+')
+            : (step.nodeId as string)
+          legacyFound.push(`${lectioId}  Station ${i + 1}  nodeId: ${nodeId}`)
+        }
+      }
+    }
+
+    expect(
+      legacyFound,
+      `${legacyFound.length} Station(en) verwenden noch "brief" statt "step_brief":\n` +
+      legacyFound.map(s => `  – ${s}`).join('\n')
+    ).toHaveLength(0)
+  })
+})
+
+// ─── 9. closing_kernel — Ist-Stand (informativ) ───────────────
+
+describe('closing_kernel — Ist-Stand (informativ)', () => {
+  it('Lectios mit gesetztem closing_kernel — Überblick', () => {
+    const lectioFiles = getLectioFiles()
+    const withKernel: Array<{ id: string; kernel: string }> = []
+
+    for (const filename of lectioFiles) {
+      const lectio  = loadLectio(filename)
+      const lectioId = lectio.id as string
+      const kernel   = lectio.closing_kernel as string | undefined
+      if (kernel && kernel.length > 0) {
+        withKernel.push({ id: lectioId, kernel })
+      }
+    }
+
+    // Rein informativ: Liste ausgeben, kein Fehler
+    const lines_ = withKernel.map(({ id, kernel }) => {
+      const preview = '"' + kernel.slice(0, 80) + (kernel.length > 80 ? '..."' : '"')
+      return '  ' + id + '\n    ' + preview
+    })
+    const infoMsg = withKernel.length === 0
+      ? '\ninfo closing_kernel: kein Eintrag gesetzt (alle leer/fehlend)'
+      : '\ninfo closing_kernel gesetzt in ' + withKernel.length + ' Lectio(s):\n' + lines_.join('\n')
+    console.info(infoMsg)
+    // Dieser Test schlägt nie fehl — er dient nur der Sichtbarkeit
+    expect(withKernel.length).toBeGreaterThanOrEqual(0)
+  })
 })
 
 // ─── 7. primaryThinker ist nicht-leerer String ────────────────
