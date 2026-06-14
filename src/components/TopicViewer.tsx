@@ -7,14 +7,12 @@ import type { TopicData, LectioSummary } from '@/lib/types'
 import { computeLevelState } from '@/lib/complexityEngine'
 import LevelSlider from './LevelSlider'
 import ThinkerList from './ThinkerList'
-import InfluenceGraph from './InfluenceGraph'
-import QuadrantPlot from './QuadrantPlot'
 import StarChart from './StarChart'
 import { useCommandPalette } from './ShellCommandPaletteProvider'
 
-type Tab = 'denker' | 'einfluesse' | 'quadrant' | 'sternkarte'
+type Tab = 'denker' | 'sternkarte'
 
-const VALID_TABS = ['denker', 'einfluesse', 'quadrant', 'sternkarte'] as const
+const VALID_TABS = ['denker', 'sternkarte'] as const
 
 interface Props {
   data: TopicData
@@ -93,10 +91,8 @@ export default function TopicViewer({ data, lectios }: Props) {
   const state = useMemo(() => computeLevelState(data, levelId), [data, levelId])
 
   const tabs: { id: Tab; label: string; mobileLabel: string; numeral: string; count: number | null }[] = [
-    { id: 'denker',     label: 'Denker',    mobileLabel: 'Denker', numeral: 'I',   count: state.thinkers.length },
-    { id: 'einfluesse', label: 'Einflüsse', mobileLabel: 'Netz',   numeral: 'II',  count: state.influences.length },
-    { id: 'quadrant',   label: 'Konzepte',  mobileLabel: 'Karte',  numeral: 'III', count: state.concepts.length },
-    { id: 'sternkarte', label: 'Sternkarte', mobileLabel: 'Stern', numeral: 'IV',  count: null },
+    { id: 'denker',     label: 'Denker',    mobileLabel: 'Denker', numeral: 'I',  count: state.thinkers.length },
+    { id: 'sternkarte', label: 'Sternkarte', mobileLabel: 'Stern', numeral: 'II', count: null },
   ]
 
   const activeIdx = Math.max(0, data.levels.findIndex(l => l.id === levelId))
@@ -344,26 +340,6 @@ export default function TopicViewer({ data, lectios }: Props) {
             listStyle={data.topic.thinkerListStyle}
             highlightId={highlightId}
             onHighlightDone={() => setHighlightId(null)}
-          />
-        )}
-        {tab === 'einfluesse' && (
-          <InfluenceGraph
-            thinkers={state.thinkers}
-            influences={state.influences}
-            schools={data.schools}
-            currentLevel={state.level}
-            topic={data.topic}
-          />
-        )}
-        {tab === 'quadrant' && (
-          <QuadrantPlot
-            concepts={state.concepts}
-            totalConcepts={data.concepts.length}
-            thinkers={state.thinkers}
-            levelId={levelId}
-            currentLevel={state.level}
-            quadrants={data.topic.quadrants}
-            onThinkerClick={(id) => { setTab('denker'); setHighlightId(id) }}
           />
         )}
         {tab === 'sternkarte' && (

@@ -88,7 +88,7 @@ export default function CommandPalette({ open, onClose }: Props) {
       params.set('highlight', entry.nodeId ?? '')
       params.set('tab', 'denker')
     } else if (entry.type === 'concept') {
-      params.set('tab', 'quadrant')
+      params.set('tab', 'sternkarte')
     } else {
       // school → denker tab with school visible
       params.set('tab', 'denker')
