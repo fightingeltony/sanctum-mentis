@@ -5,6 +5,7 @@
   "focus": "Die Bewegung von der Ursache zum Ziel — und die nüchterne Einsicht, dass Wandlung kein Pfeil ist",
   "thesis": "Die Therapiegeschichte wandert von der Frage ›woher kommt mein Leiden?‹ zur Frage ›wohin will ich?‹ — aber wer genau hinsieht, merkt, dass keine der beiden Fragen allein heilt und dass Wandlung selten geradeaus verläuft.",
   "path_type": "narrativ-historisch",
+  "ton": "erzählend-erfahrend",
   "level": 3,
   "estimated_minutes": 17,
   "intro": "Etwas in deinem Leben soll anders werden — eine Angst, ein Muster, eine Art, dir selbst im Weg zu stehen. Und sofort meldet sich eine Stimme, die sagt: Erst musst du verstehen, woher das kommt. Grab in der Kindheit, find die Wurzel, dann löst es sich. Aber es gibt eine andere Stimme, die sagt: Vergiss das Woher. Es genügt zu wissen, wohin du willst — geh einfach anders weiter. Zwischen diesen beiden Stimmen verläuft die ganze Geschichte der Psychotherapie. Wir gehen sie ab, von der einen zur anderen. Aber erwarte am Ende keinen Sieger — und keinen geraden Weg.",
@@ -12,31 +13,77 @@
     {
       "nodeId": "freud",
       "nodeType": "thinker",
+      "image": "/lectio-images/Verstehen oder weitergehen/lectio-freud.png",
+      "narrative": {
+        "hook": "Du kennst den Reflex, wenn etwas an dir nicht stimmt: ›Das muss doch irgendwo herkommen.‹ Du fängst an zu graben, als läge die Lösung dort, wo das Problem einmal begann.",
+        "body": [
+          "Genau diesen Reflex hat Freud zur Methode gemacht: Was dich heute quält, sagt er, hat seine Wurzel in der Vergangenheit, meist in der Kindheit, meist im Verborgenen — und das Symptom ist nichts anderes als eine verschlüsselte Botschaft aus dem Unbewussten, das im Dunkeln weiterwirkt. Heilung heißt darum: das Verdrängte ans Licht holen, es ansehen, durcharbeiten. Erst wer den Grund seines Leidens wirklich durchschaut, wird frei davon. Das ist der Urgrund der ganzen sprechenden Kur, und es ist die erste Stimme in ihrer reinsten Form: Du musst verstehen, woher es kommt."
+        ],
+        "kernel": "Du musst verstehen, woher es kommt.",
+        "bridge": "Freuds Versprechen ist mächtig: Verstehen befreit. Jahrzehntelang war das die Therapie schlechthin. Doch dann kamen Menschen, bei denen das Sprechen nicht half — Traumatisierte, die alles verstanden hatten und trotzdem nachts hochschreckten. Bei ihnen zeigte sich eine Grenze des Verstehens, an einem Ort, den die Einsicht nicht erreicht."
+      },
       "step_brief": "Am Anfang steht Freud, und mit ihm die Überzeugung, die bis heute prägt, was viele unter Heilung verstehen: Was dich heute quält, hat seine Wurzel in der Vergangenheit — meist in der Kindheit, meist im Verborgenen. Das Symptom ist eine verschlüsselte Botschaft aus dem Unbewussten. Heilung heißt: das Verdrängte ans Licht holen, verstehen, durcharbeiten. Erst wer den Grund seines Leidens durchschaut, wird frei davon. Das ist der Urgrund der ganzen ›sprechenden Kur‹ — und der reinste Fall der ersten Stimme: Du musst verstehen, woher es kommt.",
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: an old well sunk into a dim cellar floor, a single shaft of light reaching down toward dark water far below — something buried, waited for, slowly brought up. Generous empty space, calm and inward mood. Vertical composition (portrait, roughly 4:5), the well mouth slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Freuds Versprechen ist mächtig: Verstehen befreit. Jahrzehntelang war das die Therapie schlechthin. Doch dann kamen Menschen, bei denen das Sprechen nicht half — Traumatisierte, die alles verstanden hatten und trotzdem nachts hochschreckten. Bei ihnen zeigte sich eine Grenze des Verstehens, an einem Ort, den die Einsicht nicht erreicht."
     },
     {
       "nodeId": "van-der-kolk",
       "nodeType": "thinker",
+      "narrative": {
+        "hook": "Vielleicht kennst du das an dir selbst: Du weißt ganz genau, warum du Angst hast, du kannst es erklären, du hast es hundertmal durchdacht — und der Körper macht trotzdem, was er will. Herzrasen, Enge, ein Schreck, der schneller ist als jeder Gedanke.",
+        "body": [
+          "Hier setzt van der Kolk an, und er verschiebt etwas Grundlegendes: Manche Wunden, sagt er, sitzen nicht im Gedächtnis, sondern im Körper — in einem Nervensystem, das in Daueralarm steht, lange nachdem der Verstand alles längst begriffen hat. Deshalb hilft Reden traumatisierten Menschen oft erstaunlich wenig; das Trauma sitzt unterhalb der Sprache, an einem Ort, den kein Satz erreicht. Heilung läuft hier nicht über Einsicht, sondern über den Körper — über Atem, Bewegung, Rhythmus, über neue Erfahrungen von Sicherheit. Es geht noch immer um die Vergangenheit, wie bei Freud. Aber der Glaube, dass Verstehen allein genügt, ist zerbrochen."
+        ],
+        "kernel": "das Trauma sitzt unterhalb der Sprache",
+        "bridge": "Damit ist die erste Stimme erschüttert, aber noch nicht verlassen: Es geht weiter um das Woher, nur nicht mehr ums Verstehen. Den eigentlichen Schwenk macht erst jemand, der die Blickrichtung umdreht — weg von der Ursache, hin zum Ziel. Und das tat, früh und fast unbemerkt, ein Abtrünniger aus Freuds eigenem Kreis."
+      },
       "step_brief": "Van der Kolk hat mit der Trauma-Forschung gezeigt, was Freuds Erben übersahen: Manche Wunden sitzen nicht im Gedächtnis, sondern im Körper — im Nervensystem, das in Daueralarm steht, lange nachdem der Verstand alles begriffen hat. Darum hilft Reden traumatisierten Menschen oft erstaunlich wenig. Das Trauma sitzt unterhalb der Sprache. Heilung läuft hier nicht über Einsicht, sondern über den Körper: über Atem, Bewegung, neue Erfahrungen von Sicherheit. Van der Kolk bleibt rückwärtsgewandt wie Freud — es geht noch immer um die Vergangenheit —, aber er bricht mit dem Glauben, dass Verstehen genügt.",
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: a taut, weathered rope still pulled tight long after the hand that pulled it is gone, anchored to old stone — tension held in the body of a thing, beneath any words. Generous empty space, calm but quietly strained mood. Vertical composition (portrait, roughly 4:5), the taut rope slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Damit ist die erste Stimme erschüttert, aber noch nicht verlassen: Es geht weiter um das Woher, nur nicht mehr ums Verstehen. Den eigentlichen Schwenk macht erst jemand, der die Blickrichtung umdreht — weg von der Ursache, hin zum Ziel. Und das tat, früh und fast unbemerkt, ein Abtrünniger aus Freuds eigenem Kreis."
     },
     {
       "nodeId": "adler",
       "nodeType": "thinker",
+      "narrative": {
+        "hook": "Frag dich einmal nicht ›warum bin ich so geworden?‹, sondern ›wohin will ich eigentlich?‹ — und merk, wie ungewohnt sich die zweite Frage anfühlt, wie selten du sie überhaupt stellst.",
+        "body": [
+          "Genau diese Umkehrung ist Adlers Bruch mit Freud, seinem frühen Weggefährten: Der Mensch, sagt er, ist nicht von seiner Vergangenheit geschoben, sondern von Zielen gezogen. Schon das Kind entwickelt einen Lebensstil, eine unbewusste Strategie, mit Minderwertigkeit umzugehen und dazuzugehören — aber dieser Stil ist auf eine Zukunft gerichtet, nicht in der Kindheit festgenagelt. Und das Selbst ist für Adler kein Innenraum, den man ausgräbt, sondern eine soziale Bewegungsrichtung: Wer du bist, zeigt sich daran, wie du dich auf andere zubewegst. Heilung heißt dann, die eigene Richtung zu erkennen und sie auf die Mitmenschen hin zu öffnen. Hier kippt der ganze Bogen — von rückwärts nach vorwärts."
+        ],
+        "kernel": "nicht von seiner Vergangenheit geschoben, sondern von Zielen gezogen",
+        "bridge": "Adler dreht den Blick um, aber er bleibt ein Deutender — er will die Richtung noch verstehen. Die radikalste Form der zweiten Stimme verzichtet sogar darauf. Sie sagt: Du musst gar nichts mehr ausgraben, weder Ursache noch Ziel. Schaff die Bedingungen, unter denen Wachstum von selbst geschieht."
+      },
       "step_brief": "Adler, Freuds früher Weggefährte, brach mit ihm in genau diesem Punkt. Für Adler ist der Mensch nicht von seiner Vergangenheit geschoben, sondern von Zielen gezogen. Wir fragen zu oft ›warum bin ich so geworden?‹ — und zu selten ›wohin will ich eigentlich?‹. Jeder entwickelt früh einen Lebensstil, eine Strategie, mit Minderwertigkeit umzugehen und dazuzugehören; aber dieser Stil ist auf eine Zukunft gerichtet, nicht in der Kindheit festgenagelt. Heilung heißt für Adler: erkennen, wohin man strebt, und diese Richtung auf die anderen hin öffnen. Hier kippt der Bogen — von rückwärts nach vorwärts.",
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: a single young plant on a windowsill, its whole body leaning and reaching toward an open window and the light beyond — drawn forward by what lies ahead, not pushed from behind. Generous empty space, calm and quietly forward-leaning mood. Vertical composition (portrait, roughly 4:5), the leaning plant slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Adler dreht den Blick um, aber er bleibt ein Deutender — er will die Richtung noch verstehen. Die radikalste Form der zweiten Stimme verzichtet sogar darauf. Sie sagt: Du musst gar nichts mehr ausgraben, weder Ursache noch Ziel. Schaff die Bedingungen, unter denen Wachstum von selbst geschieht."
     },
     {
       "nodeId": "rogers",
       "nodeType": "thinker",
+      "narrative": {
+        "hook": "Erinnerst du dich an einen Menschen, in dessen Nähe du einfach mehr du selbst werden konntest? Niemand hat an dir herumrepariert. Es genügte, dass du angenommen warst — und etwas geriet von ganz allein in Bewegung.",
+        "body": [
+          "Auf genau diese Kraft vertraut Rogers, und er gibt ihr einen Namen: die Aktualisierungstendenz, den eingebauten Zug jedes Menschen, zu wachsen, sobald die Bedingungen stimmen — so wie eine Pflanze zum Licht strebt, ohne dass man es ihr beibringen müsste. Man muss den Menschen darum nicht aufschlüsseln und nicht reparieren; man muss ihm echte Wertschätzung, Einfühlung und Ehrlichkeit entgegenbringen, und die Bewegung beginnt von selbst. Das ist die zweite Stimme in ihrer reinsten Form — nicht das Woher, nicht einmal das Wohin als Plan, sondern das Weitergehen, getragen von einer Beziehung. Das Verstehen ist hier fast nebensächlich geworden."
+        ],
+        "kernel": "das Weitergehen, getragen von einer Beziehung",
+        "bridge": "Von Freud bis Rogers sieht es aus wie ein sauberer Weg: von der vergrabenen Vergangenheit zur offenen Zukunft, vom Durchschauen zum Weitergehen. Man möchte den Bogen hier schließen und sagen: Seht, die Therapie ist erwachsen geworden. Aber eine letzte Stimme tritt aus der Reihe heraus und sieht auf das Ganze — und sie macht den geraden Weg krumm."
+      },
       "step_brief": "Rogers vertraut auf eine Kraft, die in jedem Menschen wirkt: die Aktualisierungstendenz, den eingebauten Zug zu wachsen, sobald die Bedingungen stimmen — wie eine Pflanze zum Licht. Man muss den Menschen nicht aufschlüsseln oder reparieren. Man muss ihm echte Wertschätzung, Einfühlung und Ehrlichkeit entgegenbringen, und die Bewegung beginnt von selbst. Das ist die zweite Stimme in ihrer reinsten Form: nicht das Woher, nicht einmal das Wohin als Plan — sondern das Weitergehen, ermöglicht durch eine tragende Beziehung. Verstehen ist hier fast nebensächlich geworden.",
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum, slightly more generous and nourishing here. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: a tended garden bed in soft full light, soil warm and watered, a few seedlings rising on their own — conditions made right so that growth simply happens. Generous empty space, calm and quietly trusting mood. Vertical composition (portrait, roughly 4:5), the seedlings slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Von Freud bis Rogers sieht es aus wie ein sauberer Weg: von der vergrabenen Vergangenheit zur offenen Zukunft, vom Durchschauen zum Weitergehen. Man möchte den Bogen hier schließen und sagen: Seht, die Therapie ist erwachsen geworden. Aber eine letzte Stimme tritt aus der Reihe heraus und sieht auf das Ganze — und sie macht den geraden Weg krumm."
     },
     {
       "nodeId": "prochaska-diclemente",
       "nodeType": "thinker",
+      "narrative": {
+        "hook": "Wenn du je versucht hast, etwas dauerhaft zu ändern — eine Gewohnheit, eine Haltung, einen Umgang mit dir selbst —, dann kennst du die Bewegung: ein Stück voran, dann ein Rückfall, dann wieder ein Stück, selten geradeaus.",
+        "body": [
+          "Prochaska und DiClemente haben nicht gefragt, welche Schule recht hat, sondern nüchtern beobachtet, wie Veränderung überhaupt abläuft, quer durch alle Verfahren hindurch. Ihr Befund: Wandlung ist kein Pfeil, sondern eine Abfolge von Stufen — vom Noch-gar-nicht-Sehen über das ambivalente Erwägen zur Handlung und zur Aufrechterhaltung — und fast immer gehört der Rückfall dazu, nicht als Scheitern, sondern als regulärer Teil der Schleife. Damit löst sich der ganze Bogen, den wir gerade gegangen sind, auf eine demütige Weise auf. Es geht weniger darum, ob du verstehst, woher es kommt, oder weißt, wohin du willst, als darum, auf welcher Stufe du gerade stehst — und dass du zurückfallen darfst, ohne wieder ganz von vorn zu beginnen."
+        ],
+        "kernel": "Wandlung ist kein Pfeil",
+        "bridge": null
+      },
       "step_brief": "Prochaska und DiClemente haben nicht gefragt, welche Schule recht hat, sondern wie Veränderung überhaupt abläuft — quer durch alle Verfahren. Ihr Befund ist nüchtern: Wandlung ist kein Pfeil. Sie verläuft in Stufen — vom Noch-gar-nicht-Sehen über das ambivalente Erwägen zur Handlung und zur Aufrechterhaltung — und fast immer gehört der Rückfall dazu, nicht als Scheitern, sondern als normaler Teil der Schleife. Damit löst sich der ganze Bogen, den wir gerade gegangen sind, auf eine demütige Weise auf: Es geht nicht darum, ob du verstehst, woher es kommt, oder weißt, wohin du willst. Es geht darum, auf welcher Stufe du gerade stehst — und dass du wieder zurückfallen darfst, ohne von vorn zu beginnen.",
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: a worn spiral stair of stone seen from above, circling downward and around rather than descending straight — the same turns passed more than once, progress that loops. Restrained, plain, almost diagrammatic in its quiet — sober rather than dramatic. Generous empty space, calm and matter-of-fact mood. Vertical composition (portrait, roughly 4:5), the spiral slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": null
     }
   ],

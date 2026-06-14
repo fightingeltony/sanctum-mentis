@@ -249,7 +249,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
             ?? (nodeId.charAt(0).toUpperCase() + nodeId.slice(1).replace(/-/g, ' '))
 
           const stepTon = step.ton ?? (lectio.ton === 'gemischt' ? 'erzählend-erfahrend' : lectio.ton)
-          const showNiche = stepTon !== 'nüchtern-klar'
+          const showNiche = stepTon !== 'nüchtern-klar' && !!step.image
 
           return (
             <section
@@ -277,7 +277,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
                     <div className="niche">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src={`/lectio-images/lectio-${nodeId}.webp`}
+                        src={step.image!}
                         alt=""
                         className="niche-img"
                       />

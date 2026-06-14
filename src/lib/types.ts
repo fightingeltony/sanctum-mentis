@@ -164,6 +164,8 @@ export interface LectioStep {
                          // Nur für Einzelknoten-Stationen — nicht bei Doppelstationen.
   ton?: 'erzählend-erfahrend' | 'nüchtern-klar' | 'expositorisch'; // per-Step-Ton (Lectio 2.0 / gemischt)
   narrative?: LectioNarrative;  // erzählende Form — alle Steps in 'gemischt'-Lectios tragen narrative
+  image?: string;         // öffentlicher Bildpfad, z.B. /lectio-images/…/lectio-epikur.png
+  image_prompt?: string;  // Generierungs-Prompt (nicht im UI verwendet — nur Datensicherung)
   transition: string;
 }
 

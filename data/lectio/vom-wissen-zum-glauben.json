@@ -13,6 +13,7 @@
     {
       "nodeId": "augustinus",
       "nodeType": "thinker",
+      "image": "/lectio-images/lectio-augustinus.webp",
       "narrative": {
         "hook": "Bleib einen Moment bei dieser Glaswand. Du willst das Gute glauben und kommst trotzdem nicht hindurch — und es ist nicht so, dass du es nicht versuchtest. Du willst, und im selben Atemzug willst du nicht.",
         "body": [
@@ -26,6 +27,7 @@
     {
       "nodeId": "stoa",
       "nodeType": "thinker",
+      "image": "/lectio-images/lectio-stoa.webp",
       "narrative": {
         "hook": "Die Stoa erwartet keinen solchen Augenblick im Garten. Für sie wird die Glaswand nicht durchbrochen, sondern langsam dünner, durch nichts als tägliches Tun.",
         "body": [
@@ -39,6 +41,7 @@
     {
       "nodeId": "rilke",
       "nodeType": "thinker",
+      "image": "/lectio-images/lectio-rilke.webp",
       "narrative": {
         "hook": "Denk an den Moment, in dem es einmal doch durchkam — und an dem du selbst vermutlich nichts getan hast. Jemand sah dich an, hielt dich, und für einen Augenblick war die Glaswand einfach weg.",
         "body": [
@@ -52,6 +55,7 @@
     {
       "nodeId": "eckhart",
       "nodeType": "thinker",
+      "image": "/lectio-images/lectio-eckhart.webp",
       "narrative": {
         "hook": "Vielleicht hast du es schon versucht, das Gute mit Gewalt glauben zu wollen, und gemerkt, dass es nicht geht: Je fester du drückst, desto undurchdringlicher wird das Glas.",
         "body": [
@@ -65,6 +69,7 @@
     {
       "nodeId": "james",
       "nodeType": "thinker",
+      "image": "/lectio-images/lectio-james.webp",
       "narrative": {
         "hook": "Hier wechselt der Ton. Die fünfte Stimme kommt nicht aus einem Kloster, sondern aus dem Labor, und sie stellt die nüchterne Frage, die alle vorigen offengelassen haben.",
         "body": [
@@ -78,6 +83,7 @@
     {
       "nodeId": "jung",
       "nodeType": "thinker",
+      "image": "/lectio-images/lectio-jung.webp",
       "narrative": {
         "hook": "Vielleicht wartest du auf den einen Moment, in dem die Glaswand ein für alle Mal zerspringt. Die letzte Stimme sagt, so funktioniere es nicht — und meint das nicht als schlechte Nachricht.",
         "body": [

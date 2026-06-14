@@ -5,6 +5,7 @@
   "focus": "Von der Hölle unten links hinauf zur Heimat — und zu einer Heimat, die wieder etwas von dir fordert",
   "thesis": "Dieselbe Grunderfahrung — dass ich durch den Anderen vermittelt bin — lässt sich als Versklavung oder als Ursprung meiner Menschlichkeit deuten; zwischen beiden ist nicht zu schlichten.",
   "path_type": "konkurrierend-konfrontativ",
+  "ton": "erzählend-erfahrend",
   "level": 3,
   "estimated_minutes": 15,
   "intro": "Denk an den Moment, in dem dich jemand ansieht und du dich plötzlich beobachtet fühlst — ertappt, eingeordnet, festgelegt. Dasselbe Angesehenwerden kann dich auch tragen: gemeint sein, gehalten sein, gesehen sein im guten Sinn. Vier Denker streiten hier um eine einzige Frage, und sie geben einander nicht recht. Ist der Andere die Hölle, weil er mich zum Objekt macht? Oder die Heimat, in der ich erst zu mir komme? Du steigst von der Hölle unten links hinauf — bis dorthin, wo der Andere zum Geschenk wird. Und dann holt dich die letzte Stimme wieder herunter, in eine Heimat, die etwas von dir fordert. Entscheide nicht zu früh.",
@@ -12,25 +13,61 @@
     {
       "nodeId": "sartre",
       "nodeType": "thinker",
+      "narrative": {
+        "hook": "Du sitzt allein, ganz bei dir, und tust etwas, das niemand sehen soll. Dann fällt ein Blick auf dich — und mit einem Schlag bist du nicht mehr du für dich, sondern jemand in den Augen eines Fremden: beurteilt, eingeordnet, festgelegt.",
+        "body": [
+          "Diesen Moment macht Sartre zum Schlüssel von allem. Für ihn beginnt jede Erfahrung beim einzelnen, radikal freien Bewusstsein, und der Andere ist zunächst dessen Bedrohung — sein Bild dafür ist genau dieser Blick: Sobald mich ein anderer ansieht, werde ich vom freien Subjekt zum Ding in seiner Welt, zu etwas, das er einordnet und festnagelt. ›Die Hölle, das sind die anderen.‹ Selbst die Liebe wird in dieser Logik zum unmöglichen Versuch, die Freiheit des Anderen zu besitzen, ohne sie dabei zu zerstören. Der Andere ist Zumutung, und es gibt keinen Ausweg."
+        ],
+        "kernel": "Der Andere ist Zumutung, und es gibt keinen Ausweg.",
+        "bridge": "Halt hier kurz inne, bevor du widersprichst. Sartre hat nicht unrecht — du kennst den Blick, der dich klein macht. Die Frage ist nur, ob das die ganze Geschichte ist. Hegel hat denselben Konflikt gesehen, aber er hat ihn nicht für das letzte Wort gehalten."
+      },
       "step_brief": "Sartre macht den Anfang ganz unten. Für ihn beginnt alles beim einzelnen, radikal freien Bewusstsein — und der Andere ist zunächst dessen Bedrohung. Sein Bild ist der Blick: Sobald mich ein anderer ansieht, werde ich vom freien Subjekt zum Ding in seiner Welt, das er beurteilt und festlegt. ›Die Hölle, das sind die anderen.‹ Liebe wird zum unmöglichen Versuch, die Freiheit des Anderen zu besitzen, ohne sie zu zerstören. Der Andere ist Zumutung, und es gibt keinen Ausweg.",
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum, but here cooler and more exposing. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: a lone keyhole of hard light thrown across a bare floor, a private corner suddenly caught in it — the sensation of being seen and pinned by a gaze from outside. Generous empty space, tense and solitary mood. Vertical composition (portrait, roughly 4:5), the shaft of light slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Halt hier kurz inne, bevor du widersprichst. Sartre hat nicht unrecht — du kennst den Blick, der dich klein macht. Die Frage ist nur, ob das die ganze Geschichte ist. Hegel hat denselben Konflikt gesehen, aber er hat ihn nicht für das letzte Wort gehalten."
     },
     {
       "nodeId": "hegel",
       "nodeType": "thinker",
+      "narrative": {
+        "hook": "Du erkennst dich oft erst im Blick eines anderen — wer du bist, bestätigt sich an dem, wie ein Gegenüber dich sieht.",
+        "body": [
+          "Hegel macht aus dieser Angewiesenheit eine ganze Bewegung: Selbstbewusstsein, sagt er, gibt es nur durch ein anderes Selbstbewusstsein, das mich anerkennt. Doch der Weg dahin führt zuerst durch einen Kampf — zwei treffen aufeinander, jeder will anerkannt werden, und daraus entsteht das Verhältnis von Herr und Knecht. Anders als bei Sartre ist dieser Konflikt aber keine Dauerstruktur, sondern eine Durchgangsstufe; er drängt über sich hinaus, auf eine Versöhnung hin, in der beide einander gelten lassen. Der Andere muss bei Hegel noch durchgekämpft werden — aber er bleibt nicht der Feind."
+        ],
+        "kernel": "keine Dauerstruktur, sondern eine Durchgangsstufe",
+        "bridge": "Bei Hegel ist der Kampf eine Durchgangsstufe, kein Dauerzustand — das Selbstbewusstsein muss durch den Anderen hindurch, um zu sich zu kommen. Aber das ist noch ein Ringen, ein Gegeneinander um Anerkennung. Was, wenn der Andere gar nicht erst bekämpft werden muss? Buber und Marcel kehren die ganze Blickrichtung um."
+      },
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: two old stone columns leaning hard against each other, each holding the other up under strain — opposed pressure that has not yet, but might, settle into a shared arch. Restrained and structural rather than dramatic. Generous empty space, calm and balanced-in-tension mood. Vertical composition (portrait, roughly 4:5), the meeting point of the two columns slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Bei Hegel ist der Kampf eine Durchgangsstufe, kein Dauerzustand — das Selbstbewusstsein muss durch den Anderen hindurch, um zu sich zu kommen. Aber das ist noch ein Ringen, ein Gegeneinander um Anerkennung. Was, wenn der Andere gar nicht erst bekämpft werden muss? Buber und Marcel kehren die ganze Blickrichtung um."
     },
     {
       "nodeId": ["buber", "marcel"],
       "nodeType": "thinker",
+      "narrative": {
+        "hook": "Erinnerst du dich an einen Menschen, in dessen Nähe du mehr du selbst warst als sonst? Nicht weil er etwas Bestimmtes tat — sondern weil er einfach ganz da war für dich.",
+        "body": [
+          "Hier dreht sich das ganze Feld um. Nicht der Einzelne ist der Grund, aus dem die Beziehung erwächst, sondern umgekehrt: die Beziehung ist der Grund, aus dem der Einzelne überhaupt hervorgeht. Der Mensch wird am Du zum Ich, sagt Buber — du bist nicht zuerst ein fertiges Selbst, das danach Beziehungen eingeht, sondern du wirst, wer du bist, erst in der Begegnung. Und sie lässt sich nicht erzwingen; sie geschieht, sie ist ein Geschenk. Marcel gibt der Haltung, die ihr offensteht, sogar einen Namen: disponibilité, Verfügbarkeit — für den Anderen wirklich da sein, statt ihn auf Abstand zu prüfen. Der Andere ist hier keine Zumutung mehr, sondern das, woraus du erst ganz wirst."
+        ],
+        "kernel": "Der Mensch wird am Du zum Ich",
+        "bridge": "Hier dreht sich das Feld. Nicht der Einzelne ist der Grund, aus dem Beziehung erwächst — die Beziehung ist der Grund, aus dem der Einzelne hervorgeht. Der Mensch wird am Du zum Ich. Der Andere ist nicht Zumutung, sondern Geschenk, etwas, das man empfängt, nicht erzwingt. Du könntest hier landen wollen. Aber es gibt eine Stimme, die noch weiter geht — und sie macht es dir nicht leichter."
+      },
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum, here at its warmest and most welcoming. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: two simple cups set close together on a worn table by a window, a chair drawn near, the air between them held open and ready — presence offered, a meeting that is received rather than forced. Generous empty space, calm and quietly intimate mood. Vertical composition (portrait, roughly 4:5), the two cups slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Hier dreht sich das Feld. Nicht der Einzelne ist der Grund, aus dem Beziehung erwächst — die Beziehung ist der Grund, aus dem der Einzelne hervorgeht. Der Mensch wird am Du zum Ich. Der Andere ist nicht Zumutung, sondern Geschenk, etwas, das man empfängt, nicht erzwingt. Du könntest hier landen wollen. Aber es gibt eine Stimme, die noch weiter geht — und sie macht es dir nicht leichter."
     },
     {
       "nodeId": "levinas",
       "nodeType": "thinker",
+      "narrative": {
+        "hook": "Ein Gesicht sieht dich an — ein Fremder in Not, ein Kind, irgendjemand. Und noch ehe du überlegst, ob du willst, bist du schon angesprochen; du kannst wegsehen, aber du kannst nicht ungeschehen machen, dass du gemeint warst.",
+        "body": [
+          "Lévinas treibt Bubers Umkehrung an ihre äußerste Grenze. Auch für ihn geht der Andere dem Ich voraus, aber nicht als wechselseitige Begegnung, sondern als einseitiger Anspruch: Im Antlitz des Anderen werde ich in Verantwortung gerufen, bevor ich überhaupt gewählt habe, und diese Verantwortung ist nicht symmetrisch und nie endgültig eingelöst. Das ist die schärfste Antwort auf Sartre, die das Feld zu bieten hat — dieselbe Erfahrung, vom Anderen in Anspruch genommen zu werden, ist hier nicht Versklavung, sondern der Ursprung der Menschlichkeit selbst. Leicht macht Lévinas es dir trotzdem nicht. Der Andere bleibt Anspruch — eine Heimat, die etwas von dir fordert."
+        ],
+        "kernel": "eine Heimat, die etwas von dir fordert",
+        "bridge": "Lévinas treibt die Umkehr an ihre Grenze. Der Andere geht mir voraus, ja — aber nicht als wechselseitige Begegnung, sondern als einseitiger Anspruch, der mich in Verantwortung ruft, bevor ich gewählt habe. Das ist die schärfste Antwort auf Sartre: Dieselbe Erfahrung, vom Anderen in Anspruch genommen zu werden, ist hier nicht Versklavung, sondern der Ursprung der Menschlichkeit. Aber leicht ist sie nicht. Der Andere bleibt Anspruch — Heimat, die etwas von dir verlangt."
+      },
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: a single open doorway at the top of worn steps, warm light within but the threshold demanding to be climbed — a home that calls and asks something of whoever approaches. Generous empty space, calm and gravely inviting mood. Vertical composition (portrait, roughly 4:5), the lit doorway slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Lévinas treibt die Umkehr an ihre Grenze. Der Andere geht mir voraus, ja — aber nicht als wechselseitige Begegnung, sondern als einseitiger Anspruch, der mich in Verantwortung ruft, bevor ich gewählt habe. Das ist die schärfste Antwort auf Sartre: Dieselbe Erfahrung, vom Anderen in Anspruch genommen zu werden, ist hier nicht Versklavung, sondern der Ursprung der Menschlichkeit. Aber leicht ist sie nicht. Der Andere bleibt Anspruch — Heimat, die etwas von dir verlangt."
     }
   ],
   "closing_synthesis": "Vier Stimmen, eine Erfahrung: dass du durch den Anderen vermittelt bist, dass es kein Ich ohne Du gibt. Sartre erlebt das als Verhängnis, Hegel als Kampf, Buber und Marcel als Geschenk, Lévinas als unausweichlichen Anspruch. Der Streit lässt sich nicht schlichten, weil er nicht über Fakten geht, sondern über die Grundverfassung des Menschseins. Auffällig ist nur: Niemand kommt am Anderen vorbei. Selbst Sartre, der ihn zur Hölle erklärt, kann ihn nicht loswerden.",
-  "closing_question": "Wenn dich das nächste Mal jemand ansieht — fühlst du dich festgelegt oder gemeint?"
+  "closing_question": "Wenn dich das nächste Mal jemand ansieht — fühlst du dich festgelegt, gemeint, oder in Anspruch genommen? Und kann es sein, dass die letzten beiden zusammengehören?"
 }

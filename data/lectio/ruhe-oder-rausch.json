@@ -4,6 +4,7 @@
   "title": "Ruhe oder Rausch?",
   "focus": "Der Bruch zwischen antiker Seelenruhe und moderner Lebensintensität — vom Ideal der Unerschütterlichkeit bis zu Nietzsches Umkehrung",
   "thesis": "Fast die gesamte antike Lebenskunst hatte ein Ziel: die Unerschütterlichkeit der Seele, die Ruhe, die nichts mehr aus der Bahn wirft. Diese Lectio baut dieses Ideal Schritt für Schritt auf — und lässt es dann von einer einzigen Frage erschüttern: Ist Ruhe wirklich das Beste, was ein Leben erreichen kann, oder ist sie nur eine elegante Art, sich gegen das Leben abzudichten?",
+  "ton": "erzählend-erfahrend",
   "level": 2,
   "estimated_minutes": 14,
   "intro": "Du kennst das Wort ›runterkommen‹. Nach einer harten Woche willst du Ruhe, Entspannung, einen Zustand, in dem dich nichts mehr zerrt. Die ganze Wellness-Industrie verkauft dir diese eine Sache: Gelassenheit. Und sie ist nicht neu — sie ist das älteste Versprechen der Philosophie. Fast alle antiken Schulen der Lebenskunst zielten auf denselben Zustand: die Seelenruhe, die Unerschütterlichkeit. Diese Lectio führt dich durch dieses Ideal, bis du ganz darin angekommen bist — und stellt dir dann die Frage, die ein einzelner Denker dagegen gestellt hat: Was, wenn die Ruhe gar nicht das Ziel sein sollte?",
@@ -11,11 +12,31 @@
     {
       "nodeId": "epikur",
       "nodeType": "thinker",
+      "image": "/lectio-images/Ruhe oder Rausch/lectio-epikur.png",
+      "narrative": {
+        "hook": "Denk an das, worauf du dich freitagabends wirklich freust — wahrscheinlich nicht auf mehr, sondern auf weniger: keine Termine, keine Ansprüche, niemand, der noch etwas von dir will.",
+        "body": [
+          "Genau hier beginnt Epikur, und sein Rezept ist so bescheiden, dass man leicht übersieht, wie radikal es ist: Wer wenig braucht, ist schwer zu erschüttern. Jedes Bedürfnis, sagt er, ist ein Griff, an dem die Welt dich packen und schütteln kann — und so kauft man sich mit jedem neuen Wunsch zugleich die Angst dazu, ihn wieder zu verlieren. Sein Glück ist darum kein Rausch, sondern ein Aufhören: der stille Moment, in dem nichts mehr wehtut und nichts mehr fehlt. Wer den einmal geschmeckt hat, braucht das Laute nicht mehr."
+        ],
+        "kernel": "Wer wenig braucht, ist schwer zu erschüttern.",
+        "bridge": "Epikurs Rezept klingt bescheiden und ist radikal: Wer wenig braucht, ist schwer zu erschüttern. Aber halte einen Moment inne — er kauft die Ruhe mit einem Verzicht. Je weniger du willst, desto weniger kann dich treffen. Ist das Freiheit, oder ist es schon ein erster Rückzug aus dem Leben?"
+      },
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: a single piece of bread and a plain clay cup of water on a bare wooden table in a small garden alcove — almost nothing, yet quietly enough. Generous empty space, calm and timeless mood. Vertical composition (portrait, roughly 4:5), subject slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Epikurs Rezept klingt bescheiden und ist radikal: Wer wenig braucht, ist schwer zu erschüttern. Aber halte einen Moment inne — er kauft die Ruhe mit einem Verzicht. Je weniger du willst, desto weniger kann dich treffen. Ist das Freiheit, oder ist es schon ein erster Rückzug aus dem Leben?"
     },
     {
       "nodeId": "ataraxie",
       "nodeType": "concept",
+      "image": "/lectio-images/Ruhe oder Rausch/lectio-ataraxie.png",
+      "narrative": {
+        "hook": "Man könnte das für Epikurs persönliche Marotte halten — die Vorliebe eines Mannes, der das Getümmel scheute. Doch dann fällt auf, wie viele der großen Schulen genau dasselbe Ziel ansteuern.",
+        "body": [
+          "Ataraxie heißt der Zustand, den sie alle suchen: die ungestörte Ruhe der Seele, in der dich nichts mehr aus der Bahn wirft. Und die Wege dorthin könnten kaum verschiedener sein — Epikur kommt über das Minimieren der Bedürfnisse, die Stoa über die strenge Kontrolle der eigenen Urteile, die Skepsis sogar über das Aufgeben aller Urteile überhaupt. Drei rivalisierende Schulen, die sich in fast allem widersprechen, und doch zielen sie auf denselben Punkt. Dass so unterschiedliche Wege auf dasselbe Ziel zulaufen, verrät, wie selbstverständlich die ganze Antike annahm: Ein gutes Leben ist vor allem ein ruhiges."
+        ],
+        "kernel": "Drei rivalisierende Schulen, die sich in fast allem widersprechen, und doch zielen sie auf denselben Punkt.",
+        "bridge": "Es ist nicht nur Epikur. Die Stoa sucht dieselbe Ruhe durch Kontrolle der Urteile, die Skepsis sogar durch das Aufgeben aller Urteile. Drei rivalisierende Schulen, ein gemeinsames Ziel — das zeigt, wie selbstverständlich die Antike annahm, dass das gute Leben ein ruhiges sei. Diese Selbstverständlichkeit ist es, die gleich erschüttert wird. Aber zuerst die Schule, die die Ruhe am weitesten treibt."
+      },
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: three separate worn footpaths through dry pale grass slowly converging toward one still point near the horizon, seen from a low contemplative angle. Generous empty space, calm and timeless mood. Vertical composition (portrait, roughly 4:5), the convergence point slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Es ist nicht nur Epikur. Die Stoa sucht dieselbe Ruhe durch Kontrolle der Urteile, die Skepsis sogar durch das Aufgeben aller Urteile. Drei rivalisierende Schulen, ein gemeinsames Ziel — das zeigt, wie selbstverständlich die Antike annahm, dass das gute Leben ein ruhiges sei. Diese Selbstverständlichkeit ist es, die gleich erschüttert wird. Aber zuerst die Schule, die die Ruhe am weitesten treibt."
     },
     {
@@ -24,11 +45,31 @@
         "epiktet"
       ],
       "nodeType": "thinker",
+      "image": "/lectio-images/Ruhe oder Rausch/lectio-marc-aurel-epiktet.png",
+      "narrative": {
+        "hook": "Stell dir einen Menschen vor, dem man alles nehmen kann — den Besitz, die Gesundheit, am Ende das Leben selbst — und der dennoch ruhig bleibt; Epiktet wurde als Sklave geboren und wurde genau dieser Mensch.",
+        "body": [
+          "Die Stoa treibt das Ruhe-Ideal an seine äußerste Grenze, und sie tut es mit einer einzigen, scharfen Unterscheidung: Manches steht in deiner Macht — deine Urteile, dein Wollen —, das allermeiste nicht — Krankheit, Verlust, der Tod. Sorge dich nur um das Erste, sagt Marc Aurel, und nimm alles andere gelassen hin, wie es kommt. Nicht die Dinge beunruhigen dich, sondern deine Meinung über sie; und die Meinung gehört dir. Wer das beherrscht, baut sich eine innere Festung, die kein Schlag von außen mehr erreicht — die vollkommene Unverwundbarkeit. Und genau an dieser Vollkommenheit beginnt der Zweifel zu nagen."
+        ],
+        "kernel": "Nicht die Dinge beunruhigen dich, sondern deine Meinung über sie",
+        "bridge": "Die Stoa bringt das Ruhe-Ideal an seine Grenze: Nichts Äußeres — nicht Krankheit, nicht Verlust, nicht der Tod — soll deine innere Festung erschüttern dürfen. Das ist die vollkommene Unverwundbarkeit. Und genau hier wird die unbequeme Frage laut: Wer sich gegen jeden Schmerz abdichtet, dichtet er sich nicht auch gegen jede Freude ab? Ein Denker hat genau das behauptet."
+      },
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: the thick inner wall of an ancient stone citadel, weathered but unbroken; through one narrow slit window a distant storm rages, while the interior stays perfectly still. Generous empty space, calm and timeless mood. Vertical composition (portrait, roughly 4:5), the still interior slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Die Stoa bringt das Ruhe-Ideal an seine Grenze: Nichts Äußeres — nicht Krankheit, nicht Verlust, nicht der Tod — soll deine innere Festung erschüttern dürfen. Das ist die vollkommene Unverwundbarkeit. Und genau hier wird die unbequeme Frage laut: Wer sich gegen jeden Schmerz abdichtet, dichtet er sich nicht auch gegen jede Freude ab? Ein Denker hat genau das behauptet."
     },
     {
       "nodeId": "nietzsche",
       "nodeType": "thinker",
+      "image": "/lectio-images/Ruhe oder Rausch/lectio-nietzsche.png",
+      "narrative": {
+        "hook": "Denk an einen Moment, den du nie wieder durchleben möchtest, weil er zu sehr wehtat. Und jetzt die ungeheure Frage: Könntest du ihn wollen?",
+        "body": [
+          "Nietzsche stellt sie als Prüfstein an dein ganzes Leben — würdest du es, genau dieses, mit allem Schmerz und aller Bitterkeit, unendlich oft wiederholen wollen? Wer darauf ja sagen kann, hat das Leben wirklich bejaht. Die Ruhe der Alten, sagt er, war nie Weisheit, sondern Angst: eine kunstvolle Technik, nicht mehr zu leiden, erkauft mit dem Preis, auch nicht mehr ganz zu leben. Sein Gegenwort heißt amor fati, Liebe zum Schicksal — und es meint nicht, das Schwere bloß auszuhalten wie der Stoiker, sondern es zu wollen, gerade weil es zu diesem einen, unwiederholbaren Leben gehört. Nicht aushalten — wollen."
+        ],
+        "kernel": "Nicht aushalten — wollen.",
+        "bridge": "Nietzsche dreht zweitausend Jahre Lebenskunst um. Die Ruhe der Alten, sagt er, ist im Grunde eine Angst vor dem Leben — eine Technik, nicht mehr zu leiden, um den Preis, nicht mehr voll zu leben. Sein Gegenideal ist nicht Unerschütterlichkeit, sondern amor fati: das eigene Leben so leidenschaftlich wollen, mit allem Schmerz, dass du es unendlich oft wiederholen würdest. Nicht aushalten — wollen."
+      },
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum, here with one band of warmer, more alive glow. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: a single steep mountain ridge at first light, a narrow path climbing up into open wind and sky — weather embraced rather than sheltered from. Generous empty space, calm yet quietly charged mood. Vertical composition (portrait, roughly 4:5), the rising path slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Nietzsche dreht zweitausend Jahre Lebenskunst um. Die Ruhe der Alten, sagt er, ist im Grunde eine Angst vor dem Leben — eine Technik, nicht mehr zu leiden, um den Preis, nicht mehr voll zu leben. Sein Gegenideal ist nicht Unerschütterlichkeit, sondern amor fati: das eigene Leben so leidenschaftlich wollen, mit allem Schmerz, dass du es unendlich oft wiederholen würdest. Nicht aushalten — wollen."
     }
   ],

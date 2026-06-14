@@ -5,6 +5,7 @@
   "focus": "Ein kontemplativer Abstieg in ein einziges Werk — Bubers ›Der Weg des Menschen‹ — von der Frage, wo du stehst, bis zur Erfahrung, dass ein offenes Herz beim Anderen offene Türen findet. Marcel und Rogers bezeugen die letzte Wende.",
   "thesis": "Dies ist keine Wanderung durch viele streitende Stimmen, sondern ein Abstieg in einen einzigen kurzen Text: Martin Bubers ›Der Weg des Menschen‹. Drei Stationen folgen Bubers eigener Bewegung — sich besinnen, bei sich beginnen, sich aber nicht in sich selbst verschließen. Eine letzte Station holt zwei Zeugen hinzu, die bestätigen, was an Bubers Wende geschieht: dass Begegnung nicht über den prüfenden Kopf läuft, sondern über das geöffnete Herz.",
   "path_type": "kontemplativ-vertiefend",
+  "ton": "erzählend-erfahrend",
   "level": 2,
   "estimated_minutes": 16,
   "intro": "Diese Lectio ist anders als die übrigen. Sie führt dich nicht durch das ganze Feld, sondern steigt in einen einzigen, kurzen Text hinab — Martin Bubers ›Der Weg des Menschen‹, gespeist aus chassidischen Geschichten. Drei der vier Stationen sind Buber selbst, in seiner eigenen Schrittfolge gelesen; die letzte stellt ihm zwei verwandte Stimmen zur Seite. Es geht um eine Bewegung, die fast jeder kennt und kaum jemand benennt: vom Verstecktsein über das Bei-sich-Ankommen hin zu dem Augenblick, in dem man sich einem anderen Menschen öffnet — und merkt, dass dort schon jemand wartet. Lies langsam. Diese Lectio will weniger erklären als dich an einen Ort führen, an dem du selbst nachsehen kannst.",
@@ -12,24 +13,60 @@
     {
       "nodeId": "buber",
       "nodeType": "thinker",
+      "narrative": {
+        "hook": "Wenn dich jemand fragte, wo du gerade in deinem Leben stehst — wirklich fragte, und du dürftest nicht ausweichen —, was würdest du antworten?",
+        "body": [
+          "Buber erzählt dazu eine alte Geschichte von einem Rabbi, der im Gefängnis saß. Der Wärter fragt ihn, wie die Schrift es eigentlich meine, wenn Gott den ersten Menschen ruft: »Wo bist du?« — Gott weiß doch ohnehin alles. Der Rabbi antwortet: Die Frage gilt nicht nur Adam, sondern jedem Menschen, zu jeder Zeit. Gott fragt nicht, weil er den Ort nicht kennt, sondern damit der Mensch ihn sich selbst eingesteht. Wo bist du in deiner Welt? Wie weit bist du gekommen in deinen Jahren? Es ist eine Frage, vor der man sich leicht wegduckt — und genau das ist der Punkt."
+        ],
+        "kernel": "damit der Mensch ihn sich selbst eingesteht",
+        "bridge": "Bleib einen Moment bei dieser Frage, bevor du weitergehst. Sie ist nicht als Vorwurf gemeint, sondern als Tür. Solange man keine Antwort wagt, sagt Buber, lebt man im Versteck."
+      },
       "step_brief": "Buber erzählt von einem Rabbi im Gefängnis. Der Wärter fragt ihn, wie die Schrift es meine, dass Gott den ersten Menschen ruft: »Wo bist du?« — Gott weiß doch alles. Der Rabbi antwortet: Die Frage gilt nicht nur Adam, sondern jedem Menschen, zu jeder Zeit. Gott fragt nicht, weil er den Ort nicht kennt, sondern damit der Mensch ihn sich selbst eingesteht. Wo bist du in deiner Welt? Wie weit bist du gekommen in deinen Jahren?",
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: a single small barred window high in a bare cell wall, one shaft of warm light entering and resting on the empty floor — a quiet question entering a closed place. Generous empty space, calm and searching mood. Vertical composition (portrait, roughly 4:5), the lit window slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Bleib einen Moment bei dieser Frage, bevor du weitergehst. Sie ist nicht als Vorwurf gemeint, sondern als Tür. Solange man keine Antwort wagt, sagt Buber, lebt man im Versteck."
     },
     {
       "nodeId": "buber",
       "nodeType": "thinker",
+      "narrative": {
+        "hook": "Kennst du das — viel zu tun, viel zu meinen, viel zu erklären, und mittendrin das leise Gefühl, dass du dir selbst gerade ausweichst?",
+        "body": [
+          "Genau das nennt Buber das Versteck. Wer sich vor der Frage »Wo bist du?« drückt, baut sich immer neue Verstecke — aus Geschäftigkeit, aus Meinungen, aus Ausreden, aus allem, was laut genug ist, um die Frage zu übertönen. Buber nennt das die Flucht vor der eigenen Verantwortung. Der Gegenweg heißt Umkehr: sich sammeln, bei sich selbst ankommen, die zerstreute Seele wieder zu einer einigen. Und dieser Weg ist für jeden ein anderer — es gibt keinen allgemeinen Weg, sagt Buber mit den Chassidim, jeder hat den seinen erst zu finden."
+        ],
+        "kernel": "sich sammeln, bei sich selbst ankommen, die zerstreute Seele wieder zu einer einigen",
+        "bridge": "Das klingt zunächst nach Rückzug, nach Arbeit allein an sich selbst. Aber genau hier kommt die Wende, an der Bubers ganzes Denken sich entscheidet — und sie zeigt in die entgegengesetzte Richtung."
+      },
       "step_brief": "Wer sich vor der Frage versteckt, baut sich immer neue Verstecke — aus Geschäftigkeit, aus Meinungen, aus Ausreden. Buber nennt das die Flucht vor der eigenen Verantwortung. Der Gegenweg ist die Umkehr: sich sammeln, bei sich selbst ankommen, die zerstreute Seele einigen. Und er ist für jeden ein anderer — es gibt keinen allgemeinen Weg, sagt Buber mit den Chassidim, jeder hat den seinen zu finden.",
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: scattered loose papers and small objects on a dim floor slowly being drawn into one quiet ordered pile in a pool of light — dispersion gathering itself into one. Generous empty space, calm and inward mood. Vertical composition (portrait, roughly 4:5), the gathered pile slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Das klingt zunächst nach Rückzug, nach Arbeit allein an sich selbst. Aber genau hier kommt die Wende, an der Bubers ganzes Denken sich entscheidet — und sie zeigt in die entgegengesetzte Richtung."
     },
     {
       "nodeId": "buber",
       "nodeType": "thinker",
+      "narrative": {
+        "hook": "Vielleicht hast du erlebt, wie das Arbeiten an sich selbst zur Falle werden kann — je mehr du um dich selbst kreist, desto enger wird der Raum, in dem du dich bewegst.",
+        "body": [
+          "Buber kennt diese Gefahr und setzt ihr einen einzigen Satz entgegen: bei sich beginnen, aber nicht bei sich enden. Die Selbstbesinnung, sagt er, ist nicht das Ziel, sondern nur der Anfang; wer nur bei sich bleibt und sich nur mit sich beschäftigt, bleibt am Ende im Verlies des eigenen Ich gefangen. Der ganze Sinn des Bei-sich-Anfangens liegt in der Wendung nach außen — hin zum anderen Menschen, zur Aufgabe, zur Welt. Erst dort vollendet sich, was in der stillen Sammlung nur begonnen hat."
+        ],
+        "kernel": "bei sich beginnen, aber nicht bei sich enden",
+        "bridge": "Und hier zeigt deine eigene Erfahrung, was Buber meint: Diese Wendung nach außen geschieht nicht über den prüfenden Verstand, sondern über ein geöffnetes Herz. Zwei Stimmen aus diesem Tableau bezeugen, was dann passiert."
+      },
       "step_brief": "»Bei sich beginnen, aber nicht bei sich enden« — so fasst Buber den Sinn der ganzen Bewegung. Die Selbstbesinnung ist nicht das Ziel, sondern der Anfang. Wer nur bei sich bleibt, sich nur mit sich selbst beschäftigt, bleibt im Verlies des Ich gefangen. Der Sinn des Bei-sich-Anfangens ist die Wendung nach außen: zum anderen Menschen, zur Aufgabe, zur Welt. Erst dort vollendet sich, was in der Sammlung begann.",
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: a small inner room whose single door has just been opened, the warm interior light flowing outward across the threshold toward a wider space beyond — beginning within, but turning outward. Generous empty space, calm and quietly opening mood. Vertical composition (portrait, roughly 4:5), the opened door slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Und hier zeigt deine eigene Erfahrung, was Buber meint: Diese Wendung nach außen geschieht nicht über den prüfenden Verstand, sondern über ein geöffnetes Herz. Zwei Stimmen aus diesem Tableau bezeugen, was dann passiert."
     },
     {
       "nodeId": ["marcel", "rogers"],
       "nodeType": "thinker",
+      "narrative": {
+        "hook": "Denk an das eine Mal, als du dich einem Menschen wirklich gezeigt hast — ungeschützt, ohne dich vorher abzusichern. Und erinnere dich, was dann geschah: dass das Gegenüber sich oft im selben Moment auch öffnete.",
+        "body": [
+          "Zwei Stimmen aus diesem Feld bezeugen, was an Bubers Wende geschieht. Marcel gibt dieser Offenheit einen Namen — disponibilité, Verfügbarkeit: für den anderen wirklich da sein, statt ihn auf Abstand zu prüfen und zu beurteilen. Und Rogers beschreibt, was passiert, wenn ein Mensch so empfangen wird: Er entfaltet sich, er traut sich hervor, er öffnet sich zurück. Vielleicht kennst du es — dass du, kaum hattest du dich wirklich gezeigt, bei einem anderen offene Türen eingerannt bist. Buber, Marcel und Rogers sagen aus drei Richtungen dasselbe: Nicht die Logik öffnet den anderen, sondern die Bereitschaft, sich selbst zu zeigen."
+        ],
+        "kernel": "Nicht die Logik öffnet den anderen, sondern die Bereitschaft, sich selbst zu zeigen.",
+        "bridge": "Marcel gibt dieser Offenheit einen Namen — disponibilité, Verfügbarkeit: für den anderen wirklich da sein, statt ihn auf Abstand zu prüfen. Und Rogers beschreibt, was geschieht, wenn ein Mensch so begegnet wird: Er entfaltet sich, er öffnet sich zurück. Vielleicht hast du es erlebt — dass du, kaum hattest du dich wirklich gezeigt, bei einem anderen offene Türen eingerannt bist. Buber, Marcel und Rogers sagen aus drei Richtungen dasselbe: Nicht die Logik öffnet den anderen, sondern die Bereitschaft, sich selbst zu zeigen."
+      },
+      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum, here warm and answered from both sides. Muted, desaturated palette bedded in parchment warmth. Tangible texture — no glossy render, no vector cleanness, no digital sheen. Subject: two doors across a narrow passage, both standing open at once, warm light passing freely between them — an opening met by an opening, neither forced. Generous empty space, calm and quietly reciprocal mood. Vertical composition (portrait, roughly 4:5), the lit gap between the two open doors slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
       "transition": "Marcel gibt dieser Offenheit einen Namen — disponibilité, Verfügbarkeit: für den anderen wirklich da sein, statt ihn auf Abstand zu prüfen. Und Rogers beschreibt, was geschieht, wenn ein Mensch so begegnet wird: Er entfaltet sich, er öffnet sich zurück. Vielleicht hast du es erlebt — dass du, kaum hattest du dich wirklich gezeigt, bei einem anderen offene Türen eingerannt bist. Buber, Marcel und Rogers sagen aus drei Richtungen dasselbe: Nicht die Logik öffnet den anderen, sondern die Bereitschaft, sich selbst zu zeigen."
     }
   ],
