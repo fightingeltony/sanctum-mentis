@@ -134,7 +134,7 @@ Sicherheitsnetz auf oberster Ebene — verhindert horizontales Scrollen der gesa
 - [ ] Quadranten-Achsen im `topic.quadrants` definieren — sie steuern den QuadrantPlot
 - [ ] Schul-Farben direkt als `school.color` (oklch) — keine globalen CSS-Variablen mehr nötig
 - [ ] Karten-Pulsanimation (`wm-pulse-ring`) ist global vorhanden — gilt automatisch
-- [ ] (Optional) Bei Lectio-Vorausschau: `lectio_brief`-Felder beim Knoten mitschreiben (siehe `prompts/lectio-mode.md`)
+- [ ] (Optional) Bei Lectio-Vorausschau: `lectio_brief`-Felder beim Knoten mitschreiben (siehe `prompts/lectio-anleitung.md`)
 
 ## Animationen & Accessibility
 
@@ -190,7 +190,7 @@ Für akademisch sensible Tableaus mit Vollständigkeitsanspruch (z.B. Erkenntnis
 Kennzeichen: 16–22 Denker, 12–18 Konzepte, adversarielle Prüfung, Inquisitor-Chat statt milder Prüfer-Chat.
 
 ### Lectio-Modus (Zugangs-Modus, kein Tableau-Format)
-Geführte Pfade durch bestehende Tableau-Datensätze. Der Prompt liegt in `prompts/lectio-mode.md`. Tableau-Bauten folgen Mild oder Hard — Lectio ist ein separater Schritt danach.
+Geführte Pfade durch bestehende Tableau-Datensätze. Die maßgebliche Bau-Anleitung liegt in `prompts/lectio-anleitung.md` (Stand 2026-06-14, MASSGEBLICH). Tableau-Bauten folgen Mild oder Hard — Lectio ist ein separater Schritt danach.
 
 Kennzeichen: 5–8 Knoten pro Pfad, eigene `intro`/`transition`/`closing_synthesis`/`closing_question`-Texte, `level` = Lese-Stufe (nicht Sichtbarkeitsschwelle). Skripte liegen in `data/lectio/[id].json`. Kein Hard-Mode-Äquivalent — Lectio ist immer mild.
 
@@ -207,7 +207,7 @@ Bedingung für Wiederholbarkeit: `prompts/mild-mode.md` und `prompts/hard-mode.m
 
 Ergänzend zu Tableau-Bauten gibt es Lectios — geführte Pfade durch ein Tableau (4–6 Stationen, kuratorischer Bogen, offenes Ende). Komplementär zur räumlichen Karte: Lectio ist temporal, nicht explorativ.
 
-**Bau-Konvention** in `prompts/lectio-mode.md` (aktuell v1.9). Zehn methodische Entscheidungen, vier Pfad-Typen:
+**Bau-Konvention** in `prompts/lectio-anleitung.md` (MASSGEBLICH, Stand 2026-06-14). Zehn methodische Entscheidungen, vier Pfad-Typen. (`prompts/lectio-mode.md` v1.11 bleibt als historische Detailreferenz erhalten, ist aber abgelöst.)
 - *narrativ-historisch* — Stationen lösen sich chronologisch ab (Geist/Hard Problem)
 - *konkurrierend-konfrontativ* — gleichzeitige Positionen zur selben Frage (Selbst/Wer beobachtet)
 - *emotional-kumulativ* — Stationen kumulieren in einer emotionalen Bewegung (Realismus/Wenn die Welt wackelt)
@@ -219,13 +219,15 @@ Ergänzend zu Tableau-Bauten gibt es Lectios — geführte Pfade durch ein Table
 
 **Schema-Feld `closing_kernel` (seit 12.6.26):** Optionales Feld auf Lectio. Wenn gesetzt, hebt der NarrativeViewer diesen Teilstring im **letzten Absatz** der `closing_synthesis` hervor (gleiche Mechanik wie Stations-Kernels). Die Vitest-Datenvalidierung erzwingt: gesetzter closing_kernel muss exakter Substring des letzten Synthese-Absatzes sein. Leer/fehlend ist gültig (keine Hervorhebung). Befüllen ist kuratorische Arbeit — bei Synthese-Umformulierungen den Kernel mitziehen, sonst schlägt der Test an.
 
-**Feld `path_type` (Datenwert, seit 30.5.26):** Beschreibt den Pfad-Typ einer Lectio im JSON (narrativ-historisch / konkurrierend-konfrontativ / emotional-kumulativ / destruktiv-aufbauend / kontemplativ-vertiefend). ACHTUNG: kontemplativ-vertiefend ist als DATENWERT gesetzt, aber NOCH NICHT als Methoden-Konvention in lectio-mode aufgenommen (nur ein Fall; wartet auf zweiten — Befund #2 „destillieren, nicht postulieren"). lectio-mode bleibt v1.9.
+**Feld `path_type` (Datenwert, seit 30.5.26):** Beschreibt den Pfad-Typ einer Lectio im JSON (narrativ-historisch / konkurrierend-konfrontativ / emotional-kumulativ / destruktiv-aufbauend / kontemplativ-vertiefend). ACHTUNG: kontemplativ-vertiefend ist als DATENWERT gesetzt, aber NOCH NICHT als Methoden-Konvention in `lectio-anleitung.md` aufgenommen (nur ein Fall; wartet auf zweiten — Befund #2 „destillieren, nicht postulieren").
 
-**Konvention Offener Ausgang:** Sanctum darf eine kuratorische Haltung haben, aber keine Wahrheit verkünden. Schlussfragen öffnen, phänomenologische Sprache statt ontologischer Behauptungen. Ausführlich in `prompts/lectio-mode.md` Punkt 10 und `bibliothek-architektur.md` Sektion "Bibliothek mit Haltung, ohne Wahrheitsanspruch".
+**Konvention Offener Ausgang:** Sanctum darf eine kuratorische Haltung haben, aber keine Wahrheit verkünden. Schlussfragen öffnen, phänomenologische Sprache statt ontologischer Behauptungen. Ausführlich in `prompts/lectio-anleitung.md` Punkt 10 und `bibliothek-architektur.md` Sektion "Bibliothek mit Haltung, ohne Wahrheitsanspruch".
 
 **Datenort:** `data/lectio/[id].json`. Loader in `src/lib/data.ts` (LECTIOS-Dictionary), Route `/lectio/[id]`.
 
-**Bestehende Lectios:** `hard-problem` (Geist) · `wer-beobachtet` (Selbst) · `findest-du-oder-machst-du` (Selbst) · `wenn-die-welt-wackelt` (Realismus) · `warum-sollst-du` (Ethik) · `wenn-nichts-vorgegeben` (Existenzialismus) · `warum-gehorchst-du` (Politische Philosophie) · `ruhe-oder-rausch` (Lebenskunst) · `der-weg-des-menschen` (Begegnung — Ein-Werk-Lectio, kontemplativ-vertiefend) · `ist-der-andere-hoelle-oder-heimat` (Begegnung — konkurrierend-konfrontativ) · `verstehen-oder-weitergehen` (Wandlung — narrativ-historisch) · `stell-die-frage-anders` (Gut und Böse — destruktiv-aufbauend) · `wer-bist-du-wenn-du-alles-weglaesst` (Selbst — konkurrierend-konfrontativ, **ton: erzählend-erfahrend** — erster Test des erzählenden Tons, Vergleichsfall zu `wer-beobachtet`) · `warum-gehorchst-du-expositorisch` (Politische Philosophie — Original-Variante als Vergleichsfall: expositorisch/destruktiv-aufbauend neben der gemischten 2.0-Fassung) · `vom-wissen-zum-glauben` (Verwandlung — erzählend-erfahrend, L3, 6 Stationen: Augustinus→Stoa→Rilke→Eckhart→James→Jung).
+**Bestehende Lectios (15 registriert in `data.ts`):** `hard-problem` (Geist) · `wer-beobachtet` (Selbst) · `findest-du-oder-machst-du` (Selbst) · `wenn-die-welt-wackelt` (Realismus) · `warum-sollst-du` (Ethik) · `wenn-nichts-vorgegeben` (Existenzialismus) · `warum-gehorchst-du` (Politische Philosophie) · `ruhe-oder-rausch` (Lebenskunst) · `der-weg-des-menschen` (Begegnung — Ein-Werk-Lectio, kontemplativ-vertiefend) · `ist-der-andere-hoelle-oder-heimat` (Begegnung — konkurrierend-konfrontativ) · `verstehen-oder-weitergehen` (Wandlung — narrativ-historisch) · `stell-die-frage-anders` (Gut und Böse — destruktiv-aufbauend) · `wer-bist-du-wenn-du-alles-weglaesst` (Selbst — konkurrierend-konfrontativ, **ton: erzählend-erfahrend** — erster Test des erzählenden Tons, Vergleichsfall zu `wer-beobachtet`) · `vom-wissen-zum-glauben` (Verwandlung — erzählend-erfahrend, L3, 6 Stationen: Augustinus→Stoa→Rilke→Eckhart→James→Jung) · `annehmen-oder-ueberwinden` (Selbstverhältnis — konkurrierend-konfrontativ, **ton: erzählend-erfahrend**, L2, 4 Stationen: Rogers→Nietzsche→Marc Aurel→Buddhismus).
+
+**Nicht registrierte Lectio-Dateien (Status offen, siehe Audit H3):** `warum-gehorchst-du-expositorisch` (expositorischer Vergleichsfall zur 2.0-Fassung — derzeit nicht in `data.ts` registriert, Status offen) und fünf weitere `*-expositorisch`-Varianten — alle in `data/lectio/`, keine Route aktiv.
 
 ---
 
