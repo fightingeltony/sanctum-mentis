@@ -10,7 +10,7 @@
 | Ebene | Menge | Bemerkung |
 |---|---|---|
 | Topic-Tableaus (`data/*.json`) | 12 | alle in `library.json` + `data.ts` registriert — **konsistent** |
-| Lectio-Dateien (`data/lectio/*.json`) | 21 | 15 registriert → **6 verwaist**, siehe H3 (offen) |
+| Lectio-Dateien (`data/lectio/`) | 21 | 15 aktiv in `data/lectio/` + 6 archiviert in `data/lectio/archiv/` — siehe H3 (✅ erledigt) |
 | Lebensfragen (`data/lebensfragen/*.json`) | 4 | alle 4 registriert — konsistent |
 | Source-Dateien (`src/`) | 41 | — |
 | Prompt-Dokumente (`prompts/`) | 6 | davon 4 zum Thema Lectio (überlappend) |
@@ -42,10 +42,9 @@ Topic-Größen (Denker/Konzepte/Schulen/Einflüsse): Tableaus liegen meist im Mi
 
 **H3 · Sechs verwaiste Lectio-Dateien — Status ungeklärt.**
 
-🟡 **ENTSCHEIDUNG OFFEN:** 6 `*-expositorisch`-Dateien in `data/lectio/`, nicht in `data.ts` registriert, keine aktive Route:
-`der-weg-des-menschen-expositorisch`, `ist-der-andere-hoelle-oder-heimat-expositorisch`, `ruhe-oder-rausch-expositorisch`, `verstehen-oder-weitergehen-expositorisch`, `warum-gehorchst-du-expositorisch`, `wenn-nichts-vorgegeben-expositorisch`.
+✅ **ERLEDIGT (2026-06-16):** 6 expositorische Vorläufer nach `data/lectio/archiv/` verschoben (Inhalt unverändert, nicht gelöscht). Aktiver Ordner `data/lectio/` enthält jetzt genau die 15 registrierten Lectios. Vitest-Suite scannt `data/lectio/` flach (readdirSync, nicht rekursiv) — `archiv/`-Unterordner wird nicht mitgetestet. 52 Tests grün (vorher 58, weil die 6 archivierten vom Ordner-Scan erfasst wurden). tsc sauber. CLAUDE.md aktualisiert.
 
-Vermutlich alte Vorläufer der erzählend-erfahrenden Umbauten. Zu entscheiden: nach `prompts/archiv/` bzw. `data/lectio/archiv/` verschieben (empfohlen, nicht löschen) oder einzeln live schalten. `warum-gehorchst-du-expositorisch` ist in CLAUDE.md als Vergleichsfall erwähnt — hängt mit dieser Entscheidung zusammen. Eigener kleiner Faden.
+*(Ursprünglicher Befund: `der-weg-des-menschen-expositorisch`, `ist-der-andere-hoelle-oder-heimat-expositorisch`, `ruhe-oder-rausch-expositorisch`, `verstehen-oder-weitergehen-expositorisch`, `warum-gehorchst-du-expositorisch`, `wenn-nichts-vorgegeben-expositorisch` — alte Vorläufer der erzählend umgebauten Lectios.)*
 
 ---
 
@@ -97,7 +96,7 @@ Vermutlich alte Vorläufer der erzählend-erfahrenden Umbauten. Zu entscheiden: 
 ## 4. Empfohlene Reihenfolge (aktualisiert)
 
 1. ~~**H1 + H2**~~ ✅ erledigt 2026-06-16
-2. **H3** — Status der 6 `*-expositorisch`-Dateien entscheiden (live / Archiv).
+2. ~~**H3**~~ ✅ erledigt 2026-06-16 — 6 Dateien nach `data/lectio/archiv/`
 3. **M2** — Lectio-Doku-Stapel aufräumen (Archiv-Ordner), ~10 Verweise umbiegen.
 4. **M1** — Schools-Konvention als bewusste Entscheidung klären (nachschärfen vs. `topic.meta` füllen).
 5. **N1–N3** — Hygiene, wenn Zeit ist.

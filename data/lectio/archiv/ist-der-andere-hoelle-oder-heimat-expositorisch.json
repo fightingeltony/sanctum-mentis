@@ -1,0 +1,36 @@
+{
+  "id": "ist-der-andere-hoelle-oder-heimat-expositorisch",
+  "tableauId": "begegnung",
+  "title": "Ist der Andere Hölle oder Heimat?",
+  "focus": "Von der Hölle unten links hinauf zur Heimat — und zu einer Heimat, die wieder etwas von dir fordert",
+  "thesis": "Dieselbe Grunderfahrung — dass ich durch den Anderen vermittelt bin — lässt sich als Versklavung oder als Ursprung meiner Menschlichkeit deuten; zwischen beiden ist nicht zu schlichten.",
+  "path_type": "konkurrierend-konfrontativ",
+  "level": 3,
+  "estimated_minutes": 15,
+  "intro": "Denk an den Moment, in dem dich jemand ansieht und du dich plötzlich beobachtet fühlst — ertappt, eingeordnet, festgelegt. Dasselbe Angesehenwerden kann dich auch tragen: gemeint sein, gehalten sein, gesehen sein im guten Sinn. Vier Denker streiten hier um eine einzige Frage, und sie geben einander nicht recht. Ist der Andere die Hölle, weil er mich zum Objekt macht? Oder die Heimat, in der ich erst zu mir komme? Du steigst von der Hölle unten links hinauf — bis dorthin, wo der Andere zum Geschenk wird. Und dann holt dich die letzte Stimme wieder herunter, in eine Heimat, die etwas von dir fordert. Entscheide nicht zu früh.",
+  "path": [
+    {
+      "nodeId": "sartre",
+      "nodeType": "thinker",
+      "step_brief": "Sartre macht den Anfang ganz unten. Für ihn beginnt alles beim einzelnen, radikal freien Bewusstsein — und der Andere ist zunächst dessen Bedrohung. Sein Bild ist der Blick: Sobald mich ein anderer ansieht, werde ich vom freien Subjekt zum Ding in seiner Welt, das er beurteilt und festlegt. ›Die Hölle, das sind die anderen.‹ Liebe wird zum unmöglichen Versuch, die Freiheit des Anderen zu besitzen, ohne sie zu zerstören. Der Andere ist Zumutung, und es gibt keinen Ausweg.",
+      "transition": "Halt hier kurz inne, bevor du widersprichst. Sartre hat nicht unrecht — du kennst den Blick, der dich klein macht. Die Frage ist nur, ob das die ganze Geschichte ist. Hegel hat denselben Konflikt gesehen, aber er hat ihn nicht für das letzte Wort gehalten."
+    },
+    {
+      "nodeId": "hegel",
+      "nodeType": "thinker",
+      "transition": "Bei Hegel ist der Kampf eine Durchgangsstufe, kein Dauerzustand — das Selbstbewusstsein muss durch den Anderen hindurch, um zu sich zu kommen. Aber das ist noch ein Ringen, ein Gegeneinander um Anerkennung. Was, wenn der Andere gar nicht erst bekämpft werden muss? Buber und Marcel kehren die ganze Blickrichtung um."
+    },
+    {
+      "nodeId": ["buber", "marcel"],
+      "nodeType": "thinker",
+      "transition": "Hier dreht sich das Feld. Nicht der Einzelne ist der Grund, aus dem Beziehung erwächst — die Beziehung ist der Grund, aus dem der Einzelne hervorgeht. Der Mensch wird am Du zum Ich. Der Andere ist nicht Zumutung, sondern Geschenk, etwas, das man empfängt, nicht erzwingt. Du könntest hier landen wollen. Aber es gibt eine Stimme, die noch weiter geht — und sie macht es dir nicht leichter."
+    },
+    {
+      "nodeId": "levinas",
+      "nodeType": "thinker",
+      "transition": "Lévinas treibt die Umkehr an ihre Grenze. Der Andere geht mir voraus, ja — aber nicht als wechselseitige Begegnung, sondern als einseitiger Anspruch, der mich in Verantwortung ruft, bevor ich gewählt habe. Das ist die schärfste Antwort auf Sartre: Dieselbe Erfahrung, vom Anderen in Anspruch genommen zu werden, ist hier nicht Versklavung, sondern der Ursprung der Menschlichkeit. Aber leicht ist sie nicht. Der Andere bleibt Anspruch — Heimat, die etwas von dir verlangt."
+    }
+  ],
+  "closing_synthesis": "Vier Stimmen, eine Erfahrung: dass du durch den Anderen vermittelt bist, dass es kein Ich ohne Du gibt. Sartre erlebt das als Verhängnis, Hegel als Kampf, Buber und Marcel als Geschenk, Lévinas als unausweichlichen Anspruch. Der Streit lässt sich nicht schlichten, weil er nicht über Fakten geht, sondern über die Grundverfassung des Menschseins. Auffällig ist nur: Niemand kommt am Anderen vorbei. Selbst Sartre, der ihn zur Hölle erklärt, kann ihn nicht loswerden.",
+  "closing_question": "Wenn dich das nächste Mal jemand ansieht — fühlst du dich festgelegt oder gemeint?"
+}
