@@ -3,6 +3,8 @@
 **Stand:** 2026-06-16 · **Art:** Status-Tracker (fortgeschrieben aus Audit 2026-06-16)
 **Methode:** Inventar über `data/`, `data/lectio/`, `data/lebensfragen/`, `src/`, `prompts/` und 15 Wurzel-MD-Dateien; Abgleich Code ↔ Daten ↔ Dokumentation.
 
+> **Dies ist die maßgebliche Liste der offenen Audit-Punkte — nicht zusätzlich in `backlog.md` führen (eine Quelle).**
+
 ---
 
 ## 1. Bestand in Zahlen
@@ -10,7 +12,7 @@
 | Ebene | Menge | Bemerkung |
 |---|---|---|
 | Topic-Tableaus (`data/*.json`) | 12 | alle in `library.json` + `data.ts` registriert — **konsistent** |
-| Lectio-Dateien (`data/lectio/`) | 21 | 15 aktiv in `data/lectio/` + 6 archiviert in `data/lectio/archiv/` — siehe H3 (✅ erledigt) |
+| Lectio-Dateien | 21 | 15 aktiv in `data/lectio/` + 6 archiviert in `archiv/lectio-expositorisch/` — siehe H3 (✅ erledigt) |
 | Lebensfragen (`data/lebensfragen/*.json`) | 4 | alle 4 registriert — konsistent |
 | Source-Dateien (`src/`) | 41 | — |
 | Prompt-Dokumente (`prompts/`) | 6 | davon 4 zum Thema Lectio (überlappend) |
@@ -42,7 +44,7 @@ Topic-Größen (Denker/Konzepte/Schulen/Einflüsse): Tableaus liegen meist im Mi
 
 **H3 · Sechs verwaiste Lectio-Dateien — Status ungeklärt.**
 
-✅ **ERLEDIGT (2026-06-16):** 6 expositorische Vorläufer nach `data/lectio/archiv/` verschoben (Inhalt unverändert, nicht gelöscht). Aktiver Ordner `data/lectio/` enthält jetzt genau die 15 registrierten Lectios. Vitest-Suite scannt `data/lectio/` flach (readdirSync, nicht rekursiv) — `archiv/`-Unterordner wird nicht mitgetestet. 52 Tests grün (vorher 58, weil die 6 archivierten vom Ordner-Scan erfasst wurden). tsc sauber. CLAUDE.md aktualisiert.
+✅ **ERLEDIGT (2026-06-16):** 6 expositorische Vorläufer nach `archiv/lectio-expositorisch/` (Repo-Ebene, außerhalb von `data/lectio/`) verschoben — Inhalt unverändert, nicht gelöscht. Aktiver Ordner `data/lectio/` enthält jetzt genau die 15 registrierten Lectios. Neue Vitest-Regel 10 (Registrierungs-Parität Datei ↔ LECTIOS) verhindert Wiederkehr: rot bei jeder unregistrierten Datei in `data/lectio/`. CLAUDE.md + Audit aktualisiert.
 
 *(Ursprünglicher Befund: `der-weg-des-menschen-expositorisch`, `ist-der-andere-hoelle-oder-heimat-expositorisch`, `ruhe-oder-rausch-expositorisch`, `verstehen-oder-weitergehen-expositorisch`, `warum-gehorchst-du-expositorisch`, `wenn-nichts-vorgegeben-expositorisch` — alte Vorläufer der erzählend umgebauten Lectios.)*
 

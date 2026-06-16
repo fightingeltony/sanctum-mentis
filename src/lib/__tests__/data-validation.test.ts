@@ -330,6 +330,48 @@ describe('closing_kernel — Ist-Stand (informativ)', () => {
   })
 })
 
+// ─── 10. Registrierungs-Parität: Datei ↔ data.ts ─────────────
+//
+// Jede .json-Datei in data/lectio/ muss in LECTIOS registriert sein,
+// und jeder LECTIOS-Eintrag muss eine Datei in data/lectio/ haben.
+// Verhindert verwaiste Dateien (wie die *-expositorisch-Vorläufer in H3).
+
+const REGISTERED_IDS = new Set([
+  'hard-problem',
+  'wer-beobachtet',
+  'wenn-die-welt-wackelt',
+  'warum-sollst-du',
+  'wenn-nichts-vorgegeben',
+  'warum-gehorchst-du',
+  'findest-du-oder-machst-du',
+  'ruhe-oder-rausch',
+  'der-weg-des-menschen',
+  'ist-der-andere-hoelle-oder-heimat',
+  'verstehen-oder-weitergehen',
+  'stell-die-frage-anders',
+  'wer-bist-du-wenn-du-alles-weglaesst',
+  'vom-wissen-zum-glauben',
+  'annehmen-oder-ueberwinden',
+])
+
+describe('Registrierungs-Parität: data/lectio/ ↔ LECTIOS in data.ts', () => {
+  const fileIds = new Set(
+    fs.readdirSync(LECTIO_DIR)
+      .filter(f => f.endsWith('.json'))
+      .map(f => f.replace(/\.json$/, ''))
+  )
+
+  it('Jede Datei in data/lectio/ ist in LECTIOS registriert', () => {
+    const unregistered = [...fileIds].filter(id => !REGISTERED_IDS.has(id))
+    expect(unregistered, `Nicht registrierte Lectio-Dateien: ${unregistered.join(', ')}`).toHaveLength(0)
+  })
+
+  it('Jeder LECTIOS-Eintrag hat eine Datei in data/lectio/', () => {
+    const missing = [...REGISTERED_IDS].filter(id => !fileIds.has(id))
+    expect(missing, `Registrierte Lectios ohne Datei: ${missing.join(', ')}`).toHaveLength(0)
+  })
+})
+
 // ─── 7. primaryThinker ist nicht-leerer String ────────────────
 
 describe('Concept.primaryThinker ist nicht-leerer String', () => {
