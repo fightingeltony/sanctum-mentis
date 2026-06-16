@@ -1,6 +1,6 @@
 # Wo stehe ich — Sanctum Mentis
 
-**Stand:** 14.6.26 (aktualisiert nach Selbstverhältnis-Lectio + Lectio-Anleitung maßgeblich)
+**Stand:** 16.6.26 (aktualisiert nach Audit-Zyklus + Bild-Fixes)
 
 ---
 
@@ -70,7 +70,7 @@
 
 **Library-Architektur sichtbar machen (Tableau-Spuren):** Bedingung fast erfüllt — Wandlung hat jetzt 2 Tableaus, nur Menschenbild steht noch bei 1. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt für fünf Spuren. Explizite Lösung (Section-Header / Trennstriche / Spur-Filter) umsetzbar, sobald alle Spuren ≥2 Tableaus haben.
 
-**Methoden-Hygiene (lectio-mode.md):** Steht auf v1.9. Drei Klarstellungen aus dem Existenzialismus-Bau warten weiter auf Aufnahme (Pfad-Typ-Destillation, narrativ-historisch ≠ chronologisch streng, Reserve-Brief-Dokumentation). Dazu neu: der fünfte Pfad-Typ *kontemplativ-vertiefend* + die `step_brief`-Disziplin — Aufnahme als v1.10, sobald eine zweite kontemplativ-vertiefende Lectio existiert.
+**Methoden-Hygiene:** `lectio-anleitung.md` ist maßgeblich (Stand 14.6.26). `lectio-mode.md` (v1.11) und `lectio-2.0-richtlinie.md` als Archiv markiert. Der fünfte Pfad-Typ *kontemplativ-vertiefend* wartet auf zweiten Fall vor Kanonisierung.
 
 **Schulen-Labels Geist:** Akademisches Vokabular an der Tür. Kein Blocker, aber bekannter Qualitätsmangel.
 
@@ -82,6 +82,6 @@
 
 ## Was mich aktuell beschäftigt
 
-Die Lectio-Methode ist konsolidiert und maßgeblich. Die offene Arbeit ist jetzt Bau, nicht Methode: Die zweite Selbstverhältnis-Lectio (Werk/Gabe-Diagonale — Foucault, Hadot, Wahres Selbst, Almaas) liegt im Backlog, das erste Selbstverhältnis-Bau hat bewusst daran vorbeigefügt. Daneben fehlt noch das zweite Menschenbild-Tableau für die Section-Header-Bedingung.
+Der Audit-Zyklus dieser Session ist abgeschlossen: CLAUDE.md zeigt jetzt korrekt auf `lectio-anleitung.md` (H1+H2), 6 expositorische Vorläufer liegen in `archiv/lectio-expositorisch/` (H3), Vitest-Regel 10 sichert Registrierungs-Parität gegen Wiederkehr, leere Bild-Nischen im Deploy sind durch 10 committete PNGs behoben. `audit-bestandesaufnahme.md` ist der Status-Tracker für offene Audit-Punkte (M1–N3, nicht in backlog.md doppeln).
 
-Die Sammlung hat jetzt zwölf Tableaus, fünf Spuren, fünfzehn Lectios. Was ich nicht weiß: Ob der Discovery-Pfad (Bibliothek → Tableau → Lectio) für jemanden ohne Vorwissen trägt. Der formale User-Test — zwei Personen aus der Persona, ohne Erklärung beobachten — ist weiterhin ausständig.
+Die offene Bau-Arbeit: zweite Selbstverhältnis-Lectio (Werk/Gabe-Diagonale) und zweites Menschenbild-Tableau (Section-Header-Bedingung). Der formale User-Test — zwei Personen aus der Persona, ohne Erklärung beobachten — bleibt ausständig.

@@ -2,6 +2,14 @@
 
 ## Zuletzt abgeschlossen
 
+### [x] Audit-Zyklus H1+H2+H3 abgeschlossen (Stand 16.6.26)
+**Datum:** 16.6.26
+**Resultat:** H1: CLAUDE.md zeigt auf `lectio-anleitung.md` (alle 4 Verweise korrigiert, Versionsangabe entfernt). H2: Lectio-Liste auf 15 registrierte synchronisiert, `annehmen-oder-ueberwinden` ergänzt, expositorische Vergleichsfälle klar markiert. H3: 6 `*-expositorisch`-Vorläufer nach `archiv/lectio-expositorisch/` (Repo-Ebene) verschoben. Vitest Regel 10 (Registrierungs-Parität Datei ↔ LECTIOS) als Netz gegen Wiederkehr. `audit-bestandesaufnahme.md` als Status-Tracker angelegt — ist die maßgebliche Liste für offene Audit-Punkte (nicht in backlog.md doppeln).
+
+### [x] Leere Bild-Nischen im Deploy behoben (Stand 16.6.26)
+**Datum:** 16.6.26
+**Resultat:** 10 referenzierte PNGs aus 3 Lectios committed (`Ruhe oder Rausch` 4×, `Verstehen oder weitergehen` 1×, `Wenn nichts vorgegeben ist` 5×). `lectio-vedanta.png` (Staging, 9 MB, nicht referenziert) bewusst nicht committed. Vitest-Lücke identifiziert: Regel 5 prüft `fs.existsSync` (lokal), nicht git-Tracking → blinde Stelle für uncommitted Bilder, eigenes [ ]-Item.
+
 ### [x] Lectio-Anleitung konsolidiert — maßgeblich (Stand 14.6.26)
 **Datum:** 14.6.26
 **Resultat:** `prompts/lectio-anleitung.md` — neue maßgebliche Bau-Anleitung, vereint lectio-mode v1.10, lectio-2.0-richtlinie und Schreib-Skill-Referenz. Bewährt durch vollen Lectio-Bau `annehmen-oder-ueberwinden` (Selbstverhältnis) + zwei closing_kernel-Bauten. `lectio-mode.md` als historische Detailreferenz markiert (v1.11), `lectio-2.0-richtlinie.md` als Archiv. Vier Nachträge in lectio-anleitung.md: Punkt 10.1 closing_kernel-Schreibdisziplin (zwei belegte Fehlerformen), Schluss-Station-bridge-Konvention, Typografie-Warnung Kernels, image_prompt Pflicht / Bild optional.
@@ -386,6 +394,11 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Status:** vorgemerkt 14.6.26
 **Kontext:** Der erste Selbstverhältnis-Bau (Annehmen/Überwinden) hat bewusst an der Gabe-Diagonale vorbeigefügt — Foucault (Selbstpraktiken), Hadot (Übung als Weg), Wahres Selbst als Begriff, Almaas bringen die ankerlose Konstruktion des Kerns zentral. Das ist ein eigener Bogen.
 **Nächster Schritt:** Anker prüfen; Bau nach dem nächsten Tableau oder als eigenständige Session.
+
+### [ ] Vitest Regel 5 verbessern: fs.existsSync → git-Tracking-Prüfung
+**Status:** identifiziert 16.6.26
+**Kontext:** Regel 5 prüft Bild-Existenz mit `fs.existsSync` gegen das lokale Filesystem. Dateien, die lokal vorhanden aber nicht committed sind, erscheinen grün — im Deploy fehlen sie. Das war der Grund für die leeren Bild-Nischen. Sauberere Lösung: gegen `git ls-files` prüfen, damit uncommitted Bilder sofort auffallen.
+**Nächster Schritt:** Regel 5 in `data-validation.test.ts` umschreiben — `git ls-files --error-unmatch <path>` oder `git ls-files` + Set-Check statt `fs.existsSync`.
 
 ### [ ] Zehnte Vitest-Regel: bridge === transition (Doppelung ungesichert)
 **Status:** identifiziert 14.6.26
