@@ -1,6 +1,6 @@
 # Audit & Bestandesaufnahme — Sanctum Mentis
 
-**Stand:** 2026-06-16 · **Art:** Status-Tracker (fortgeschrieben aus Audit 2026-06-16)
+**Stand:** 2026-06-17 · **Art:** Status-Tracker (fortgeschrieben aus Audit 2026-06-16)
 **Methode:** Inventar über `data/`, `data/lectio/`, `data/lebensfragen/`, `src/`, `prompts/` und 15 Wurzel-MD-Dateien; Abgleich Code ↔ Daten ↔ Dokumentation.
 
 > **Dies ist die maßgebliche Liste der offenen Audit-Punkte — nicht zusätzlich in `backlog.md` führen (eine Quelle).**
@@ -95,10 +95,35 @@ Topic-Größen (Denker/Konzepte/Schulen/Einflüsse): Tableaus liegen meist im Mi
 
 ---
 
-## 4. Empfohlene Reihenfolge (aktualisiert)
+## 4. Erlebnis-Audit-Befunde (13.–17.6.26)
+
+Erstbesucher-Durchgang (mobil, nur Live-Oberfläche) durch Landing → Bibliothek → Sternkarte → Lectio → Lebensfrage → Suche. Vier kuratorische Befunde (A–D).
+
+**EA1 · Sofort-Fixes (drei kleine UI-Bugs)** — 13.6.26 committed:
+✅ „4 St." → „4 Stationen" auf Lectio-Karten (`TopicViewer.tsx:283`)
+✅ Tour-Caption bricht mobil um statt abzuschneiden (`LandingStarChart.tsx:447` `overflowWrap: break-word`)
+✅ Neu-Filter: Erstansicht = „Alle", levelAction-Signal für nutzerinitiertes Hochstufen (`ThinkerList.tsx`)
+
+**EA-A · Tableau-Begriff vereinheitlichen (höchste Prio)**
+✅ **ERLEDIGT 2026-06-17:** Vokabular vereinheitlicht: „Tableau — ein Sternbild von Stimmen" auf der Landing als Einführungsstelle; H2 und Fußzeile „durch jedes Tableau"; Nav-Header „Themen" → „Tableaus"; Bibliotheks-Untertitel mit Tableau-Einführung. Bildwelt als kosmisch festgelegt (→ `kanon.md`, neuer Abschnitt „Das Vokabular der drei Formen"). Spur-Zahl gleichzeitig von hartkodiert „drei" auf dynamisch (`grouped.length`) migriert.
+
+**EA-C · „Lectio" vs. „Geführte Pfade" angleichen**
+✅ **GEKLÄRT 2026-06-17 (mitbeantwortet durch EA-A):** Lectio bleibt Eigenname, wird auf der Landing bei erster Begegnung eingeführt. „Geführte Pfade" in `TopicViewer.tsx:239` ist eine beschreibende Überschrift für die Lectio-Liste im Tableau — kein Widerspruch, kein Änderungsbedarf.
+
+**EA-B · Lebensfragen-Zugang** — 🟡 **OFFEN**
+Kleiner unstrittiger Fix: Zeile „Lebensfragen" ins Header-Menü neben „Tableaus". Größere Frage: Navigationsrang der Lebensfragen (Haupteingang?). Entscheidung ausständig.
+
+**EA-D · Lebensfrage vs. Lectio unterscheidbarer** — 🟢 **OFFEN / Niedrig**
+Herkunftszeile pro Stimme andeuten („Buddhismus · aus Das Selbst"). Kuratorisch, kein Muss.
+
+---
+
+## 5. Empfohlene Reihenfolge (aktualisiert)
 
 1. ~~**H1 + H2**~~ ✅ erledigt 2026-06-16
-2. ~~**H3**~~ ✅ erledigt 2026-06-16 — 6 Dateien nach `data/lectio/archiv/`
-3. **M2** — Lectio-Doku-Stapel aufräumen (Archiv-Ordner), ~10 Verweise umbiegen.
-4. **M1** — Schools-Konvention als bewusste Entscheidung klären (nachschärfen vs. `topic.meta` füllen).
-5. **N1–N3** — Hygiene, wenn Zeit ist.
+2. ~~**H3**~~ ✅ erledigt 2026-06-16
+3. ~~**EA-A + EA-C + Sofort-Fixes**~~ ✅ erledigt 2026-06-17
+4. **EA-B** — Lebensfragen ins Header-Menü (kleiner Fix) + Navigationsrang-Entscheidung.
+5. **M2** — Lectio-Doku-Stapel aufräumen (Archiv-Ordner), ~10 Verweise umbiegen.
+6. **M1** — Schools-Konvention als bewusste Entscheidung klären (nachschärfen vs. `topic.meta` füllen).
+7. **EA-D, N1–N3** — Hygiene, wenn Zeit ist.

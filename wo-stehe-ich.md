@@ -1,6 +1,6 @@
 # Wo stehe ich — Sanctum Mentis
 
-**Stand:** 16.6.26 (aktualisiert nach Audit-Zyklus + Bild-Fixes)
+**Stand:** 17.6.26 (aktualisiert nach Vokabular-Entscheidung)
 
 ---
 
@@ -45,9 +45,7 @@
 
 **Lectio-Methode:** `prompts/lectio-anleitung.md` — **maßgebliche Bau-Anleitung** (Stand 14.6.26), konsolidiert aus lectio-mode v1.10 + 2.0-Richtlinie + Schreib-Skill. Bewährt durch vollen Bau `annehmen-oder-ueberwinden` + zwei closing_kernel-Bauten. `lectio-mode.md` (v1.11) und `lectio-2.0-richtlinie.md` als Archiv markiert. `closing_kernel` auf zwei Lectios gesetzt (wer-bist-du + vom-wissen-zum-glauben). *Kontemplativ-vertiefend* wartet auf 2. Fall.
 
-**Landing Page** hat ein lebendiges Tableau (HeroTableau-Komponente: animiert Das-Selbst-Konzepte Band für Band), eine Lectio-Sektion und erklärt den Unterschied zwischen Karte und Lectio.
-
-**Landing Page** hat eine Lectio-Sektion ("Zwei Wege durch jedes Thema") und erklärt den Unterschied zwischen Karte und Lectio ohne Versprechen.
+**Landing Page** hat ein lebendiges Tableau (LandingStarChart: selbstspielende Sternkarten-Tour, Das-Selbst), eine Lectio-Sektion und erklärt den Unterschied zwischen Karte und Lectio. Vokabular: „Tableau — ein Sternbild von Stimmen" wird hier erstmals eingeführt; Nav-Header trägt „Tableaus"; Bibliotheks-Untertitel trägt Tableau-Begriff + dynamische Spur-Zahl.
 
 ---
 
@@ -82,6 +80,10 @@
 
 ## Was mich aktuell beschäftigt
 
-Der Audit-Zyklus dieser Session ist abgeschlossen: CLAUDE.md zeigt jetzt korrekt auf `lectio-anleitung.md` (H1+H2), 6 expositorische Vorläufer liegen in `archiv/lectio-expositorisch/` (H3), Vitest-Regel 10 sichert Registrierungs-Parität gegen Wiederkehr, leere Bild-Nischen im Deploy sind durch 10 committete PNGs behoben. `audit-bestandesaufnahme.md` ist der Status-Tracker für offene Audit-Punkte (M1–N3, nicht in backlog.md doppeln).
+**Audit-Zyklus (16.6.)** abgeschlossen: CLAUDE.md zeigt korrekt auf `lectio-anleitung.md` (H1+H2), 6 expositorische Vorläufer liegen in `archiv/lectio-expositorisch/` (H3), Vitest-Regel 10 sichert Registrierungs-Parität, leere Bild-Nischen im Deploy durch committete PNGs behoben.
 
-Die offene Bau-Arbeit: zweite Selbstverhältnis-Lectio (Werk/Gabe-Diagonale) und zweites Menschenbild-Tableau (Section-Header-Bedingung). Der formale User-Test — zwei Personen aus der Persona, ohne Erklärung beobachten — bleibt ausständig.
+**Vokabular-Entscheidung (17.6.):** Kernvokabular und Bildwelt gesetzt — „Tableau — ein Sternbild von Stimmen", kosmische Bildwelt durchgehend (→ `kanon.md`). Drei Erlebnis-Audit-Sofort-Fixes (4 Stationen / Tour-Caption / Neu-Filter) und EA-A + EA-C erledigt. Offen: EA-B (Lebensfragen ins Header-Menü + Navigationsrang), EA-D (Herkunftszeile pro Stimme, niedrig).
+
+**Offen (kuratorisch, eigener Faden):** closing_kernel ×3 befüllen, lectio_briefs ×4 in `findest-du-oder-machst-du`, M1 Solo-Schulen (⚠️ Einzelprüfung, bewusste Entscheidung pro Schule). Offen (Code-Hygiene): StarChart-Refactor, a11y-Reste (Slider, Akkordeon), Staging-PNGs konvertieren, `gut-und-boese.json` 4 Influences auf Konzept-IDs prüfen.
+
+Die offene Bau-Arbeit: zweite Selbstverhältnis-Lectio (Werk/Gabe-Diagonale) und zweites Menschenbild-Tableau (Section-Header-Bedingung). Formaler User-Test (zwei Personen aus der Persona, ohne Erklärung beobachten) bleibt ausständig.
