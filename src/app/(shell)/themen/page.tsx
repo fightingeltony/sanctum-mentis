@@ -26,6 +26,7 @@ export default function ThemenPage() {
   const grouped = groupBySpur(library)
   // Tableaus ohne Spur (Fallback) hinten anhängen, damit nichts verschwindet
   const orphans = library.filter(e => !e.spur)
+  const spurCount = grouped.length
 
   return (
     <div className="px-8 md:px-12 py-12 max-w-[1100px] mx-auto">
@@ -37,8 +38,9 @@ export default function ThemenPage() {
         Wähle ein Thema
       </h1>
       <p className="font-body italic text-[15px] text-[var(--fg-muted)] mb-14 max-w-[58ch]">
-        Die Sammlung ordnet sich in drei Spuren. Jede Spur ist ein Feld von
-        Fragen, das nach und nach wächst.
+        Die Sammlung ordnet sich in {spurCount} Spuren, jede ein Feld von Fragen,
+        das nach und nach wächst. Jedes Thema wird als Tableau ausgestellt —
+        ein Sternbild von Stimmen.
       </p>
 
       <div className="flex flex-col gap-16">

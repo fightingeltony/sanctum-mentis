@@ -28,8 +28,8 @@ export default function LandingPage() {
       </p>
       <p className="font-body text-[18px] md:text-[20px] text-[var(--fg-muted)] leading-relaxed mb-10 max-w-[60ch]">
         Sanctum Mentis macht aus dem Gewirr eine Karte. Jedes Thema der
-        Ideengeschichte wird zu einer interaktiven Landschaft, in der Denker,
-        Konzepte und ihre Konflikte sichtbar werden. Du wählst die Tiefe —
+        Ideengeschichte wird zu einem Tableau — einem Sternbild von Stimmen,
+        durch das du dich bewegst. Du wählst die Tiefe —
         vom Einstieg bis zur Synthese.
       </p>
 
@@ -94,7 +94,7 @@ export default function LandingPage() {
       {/* ── Zwei Wege ── */}
       <div className="mt-16 pt-10 border-t border-[var(--hairline)]">
         <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-[var(--fg)] mb-2">
-          Zwei Wege durch jedes Thema
+          Zwei Wege durch jedes Tableau
         </h2>
         <p className="font-body italic text-[15px] text-[var(--fg-muted)] mb-8 max-w-[52ch]">
           Manche Themen liest man besser räumlich, andere als Reise.
@@ -146,7 +146,7 @@ export default function LandingPage() {
         </div>
 
         <p className="font-body italic text-[12px] text-[var(--fg-faint)] mt-5">
-          Beide führen durch ein Thema — komplementär, nicht alternativ.
+          Beide führen durch ein Tableau — komplementär, nicht alternativ.
         </p>
       </div>
 
