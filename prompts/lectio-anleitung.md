@@ -698,9 +698,10 @@ Pro Station wird der Subject-Teil ersetzt; der Rahmen bleibt.
 
 ## Tableau / Lectio / Lebensfrage — die drei Formen (Kanon)
 
-> **Kanonische Definition.** Dieser Block ist wortgleich in `bibliothek-architektur.md`,
-> dieser Anleitung und `mild-mode.md` hinterlegt. Änderungen an einer Stelle müssen in
-> allen nachgezogen werden — es gibt nur eine Quelle der Wahrheit.
+> **Kanonische Quelle: `kanon.md`** (Abschnitt „Die drei Formen — Reichweite, Wohnort,
+> Bau-Regel"). Bei Abweichung gilt `kanon.md`. Der Volltext steht hier bewusst mit, damit
+> diese Anleitung als Übergabe-Artefakt selbsttragend bleibt — Änderungen aber immer
+> zuerst in `kanon.md`.
 
 Sanctum kennt drei Formen, in denen Wissen zugänglich wird. Sie sind nicht drei
 gleichrangige Geschwister, sondern unterscheiden sich in **Reichweite** und **Wohnort**.
@@ -768,15 +769,15 @@ Feld greift, baut in Wahrheit eine Lebensfrage — und umgekehrt.
   Regeln.
 - `hard-mode.md` — Tableau-Bau für akademisch sensible Themen. Lectio ist immer mild — kein
   Hard-Mode-Äquivalent.
-- `bibliothek-architektur.md` — Sammlungs-Architektur. Lectio ist ein Zugangs-Modus, kein
-  neues Tableau-Format.
+- `archiv/bibliothek-architektur.md` — Sammlungs-Architektur (archiviert; Drei-Formen-Kanon
+  jetzt in `kanon.md`). Lectio ist ein Zugangs-Modus, kein neues Tableau-Format.
 
 ---
 
 ## Herkunft dieser Anleitung
 
 Diese Anleitung führt zusammen:
-- **`lectio-mode.md` (v1.10)** — Gerüst: zehn methodische Entscheidungen, Schema,
+- **`archiv/prompts/lectio-mode.md` (v1.10)** — Gerüst: zehn methodische Entscheidungen, Schema,
   Pfad-Typen, Größen-Richtwerte, Kanon-Block.
 - **`lectio-2.0-richtlinie.md`** — Ton-Schicht: Nahbarkeit, erzählend-erfahrender Ton,
   stationsweiser Ton-Wechsel, Bild-Prüfschritt.

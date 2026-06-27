@@ -235,7 +235,7 @@ Subtitle und Intro sprechen einheitlich **"du"**. Das gewinnt an Direktheit. Die
 
 ## Tableau / Lectio / Lebensfrage — die drei Formen (Kanon)
 
-> **Kanonische Definition.** Dieser Block ist wortgleich in `bibliothek-architektur.md`, `prompts/lectio-mode.md` und `prompts/mild-mode.md` hinterlegt. Änderungen an einer Stelle müssen in allen drei nachgezogen werden — es gibt nur eine Quelle der Wahrheit.
+> **Kanonische Quelle: `kanon.md`** (Abschnitt „Die drei Formen — Reichweite, Wohnort, Bau-Regel"). Bei Abweichung gilt `kanon.md`. Der Volltext steht hier bewusst mit, damit ein kontextfreier Prüfer-Chat die Definition vor Augen hat — Änderungen aber immer zuerst in `kanon.md`.
 
 Sanctum kennt drei Formen, in denen Wissen zugänglich wird. Sie sind nicht drei gleichrangige Geschwister nebeneinander, sondern unterscheiden sich in **Reichweite** und **Wohnort**. Wer eine neue Form baut, muss wissen, welche davon er gerade bedient.
 

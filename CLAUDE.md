@@ -207,7 +207,7 @@ Bedingung für Wiederholbarkeit: `prompts/mild-mode.md` und `prompts/hard-mode.m
 
 Ergänzend zu Tableau-Bauten gibt es Lectios — geführte Pfade durch ein Tableau (4–6 Stationen, kuratorischer Bogen, offenes Ende). Komplementär zur räumlichen Karte: Lectio ist temporal, nicht explorativ.
 
-**Bau-Konvention** in `prompts/lectio-anleitung.md` (MASSGEBLICH, Stand 2026-06-14). Zehn methodische Entscheidungen, vier Pfad-Typen. (`prompts/lectio-mode.md` v1.11 bleibt als historische Detailreferenz erhalten, ist aber abgelöst.)
+**Bau-Konvention** in `prompts/lectio-anleitung.md` (MASSGEBLICH, Stand 2026-06-14). Zehn methodische Entscheidungen, vier Pfad-Typen. (`archiv/prompts/lectio-mode.md` v1.11 bleibt als historische Detailreferenz erhalten, ist aber abgelöst.)
 - *narrativ-historisch* — Stationen lösen sich chronologisch ab (Geist/Hard Problem)
 - *konkurrierend-konfrontativ* — gleichzeitige Positionen zur selben Frage (Selbst/Wer beobachtet)
 - *emotional-kumulativ* — Stationen kumulieren in einer emotionalen Bewegung (Realismus/Wenn die Welt wackelt)
@@ -221,7 +221,7 @@ Ergänzend zu Tableau-Bauten gibt es Lectios — geführte Pfade durch ein Table
 
 **Feld `path_type` (Datenwert, seit 30.5.26):** Beschreibt den Pfad-Typ einer Lectio im JSON (narrativ-historisch / konkurrierend-konfrontativ / emotional-kumulativ / destruktiv-aufbauend / kontemplativ-vertiefend). ACHTUNG: kontemplativ-vertiefend ist als DATENWERT gesetzt, aber NOCH NICHT als Methoden-Konvention in `lectio-anleitung.md` aufgenommen (nur ein Fall; wartet auf zweiten — Befund #2 „destillieren, nicht postulieren").
 
-**Konvention Offener Ausgang:** Sanctum darf eine kuratorische Haltung haben, aber keine Wahrheit verkünden. Schlussfragen öffnen, phänomenologische Sprache statt ontologischer Behauptungen. Ausführlich in `prompts/lectio-anleitung.md` Punkt 10 und `bibliothek-architektur.md` Sektion "Bibliothek mit Haltung, ohne Wahrheitsanspruch".
+**Konvention Offener Ausgang:** Sanctum darf eine kuratorische Haltung haben, aber keine Wahrheit verkünden. Schlussfragen öffnen, phänomenologische Sprache statt ontologischer Behauptungen. Ausführlich in `prompts/lectio-anleitung.md` Punkt 10 und `kanon.md` Abschnitt „Grundhaltung" (kanonische Quelle für „Bibliothek mit Haltung, ohne Wahrheitsanspruch").
 
 **Datenort:** `data/lectio/[id].json`. Loader in `src/lib/data.ts` (LECTIOS-Dictionary), Route `/lectio/[id]`.
 

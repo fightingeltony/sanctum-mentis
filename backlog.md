@@ -385,6 +385,7 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Kontext:** Bei Geistphilosophie-Implementierung wurde sichtbar, dass `schools` als 1:1 zu Denkern befüllt war (Implementierungsmuster aus Landkarte des Selbst, kein konzeptuelles Prinzip). Korrigiert auf Prinzip: "Schulen sind Denker-Traditionen, denen mehrere Denker angehören können — nicht umetikettierte Personen."
 **Implikation:** Bei künftigen Tableaus bewusst prüfen — sind die Schulen tatsächlich Traditionen oder umetikettierte Personen?
 **Nächster Schritt:** Beim nächsten Tableau-Bau aktiv beachten. Eventuell beide Bestandstableaus retrospektiv prüfen.
+**Audit (eine Quelle):** Die offene, aktuelle Fassung dieses Punktes — 61 Solo-Schulen über 12 Tableaus, Entscheidung „nachschärfen vs. `topic.meta`-Ausnahmen" noch offen — wird als **M1** in `audit-bestandesaufnahme.md` geführt. Dort, nicht hier, ist die maßgebliche offene Liste.
 
 ---
 
@@ -410,20 +411,31 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Kontext:** „Spezifischste offene Beobachtung vor allgemeinster Erlaubnis" — aus zwei Fällen als Tendenz destilliert, nicht als Regel kanonisiert. Wartet auf dritten unabhängigen Fall zur Bestätigung oder Verwerfung. Notiz steht in lectio-anleitung.md Punkt 10.1.
 **Nächster Schritt:** Beim nächsten closing_kernel-Bau bewusst prüfen; danach Kanon-Entscheidung.
 
+### [ ] Feinschliff & Code-Hygiene (aus `wo-stehe-ich.md` übernommen 27.6.26)
+**Status:** offen — kleinteilige Rest-Posten, beim Konsolidieren der Standort-Dateien hierher gezogen (vorher nur in `wo-stehe-ich.md`).
+**Kuratorisch:**
+- 4 `lectio_brief`-Felder in `findest-du-oder-machst-du` befüllen.
+- `data/gut-und-boese.json`: vier Influences gegen Konzept-IDs prüfen (Endpunkte korrekt?).
+**Code-Hygiene:**
+- StarChart-Gestenschicht auf `usePanZoom` migrieren (handimplementiert; vgl. CLAUDE.md „Sternkarte — Gesten- & Atlas-Konvention").
+- a11y-Reste: Slider und Akkordeon auf Tastaturbedienung / `:focus-visible` prüfen.
+- Staging-PNGs konvertieren/optimieren (z.B. `lectio-vedanta.png`, 9 MB), bevor sie eingebunden werden.
+
 ### [ ] Tableau-Bau-Anleitung — fehlt
 **Status:** Bestandsbefund 14.6.26
 **Kontext:** Es gibt mild-mode.md und hard-mode.md als Tableau-Prompts, aber keine eigenständige Bau-Anleitung analog zu lectio-anleitung.md. Zwei vollständige Begleitnotizen (existenzialismus-begleitnotiz.md, gut-und-boese-begleitnotiz.md) enthalten die Prozess-Erkenntnisse bereits — sie müssen nur destilliert werden.
 **Nächster Schritt:** Beim nächsten Tableau-Bau mitschreiben; nach dem Bau aus den zwei Begleitnotizen destillieren.
 
-### [ ] Lebensfragen-Bau-Anleitung — fehlt
-**Status:** Bestandsbefund 14.6.26
-**Kontext:** Vier Lebensfragen existieren, kein Bau-Standard. Analog zu lectio-anleitung.md aus den vier bestehenden Lebensfragen rekonstruieren.
-**Nächster Schritt:** Beim nächsten Lebensfragen-Bau mitschreiben; danach destillieren.
+### [x] Lebensfragen-Bau-Anleitung — erstellt (Status KANDIDAT)
+**Status:** erstellt 26.6.26 — **KANDIDAT, noch nicht maßgeblich**
+**Kontext:** Vier Lebensfragen existierten, kein Bau-Standard.
+**Resultat:** `prompts/lebensfrage-anleitung.md` aus den vier bestehenden Lebensfragen destilliert (Regel/Freiheit/Notiz-Trennung analog `lectio-anleitung.md`). Wird erst MASSGEBLICH, wenn ein echter Lebensfragen-Bau sie geprüft hat (Belegfall vor Kanonisierung) — bis dahin bleiben die drei „Notiz, kein Kanon"-Punkte offen.
+**Nächster Schritt:** Erster Bewährungsfall ist die Lebensfrage `kontrollieren` („Was habe ich wirklich in der Hand?", live seit 27.6.) — Prüfung gegen die Anleitung steht aus; danach Kanonisierungs-Entscheidung.
 
-### [ ] Grundhaltung/Kanon braucht eigenen Ort — kanon.md
-**Status:** Bestandsbefund 14.6.26
-**Kontext:** „Bibliothek mit Haltung, ohne Wahrheitsanspruch" ist 3× eingebettet (bibliothek-architektur.md, lectio-anleitung.md, mild-mode.md) — kein eigener kanonischer Ort. Ändert sich ein Satz, muss er dreimal nachgezogen werden.
-**Nächster Schritt:** kanon.md anlegen, kanonische Blöcke dort als Single Source of Truth, in den anderen Dateien als Verweis.
+### [x] Grundhaltung/Kanon braucht eigenen Ort — kanon.md
+**Status:** erledigt 27.6.26 (kanon.md angelegt 17.6., kanonische Blöcke konsolidiert 27.6.)
+**Kontext:** „Bibliothek mit Haltung, ohne Wahrheitsanspruch" war 3× eingebettet (bibliothek-architektur.md, lectio-anleitung.md, mild-mode.md) — kein eigener kanonischer Ort.
+**Resultat:** `kanon.md` ist die Single Source. Die kanonischen Blöcke (Grundhaltung; Die drei Formen — Reichweite/Wohnort/Bau-Regel; Stimm-Hierarchie; Du-Konsistenz) leben dort. Die Bau-Anleitungen (mild-mode, lectio-anleitung, lebensfrage-anleitung) führen den Volltext nur noch als selbsttragende Arbeitskopie mit „Kanonische Quelle: kanon.md"-Header. `bibliothek-architektur.md` nach `archiv/` verschoben (Status-Rumpf veraltet, Kanon gesichert).
 
 ### [ ] Prozess-Erkenntnisse fürs Rollen-Briefing
 **Status:** vorgemerkt 14.6.26
@@ -832,10 +844,12 @@ Bei Bedarf am Ende eines Diskussions-Chats Claude bitten: *"Fass mir die Backlog
 **Nächster Schritt:** [konkret oder "warten auf X"]
 ```
 
-## Anmerkung zum Übergabe-Workflow
+## Anmerkung zum Status dieser Datei
 
-Diese Datei ist als *Übergabe-Dokument* an Claude Code gedacht, nicht als paralleles Backlog. Claude Code pflegt das eigentliche Backlog im Repo. Der typische Übergabe-Prompt:
+Diese Datei **ist** das Repo-Backlog — die einzige, git-getrackte Backlog-Quelle (es gibt kein separates „eigentliches" Backlog daneben). Sie sammelt abgeschlossene Arbeit, offene Feature-/Build-/Tooling-Items, das Themen-Reservoir und die Methoden-Prinzipien.
 
-> *"Hier ist ein aktualisierter Backlog-Stand aus einer Diskussion. Gleiche das mit unserer bestehenden Backlog-Datei ab. Neue Items aufnehmen, bestehende ergänzen wo der zusätzliche Kontext hilfreich ist, Duplikate ignorieren. Bei Konflikten frag mich. Zeig mir den Diff vor dem Speichern."*
+**Abgegrenzt:** Offene **Audit-/Hygiene-Punkte** (Korrektheit, Doku-Drift, Konventionsbrüche) leben in `audit-bestandesaufnahme.md` — *eine Quelle*, hier nicht doppeln.
 
-Damit bleibt die Wahrheit im Repo, und die Konversations-Datei ist nur das Vehikel.
+Wird ein aktualisierter Backlog-Stand aus einer Diskussion eingespeist, lautet der typische Prompt:
+
+> *"Hier ist ein aktualisierter Backlog-Stand aus einer Diskussion. Gleiche das mit dieser backlog.md ab. Neue Items aufnehmen, bestehende ergänzen wo der zusätzliche Kontext hilfreich ist, Duplikate ignorieren. Bei Konflikten frag mich. Zeig mir den Diff vor dem Speichern."*

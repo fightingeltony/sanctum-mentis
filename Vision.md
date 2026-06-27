@@ -31,6 +31,9 @@ arbeiten, nicht auf akademische Vollständigkeit.
 
 ## Verwandte Dokumente
 
+- `kanon.md` — das kuratorische Selbstverständnis: Grundhaltung, die drei Formen, Stimm-Hierarchie (Single Source)
 - `CLAUDE.md` — Datenmodell, technische Konventionen
-- `backlog.md` — Roadmap, kuratorische Prinzipien im Detail
+- `schema-referenz.md` — die Schema-Felder aller drei Formen
+- `backlog.md` — Roadmap, Themen-Reservoir, Methoden-Prinzipien
+- `audit-bestandesaufnahme.md` — offene Audit- und Hygiene-Punkte (Status-Tracker)
 - `README.md` — Tech-Stack, Installation

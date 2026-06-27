@@ -78,11 +78,117 @@ Die **Bildwelt ist kosmisch, durchgehend**: Himmel, Sternbild, Sternkarte, Tiefe
 
 ---
 
+## Die drei Formen — Reichweite, Wohnort, Bau-Regel
+
+*Status: gesetzt. Dies ist die kanonische Heimat des Drei-Formen-Blocks — die Bau-Anleitungen (`mild-mode.md`, `lectio-anleitung.md`, `lebensfrage-anleitung.md`) verweisen hierher; bei Abweichung gilt diese Fassung.*
+
+Sanctum kennt drei Formen, in denen Wissen zugänglich wird. Sie sind nicht drei gleichrangige Geschwister nebeneinander, sondern unterscheiden sich in **Reichweite** und **Wohnort**. Wer eine neue Form baut, muss wissen, welche davon er gerade bedient.
+
+### Tableau — die Fläche
+
+Das Tableau ist die **Karte eines Feldes**. Alle Stimmen eines Themas gleichzeitig sichtbar, räumlich angeordnet, selbstgesteuert begehbar. Es behauptet keinen Pfad — es zeigt das ganze Feld und überlässt dem Nutzer, wohin er geht.
+
+Das Tableau ist die **Quelle, aus der die beiden anderen Formen schöpfen.** Sowohl Lectio als auch Lebensfrage greifen auf Tableau-Knoten zurück; keine von beiden erzeugt eigenes Stimmen-Material.
+
+### Lectio — Tiefe in *einem* Feld
+
+Die Lectio ist eine **kuratierte Sequenz innerhalb eines einzigen Tableaus.** Sie wohnt im Tableau und verlässt es nie. Sie nimmt 4–8 der vorhandenen Knoten und legt sie in eine Reihenfolge, die einen Bogen trägt — vertikal, ein Feld in die Tiefe.
+
+- **Reichweite:** ein Tableau.
+- **Wohnort:** *im* Tableau (Discovery im Tableau-Kopf, Route `/lectio/[id]`). **Nicht** als eigene Top-Level-Form in der Bibliothek sichtbar.
+- **Achse:** Tiefe. Sie fragt nicht „was sagen andere Felder dazu", sondern „wie hängt dieses eine Feld in sich zusammen".
+
+### Lebensfrage — Breite *über* Felder
+
+Die Lebensfrage ist eine **kuratierte Sammlung quer über mehrere Tableaus.** Sie nimmt eine gelebte Situation („Was tue ich mit Schmerz?", „Wie stelle ich mich zum Tod?") und versammelt dazu Stimmen aus verschiedenen Feldern — horizontal, eine Lebenslage aus mehreren Blickwinkeln beleuchtet.
+
+- **Reichweite:** mehrere Tableaus.
+- **Wohnort:** *neben* der Bibliothek (eigener Bereich, Route `/lebensfragen/[id]`). Sichtbar auf Top-Level, weil sie keinem einzelnen Tableau gehört.
+- **Achse:** Breite. Sie fragt nicht „wie hängt ein Feld zusammen", sondern „was haben die Felder dieser einen Lebenslage zu sagen".
+
+### Die Asymmetrie ist die Aussage
+
+| Form | Reichweite | Achse | Wohnort | sichtbar als |
+|---|---|---|---|---|
+| **Tableau** | ein Feld, ganz | Fläche | Bibliothek | Library-Card |
+| **Lectio** | Ausschnitt *eines* Feldes | Tiefe (vertikal) | *im* Tableau | Discovery im Tableau-Kopf |
+| **Lebensfrage** | Ausschnitt *über* Felder | Breite (horizontal) | *neben* der Bibliothek | eigener Bereich |
+
+Lectio ist **Tiefe in einem Feld**, Lebensfrage ist **Breite über Felder**, Tableau ist die **Fläche, aus der beide schöpfen.** Diese drei Sätze sind die kürzeste tragfähige Fassung des Kanons.
+
+Daraus folgt die Bau-Regel: Eine Lectio darf nie Tableau-Grenzen überschreiten (sonst wird sie zur Lebensfrage), und eine Lebensfrage muss mindestens zwei Tableaus berühren (sonst ist sie eine Lectio mit falschem Wohnort). Wer beim Bau merkt, dass eine Lectio nach einem fremden Feld greift, baut in Wahrheit eine Lebensfrage — und umgekehrt.
+
+---
+
+## Die Stimm-Hierarchie eines Tableaus
+
+*Status: gesetzt.*
+
+Beim Sortieren der Eingangs-Fragen ist klar geworden: ein Tableau spricht mit **drei Stimmen**, jede mit einer eigenen Funktion. Wenn die Stimmen ineinanderfallen, entsteht Redundanz; wenn sie klar getrennt sind, entsteht eine erlebbare Vertiefung.
+
+### `subtitle` — die einladende Stimme
+
+Erscheint in der **Library-Card und im Tableau-Kopf** — die erste Frage, die der Nutzer überhaupt sieht. Atmosphärisch, einladend. Format: kurze Aussage gefolgt von einer offenen Frage als Echo.
+
+Beispiele:
+- *Das Rätsel im Kopf — Wo wird aus Materie eigentlich Gefühl?* (Geist)
+- *Die Suche nach dem Kern — Wer bist du, wenn du alles weglässt?* (Selbst)
+- *Wo endet die Welt und wo beginnst du?* (Realismus)
+- *Das Gewicht deiner Freiheit.* (Ethik)
+
+Eine Stimme, eine Quelle — der Subtitle wird **nicht** auf Library-Card und Tableau separat gepflegt. Die Library-Card liest direkt aus dem JSON.
+
+### `intro` — die zuspitzende Stimme
+
+Erscheint im Tableau auf L1 als zweite Eingangsfrage. Direkter, eine konkrete Du-Frage. Sie nimmt den Nutzer, der schon eingetreten ist, und stellt ihm die Tableau-Spannung am eigenen Leib.
+
+Beispiele:
+- *Wenn du Schmerz fühlst — was passiert da eigentlich?* (Geist)
+- *Bin ich ein Kern, den ich freilegen kann — oder ein Muster, das ich gerade bin?* (Selbst)
+- *Kannst du der Welt trauen, oder beginnt sie erst in deinem Kopf?* (Realismus)
+- *Was sollst du tun, wenn es keine einfache Antwort gibt?* (Ethik)
+
+Wichtig: Intro **nimmt nicht die Synthese vorweg**. Sie stellt die Frage, an der sich die Pole abarbeiten — sie nennt die Pole nicht. Auflösung bleibt der Synthese vorbehalten.
+
+### `synthesis` — die landende Stimme
+
+Erscheint auf L5. Hier wird der Bogen geschlossen — die Spannungen werden ausformuliert, die Positionen genannt, der Streit positioniert. *"Hier ist die Spannung, die du jetzt verstehst."*
+
+Drei bis fünf Sätze, kuratorisch, nicht didaktisch.
+
+### Die drei zusammen
+
+Drei Stimmen, drei Funktionen, drei Orte:
+
+| Stimme | Wo | Funktion |
+|---|---|---|
+| `subtitle` | Library-Card + Tableau-Kopf | einladen, hineinziehen |
+| `intro` | Tableau auf L1 | zuspitzen, am Leib stellen |
+| `synthesis` | Tableau auf L5 | auflösen, landen |
+
+Das ist der Bogen, den die Sanctum-Vision verlangt: Punkte setzen, Erkenntnisse landen lassen. Subtitle ist der Punkt, an dem das Thema sich dem Nutzer anbietet; Intro ist der Punkt, an dem das Thema ihn ankommen lässt; Synthese ist der Punkt, an dem es sich schließt.
+
+---
+
+## Du-Konsistenz als Sammlung-Signatur
+
+*Status: gesetzt.*
+
+Beim Sortieren der Eingangsfragen ist eine Versuchung sichtbar geworden, die nicht trägt: die Idee, dass Personalpronomen architektur-tragend sein müssten — *ich* für Innenfragen (Geist, Selbst), *du* für die Welt-Frage (Realismus), *wir* für die Gemeinschafts-Frage (Ethik).
+
+Was sich beim wirklichen Schreiben gezeigt hat: Diese Pronomen-Architektur klingt sauber, fühlt sich aber inkonsistent an. Die Sammlung wird durch die **einheitliche Du-Adressierung** stärker — alle Tableaus sprechen den Nutzer direkt an. Das gewinnt an Konsistenz und Direktheit; das *wir* in *"Wie wollen wir leben?"* (Ethik-Vorform) fiel in die Lehrbuch-Falle, weil es vom Nutzer wegging in eine abstrakte Gemeinschaft.
+
+**Sammlungs-Signatur:** Subtitle und Intro sprechen "du". Die Synthese auf L5 darf anders sprechen — sie ist kuratorisch, nicht einladend. Aber an der Tür spricht das Tableau persönlich.
+
+Diese Erkenntnis ist eine Revision: In einer früheren Fassung dieser Notiz hatte ich Personalpronomen als Architektur-Signal benannt. Die Du-Konsistenz ist die ehrlichere Beobachtung.
+
+---
+
 ## Was hier bewusst nicht steht
 
 Dieses Dokument ist das *Warum*, nicht das *Wie* und nicht das *Was*.
 
-- **Felder, Typen, Formate** (Tableau / Lectio / Lebensfrage, alle Schema-Felder) → `schema-referenz.md`.
+- **Schema-Felder der drei Formen** (alle Feld-Definitionen von Tableau / Lectio / Lebensfrage) → `schema-referenz.md` §1–3. Die *begriffliche* Bestimmung der drei Formen (Reichweite, Wohnort, Bau-Regel) steht oben in diesem Dokument.
 - **Wie man eine Lectio baut** → `lectio-anleitung.md` (maßgeblich).
 - **Wie man prüft** → `mild-mode.md`, `hard-mode.md`.
 

@@ -1,6 +1,6 @@
 # Wo stehe ich — Sanctum Mentis
 
-**Stand:** 17.6.26 (aktualisiert nach Vokabular-Entscheidung)
+**Stand:** 27.6.26 (Standort-Dateien konsolidiert; fünfte Lebensfrage live)
 
 ---
 
@@ -45,6 +45,8 @@
 
 **Lectio-Methode:** `prompts/lectio-anleitung.md` — **maßgebliche Bau-Anleitung** (Stand 14.6.26), konsolidiert aus lectio-mode v1.10 + 2.0-Richtlinie + Schreib-Skill. Bewährt durch vollen Bau `annehmen-oder-ueberwinden` + zwei closing_kernel-Bauten. `lectio-mode.md` (v1.11) und `lectio-2.0-richtlinie.md` als Archiv markiert. `closing_kernel` auf zwei Lectios gesetzt (wer-bist-du + vom-wissen-zum-glauben). *Kontemplativ-vertiefend* wartet auf 2. Fall.
 
+**Fünf Lebensfragen** — live in der Sektion „Ein Weg quer hindurch" (Schmerz · Tod · Einsamkeit · Veränderung · Kontrollieren), tableau-übergreifend, eigener Bereich neben der Bibliothek.
+
 **Landing Page** hat ein lebendiges Tableau (LandingStarChart: selbstspielende Sternkarten-Tour, Das-Selbst), eine Lectio-Sektion und erklärt den Unterschied zwischen Karte und Lectio. Vokabular: „Tableau — ein Sternbild von Stimmen" wird hier erstmals eingeführt; Nav-Header trägt „Tableaus"; Bibliotheks-Untertitel trägt Tableau-Begriff + dynamische Spur-Zahl.
 
 ---
@@ -60,30 +62,10 @@
 
 ---
 
-## Was noch offen ist
+## Offene Punkte — an einer Quelle geführt
 
-**Außenfeedback (erste Runde) ✓ abgeschlossen:** Partnerin-Test abgehakt. Erzählend-erfahrend-Ton bestätigt — Kanonisierung als v1.10 kann jetzt erfolgen. Der **formale User-Test** (zwei Personen aus der Persona, ohne Erklärung beobachten) bleibt ausständig.
+Dieser Lagebericht führt keine offenen Punkte mehr doppelt. Sie leben dort, wo sie gepflegt werden:
 
-**Lebensfragen-Library-Sektion:** Live — vier Lebensfragen in eigener Sektion „Ein Weg quer hindurch" (Schmerz · Tod · Einsamkeit · Veränderung). Veränderung ist mit 8 Stimmen aus 5 Tableaus die breiteste der Sammlung. Footer-Link-Phase abgeschlossen.
-
-**Library-Architektur sichtbar machen (Tableau-Spuren):** Bedingung fast erfüllt — Wandlung hat jetzt 2 Tableaus, nur Menschenbild steht noch bei 1. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt für fünf Spuren. Explizite Lösung (Section-Header / Trennstriche / Spur-Filter) umsetzbar, sobald alle Spuren ≥2 Tableaus haben.
-
-**Methoden-Hygiene:** `lectio-anleitung.md` ist maßgeblich (Stand 14.6.26). `lectio-mode.md` (v1.11) und `lectio-2.0-richtlinie.md` als Archiv markiert. Der fünfte Pfad-Typ *kontemplativ-vertiefend* wartet auf zweiten Fall vor Kanonisierung.
-
-**Schulen-Labels Geist:** Akademisches Vokabular an der Tür. Kein Blocker, aber bekannter Qualitätsmangel.
-
-**Glossar-Tab (Tab V):** Über 170 Annotationen, noch kein zentrales Glossar. Vorarbeit ist gemacht.
-
-**JSON-Validator beim Build:** Der levels-Format-Fehler im Begegnung-Bau (Slider zeigte keine Stufen, weil `level` statt `id` im JSON stand) hat eine blinde Stelle sichtbar gemacht — JSONs werden per `as unknown as` eingebunden, tsc prüft die Struktur nicht. Ein zod-Schema + Referenz-Integritäts- + Koordinaten-Check beim Build würde solche Fehler fangen, bevor sie still im Browser landen.
-
----
-
-## Was mich aktuell beschäftigt
-
-**Audit-Zyklus (16.6.)** abgeschlossen: CLAUDE.md zeigt korrekt auf `lectio-anleitung.md` (H1+H2), 6 expositorische Vorläufer liegen in `archiv/lectio-expositorisch/` (H3), Vitest-Regel 10 sichert Registrierungs-Parität, leere Bild-Nischen im Deploy durch committete PNGs behoben.
-
-**Vokabular-Entscheidung (17.6.):** Kernvokabular und Bildwelt gesetzt — „Tableau — ein Sternbild von Stimmen", kosmische Bildwelt durchgehend (→ `kanon.md`). Drei Erlebnis-Audit-Sofort-Fixes (4 Stationen / Tour-Caption / Neu-Filter) und EA-A + EA-C erledigt. Offen: EA-B (Lebensfragen ins Header-Menü + Navigationsrang), EA-D (Herkunftszeile pro Stimme, niedrig).
-
-**Offen (kuratorisch, eigener Faden):** closing_kernel ×3 befüllen, lectio_briefs ×4 in `findest-du-oder-machst-du`, M1 Solo-Schulen (⚠️ Einzelprüfung, bewusste Entscheidung pro Schule). Offen (Code-Hygiene): StarChart-Refactor, a11y-Reste (Slider, Akkordeon), Staging-PNGs konvertieren, `gut-und-boese.json` 4 Influences auf Konzept-IDs prüfen.
-
-Die offene Bau-Arbeit: zweite Selbstverhältnis-Lectio (Werk/Gabe-Diagonale) und zweites Menschenbild-Tableau (Section-Header-Bedingung). Formaler User-Test (zwei Personen aus der Persona, ohne Erklärung beobachten) bleibt ausständig.
+- **Audit, Hygiene, Korrektheit** → `audit-bestandesaufnahme.md`
+- **Roadmap, Features, Themen-Reservoir, Feinschliff** → `backlog.md`
+- **Kuratorisches Selbstverständnis und die drei Formen** → `kanon.md`

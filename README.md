@@ -1,12 +1,19 @@
 # Sanctum Mentis
 
-Lern-Companion für Philosophie. Ein Komplexitäts-Slider (1–5) steuert, wie tief jede Antwort ausfällt — von der Einsteigerkurzfassung bis zur fachlichen Synthese.
+Lern-Companion für Philosophie und verwandte Disziplinen. Ein Komplexitäts-Slider (1–5) steuert, wie tief jede Antwort ausfällt — von der Einsteigerkurzfassung bis zur fachlichen Synthese.
 
-## Drei Sichten pro Themengebiet
+## Aufbau: Tableaus, Lectios, Lebensfragen
 
-1. **Denker** — gruppiert nach philosophischer Schule, mit Filter und Such-Palette (Cmd+K).
-2. **Einflüsse** — Graph der Beziehungen (beeinflusste, kritisierte, war Schüler von, parallel, verwarf).
-3. **Konzepte** — verortet im 4-Quadranten-Raum, dessen Achsen pro Thema definiert werden (z.B. "Empirisch ↔ Rationalistisch" / "Universell ↔ Kontextuell").
+Inhalte sind in drei Formen organisiert (begriffliche Definition in `kanon.md`):
+
+- **Tableau** — die Karte eines Feldes: alle Stimmen einer großen Frage gleichzeitig, räumlich, selbstgesteuert. Jedes Tableau ist ein JSON-Datensatz in `data/`.
+- **Lectio** — ein kuratierter Pfad *durch ein* Tableau (4–8 Stationen), erreichbar über „Geführte Pfade" im Tableau-Kopf (Route `/lectio/[id]`).
+- **Lebensfrage** — eine Sammlung quer *über mehrere* Tableaus zu einer gelebten Lage (Route `/lebensfragen/[id]`).
+
+## Ein Tableau betreten — zwei Ansichten
+
+1. **Denker** — die Stimmen, gruppiert nach Schule, mit Filter und Such-Palette (Cmd+K).
+2. **Sternkarte** — die Stimmen als Sterne, Einflüsse als Linien, Konzepte im Akkordeon bzw. als Marker, Schulen als Morph-Gruppen. (Die früher getrennten Sichten „Einflüsse" und „Konzepte" sind hier aufgegangen.)
 
 Jedes Element trägt mehrere Versions-Strings (Level 1 bis Level 5). Die Engine wählt zur Laufzeit die höchste, die der eingestellte Level zulässt.
 
@@ -16,6 +23,7 @@ Jedes Element trägt mehrere Versions-Strings (Level 1 bis Level 5). Die Engine 
 - Tailwind CSS v4
 - React 19
 - cmdk (Command Palette)
+- Vitest (Datenvalidierung der JSON-Datensätze)
 
 ## Lokal starten
 
@@ -24,13 +32,15 @@ npm install
 npm run dev
 ```
 
-Dann auf http://localhost:5000 öffnen. Direkter Link zum Beispiel-Themengebiet: http://localhost:5000/thema/das-selbst
+Dann auf http://localhost:3000 öffnen. Direkter Link zum Beispiel-Tableau: http://localhost:3000/thema/das-selbst
 
-## Neues Themengebiet anlegen
+## Neues Tableau anlegen
 
 1. JSON-Datei in `data/` anlegen (Vorlage: `data/das-selbst.json`)
 2. In `data/library.json` einen Eintrag mit `id`, `title`, `status` ergänzen
 3. In `src/lib/data.ts` importieren und in der `TOPICS`-Map registrieren
+
+(In Claude Code geht das auch über den Skill `/new-topic`.)
 
 ## Verwandte Codebase
 
