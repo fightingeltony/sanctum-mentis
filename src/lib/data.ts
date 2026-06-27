@@ -32,6 +32,7 @@ import schmerzRaw                          from '../../data/lebensfragen/schmerz
 import todRaw                              from '../../data/lebensfragen/tod.json'
 import einsamkeitRaw                       from '../../data/lebensfragen/einsamkeit.json'
 import veraenderungRaw                     from '../../data/lebensfragen/veraenderung.json'
+import kontrollierenRaw                    from '../../data/lebensfragen/kontrollieren.json'
 
 const TOPICS: Record<string, TopicData> = {
   'das-selbst':                       dasSelbstRaw                    as unknown as TopicData,
@@ -105,6 +106,7 @@ const LEBENSFRAGEN: Record<string, Lebensfrage> = {
   'tod':        todRaw        as unknown as Lebensfrage,
   'einsamkeit':   einsamkeitRaw   as unknown as Lebensfrage,
   'veraenderung': veraenderungRaw as unknown as Lebensfrage,
+  'kontrollieren': kontrollierenRaw as unknown as Lebensfrage,
 }
 
 export function getLebensfrage(id: string): Lebensfrage | null {
