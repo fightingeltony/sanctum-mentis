@@ -2,6 +2,10 @@
 
 ## Zuletzt abgeschlossen
 
+### [x] Lectio `wer-beobachtet` archiviert — Doppelung mit erzählender Neufassung (28.6.26)
+**Datum:** 28.6.26
+**Resultat:** `wer-beobachtet` (expositorisch, Selbst) war inhaltlich dieselbe Lectio wie die erzählende Neufassung `wer-bist-du-wenn-du-alles-weglaesst` — gleiches Tableau, gleiche vier Stimmen (Vedanta · Buddhismus · Jung · Metzinger), gleiche Kernfrage. Der A/B-Vergleich expositorisch ↔ erzählend hat seinen Zweck erfüllt. Nach Konvention archiviert: `data/lectio/wer-beobachtet.json` → `archiv/lectio-expositorisch/wer-beobachtet-expositorisch.json` (7. Vorläufer), abgemeldet aus `data.ts` + `REGISTERED_IDS`. Doku nachgezogen (CLAUDE.md, wo-stehe-ich.md, lectio-anleitung.md). Stand jetzt: 14 registriert, 7 archiviert; Migrations-Tally 8 erzählend / 4 in alter Form. 54 Vitest grün.
+
 ### [x] Audit-Zyklus H1+H2+H3 abgeschlossen (Stand 16.6.26)
 **Datum:** 16.6.26
 **Resultat:** H1: CLAUDE.md zeigt auf `lectio-anleitung.md` (alle 4 Verweise korrigiert, Versionsangabe entfernt). H2: Lectio-Liste auf 15 registrierte synchronisiert, `annehmen-oder-ueberwinden` ergänzt, expositorische Vergleichsfälle klar markiert. H3: 6 `*-expositorisch`-Vorläufer nach `archiv/lectio-expositorisch/` (Repo-Ebene) verschoben. Vitest Regel 10 (Registrierungs-Parität Datei ↔ LECTIOS) als Netz gegen Wiederkehr. `audit-bestandesaufnahme.md` als Status-Tracker angelegt — ist die maßgebliche Liste für offene Audit-Punkte (nicht in backlog.md doppeln).

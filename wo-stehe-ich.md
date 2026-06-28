@@ -21,10 +21,9 @@
 - **Gut und Böse** — Mild-Modus, 11 Denker. Menschenbild-Spur (hue 345, Magenta) — eröffnet die **fünfte Sammlungs-Spur**. Achsen: Menschenbild (gut ↔ böse von Natur) / Ebene (individuell-ontologisch ↔ sozial-situativ). Lectio `stell-die-frage-anders` (destruktiv-aufbauend, L3, 5 Stationen).
 - **Das Selbstverhältnis** — Mild-Modus, 11 Denker. Existenz-Spur (hue 71) — staffelt eng an Lebenskunst 65 an. Achsen: Annehmen ↔ Überwinden / Gabe ↔ Errungen. Zwei Quersteller (Buddhismus + IFS) plus Metzinger (L5) als naturalistische Außenanfrage. Zwei Prüfrunden: Stufenverteilung L1–L5 vollständig belegt, Adler gestrichen (Achsen-Konsistenz), `bedingungslose-wertschaetzung` gestrichen. Existenz-Spur hat jetzt vier Tableaus.
 
-**Fünfzehn Lectios** — geführte Pfade, alle live (15 aktiv; 6 deaktivierte -expositorisch-Varianten im Ordner, nicht eingebunden):
+**Vierzehn Lectios** — geführte Pfade, alle live (14 aktiv; 7 deaktivierte -expositorisch-Varianten im Ordner, nicht eingebunden):
 
 - `hard-problem` — Geist, narrativ-historisch, L2, 6 Stationen
-- `wer-beobachtet` — Selbst, konkurrierend-konfrontativ, L3, 4 Stationen (expositorischer Ton)
 - `findest-du-oder-machst-du` — Selbst, dialektisch-revidierend, L3, 5 Stationen
 - `wenn-die-welt-wackelt` — Realismus, emotional-kumulativ, L2, 6 Stationen — **erzählend-erfahrend (Ton-Umbau 28.6.)**
 - `warum-sollst-du` — Ethik, destruktiv-aufbauend, L2, 4 Stationen
@@ -35,7 +34,7 @@
 - `ist-der-andere-hoelle-oder-heimat` — Begegnung, konkurrierend-konfrontativ, L3, 4 Stationen (Sartre → Hegel → Buber+Marcel → Lévinas)
 - `verstehen-oder-weitergehen` — Wandlung, narrativ-historisch, L3, 5 Stationen (alle via step_brief)
 - `stell-die-frage-anders` — Gut/Böse, destruktiv-aufbauend, L3, 5 Stationen
-- `wer-bist-du-wenn-du-alles-weglaesst` — Selbst, konkurrierend-konfrontativ, L2, 4 Stationen — **erster Test des erzählend-erfahrenden Tons** (Vergleichsfall zu `wer-beobachtet`; eigene Render-Komponente `LectioNarrativeViewer`)
+- `wer-bist-du-wenn-du-alles-weglaesst` — Selbst, konkurrierend-konfrontativ, L2, 4 Stationen — **erster Test des erzählend-erfahrenden Tons** (Vergleichsfall zur archivierten expositorischen Fassung `wer-beobachtet`; eigene Render-Komponente `LectioNarrativeViewer`)
 - `vom-wissen-zum-glauben` — Verwandlung, konkurrierend-konfrontativ, L3, 6 Stationen — **zweiter Belegfall erzählend-erfahrend** (Augustinus → Stoa → Rilke → Eckhart → James → Jung; Tonwechsel bei James bewusst markiert; durchlaufende Figur: die Glaswand)
 - `annehmen-oder-ueberwinden` — Selbstverhältnis, konkurrierend-konfrontativ, L2, 4 Stationen — **dritter Belegfall erzählend-erfahrend** (Rogers → Nietzsche → Marc Aurel → Buddhismus; Abendszene als durchlaufende Figur; mit image_prompts)
 

@@ -338,7 +338,6 @@ describe('closing_kernel — Ist-Stand (informativ)', () => {
 
 const REGISTERED_IDS = new Set([
   'hard-problem',
-  'wer-beobachtet',
   'wenn-die-welt-wackelt',
   'warum-sollst-du',
   'wenn-nichts-vorgegeben',
