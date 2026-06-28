@@ -530,7 +530,7 @@ Lectio teilen könnte. Offen — bestätigt oder verworfen durch den nächsten F
   **Default-im-Code ≠ Empfehlung-in-der-Anleitung.** Jeder *Neubau* setzt `ton` ausdrücklich
   auf `erzählend-erfahrend`.
 - **Der Default darf erst auf `erzählend-erfahrend` gedreht werden, wenn alle alten Lectios
-  migriert sind.** (Stand der Konsolidierung: 7 erzählend, 6 in alter Form. Migration nach
+  migriert sind.** (Stand der Konsolidierung: 8 erzählend, 5 in alter Form. Migration nach
   Gelegenheit, eine nach der anderen — nicht auf Vorrat.)
 
 ### Das `narrative`-Interface — gesicherter Code-Stand

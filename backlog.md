@@ -13,6 +13,7 @@
 ### [x] Lectio-Anleitung konsolidiert — maßgeblich (Stand 14.6.26)
 **Datum:** 14.6.26
 **Resultat:** `prompts/lectio-anleitung.md` — neue maßgebliche Bau-Anleitung, vereint lectio-mode v1.10, lectio-2.0-richtlinie und Schreib-Skill-Referenz. Bewährt durch vollen Lectio-Bau `annehmen-oder-ueberwinden` (Selbstverhältnis) + zwei closing_kernel-Bauten. `lectio-mode.md` als historische Detailreferenz markiert (v1.11), `lectio-2.0-richtlinie.md` als Archiv. Vier Nachträge in lectio-anleitung.md: Punkt 10.1 closing_kernel-Schreibdisziplin (zwei belegte Fehlerformen), Schluss-Station-bridge-Konvention, Typografie-Warnung Kernels, image_prompt Pflicht / Bild optional.
+**Bewährung (28.6.26):** lectio-anleitung.md bewährt sich auch im Umbau bestehender Lectios, nicht nur im Neubau (Beleg: wenn-die-welt-wackelt, 28.6.).
 
 ### [x] Neue Lectio live: annehmen-oder-ueberwinden (Selbstverhältnis)
 **Datum:** 14.6.26

@@ -26,7 +26,7 @@
 - `hard-problem` — Geist, narrativ-historisch, L2, 6 Stationen
 - `wer-beobachtet` — Selbst, konkurrierend-konfrontativ, L3, 4 Stationen (expositorischer Ton)
 - `findest-du-oder-machst-du` — Selbst, dialektisch-revidierend, L3, 5 Stationen
-- `wenn-die-welt-wackelt` — Realismus, emotional-kumulativ, L2, 6 Stationen
+- `wenn-die-welt-wackelt` — Realismus, emotional-kumulativ, L2, 6 Stationen — **erzählend-erfahrend (Ton-Umbau 28.6.)**
 - `warum-sollst-du` — Ethik, destruktiv-aufbauend, L2, 4 Stationen
 - `wenn-nichts-vorgegeben` — Existenzialismus, narrativ-historisch, L2, 5 Stationen (Nietzsche → Kierkegaard → Sartre → Frankl → Camus)
 - `warum-gehorchst-du` — Politische Philosophie, L3, 5 Stationen
