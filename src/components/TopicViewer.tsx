@@ -14,6 +14,14 @@ type Tab = 'denker' | 'sternkarte'
 
 const VALID_TABS = ['denker', 'sternkarte'] as const
 
+/**
+ * Stufen-Gedächtnis pro Tableau — sitzungsweit, in-memory (Variante B, 28.6.26).
+ * Modul-globale Map: überlebt client-seitige Navigation (Tableau A → B → A behält A's
+ * Stand), wird aber bei Hard-Reload mit der JS-Laufzeit geleert → Default L1.
+ * Bewusst KEIN localStorage/sessionStorage — keine Persistenz über die Sitzung hinaus.
+ */
+const levelMemory = new Map<string, number>()
+
 interface Props {
   data: TopicData
   /** Lectios for this tableau — shown as guided-path discovery in the header */
@@ -44,18 +52,18 @@ export default function TopicViewer({ data, lectios }: Props) {
 
   const palette = useCommandPalette()
 
-  /* ── Level initialisation: URL param > localStorage ── */
+  /* ── Level initialisation: URL param > Sitzungs-Gedächtnis (in-memory) ── */
   useEffect(() => {
     if (initialLevel !== undefined && !isNaN(initialLevel) && initialLevel >= 1) {
       const n = Math.min(initialLevel, data.topic.complexityLevels)
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setLevelId(n) // Client-only init from URL param — runs once on mount, not cascading
-      localStorage.setItem(`mentis:level:${data.topic.id}`, String(n))
+      levelMemory.set(data.topic.id, n)
     } else {
-      const saved = localStorage.getItem(`mentis:level:${data.topic.id}`)
-      if (saved !== null) {
-        const n = Math.min(Number(saved), data.topic.complexityLevels)
-        if (n >= 1) setLevelId(n) // Client-only init from localStorage — runs once on mount
+      const saved = levelMemory.get(data.topic.id)
+      if (saved !== undefined) {
+        const n = Math.min(saved, data.topic.complexityLevels)
+        if (n >= 1) setLevelId(n) // Client-only init from session memory — runs once on mount
       }
     }
   }, [data.topic.id, data.topic.complexityLevels, initialLevel])
@@ -77,7 +85,7 @@ export default function TopicViewer({ data, lectios }: Props) {
       setLevelAction({ dir: id > levelId ? 'up' : 'down', tick: levelTick.current })
     }
     setLevelId(id)
-    localStorage.setItem(`mentis:level:${data.topic.id}`, String(id))
+    levelMemory.set(data.topic.id, id)
   }
 
   const closeMenu = useCallback(() => setMenuOpen(false), [])
