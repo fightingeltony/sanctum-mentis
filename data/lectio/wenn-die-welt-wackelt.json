@@ -4,44 +4,108 @@
   "title": "Wenn die Welt zu wackeln beginnt",
   "focus": "Die Schwindel-Frage — vom selbstverständlichen Realismus über den Verlust dieser Selbstverständlichkeit hin zu einer Rückkehr ohne Naivität",
   "thesis": "Es gibt Momente, in denen die Welt aufhört, einfach da zu sein. Eine andere Kultur, eine andere Wissenschaft, ein anderes Vokabular — und plötzlich wird sichtbar, dass deine Wirklichkeit eine Konstruktion war. Diese Lectio führt durch sechs Antworten auf die Frage, was man tun kann, wenn die alten Gewissheiten weichen.",
+  "path_type": "emotional-kumulativ",
+  "ton": "gemischt",
   "level": 2,
   "estimated_minutes": 17,
   "intro": "Stell dir vor, du verbringst Zeit in einem ganz anderen Land. Andere Sprache, andere Vorstellungen davon, was wichtig ist, andere Selbstverständlichkeiten im Alltag. Nach drei Wochen merkst du: Was du für die Welt gehalten hast, war eine Version davon. Und dann die unangenehmere Frage: Wenn das so leicht verrutscht, was bleibt eigentlich übrig? Die Lectio beginnt dort, wo die Welt noch fest stand — und führt dich durch die großen Erschütterungen bis zu einer Rückkehr, die nicht mehr naiv sein kann.",
-
   "path": [
     {
       "nodeId": "aristoteles",
       "nodeType": "thinker",
-      "transition": "Eine vertraute Welt. Aber sie hält nicht ewig. Schon mit der frühen Neuzeit beginnt das Wackeln — und mit Berkeley wird daraus ein Erdbeben."
+      "ton": "erzählend-erfahrend",
+      "image": "/lectio-images/Wenn die Welt wackelt/lectio-aristoteles.png",
+      "narrative": {
+        "hook": "Du greifst nach der Tasse, und sie ist da — du prüfst nicht, ob die Farbe in dir oder in ihr sitzt, ob der Tisch trägt, ob hinter deinen Wahrnehmungen wirklich eine Welt liegt. Du greifst, und die Welt ist selbstverständlich. So lebst du die meiste Zeit: in einer Welt, die steht, bevor du über sie nachdenkst.",
+        "body": [
+          "Aristoteles gibt dieser Selbstverständlichkeit ihre Würde. Die Dinge sind wirklich, sie tragen ihre Eigenschaften unabhängig davon, ob du hinschaust, und dein Erkennen ist kein Schleier zwischen dir und ihnen — es ist ein Empfangen dessen, was schon da ist. Das ist keine naive Vorstufe, die spätere Denker überwinden; es ist die durchdachte Position, dass die Welt sich dem zeigt, der hinsieht. Und es ist der Boden, auf dem du den größten Teil deines Lebens tatsächlich stehst."
+        ],
+        "kernel": "der Boden, auf dem du den größten Teil deines Lebens tatsächlich stehst.",
+        "bridge": "Eine Welt, die fest steht. Aber sie hält nicht ewig — schon mit der frühen Neuzeit beginnt sie zu wackeln, und mit Berkeley wird daraus ein Erdbeben."
+      },
+      "image_prompt": "A weathered stone floor or solid ground, warm and grounded, bearing a single simple object that rests on it without question — a plain clay vessel standing firm. Stillness, weight, the calm of something that simply is there.",
+      "transition": "Eine Welt, die fest steht. Aber sie hält nicht ewig — schon mit der frühen Neuzeit beginnt sie zu wackeln, und mit Berkeley wird daraus ein Erdbeben."
     },
     {
       "nodeId": "berkeley",
       "nodeType": "thinker",
-      "transition": "Berkeleys These klingt heute kühn — die ganze Welt nur Wahrnehmung, hinter den Wahrnehmungen nichts. Wenige Philosophen würden ihm direkt folgen. Aber sein Argument bleibt: Wenn du nur Wahrnehmungen hast, woher willst du wissen, dass dahinter eine Welt liegt? Diese Frage hat keinen leichten Ausweg. Kant findet einen — aber er bezahlt mit der Welt, wie wir sie für selbstverständlich hielten."
+      "ton": "erzählend-erfahrend",
+      "image": "/lectio-images/Wenn die Welt wackelt/lectio-berkeley.png",
+      "narrative": {
+        "hook": "Schau auf irgendetwas in deiner Nähe — die Tasse, deine Hand, das Licht am Fenster. Alles, was du davon hast, kommt durch deine Sinne: Farbe, Form, Wärme, Gewicht. Jetzt versuch, die Tasse zu fassen, wie sie für sich ist — ohne dein Sehen, ohne dein Tasten, einfach die nackte Sache. Du kommst nicht ran. Immer schiebt sich eine Wahrnehmung dazwischen.",
+        "body": [
+          "Genau hier hakt Berkeley ein, und er dreht die Frage um. Du nimmst wie selbstverständlich an, hinter deinen Wahrnehmungen liege eine Materie, die auch ohne dich da ist — aber an die bist du nie herangekommen, immer nur an dein Wahrnehmen. Wer sagt eigentlich, dass da etwas dahinter ist? Beweisen musst nicht er, dass die Materie fehlt; du müsstest zeigen, dass sie da ist — und du kannst es nicht. Für Berkeley ist die Welt darum nicht weniger wirklich, sondern durch und durch Wahrgenommenes: kein totes Etwas hinter den Dingen, nur das, was erfahren wird."
+        ],
+        "kernel": "Wer sagt eigentlich, dass da etwas dahinter ist?",
+        "bridge": "Es klingt kühn — die ganze Welt nur als Wahrgenommenes, die selbstverständliche Materie dahinter ein bloßes Vorurteil. Wenige würden Berkeley bis dorthin folgen. Aber die Frage bleibt und hat keinen leichten Ausweg. Kant findet einen — doch er bezahlt mit der Welt, wie wir sie für selbstverständlich hielten."
+      },
+      "image_prompt": "A hand reaching toward an object that seems to dissolve into light and reflection just where it should be grasped — the thing present only as shimmer and surface, nothing solid behind it. Gentle uncertainty, not menace.",
+      "transition": "Es klingt kühn — die ganze Welt nur als Wahrgenommenes, die selbstverständliche Materie dahinter ein bloßes Vorurteil. Wenige würden Berkeley bis dorthin folgen. Aber die Frage bleibt und hat keinen leichten Ausweg. Kant findet einen — doch er bezahlt mit der Welt, wie wir sie für selbstverständlich hielten."
     },
     {
       "nodeId": "kant",
       "nodeType": "thinker",
-      "transition": "Kant ist die Achse. Vor ihm gab es Welt-die-sich-zeigt versus Welt-im-Geist. Nach ihm gibt es nur noch Welt-durch-uns-zugänglich. Diese Verschiebung wirkt bis heute — aber sie wird in den nächsten hundert Jahren radikaler, als Kant es gewollt hätte."
+      "ton": "nüchtern-klar",
+      "narrative": {
+        "hook": "Nach Berkeley steht eine unangenehme Frage im Raum: Wenn du nie an die Welt selbst herankommst, sondern immer nur an deine Wahrnehmung — bist du dann in deinem eigenen Kopf eingesperrt? Kant findet einen Ausweg. Aber er ist teuer.",
+        "body": [
+          "Kant dreht die Sache um. Bisher hatte man gefragt, wie sich der Geist nach der Welt richtet. Kant fragt: Was, wenn die Welt sich nach dem Geist richtet — nicht weil du sie erfindest, sondern weil alles, was dir je begegnen kann, schon durch deine Formen hindurch muss? Raum, Zeit, Ursache und Wirkung sind keine Eigenschaften der Dinge an sich, sondern die Brille, durch die dir überhaupt etwas erscheinen kann. Du erkennst die Welt wirklich — aber nie, wie sie ohne dich ist. Nur, wie sie für dich erscheint. Das rettet die Welt vor Berkeleys Sog: Sie ist wieder fest, geordnet, verlässlich. Der Preis ist, dass sie nur noch unsere Welt ist."
+        ],
+        "kernel": "Du erkennst die Welt wirklich — aber nie, wie sie ohne dich ist.",
+        "bridge": "Kant ist die Achse. Vor ihm gab es Welt-die-sich-zeigt gegen Welt-im-Kopf. Nach ihm gibt es nur noch Welt-durch-uns-zugänglich. Diese Verschiebung wirkt bis heute — aber sie wird in den nächsten hundert Jahren radikaler, als Kant es je gewollt hätte."
+      },
+      "transition": "Kant ist die Achse. Vor ihm gab es Welt-die-sich-zeigt gegen Welt-im-Kopf. Nach ihm gibt es nur noch Welt-durch-uns-zugänglich. Diese Verschiebung wirkt bis heute — aber sie wird in den nächsten hundert Jahren radikaler, als Kant es je gewollt hätte."
     },
     {
       "nodeId": "kuhn",
       "nodeType": "thinker",
-      "transition": "Kuhn kommt nicht aus der Philosophie, sondern aus der Wissenschaftsgeschichte. Wenn selbst die Wissenschaft, dieser angeblich gesicherte Zugang zur Welt, durch Paradigmen geht — was bleibt dann sicher? Rorty zieht die radikale Konsequenz."
+      "ton": "erzählend-erfahrend",
+      "image": "/lectio-images/Wenn die Welt wackelt/lectio-kuhn.png",
+      "narrative": {
+        "hook": "Es gibt einen letzten Ort, an dem die meisten von uns noch festen Boden vermuten: die Wissenschaft. Philosophen mögen streiten, Kulturen mögen verschieden sehen — aber die Wissenschaft, denkt man, gräbt sich Stück für Stück an die Wirklichkeit heran, gesichert, nachprüfbar, fest. Kuhn hat sich die Geschichte der Wissenschaft angesehen und etwas anderes gefunden.",
+        "body": [
+          "Wissenschaft schreitet nicht ruhig voran, sagt Kuhn. Sie arbeitet lange in einem Rahmen, der bestimmt, welche Fragen überhaupt sinnvoll sind und was als Antwort zählt — und dann bricht dieser Rahmen, selten, aber gründlich, und ein neuer tritt an seine Stelle. Nach so einem Bruch sehen die Forscher buchstäblich eine andere Welt: dieselben Tatsachen, aber in eine neue Ordnung gestellt, mit der die alte nicht einmal mehr richtig vergleichbar ist. Wenn aber selbst die Wissenschaft durch solche Brüche geht — was bleibt dann der sichere Boden, von dem aus du sagen könntest, so ist die Welt wirklich?"
+        ],
+        "kernel": "was bleibt dann der sichere Boden",
+        "bridge": "Kuhn kommt nicht aus der Philosophie, sondern aus der Wissenschaftsgeschichte — und gerade das macht den Schwindel größer. Es ist nicht mehr nur ein Gedankenspiel. Rorty zieht jetzt die radikalste Konsequenz."
+      },
+      "image_prompt": "A fine crack running through what looked like solid, ordered ground — a tiled or measured surface beginning to shift along a fault line. The order is still visible, but it no longer holds as one. Quiet seismic tension.",
+      "transition": "Kuhn kommt nicht aus der Philosophie, sondern aus der Wissenschaftsgeschichte — und gerade das macht den Schwindel größer. Es ist nicht mehr nur ein Gedankenspiel. Rorty zieht jetzt die radikalste Konsequenz."
     },
     {
       "nodeId": "rorty",
       "nodeType": "thinker",
-      "transition": "Rorty ist der Punkt, an dem viele Menschen schwindlig werden. Wenn Wahrheit nur ein Vokabular ist, das gerade gut funktioniert — wie soll man dann noch handeln, urteilen, sich für etwas einsetzen? Du erinnerst dich vielleicht selbst an einen Moment, in dem du eine Position vertreten hast — politisch, ethisch, persönlich — und plötzlich dachtest: Was, wenn das nur mein Vokabular ist? Das ist nicht nur philosophisches Problem, das ist Alltagserfahrung in einer Zeit, die alle Erzählungen verloren hat. Hier antwortet ein zeitgenössischer Denker, der einen Weg sucht zwischen Naivität und Schwindel."
+      "ton": "erzählend-erfahrend",
+      "image": "/lectio-images/Wenn die Welt wackelt/lectio-rorty.png",
+      "narrative": {
+        "hook": "Du hast einmal für etwas eingestanden — eine politische Überzeugung, eine Haltung, etwas, das dir wichtig war. Du warst sicher, im Recht zu sein. Und dann, in einem stillen Moment, kam der Gedanke: Worauf stützt sich diese Sicherheit eigentlich? Gibt es einen festen Punkt außerhalb meiner eigenen Maßstäbe, von dem aus sich zeigen ließe, dass ich recht habe — oder messe ich nur mit dem Maß, das ich ohnehin schon mitbringe?",
+        "body": [
+          "Rorty nimmt genau diesen Gedanken und macht ihn zur Grundlage. Es gibt keinen solchen festen Punkt, sagt er — kein Maß, das über allen Maßstäben steht und endlich entscheidet, wer der Wirklichkeit am nächsten kommt. Es gibt nur die Denkweisen, in denen Menschen jeweils urteilen, und jede bringt ihre eigenen Maßstäbe schon mit. Manche bewähren sich eine Weile, dann lösen bessere sie ab. \"Wahr\" heißt dann nicht mehr \"so ist die Welt wirklich\", sondern höchstens \"das, worauf wir uns gerade verständigen können\". Das ist der Punkt, an dem vielen schwindlig wird. Denn wenn keine Überzeugung auf festerem Grund steht als die andere — wie sollst du dann noch handeln, urteilen, für etwas einstehen?"
+        ],
+        "kernel": "wie sollst du dann noch handeln, urteilen, für etwas einstehen?",
+        "bridge": "Rorty ist der Punkt, an dem die Welt am weitesten weggerutscht ist — kein Boden mehr, nur noch Vokabulare. Manche bleiben hier stehen, schwindlig. Aber es gibt einen Versuch, von hier aus zurückzufinden, ohne so zu tun, als wäre nie etwas gewackelt. Den macht ein Denker unserer Zeit."
+      },
+      "image_prompt": "A figure's footing at the very edge of a drop into soft, formless depth — no ground below, only open, dim space. The vertigo of standing where there is nothing left to stand on. Hushed, weightless, unsettling but not violent.",
+      "transition": "Rorty ist der Punkt, an dem die Welt am weitesten weggerutscht ist — kein Boden mehr, nur noch Vokabulare. Manche bleiben hier stehen, schwindlig. Aber es gibt einen Versuch, von hier aus zurückzufinden, ohne so zu tun, als wäre nie etwas gewackelt. Den macht ein Denker unserer Zeit."
     },
     {
       "nodeId": "gabriel",
       "nodeType": "thinker",
-      "transition": "Gabriel ist nicht die Antwort auf alle Fragen. Aber er ist ein Versuch, aus der postmodernen Erschöpfung herauszukommen — ohne die Naivität von Aristoteles und ohne den Schwindel von Rorty. Eine reife Position, die beide Lektionen mitnimmt."
+      "ton": "erzählend-erfahrend",
+      "image": "/lectio-images/Wenn die Welt wackelt/lectio-gabriel.png",
+      "narrative": {
+        "hook": "Nach Rorty könnte man stehen bleiben, schwindlig, und sagen: Dann gibt es eben keinen Boden, gewöhn dich dran. Manche tun das. Aber es nagt — denn ganz ohne Boden lebt es sich nicht, du handelst ja doch, urteilst doch, hältst manches für wahrer als anderes. Gabriel fragt, ob der Schwindel wirklich das letzte Wort sein muss.",
+        "body": [
+          "Gabriel nimmt Rortys Erschütterung ernst und sucht trotzdem einen Weg zurück — aber nicht zurück zu Aristoteles, nicht zur Welt, die einfach fest dasteht. Vielleicht, sagt er, war der Fehler ein ganz früher. Die Annahme, es müsse die eine Welt geben, einen einzigen Boden. Was, wenn es stattdessen viele Felder gibt, in denen Dinge wirklich sind — die Zahlen sind wirklich, dein Schmerz ist wirklich, dieser Tisch ist wirklich —, nur eben nicht alle im selben Sinn? Dann wäre die Welt nie weggerutscht, weil es nie den einen Boden gab, den man verlieren könnte."
+        ],
+        "kernel": "Vielleicht, sagt er, war der Fehler ein ganz früher.",
+        "bridge": "Gabriel ist nicht die Antwort, die alle Fragen schließt — er ist ein Vorschlag unter anderen, jünger als die meisten und noch im Streit. Aber er zeigt, dass es einen Unterschied gibt zwischen dem Boden, den du nie hattest, und dem Stehen, das die Erschütterung kennt."
+      },
+      "image_prompt": "Several small pools of warm light scattered across darkness, each holding its own quiet object — separate, each real in its own place, none of them the single ground beneath the others. A composed plurality after the fall, neither naive solidity nor empty void.",
+      "transition": "Gabriel ist nicht die Antwort, die alle Fragen schließt — er ist ein Vorschlag unter anderen, jünger als die meisten und noch im Streit. Aber er zeigt, dass es einen Unterschied gibt zwischen dem Boden, den du nie hattest, und dem Stehen, das die Erschütterung kennt."
     }
   ],
-
-  "closing_synthesis": "Sechs Stationen, ein Bogen. Aristoteles steht noch fest in der Welt. Berkeley zeigt: Das war nie so selbstverständlich, wie es schien. Kant rettet die Welt, aber unter Vorbehalt — nur als unsere Welt. Kuhn radikalisiert das in die Wissenschaftsgeschichte hinein. Rorty zieht die letzte Konsequenz: Welt ist Vokabular. Gabriel sucht den Rückweg, der nicht naiv ist. Was die Lectio dir mitgibt, ist keine Lösung: einen Unterschied zwischen Naivität und Reife, zwischen Schwindel und einem Stehen, das die Erschütterungen kennt.",
-
-  "closing_question": "In welchem Moment ist dir das letzte Mal die Welt etwas verrutscht — eine Selbstverständlichkeit, die plötzlich nicht mehr selbstverständlich war? Bist du danach in eine neue Selbstverständlichkeit zurückgekehrt, oder hast du gelernt, im Schwindel zu stehen?"
+  "closing_synthesis": "Sechs Stationen, ein Bogen. Aristoteles steht noch fest auf dem Boden einer Welt, die sich von selbst versteht. Berkeley zeigt: So selbstverständlich war dieser Boden nie. Kant rettet die Welt, aber unter Vorbehalt — sie ist wieder fest, doch nur noch als unsere. Kuhn lässt auch den letzten sicheren Ort wackeln, die Wissenschaft. Rorty zieht die radikalste Konsequenz: kein Boden mehr, nur noch Maßstäbe, die wir selbst mitbringen. Gabriel sucht einen Weg zurück, der die Erschütterung kennt — einer von mehreren, nicht das letzte Wort.\nWas die Lectio dir mitgibt, ist keine Lösung, sondern ein Unterschied: zwischen dem Boden, den du nie hattest, und einem Stehen, das das Wackeln kennt.",
+  "closing_kernel": "zwischen dem Boden, den du nie hattest, und einem Stehen, das das Wackeln kennt",
+  "closing_question": "Wann ist dir das letzte Mal eine Selbstverständlichkeit verrutscht — etwas, das eben noch fest stand und plötzlich nicht mehr? Bist du danach in eine neue Selbstverständlichkeit zurückgekehrt, oder hast du gelernt, im Wackeln zu stehen?"
 }
