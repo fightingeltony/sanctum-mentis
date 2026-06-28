@@ -463,6 +463,55 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Kontext:** Beim Existenzialismus-Bau wurden 7 lectio_briefs für 5 Lectio-Stationen geschrieben — 2 "Reserve-Briefs" (Heidegger → Tod-Lectio, Dostojewski → Freiheits-Lectio). Legitim, aber in der ersten Begleitnotiz nicht dokumentiert.
 **Methoden-Klarstellung:** Reserve-Briefs sind erlaubt, wenn (a) das Material trägt, (b) die künftige Lectio im Backlog steht, (c) der Reserve-Brief in der Begleitnotiz explizit dokumentiert wird.
 **Nächster Schritt:** Bei nächstem Tableau-Bau anwenden. Konvention in `lectio-mode.md` v1.9 aufnehmen.
+
+---
+
+### [x] Stufen-Gedächtnis pro Tableau (Variante B)
+**Status:** entschieden 28.6.26 — Variante B, vollständig spezifiziert
+
+**Problem:** Die Stufe wird derzeit global gemerkt. Wer einmal irgendwo auf L5 war, betritt danach jedes Tableau auf L5 — auch ein fremdes, frisch angesehenes. Der sanfte L1-Einstieg gilt nur beim allerersten App-Besuch. Trägt zur Einstiegs-Überforderung bei.
+
+**Entscheidung:** Variante B — Stufe gehört zum einzelnen Tableau, nicht zum Nutzer. Konkret:
+
+- Stand wird pro Tableau gehalten, nicht global.
+- Erst-Eintritt ohne gemerkten Stand → L1 (bewusst gesetzt; sonst rutscht es zu C zurück).
+- Dauer: nur Sitzung — Reload/neuer Besuch öffnet wieder auf L1; innerhalb der Sitzung bleibt der Stand pro Tableau erhalten.
+
+**Verworfen:** A (immer L1 — zu starr für Tiefleser), C (global — der aktuelle Fehler).
+
+**Nächster Schritt:** Claude-Code-Faden — Eingriff an der Stelle, wo die Stufe initialisiert wird (global → pro-Tableau-Schlüssel, sitzungsweit, Default L1). Klein; Entscheidung steht.
+
+---
+
+### [ ] Verortungs-Instrument — einfache Fragen pro Tableau, Standort statt Etikett
+**Status:** durchgespielt 27.6.26 (Belegfall Existenzialismus, von Hand), Resonanz offen
+
+**Herkunft:** Anregung eines Kollegen („ein paar einfache Fragen pro Thema, danach eine Auswahl von Denkern, die gleich oder anders denken — Bestätigung oder andere Sichten"). Trifft punktgenau die im Kanon schon angelegte Designfrage.
+
+**Kanon-Verknüpfung:** kanon.md → „Folgerung: Verortung als Einladung, nicht als Urteil". Maßgebliche Leitlinie, nicht neu zu erfinden. Kernsatz: nicht „du bist ein Stoiker" (Etikett, geliehene Identität), sondern „bei dieser Frage stehst du nah bei diesen, fern von jenen — und jetzt ist es an dir". Das Instrument ist nur haltungstreu, wenn das Fern-von genauso einladend ausfällt wie das Nah-bei.
+
+**Architektur-Kern (löst die Pflege-Sorge):** Texte hängen NICHT an Antwortkombinationen, sondern an den Knoten — die existieren schon. Verortungs-Rechner, kein Kombinations-Textwerk: vier Antworten → Koordinate auf den zwei Achsen → Distanz zu den x/y-Werten der Knoten → nah/fern. Gelesen werden die vorhandenen versions/lectio_brief. Keine neuen Texte pro Denker, keine pro Kombination.
+
+Falsch (verworfen): Text pro Kombination → 16 × 12 Tableaus, unpflegbar.
+Richtig: zweite Tür ins selbe Tableau, analog zur Lectio — ordnet Vorhandenes, erzeugt nichts. Reichweite: ein Tableau.
+
+**Pflegeaufwand (real, klein):** Pro tauglichem Tableau genau VIER Fragen, einmalig (wie subtitle/intro/synthesis). Einzige neue Arbeit — und nicht trivial: schlechte Frage verortet falsch.
+
+**Belegfall Existenzialismus (von Hand):** Achsen Bejahung↔Verzweiflung / Entwurf↔Geworfenheit. Testnutzer landete bei Bejahung + leicht geworfen. Nah: Nietzsche, Sartre (Bestätigung, dünn). Fern: Frankl (Sinn von außen, frontaler Widerspruch zu „mache ihn selbst"), Camus (Absurdes aushalten statt füllen — Gegenrichtung). Befund: das Fern-von zog. Kurator: „glaube ich das wirklich?" → haltungstreu, Anlass zur Selbstbefragung, kein Etikett. Modelltreue gewahrt.
+
+**Offene Risiken / vor Kanonisierung:**
+
+- Grob-Verortung: vier Fragen sind wenig. n=1 stimmte — braucht zweiten Belegfall an anderem Tableau (Belegfall vor Kanonisierung). Kandidat: weichere Achsen, um die Eignungsgrenze zu finden.
+- Achsen-Eignung: klare Pole verorten glatt, weiche evtl. zickig. Nur dort bauen, wo es trägt.
+- Knoten ohne x/y: Randstimmen fallen aus. Bestand prüfen, kein Neuaufwand.
+- Neue Produktklasse: erstes Instrument mit Nutzer-Eingabe statt nur Lesen. An einem Tableau erproben, bevor Methode.
+
+**Resonanz-Check (Kurator, offen):** gewachsen oder reaktiv? Kam als Impuls, traf aber eine angelegte Stelle. Reif, wenn der Gedanke von selbst wiederkehrt.
+
+**Nächster Schritt:** auf Resonanz warten. Falls aufgenommen: zweiten Belegfall an anderem Tableau von Hand durchspielen, erst dann Frontend.
+
+---
+
 ## Landingpage
 
 ### [x] Vision-Klammer ergänzen
