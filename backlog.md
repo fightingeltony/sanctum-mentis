@@ -517,6 +517,24 @@ Richtig: zweite Tür ins selbe Tableau, analog zur Lectio — ordnet Vorhandenes
 
 ---
 
+### [ ] Michi-Feedback nach Lectio-Fix (28.6.26) — UX, Renderer, Bild, Tableau
+**Status:** gesammelt 28.6.26; Herkunft: Leser-Feedback (Michi) nach dem `wenn-die-welt-wackelt`-Fix
+- **Navigations-Einstieg zu den geführten Pfaden prominenter** — Leser fand die Lectio erst nach vielen Klicks. *In Arbeit* — aktiver Bau-Auftrag; mit Fertigstellung erledigt.
+- **Renderer: transition/bridge visuell sichtbarer absetzen** — ein Leser überliest die Überleitung zwischen den Stationen. Kein Texteingriff (die Übergänge bleiben, sie sind gut), reine Darstellungsfrage im `LectioNarrativeViewer`.
+- **Bild-/Begriffs-Stimmigkeit in den Lectio-Bildern** — „man merkt, dass ein Begriff steht, der wahrscheinlich, aber nicht der passendste ist". Gehört zum Bild-Stil-Kanon-Strang, eigene Arbeit — kein Einzel-Fix.
+- **Descartes/Cogito als möglicher Knoten im Realismus/Konstruktivismus-Tableau prüfen** — eigenständige Tableau-Frage, *nicht* als Nachtrag zur Lectio. Abzugrenzen vom Descartes-Kontext in „Quellen der Erkenntnis" (Themen-Backlog).
+**Nächster Schritt:** Navigation zuerst (läuft). Renderer, Bild-Kanon und Descartes-Prüfung je als eigener Schritt.
+
+---
+
+### [ ] Kuratorische Geste — die sichtbare Stimme des Fragers (Aufschreiben, nicht bauen)
+**Status:** gewachsener Denk-Strang, 28.6.26 — Kurator-Arbeit, kein Bau
+**Kontext:** Der Wunsch, als *Frager* neben den Denkern zu stehen — eine sichtbare kuratorische Stimme statt neutraler Vermittlung. Dazu die Ahnung, dass Sanctum die Werkstatt für ein späteres Buch ist. Das Medaillen-Bild als erster Beleg dieser Geste.
+**Charakter:** Aufschreiben, nicht bauen — Aufgabe des Kurators mit dem Blatt. Kein Code, kein Feature; reift, bis die Form klar ist. Verwandt mit dem Kurator-Bewegungs-Strang (Wissen vom Kopf über das Herz in den Bauch, s.u.) und der Grundhaltung „Bibliothek mit Haltung, ohne Wahrheitsanspruch" (`kanon.md`).
+**Nächster Schritt:** vom Kurator ausformulieren; kein Backlog-Bau ausgelöst.
+
+---
+
 ## Landingpage
 
 ### [x] Vision-Klammer ergänzen
@@ -743,6 +761,15 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 - Akademisch oder lebensweltlich klären: philosophische Tradition (Hume, Kant, Husserl) oder praktische Frage (Bauchgefühl, Intuition, Heuristiken) — beides ohne Spannung geht nicht
 **Modus:** Zu prüfen, eventuell volle Schleife wegen persönlicher Ankerhärte.
 **Nächster Schritt:** Y-Achse per Stichprobentest entscheiden, dann Bau-Entscheidung treffen.
+
+---
+
+### [ ] Wesen und Verhalten — mögliche neue Lebensfrage
+**Status:** resonanz- und verfügbarkeitsgeprüft 28.6.26 — wartet auf Vorklärung des Kurators, dann frischer Bau-Chat
+**Anker:** Das Verhältnis von Wesen und Verhalten — was jemand *ist* gegenüber dem, was er *tut*.
+**Verfügbarkeit (genug Stimmen):** Foucault, Hadot, Wahres Selbst, Nietzsche, Vedanta, Buddhismus, Sartre — quer über Selbst/Selbstverhältnis vorhanden.
+**Offene Vorklärung (vor Bau, kuratorisch):** Drei Schichten sauber trennen — (1) empirisches Wesen (Charakter, Disposition), (2) metaphysisches Wesen (ein „wahres Selbst"?), (3) das Verhältnis der beiden. Erst wenn die drei Schichten geklärt sind, wird gebaut.
+**Nächster Schritt:** Kurator klärt die drei Schichten vor; dann frischer Bau-Chat. Ob als Lebensfrage (tableau-übergreifend) oder eigenes Tableau — beim Vorklären mitentscheiden.
 
 ---
 
