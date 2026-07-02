@@ -30,6 +30,13 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
             >
               Tableaus
             </Link>
+            <Link
+              href="/lectios"
+              className="font-ui text-[11px] tracking-[0.16em] uppercase text-[var(--fg-muted)]
+                hover:text-[var(--fg)] transition-colors no-underline"
+            >
+              Lectios
+            </Link>
             <HeaderSearchButton />
           </nav>
         </div>

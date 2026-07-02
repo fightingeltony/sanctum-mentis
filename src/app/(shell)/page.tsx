@@ -141,6 +141,14 @@ export default function LandingPage() {
                 Die Lectio führt dich durch einen kuratierten Pfad. Vier bis sechs Stationen aus dem Tableau, ein Bogen, ein offenes Ende. Nicht alle Denker, sondern die, die zusammen eine Frage tragen. Die Karte bleibt offen für alles, was die Lectio weglässt.
               </p>
             </div>
+            <Link
+              href="/lectios"
+              className="self-start inline-flex items-center gap-2 font-ui text-[11px] tracking-[0.18em] uppercase no-underline"
+              style={{ color: 'var(--accent)' }}
+            >
+              Lectios öffnen
+              <span aria-hidden>→</span>
+            </Link>
           </div>
 
         </div>

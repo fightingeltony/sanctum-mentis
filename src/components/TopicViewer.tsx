@@ -243,7 +243,10 @@ export default function TopicViewer({ data, lectios }: Props) {
 
         {lectios && lectios.length > 0 && (
           <div className="px-4 sm:px-5 mb-6">
-            <p className="font-ui text-[11px] tracking-[0.06em] text-[var(--fg-faint)] mb-2">
+            <p
+              className="font-ui text-[11px] tracking-[0.06em] mb-2"
+              style={{ color: 'var(--accent)' }}
+            >
               Geführte Pfade
             </p>
             <div className="flex flex-col gap-2">
