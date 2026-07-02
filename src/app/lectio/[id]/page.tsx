@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { notFound } from 'next/navigation'
 import { getLectio, getLectioIds, getTopic } from '@/lib/data'
 import LectioViewer from '@/components/LectioViewer'
@@ -30,9 +31,19 @@ export default async function LectioPage({ params }: Props) {
   const topicData = getTopic(lectio.tableauId)
   if (!topicData) notFound()
 
+  // Suspense: die Viewer lesen ?von= via useSearchParams() client-seitig —
+  // Boundary nötig, damit die Seite SSG bleibt (gleiches Muster wie TopicViewer)
   if (lectio.ton === 'erzählend-erfahrend' || lectio.ton === 'gemischt') {
-    return <LectioNarrativeViewer lectio={lectio} topicData={topicData} />
+    return (
+      <Suspense>
+        <LectioNarrativeViewer lectio={lectio} topicData={topicData} />
+      </Suspense>
+    )
   }
 
-  return <LectioViewer lectio={lectio} topicData={topicData} />
+  return (
+    <Suspense>
+      <LectioViewer lectio={lectio} topicData={topicData} />
+    </Suspense>
+  )
 }

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import type { Lectio, LectioNarrative, TopicData } from '@/lib/types'
 
 // --voice per Stimme (Schul-Farben aus dem Design-Handoff)
@@ -59,6 +60,11 @@ function StoryParagraph({ p, narrative, isHook, isBridge }: StoryParagraphProps)
 }
 
 export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
+  // Verlassen führt dorthin zurück, wo der Leser herkam:
+  // von der Lectio-Übersicht (?von=lectios) → /lectios, sonst → Tableau
+  const vonLectios = useSearchParams().get('von') === 'lectios'
+  const exitHref = vonLectios ? '/lectios' : `/thema/${lectio.tableauId}`
+
   // Stationen: 0 = Schwelle, 1…N = Stimmen, N+1 = Synthese
   const voiceSteps = lectio.path.filter(s => s.narrative)
   const totalStations = 1 + voiceSteps.length + 1
@@ -163,8 +169,8 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
       {/* Grain overlay */}
       <div aria-hidden className="grain" />
 
-      {/* Exit — Link zurück zum Tableau */}
-      <Link href={`/thema/${lectio.tableauId}`} className="brand" aria-label="Zurück zum Tableau">
+      {/* Exit — zurück zur Herkunft (Lectio-Übersicht oder Tableau) */}
+      <Link href={exitHref} className="brand" aria-label={vonLectios ? 'Zurück zur Lectio-Übersicht' : 'Zurück zum Tableau'}>
         <span className="exit-arrow" aria-hidden>←</span>
         <span className="brand-text">Verlassen</span>
       </Link>
@@ -424,7 +430,10 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
         }
 
-        .brand {
+        /* :global — styled-jsx scoped keine Komponenten (next/link),
+           nur native Elemente. Ohne :global bleibt der Link ungestylt
+           und liegt unsichtbar hinter der Stage. */
+        :global(.brand) {
           position: fixed; top: 22px; left: 26px; z-index: 6;
           font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
           color: oklch(0.44 0.03 65);
@@ -436,13 +445,13 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           background: oklch(0.44 0.03 65 / 0.05);
           transition: color .25s, border-color .25s, background .25s;
         }
-        .brand:hover {
+        :global(.brand:hover) {
           color: oklch(0.30 0.04 65);
           border-color: oklch(0.44 0.03 65 / 0.65);
           background: oklch(0.44 0.03 65 / 0.10);
         }
-        .exit-arrow { font-size: 11px; line-height: 1; transition: transform .25s; }
-        .brand:hover .exit-arrow { transform: translateX(-2px); }
+        :global(.exit-arrow) { font-size: 11px; line-height: 1; transition: transform .25s; }
+        :global(.brand:hover .exit-arrow) { transform: translateX(-2px); }
         .lc-counter {
           position: fixed; top: 26px; right: 30px; z-index: 6;
           font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
@@ -574,16 +583,17 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           display: flex; gap: 14px; margin-top: 48px;
           flex-wrap: wrap; justify-content: center;
         }
-        .btn {
+        /* :global — der "Zur Landkarte"-CTA ist ein next/link (s.o. bei .brand) */
+        :global(.btn) {
           display: inline-flex; align-items: center; gap: 9px;
           padding: 13px 22px; font-size: 11px;
           letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; cursor: pointer;
           border: 1px solid var(--hairline-strong); color: var(--fg-muted); background: none;
           transition: border-color .25s, color .25s, background .25s;
         }
-        .btn:hover { border-color: var(--accent); color: var(--accent); }
-        .btn.solid { border-color: var(--accent); color: var(--paper); background: var(--accent); }
-        .btn.solid:hover {
+        :global(.btn:hover) { border-color: var(--accent); color: var(--accent); }
+        :global(.btn.solid) { border-color: var(--accent); color: var(--paper); background: var(--accent); }
+        :global(.btn.solid:hover) {
           background: oklch(0.36 0.12 295); border-color: oklch(0.36 0.12 295); color: var(--paper);
         }
 
@@ -655,7 +665,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           .niche { width: 104px; height: 132px; border-radius: 52px 52px 6px 6px; }
           .station { top: 52px; }
           .station-inner { padding: 28px 22px 200px; }
-          .brand { top: 14px; left: 14px; padding: 4px 9px; font-size: 9px; }
+          :global(.brand) { top: 14px; left: 14px; padding: 4px 9px; font-size: 9px; }
           .lc-counter { top: 16px; right: 16px; }
         }
       `}</style>

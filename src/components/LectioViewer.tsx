@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import type { Lectio, LectioStep, TopicData } from '@/lib/types'
 import { getLectioNodeText } from '@/lib/lectioEngine'
 import { Annotated } from '@/lib/annotations'
@@ -12,6 +13,11 @@ interface Props {
 }
 
 export default function LectioViewer({ lectio, topicData }: Props) {
+  // Back-Link führt dorthin zurück, wo der Leser herkam:
+  // von der Lectio-Übersicht (?von=lectios) → /lectios, sonst → Tableau
+  const vonLectios = useSearchParams().get('von') === 'lectios'
+  const backHref = vonLectios ? '/lectios' : `/thema/${lectio.tableauId}`
+
   const [revealed, setRevealed] = useState(0)
   const stepRefs = useRef<(HTMLDivElement | null)[]>([])
 
@@ -35,14 +41,14 @@ export default function LectioViewer({ lectio, topicData }: Props) {
     <div className="min-h-screen" style={{ background: 'var(--bg)' }}>
       <div className="max-w-[680px] mx-auto px-5 sm:px-8 py-12 sm:py-16">
 
-        {/* ── Back link ── */}
+        {/* ── Back link — zur Herkunft (Lectio-Übersicht oder Tableau) ── */}
         <Link
-          href={`/thema/${lectio.tableauId}`}
+          href={backHref}
           className="inline-flex items-center gap-2 font-ui text-[12px] tracking-[0.06em]
             text-[var(--fg-faint)] hover:text-[var(--fg-muted)] transition-colors no-underline mb-10"
         >
           <span style={{ color: 'var(--accent)' }}>←</span>
-          {topicData.topic.title}
+          {vonLectios ? 'Alle Lectios' : topicData.topic.title}
         </Link>
 
         {/* ── Header ── */}
