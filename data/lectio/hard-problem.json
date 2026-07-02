@@ -2,8 +2,8 @@
   "id": "hard-problem",
   "tableauId": "philosophie-des-geistes",
   "title": "Warum das Rätsel nicht verschwindet",
-  "focus": "Hard Problem — Entstehung, Gegenantworten, Diagnose",
-  "thesis": "Das Hard Problem ist keine Wissenslücke, die die Wissenschaft einfach füllen wird. Es ist eine strukturelle Grenze der Außenperspektive — und damit ein Hinweis auf das Wesen unserer Subjektivität.",
+  "focus": "Hard Problem – Entstehung, Gegenantworten, Diagnose",
+  "thesis": "Das Hard Problem ist keine Wissenslücke, die die Wissenschaft einfach füllen wird. Es ist eine strukturelle Grenze der Außenperspektive – und damit ein Hinweis auf das Wesen unserer Subjektivität.",
   "level": 2,
   "estimated_minutes": 15,
   "intro": "Schlag dir einmal leicht mit der Hand auf den Oberschenkel. Da ist ein Geräusch, ein Reiz, eine mechanische Erschütterung. Aber da ist auch ein Gefühl. Warum bleibt es nicht bei der bloßen Datenverarbeitung im Gehirn? Warum leuchtet in dir dieses hässliche oder neutrale ‚Etwas' auf? Das ist das Hard Problem. Wir beginnen unsere Reise dort, wo der moderne Geist sich selbst zum Rätsel wurde.",
@@ -12,7 +12,7 @@
     {
       "nodeId": "descartes",
       "nodeType": "thinker",
-      "transition": "Descartes hat uns eine Welt hinterlassen, die sauber getrennt ist. Er hat recht mit dem Riss, den er beschreibt, aber seine Antwort — eine eigene ‚Geistsubstanz' — wirkt heute wie ein Verlegenheitsurteil. Die Sprachphilosophie wollte diesen Geist später einfach als Grammatikfehler entlarven."
+      "transition": "Descartes hat uns eine Welt hinterlassen, die sauber getrennt ist. Er hat recht mit dem Riss, den er beschreibt, aber seine Antwort – eine eigene ‚Geistsubstanz' – wirkt heute wie ein Verlegenheitsurteil. Die Sprachphilosophie wollte diesen Geist später einfach als Grammatikfehler entlarven."
     },
     {
       "nodeId": ["ryle", "wittgenstein"],
@@ -22,7 +22,7 @@
     {
       "nodeId": "nagel",
       "nodeType": "thinker",
-      "transition": "Nagel hat gezeigt, dass wir alles über die Biologie einer Fledermaus wissen können, ohne jemals zu wissen, wie es sich *anfühlt*, sie zu sein. Er markiert die Grenze der Erkenntnis — David Chalmers wird sie gleich für unüberwindbar erklären."
+      "transition": "Nagel hat gezeigt, dass wir alles über die Biologie einer Fledermaus wissen können, ohne jemals zu wissen, wie es sich *anfühlt*, sie zu sein. Er markiert die Grenze der Erkenntnis – David Chalmers wird sie gleich für unüberwindbar erklären."
     },
     {
       "nodeId": ["chalmers", "jackson"],
@@ -32,7 +32,7 @@
     {
       "nodeId": "dennett",
       "nodeType": "thinker",
-      "transition": "Dennett ist brillant und provokant. Er erklärt das Rätsel nicht, er erklärt es weg. Er behauptet, wir seien einer bloßen Illusion von Tiefe erlegen. Wenn man Dennett liest, fühlt man sich wie eine Maschine — bis man wieder zu Thomas Metzinger kommt, der uns zeigt, wie diese Maschine sich selbst täuscht."
+      "transition": "Dennett ist brillant und provokant. Er erklärt das Rätsel nicht, er erklärt es weg. Er behauptet, wir seien einer bloßen Illusion von Tiefe erlegen. Wenn man Dennett liest, fühlt man sich wie eine Maschine – bis man wieder zu Thomas Metzinger kommt, der uns zeigt, wie diese Maschine sich selbst täuscht."
     },
     {
       "nodeId": "metzinger",
@@ -41,7 +41,7 @@
     }
   ],
 
-  "closing_synthesis": "Du stehst nun am Ende des Pfades zwischen drei unversöhnlichen Welten. Dennett sagt, es gibt kein Rätsel — nur eine Verwirrung über Funktionen. Nagel und Jackson sagen, die erste Person ist ein unteilbares Geheimnis. Und Metzinger erklärt dieses Geheimnis als den eleganten Trick einer biologischen Simulation. Das Rätsel ist nicht gelöst. Aber du weißt jetzt, warum es verdient, schwer zu sein.",
+  "closing_synthesis": "Du stehst nun am Ende des Pfades zwischen drei unversöhnlichen Welten. Dennett sagt, es gibt kein Rätsel – nur eine Verwirrung über Funktionen. Nagel und Jackson sagen, die erste Person ist ein unteilbares Geheimnis. Und Metzinger erklärt dieses Geheimnis als den eleganten Trick einer biologischen Simulation. Das Rätsel ist nicht gelöst. Aber du weißt jetzt, warum es verdient, schwer zu sein.",
 
-  "closing_question": "Wenn kein Scanner der Welt jemals dein Schmerzgefühl finden kann — was bedeutet das für die Weise, wie wir einander begegnen? Ist das Leid eines anderen Menschen für dich eine bloße biologische Tatsache oder ein unantastbares Geheimnis?"
+  "closing_question": "Wenn kein Scanner der Welt jemals dein Schmerzgefühl finden kann – was bedeutet das für die Weise, wie wir einander begegnen? Ist das Leid eines anderen Menschen für dich eine bloße biologische Tatsache oder ein unantastbares Geheimnis?"
 }

@@ -2,22 +2,22 @@
   "id": "vom-wissen-zum-glauben",
   "tableauId": "verwandlung",
   "title": "Wann wird aus Wissen Glauben?",
-  "focus": "Sechs Stimmen zu dem Widerspruch zwischen Wissen und Glauben — erzählt von einem Moment her, den jeder kennt: das Gute, das nicht ankommt",
-  "thesis": "Jemand sagt etwas Gutes über dich, und du hörst es — aber es bleibt hinter einer Glaswand hängen. Du weißt, dass es stimmt, und glaubst es trotzdem nicht. Sechs Stimmen schauen auf dieses Paradox — etwas zu wissen, ohne es glauben zu können — und deuten es verschieden. Welche von ihnen deinen Weg beschreibt, ist deine eigene Antwort darauf, wie aus einem toten Satz ein lebendiger wird.",
+  "focus": "Sechs Stimmen zu dem Widerspruch zwischen Wissen und Glauben – erzählt von einem Moment her, den jeder kennt: das Gute, das nicht ankommt",
+  "thesis": "Jemand sagt etwas Gutes über dich, und du hörst es – aber es bleibt hinter einer Glaswand hängen. Du weißt, dass es stimmt, und glaubst es trotzdem nicht. Sechs Stimmen schauen auf dieses Paradox – etwas zu wissen, ohne es glauben zu können – und deuten es verschieden. Welche von ihnen deinen Weg beschreibt, ist deine eigene Antwort darauf, wie aus einem toten Satz ein lebendiger wird.",
   "path_type": "konkurrierend-konfrontativ",
   "ton": "erzählend-erfahrend",
   "level": 3,
   "estimated_minutes": 13,
-  "intro": "Jemand sagt etwas Gutes über dich — dass du das gut gemacht hast, dass du ein guter Mensch bist, dass du geliebt wirst —, und du hörst es, du nickst, vielleicht sagst du danke. Aber es kommt nicht an. Es bleibt irgendwo hängen, wie hinter einer Glaswand zwischen dem Ohr und der Stelle, wo es ankommen müsste, und obwohl du weißt, dass es freundlich gemeint ist, vielleicht sogar, dass es stimmt, glaubst du es trotzdem nicht. Diesen Widerspruch kennst du: Du weißt, dass es stimmt, und glaubst es trotzdem nicht. Sechs Stimmen schauen darauf, und jede sieht etwas anderes. Du musst keiner recht geben — schau, welche deinen Weg kennt.",
+  "intro": "Jemand sagt etwas Gutes über dich – dass du das gut gemacht hast, dass du ein guter Mensch bist, dass du geliebt wirst –, und du hörst es, du nickst, vielleicht sagst du danke. Aber es kommt nicht an. Es bleibt irgendwo hängen, wie hinter einer Glaswand zwischen dem Ohr und der Stelle, wo es ankommen müsste, und obwohl du weißt, dass es freundlich gemeint ist, vielleicht sogar, dass es stimmt, glaubst du es trotzdem nicht. Diesen Widerspruch kennst du: Du weißt, dass es stimmt, und glaubst es trotzdem nicht. Sechs Stimmen schauen darauf, und jede sieht etwas anderes. Du musst keiner recht geben – schau, welche deinen Weg kennt.",
   "path": [
     {
       "nodeId": "augustinus",
       "nodeType": "thinker",
       "image": "/lectio-images/lectio-augustinus.webp",
       "narrative": {
-        "hook": "Bleib einen Moment bei dieser Glaswand. Du willst das Gute glauben und kommst trotzdem nicht hindurch — und es ist nicht so, dass du es nicht versuchtest. Du willst, und im selben Atemzug willst du nicht.",
+        "hook": "Bleib einen Moment bei dieser Glaswand. Du willst das Gute glauben und kommst trotzdem nicht hindurch – und es ist nicht so, dass du es nicht versuchtest. Du willst, und im selben Atemzug willst du nicht.",
         "body": [
-          "Augustinus kannte diesen gespaltenen Willen so genau, dass er ihm einen Namen gab: Ich will, und ich will zugleich nicht. Jahrelang wollte er ein anderer werden und hinderte sich im selben Moment daran, und kein noch so großes Mehr an Anstrengung löste den Knoten. Dann, im Garten, eine spielende Kinderstimme, ein aufgeschlagenes Buch, ein einzelner Satz — und die Glaswand war fort. Was sein Wille über Jahre nicht hatte erzwingen können, geschah in einem einzigen Augenblick. Und doch, sagt er, hatte all das Ringen davor genau darauf hingearbeitet."
+          "Augustinus kannte diesen gespaltenen Willen so genau, dass er ihm einen Namen gab: Ich will, und ich will zugleich nicht. Jahrelang wollte er ein anderer werden und hinderte sich im selben Moment daran, und kein noch so großes Mehr an Anstrengung löste den Knoten. Dann, im Garten, eine spielende Kinderstimme, ein aufgeschlagenes Buch, ein einzelner Satz – und die Glaswand war fort. Was sein Wille über Jahre nicht hatte erzwingen können, geschah in einem einzigen Augenblick. Und doch, sagt er, hatte all das Ringen davor genau darauf hingearbeitet."
         ],
         "kernel": "Was sein Wille über Jahre nicht hatte erzwingen können, geschah in einem einzigen Augenblick.",
         "bridge": "Augustinus' Lösung kam wie ein Blitz. Die nächste Stimme glaubt nicht an Blitze. Sie glaubt an Wiederholung."
@@ -31,26 +31,26 @@
       "narrative": {
         "hook": "Die Stoa erwartet keinen solchen Augenblick im Garten. Für sie wird die Glaswand nicht durchbrochen, sondern langsam dünner, durch nichts als tägliches Tun.",
         "body": [
-          "Epiktet war ein Sklave und Mark Aurel ein Kaiser, und doch lehrten beide dasselbe: Verwandlung ist kein Ereignis, sondern eine Übung. Jeden Tag dieselbe schlichte Unterscheidung — was steht in meiner Macht und was nicht, mein eigenes Urteil über mich oder das Urteil der anderen. Wer das wieder und wieder einübt, wird allmählich ein anderer. Nicht im Durchbruch, sondern in tausend unscheinbaren Wiederholungen, bis aus der Übung eine zweite Natur geworden ist."
+          "Epiktet war ein Sklave und Mark Aurel ein Kaiser, und doch lehrten beide dasselbe: Verwandlung ist kein Ereignis, sondern eine Übung. Jeden Tag dieselbe schlichte Unterscheidung – was steht in meiner Macht und was nicht, mein eigenes Urteil über mich oder das Urteil der anderen. Wer das wieder und wieder einübt, wird allmählich ein anderer. Nicht im Durchbruch, sondern in tausend unscheinbaren Wiederholungen, bis aus der Übung eine zweite Natur geworden ist."
         ],
         "kernel": "bis aus der Übung eine zweite Natur geworden ist.",
-        "bridge": "Üben kann man nur, was in der eigenen Macht steht. Die dritte Stimme sagt: Das Entscheidende steht gerade nicht in deiner Macht — es kommt von außen."
+        "bridge": "Üben kann man nur, was in der eigenen Macht steht. Die dritte Stimme sagt: Das Entscheidende steht gerade nicht in deiner Macht – es kommt von außen."
       },
-      "transition": "Üben kann man nur, was in der eigenen Macht steht. Die dritte Stimme sagt: Das Entscheidende steht gerade nicht in deiner Macht — es kommt von außen."
+      "transition": "Üben kann man nur, was in der eigenen Macht steht. Die dritte Stimme sagt: Das Entscheidende steht gerade nicht in deiner Macht – es kommt von außen."
     },
     {
       "nodeId": "rilke",
       "nodeType": "thinker",
       "image": "/lectio-images/lectio-rilke.webp",
       "narrative": {
-        "hook": "Denk an den Moment, in dem es einmal doch durchkam — und an dem du selbst vermutlich nichts getan hast. Jemand sah dich an, hielt dich, und für einen Augenblick war die Glaswand einfach weg.",
+        "hook": "Denk an den Moment, in dem es einmal doch durchkam – und an dem du selbst vermutlich nichts getan hast. Jemand sah dich an, hielt dich, und für einen Augenblick war die Glaswand einfach weg.",
         "body": [
-          "Rilke hat genau das beschrieben, in einem Gedicht über eine antike Statue, der der Kopf fehlt. Sie hat keine Augen und sieht dich trotzdem an, und aus dem alten Stein bricht ein Satz hervor, mit dem niemand gerechnet hat: Du mußt dein Leben ändern. Nicht weil du es dir vorgenommen hättest, sondern weil etwas dich so getroffen hat, dass kein Zurück mehr bleibt. Manchmal wird das Gute nicht geglaubt, weil du dich dafür entschieden hast — sondern weil ein Mensch, ein Blick, eine Liebe die Glaswand von außen einschlägt."
+          "Rilke hat genau das beschrieben, in einem Gedicht über eine antike Statue, der der Kopf fehlt. Sie hat keine Augen und sieht dich trotzdem an, und aus dem alten Stein bricht ein Satz hervor, mit dem niemand gerechnet hat: Du mußt dein Leben ändern. Nicht weil du es dir vorgenommen hättest, sondern weil etwas dich so getroffen hat, dass kein Zurück mehr bleibt. Manchmal wird das Gute nicht geglaubt, weil du dich dafür entschieden hast – sondern weil ein Mensch, ein Blick, eine Liebe die Glaswand von außen einschlägt."
         ],
         "kernel": "weil ein Mensch, ein Blick, eine Liebe die Glaswand von außen einschlägt.",
-        "bridge": "Getroffenwerden kann man nicht erzwingen. Aber kann man etwas tun, damit es geschehen kann? Die vierte Stimme antwortet: ja — aufhören zu drücken."
+        "bridge": "Getroffenwerden kann man nicht erzwingen. Aber kann man etwas tun, damit es geschehen kann? Die vierte Stimme antwortet: ja – aufhören zu drücken."
       },
-      "transition": "Getroffenwerden kann man nicht erzwingen. Aber kann man etwas tun, damit es geschehen kann? Die vierte Stimme antwortet: ja — aufhören zu drücken."
+      "transition": "Getroffenwerden kann man nicht erzwingen. Aber kann man etwas tun, damit es geschehen kann? Die vierte Stimme antwortet: ja – aufhören zu drücken."
     },
     {
       "nodeId": "eckhart",
@@ -59,12 +59,12 @@
       "narrative": {
         "hook": "Vielleicht hast du es schon versucht, das Gute mit Gewalt glauben zu wollen, und gemerkt, dass es nicht geht: Je fester du drückst, desto undurchdringlicher wird das Glas.",
         "body": [
-          "Meister Eckhart kannte einen Ausweg, und er ist unbequem, weil er nach nichts aussieht — nicht mehr wollen, nicht mehr erreichen, nicht fester glauben, sondern lassen. Er nannte es Gelassenheit: das Loslassen des eigenen Willens und der eigenen Bilder, bis ein leerer Raum entsteht, in dem etwas geschehen kann, das man nicht machen kann. Das ist keine Passivität, sagt Eckhart, sondern die schwerste Übung von allen — die Übung, das Erzwingen sein zu lassen. Für ihn glaubt man das Gute nicht durch Anstrengung, sondern indem man aufhört, daran festzuhalten, dass man es erzwingen müsste."
+          "Meister Eckhart kannte einen Ausweg, und er ist unbequem, weil er nach nichts aussieht – nicht mehr wollen, nicht mehr erreichen, nicht fester glauben, sondern lassen. Er nannte es Gelassenheit: das Loslassen des eigenen Willens und der eigenen Bilder, bis ein leerer Raum entsteht, in dem etwas geschehen kann, das man nicht machen kann. Das ist keine Passivität, sagt Eckhart, sondern die schwerste Übung von allen – die Übung, das Erzwingen sein zu lassen. Für ihn glaubt man das Gute nicht durch Anstrengung, sondern indem man aufhört, daran festzuhalten, dass man es erzwingen müsste."
         ],
-        "kernel": "die schwerste Übung von allen — die Übung, das Erzwingen sein zu lassen.",
-        "bridge": "Loslassen, getroffen werden, ein Blitz im Garten — woran erkennst du, dass wirklich etwas geschehen ist und du es dir nicht nur einredest? Die fünfte Stimme prüft genau das."
+        "kernel": "die schwerste Übung von allen – die Übung, das Erzwingen sein zu lassen.",
+        "bridge": "Loslassen, getroffen werden, ein Blitz im Garten – woran erkennst du, dass wirklich etwas geschehen ist und du es dir nicht nur einredest? Die fünfte Stimme prüft genau das."
       },
-      "transition": "Loslassen, getroffen werden, ein Blitz im Garten — woran erkennst du, dass wirklich etwas geschehen ist und du es dir nicht nur einredest? Die fünfte Stimme prüft genau das."
+      "transition": "Loslassen, getroffen werden, ein Blitz im Garten – woran erkennst du, dass wirklich etwas geschehen ist und du es dir nicht nur einredest? Die fünfte Stimme prüft genau das."
     },
     {
       "nodeId": "james",
@@ -85,16 +85,16 @@
       "nodeType": "thinker",
       "image": "/lectio-images/lectio-jung.webp",
       "narrative": {
-        "hook": "Vielleicht wartest du auf den einen Moment, in dem die Glaswand ein für alle Mal zerspringt. Die letzte Stimme sagt, so funktioniere es nicht — und meint das nicht als schlechte Nachricht.",
+        "hook": "Vielleicht wartest du auf den einen Moment, in dem die Glaswand ein für alle Mal zerspringt. Die letzte Stimme sagt, so funktioniere es nicht – und meint das nicht als schlechte Nachricht.",
         "body": [
-          "Für C. G. Jung ist Verwandlung kein einzelnes Ereignis, sondern das stille Programm eines ganzen Lebens, das er Individuation nannte: das langsame Werden zu dem, der man im Kern schon ist. Es geschieht nicht durch reinen Willen und nicht im Blitz, sondern in der jahrelangen Auseinandersetzung mit allem, was man je von sich weggeschoben hat, und das Eigentümliche daran ist, dass man diesen Prozess treibt und zugleich von ihm getrieben wird. Die Glaswand verschwindet nicht an einem Tag. Sie wird über ein ganzes Leben durchlässig — mal durch Übung, mal durch ein Getroffenwerden, mal durch Loslassen, und keiner dieser Wege genügt für sich allein."
+          "Für C. G. Jung ist Verwandlung kein einzelnes Ereignis, sondern das stille Programm eines ganzen Lebens, das er Individuation nannte: das langsame Werden zu dem, der man im Kern schon ist. Es geschieht nicht durch reinen Willen und nicht im Blitz, sondern in der jahrelangen Auseinandersetzung mit allem, was man je von sich weggeschoben hat, und das Eigentümliche daran ist, dass man diesen Prozess treibt und zugleich von ihm getrieben wird. Die Glaswand verschwindet nicht an einem Tag. Sie wird über ein ganzes Leben durchlässig – mal durch Übung, mal durch ein Getroffenwerden, mal durch Loslassen, und keiner dieser Wege genügt für sich allein."
         ],
-        "kernel": "Sie wird über ein ganzes Leben durchlässig — mal durch Übung, mal durch ein Getroffenwerden, mal durch Loslassen, und keiner dieser Wege genügt für sich allein.",
+        "kernel": "Sie wird über ein ganzes Leben durchlässig – mal durch Übung, mal durch ein Getroffenwerden, mal durch Loslassen, und keiner dieser Wege genügt für sich allein.",
         "bridge": "Sechs Stimmen, eine Glaswand. Keine hat das letzte Wort."
       },
       "transition": "Sechs Stimmen, eine Glaswand. Keine hat das letzte Wort."
     }
   ],
   "closing_synthesis": "Ein gutes Wort, das hinter einer Glaswand hängenbleibt, und sechs Deutungen, wie es doch ankommt: durch einen Umschwung, den der Wille nicht erzwingt, auf den er aber jahrelang hinarbeitet (Augustinus); durch tägliche Übung, bis das Glas dünn wird (Stoa); weil etwas von außen dich trifft und kein Zurück mehr lässt (Rilke); indem das Erzwingen nachlässt und ein Raum entsteht (Eckhart); daran erkennbar, ob du danach anders lebst (James); über ein ganzes Leben, in dem all diese Wege ineinandergreifen (Jung). Du musst dich nicht für eine entscheiden. Auffällig ist nur, wohin sie zeigen: Drei der Stimmen lösen die Glaswand nicht durch mehr Anstrengung, sondern durch ein Nachlassen des Anstrengens, und zwei andere fragen gar nicht, wie das Glas durchlässig wird, sondern woran du es merken würdest. Welche Stimme du gerade brauchst, hängt vielleicht weniger von der richtigen Lehre ab als davon, wo du gerade stehst.",
-  "closing_question": "Wenn dir das nächste Mal jemand etwas Gutes sagt und es hinter der Glaswand hängenbleibt — was, glaubst du, müsste geschehen, damit es ankommt: mehr üben, getroffen werden, oder das Erzwingen nachlassen?"
+  "closing_question": "Wenn dir das nächste Mal jemand etwas Gutes sagt und es hinter der Glaswand hängenbleibt – was, glaubst du, müsste geschehen, damit es ankommt: mehr üben, getroffen werden, oder das Erzwingen nachlassen?"
 }

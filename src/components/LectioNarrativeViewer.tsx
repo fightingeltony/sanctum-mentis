@@ -217,7 +217,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
               style={{ ['--d' as string]: '.6s' }}
               key={`ut-${revealKey}`}
             >
-              Eine Lectio durch {voiceSteps.length} Stimmen — langsam zu lesen.
+              Eine Lectio durch {voiceSteps.length} Stimmen – langsam zu lesen.
             </p>
             <div
               className="invite reveal"
