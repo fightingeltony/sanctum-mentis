@@ -2,36 +2,77 @@
   "id": "warum-sollst-du",
   "tableauId": "ethik",
   "title": "Warum solltest du überhaupt?",
-  "focus": "Die Begründungs-Frage der Ethik – vom rationalen Fundament über seine Erschütterung bis zu einem Anspruch, der vor jeder Begründung kommt",
-  "thesis": "Du weißt, dass du etwas tun solltest – den Anruf nicht ignorieren, den Bedürftigen nicht übersehen, das Versprechen halten. Aber warum eigentlich? Diese Lectio führt durch vier Antworten, von denen drei den Boden unter deinen Füßen wegnehmen – und eine vierte, die nicht weiter nach Begründung sucht, sondern den Anspruch beschreibt, der schon da war.",
+  "focus": "Die Begründungs-Frage der Ethik – vom Fundament aus Vernunft über die Schichten darunter bis zu einem Anspruch, der vor jeder Begründung kommt",
+  "thesis": "Du weißt, dass du etwas tun solltest – den Anruf nicht aufschieben, das Versprechen halten, den nicht übersehen, der dich braucht. Aber warum eigentlich? Diese Lectio folgt dem Warum durch vier Stationen: Drei legen frei, was unter der jeweils letzten Antwort liegt – und die vierte gräbt nicht weiter, sondern beschreibt, was vor allem Fragen schon geschehen war.",
+  "path_type": "destruktiv-aufbauend",
+  "ton": "gemischt",
   "level": 2,
-  "estimated_minutes": 14,
-  "intro": "Die Ethik hat ein Geheimnis, das sie nicht gerne ausspricht: Sie weiß nicht genau, woher sie kommt. Jeder spürt, dass es Dinge gibt, die man tun sollte und andere nicht. Aber wenn jemand fragt – wirklich fragt – warum, beginnt es zu wackeln. Diese Lectio nimmt diese Frage ernst und führt dich durch vier Stationen, in denen der Boden der Ethik immer dünner wird – bis du an einer Stelle ankommst, an der ein Denker den Versuch aufgibt, eine Begründung zu finden, und stattdessen schaut, was tatsächlich passiert, wenn ein anderer Mensch dir gegenübersteht.",
+  "estimated_minutes": 15,
+  "intro": "Die Ethik hat ein Geheimnis, das sie nicht gern ausspricht: Sie weiß nicht genau, woher sie kommt. Jeder spürt, dass es Dinge gibt, die man tun sollte, und andere nicht – aber wenn jemand fragt, wirklich fragt, warum, hat sie keine Antwort, die dem Weiterfragen standhält. Diese Lectio nimmt das Warum ernst und lässt es nicht los: Unter jeder Antwort liegt eine weitere Schicht, und mit jeder Schicht wird das Fundament dünner. Bis du an einer Station ankommst, an der ein Denker aufhört zu graben – und stattdessen schaut, was geschehen war, bevor du überhaupt zu fragen begannst.",
 
   "path": [
     {
       "nodeId": "kant",
       "nodeType": "thinker",
-      "transition": "Kants Antwort ist großartig, aber sie hängt an einer Bedingung: dass die Vernunft als verbindlicher Ort tragen kann. Hume bezweifelt genau das."
+      "ton": "nüchtern-klar",
+      "narrative": {
+        "hook": "Es gibt Sätze, die du nicht prüfst: Versprochen ist versprochen. Man lässt niemanden im Stich. Aber halt einen davon einen Moment fest und frag: Warum eigentlich? Weil es sich gehört – und warum gehört es sich? Jede Antwort verträgt ein weiteres Warum, und irgendwo muss die Kette halten, sonst hängt alles in der Luft. Kant ist der Denker, der genau dieses Halten bauen will: ein Fundament, das dem Weiterfragen standhält.",
+        "body": [
+          "Kant sucht den Ort, an dem das Sollen entspringt, und er findet ihn nicht über dir, nicht in Gott oder Tradition, sondern in dir selbst: in der Vernunft. Sein Gedanke geht so: Frag bei allem, was du tun willst, ob die Regel dahinter ein Gesetz für alle sein könnte. Ein Versprechen brechen, wenn es dir gerade nützt? Als allgemeines Gesetz würde das jedes Versprechen zerstören, denn niemand könnte mehr einem Wort trauen. Diese Prüfung führt die Vernunft selbst durch; niemand muss ihr das Gesetz geben, sie gibt es sich. Moral ist darum für Kant kein Zwang von außen, sondern Freiheit, die sich selbst bindet – und jeder, der diese Vernunft in sich trägt, hat eine Würde, die verbietet, ihn bloß als Mittel zu benutzen. Das ist das Fundament: Was für dich gilt, gilt für alle, weil in allen dieselbe Vernunft spricht. Es steht ohne Gott, ohne Tradition, ohne Gefühl. Es braucht nur eines – dass die Vernunft wirklich trägt."
+        ],
+        "kernel": "Es braucht nur eines – dass die Vernunft wirklich trägt.",
+        "bridge": "Kants Fundament steht, solange die Vernunft trägt. Ob sie trägt, hatte Hume allerdings schon bezweifelt, bevor Kant baute – das Fundament ist nicht zuletzt eine Antwort auf ihn. Die Lectio folgt hier den Schichten, nicht den Jahreszahlen: Was liegt unter der Vernunft?"
+      },
+      "transition": "Kants Fundament steht, solange die Vernunft trägt. Ob sie trägt, hatte Hume allerdings schon bezweifelt, bevor Kant baute – das Fundament ist nicht zuletzt eine Antwort auf ihn. Die Lectio folgt hier den Schichten, nicht den Jahreszahlen: Was liegt unter der Vernunft?"
     },
     {
       "nodeId": "hume",
       "nodeType": "thinker",
-      "transition": "Hume ist nicht nüchterner Empiriker, der die Vernunft entzaubert – er ist freundlicher. Er sagt: Moral ist warm, nicht kalt. Aber sein Argument hat eine Lücke. Wenn moralische Urteile aus Gefühlen kommen, woher kommen die Gefühle? Sind sie selbst noch begründet – oder nur historisch geworden? Nietzsche stellt diese Frage radikaler als alle anderen."
+      "ton": "erzählend-erfahrend",
+      "narrative": {
+        "hook": "Jemand stolpert vor dir auf der Straße, und dein Körper zuckt mit, bevor du irgendetwas gedacht hast. Ein Kind weint im Zug, und etwas in dir zieht sich zusammen. Du hast das nicht beschlossen, du hast es nicht geprüft – es war schon da, schneller als jeder Gedanke. Hume beginnt genau hier: bei dem, was in dir reagiert, bevor die Vernunft zu Wort kommt.",
+        "body": [
+          "Humes Befund ist älter als Kants Fundament, und er liegt genau darunter: Wer wirklich beobachtet, wie moralische Urteile entstehen, findet dort keine Vernunft am Werk, sondern Gefühl. Die Vernunft kann viel – Tatsachen feststellen, Folgen abwägen, Mittel berechnen –, aber sie treibt dich zu nichts; was dich bewegt, ist das Mitschwingen mit dem Wohl und Wehe der anderen, das Hume Sympathie nennt. Und daraus zieht er die Einsicht, die seither niemand mehr eingefangen hat: Aus dem, was ist, folgt nicht, was sein soll. Kein Stapel von Tatsachen ergibt von selbst ein Sollen – irgendwo kommt immer ein Gefühl dazu, das Partei ergreift. Das ist bei Hume keine Entlarvung, im Gegenteil: Moral wird dadurch nicht kleiner, sie wird wärmer. Sie ist keine kalte Rechnung, sondern eine natürliche Eigenschaft von Wesen, die miteinander leben und einander nicht gleichgültig sind. Nur das Fundament, das die Ethik gesucht hatte, ist keines mehr. Unter der Vernunft liegt Gefühl."
+        ],
+        "kernel": "Unter der Vernunft liegt Gefühl.",
+        "bridge": "Hume ist kein kalter Entzauberer – er ist der Freundlichste in diesem Bogen: Moral ist warm, nicht kalt. Aber sein Befund hat eine offene Stelle. Wenn moralische Urteile aus Gefühlen kommen – woher kommen dann die Gefühle? Sind sie selbst noch begründet, oder nur geworden? Nietzsche stellt diese Frage radikaler als alle anderen."
+      },
+      "image_prompt": "Two simple taut strings side by side, one still trembling as if just struck, the other beginning to stir in quiet answer – resonance passing between them without touch. Warmth, closeness, nothing calculated.",
+      "transition": "Hume ist kein kalter Entzauberer – er ist der Freundlichste in diesem Bogen: Moral ist warm, nicht kalt. Aber sein Befund hat eine offene Stelle. Wenn moralische Urteile aus Gefühlen kommen – woher kommen dann die Gefühle? Sind sie selbst noch begründet, oder nur geworden? Nietzsche stellt diese Frage radikaler als alle anderen."
     },
     {
       "nodeId": "nietzsche",
       "nodeType": "thinker",
-      "transition": "Nietzsche ist nicht der Zerstörer, als der er manchmal gelesen wird. Er ist der ehrlichste Diagnostiker dessen, was wir geerbt haben. Aber seine Genealogie lässt eine Frage offen: Wenn alle moralischen Begriffe historisch geworden sind – wie kommst du überhaupt noch zum Handeln? Hier setzt Levinas anders an. Er sucht nicht nach einer neuen Begründung. Er sucht nach dem, was vor jeder Begründung war."
+      "ton": "erzählend-erfahrend",
+      "narrative": {
+        "hook": "Sag einmal laut, was du verachtest: Egoismus vielleicht, Kälte, jemand, der sich einfach nimmt, was er will. Und dann frag – nicht, ob du recht hast, sondern woher du das hast. ›Gut‹ und ›böse‹ hast du nie geprüft und dann übernommen; die Worte waren vor dir da, gegeben mit der Sprache, mit den Blicken der Erwachsenen, lange bevor du fragen konntest. Nietzsche nimmt diese Herkunft ernst – ernster, als irgendjemandem lieb sein kann.",
+        "body": [
+          "Denn auch Humes Antwort hält dem Weiterfragen nicht stand: Wenn moralische Urteile aus Gefühlen kommen, dann haben diese Gefühle selbst eine Herkunft. Nietzsche gräbt weiter und schreibt die Geschichte dessen, was wir für zeitlos hielten. ›Gut‹ und ›böse‹, zeigt er, sind nicht vom Himmel gefallen und nicht aus der Natur gewachsen – sie sind entstanden, in langen Kämpfen um Macht und Ohnmacht, aus Schuld, aus dem Groll derer, die sich nicht wehren konnten und ihre Schwäche zur Tugend umdeuteten. Was du als dein moralisches Empfinden kennst, ist für ihn das gespeicherte Erbe dieser Kämpfe, ganze Generationen tief. Das ist kein Aufruf, nun alles zu dürfen. Nietzsche will prüfen, nicht zertrümmern: Welche der ererbten Werte stärken das Leben, welche würgen es ab? Aber eine Letztbegründung findet er nirgends mehr – wer unter die Geschichte gräbt, findet nur ältere Geschichte, und die Frage ist nicht länger, ob deine Moral begründet ist, sondern ob sie überhaupt noch deine ist. Unter dem Gefühl liegt Geschichte."
+        ],
+        "kernel": "Unter dem Gefühl liegt Geschichte.",
+        "bridge": "Nietzsche ist nicht der Zerstörer, als der er gern gelesen wird – er ist der ehrlichste Diagnostiker dessen, was wir geerbt haben. Aber er hinterlässt dich an einem seltsamen Ort: Jedes Warum hat nur weitere Geschichte freigelegt, und ein Boden ist nicht gekommen. Levinas gräbt hier nicht weiter. Er dreht sich um – und schaut nicht tiefer, sondern davor."
+      },
+      "image_prompt": "Exposed strata in an old wall or earthen cut – layer upon layer of worn plaster and sediment, each laid down by hands long gone, the newest surface resting unknowingly on all of them. Depth as inheritance, quiet gravity, no ruin.",
+      "transition": "Nietzsche ist nicht der Zerstörer, als der er gern gelesen wird – er ist der ehrlichste Diagnostiker dessen, was wir geerbt haben. Aber er hinterlässt dich an einem seltsamen Ort: Jedes Warum hat nur weitere Geschichte freigelegt, und ein Boden ist nicht gekommen. Levinas gräbt hier nicht weiter. Er dreht sich um – und schaut nicht tiefer, sondern davor."
     },
     {
       "nodeId": "levinas",
       "nodeType": "thinker",
-      "transition": "Levinas dreht die Frage um. Statt zu fragen ›Warum solltest du?‹, beobachtet er, was schon passiert ist, bevor du fragen konntest: Du hast jemanden gesehen. Ein Gesicht. Und in diesem Sehen warst du bereits angesprochen, bereits verantwortlich. Das ist keine Begründung, das ist eine Beschreibung. Schau selbst, ob sie trägt."
+      "ton": "erzählend-erfahrend",
+      "narrative": {
+        "hook": "In der Bahn setzt sich dir jemand gegenüber und sieht dich einen Moment an. Nichts geschieht – und doch ist etwas geschehen: Du kannst jetzt wegsehen oder nicken oder lächeln, aber du kannst nicht mehr nichts tun. Sogar das Wegsehen ist schon eine Antwort. Niemand hat dich gefragt, ob du das willst. Du warst beteiligt, bevor du dich entscheiden konntest.",
+        "body": [
+          "Levinas gräbt nicht weiter. Drei Stationen lang hat das Warum Schicht um Schicht freigelegt und keinen Boden gefunden. Und er sagt: Vielleicht sucht die Frage in der falschen Richtung. Statt nach dem Grund deines Sollens zu graben, beschreibt er, was geschieht, wenn dir ein anderer Mensch gegenübersteht. Das Gesicht des Anderen – Levinas nennt es das Antlitz – spricht dich an, bevor du es einordnen, beurteilen, befragen kannst. Es sagt nichts Hörbares, und doch geht von ihm eine Forderung aus. Levinas hört in ihr das älteste Gebot, ›Du sollst nicht töten‹, und in ihrem leisesten Alltagston: Lass mich nicht fallen. Diese Forderung ergeht von ihm, nicht aus dir: Du hast sie nicht aus Prinzipien abgeleitet und nicht aus Gefühlen gebildet, du warst schon in ihr, als du sie bemerkt hast. Verantwortung, sagt Levinas, kommt vor der Freiheit: Du wirst nicht erst ein Ich, das dann wählt, ob es antwortet – du wirst zum Ich, indem du angesprochen bist. Das ist keine neue Begründung, die dem Weiterfragen besser standhält. Es ist eine Beschreibung dessen, was vor allem Fragen schon geschehen war."
+        ],
+        "kernel": "Es ist eine Beschreibung dessen, was vor allem Fragen schon geschehen war.",
+        "bridge": "Ob diese Beschreibung trägt, kannst nur du prüfen – am nächsten Gesicht, das dich ansieht. Sie beantwortet das Warum nicht. Sie behauptet, dass du nie auf die Antwort gewartet hast, um schon in der Pflicht zu sein. Damit ist der Bogen an seinem Ende: nicht bei einem neuen Fundament, sondern bei der Frage, ob die Suche nach dem Fundament je der richtige Weg war."
+      },
+      "image_prompt": "A narrow threshold with warm light falling through it toward the viewer, reaching their side of the frame – an address arriving before any step is taken. Nothing demanding in the light, yet impossible to be untouched by it. Stillness that faces you.",
+      "transition": "Ob diese Beschreibung trägt, kannst nur du prüfen – am nächsten Gesicht, das dich ansieht. Sie beantwortet das Warum nicht. Sie behauptet, dass du nie auf die Antwort gewartet hast, um schon in der Pflicht zu sein. Damit ist der Bogen an seinem Ende: nicht bei einem neuen Fundament, sondern bei der Frage, ob die Suche nach dem Fundament je der richtige Weg war."
     }
   ],
 
-  "closing_synthesis": "Vier Stationen, eine Bewegung von der Begründung weg. Kant baut das Fundament aus Vernunft. Hume legt offen, dass darunter Gefühl liegt. Nietzsche fragt, was unter dem Gefühl liegt – und findet keine Letztbegründung mehr. An dieser Stelle wäre Schwindel die naheliegende Antwort. Levinas geht einen anderen Weg: Er gibt die Begründung auf und schaut, was tatsächlich passiert, wenn ein anderer Mensch vor dir steht. Was die Lectio dir zurücklässt, ist keine Theorie der Ethik. Es ist die Frage, ob die Begründungs-Suche überhaupt der richtige Weg war – oder ob da etwas anderes ist, das vor der Begründung kommt. Du musst nicht zustimmen. Aber du hast die Möglichkeit gesehen.",
-
-  "closing_question": "Denk an eine Situation, in der du etwas getan hast, ohne lange zu überlegen – geholfen, geblieben, angerufen, dich gemeldet. Hattest du dafür einen Grund? Oder war der Grund erst nachher da, als Erklärung für etwas, das vorher schon geschehen war?"
+  "closing_synthesis": "Vier Stationen, eine Bewegung von der Begründung weg. Kant baut das Fundament aus Vernunft – es hält, solange die Vernunft trägt. Hume schaut darunter und findet Gefühl. Nietzsche fragt weiter und findet unter dem Gefühl Geschichte, und nirgends mehr eine Letztbegründung. Levinas gräbt nicht tiefer: Er beschreibt, was geschieht, wenn ein anderer Mensch vor dir steht – und was schon geschehen war, bevor du nach Gründen fragen konntest.\nWas die Lectio dir zurücklässt, ist keine Theorie der Ethik. Es ist die Frage, ob die Suche nach dem Fundament je der richtige Weg war – oder ob da etwas ist, das vor allem Fragen kommt. Du musst nicht zustimmen. Aber du hast die Möglichkeit gesehen.",
+  "closing_kernel": "ob die Suche nach dem Fundament je der richtige Weg war",
+  "closing_question": "Denk an eine Situation, in der du etwas getan hast, ohne lange zu überlegen – geholfen, geblieben, angerufen, dich gemeldet. Hattest du dafür einen Grund? Und falls ja – hätte er einem weiteren Warum standgehalten?"
 }
