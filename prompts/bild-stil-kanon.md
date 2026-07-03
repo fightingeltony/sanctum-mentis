@@ -48,8 +48,8 @@ Anmerkungen:
 1. **Gefühlskurve bestimmen** — kuratorisch, pro Lectio, vor jedem Prompt: Welche Stimmung trägt jede Station? (Architekten-Arbeit, nicht delegierbar.)
 2. **Prompts schreiben** — Stil-Block + Subjekt, direkt in die JSON (`image_prompt`), Status auf `prompt-neu`, `image` leer.
 3. **Motive kostenlos testen** — Gemini, ein Bild pro Station. Kriterium: fühlen, nicht fragen. Justieren, bis alle sitzen.
-4. **Finale Produktion** — Higgsfield via Claude Code: Modell Nano Banana 2, 4:5, 2k, Prompt wörtlich. Ablage in `public/lectio-images/<Lectio>/`, Pfad ins `image`-Feld, Status auf `generiert`. Nur Erfolge werden markiert; die Status-Übersicht zeigt Lücken.
-5. **Sichtprüfung** — alle Bilder auf Randartefakte (Rahmen, Vignette, ausgeblichene Zonen) prüfen, bevor committet wird. Einzelne Ausreißer neu generieren (stochastisch), nie per globalem CSS-Zoom kaschieren.
+4. **Finale Produktion** — Higgsfield via Claude Code: Modell Nano Banana 2, 4:5, 2k, Prompt wörtlich. Nach Generierung fürs Repo auf ~800px Breite herunterrechnen, WebP Qualität ~70 — 2k ist Generierungs-, nicht Ablageformat. Ablage als `public/lectio-images/<lectio-id>/<nodeId>.webp`, Pfad ins `image`-Feld, Status auf `generiert`. Nur Erfolge werden markiert; die Status-Übersicht zeigt Lücken.
+5. **Randprüfung** — alle Bilder auf Randartefakte (Rahmen, Vignette, ausgeblichene Zonen) prüfen, bevor committet wird: `node scripts/check-image-edges.js <2k-Original>` (auf dem 2k-Original fahren, nicht auf dem WebP — die Heuristik ist darauf kalibriert), Verdachtsfälle sichten. Die Sichtprüfung allein hat belegte subtile Rahmen zweimal durchgelassen (epikur/marc-aurel-epiktet, 3.7.). Einzelne Ausreißer neu generieren (stochastisch), nie per globalem CSS-Zoom kaschieren.
 6. **Layout** — Darstellung in der Bogen-Nische; Größenentscheidungen am echten Bild im echten Layout treffen, nicht an Beschreibungen.
 
 ## Geltung

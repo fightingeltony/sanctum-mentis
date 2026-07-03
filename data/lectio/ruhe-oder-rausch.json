@@ -12,7 +12,7 @@
     {
       "nodeId": "epikur",
       "nodeType": "thinker",
-      "image": "/lectio-images/ruhe-oder-rausch/epikur.png",
+      "image": "/lectio-images/ruhe-oder-rausch/epikur.webp",
       "narrative": {
         "hook": "Denk an das, worauf du dich freitagabends wirklich freust – wahrscheinlich nicht auf mehr, sondern auf weniger: keine Termine, keine Ansprüche, niemand, der noch etwas von dir will.",
         "body": [
@@ -28,7 +28,7 @@
     {
       "nodeId": "ataraxie",
       "nodeType": "concept",
-      "image": "/lectio-images/ruhe-oder-rausch/ataraxie.png",
+      "image": "/lectio-images/ruhe-oder-rausch/ataraxie.webp",
       "narrative": {
         "hook": "Man könnte das für Epikurs persönliche Marotte halten – die Vorliebe eines Mannes, der das Getümmel scheute. Doch dann fällt auf, wie viele der großen Schulen genau dasselbe Ziel ansteuern.",
         "body": [
@@ -47,7 +47,7 @@
         "epiktet"
       ],
       "nodeType": "thinker",
-      "image": "/lectio-images/ruhe-oder-rausch/marc-aurel-epiktet.png",
+      "image": "/lectio-images/ruhe-oder-rausch/marc-aurel-epiktet.webp",
       "narrative": {
         "hook": "Stell dir einen Menschen vor, dem man alles nehmen kann – den Besitz, die Gesundheit, am Ende das Leben selbst – und der dennoch ruhig bleibt; Epiktet wurde als Sklave geboren und wurde genau dieser Mensch.",
         "body": [
@@ -63,7 +63,7 @@
     {
       "nodeId": "nietzsche",
       "nodeType": "thinker",
-      "image": "/lectio-images/ruhe-oder-rausch/nietzsche.png",
+      "image": "/lectio-images/ruhe-oder-rausch/nietzsche.webp",
       "narrative": {
         "hook": "Denk an einen Moment, den du nie wieder durchleben möchtest, weil er zu sehr wehtat. Und jetzt die ungeheure Frage: Könntest du ihn wollen?",
         "body": [

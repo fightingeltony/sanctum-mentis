@@ -14,7 +14,7 @@
       "nodeId": "aristoteles",
       "nodeType": "thinker",
       "ton": "erzählend-erfahrend",
-      "image": "/lectio-images/wenn-die-welt-wackelt/aristoteles.png",
+      "image": "/lectio-images/wenn-die-welt-wackelt/aristoteles.webp",
       "narrative": {
         "hook": "Du greifst nach der Tasse, und sie ist da – du prüfst nicht, ob die Farbe in dir oder in ihr sitzt, ob der Tisch trägt, ob hinter deinen Wahrnehmungen wirklich eine Welt liegt. Du greifst, und die Welt ist selbstverständlich. So lebst du die meiste Zeit: in einer Welt, die steht, bevor du über sie nachdenkst.",
         "body": [
@@ -31,7 +31,7 @@
       "nodeId": "berkeley",
       "nodeType": "thinker",
       "ton": "erzählend-erfahrend",
-      "image": "/lectio-images/wenn-die-welt-wackelt/berkeley.png",
+      "image": "/lectio-images/wenn-die-welt-wackelt/berkeley.webp",
       "narrative": {
         "hook": "Schau auf irgendetwas in deiner Nähe – die Tasse, deine Hand, das Licht am Fenster. Alles, was du davon hast, kommt durch deine Sinne: Farbe, Form, Wärme, Gewicht. Jetzt versuch, die Tasse zu fassen, wie sie für sich ist – ohne dein Sehen, ohne dein Tasten, einfach die nackte Sache. Du kommst nicht ran. Immer schiebt sich eine Wahrnehmung dazwischen.",
         "body": [
@@ -48,7 +48,7 @@
       "nodeId": "kant",
       "nodeType": "thinker",
       "ton": "nüchtern-klar",
-      "image": "/lectio-images/wenn-die-welt-wackelt/kant.png",
+      "image": "/lectio-images/wenn-die-welt-wackelt/kant.webp",
       "narrative": {
         "hook": "Nach Berkeley steht eine unangenehme Frage im Raum: Wenn du nie an die Welt selbst herankommst, sondern immer nur an deine Wahrnehmung – bist du dann in deinem eigenen Kopf eingesperrt? Kant findet einen Ausweg. Aber er ist teuer.",
         "body": [
@@ -65,7 +65,7 @@
       "nodeId": "kuhn",
       "nodeType": "thinker",
       "ton": "erzählend-erfahrend",
-      "image": "/lectio-images/wenn-die-welt-wackelt/kuhn.png",
+      "image": "/lectio-images/wenn-die-welt-wackelt/kuhn.webp",
       "narrative": {
         "hook": "Es gibt einen letzten Ort, an dem die meisten von uns noch festen Boden vermuten: die Wissenschaft. Philosophen mögen streiten, Kulturen mögen verschieden sehen – aber die Wissenschaft, denkt man, gräbt sich Stück für Stück an die Wirklichkeit heran, gesichert, nachprüfbar, fest. Kuhn hat sich die Geschichte der Wissenschaft angesehen und etwas anderes gefunden.",
         "body": [
@@ -82,7 +82,7 @@
       "nodeId": "rorty",
       "nodeType": "thinker",
       "ton": "erzählend-erfahrend",
-      "image": "/lectio-images/wenn-die-welt-wackelt/rorty.png",
+      "image": "/lectio-images/wenn-die-welt-wackelt/rorty.webp",
       "narrative": {
         "hook": "Du hast einmal für etwas eingestanden – eine politische Überzeugung, eine Haltung, etwas, das dir wichtig war. Du warst sicher, im Recht zu sein. Und dann, in einem stillen Moment, kam der Gedanke: Worauf stützt sich diese Sicherheit eigentlich? Gibt es einen festen Punkt außerhalb meiner eigenen Maßstäbe, von dem aus sich zeigen ließe, dass ich recht habe – oder messe ich nur mit dem Maß, das ich ohnehin schon mitbringe?",
         "body": [
@@ -99,7 +99,7 @@
       "nodeId": "gabriel",
       "nodeType": "thinker",
       "ton": "erzählend-erfahrend",
-      "image": "/lectio-images/wenn-die-welt-wackelt/gabriel.png",
+      "image": "/lectio-images/wenn-die-welt-wackelt/gabriel.webp",
       "narrative": {
         "hook": "Nach Rorty könnte man stehen bleiben, schwindlig, und sagen: Dann gibt es eben keinen Boden, gewöhn dich dran. Manche tun das. Aber es nagt – denn ganz ohne Boden lebt es sich nicht, du handelst ja doch, urteilst doch, hältst manches für wahrer als anderes. Gabriel fragt, ob der Schwindel wirklich das letzte Wort sein muss.",
         "body": [
