@@ -53,7 +53,28 @@
       "Bash(git clone *)",
       "Read(//c/Users/fabia/Desktop/impeccable-tmp/dist/claude-code/**)",
       "Read(//c/Users/fabia/Desktop/impeccable-tmp/dist/claude-code/.claude/**)",
-      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('data/kingsbridge.json','utf8'\\)\\); console.log\\('kingsbridge.json: OK'\\); JSON.parse\\(require\\('fs'\\).readFileSync\\('data/kingsbridge-2.json','utf8'\\)\\); console.log\\('kingsbridge-2.json: OK'\\);\")"
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('data/kingsbridge.json','utf8'\\)\\); console.log\\('kingsbridge.json: OK'\\); JSON.parse\\(require\\('fs'\\).readFileSync\\('data/kingsbridge-2.json','utf8'\\)\\); console.log\\('kingsbridge-2.json: OK'\\);\")",
+      "Read(//c/Users/fabia/Downloads/**)",
+      "Bash(unzip -o Reall.zip -d Reall_tmp)",
+      "Bash(cp \"C:\\\\Users\\\\fabia\\\\Downloads\\\\Reall_tmp\\\\realismus-und-konstruktivismus.json\" \"C:\\\\Users\\\\fabia\\\\Desktop\\\\Claude Code\\\\sanctum-mentis\\\\data\\\\realismus-und-konstruktivismus.json\")",
+      "Bash(unzip -o geistt.zip -d geistt_tmp)",
+      "Bash(cp \"C:\\\\Users\\\\fabia\\\\Downloads\\\\geistt_tmp\\\\philosophie-des-geistes.json\" \"C:\\\\Users\\\\fabia\\\\Desktop\\\\Claude Code\\\\sanctum-mentis\\\\data\\\\philosophie-des-geistes.json\")",
+      "Bash(unzip -o subbi.zip -d subbi_tmp)",
+      "Bash(xargs grep -l \"library\\\\|subtitle\")",
+      "Bash(dir \"C:\\\\Users\\\\fabia\\\\Downloads\\\\\" /b 2>nul | findstr -i \"bibliothek\\\\|subtitle\\\\|subbi\")",
+      "Bash(ls /mnt/c/Users/fabia/Downloads/ | grep -i \"bibliothek\\\\|subtitle\\\\|subbi\")",
+      "Bash(cp \"/c/Users/fabia/Downloads/subbi_tmp/bibliothek-architektur.md\" \"/c/Users/fabia/Desktop/Claude Code/sanctum-mentis/bibliothek-architektur.md\" && echo \"copied\")",
+      "Bash(grep -E \"\\\\.md$\")",
+      "Bash(npm run *)",
+      "Bash(powershell -command \"Expand-Archive -Path 'mode.zip' -DestinationPath 'mode-extract' -Force\")",
+      "Bash(powershell -Command \"Expand-Archive -Path 'dsfsd.zip' -DestinationPath 'dsfsd_extracted' -Force\")",
+      "Bash(ls *.md)",
+      "Bash(find . -maxdepth 2 -name \"*.md\" ! -path \"*/node_modules/*\")",
+      "Bash(cp \"C:\\\\Users\\\\fabia\\\\Downloads\\\\dsfsd_extracted\\\\lectio-mode.md\" \"C:\\\\Users\\\\fabia\\\\Desktop\\\\Claude Code\\\\sanctum-mentis\\\\prompts\\\\lectio-mode.md\" && echo \"done\")",
+      "Bash(node)",
+      "Bash(unzip -l existenzialismus.zip)",
+      "Bash(unzip -o existenzialismus.zip -d existenzialismus-extracted)",
+      "Bash(python -c \"import json,sys; d=json.load\\(sys.stdin\\); t=d['topic']; print\\('ID:', t['id']\\); print\\('Title:', t['title']\\); print\\('Subtitle:', t.get\\('subtitle',''\\)\\); print\\('Denker:', len\\(d['thinkers']\\)\\); print\\('Schulen:', len\\(d['schools']\\)\\); print\\('Konzepte:', len\\(d['concepts']\\)\\); print\\('Einflüsse:', len\\(d['influences']\\)\\); print\\('Levels:', len\\(d['levels']\\)\\); print\\('Theme accent:', t.get\\('theme',{}\\).get\\('accent',''\\)\\)\")"
     ]
   }
 }
