@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
 import type { Lectio, LectioNarrative, TopicData } from '@/lib/types'
 
@@ -282,10 +283,14 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
                   >
                     <div className="halo" aria-hidden />
                     <div className="niche">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      {/* eager wie das frühere <img>: die Crossfade-Stage hält
+                          Stationen gestapelt/geclippt — lazy würde nie triggern */}
+                      <Image
                         src={step.image!}
                         alt=""
+                        fill
+                        sizes="300px"
+                        loading="eager"
                         className="niche-img"
                       />
                     </div>

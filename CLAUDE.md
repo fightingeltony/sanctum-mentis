@@ -225,7 +225,9 @@ Ergänzend zu Tableau-Bauten gibt es Lectios — geführte Pfade durch ein Table
 
 **Datenort:** `data/lectio/[id].json`. Loader in `src/lib/data.ts` (LECTIOS-Dictionary), Route `/lectio/[id]`.
 
-**Lectio-Bilder:** Maßgeblich ist `prompts/bild-stil-kanon.md` (v2, Stand 3.7.26) — Kernregel: Das Bild trägt die Stimmung der Station, nie ihre These. Ablage: `public/lectio-images/<lectio-id>/<nodeId>.webp` (~800px, q70 — 2k ist Generierungs-, nicht Ablageformat). Vor dem Commit Randartefakte prüfen: `node scripts/check-image-edges.js <2k-Original>` (Sichtprüfung allein hat belegte subtile Rahmen übersehen). Felder pro Station: `image_prompt` (Pflicht bei Bau), `image_status` (`prompt-neu`/`generiert`), `image`.
+**Lectio-Bilder:** Maßgeblich ist `prompts/bild-stil-kanon.md` (v2, Stand 3.7.26) — Kernregel: Das Bild trägt die Stimmung der Station, nie ihre These. Vor dem Commit Randartefakte prüfen: `node scripts/check-image-edges.js <2k-Original>` (Sichtprüfung allein hat belegte subtile Rahmen übersehen). Felder pro Station: `image_prompt` (Pflicht bei Bau), `image_status` (`prompt-neu`/`generiert`), `image`.
+
+> **Bild-Pipeline Lectio (Workflow-Standard):** Generiert wird in 2k (Arbeits-/Archivqualität). 2k-Master bleiben **außerhalb von `public/`** — lokal im gitignorierten `arbeitsbilder/`-Ordner parken. Abgelegt im Repo wird ausschließlich die Auslieferungsversion: **~800 px längste Kante, WebP q70** (sharp: `resize({width:800,height:800,fit:'inside'})`), unter `public/lectio-images/<lectio-id>/<nodeId>.webp` (bei Doppelstationen die nodeId-Teile mit Bindestrich verbunden). Anzeige läuft über `next/image` (Bogen-Nische im LectioNarrativeViewer). Derselbe Ablage-Absatz steht in `prompts/bild-stil-kanon.md` (Workflow Punkt 4) — bei Änderung beide mitziehen.
 
 > **Wartung:** Wird eine Anleitung maßgeblich gesetzt oder eine Lectio registriert/entfernt, hier den Anleitungs-Verweis und die Lectio-Liste mitziehen. Die Registrierungs-Parität (Datei ↔ `data.ts`) prüft Vitest automatisch (Regel 10); der Anleitungs-Verweis ist manuell. Bei neuer Lectio auch `REGISTERED_IDS` in `data-validation.test.ts` ergänzen.
 

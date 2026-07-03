@@ -16,6 +16,7 @@
 //
 // Aufruf:  node scripts/check-image-edges.js <bild> [<bild> ...]
 // Exit-Code 1, wenn mindestens ein Bild Verdacht zeigt.
+// eslint-disable-next-line @typescript-eslint/no-require-imports -- Node-CLI-Skript, kein ESM
 const sharp = require('sharp');
 
 async function stats(file, region) {
