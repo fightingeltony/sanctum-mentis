@@ -52,6 +52,52 @@ export function getTopic(id: string): TopicData | null {
   return TOPICS[id] ?? null
 }
 
+// ─── Landing-Extrakt ─────────────────────────────────────────
+// Schlanker TopicData-Abzug für die selbstspielende Landing-Sternkarte.
+// Geometrie und Versions-SCHLÜSSEL bleiben erhalten (Sichtbarkeit,
+// isNew/isDeepened und Linien pro Level bleiben identisch), die Texte
+// werden durch ein Leerzeichen ersetzt — sie machen ~85% des Payloads aus.
+// Die Volltexte holt LandingStarChart lazy über /api/landing-topic,
+// bevor die Tour startet (gleiches Muster wie der Suchindex).
+
+export const LANDING_TOPIC_ID = 'das-selbst'
+
+function blankVersions(versions: Record<number, string>): Record<number, string> {
+  const out: Record<number, string> = {}
+  for (const k of Object.keys(versions)) out[Number(k)] = ' '
+  return out
+}
+
+export function getLandingChartData(id: string): TopicData | null {
+  const full = TOPICS[id]
+  if (!full) return null
+  return {
+    topic: {
+      id: full.topic.id,
+      title: full.topic.title,
+      complexityLevels: full.topic.complexityLevels,
+      quadrants: full.topic.quadrants,
+    },
+    levels: full.levels,
+    schools: full.schools,
+    thinkers: full.thinkers.map(t => ({
+      id: t.id, name: t.name, schoolId: t.schoolId, lifespan: t.lifespan,
+      x: t.x, y: t.y, firstLevel: t.firstLevel,
+      versions: blankVersions(t.versions),
+    })),
+    influences: full.influences.map(i => ({
+      from: i.from, to: i.to, type: i.type, firstLevel: i.firstLevel,
+      versions: blankVersions(i.versions),
+    })),
+    concepts: full.concepts.map(c => ({
+      id: c.id, name: c.name, x: c.x, y: c.y, type: c.type,
+      schoolId: c.schoolId, primaryThinker: c.primaryThinker,
+      labelOffset: c.labelOffset, firstLevel: c.firstLevel,
+      versions: blankVersions(c.versions),
+    })),
+  }
+}
+
 export function getAllTopics(): TopicData[] {
   return Object.values(TOPICS)
 }

@@ -1,12 +1,11 @@
 import Link from 'next/link'
-import { getTopic } from '@/lib/data'
+import { getLandingChartData, LANDING_TOPIC_ID } from '@/lib/data'
 import LandingStarChart from '@/components/LandingStarChart'
 
-const FEATURED_ID = 'das-selbst'
-
 export default function LandingPage() {
-  // Titel aus dem echten Tableau ziehen (Server-side, kein extra Bundle)
-  const featured = getTopic(FEATURED_ID)
+  // Schlankes Extrakt statt vollem Tableau — die Volltexte lädt
+  // LandingStarChart lazy über /api/landing-topic
+  const featured = getLandingChartData(LANDING_TOPIC_ID)
   return (
     <section className="px-8 md:px-12 py-16 md:py-28 max-w-[820px] mx-auto">
 

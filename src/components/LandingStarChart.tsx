@@ -1,7 +1,10 @@
 'use client'
 
 // LandingStarChart — selbstspielende Sternkarte für die Landing-Page.
-// Daten kommen als Server-Prop; data.ts ist server-only.
+// Als Server-Prop kommt nur das schlanke Extrakt (getLandingChartData:
+// Geometrie + Versions-Schlüssel, Texte geleert) — die Volltexte werden
+// lazy über /api/landing-topic geholt, bevor die Tour startet.
+// data.ts ist server-only.
 
 import {
   useState, useEffect, useRef, useMemo, useCallback,
@@ -13,6 +16,7 @@ import type { TopicData, Level } from '@/lib/types'
 // ─── Props ───────────────────────────────────────────────────────────────────
 
 interface Props {
+  /** Schlankes Extrakt aus getLandingChartData — strukturell ein TopicData */
   data: TopicData
 }
 
@@ -25,7 +29,25 @@ interface TourHandle {
 
 // ─── Component ───────────────────────────────────────────────────────────────
 
-export default function LandingStarChart({ data }: Props) {
+export default function LandingStarChart({ data: extract }: Props) {
+  // ── Volldaten lazy nachladen ──────────────────────────────────────────────
+  // Das Extrakt rendert die Karte pixelgleich (Positionen, Labels, Linien);
+  // nur Cartouche-/Akkordeon-Texte brauchen die Volldaten. Die Tour wartet,
+  // bis der Fetch abgeschlossen ist (settled — auch bei Fehler startet sie,
+  // dann mit leeren Texten als Fallback).
+  const [fullData, setFullData] = useState<TopicData | null>(null)
+  const [dataSettled, setDataSettled] = useState(false)
+  useEffect(() => {
+    let alive = true
+    fetch('/api/landing-topic')
+      .then(r => (r.ok ? r.json() : null))
+      .then((d: TopicData | null) => { if (alive && d) setFullData(d) })
+      .catch(() => {})
+      .finally(() => { if (alive) setDataSettled(true) })
+    return () => { alive = false }
+  }, [])
+  const data = fullData ?? extract
+
   // ── Level state ───────────────────────────────────────────────────────────
   const [levelId, setLevelId] = useState(1)
   const state = useMemo(
@@ -289,7 +311,9 @@ export default function LandingStarChart({ data }: Props) {
       entries => {
         const entry = entries[0]
         if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
-          if (!wasVisible && !userPausedRef.current) {
+          // dataSettled: Tour erst starten, wenn die Volldaten da sind —
+          // sonst scrollte die Cartouche-Station durch leeren Text
+          if (!wasVisible && !userPausedRef.current && dataSettled) {
             wasVisible = true
             runTour()
           }
@@ -313,7 +337,7 @@ export default function LandingStarChart({ data }: Props) {
       observer.disconnect()
       cancelTour()
     }
-  }, [data, runTour, cancelTour])
+  }, [data, dataSettled, runTour, cancelTour])
 
   // ── Play button handler ───────────────────────────────────────────────────
   // Fix #2: read from ref, not React state — avoids stale-closure race
