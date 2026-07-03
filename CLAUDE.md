@@ -60,6 +60,8 @@ Das letzte Wort vor `[[` wird als Term verwendet. Führende Satzzeichen (z.B. `(
 ### Tailwind v4 Hinweis
 `text-[--varname]` und `border-[--varname]` generieren **kein** `color: var(--varname)` in Tailwind v4. Für CSS-Custom-Properties immer `style={{ color: 'var(--accent)' }}` verwenden.
 
+Seit 3.7.26 sind die Primärtokens als echte Utilities verfügbar (`@theme inline` in globals.css): `text-fg/-muted/-faint/-dim`, `text-accent`, `text-gold(-soft)`, `border-hairline(-strong)`, `border-gold(-soft)`, `bg-raised`, `bg-sunk`, `bg-accent-soft`. In neuem Code diese verwenden statt `text-[var(--fg)]`-Arbitrary-Values. `inline` ist Pflicht — sonst friert der per-Thema-Accent-Override auf dem `:root`-Wert fest. Aliase (`--surface`, `--ink`, …) bewusst nicht im `@theme`.
+
 ## Daten-Modell
 
 | Domain-Begriff   | Variable     | Bedeutung                                            |
