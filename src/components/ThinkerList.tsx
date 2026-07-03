@@ -4,24 +4,14 @@ import React, { useState, useEffect, useRef } from 'react'
 import type { Thinker, School, Level } from '@/lib/types'
 import { Annotated } from '@/lib/annotations'
 
-/** Fades in whenever `text` changes — covers both new thinkers and level-up text updates */
+/** Fades in whenever `text` changes — covers both new thinkers and level-up text updates.
+ *  key={text} remountet den Absatz; die @starting-style-Transition von
+ *  .thinker-text-fade (globals.css) spielt bei jedem Mount. */
 function FadingParagraph({ text, level, className, style }: {
   text: string; level: number; className?: string; style?: React.CSSProperties
 }) {
-  const ref = useRef<HTMLParagraphElement>(null)
-  const prevText = useRef(text)
-
-  useEffect(() => {
-    if (prevText.current !== text && ref.current) {
-      prevText.current = text
-      ref.current.classList.remove('thinker-text-fade')
-      void ref.current.offsetWidth // force reflow to restart animation
-      ref.current.classList.add('thinker-text-fade')
-    }
-  }, [text])
-
   return (
-    <p ref={ref} className={`thinker-text-fade${className ? ` ${className}` : ''}`} style={style}>
+    <p key={text} className={`thinker-text-fade${className ? ` ${className}` : ''}`} style={style}>
       <Annotated text={text} level={level} />
     </p>
   )
@@ -244,7 +234,6 @@ export default function ThinkerList({
                   text={t.description}
                   level={currentLevel.id}
                   className="font-prose text-[14px] leading-relaxed text-[var(--fg-muted)]"
-                  style={{ textWrap: 'pretty' } as React.CSSProperties}
                 />
               </div>
             )
@@ -319,7 +308,6 @@ function GroupedList({
                     text={t.description}
                     level={level}
                     className="font-ui text-[13px] leading-relaxed text-[var(--fg-muted)]"
-                    style={{ textWrap: 'pretty' } as React.CSSProperties}
                   />
                 </div>
               ))}

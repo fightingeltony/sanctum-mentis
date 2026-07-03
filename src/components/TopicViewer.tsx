@@ -196,7 +196,6 @@ export default function TopicViewer({ data, lectios }: Props) {
           <div className="flex flex-col gap-1">
             <h2
               className="font-prose text-[24px] font-medium leading-tight text-[var(--fg)] mt-1.5"
-              style={{ textWrap: 'balance' } as React.CSSProperties}
             >
               {data.topic.title}
             </h2>

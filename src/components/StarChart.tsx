@@ -1263,7 +1263,7 @@ export default function StarChart({
   }, [levelId])
 
   // ── Select / deselect ─────────────────────────────────────
-  const deselect = useCallback(() => {
+  const deselectNow = useCallback(() => {
     selectedRef.current = null
     setSelected(null)
     setSelectedConceptId(null)
@@ -1271,6 +1271,31 @@ export default function StarChart({
     Object.values(edgeRefs.current).forEach(r => r?.g?.classList.remove('sc-lit'))
     Object.values(starGRefs.current).forEach(g => g?.classList.remove('sc-active', 'sc-neighbor'))
   }, [])
+
+  // Sheet-Exit: auf Mobile das Schließen 230ms verzögern, damit das
+  // Bottom-Sheet per [data-closing]-Transition hinausgleiten kann statt
+  // hart zu unmounten. Desktop und reduced-motion schließen sofort.
+  const [sheetClosing, setSheetClosing] = useState(false)
+  const sheetCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const cancelSheetClose = useCallback(() => {
+    if (sheetCloseTimer.current) { clearTimeout(sheetCloseTimer.current); sheetCloseTimer.current = null }
+    setSheetClosing(false)
+  }, [])
+  useEffect(() => () => { if (sheetCloseTimer.current) clearTimeout(sheetCloseTimer.current) }, [])
+
+  const deselect = useCallback(() => {
+    if (sheetCloseTimer.current) return // Exit läuft bereits
+    const sheetShowing = isMobile && (selectedRef.current !== null || selectedConceptId !== null)
+    const reduce = typeof window !== 'undefined'
+      && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (!sheetShowing || reduce) { deselectNow(); return }
+    setSheetClosing(true)
+    sheetCloseTimer.current = setTimeout(() => {
+      sheetCloseTimer.current = null
+      setSheetClosing(false)
+      deselectNow()
+    }, 230)
+  }, [isMobile, selectedConceptId, deselectNow])
   // Intentional render-time ref write: deselectRef is read inside onStagePointerUp (pointer
   // event handler) which can't use React state. Ref-as-stable-callback-alias is the standard
   // pattern for breaking stale-closure cycles without re-creating the handler on every render.
@@ -1278,17 +1303,19 @@ export default function StarChart({
   deselectRef.current = deselect
 
   const selectConcept = useCallback((id: string) => {
+    cancelSheetClose() // Neuauswahl während Sheet-Exit: geplantes Deselect verwerfen
     selectedRef.current = null
     setSelected(null)
     setSelectedConceptId(id)
     svgRef.current?.classList.remove('sc-focus')
     Object.values(edgeRefs.current).forEach(r => r?.g?.classList.remove('sc-lit'))
     Object.values(starGRefs.current).forEach(g => g?.classList.remove('sc-active', 'sc-neighbor'))
-  }, [])
+  }, [cancelSheetClose])
 
   const selectStar = useCallback((id: string) => {
     const t = thinkerById[id]
     if (!t) return
+    cancelSheetClose() // Neuauswahl während Sheet-Exit: geplantes Deselect verwerfen
     selectedRef.current = id
     setSelected(id)
     setSelectedConceptId(null)
@@ -1297,11 +1324,10 @@ export default function StarChart({
     Object.values(starGRefs.current).forEach(g => g?.classList.remove('sc-active', 'sc-neighbor'))
     applyFocus(id, (adjacency[id] ?? []).map(a => a.edgeId))
     markRead(t)
-  }, [thinkerById, adjacency, applyFocus, markRead])
+  }, [thinkerById, adjacency, applyFocus, markRead, cancelSheetClose])
 
   // Auto-deselect if selected thinker no longer visible
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- deselect() also cleans up DOM class state (sc-focus/sc-active/sc-neighbor); cannot be replaced by a derived value
     if (selected && !thinkerById[selected]) deselect()
   }, [thinkers, selected, thinkerById, deselect])
 
@@ -1885,7 +1911,10 @@ export default function StarChart({
                   aria-hidden
                 >▾</span>
               </button>
-              {typeLegendOpen && (
+              <div
+                className={'sc-collapse' + (typeLegendOpen ? '' : ' sc-collapse-closed')}
+                aria-hidden={!typeLegendOpen}
+              >
                 <div className="sc-tl-body">
                   {(Object.keys(CONCEPT_GLYPH) as Array<keyof typeof CONCEPT_GLYPH>).map(t => (
                     <span key={t} className="sc-tl-item">
@@ -1894,7 +1923,7 @@ export default function StarChart({
                     </span>
                   ))}
                 </div>
-              )}
+              </div>
             </div>
           )}
         </div>
@@ -1904,8 +1933,8 @@ export default function StarChart({
       {/* ── Mobile bottom-sheet cartouche ── */}
       {isMobile && (selectedThinker || selectedConcept) && (
         <>
-          <div className="sc-sheet-scrim" onClick={deselect} aria-hidden />
-          <div className="sc-sheet" role="dialog" aria-label={selectedThinker ? selectedThinker.name : selectedConcept?.name} onClick={e => e.stopPropagation()}>
+          <div className="sc-sheet-scrim" data-closing={sheetClosing || undefined} onClick={deselect} aria-hidden />
+          <div className="sc-sheet" data-closing={sheetClosing || undefined} role="dialog" aria-label={selectedThinker ? selectedThinker.name : selectedConcept?.name} onClick={e => e.stopPropagation()}>
             {/* Drag handle — fixed at top, not scrolled */}
             <div style={{ flex: '0 0 auto', display: 'flex', justifyContent: 'center', padding: '10px 0 4px' }}>
               <div style={{ width: 36, height: 4, borderRadius: 2, background: 'var(--hairline-strong)' }} />
@@ -2073,7 +2102,10 @@ function CartoucheContent({
             </span>
             <span style={{ fontSize: 12, fontWeight: 600, transition: 'transform 200ms', transform: conceptsOpen ? 'rotate(180deg)' : 'none', color: 'var(--fg-muted)' }}>▾</span>
           </button>
-          {conceptsOpen && (
+          <div
+            className={'sc-collapse' + (conceptsOpen ? '' : ' sc-collapse-closed')}
+            aria-hidden={!conceptsOpen}
+          >
             <ul style={{ listStyle: 'none', margin: 0, padding: '0 14px 12px', display: 'flex', flexDirection: 'column', gap: 10 }}>
               {anchoredConcepts.map(c => (
                 <li key={c.id}>
@@ -2089,7 +2121,7 @@ function CartoucheContent({
                 </li>
               ))}
             </ul>
-          )}
+          </div>
         </div>
       )}
       {/* Relations */}

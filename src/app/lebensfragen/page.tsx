@@ -28,8 +28,7 @@ export default function LebensfragenPage() {
         Lebensfragen
       </p>
       <h1 className="font-prose font-medium text-[28px] md:text-[36px] leading-[1.15]
-        text-[var(--fg)] mb-4"
-        style={{ textWrap: 'balance' } as React.CSSProperties}>
+        text-[var(--fg)] mb-4">
         Wenn eine Frage dich nicht loslässt
       </h1>
       <p className="font-body text-[16px] text-[var(--fg-muted)] leading-relaxed mb-14 max-w-[56ch]">

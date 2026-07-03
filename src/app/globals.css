@@ -48,6 +48,8 @@
   --ink:              oklch(0.17 0.018 65);
   --ink-faded:        oklch(0.30 0.015 65);
 
+  /* K2: erlaubt height/width-Transitions von 0 nach auto (progressive enhancement) */
+  interpolate-size: allow-keywords;
 }
 
 html {
@@ -64,9 +66,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
 }
+
+/* ── Text-Umbruch: Absätze ohne Hurenkinder-Zeilen, Überschriften ausbalanciert ── */
+p, li { text-wrap: pretty; }
+h1, h2, h3 { text-wrap: balance; }
 
 ::selection {
   background: var(--selection-bg);
@@ -78,6 +84,10 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
+/* Standard-Properties (Firefox u.a.). Hinweis: Chromium ignoriert die
+   ::-webkit-scrollbar-Regeln, sobald scrollbar-color gesetzt ist — dort
+   rendert die native dünne Scrollbar in denselben Farben. */
+* { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb) transparent; }
 
 /* ── Typography helpers ── */
 .font-display { font-family: var(--font-display), 'Marcellus SC', serif; }
@@ -99,7 +109,7 @@ body {
 .shell {
   display: grid;
   grid-template-columns: 1fr;
-  min-height: 100vh;
+  min-height: 100dvh;
   max-width: 1400px;
   margin: 0 auto;
   overflow-x: clip; /* clip not hidden — clips without creating a scroll container, preserves sticky */
@@ -168,30 +178,25 @@ body {
   inset: 0;
   top: 53px;
   z-index: 35;
-  animation: slideDown 200ms ease-out;
+  transition: opacity 200ms ease-out, transform 200ms ease-out;
 }
-@keyframes slideDown {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .sidebar-rail.open { animation: none; }
+@starting-style {
+  .sidebar-rail.open { opacity: 0; transform: translateY(-8px); }
 }
 @media (min-width: 768px) {
   .sidebar-rail {
     display: flex;
     position: sticky;
     top: 0;
-    height: 100vh;
+    height: 100dvh;
     padding: 3rem;
-    animation: none;
   }
   .sidebar-rail.open {
     position: sticky;
     inset: unset;
     top: 0;
-    height: 100vh;
-    animation: none;
+    height: 100dvh;
+    transition: none;
   }
 }
 
@@ -202,17 +207,13 @@ body {
   top: 53px;
   z-index: 30;
   background: oklch(0 0 0 / 0.5);
-  animation: fadeIn 200ms ease-out;
+  transition: opacity 200ms ease-out;
+}
+@starting-style {
+  .sidebar-overlay { opacity: 0; }
 }
 @media (min-width: 768px) {
   .sidebar-overlay { display: none; }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .sidebar-overlay { animation: none; }
 }
 
 /* ── Persistent slider strip (inside bottom-tab-bar, mobile only) ── */
@@ -305,27 +306,20 @@ body {
 
 /* ── Thinker description text-change fade ── */
 .thinker-text-fade {
-  animation: thinkerTextFade 400ms ease-out both;
+  transition: opacity 400ms ease-out, transform 400ms ease-out;
 }
-@keyframes thinkerTextFade {
-  from { opacity: 0; transform: translateY(3px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .thinker-text-fade { animation: none; }
+@starting-style {
+  .thinker-text-fade { opacity: 0; transform: translateY(3px); }
 }
 
-/* ── Tab content fade-up animation ── */
+/* ── Tab content fade-up ── */
 .tab-content {
-  animation: fadeUp 300ms cubic-bezier(0.22, 1, 0.36, 1) both;
   max-width: 100%;
+  transition: opacity 300ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .tab-content { animation: none; }
+@starting-style {
+  .tab-content { opacity: 0; transform: translateY(8px); }
 }
 
 /* ── Custom range slider ── */
@@ -399,15 +393,12 @@ body {
 }
 
 /* ── Lectio step fade-in ── */
-@keyframes lectio-fade-in {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
 .lectio-step-enter {
-  animation: lectio-fade-in 350ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: opacity 350ms cubic-bezier(0.22, 1, 0.36, 1),
+              transform 350ms cubic-bezier(0.22, 1, 0.36, 1);
 }
-@media (prefers-reduced-motion: reduce) {
-  .lectio-step-enter { animation: none; }
+@starting-style {
+  .lectio-step-enter { opacity: 0; transform: translateY(12px); }
 }
 
 /* Character card hover — only on hover-capable devices, only for living characters */
@@ -591,11 +582,24 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
   .sc-edge-g, .sc-edge, .sc-star-body, .sc-sname, .sc-brk { transition: none; }
   .sc-star.sc-unread .sc-pulse-halo { animation: none; }
   .sc-star.sc-active .sc-halo-pulse { animation: none; }
-  .sc-sheet { animation: none; }
-  .sc-sheet-scrim { animation: none; }
   /* Deklutter transition also disabled */
   .sc-sname,
   .sc-slife { transition: none; }
+}
+
+/* ── Zentrale Reduced-Motion-Regel für alle @starting-style-Transitions ──
+   Inhalte erscheinen sofort (Dauer 0), bleiben aber sichtbar. */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-rail.open,
+  .sidebar-overlay,
+  .thinker-text-fade,
+  .tab-content,
+  .lectio-step-enter,
+  .sc-sheet,
+  .sc-sheet-scrim,
+  .sc-collapse {
+    transition-duration: 0s;
+  }
 }
 
 /* ── Mobile overrides (≤640px) ── */
@@ -616,8 +620,12 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
   inset: 0;
   z-index: 60;   /* above .bottom-tab-bar (z-index:50) */
   background: oklch(0.22 0.02 65 / 0.38);
-  animation: scFadeIn 220ms ease-out;
+  transition: opacity 220ms ease-out;
 }
+@starting-style {
+  .sc-sheet-scrim { opacity: 0; }
+}
+.sc-sheet-scrim[data-closing] { opacity: 0; }
 
 .sc-sheet {
   position: fixed;
@@ -633,19 +641,31 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
   display: flex;
   flex-direction: column;
   padding-bottom: env(safe-area-inset-bottom, 0px);
-  animation: scSlideUp 340ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 340ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@starting-style {
+  .sc-sheet { transform: translateY(100%); }
+}
+/* Exit — StarChart hält die Auswahl 230ms und setzt data-closing */
+.sc-sheet[data-closing] {
+  transform: translateY(100%);
+  transition-duration: 220ms;
 }
 
-@keyframes scFadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
 
-@keyframes scSlideUp {
-  from { transform: translateY(100%); }
-  to   { transform: translateY(0);    }
+/* ── Aufklapp-Container (Konzept-Akkordeon, Typ-Legende) ──
+   height 0 ↔ auto dank interpolate-size (progressive enhancement:
+   ohne Support springt es wie bisher). visibility nimmt geschlossene
+   Inhalte aus Tab-Order und Screenreader. */
+.sc-collapse {
+  height: auto;
+  overflow: clip;
+  transition: height 260ms cubic-bezier(0.22, 1, 0.36, 1), visibility 260ms;
 }
-
+.sc-collapse-closed {
+  height: 0;
+  visibility: hidden;
+}
 
 /* ── StarChart · Konzept-Typ-Legende (unter der Platte, nur Karte-Modus) ── */
 .sc-typelegend { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }

@@ -13,19 +13,16 @@ export default function LandingPage() {
         Sanctum Mentis
       </p>
 
-      <h1
-        className="font-prose font-medium text-[36px] md:text-[52px] leading-[1.1] text-[var(--fg)] mb-8"
-        style={{ textWrap: 'balance' } as React.CSSProperties}
-      >
+      <h1 className="font-prose font-medium text-[clamp(36px,5.5vw,52px)] leading-[1.1] text-[var(--fg)] mb-8">
         Komplexe Ideen. Endlich klar verortet.
       </h1>
 
-      <p className="font-body text-[18px] md:text-[20px] text-[var(--fg-muted)] leading-relaxed mb-5 max-w-[60ch]">
+      <p className="font-body text-[clamp(18px,2vw,20px)] text-[var(--fg-muted)] leading-relaxed mb-5 max-w-[60ch]">
         Bücher, Suchmaschinen, KI — alles Wissen der Welt ist heute zur Hand.
         Was uns fehlt, ist Kontext. Die Möglichkeit, ein Thema einmal zu Ende
         zu verstehen — Punkte zu setzen, Erkenntnisse landen zu lassen.
       </p>
-      <p className="font-body text-[18px] md:text-[20px] text-[var(--fg-muted)] leading-relaxed mb-10 max-w-[60ch]">
+      <p className="font-body text-[clamp(18px,2vw,20px)] text-[var(--fg-muted)] leading-relaxed mb-10 max-w-[60ch]">
         Sanctum Mentis macht aus dem Gewirr eine Karte. Jedes Thema der
         Ideengeschichte wird zu einem Tableau — einem Sternbild von Stimmen,
         durch das du dich bewegst. Du wählst die Tiefe —
