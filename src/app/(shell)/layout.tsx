@@ -14,7 +14,7 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
     >
       {/* ── Header ── */}
       <header className="border-b border-[var(--hairline)]">
-        <div className="max-w-[1100px] mx-auto px-8 md:px-12 py-5 flex items-baseline justify-between gap-6">
+        <div className="max-w-[1100px] mx-auto px-8 md:px-12 py-5 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-3">
           <Link
             href="/"
             className="font-display text-[14px] tracking-[0.22em] uppercase text-[var(--fg)]
@@ -22,7 +22,7 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
           >
             Sanctum · Mentis
           </Link>
-          <nav className="flex items-baseline gap-6">
+          <nav className="flex items-baseline gap-4 md:gap-6">
             <Link
               href="/themen"
               className="font-ui text-[11px] tracking-[0.16em] uppercase text-[var(--fg-muted)]
@@ -36,6 +36,13 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
                 hover:text-[var(--fg)] transition-colors no-underline"
             >
               Lectios
+            </Link>
+            <Link
+              href="/lebensfragen"
+              className="font-ui text-[11px] tracking-[0.16em] uppercase text-[var(--fg-muted)]
+                hover:text-[var(--fg)] transition-colors no-underline"
+            >
+              Lebensfragen
             </Link>
             <HeaderSearchButton />
           </nav>
