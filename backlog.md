@@ -2,6 +2,10 @@
 
 ## Zuletzt abgeschlossen
 
+### [x] Bebilderung `wenn-die-welt-wackelt` abgeschlossen (3.7.26)
+**Datum:** 3.7.26
+**Resultat:** Alle 6 Stationen bebildert (Aristoteles, Berkeley, Kant, Kuhn, Rorty, Gabriel) — 6/6 `image_status: "generiert"`. Kant erstmals mit Bild (nüchtern-klar-Ausnahme, s. `bild-stil-kanon` v2 + `lectio-anleitung.md`). Zwei Randartefakt-Nachbesserungen (Kant/Rorty: eingebrannter Rahmen; Kuhn: ausgeblichene Zone), je mit Full-bleed-/Konsistenz-Zusatz neu generiert. Darstellung im `LectioNarrativeViewer` global vergrößert (Bogen-Nische von 116×146px auf `clamp(230px, 30vw, 300px)`, Variante C) — betrifft alle erzählenden Lectios mit Bildern. Belegfall für `bild-stil-kanon` v2.
+
 ### [x] Lectio `wer-beobachtet` archiviert — Doppelung mit erzählender Neufassung (28.6.26)
 **Datum:** 28.6.26
 **Resultat:** `wer-beobachtet` (expositorisch, Selbst) war inhaltlich dieselbe Lectio wie die erzählende Neufassung `wer-bist-du-wenn-du-alles-weglaesst` — gleiches Tableau, gleiche vier Stimmen (Vedanta · Buddhismus · Jung · Metzinger), gleiche Kernfrage. Der A/B-Vergleich expositorisch ↔ erzählend hat seinen Zweck erfüllt. Nach Konvention archiviert: `data/lectio/wer-beobachtet.json` → `archiv/lectio-expositorisch/wer-beobachtet-expositorisch.json` (7. Vorläufer), abgemeldet aus `data.ts` + `REGISTERED_IDS`. Doku nachgezogen (CLAUDE.md, wo-stehe-ich.md, lectio-anleitung.md). Stand jetzt: 14 registriert, 7 archiviert; Migrations-Tally 8 erzählend / 4 in alter Form. 54 Vitest grün.
@@ -524,6 +528,12 @@ Richtig: zweite Tür ins selbe Tableau, analog zur Lectio — ordnet Vorhandenes
 - **Bild-/Begriffs-Stimmigkeit in den Lectio-Bildern** — „man merkt, dass ein Begriff steht, der wahrscheinlich, aber nicht der passendste ist". Gehört zum Bild-Stil-Kanon-Strang, eigene Arbeit — kein Einzel-Fix.
 - **Descartes/Cogito als möglicher Knoten im Realismus/Konstruktivismus-Tableau prüfen** — eigenständige Tableau-Frage, *nicht* als Nachtrag zur Lectio. Abzugrenzen vom Descartes-Kontext in „Quellen der Erkenntnis" (Themen-Backlog).
 **Nächster Schritt:** Navigation zuerst (läuft). Renderer, Bild-Kanon und Descartes-Prüfung je als eigener Schritt.
+
+### [ ] Bild-Durchgang restliche Lectios nach Kanon-v2-Methode
+**Status:** identifiziert 3.7.26
+**Kontext:** `wenn-die-welt-wackelt` ist der erste vollständige Belegfall für `bild-stil-kanon` (v2) — alle 6 Stationen neu bebildert, Kant erstmals mit Bild. Die übrigen Lectios mit Bildern (`ruhe-oder-rausch`, `verstehen-oder-weitergehen`, `vom-wissen-zum-glauben`, `wenn-nichts-vorgegeben`) laufen noch auf altem bzw. gemischtem Prompt-Stand.
+**Nächster Schritt:** Pro Lectio zuerst Gefühlskurve bestimmen (kuratorisch), dann Prompts schreiben, Gemini-Test, Higgsfield-Produktion.
+**Offener Methodenpunkt:** Kurvenform bei konkurrierend-konfrontativen Pfaden (nächster Belegfall) — bislang nur am emotional-kumulativen Pfadtyp belegt.
 
 ---
 

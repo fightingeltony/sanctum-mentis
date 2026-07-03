@@ -546,9 +546,11 @@ Pflicht.
 **Der Erzählend-Schalter ist das `narrative`-Objekt, nicht der `ton`-Wert.** Eine Station
 *ohne* `narrative` ignoriert der Narrative-Viewer ganz. Eine nüchterne Station ist deshalb
 keine Station ohne `narrative`, sondern eine Station *mit* `narrative` und
-`ton: "nüchtern-klar"` — sie wird gerendert, nur optisch zurückgenommen (kein Farbring,
-keine Bild-Nische). Das bestätigt **Kanonisierung A auf Datenebene:** ein Muster, der `ton`
-steuert die Nuance, nicht die Form.
+`ton: "nüchtern-klar"` — sie wird gerendert, nur optisch zurückgenommen (kein Farbring).
+Nüchtern-klare Stationen dürfen ein Bild tragen (Präzedenz: Kant in wenn-die-welt-wackelt,
+3.7.26) — eine fehlende Nische liest sich als Lücke, nicht als Absicht. Das Bild trägt die
+Nüchternheit der Station: kühler, geometrischer, stiller. Das bestätigt **Kanonisierung A
+auf Datenebene:** ein Muster, der `ton` steuert die Nuance, nicht die Form.
 
 **`kernel ⊆ body`:** gilt, doppelt gesichert (Renderer-Fallback + Vitest). Geprüft wird
 gegen den gesamten `body`-Text, nicht pro Absatz.
@@ -628,6 +630,9 @@ trägt, ist weniger besser.
 ---
 
 ## Bilder: bei Bau UND Überarbeitung
+
+**Maßgeblich für alle Bild-Prompts: `bild-stil-kanon` (v2). Kernregel: Das Bild trägt die
+Stimmung der Station, nie ihre These.**
 
 **Architektur:** Jede Station hat genau ein Bild. Die Bilder leben NICHT in der Lectio-JSON
 — sie sind ein entkoppelter Strom. Pro Station wird ein **Prompt** geliefert (Grundprompt

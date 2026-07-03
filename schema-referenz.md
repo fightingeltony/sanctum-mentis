@@ -281,7 +281,7 @@ Lectio
 | `narrative` | `LectioNarrative?` | — | Erzählende Form; **Rendering-Gate:** Stationen ohne `narrative` werden im `LectioNarrativeViewer` vollständig ignoriert |
 | `image` | `string?` | — | Öffentlicher Bildpfad, z. B. `"/lectio-images/Ruhe oder Rausch/lectio-epikur.png"` — zeigt Bild-Nische im erzählenden Viewer, unabhängig vom Ton (auch `nüchtern-klar` darf, muss aber nicht) |
 | `image_prompt` | `string?` | — | Generierungs-Prompt für das Bild; **nicht im UI verwendet**, nur Datensicherung |
-| `image_status` | `'prompt-neu' \| 'generiert'?` | — | Pipeline-Buchführung für Bild-Generierungsläufe — steuert nicht das Rendering |
+| `image_status` | `'prompt-neu' \| 'generiert'?` | — | Fortschrittsmarker über mehrere Generierungsläufe hinweg — steuert nicht das Rendering. `image` bleibt leer, bis der Status auf `"generiert"` wechselt |
 
 **Vitest-geprüft:** Alle referenzierten `image`-Pfade müssen in `public/` existieren (Regel 5).
 
