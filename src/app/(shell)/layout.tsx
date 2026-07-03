@@ -18,7 +18,7 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
           <Link
             href="/"
             className="font-display text-[14px] tracking-[0.22em] uppercase text-fg
-              hover:text-[var(--gold)] transition-colors no-underline"
+              hover:text-gold transition-colors no-underline"
           >
             Sanctum · Mentis
           </Link>

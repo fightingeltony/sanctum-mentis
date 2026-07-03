@@ -53,7 +53,7 @@ export default function LebensfragenPage() {
               {lf.stimmen.length} Stimmen
             </p>
             <h2 className="font-prose font-medium text-[18px] text-fg mb-2
-              group-hover:text-[var(--gold)] transition-colors">
+              group-hover:text-gold transition-colors">
               {lf.title}
             </h2>
             <p className="font-body italic text-[14px] text-fg-muted leading-relaxed">

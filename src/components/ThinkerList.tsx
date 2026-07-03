@@ -113,7 +113,7 @@ export default function ThinkerList({
       {/* Context strip */}
       {context && (
         <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-hairline bg-[var(--bg-raised)] mb-6 items-start">
-          <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-[var(--gold)] pt-0.5">
+          <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-gold pt-0.5">
             Lage
           </span>
           <p className="font-body italic text-[15px] text-fg-muted leading-relaxed">
@@ -131,7 +131,7 @@ export default function ThinkerList({
           onClick={() => setActiveFilters(new Set())}
           className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors
             ${activeFilters.size === 0
-              ? 'border-[var(--gold-soft)] text-[var(--gold)] bg-[var(--accent-soft)]'
+              ? 'border-gold-soft text-gold bg-accent-soft'
               : 'border-hairline text-fg-faint hover:text-fg-muted hover:border-hairline-strong'
             }`}
         >
@@ -143,11 +143,11 @@ export default function ThinkerList({
             onClick={() => toggleFilter('neu')}
             className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
               ${activeFilters.has('neu')
-                ? 'border-[var(--gold-soft)] text-[var(--gold)] bg-[var(--accent-soft)]'
+                ? 'border-gold-soft text-gold bg-accent-soft'
                 : 'border-hairline text-fg-faint hover:text-fg-muted hover:border-hairline-strong'
               }`}
           >
-            <span className="w-[5px] h-[5px] rounded-full bg-[var(--gold)] opacity-80" />
+            <span className="w-[5px] h-[5px] rounded-full bg-gold opacity-80" />
             Neu
             <span className="opacity-60">{newCount}</span>
           </button>
@@ -157,7 +157,7 @@ export default function ThinkerList({
             onClick={() => toggleFilter('vertieft')}
             className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
               ${activeFilters.has('vertieft')
-                ? 'border-[var(--gold-soft)] text-[var(--gold)] bg-[var(--accent-soft)]'
+                ? 'border-gold-soft text-gold bg-accent-soft'
                 : 'border-hairline text-fg-faint hover:text-fg-muted hover:border-hairline-strong'
               }`}
           >
@@ -213,7 +213,7 @@ export default function ThinkerList({
                   </span>
                   <div className="flex items-baseline gap-2 shrink-0">
                     {t.isNew && (
-                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[var(--gold)]">Neu</span>
+                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-gold">Neu</span>
                     )}
                     {t.isDeepened && (
                       <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-fg-dim">↑ Vertieft</span>
@@ -298,7 +298,7 @@ function GroupedList({
                       </span>
                     )}
                     {t.isNew && (
-                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-[var(--gold)]">Neu</span>
+                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-gold">Neu</span>
                     )}
                     {t.isDeepened && (
                       <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-fg-dim">↑ Vertieft</span>

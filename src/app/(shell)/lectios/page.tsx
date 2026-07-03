@@ -82,7 +82,7 @@ export default function PfadePage() {
                       →
                     </span>
                     <span className="font-prose text-[16px] md:text-[17px] leading-snug text-fg
-                      transition-colors group-hover:text-[var(--accent)]">
+                      transition-colors group-hover:text-accent">
                       {l.title}
                     </span>
                   </span>

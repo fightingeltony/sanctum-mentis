@@ -9,7 +9,7 @@ export default function LandingPage() {
   return (
     <section className="px-8 md:px-12 py-16 md:py-28 max-w-[820px] mx-auto">
 
-      <p className="font-ui text-[11px] tracking-[0.30em] uppercase text-[var(--accent)] mb-6">
+      <p className="font-ui text-[11px] tracking-[0.30em] uppercase text-accent mb-6">
         Sanctum Mentis
       </p>
 
@@ -74,7 +74,7 @@ export default function LandingPage() {
           },
         ].map(item => (
           <div key={item.num} className="flex flex-col gap-2">
-            <span className="font-display text-[12px] tracking-[0.20em] text-[var(--gold)]">
+            <span className="font-display text-[12px] tracking-[0.20em] text-gold">
               {item.num}
             </span>
             <h3 className="font-prose font-medium text-[16px] text-fg">

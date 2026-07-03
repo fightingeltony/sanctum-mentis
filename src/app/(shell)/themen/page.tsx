@@ -31,7 +31,7 @@ export default function ThemenPage() {
   return (
     <div className="px-8 md:px-12 py-12 max-w-[1100px] mx-auto">
 
-      <p className="font-ui text-[11px] tracking-[0.30em] uppercase text-[var(--accent)] mb-3">
+      <p className="font-ui text-[11px] tracking-[0.30em] uppercase text-accent mb-3">
         Deine Bibliothek
       </p>
       <h1 className="font-prose font-medium text-[32px] md:text-[40px] text-fg mb-4 leading-tight">

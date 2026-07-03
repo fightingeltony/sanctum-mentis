@@ -154,7 +154,7 @@ export default function TopicViewer({ data, lectios }: Props) {
             href="/"
             onClick={closeMenu}
             className="font-ui text-[10px] tracking-[0.22em] uppercase text-fg-faint
-              hover:text-[var(--gold)] transition-colors no-underline"
+              hover:text-gold transition-colors no-underline"
           >
             Sanctum · Mentis
           </Link>
@@ -301,7 +301,7 @@ export default function TopicViewer({ data, lectios }: Props) {
 
         {levelId === data.topic.complexityLevels && data.topic.synthesis && (
           <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-hairline bg-[var(--bg-raised)] mb-6 items-start">
-            <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-[var(--gold)] pt-0.5 shrink-0">
+            <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-gold pt-0.5 shrink-0">
               Synthese
             </span>
             <p className="font-body italic text-[15px] text-fg-muted leading-relaxed">
@@ -321,18 +321,18 @@ export default function TopicViewer({ data, lectios }: Props) {
                 border-b border-transparent -mb-px transition-colors
                 flex items-center gap-2 whitespace-nowrap shrink-0
                 ${tab === t.id
-                  ? 'text-fg border-[var(--gold)]'
+                  ? 'text-fg border-gold'
                   : 'text-fg-faint hover:text-fg-muted'
                 }`}
             >
               <span className={`font-display text-[10px] tracking-[0.15em] mr-0.5
-                ${tab === t.id ? 'text-[var(--gold)]' : 'text-fg-dim'}`}>
+                ${tab === t.id ? 'text-gold' : 'text-fg-dim'}`}>
                 {t.numeral}
               </span>
               <span>{t.label}</span>
               {t.count !== null && (
                 <span className={`font-prose italic text-[12px] tracking-normal normal-case
-                  ${tab === t.id ? 'text-[var(--gold-soft)]' : 'text-fg-dim'}`}>
+                  ${tab === t.id ? 'text-gold-soft' : 'text-fg-dim'}`}>
                   {t.count}
                 </span>
               )}
@@ -371,7 +371,7 @@ export default function TopicViewer({ data, lectios }: Props) {
       {/* ── Mobile bottom bar ── */}
       <div className="bottom-tab-bar">
         <div className="slider-strip">
-          <span className="font-display text-[10px] tracking-[0.14em] uppercase text-[var(--gold)] shrink-0 w-[5.5rem]">
+          <span className="font-display text-[10px] tracking-[0.14em] uppercase text-gold shrink-0 w-[5.5rem]">
             {state.level.label}
           </span>
           <input
@@ -397,7 +397,7 @@ export default function TopicViewer({ data, lectios }: Props) {
               className="bottom-tab-btn"
             >
               <span className={`font-display text-[9px] tracking-[0.12em] transition-colors
-                ${tab === t.id ? 'text-[var(--gold)]' : 'text-fg-dim'}`}>
+                ${tab === t.id ? 'text-gold' : 'text-fg-dim'}`}>
                 {t.numeral}
               </span>
               <span className={`font-ui text-[10px] tracking-[0.12em] transition-colors
@@ -406,7 +406,7 @@ export default function TopicViewer({ data, lectios }: Props) {
               </span>
               {t.count !== null && (
                 <span className={`font-prose italic text-[9px] tracking-normal normal-case transition-colors
-                  ${tab === t.id ? 'text-[var(--gold-soft)]' : 'text-fg-dim'}`}>
+                  ${tab === t.id ? 'text-gold-soft' : 'text-fg-dim'}`}>
                   {t.count}
                 </span>
               )}
