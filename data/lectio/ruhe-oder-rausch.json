@@ -12,7 +12,7 @@
     {
       "nodeId": "epikur",
       "nodeType": "thinker",
-      "image": "/lectio-images/Ruhe oder Rausch/lectio-epikur.png",
+      "image": "/lectio-images/ruhe-oder-rausch/epikur.png",
       "narrative": {
         "hook": "Denk an das, worauf du dich freitagabends wirklich freust – wahrscheinlich nicht auf mehr, sondern auf weniger: keine Termine, keine Ansprüche, niemand, der noch etwas von dir will.",
         "body": [
@@ -21,13 +21,14 @@
         "kernel": "Wer wenig braucht, ist schwer zu erschüttern.",
         "bridge": "Epikurs Rezept klingt bescheiden und ist radikal: Wer wenig braucht, ist schwer zu erschüttern. Aber halte einen Moment inne – er kauft die Ruhe mit einem Verzicht. Je weniger du willst, desto weniger kann dich treffen. Ist das Freiheit, oder ist es schon ein erster Rückzug aus dem Leben?"
       },
-      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture – no glossy render, no vector cleanness, no digital sheen. Subject: a single piece of bread and a plain clay cup of water on a bare wooden table in a small garden alcove – almost nothing, yet quietly enough. Generous empty space, calm and timeless mood. Vertical composition (portrait, roughly 4:5), subject slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
+      "image_prompt": "Atmospheric image for a contemplative philosophy library. Muted, desaturated palette bedded in parchment warmth. Painterly, analog, slightly grainy, tangible texture — no glossy render, no digital sheen, no modern elements. Calm and timeless, generous quiet space. Vertical portrait composition, 4:5. Full-bleed image, edge to edge — no border, no frame, no vignette, no passe-partout, no photo edges. Consistent texture and exposure across the entire frame, including all edges and corners — no washed-out or blurred zones. No people, no faces, no readable text. Fine-art photography meets old fresco. Subject: a simple room at warm evening light — a plain table with bread, a cup of water, a small oil lamp, nothing more, and everything enough. Frugal but deeply content: the stillness of a moment in which nothing hurts and nothing is missing. Warm, modest, quietly full.",
+      "image_status": "generiert",
       "transition": "Epikurs Rezept klingt bescheiden und ist radikal: Wer wenig braucht, ist schwer zu erschüttern. Aber halte einen Moment inne – er kauft die Ruhe mit einem Verzicht. Je weniger du willst, desto weniger kann dich treffen. Ist das Freiheit, oder ist es schon ein erster Rückzug aus dem Leben?"
     },
     {
       "nodeId": "ataraxie",
       "nodeType": "concept",
-      "image": "/lectio-images/Ruhe oder Rausch/lectio-ataraxie.png",
+      "image": "/lectio-images/ruhe-oder-rausch/ataraxie.png",
       "narrative": {
         "hook": "Man könnte das für Epikurs persönliche Marotte halten – die Vorliebe eines Mannes, der das Getümmel scheute. Doch dann fällt auf, wie viele der großen Schulen genau dasselbe Ziel ansteuern.",
         "body": [
@@ -36,7 +37,8 @@
         "kernel": "Drei rivalisierende Schulen, die sich in fast allem widersprechen, und doch zielen sie auf denselben Punkt.",
         "bridge": "Es ist nicht nur Epikur. Die Stoa sucht dieselbe Ruhe durch Kontrolle der Urteile, die Skepsis sogar durch das Aufgeben aller Urteile. Drei rivalisierende Schulen, ein gemeinsames Ziel – das zeigt, wie selbstverständlich die Antike annahm, dass das gute Leben ein ruhiges sei. Diese Selbstverständlichkeit ist es, die gleich erschüttert wird. Aber zuerst die Schule, die die Ruhe am weitesten treibt."
       },
-      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture – no glossy render, no vector cleanness, no digital sheen. Subject: three separate worn footpaths through dry pale grass slowly converging toward one still point near the horizon, seen from a low contemplative angle. Generous empty space, calm and timeless mood. Vertical composition (portrait, roughly 4:5), the convergence point slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
+      "image_prompt": "Atmospheric image for a contemplative philosophy library. Muted, desaturated palette bedded in parchment warmth. Painterly, analog, slightly grainy, tangible texture — no glossy render, no digital sheen, no modern elements. Calm and timeless, generous quiet space. Vertical portrait composition, 4:5. Full-bleed image, edge to edge — no border, no frame, no vignette, no passe-partout, no photo edges. Consistent texture and exposure across the entire frame, including all edges and corners — no washed-out or blurred zones. No people, no faces, no readable text. Fine-art photography meets old fresco. Subject: a completely windless lake at dusk — the water a perfect, unbroken mirror, no ripple, no movement, the air utterly still. Beautiful serenity at first glance, and beneath it a faint trace of lifelessness: a calm so total it begins to feel like standstill. Serene, hushed, almost too quiet.",
+      "image_status": "generiert",
       "transition": "Es ist nicht nur Epikur. Die Stoa sucht dieselbe Ruhe durch Kontrolle der Urteile, die Skepsis sogar durch das Aufgeben aller Urteile. Drei rivalisierende Schulen, ein gemeinsames Ziel – das zeigt, wie selbstverständlich die Antike annahm, dass das gute Leben ein ruhiges sei. Diese Selbstverständlichkeit ist es, die gleich erschüttert wird. Aber zuerst die Schule, die die Ruhe am weitesten treibt."
     },
     {
@@ -45,7 +47,7 @@
         "epiktet"
       ],
       "nodeType": "thinker",
-      "image": "/lectio-images/Ruhe oder Rausch/lectio-marc-aurel-epiktet.png",
+      "image": "/lectio-images/ruhe-oder-rausch/marc-aurel-epiktet.png",
       "narrative": {
         "hook": "Stell dir einen Menschen vor, dem man alles nehmen kann – den Besitz, die Gesundheit, am Ende das Leben selbst – und der dennoch ruhig bleibt; Epiktet wurde als Sklave geboren und wurde genau dieser Mensch.",
         "body": [
@@ -54,13 +56,14 @@
         "kernel": "Nicht die Dinge beunruhigen dich, sondern deine Meinung über sie",
         "bridge": "Die Stoa bringt das Ruhe-Ideal an seine Grenze: Nichts Äußeres – nicht Krankheit, nicht Verlust, nicht der Tod – soll deine innere Festung erschüttern dürfen. Das ist die vollkommene Unverwundbarkeit. Und genau hier wird die unbequeme Frage laut: Wer sich gegen jeden Schmerz abdichtet, dichtet er sich nicht auch gegen jede Freude ab? Ein Denker hat genau das behauptet."
       },
-      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture – no glossy render, no vector cleanness, no digital sheen. Subject: the thick inner wall of an ancient stone citadel, weathered but unbroken; through one narrow slit window a distant storm rages, while the interior stays perfectly still. Generous empty space, calm and timeless mood. Vertical composition (portrait, roughly 4:5), the still interior slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
+      "image_prompt": "Atmospheric image for a contemplative philosophy library. Muted, desaturated palette bedded in parchment warmth. Painterly, analog, slightly grainy, tangible texture — no glossy render, no digital sheen, no modern elements. Calm and timeless, generous quiet space. Vertical portrait composition, 4:5. Full-bleed image, edge to edge — no border, no frame, no vignette, no passe-partout, no photo edges. Consistent texture and exposure across the entire frame, including all edges and corners — no washed-out or blurred zones. No people, no faces, no readable text. Subject: the inside of a fortress-like stone chamber — massive, precisely built walls, one small high window letting in a narrow shaft of cool light. Absolutely safe and unshakable, and at the same time close and confining: the security of walls that nothing can breach, and the faint tightness of being enclosed by them. Solid, cool, protected, narrow. Bare stone only — no murals, no frescoes, no furniture.",
+      "image_status": "generiert",
       "transition": "Die Stoa bringt das Ruhe-Ideal an seine Grenze: Nichts Äußeres – nicht Krankheit, nicht Verlust, nicht der Tod – soll deine innere Festung erschüttern dürfen. Das ist die vollkommene Unverwundbarkeit. Und genau hier wird die unbequeme Frage laut: Wer sich gegen jeden Schmerz abdichtet, dichtet er sich nicht auch gegen jede Freude ab? Ein Denker hat genau das behauptet."
     },
     {
       "nodeId": "nietzsche",
       "nodeType": "thinker",
-      "image": "/lectio-images/Ruhe oder Rausch/lectio-nietzsche.png",
+      "image": "/lectio-images/ruhe-oder-rausch/nietzsche.png",
       "narrative": {
         "hook": "Denk an einen Moment, den du nie wieder durchleben möchtest, weil er zu sehr wehtat. Und jetzt die ungeheure Frage: Könntest du ihn wollen?",
         "body": [
@@ -69,10 +72,13 @@
         "kernel": "Nicht aushalten – wollen.",
         "bridge": "Nietzsche dreht zweitausend Jahre Lebenskunst um. Die Ruhe der Alten, sagt er, ist im Grunde eine Angst vor dem Leben – eine Technik, nicht mehr zu leiden, um den Preis, nicht mehr voll zu leben. Sein Gegenideal ist nicht Unerschütterlichkeit, sondern amor fati: das eigene Leben so leidenschaftlich wollen, mit allem Schmerz, dass du es unendlich oft wiederholen würdest. Nicht aushalten – wollen."
       },
-      "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum, here with one band of warmer, more alive glow. Muted, desaturated palette bedded in parchment warmth. Tangible texture – no glossy render, no vector cleanness, no digital sheen. Subject: a single steep mountain ridge at first light, a narrow path climbing up into open wind and sky – weather embraced rather than sheltered from. Generous empty space, calm yet quietly charged mood. Vertical composition (portrait, roughly 4:5), the rising path slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
+      "image_prompt": "Atmospheric image for a contemplative philosophy library. Muted, desaturated palette bedded in parchment warmth. Painterly, analog, slightly grainy, tangible texture — no glossy render, no digital sheen, no modern elements. Calm and timeless, generous quiet space. Vertical portrait composition, 4:5. Full-bleed image, edge to edge — no border, no frame, no vignette, no passe-partout, no photo edges. Consistent texture and exposure across the entire frame, including all edges and corners — no washed-out or blurred zones. No people, no faces, no readable text. Fine-art photography meets old fresco. Subject: a tall window torn open by wind — curtains blown inward, bright living daylight and weather bursting into a dim quiet room, leaves or rain carried in on the gust. After long stillness, the world rushes back in: vivid, turbulent, alive. Not destruction — awakening. Fierce brightness, moving air, life breaking in.",
+      "image_status": "generiert",
       "transition": "Nietzsche dreht zweitausend Jahre Lebenskunst um. Die Ruhe der Alten, sagt er, ist im Grunde eine Angst vor dem Leben – eine Technik, nicht mehr zu leiden, um den Preis, nicht mehr voll zu leben. Sein Gegenideal ist nicht Unerschütterlichkeit, sondern amor fati: das eigene Leben so leidenschaftlich wollen, mit allem Schmerz, dass du es unendlich oft wiederholen würdest. Nicht aushalten – wollen."
     }
   ],
   "closing_synthesis": "Vier Stationen, und ein Ideal hat sich in sein Gegenteil verkehrt. Epikur baut die Ruhe aus dem Verzicht, die Ataraxie zeigt sie als gemeinsames Ziel fast aller antiken Schulen, die Stoa treibt sie zur völligen Unverwundbarkeit – und Nietzsche fragt, ob diese ganze Bewegung nicht eine Flucht war. Die Antike wollte nicht mehr leiden und nannte das Weisheit; Nietzsche will das ganze Leben, auch den Schmerz, und nennt das Stärke. Was diese Lectio dir zurücklässt, ist keine Entscheidung darüber, wer recht hat. Es ist die Frage, ob das gute Leben ein ruhiges ist, das dich vor dem Sturm schützt – oder ein intensives, das in den Sturm hineingeht. Du musst dich nicht entscheiden. Aber du hast gesehen, dass die Ruhe, die uns heute als Glück verkauft wird, einen sehr alten Preis hat.",
-  "closing_question": "Denk noch einmal an das ›Runterkommen‹, nach dem du dich nach einer harten Woche sehnst. Suchst du in diesem Moment wirklich die Ruhe – oder suchst du nur eine Pause, um danach wieder voll hineinzugehen? Und wenn du wählen müsstest: ein Leben, das dich nie mehr erschüttert, oder eines, das dich erschüttert, weil du es ganz lebst?"
+  "closing_question": "Denk noch einmal an das ›Runterkommen‹, nach dem du dich nach einer harten Woche sehnst. Suchst du in diesem Moment wirklich die Ruhe – oder suchst du nur eine Pause, um danach wieder voll hineinzugehen? Und wenn du wählen müsstest: ein Leben, das dich nie mehr erschüttert, oder eines, das dich erschüttert, weil du es ganz lebst?",
+  "closing_kernel": "ob das gute Leben ein ruhiges ist, das dich vor dem Sturm schützt – oder ein intensives, das in den Sturm hineingeht",
+  "path_type": "emotional-kumulativ"
 }
