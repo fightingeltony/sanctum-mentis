@@ -529,11 +529,11 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
           color: var(--voice); margin: 0 0 22px; transition: color .6s;
         }
-        .niche-wrap { position: relative; margin: 0 0 22px; }
+        .niche-wrap { position: relative; margin: 0 0 26px; }
         .niche {
           position: relative; z-index: 2;
-          width: 116px; height: 146px;
-          border-radius: 58px 58px 7px 7px; overflow: hidden;
+          width: clamp(230px, 30vw, 300px); aspect-ratio: 4 / 5;
+          border-radius: 50% 50% 7% 7%; overflow: hidden;
           box-shadow: 0 1px 0 oklch(1 0 0 / 0.5) inset, 0 14px 30px -18px oklch(0.24 0.02 65 / 0.5);
         }
         .niche::after {
@@ -543,7 +543,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         .niche-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
         .halo {
           position: absolute; z-index: 1; left: 50%; top: 50%;
-          width: 220px; height: 220px; transform: translate(-50%,-50%);
+          width: clamp(440px, 45vw, 560px); height: clamp(440px, 45vw, 560px); transform: translate(-50%,-50%);
           border-radius: 50%; pointer-events: none;
           background: radial-gradient(circle, color-mix(in oklch, var(--voice) 16%, transparent) 0%, transparent 64%);
           animation: halo 6.5s ease-in-out infinite;
@@ -663,7 +663,8 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           .station { transition: none; }
         }
         @media (max-width: 640px) {
-          .niche { width: 104px; height: 132px; border-radius: 52px 52px 6px 6px; }
+          /* .niche skaliert bereits über clamp() im Basis-Rule mit — kein
+             fixer Mobile-Override mehr nötig (Zwischengröße-Variante) */
           .station { top: 52px; }
           .station-inner { padding: 28px 22px 200px; }
           :global(.brand) { top: 14px; left: 14px; padding: 4px 9px; font-size: 9px; }
