@@ -254,8 +254,9 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           const displayName = thinkerMatch?.name ?? conceptMatch?.name ?? schoolMatch?.label
             ?? (nodeId.charAt(0).toUpperCase() + nodeId.slice(1).replace(/-/g, ' '))
 
-          const stepTon = step.ton ?? (lectio.ton === 'gemischt' ? 'erzählend-erfahrend' : lectio.ton)
-          const showNiche = stepTon !== 'nüchtern-klar' && !!step.image
+          // nüchtern-klar darf ein Bild haben (muss nicht) — die Nische zeigt sich
+          // allein danach, ob step.image gesetzt ist, nicht mehr nach Ton.
+          const showNiche = !!step.image
 
           return (
             <section

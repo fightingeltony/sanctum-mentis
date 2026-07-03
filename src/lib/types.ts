@@ -165,6 +165,9 @@ export interface LectioStep {
   narrative?: LectioNarrative;  // erzählende Form — alle Steps in 'gemischt'-Lectios tragen narrative
   image?: string;         // öffentlicher Bildpfad, z.B. /lectio-images/…/lectio-epikur.png
   image_prompt?: string;  // Generierungs-Prompt (nicht im UI verwendet — nur Datensicherung)
+  image_status?: 'prompt-neu' | 'generiert';  // Pipeline-Status: Prompt steht vs. Bild abgelegt.
+                         // Steuert nur die Generierungs-Buchführung, nicht das Rendering
+                         // (das UI-Gate ist allein `!!step.image`).
   transition: string;
 }
 

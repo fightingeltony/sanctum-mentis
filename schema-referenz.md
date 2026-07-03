@@ -279,8 +279,9 @@ Lectio
 | `step_brief` | `string?` | — | Überschreibt den Knoten-Text **nur für diese Station** (kein `versions`-Fallback, kein `lectio_brief`). Für Ein-Werk-Lectios, die denselben Knoten mehrfach mit verschiedenem Text zeigen. Nur bei Einzelknoten-Stationen (kein `string[]`-`nodeId`). Annotationsfrei. |
 | `ton` | `'erzählend-erfahrend' \| 'nüchtern-klar' \| 'expositorisch'?` | — | Per-Step-Ton-Override — aktiv bei `Lectio.ton === 'gemischt'`; steuert visuellen Stil der Station |
 | `narrative` | `LectioNarrative?` | — | Erzählende Form; **Rendering-Gate:** Stationen ohne `narrative` werden im `LectioNarrativeViewer` vollständig ignoriert |
-| `image` | `string?` | — | Öffentlicher Bildpfad, z. B. `"/lectio-images/Ruhe oder Rausch/lectio-epikur.png"` — zeigt Bild-Nische im erzählenden Viewer |
+| `image` | `string?` | — | Öffentlicher Bildpfad, z. B. `"/lectio-images/Ruhe oder Rausch/lectio-epikur.png"` — zeigt Bild-Nische im erzählenden Viewer, unabhängig vom Ton (auch `nüchtern-klar` darf, muss aber nicht) |
 | `image_prompt` | `string?` | — | Generierungs-Prompt für das Bild; **nicht im UI verwendet**, nur Datensicherung |
+| `image_status` | `'prompt-neu' \| 'generiert'?` | — | Pipeline-Buchführung für Bild-Generierungsläufe — steuert nicht das Rendering |
 
 **Vitest-geprüft:** Alle referenzierten `image`-Pfade müssen in `public/` existieren (Regel 5).
 
@@ -289,7 +290,7 @@ Lectio
 | `Lectio.ton` | `step.narrative` | Render-Ergebnis |
 |---|---|---|
 | `expositorisch` oder fehlt | fehlt | Expositorischer Viewer: `step_brief` → `lectio_brief` → `versions[level]`, dann `transition` |
-| `erzählend-erfahrend` | vorhanden | Narrativer Viewer: `hook → body → bridge`, `image`-Nische wenn `!!step.image && stepTon !== 'nüchtern-klar'` |
+| `erzählend-erfahrend` | vorhanden | Narrativer Viewer: `hook → body → bridge`, `image`-Nische wenn `!!step.image` |
 | `gemischt` | vorhanden | Narrativer Viewer, per-Step `ton` steuert visuellen Stil |
 | `gemischt` | fehlt | Station wird im narrativen Viewer ausgelassen |
 
