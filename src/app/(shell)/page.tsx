@@ -13,16 +13,16 @@ export default function LandingPage() {
         Sanctum Mentis
       </p>
 
-      <h1 className="font-prose font-medium text-[clamp(36px,5.5vw,52px)] leading-[1.1] text-[var(--fg)] mb-8">
+      <h1 className="font-prose font-medium text-[clamp(36px,5.5vw,52px)] leading-[1.1] text-fg mb-8">
         Komplexe Ideen. Endlich klar verortet.
       </h1>
 
-      <p className="font-body text-[clamp(18px,2vw,20px)] text-[var(--fg-muted)] leading-relaxed mb-5 max-w-[60ch]">
+      <p className="font-body text-[clamp(18px,2vw,20px)] text-fg-muted leading-relaxed mb-5 max-w-[60ch]">
         Bücher, Suchmaschinen, KI — alles Wissen der Welt ist heute zur Hand.
         Was uns fehlt, ist Kontext. Die Möglichkeit, ein Thema einmal zu Ende
         zu verstehen — Punkte zu setzen, Erkenntnisse landen zu lassen.
       </p>
-      <p className="font-body text-[clamp(18px,2vw,20px)] text-[var(--fg-muted)] leading-relaxed mb-10 max-w-[60ch]">
+      <p className="font-body text-[clamp(18px,2vw,20px)] text-fg-muted leading-relaxed mb-10 max-w-[60ch]">
         Sanctum Mentis macht aus dem Gewirr eine Karte. Jedes Thema der
         Ideengeschichte wird zu einem Tableau — einem Sternbild von Stimmen,
         durch das du dich bewegst. Du wählst die Tiefe —
@@ -47,7 +47,7 @@ export default function LandingPage() {
       {/* ── Lebendiges Tableau — selbstspielende Sternkarte ── */}
       {featured && (
         <div className="mb-16">
-          <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-[var(--fg-faint)] mb-3 flex items-center gap-2">
+          <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-fg-faint mb-3 flex items-center gap-2">
             <span className="inline-block w-[5px] h-[5px] rounded-full" style={{ background: 'var(--accent)', opacity: 0.7 }} aria-hidden />
             Die Sternkarte · {featured.topic.title}
           </p>
@@ -77,10 +77,10 @@ export default function LandingPage() {
             <span className="font-display text-[12px] tracking-[0.20em] text-[var(--gold)]">
               {item.num}
             </span>
-            <h3 className="font-prose font-medium text-[16px] text-[var(--fg)]">
+            <h3 className="font-prose font-medium text-[16px] text-fg">
               {item.title}
             </h3>
-            <p className="font-body text-[14px] text-[var(--fg-muted)] leading-relaxed">
+            <p className="font-body text-[14px] text-fg-muted leading-relaxed">
               {item.text}
             </p>
           </div>
@@ -89,10 +89,10 @@ export default function LandingPage() {
 
       {/* ── Zwei Wege ── */}
       <div className="mt-16 pt-10 border-t border-[var(--hairline)]">
-        <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-[var(--fg)] mb-2">
+        <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-fg mb-2">
           Zwei Wege durch jedes Tableau
         </h2>
-        <p className="font-body italic text-[15px] text-[var(--fg-muted)] mb-8 max-w-[52ch]">
+        <p className="font-body italic text-[15px] text-fg-muted mb-8 max-w-[52ch]">
           Manche Themen liest man besser räumlich, andere als Reise.
         </p>
 
@@ -113,8 +113,8 @@ export default function LandingPage() {
               <circle cx="21" cy="7"  r="1.5" fill="currentColor" fillOpacity="0.45" />
             </svg>
             <div>
-              <h3 className="font-prose font-medium text-[14px] text-[var(--fg)] mb-2">Die Karte</h3>
-              <p className="font-body text-[13px] text-[var(--fg-muted)] leading-relaxed">
+              <h3 className="font-prose font-medium text-[14px] text-fg mb-2">Die Karte</h3>
+              <p className="font-body text-[13px] text-fg-muted leading-relaxed">
                 Die Sternkarte zeigt das ganze Feld auf einmal: Denker und ihre Konflikte auf einen Blick, Konzepte und Schulen einen Fingertipp entfernt. Du erkundest selbst, wohin du gehst, wählst die Tiefe und folgst deiner eigenen Frage.
               </p>
             </div>
@@ -132,8 +132,8 @@ export default function LandingPage() {
               <circle cx="16" cy="25" r="2.5" fill="currentColor" fillOpacity="0.30" />
             </svg>
             <div>
-              <h3 className="font-prose font-medium text-[14px] text-[var(--fg)] mb-2">Die Lectio</h3>
-              <p className="font-body text-[13px] text-[var(--fg-muted)] leading-relaxed">
+              <h3 className="font-prose font-medium text-[14px] text-fg mb-2">Die Lectio</h3>
+              <p className="font-body text-[13px] text-fg-muted leading-relaxed">
                 Die Lectio führt dich durch einen kuratierten Pfad. Vier bis sechs Stationen aus dem Tableau, ein Bogen, ein offenes Ende. Nicht alle Denker, sondern die, die zusammen eine Frage tragen. Die Karte bleibt offen für alles, was die Lectio weglässt.
               </p>
             </div>
@@ -149,17 +149,17 @@ export default function LandingPage() {
 
         </div>
 
-        <p className="font-body italic text-[12px] text-[var(--fg-faint)] mt-5">
+        <p className="font-body italic text-[12px] text-fg-faint mt-5">
           Beide führen durch ein Tableau — komplementär, nicht alternativ.
         </p>
       </div>
 
       {/* ── Und ein Weg quer hindurch ── */}
       <div className="mt-16 pt-10 border-t border-[var(--hairline)]">
-        <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-[var(--fg)] mb-2">
+        <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-fg mb-2">
           Ein Weg quer hindurch
         </h2>
-        <p className="font-body italic text-[15px] text-[var(--fg-muted)] mb-8 max-w-[52ch]">
+        <p className="font-body italic text-[15px] text-fg-muted mb-8 max-w-[52ch]">
           Manche Fragen überschreiten ein einzelnes Thema.
         </p>
 
@@ -178,8 +178,8 @@ export default function LandingPage() {
             <circle cx="24" cy="16" r="2"   fill="currentColor" fillOpacity="0.35" />
           </svg>
           <div>
-            <h3 className="font-prose font-medium text-[14px] text-[var(--fg)] mb-2">Die Lebensfrage</h3>
-            <p className="font-body text-[13px] text-[var(--fg-muted)] leading-relaxed">
+            <h3 className="font-prose font-medium text-[14px] text-fg mb-2">Die Lebensfrage</h3>
+            <p className="font-body text-[13px] text-fg-muted leading-relaxed">
               Karte und Lectio bleiben innerhalb eines Feldes. Manche Fragen aber gehören
               keinem Feld allein — sie ziehen quer durch die Bibliothek. Eine gelebte Situation
               — Schmerz, Tod, Freiheit — beleuchtet durch Stimmen aus verschiedenen Feldern.

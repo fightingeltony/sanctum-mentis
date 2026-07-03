@@ -37,10 +37,10 @@ export default function PfadePage() {
   return (
     <div className="px-8 md:px-12 py-12 max-w-[760px] mx-auto">
 
-      <h1 className="font-prose font-medium text-[32px] md:text-[40px] text-[var(--fg)] mb-4 leading-tight">
+      <h1 className="font-prose font-medium text-[32px] md:text-[40px] text-fg mb-4 leading-tight">
         Wähle eine Frage
       </h1>
-      <p className="font-body italic text-[15px] text-[var(--fg-muted)] mb-14 max-w-[58ch]">
+      <p className="font-body italic text-[15px] text-fg-muted mb-14 max-w-[58ch]">
         Eine Lectio ist ein geführter Pfad: einige Stationen, ein Bogen,
         ein offenes Ende. Du beginnst nicht bei einem Fachgebiet,
         sondern bei einer Frage — und folgst ihr.
@@ -81,12 +81,12 @@ export default function PfadePage() {
                     >
                       →
                     </span>
-                    <span className="font-prose text-[16px] md:text-[17px] leading-snug text-[var(--fg)]
+                    <span className="font-prose text-[16px] md:text-[17px] leading-snug text-fg
                       transition-colors group-hover:text-[var(--accent)]">
                       {l.title}
                     </span>
                   </span>
-                  <span className="font-ui text-[11px] text-[var(--fg-faint)] shrink-0">
+                  <span className="font-ui text-[11px] text-fg-faint shrink-0">
                     {l.stationCount} Stationen
                   </span>
                 </Link>

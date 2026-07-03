@@ -52,6 +52,27 @@
   interpolate-size: allow-keywords;
 }
 
+/* ── Tailwind-v4-Theme: Primärtokens als echte Utilities ──
+   `inline` ist Pflicht: die Utilities referenzieren var(--…) direkt am
+   Element, damit per-Thema-Overrides (inline --accent auf dem Wrapper)
+   weiter durchschlagen. :root bleibt die Quelle — Inline-Styles und
+   SVG-CSS nutzen var(--…) weiterhin direkt. Aliase (--surface, --ink, …)
+   bewusst nicht dupliziert. */
+@theme inline {
+  --color-fg:              var(--fg);
+  --color-fg-muted:        var(--fg-muted);
+  --color-fg-faint:        var(--fg-faint);
+  --color-fg-dim:          var(--fg-dim);
+  --color-hairline:        var(--hairline);
+  --color-hairline-strong: var(--hairline-strong);
+  --color-accent:          var(--accent);
+  --color-accent-soft:     var(--accent-soft);
+  --color-gold:            var(--gold);
+  --color-gold-soft:       var(--gold-soft);
+  --color-raised:          var(--bg-raised);
+  --color-sunk:            var(--bg-sunk);
+}
+
 html {
   overflow-x: hidden;
   color-scheme: light; /* prevent browser forced-dark / prefers-color-scheme overrides */

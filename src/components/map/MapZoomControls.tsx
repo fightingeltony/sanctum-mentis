@@ -8,7 +8,7 @@ export function MapZoomControls({ onZoomIn, onZoomOut, onReset }: Props) {
   const btn = `
     flex items-center justify-center w-9 h-9
     bg-[var(--bg-raised)] border border-[var(--hairline)]
-    text-[var(--fg-muted)] active:text-[var(--fg)]
+    text-fg-muted active:text-fg
     transition-colors select-none touch-manipulation
     font-ui text-base leading-none
   `

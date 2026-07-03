@@ -45,7 +45,7 @@ export default function LectioViewer({ lectio, topicData }: Props) {
         <Link
           href={backHref}
           className="inline-flex items-center gap-2 font-ui text-[12px] tracking-[0.06em]
-            text-[var(--fg-faint)] hover:text-[var(--fg-muted)] transition-colors no-underline mb-10"
+            text-fg-faint hover:text-fg-muted transition-colors no-underline mb-10"
         >
           <span style={{ color: 'var(--accent)' }}>←</span>
           {vonLectios ? 'Alle Lectios' : topicData.topic.title}
@@ -60,18 +60,18 @@ export default function LectioViewer({ lectio, topicData }: Props) {
             {lectio.title}
           </h1>
 
-          <p className="font-body italic text-[15px] text-[var(--fg-muted)] mb-6">
+          <p className="font-body italic text-[15px] text-fg-muted mb-6">
             {lectio.focus}
           </p>
 
           <blockquote
-            className="font-body text-[16px] leading-relaxed text-[var(--fg-muted)] my-6 pl-4"
+            className="font-body text-[16px] leading-relaxed text-fg-muted my-6 pl-4"
             style={{ borderLeft: '2px solid var(--accent)' }}
           >
             {lectio.thesis}
           </blockquote>
 
-          <p className="font-ui text-[12px] tracking-[0.04em] text-[var(--fg-faint)] mb-8">
+          <p className="font-ui text-[12px] tracking-[0.04em] text-fg-faint mb-8">
             {topicData.topic.title}
             <span className="mx-2" style={{ color: 'var(--accent)' }}>·</span>
             {path.length} Stationen
@@ -109,8 +109,8 @@ export default function LectioViewer({ lectio, topicData }: Props) {
                 >
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <span className="text-[var(--fg-faint)]" aria-hidden>·</span>
-                <span className="font-body text-[13px] tracking-[0.02em] text-[var(--fg-muted)]">
+                <span className="text-fg-faint" aria-hidden>·</span>
+                <span className="font-body text-[13px] tracking-[0.02em] text-fg-muted">
                   {nodeIds.map(id => getNodeName(id, step.nodeType, topicData)).join(' & ')}
                 </span>
               </div>
@@ -195,7 +195,7 @@ export default function LectioViewer({ lectio, topicData }: Props) {
                 style={{ color: 'var(--fg-muted)' }}
               >
                 Zurück zur Karte
-                <span className="mx-2 text-[var(--fg-faint)]">·</span>
+                <span className="mx-2 text-fg-faint">·</span>
                 <span style={{ color: 'var(--accent)' }}>{topicData.topic.title}</span>
               </Link>
             </div>
@@ -235,7 +235,7 @@ function NodeTextBlock({
 }) {
   if (brief) {
     return (
-      <p className="font-body text-[15px] leading-relaxed text-[var(--fg)]">
+      <p className="font-body text-[15px] leading-relaxed text-fg">
         {brief}
       </p>
     )
@@ -245,7 +245,7 @@ function NodeTextBlock({
     const school = topicData.schools.find(s => s.id === nodeId)
     if (!school) return <NodeFallback />
     return (
-      <p className="font-body text-[15px] leading-relaxed text-[var(--fg)]">
+      <p className="font-body text-[15px] leading-relaxed text-fg">
         {school.lectio_brief ?? school.motto ?? school.label}
       </p>
     )
@@ -261,7 +261,7 @@ function NodeTextBlock({
   if (!result) return <NodeFallback />
 
   return (
-    <p className="font-body text-[15px] leading-relaxed text-[var(--fg)]">
+    <p className="font-body text-[15px] leading-relaxed text-fg">
       {result.isLectioBrief
         ? result.text
         : <Annotated text={result.text} level={lectioLevel} />
@@ -272,7 +272,7 @@ function NodeTextBlock({
 
 function NodeFallback() {
   return (
-    <p className="font-body text-[14px] text-[var(--fg-faint)] italic">
+    <p className="font-body text-[14px] text-fg-faint italic">
       [Knoten nicht verfügbar]
     </p>
   )
