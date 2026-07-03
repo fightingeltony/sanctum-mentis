@@ -13,7 +13,7 @@
     {
       "nodeId": "nietzsche",
       "nodeType": "thinker",
-      "image": "/lectio-images/Wenn nichts vorgegeben ist/lectio-nietzsche.png",
+      "image": "/lectio-images/wenn-nichts-vorgegeben/nietzsche.png",
       "narrative": {
         "hook": "Kennst du den Moment, in dem ein Satz, der dich früher getragen hat, plötzlich hohl klingt? Du sprichst ihn noch aus, aber er trägt nichts mehr.",
         "body": [
@@ -28,7 +28,7 @@
     {
       "nodeId": "kierkegaard",
       "nodeType": "thinker",
-      "image": "/lectio-images/Wenn nichts vorgegeben ist/lectio-kierkegaard.png",
+      "image": "/lectio-images/wenn-nichts-vorgegeben/kierkegaard.png",
       "narrative": {
         "hook": "Stell dir vor, du stehst vor einer Entscheidung, die dein Leben verändert, und niemand kann sie dir abnehmen – kein Ratgeber, keine Regel, keine Stimme, die dir vorher garantiert, dass es gut ausgeht.",
         "body": [
@@ -43,7 +43,7 @@
     {
       "nodeId": "sartre",
       "nodeType": "thinker",
-      "image": "/lectio-images/Wenn nichts vorgegeben ist/lectio-sartre.png",
+      "image": "/lectio-images/wenn-nichts-vorgegeben/sartre.png",
       "narrative": {
         "hook": "Du wartest manchmal insgeheim darauf, dass jemand kommt und dir sagt, was das Richtige ist. Sartre sagt: Niemand kommt.",
         "body": [
@@ -58,7 +58,7 @@
     {
       "nodeId": "frankl",
       "nodeType": "thinker",
-      "image": "/lectio-images/Wenn nichts vorgegeben ist/lectio-frankl.png",
+      "image": "/lectio-images/wenn-nichts-vorgegeben/frankl.png",
       "narrative": {
         "hook": "Denk an einen Moment, in dem etwas von dir verlangt wurde – ein Mensch, der dich brauchte, eine Aufgabe, die liegen blieb, wenn du sie nicht tatest.",
         "body": [
@@ -73,7 +73,7 @@
     {
       "nodeId": "camus",
       "nodeType": "thinker",
-      "image": "/lectio-images/Wenn nichts vorgegeben ist/lectio-camus.png",
+      "image": "/lectio-images/wenn-nichts-vorgegeben/camus.png",
       "narrative": {
         "hook": "Du kennst die Tage, die einander gleichen – aufstehen, arbeiten, schlafen, und am nächsten Morgen wieder von vorn. Irgendwann meldet sich die Frage: wozu das alles eigentlich?",
         "body": [

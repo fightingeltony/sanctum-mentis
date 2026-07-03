@@ -279,9 +279,11 @@ Lectio
 | `step_brief` | `string?` | — | Überschreibt den Knoten-Text **nur für diese Station** (kein `versions`-Fallback, kein `lectio_brief`). Für Ein-Werk-Lectios, die denselben Knoten mehrfach mit verschiedenem Text zeigen. Nur bei Einzelknoten-Stationen (kein `string[]`-`nodeId`). Annotationsfrei. |
 | `ton` | `'erzählend-erfahrend' \| 'nüchtern-klar' \| 'expositorisch'?` | — | Per-Step-Ton-Override — aktiv bei `Lectio.ton === 'gemischt'`; steuert visuellen Stil der Station |
 | `narrative` | `LectioNarrative?` | — | Erzählende Form; **Rendering-Gate:** Stationen ohne `narrative` werden im `LectioNarrativeViewer` vollständig ignoriert |
-| `image` | `string?` | — | Öffentlicher Bildpfad, z. B. `"/lectio-images/Ruhe oder Rausch/lectio-epikur.png"` — zeigt Bild-Nische im erzählenden Viewer, unabhängig vom Ton (auch `nüchtern-klar` darf, muss aber nicht) |
+| `image` | `string?` | — | Öffentlicher Bildpfad, z. B. `"/lectio-images/ruhe-oder-rausch/epikur.png"` — zeigt Bild-Nische im erzählenden Viewer, unabhängig vom Ton (auch `nüchtern-klar` darf, muss aber nicht) |
 | `image_prompt` | `string?` | — | Generierungs-Prompt für das Bild; **nicht im UI verwendet**, nur Datensicherung |
 | `image_status` | `'prompt-neu' \| 'generiert'?` | — | Fortschrittsmarker über mehrere Generierungsläufe hinweg — steuert nicht das Rendering. `image` bleibt leer, bis der Status auf `"generiert"` wechselt |
+
+**Ablage-Konvention:** Bilder: `public/lectio-images/<lectio-id>/<nodeId>.png` — bei Doppelstationen (`nodeId` als Array) die Teile mit Bindestrich verbunden, z. B. `marc-aurel-epiktet.png`.
 
 **Vitest-geprüft:** Alle referenzierten `image`-Pfade müssen in `public/` existieren (Regel 5).
 

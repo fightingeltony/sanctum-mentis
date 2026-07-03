@@ -26,7 +26,7 @@
       "transition": "Kants Fundament steht, solange die Vernunft trägt. Ob sie trägt, hatte Hume allerdings schon bezweifelt, bevor Kant baute – das Fundament ist nicht zuletzt eine Antwort auf ihn. Die Lectio folgt hier den Schichten, nicht den Jahreszahlen: Was liegt unter der Vernunft?",
       "image_prompt": "Atmospheric image for a contemplative philosophy library. Muted, desaturated palette bedded in parchment warmth. Painterly, analog, slightly grainy, tangible texture — no glossy render, no digital sheen, no modern elements. Calm and timeless, generous quiet space. Vertical portrait composition, 4:5. Full-bleed image, edge to edge — no border, no frame, no vignette, no passe-partout, no photo edges. Consistent texture and exposure across the entire frame, including all edges and corners — no washed-out or blurred zones. No people, no faces, no readable text. Subject: a tall, empty vaulted hall of precisely fitted stone blocks, the vault resting on massive plain pillars — everything above visibly carried by them, built to hold. Cool, clear daylight falling from high openings onto bare stone. Upright, exact, reliable, slightly stern — the calm authority of something erected, not grown, and the quiet awareness that all of it depends on the pillars holding. Bare walls, no murals, no frescoes, no furniture, no books.",
       "image_status": "generiert",
-      "image": "/lectio-images/Warum solltest du überhaupt/lectio-kant.png"
+      "image": "/lectio-images/warum-sollst-du/kant.png"
     },
     {
       "nodeId": "hume",
@@ -42,7 +42,7 @@
       },
       "image_prompt": "Atmospheric image for a contemplative philosophy library. Muted, desaturated palette bedded in parchment warmth. Painterly, analog, slightly grainy, tangible texture — no glossy render, no digital sheen, no modern elements. Calm and timeless, generous quiet space. Vertical portrait composition, 4:5. Fine-art photography meets old fresco. Full-bleed image, edge to edge — no border, no frame, no vignette, no passe-partout, no photo edges. Consistent texture and exposure across the entire frame, including all edges and corners — no washed-out or blurred zones. No people, no faces, no readable text. Subject: a lived-in old interior in soft warm light — the glow of embers or a low hearth, a worn wooden bench, the traces of daily human life without any person present. Warmth that was there before anyone reasoned about it — immediate, bodily, kind. The feeling of something already given, underneath all argument.",
       "image_status": "generiert",
-      "image": "/lectio-images/Warum solltest du überhaupt/lectio-hume.png",
+      "image": "/lectio-images/warum-sollst-du/hume.png",
       "transition": "Hume ist kein kalter Entzauberer – er ist der Freundlichste in diesem Bogen: Moral ist warm, nicht kalt. Aber sein Befund hat eine offene Stelle. Wenn moralische Urteile aus Gefühlen kommen – woher kommen dann die Gefühle? Sind sie selbst noch begründet, oder nur geworden? Nietzsche stellt diese Frage radikaler als alle anderen."
     },
     {
@@ -59,7 +59,7 @@
       },
       "image_prompt": "Atmospheric image for a contemplative philosophy library. Muted, desaturated palette bedded in parchment warmth. Painterly, analog, slightly grainy, tangible texture — no glossy render, no digital sheen, no modern elements. Calm and timeless, generous quiet space. Vertical portrait composition, 4:5. Fine-art photography meets old fresco. Full-bleed image, edge to edge — no border, no frame, no vignette, no passe-partout, no photo edges. Consistent texture and exposure across the entire frame, including all edges and corners — no washed-out or blurred zones. No people, no faces, no readable text. Subject: an excavated wall or ground seen in cross-section — many old layers of plaster, sediment and earlier floors lying one beneath another, different ages visible in one cut, dim light falling from above into the depth, and no final ground visible at the bottom. Uncovered, ancient, quietly unsettling and fascinating — the sense that what seemed yours is inherited.",
       "image_status": "generiert",
-      "image": "/lectio-images/Warum solltest du überhaupt/lectio-nietzsche.png",
+      "image": "/lectio-images/warum-sollst-du/nietzsche.png",
       "transition": "Nietzsche ist nicht der Zerstörer, als der er gern gelesen wird – er ist der ehrlichste Diagnostiker dessen, was wir geerbt haben. Aber er hinterlässt dich an einem seltsamen Ort: Jedes Warum hat nur weitere Geschichte freigelegt, und ein Boden ist nicht gekommen. Levinas gräbt hier nicht weiter. Er dreht sich um – und schaut nicht tiefer, sondern davor."
     },
     {
@@ -76,7 +76,7 @@
       },
       "image_prompt": "Atmospheric image for a contemplative philosophy library. Muted, desaturated palette bedded in parchment warmth. Painterly, analog, slightly grainy, tangible texture — no glossy render, no digital sheen, no modern elements. Calm and timeless, generous quiet space. Vertical portrait composition, 4:5. Fine-art photography meets old fresco. Full-bleed image, edge to edge — no border, no frame, no vignette, no passe-partout, no photo edges. Consistent texture and exposure across the entire frame, including all edges and corners — no washed-out or blurred zones. No people, no faces, no readable text. Subject: looking up from depth toward a doorway or tall opening that already stands open, clear light falling through it into the dark — light that arrives before you turned toward it, addressing you, almost claiming you. Not gentle idyll, not triumph: something has come first, and you cannot not respond. Austere, quiet, inescapable.",
       "image_status": "generiert",
-      "image": "/lectio-images/Warum solltest du überhaupt/lectio-levinas.png",
+      "image": "/lectio-images/warum-sollst-du/levinas.png",
       "transition": "Ob diese Beschreibung trägt, kannst nur du prüfen – am nächsten Gesicht, das dich ansieht. Sie beantwortet das Warum nicht. Sie behauptet, dass du nie auf die Antwort gewartet hast, um schon in der Pflicht zu sein. Damit ist der Bogen an seinem Ende: nicht bei einem neuen Fundament, sondern bei der Frage, ob die Suche nach dem Fundament je der richtige Weg war."
     }
   ],

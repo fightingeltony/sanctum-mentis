@@ -20,7 +20,10 @@ warmes Nachmittagslicht (Geborgenheit) → blaue Stunde, Konturen verschwimmen (
 
 Wiederkehrende stille Elemente (z. B. dasselbe Gefäß in Station 1 und 2) dürfen die Kurve verbinden — als Faden, nie als Symbol, das erklärt.
 
-Offener Punkt: Die Kurven-Regel ist bislang nur am emotional-kumulativen Pfadtyp belegt. Ob konkurrierend-konfrontative Lectios (Hin und Her der Lager statt Steigerung) eine eigene Kurvenform brauchen, klärt der nächste Belegfall. Bis dahin: Kurve pro Lectio kuratorisch bestimmen, nicht schematisch übertragen.
+Zweiter Belegfall — Grabungs-Kurve (`warum-sollst-du`, destruktiv-aufbauend):
+gefügtes kühles Fundament → Wärme darunter → alte Schichten ohne Grund → aufschauen, es war schon da.
+
+Offener Punkt: Die Kurven-Regel ist bislang nur am emotional-kumulativen und am destruktiv-aufbauenden Pfadtyp belegt. Ob konkurrierend-konfrontative Lectios (Hin und Her der Lager statt Steigerung) eine eigene Kurvenform brauchen, klärt der nächste Belegfall. Bis dahin: Kurve pro Lectio kuratorisch bestimmen, nicht schematisch übertragen.
 
 ## Der Standard-Stil-Block
 
@@ -32,6 +35,7 @@ Anmerkungen:
 - „Full-bleed …" und „Consistent texture …" sind Pflichtbestandteile. Sie verhindern zwei belegte stochastische Randartefakte (eingebrannter Rahmen/Passepartout; ausgeblichene Randzonen). Ursache war die Wendung „fine-art photography meets old fresco", die das Modell gelegentlich als „gedruckter Abzug mit Rand" liest.
 - „Single subject" aus v1 ist kein Pflichtbestandteil mehr — es kollidiert mit Stationen, deren Stimmung Mehrzahl braucht. Bei Einzelmotiven darf es ergänzt werden.
 - Die Nische erscheint nicht mehr zwingend **im** Bild (v1-Regel entfällt); die Bogen-Nische ist die **Darstellungsform im Viewer**, nicht Bildinhalt. Bilder sind randlos, die Nische rahmt sie im Layout.
+- Bei Architektur-Subjekten den Baustein „fine-art photography meets old fresco" weglassen und Wandmalereien explizit ausschließen („no murals, no frescoes") — der Fresko-Baustein kippt dort vom Stil-Adjektiv zum Bildinhalt (belegt: figürliches Fresko im Kant-Test, 3.7.).
 
 ## Das Subjekt (der Stations-Teil)
 
