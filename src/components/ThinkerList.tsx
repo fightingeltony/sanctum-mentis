@@ -112,7 +112,7 @@ export default function ThinkerList({
 
       {/* Context strip */}
       {context && (
-        <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-hairline bg-[var(--bg-raised)] mb-6 items-start">
+        <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-hairline bg-raised mb-6 items-start">
           <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-gold pt-0.5">
             Lage
           </span>
@@ -203,7 +203,7 @@ export default function ThinkerList({
               <div
                 key={t.id}
                 ref={el => { if (el) cardRefs.current.set(t.id, el) }}
-                className="character-card is-alive flex flex-col gap-2 p-4 border border-hairline bg-[var(--bg-raised)]
+                className="character-card is-alive flex flex-col gap-2 p-4 border border-hairline bg-raised
                   transition-colors duration-300 cursor-default carta-card-highlight"
               >
                 <div className="flex items-baseline justify-between gap-3 min-w-0">

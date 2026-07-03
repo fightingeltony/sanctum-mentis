@@ -172,7 +172,7 @@ export default function CommandPalette({ open, onClose }: Props) {
                   value={`${entry.topicId}-${entry.type}-${entry.nodeId ?? entry.topicId}`}
                   onSelect={() => handleSelect(entry)}
                   className="flex items-center gap-3 px-4 py-3 rounded-[4px] cursor-pointer
-                    aria-selected:bg-[var(--bg-sunk)] outline-none"
+                    aria-selected:bg-sunk outline-none"
                 >
                   <div className="flex flex-col gap-0.5 min-w-0 flex-1">
                     {/* Name + type badge */}

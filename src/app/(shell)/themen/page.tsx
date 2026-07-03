@@ -98,7 +98,7 @@ function TopicCard({ topic }: { topic: LibraryEntry }) {
   const available = topic.status === 'available'
   const inner = (
     <div
-      className="flex flex-col gap-3 p-6 border border-hairline bg-[var(--bg-raised)]
+      className="flex flex-col gap-3 p-6 border border-hairline bg-raised
         transition-colors duration-300 h-full"
       style={{
         borderTop: `3px solid ${topic.themeColor}`,
