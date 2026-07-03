@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Marcellus_SC, Inter } from 'next/font/google'
 import ShellCommandPaletteProvider from '@/components/ShellCommandPaletteProvider'
+import RouteViewTransition from '@/components/RouteViewTransition'
 import './globals.css'
 
 const marcellusSC = Marcellus_SC({
@@ -59,7 +60,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="de" className={`${marcellusSC.variable} ${inter.variable}`}>
       <body>
         <ShellCommandPaletteProvider>
-          {children}
+          {/* EXPERIMENT: Routen-Cross-Fade — Rückbau siehe RouteViewTransition.tsx */}
+          <RouteViewTransition>
+            {children}
+          </RouteViewTransition>
         </ShellCommandPaletteProvider>
       </body>
     </html>

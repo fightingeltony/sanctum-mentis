@@ -608,6 +608,16 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
   .sc-slife { transition: none; }
 }
 
+/* ── View Transitions (EXPERIMENT, Schritt 3) — reduced-motion: kein
+   Routen-Cross-Fade. Regel ist ohne das Next-Flag wirkungslos. */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
 /* ── Zentrale Reduced-Motion-Regel für alle @starting-style-Transitions ──
    Inhalte erscheinen sofort (Dauer 0), bleiben aber sichtbar. */
 @media (prefers-reduced-motion: reduce) {

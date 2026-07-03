@@ -20,6 +20,15 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: findProjectRoot(__dirname),
   },
+  experimental: {
+    // EXPERIMENT · View Transitions (CSS-Modernisierung Schritt 3, 3.7.26):
+    // sanfter Cross-Fade bei Routen-Wechseln (Bibliothek → Tableau → Lectio).
+    // Aktiviert React's <ViewTransition>-Boundary in src/app/layout.tsx
+    // (RouteViewTransition). Abschalten: dieses Flag entfernen UND den
+    // RouteViewTransition-Wrapper in layout.tsx auf {children} zurückbauen —
+    // keine weiteren Abhängigkeiten. Doku: README «View Transitions».
+    viewTransition: true,
+  },
 };
 
 export default nextConfig;

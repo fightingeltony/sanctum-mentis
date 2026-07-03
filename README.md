@@ -25,6 +25,21 @@ Jedes Element trägt mehrere Versions-Strings (Level 1 bis Level 5). Die Engine 
 - cmdk (Command Palette)
 - Vitest (Datenvalidierung der JSON-Datensätze)
 
+## View Transitions (Experiment)
+
+Routen-Wechsel (Bibliothek → Tableau → Lectio …) bekommen einen kurzen Cross-Fade
+über die native View-Transitions-API. Als **Experiment** markiert:
+
+- **Was:** Reacts experimentelle `<ViewTransition>`-Boundary um die Routen-Children,
+  aktiviert durch das Next-Flag `experimental.viewTransition` in `next.config.ts`.
+- **Wo:** `src/components/RouteViewTransition.tsx`, eingebunden in `src/app/layout.tsx`.
+  Nur Routen-Wechsel — die Sternkarte behält ihre eigenen Übergänge.
+- **Abschalten:** Flag in `next.config.ts` entfernen und in `layout.tsx` den
+  `<RouteViewTransition>`-Wrapper durch `{children}` ersetzen. Keine weiteren
+  Abhängigkeiten; danach verhält sich die App exakt wie vorher.
+- `prefers-reduced-motion: reduce` → keine Transition (Regel in `globals.css`).
+  Browser ohne Support: normaler harter Wechsel, kein Polyfill.
+
 ## Lokal starten
 
 ```bash
