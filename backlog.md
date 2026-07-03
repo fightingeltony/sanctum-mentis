@@ -530,10 +530,11 @@ Richtig: zweite Tür ins selbe Tableau, analog zur Lectio — ordnet Vorhandenes
 **Nächster Schritt:** Navigation zuerst (läuft). Renderer, Bild-Kanon und Descartes-Prüfung je als eigener Schritt.
 
 ### [ ] Bild-Durchgang restliche Lectios nach Kanon-v2-Methode
-**Status:** identifiziert 3.7.26
-**Kontext:** `wenn-die-welt-wackelt` ist der erste vollständige Belegfall für `bild-stil-kanon` (v2) — alle 6 Stationen neu bebildert, Kant erstmals mit Bild. Die übrigen Lectios mit Bildern (`ruhe-oder-rausch`, `verstehen-oder-weitergehen`, `vom-wissen-zum-glauben`, `wenn-nichts-vorgegeben`) laufen noch auf altem bzw. gemischtem Prompt-Stand.
-**Nächster Schritt:** Pro Lectio zuerst Gefühlskurve bestimmen (kuratorisch), dann Prompts schreiben, Gemini-Test, Higgsfield-Produktion.
-**Offener Methodenpunkt:** Kurvenform bei konkurrierend-konfrontativen Pfaden (nächster Belegfall) — bislang nur am emotional-kumulativen Pfadtyp belegt.
+**Status:** identifiziert 3.7.26; Stand 3.7. abends: `warum-sollst-du` und `ruhe-oder-rausch` fertig (Grabungs- bzw. Stille→Aufriss-Kurve)
+**Kontext:** `wenn-die-welt-wackelt` ist der erste vollständige Belegfall für `bild-stil-kanon` (v2) — alle 6 Stationen neu bebildert, Kant erstmals mit Bild. Noch auf altem Prompt-Stand: `verstehen-oder-weitergehen` (freud), `vom-wissen-zum-glauben` (6 Alt-WebPs auf Repo-Ebene, alte Ablage) und `wenn-nichts-vorgegeben` (5 Bilder).
+**Befund Rand-Check (3.7.):** `scripts/check-image-edges.js` markiert `freud` und alle 5 `wenn-nichts-vorgegeben`-Bilder als Rahmen-Verdacht (Alt-Generationen vor den Full-bleed-Prompts) — beim Durchgang ersetzen, nicht einzeln flicken.
+**Nächster Schritt:** Pro Lectio zuerst Gefühlskurve bestimmen (kuratorisch), dann Prompts schreiben, Gemini-Test, Higgsfield-Produktion (Ablage: 800px-WebP q70, Rand-Check am 2k-Original).
+**Offener Methodenpunkt:** Kurvenform bei konkurrierend-konfrontativen Pfaden (nächster Belegfall) — bislang am emotional-kumulativen und destruktiv-aufbauenden Pfadtyp belegt.
 
 ---
 
