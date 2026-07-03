@@ -121,7 +121,7 @@ export default function CommandPalette({ open, onClose }: Props) {
       onClick={onClose}
     >
       <div
-        className="w-full max-w-[580px] mx-4 border border-[var(--hairline-strong)] rounded-[6px] overflow-hidden"
+        className="w-full max-w-[580px] mx-4 border border-hairline-strong rounded-[6px] overflow-hidden"
         style={{ background: 'var(--bg-raised)', boxShadow: '0 24px 64px oklch(0.15 0.020 65 / 0.30)' }}
         onClick={e => e.stopPropagation()}
       >
@@ -129,7 +129,7 @@ export default function CommandPalette({ open, onClose }: Props) {
 
           {/* ── Search input ── */}
           <div
-            className="flex items-center gap-3 px-5 border-b border-[var(--hairline)]"
+            className="flex items-center gap-3 px-5 border-b border-hairline"
             style={{ paddingTop: '14px', paddingBottom: '14px' }}
           >
             <span className="font-body text-[18px] text-fg-dim leading-none select-none">⌕</span>
@@ -142,7 +142,7 @@ export default function CommandPalette({ open, onClose }: Props) {
                 text-fg placeholder:text-fg-dim"
             />
             <kbd className="font-ui text-[9px] tracking-[0.12em] uppercase text-fg-faint
-              border border-[var(--hairline)] px-1.5 py-0.5 rounded-[2px] select-none">
+              border border-hairline px-1.5 py-0.5 rounded-[2px] select-none">
               esc
             </kbd>
           </div>
@@ -202,7 +202,7 @@ export default function CommandPalette({ open, onClose }: Props) {
           </Command.List>
 
           {/* ── Footer ── */}
-          <div className="flex items-center gap-4 px-5 py-2.5 border-t border-[var(--hairline)]">
+          <div className="flex items-center gap-4 px-5 py-2.5 border-t border-hairline">
             <span className="font-ui text-[9px] tracking-[0.12em] uppercase text-fg-faint">
               ↑↓ navigieren
             </span>

@@ -55,7 +55,7 @@ export default function LandingPage() {
         </div>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-10 border-t border-[var(--hairline)]">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-10 border-t border-hairline">
         {[
           {
             num: 'I',
@@ -88,7 +88,7 @@ export default function LandingPage() {
       </div>
 
       {/* ── Zwei Wege ── */}
-      <div className="mt-16 pt-10 border-t border-[var(--hairline)]">
+      <div className="mt-16 pt-10 border-t border-hairline">
         <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-fg mb-2">
           Zwei Wege durch jedes Tableau
         </h2>
@@ -155,7 +155,7 @@ export default function LandingPage() {
       </div>
 
       {/* ── Und ein Weg quer hindurch ── */}
-      <div className="mt-16 pt-10 border-t border-[var(--hairline)]">
+      <div className="mt-16 pt-10 border-t border-hairline">
         <h2 className="font-prose font-medium text-[17px] md:text-[19px] text-fg mb-2">
           Ein Weg quer hindurch
         </h2>

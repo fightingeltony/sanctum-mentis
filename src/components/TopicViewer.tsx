@@ -173,7 +173,7 @@ export default function TopicViewer({ data, lectios }: Props) {
           <Link
             href="/"
             onClick={closeMenu}
-            className="flex items-center gap-3 py-3 border-b border-[var(--hairline)]
+            className="flex items-center gap-3 py-3 border-b border-hairline
               font-ui text-[11px] tracking-[0.16em] uppercase text-fg-muted
               hover:text-fg transition-colors no-underline"
           >
@@ -183,7 +183,7 @@ export default function TopicViewer({ data, lectios }: Props) {
           <Link
             href="/themen"
             onClick={closeMenu}
-            className="flex items-center gap-3 py-3 border-b border-[var(--hairline)]
+            className="flex items-center gap-3 py-3 border-b border-hairline
               font-ui text-[11px] tracking-[0.16em] uppercase text-fg-muted
               hover:text-fg transition-colors no-underline"
           >
@@ -300,7 +300,7 @@ export default function TopicViewer({ data, lectios }: Props) {
         )}
 
         {levelId === data.topic.complexityLevels && data.topic.synthesis && (
-          <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-[var(--hairline)] bg-[var(--bg-raised)] mb-6 items-start">
+          <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-hairline bg-[var(--bg-raised)] mb-6 items-start">
             <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-[var(--gold)] pt-0.5 shrink-0">
               Synthese
             </span>

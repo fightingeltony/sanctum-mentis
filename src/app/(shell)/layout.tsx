@@ -13,7 +13,7 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
       }}
     >
       {/* ── Header ── */}
-      <header className="border-b border-[var(--hairline)]">
+      <header className="border-b border-hairline">
         <div className="max-w-[1100px] mx-auto px-8 md:px-12 py-5 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-3">
           <Link
             href="/"
@@ -52,7 +52,7 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
       <main className="flex-1">{children}</main>
 
       {/* ── Footer ── */}
-      <footer className="border-t border-[var(--hairline)] mt-12">
+      <footer className="border-t border-hairline mt-12">
         <div className="max-w-[1100px] mx-auto px-8 md:px-12 py-8 flex flex-col gap-4">
           <div className="flex flex-col sm:flex-row items-baseline justify-between gap-3">
             <p className="font-body italic text-[13px] text-fg-dim">

@@ -7,7 +7,7 @@ interface Props {
 export function MapZoomControls({ onZoomIn, onZoomOut, onReset }: Props) {
   const btn = `
     flex items-center justify-center w-9 h-9
-    bg-[var(--bg-raised)] border border-[var(--hairline)]
+    bg-[var(--bg-raised)] border border-hairline
     text-fg-muted active:text-fg
     transition-colors select-none touch-manipulation
     font-ui text-base leading-none

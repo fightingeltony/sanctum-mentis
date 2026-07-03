@@ -112,7 +112,7 @@ export default function ThinkerList({
 
       {/* Context strip */}
       {context && (
-        <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-[var(--hairline)] bg-[var(--bg-raised)] mb-6 items-start">
+        <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-hairline bg-[var(--bg-raised)] mb-6 items-start">
           <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-[var(--gold)] pt-0.5">
             Lage
           </span>
@@ -132,7 +132,7 @@ export default function ThinkerList({
           className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors
             ${activeFilters.size === 0
               ? 'border-[var(--gold-soft)] text-[var(--gold)] bg-[var(--accent-soft)]'
-              : 'border-[var(--hairline)] text-fg-faint hover:text-fg-muted hover:border-[var(--hairline-strong)]'
+              : 'border-hairline text-fg-faint hover:text-fg-muted hover:border-hairline-strong'
             }`}
         >
           Alle
@@ -144,7 +144,7 @@ export default function ThinkerList({
             className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
               ${activeFilters.has('neu')
                 ? 'border-[var(--gold-soft)] text-[var(--gold)] bg-[var(--accent-soft)]'
-                : 'border-[var(--hairline)] text-fg-faint hover:text-fg-muted hover:border-[var(--hairline-strong)]'
+                : 'border-hairline text-fg-faint hover:text-fg-muted hover:border-hairline-strong'
               }`}
           >
             <span className="w-[5px] h-[5px] rounded-full bg-[var(--gold)] opacity-80" />
@@ -158,7 +158,7 @@ export default function ThinkerList({
             className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
               ${activeFilters.has('vertieft')
                 ? 'border-[var(--gold-soft)] text-[var(--gold)] bg-[var(--accent-soft)]'
-                : 'border-[var(--hairline)] text-fg-faint hover:text-fg-muted hover:border-[var(--hairline-strong)]'
+                : 'border-hairline text-fg-faint hover:text-fg-muted hover:border-hairline-strong'
               }`}
           >
             <span className="font-ui text-[10px]">↑</span>
@@ -203,7 +203,7 @@ export default function ThinkerList({
               <div
                 key={t.id}
                 ref={el => { if (el) cardRefs.current.set(t.id, el) }}
-                className="character-card is-alive flex flex-col gap-2 p-4 border border-[var(--hairline)] bg-[var(--bg-raised)]
+                className="character-card is-alive flex flex-col gap-2 p-4 border border-hairline bg-[var(--bg-raised)]
                   transition-colors duration-300 cursor-default carta-card-highlight"
               >
                 <div className="flex items-baseline justify-between gap-3 min-w-0">

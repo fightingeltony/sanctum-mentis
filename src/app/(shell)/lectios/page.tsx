@@ -71,7 +71,7 @@ export default function PfadePage() {
                   key={l.id}
                   href={`/lectio/${l.id}?von=lectios`}
                   className="group flex items-baseline justify-between gap-4 py-3.5
-                    border-b border-[var(--hairline)] no-underline"
+                    border-b border-hairline no-underline"
                 >
                   <span className="flex items-baseline gap-3 min-w-0">
                     <span
