@@ -1,0 +1,146 @@
+{
+  "schema": 2,
+  "id": "das-selbst",
+  "quelle": { "typ": "tableau", "id": "das-selbst" },
+  "title": "Die Landkarte des Selbst",
+  "theme": {
+    "accent": "oklch(0.42 0.12 295)",
+    "accentSoft": "oklch(0.42 0.12 295 / 0.15)"
+  },
+  "entwurf": true,
+  "verortung": {
+    "intro": "Sechs Stimmen liegen hier auf dem Tisch. Aber zuerst antwortest du.",
+    "frage": "Bin ich ein Kern, den ich freilegen kann – oder ein Muster, das ich gerade bin?",
+    "optionen": [
+      {
+        "id": "kern",
+        "label": "Da ist etwas, das bleibt.",
+        "echo": "So vieles hat sich verändert, seit ich denken kann – und trotzdem erkenne ich mich wieder.",
+        "x": 26, "y": 22,
+        "naehe": ["vedanta"],
+        "reibung_mit": ["buddhismus", "metzinger"],
+        "spiegel": {
+          "ruhe": "Du stehst beim bleibenden Kern – das Vedanta ist dein Nachbar: Den stillen Zeugen in dir musst du nicht herstellen, nur wiederfinden. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert.",
+          "erschuetterung": "Du stehst beim bleibenden Kern – und zwei Stimmen auf diesem Tisch halten genau das für eine Täuschung. Der Buddhismus würde fragen: Hast du diesen Kern je gefunden – oder nur das Gefühl, es müsse ihn geben? Zieh eine Verbindung zu denen, die dir widersprechen – oder weich ihnen aus, das sagt auch etwas."
+        }
+      },
+      {
+        "id": "strom",
+        "label": "Ich finde keinen festen Kern.",
+        "echo": "Wenn ich hinschaue, finde ich Gedanken und Gefühle – aber keinen, dem sie gehören.",
+        "x": 72, "y": 32,
+        "naehe": ["buddhismus", "metzinger"],
+        "reibung_mit": ["vedanta", "jung"],
+        "spiegel": {
+          "ruhe": "Du stehst beim Strom – Buddhismus und Metzinger stehen dir bei: kein Kern, nur Bewegung, und das ist keine Verlustmeldung. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert.",
+          "erschuetterung": "Du stehst beim Strom – und die Gegenseite fragt, wen du da eigentlich übersiehst. Das Vedanta würde sagen: Irgendwer bemerkt doch gerade den Strom. Zieh eine Verbindung zu denen, die dir widersprechen – oder weich ihnen aus, das sagt auch etwas."
+        }
+      },
+      {
+        "id": "werden",
+        "label": "Ich bin noch nicht fertig.",
+        "echo": "Etwas in mir zieht weiter – auf jemanden zu, der ich noch nicht bin.",
+        "x": 26, "y": 50,
+        "naehe": ["jung", "rogers"],
+        "reibung_mit": ["buddhismus", "metzinger"],
+        "spiegel": {
+          "ruhe": "Du stehst beim Werden – Jung und Rogers stehen neben dir: Das Selbst ist kein Fund, sondern ein Wachsen, und es hat eine Richtung. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert.",
+          "erschuetterung": "Du stehst beim Werden – und zwei Stimmen fragen, wer da eigentlich wächst. Metzinger würde sagen: Dein Werden ist ein Modell, das sich selbst fortschreibt. Zieh eine Verbindung zu denen, die dir widersprechen – oder weich ihnen aus, das sagt auch etwas."
+        }
+      },
+      {
+        "id": "viele",
+        "label": "Ich bin nicht einer – ich bin viele.",
+        "echo": "Bei der Arbeit, zu Hause, unter alten Freunden – drei verschiedene Leute, und alle bin ich.",
+        "x": 38, "y": 40,
+        "naehe": ["ifs"],
+        "reibung_mit": ["vedanta"],
+        "spiegel": {
+          "ruhe": "Du stehst bei den Vielen – IFS ist dein Nachbar: Die Teile in dir sind keine Störung, sie sind die Familie, die du bist. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert.",
+          "erschuetterung": "Du stehst bei den Vielen – und das Vedanta fragt leise: Wer ist es, der alle diese Teile bemerkt? Vielleicht bist du nicht die Familie, sondern der Raum, in dem sie sitzt. Zieh eine Verbindung zu ihm – oder weich ihm aus, das sagt auch etwas."
+        }
+      }
+    ]
+  },
+  "haltungsfrage": "Und in welcher Haltung willst du heute denken?",
+  "haltungen": {
+    "ruhe": {
+      "label": "Ruhe",
+      "untertitel": "Sehen, wer neben dir steht. Ordnung finden."
+    },
+    "erschuetterung": {
+      "label": "Erschütterung",
+      "untertitel": "Sehen, wer dir widerspricht. Das Wackeln zulassen."
+    }
+  },
+  "regionen": [
+    { "label": "der Kern", "x": 14, "y": 4, "hint": "Die Stimmen hier sagen: In dir ist etwas Bleibendes – du musst es nicht machen, nur finden." },
+    { "label": "der Strom", "x": 86, "y": 5, "hint": "Die Stimmen hier sagen: Es gibt keinen festen Kern – du bist Bewegung, und das ist keine schlechte Nachricht." },
+    { "label": "das Werden", "x": 16, "y": 78, "hint": "Die Stimmen hier sagen: Das Selbst wächst – in Beziehungen, Krisen, Therapie." },
+    { "label": "die Vermessung", "x": 76, "y": 92, "hint": "Hier vermisst die Wissenschaft das Selbst – und findet ein Modell im Gehirn, keinen Kern." }
+  ],
+  "karten": [
+    { "knoten": "vedanta",    "x": 14, "y": 12, "farbe": "oklch(0.48 0.13 55)",  "these": "Hinter allem sitzt ein stiller Zeuge – finde ihn wieder" },
+    { "knoten": "buddhismus", "x": 84, "y": 18, "farbe": "oklch(0.44 0.11 75)",  "these": "Kein Kern, nur Bewegung – und genau das befreit" },
+    { "knoten": "ifs",        "x": 22, "y": 35, "farbe": "oklch(0.42 0.10 230)", "these": "Du bist viele Teile – und etwas, das sie halten kann" },
+    { "knoten": "jung",       "x": 32, "y": 58, "farbe": "oklch(0.42 0.12 135)", "these": "Etwas in dir will ganz werden – in Träumen und Krisen meldet es sich" },
+    { "knoten": "rogers",     "x": 14, "y": 64, "farbe": "oklch(0.43 0.10 195)", "these": "In dir arbeitet ein Zug zum Wachsen – wenn du ihn lässt" },
+    { "knoten": "metzinger",  "x": 72, "y": 80, "farbe": "oklch(0.40 0.10 240)", "these": "Dein Ich ist ein Modell deines Gehirns – täuschend echt" }
+  ],
+  "stellen": [
+    {
+      "id": "zeuge-oder-stille",
+      "zwischen": ["vedanta", "buddhismus"],
+      "reibung": "Das Vedanta sagt: Hinter allem, was in dir geschieht, sitzt ein stiller Zeuge – unzerstörbar, immer schon da. Der Buddhismus bestreitet genau das: kein Zeuge, kein Kern, nur der Strom selbst. Beide entstanden in Indien, beide antworten auf das Leiden, beide empfehlen Meditation – und in der tiefsten Stille finden sie Entgegengesetztes. Der eine sagt: Dort wartet einer. Der andere sagt: Dort ist niemand.",
+      "frage": "Reden die beiden über Verschiedenes – oder widersprechen sie einander wirklich? Landkarte oder Medaille?",
+      "antwort": {
+        "landkarte": {
+          "ruhe": "Deine Lesart hat eine lange Geschichte: Vielleicht beschreiben beide dieselbe Stille und streiten nur über Worte – der eine nennt Zeuge, was der andere Offenheit nennt. Gleiche Erfahrung, verschiedene Deutung. Dann trennt die beiden keine Wand, sondern eine Sprache – und du kannst dich hinsetzen, ohne dich vorher zu entscheiden.",
+          "erschuetterung": "Die Wort-Lesart ist verführerisch – aber die Traditionen selbst haben sie nie angenommen. Zweieinhalbtausend Jahre sassen beide in derselben Stille und bestanden darauf: Es ist nicht dasselbe. Ob dort einer wartet oder niemand, ändert, was du hoffst und was du fürchtest. Wenn es nur Worte wären – warum hat keine Seite je nachgegeben?"
+        },
+        "medaille": {
+          "ruhe": "Du lässt den ältesten Streit der Innenwelt offen stehen – und bist damit in guter Gesellschaft: Er ist bis heute nicht beigelegt. Vielleicht ist das die ehrlichste Haltung – hinsetzen, still werden, und die Frage selbst herausfinden lassen. Diese Medaille entscheidet sich nicht am Schreibtisch.",
+          "erschuetterung": "Dann liegt hier eine Medaille, die sich nur im Selbstversuch wendet – und selbst der ist nicht neutral. Du kannst nicht beides erleben: eine Stille, in der einer wartet, und eine, in der niemand ist. Die Erwartung färbt die Erfahrung, mit der du sie prüfen wolltest. Was du in der Stille findest, hängt auch daran, als wer du dich hinsetzt."
+        }
+      }
+    },
+    {
+      "id": "zentrum-oder-modell",
+      "zwischen": ["jung", "metzinger"],
+      "reibung": "Jung sah das Selbst als tiefes Zentrum – real, erfahrbar in Träumen und Lebenskrisen, das Ziel eines ganzen Lebens. Metzinger erklärt genau das weg: Was Jung Selbst nennt, ist ein Modell, das dein Gehirn von sich baut – so überzeugend, weil es sich selbst nicht als Modell erkennt. Der eine hat die Verwandlungskraft in der Klinik gesehen. Der andere fragt, wozu ein Zentrum nötig ist, wo eine Simulation genügt.",
+      "frage": "Reden die beiden über Verschiedenes – oder widersprechen sie einander wirklich? Landkarte oder Medaille?",
+      "antwort": {
+        "landkarte": {
+          "ruhe": "Vieles spricht für deine Lesart: Die beiden vermessen verschiedene Ebenen. Metzinger beschreibt, wie das Selbst im Gehirn gebaut wird; Jung beschreibt, was es in einem Leben bedeutet. Eine Karte der Maschine, eine Karte des Sinns – Baupläne widersprechen keinen Biografien. Du kannst beide behalten.",
+          "erschuetterung": "Die Ebenen-Lesart hält lange durch. Dann kommt eine Stelle, an der sie nicht mehr passt: Wenn das Selbst nur ein Modell ist, dann ist auch die Tiefe, die Jung heilig war, eine Funktion – nützlich, aber nicht wahr. Und wenn Jungs Zentrum echt ist, muss Metzinger erklären, warum es sich nach so viel mehr anfühlt als Simulation. Das ist keine Arbeitsteilung mehr – das ist ein Streit darüber, ob dein Innerstes Bedeutung hat oder Mechanik ist."
+        },
+        "medaille": {
+          "ruhe": "Du erkennst hier eine echte Medaille – und kannst gelassen mit ihr leben. Im Alltag brauchst du keine Entscheidung: Du kannst deine Träume ernst nehmen und zugleich wissen, dass ein Gehirn sie baut. Nur zugleich ansehen kannst du beides nicht – wer Bedeutung erlebt, sieht die Mechanik nicht; wer die Mechanik seziert, verliert die Bedeutung aus dem Blick.",
+          "erschuetterung": "Dann wendet sich diese Medaille dort, wo es zählt: in deiner nächsten Krise. Wenn sie kommt – ist das ein Selbst, das sich wandelt, oder ein Modell, das sich neu berechnet? Beide Beschreibungen passen auf dieselbe Nacht. Welche du wählst, entscheidet, ob du deiner eigenen Tiefe traust – und niemand entscheidet es für dich."
+        }
+      }
+    },
+    {
+      "id": "aufloesen-oder-entwickeln",
+      "zwischen": ["buddhismus", "jung"],
+      "reibung": "Jung kannte die buddhistischen Texte gut – und antwortete mit dem genauen Gegenteil. Für den Buddhismus ist das Festhalten an einem Kern-Ich die Wurzel des Leidens; für Jung ist das Selbst das höchste Ziel, auf das ein Leben sich entfaltet. Der eine will das Tiefste in dir loslassen, der andere will es entwickeln – und beide berufen sich auf Erfahrung.",
+      "frage": "Reden die beiden über Verschiedenes – oder widersprechen sie einander wirklich? Landkarte oder Medaille?",
+      "antwort": {
+        "landkarte": {
+          "ruhe": "Jung selbst hat deine Lesart versucht: Was der Buddhismus auflöst, sagte er, ist nur das enge Ego – nicht das Selbst, das er meinte. Dann arbeiten beide am selben Werk: erst das kleine Ich lockern, dann dem grösseren Raum trauen. Zwei Etappen eines Weges, keine Gegner.",
+          "erschuetterung": "Jungs Versöhnung ist elegant – aber sie liest den Buddhismus zu freundlich. Er meint nicht nur das enge Ego; er meint auch das grosse, runde, integrierte Selbst, auf das Jung sein Leben setzte. Die Frage schneidet tiefer, als die Etappen-Karte zulässt: Wird das Tiefste in dir entdeckt – oder aufgelöst? Diese Karte hat der Buddhismus nie unterschrieben."
+        },
+        "medaille": {
+          "ruhe": "Du lässt beide Bewegungen gelten – die, die aufbaut, und die, die loslässt. Vielleicht kennt ein Leben beide: Jahre, in denen etwas in dir zusammenwachsen will, und Momente, in denen genau dieses Zusammengewachsene durchsichtig wird. Keine widerlegt die andere. Du musst nur wissen, in welchem Jahr du gerade bist.",
+          "erschuetterung": "Dann steht hier eine Frage, die dir keine Übung abnimmt: Ist Reifung der Weg – oder das letzte Hindernis? Wer sein Selbst entwickelt, baut auf, was der andere Weg abtragen will; wer auflöst, verliert, worauf der erste Weg ein Leben lang zielt. Beides zugleich geht nicht – und beide Seiten sagen, die andere merke es nur noch nicht."
+        }
+      }
+    }
+  ],
+  "uebersehen": {
+    "zwischen": ["vedanta", "metzinger"],
+    "text": "Eine Verbindung hast du nicht gezogen – dabei liegt sie quer über den ganzen Tisch. Vedanta und Metzinger stehen an entgegengesetzten Ecken: der älteste Mystiker und der nüchternste Neurophilosoph. Und doch sagen beide denselben Satz: Der, für den du dich hältst, ist nicht das Letzte. Metzinger nennt dein Alltags-Ich ein Modell; das Vedanta nennt es einen Schleier. Der Unterschied beginnt erst dahinter – hinter dem Modell ist für Metzinger niemand, hinter dem Schleier wartet für das Vedanta der Zeuge. Vielleicht ist das eine Ebenentrennung. Vielleicht ist es die schärfste Medaille dieses Tisches: zwei, die sich einig sind, dass du dich täuschst – und uneins, ob dahinter jemand auf dich wartet."
+  },
+  "hinweis_unkuratiert": "Zu dieser Verbindung hat der Tisch noch nichts zu sagen – deine Setzung bleibt trotzdem stehen. Vielleicht siehst du hier etwas, das er noch nicht sieht.",
+  "kuratiert": "2026-08-08"
+}

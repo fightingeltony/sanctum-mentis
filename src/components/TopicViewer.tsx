@@ -26,9 +26,11 @@ interface Props {
   data: TopicData
   /** Lectios for this tableau – shown as guided-path discovery in the header */
   lectios?: LectioSummary[]
+  /** Denkraum-Tisch zu diesem Tableau (Beta) – leiser Eingang unter den Pfaden */
+  denkraumId?: string
 }
 
-export default function TopicViewer({ data, lectios }: Props) {
+export default function TopicViewer({ data, lectios, denkraumId }: Props) {
   const searchParams = useSearchParams()
 
   // Read URL params client-side – keeps the page as SSG
@@ -240,7 +242,7 @@ export default function TopicViewer({ data, lectios }: Props) {
           </p>
         )}
 
-        {lectios && lectios.length > 0 && (
+        {((lectios && lectios.length > 0) || denkraumId) && (
           <div className="px-4 sm:px-5 mb-6">
             <p
               className="font-ui text-[11px] tracking-[0.06em] mb-2"
@@ -249,7 +251,7 @@ export default function TopicViewer({ data, lectios }: Props) {
               Geführte Pfade
             </p>
             <div className="flex flex-col gap-2">
-              {lectios.map(l => (
+              {lectios?.map(l => (
                 <Link
                   key={l.id}
                   href={`/lectio/${l.id}`}
@@ -296,6 +298,16 @@ export default function TopicViewer({ data, lectios }: Props) {
                 </Link>
               ))}
             </div>
+            {denkraumId && (
+              <Link
+                href={`/denkraum/${denkraumId}`}
+                className="inline-flex items-baseline gap-2 mt-3 font-ui text-[12px] tracking-[0.06em]
+                  text-fg-faint hover:text-fg-muted transition-colors no-underline"
+              >
+                Dieses Feld als Denkraum durchdenken
+                <span style={{ color: 'var(--accent)' }}>· Beta</span>
+              </Link>
+            )}
           </div>
         )}
 

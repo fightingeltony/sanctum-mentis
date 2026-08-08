@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { getLebensfrage, getLebensfrageIds, library } from '@/lib/data'
+import { getDenkraumIdForLebensfrage, getLebensfrage, getLebensfrageIds, library } from '@/lib/data'
 import LebensfrageViewer from '@/components/LebensfrageViewer'
 
 interface Props {
@@ -29,6 +29,7 @@ export default async function LebensfragePage({ params }: Props) {
   const tableauTitles = Object.fromEntries(
     library.map(e => [e.id, e.title])
   )
+  const denkraumId = getDenkraumIdForLebensfrage(id)
 
-  return <LebensfrageViewer lebensfrage={lf} tableauTitles={tableauTitles} />
+  return <LebensfrageViewer lebensfrage={lf} tableauTitles={tableauTitles} denkraumId={denkraumId ?? undefined} />
 }

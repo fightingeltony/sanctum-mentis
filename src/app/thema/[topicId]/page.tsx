@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
 import { notFound } from 'next/navigation'
-import { getTopic, getLectiosByTableauId, library } from '@/lib/data'
+import { getDenkraumIdForTableau, getTopic, getLectiosByTableauId, library } from '@/lib/data'
 import TopicViewer from '@/components/TopicViewer'
 
 interface Props {
@@ -46,13 +46,14 @@ export default async function TopicPage({ params }: Props) {
   if (!data) notFound()
 
   const lectios = getLectiosByTableauId(topicId)
+  const denkraumId = getDenkraumIdForTableau(topicId)
 
   // TopicViewer reads URL params via useSearchParams() (Client Component).
   // Suspense boundary required by Next.js when useSearchParams is used below
   // a Server Component without a searchParams prop.
   return (
     <Suspense>
-      <TopicViewer data={data} lectios={lectios} />
+      <TopicViewer data={data} lectios={lectios} denkraumId={denkraumId ?? undefined} />
     </Suspense>
   )
 }

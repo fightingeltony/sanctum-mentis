@@ -1,5 +1,5 @@
 import 'server-only'
-import type { TopicData, Lectio, LectioSummary, Spur, Lebensfrage } from './types'
+import type { TopicData, Lectio, LectioSummary, Spur, Lebensfrage, DenkraumTisch, DenkraumTischResolved } from './types'
 import dasSelbstRaw                        from '../../data/das-selbst.json'
 import philosophieDesGeistesRaw            from '../../data/philosophie-des-geistes.json'
 import realismusUndKonstruktivismusRaw     from '../../data/realismus-und-konstruktivismus.json'
@@ -32,6 +32,9 @@ import todRaw                              from '../../data/lebensfragen/tod.jso
 import einsamkeitRaw                       from '../../data/lebensfragen/einsamkeit.json'
 import veraenderungRaw                     from '../../data/lebensfragen/veraenderung.json'
 import kontrollierenRaw                    from '../../data/lebensfragen/kontrollieren.json'
+import kontrollierenTischRaw               from '../../data/denkraum/kontrollieren.json'
+import dasSelbstTischRaw                   from '../../data/denkraum/das-selbst.json'
+import { getVersion }                      from './complexityEngine'
 
 const TOPICS: Record<string, TopicData> = {
   'das-selbst':                       dasSelbstRaw                    as unknown as TopicData,
@@ -163,6 +166,87 @@ export function getAllLebensfragen(): Lebensfrage[] {
 
 export function getLebensfrageIds(): string[] {
   return Object.keys(LEBENSFRAGEN)
+}
+
+// ─── Denkraum-Tisch Loader (Prototyp v2, Beta) ───────────────
+
+const DENKRAEUME: Record<string, DenkraumTisch> = {
+  'kontrollieren': kontrollierenTischRaw as unknown as DenkraumTisch,
+  'das-selbst':    dasSelbstTischRaw     as unknown as DenkraumTisch,
+}
+
+export function getDenkraumIds(): string[] {
+  return Object.keys(DENKRAEUME)
+}
+
+export function getDenkraumIdForLebensfrage(lebensfrageId: string): string | null {
+  return Object.values(DENKRAEUME)
+    .find(d => d.quelle.typ === 'lebensfrage' && d.quelle.id === lebensfrageId)?.id ?? null
+}
+
+export function getDenkraumIdForTableau(tableauId: string): string | null {
+  return Object.values(DENKRAEUME)
+    .find(d => d.quelle.typ === 'tableau' && d.quelle.id === tableauId)?.id ?? null
+}
+
+/** Tableau-Texte tragen [[Annotationen]] und *Kursiv*-Marker – der Tisch
+ *  rendert rohen Text, also beides entfernen (Term behalten, Definition weg). */
+function entferneMarkup(text: string): string {
+  return text
+    .replace(/\[\[([^\]]+)\]\]/g, (_, inhalt: string) => {
+      const doppelpunkt = inhalt.indexOf(':')
+      if (doppelpunkt !== -1) return inhalt.slice(0, doppelpunkt)
+      const strich = inhalt.indexOf(' – ')
+      if (strich !== -1) return inhalt.slice(0, strich)
+      return ''
+    })
+    .replace(/\*([^*]+)\*/g, '$1')
+    .replace(/ {2,}/g, ' ')
+    .trim()
+}
+
+/** Joint die Karten mit ihrer Quelle (Lebensfrage-Stimmen oder Tableau-Denker).
+ *  Wirft bei kaputten Referenzen – Datentippfehler scheitern beim SSG-Build. */
+export function getDenkraumTisch(id: string): DenkraumTischResolved | null {
+  const d = DENKRAEUME[id]
+  if (!d) return null
+
+  let karten
+  if (d.quelle.typ === 'tableau') {
+    const topic = getTopic(d.quelle.id)
+    if (!topic) throw new Error(`Denkraum ${id}: Tableau '${d.quelle.id}' fehlt`)
+    const byId = new Map(topic.thinkers.map(t => [t.id, t]))
+    karten = d.karten.map(k => {
+      const t = byId.get(k.knoten)
+      if (!t) throw new Error(`Denkraum ${id}: Denker '${k.knoten}' nicht im Tableau '${d.quelle.id}'`)
+      const roh = t.lectio_brief ?? getVersion(t, 3) ?? ''
+      return { ...k, name: t.name, these: k.these ?? '', text: entferneMarkup(roh) }
+    })
+  } else {
+    const lf = getLebensfrage(d.quelle.id)
+    if (!lf) throw new Error(`Denkraum ${id}: Lebensfrage '${d.quelle.id}' fehlt`)
+    const byKnoten = new Map(lf.stimmen.map(s => [s.aus.knoten, s]))
+    karten = d.karten.map(k => {
+      const s = byKnoten.get(k.knoten)
+      if (!s) throw new Error(`Denkraum ${id}: Stimme '${k.knoten}' nicht in Lebensfrage '${d.quelle.id}'`)
+      const [name, ...rest] = s.ueberschrift.split(':')
+      return { ...k, name, these: k.these ?? rest.join(':').trim(), text: s.text }
+    })
+  }
+
+  const kartenIds = new Set(d.karten.map(k => k.knoten))
+  for (const st of d.stellen) {
+    for (const z of st.zwischen) {
+      if (!kartenIds.has(z)) throw new Error(`Denkraum ${id}: Stelle '${st.id}' referenziert unbekannte Karte '${z}'`)
+    }
+  }
+  for (const opt of d.verortung.optionen) {
+    for (const z of [...opt.naehe, ...opt.reibung_mit]) {
+      if (!kartenIds.has(z)) throw new Error(`Denkraum ${id}: Verortung '${opt.id}' referenziert unbekannte Karte '${z}'`)
+    }
+  }
+
+  return { ...d, karten }
 }
 
 export function getLectiosByTableauId(tableauId: string): LectioSummary[] {

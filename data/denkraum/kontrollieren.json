@@ -1,0 +1,146 @@
+{
+  "schema": 2,
+  "id": "kontrollieren",
+  "quelle": { "typ": "lebensfrage", "id": "kontrollieren" },
+  "title": "Was habe ich wirklich in der Hand?",
+  "theme": {
+    "accent": "oklch(0.42 0.09 300)",
+    "accentSoft": "oklch(0.42 0.09 300 / 0.12)"
+  },
+  "entwurf": true,
+  "verortung": {
+    "intro": "Sechs Stimmen haben auf diese Frage geantwortet. Aber zuerst antwortest du.",
+    "frage": "Was hast du wirklich in der Hand?",
+    "optionen": [
+      {
+        "id": "weniger",
+        "label": "Weniger, als ich denke.",
+        "echo": "Vieles, was mich nachts wachhält, liegt gar nicht bei mir – es wäre eine Erleichterung, das zuzugeben.",
+        "x": 33, "y": 42,
+        "naehe": ["epiktet"],
+        "reibung_mit": ["sartre", "nietzsche"],
+        "spiegel": {
+          "ruhe": "Du stehst beim Loslassen – Epiktet ist dein Nachbar. Von ihm kannst du die Schärfe lernen: nicht alles aufgeben, sondern genau unterscheiden, was deins ist. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert.",
+          "erschuetterung": "Du stehst beim Loslassen – und zwei Stimmen auf diesem Tisch halten genau das für deine bequemste Ausrede. Sartre würde fragen: Was genau kannst du angeblich nicht ändern? Zieh eine Verbindung zu denen, die dir widersprechen – oder weich ihnen aus, das sagt auch etwas."
+        }
+      },
+      {
+        "id": "mehr",
+        "label": "Mehr, als ich zugebe.",
+        "echo": "›Das kann ich nicht ändern‹ sage ich öfter, als es stimmt.",
+        "x": 70, "y": 38,
+        "naehe": ["sartre", "nietzsche"],
+        "reibung_mit": ["wahres-selbst", "augustinus", "buddhismus"],
+        "spiegel": {
+          "ruhe": "Du stehst beim Ergreifen – Sartre und Nietzsche stehen dir bei: Die Freiheit ist unbequem, aber sie ist deine. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert.",
+          "erschuetterung": "Du stehst beim Ergreifen – und für die Stimmen des Empfangens ist genau dieses Greifen die Wurzel deiner Unruhe. Augustinus würde fragen: Was tust du, wenn der Wille, der zugreifen soll, selbst gespalten ist? Zieh eine Verbindung zu denen, die dir widersprechen – oder weich ihnen aus, das sagt auch etwas."
+        }
+      },
+      {
+        "id": "tragen",
+        "label": "Das Wichtigste habe ich nie gemacht.",
+        "echo": "Die Menschen, die mich halten, habe ich nicht ausgesucht.",
+        "x": 47, "y": 66,
+        "naehe": ["wahres-selbst", "augustinus"],
+        "reibung_mit": ["nietzsche", "sartre"],
+        "spiegel": {
+          "ruhe": "Du stehst beim Empfangen – das Wahre Selbst und Augustinus stehen neben dir: Das Entscheidende machst du nicht, es kommt dir zu. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert.",
+          "erschuetterung": "Du stehst beim Empfangen – und Nietzsche hält genau das für die eleganteste Kapitulation: Ohnmacht, zur Hingabe verklärt. Kannst du ihn widerlegen – oder nur anders leben? Zieh eine Verbindung zu denen, die dir widersprechen – oder weich ihnen aus, das sagt auch etwas."
+        }
+      },
+      {
+        "id": "wer",
+        "label": "Wer fragt da eigentlich?",
+        "echo": "Ich suche den, der bei mir am Steuer sitzt – und finde niemanden.",
+        "x": 16, "y": 60,
+        "naehe": ["buddhismus"],
+        "reibung_mit": ["nietzsche"],
+        "spiegel": {
+          "ruhe": "Du stehst neben dem Streit – beim Buddhismus, der die Frage selbst fallen lässt. Von dort aus wirkt das Ringen der anderen seltsam laut. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert.",
+          "erschuetterung": "Du stehst neben dem Streit – aber die Frage zu verlassen heisst nicht, sie zu gewinnen. Mit ihr fällt aber auch etwas weg, das du vielleicht behalten wolltest. Nietzsche würde sagen: das halbe Leben. Zieh eine Verbindung zu ihm – oder weich ihm aus, das sagt auch etwas."
+        }
+      }
+    ]
+  },
+  "haltungsfrage": "Und in welcher Haltung willst du heute denken?",
+  "haltungen": {
+    "ruhe": {
+      "label": "Ruhe",
+      "untertitel": "Sehen, wer neben dir steht. Ordnung finden."
+    },
+    "erschuetterung": {
+      "label": "Erschütterung",
+      "untertitel": "Sehen, wer dir widerspricht. Das Wackeln zulassen."
+    }
+  },
+  "regionen": [
+    { "label": "das Loslassen", "x": 22, "y": 14, "hint": "Die Stimmen hier sagen: Halte weniger fest. Vieles liegt nicht bei dir – und das anzuerkennen befreit." },
+    { "label": "das Ergreifen", "x": 79, "y": 14, "hint": "Die Stimmen hier sagen: Du hast mehr in der Hand, als du zugibst – nimm es." },
+    { "label": "das Empfangen", "x": 50, "y": 92, "hint": "Die Stimmen hier sagen: Das Entscheidende machst du nicht – es kommt dir zu, wenn du es lässt." },
+    { "label": "der Einwand", "x": 9, "y": 78, "hint": "Hier steht die Stimme, die die Frage selbst anzweifelt: Wer ist es denn, der etwas in der Hand hätte?" }
+  ],
+  "karten": [
+    { "knoten": "epiktet",       "x": 26, "y": 24, "farbe": "oklch(0.44 0.11 168)" },
+    { "knoten": "sartre",        "x": 66, "y": 22, "farbe": "oklch(0.40 0.12 25)" },
+    { "knoten": "nietzsche",     "x": 87, "y": 48, "farbe": "oklch(0.42 0.12 350)" },
+    { "knoten": "wahres-selbst", "x": 64, "y": 80, "farbe": "oklch(0.48 0.13 55)" },
+    { "knoten": "augustinus",    "x": 32, "y": 84, "farbe": "oklch(0.41 0.11 145)" },
+    { "knoten": "buddhismus",    "x": 9,  "y": 46, "farbe": "oklch(0.44 0.11 75)" }
+  ],
+  "stellen": [
+    {
+      "id": "loslassen-oder-ausrede",
+      "zwischen": ["epiktet", "sartre"],
+      "reibung": "Epiktet sagt: Gib das Unverfügbare auf – fast nichts liegt in deiner Macht, und das anzuerkennen ist Befreiung. Sartre hört genau darin die Ausrede: ›Das liegt nicht in meiner Macht‹ ist ihm der eleganteste Weg, der eigenen Freiheit auszuweichen. Dieselbe Geste – etwas loslassen – ist für den einen Weisheit, für den anderen Flucht.",
+      "frage": "Reden die beiden über Verschiedenes – oder widersprechen sie einander wirklich? Landkarte oder Medaille?",
+      "antwort": {
+        "landkarte": {
+          "ruhe": "Vieles spricht für deine Lesart. Epiktet redet von den Dingen – Besitz, Ruf, Ausgang der Pläne –, Sartre von deiner Stellungnahme zu ihnen. Frankl hat die beiden Karten übereinandergelegt: Den Schlag hast du nicht in der Hand, deine Antwort darauf schon. So gelesen widersprechen sich die beiden nicht – sie vermessen verschiedene Schichten desselben Lebens. Du kannst beide behalten.",
+          "erschuetterung": "Die Ebenentrennung trägt weit: Epiktet vermisst die Dinge, Sartre die Stellungnahme – und Frankl zeigt, dass sich beides schichten lässt. Aber ein Rest sperrt sich. Sartres Verdacht zielt nicht auf eine andere Ebene, er zielt auf Epiktets Geste selbst: Woher weisst du, ob dein Loslassen Einsicht ist – oder die bequeme Erzählung eines Menschen, der nicht handeln will? Darauf antwortet keine Ebenentrennung – die Frage bleibt an dir hängen, jedes Mal neu, wenn du etwas ›nicht in meiner Macht‹ nennst."
+        },
+        "medaille": {
+          "ruhe": "Du lässt den Widerspruch stehen – und das hat seine eigene Ruhe. Ob ein Loslassen Weisheit ist oder Flucht, entscheidet kein Grundsatz, sondern der einzelne Fall – und weil du das weisst, musst du die Spannung nicht mehr wegerklären. Du trägst die Medaille einfach bei dir. Welche Seite oben liegt, zeigt dir der Moment.",
+          "erschuetterung": "Dann gilt die Frage dir. Wenn dieselbe Geste Weisheit oder Flucht sein kann und nichts von aussen entscheidet, welche von beiden du gerade vollziehst – dann steht jedes deiner Loslassen unter Verdacht, auch das ehrlichste. Sartre würde sagen: gerade das ehrlichste. Ablegen lässt sich diese Medaille nicht. Was bleibt, ist Wachheit – für den Moment, in dem aus deiner Gelassenheit eine Ausrede wird."
+        }
+      }
+    },
+    {
+      "id": "werk-oder-gabe",
+      "zwischen": ["nietzsche", "augustinus"],
+      "reibung": "Nietzsche sagt: Du hast dich selbst in der Hand, wenn du den Mut hast, dich zu ergreifen – alles andere ist verschenktes Leben. Augustinus hat genau das versucht und ist daran zerbrochen: Der Wille, der sich ergreifen sollte, war selbst gespalten, und das Entscheidende fiel ihm zu, als er es nicht mehr machen konnte. Für die eine Seite ist das Empfangen verklärte Ohnmacht. Für die andere ist das Ergreifen die Wurzel der Unruhe.",
+      "frage": "Reden die beiden über Verschiedenes – oder widersprechen sie einander wirklich? Landkarte oder Medaille?",
+      "antwort": {
+        "landkarte": {
+          "ruhe": "Deine Lesart hat Kraft: Vielleicht reden die beiden von verschiedenen Phasen – es gibt Strecken, auf denen du ringen musst, und Schwellen, an denen sich deine Hand öffnen muss. Augustinus selbst kannte beides: das jahrelange Ringen und den Moment, der ihm zufiel. So gelesen ergänzen sich Werk und Gabe wie Anspannung und Ausatmen – jedes zu seiner Zeit.",
+          "erschuetterung": "Die Phasen-Lesart ist elegant – vielleicht zu elegant. Denn die beiden reden nicht über verschiedene Phasen, sie bewerten dieselbe Bewegung entgegengesetzt: Was Augustinus Gnade nennt, nennt Nietzsche Kapitulation; was Nietzsche Selbstschöpfung nennt, ist für die Gegenseite genau die Anstrengung, die das Entscheidende verstellt. Jeder hält die Grundgeste des anderen für Selbstbetrug. Auf einer Karte, auf der beide Wege friedlich nebeneinander liegen, hat einer von beiden schon verloren."
+        },
+        "medaille": {
+          "ruhe": "Du erkennst hier eine echte Medaille – und kannst trotzdem gelassen mit ihr leben. Dass sich Werk und Gabe nicht verrechnen lassen, heisst nicht, dass du dich heute endgültig entscheiden musst. Es heisst nur: Du wirst nie beide Seiten zugleich sehen. Die meisten Leben wenden die Medaille mehrmals – es gibt Jahre des Ergreifens und Jahre des Empfangens, und keines widerlegt das andere.",
+          "erschuetterung": "Dann steht hier die vielleicht härteste Stelle des Tisches. Denn diese Medaille lässt sich nicht von aussen betrachten: Du stehst immer schon auf einer Seite. Fragst du ›was soll ich tun‹, hast du das Werk gewählt; wartest du, hast du gewählt zu empfangen. Es gibt keinen neutralen Ort, von dem aus du prüfen könntest, welche Seite recht hat – die Prüfung selbst wäre schon Werk. An dieser Stelle entscheidet sich etwas über dich, nicht über die Denker."
+        }
+      }
+    },
+    {
+      "id": "frage-oder-boden",
+      "zwischen": ["buddhismus", "nietzsche"],
+      "reibung": "Der Buddhismus beantwortet die Frage nicht – er bestreitet ihre Voraussetzung: das feste Ich, das etwas in der Hand hätte. Wo kein Halter ist, ist nichts zu halten, und der Streit der anderen fällt in sich zusammen. Aber mit dem Streit fällt auch, was an ihm hing: Wenn es kein Ich gibt, zählt auch nicht mehr, was Nietzsche unbedingt gezählt sehen will – dein Ringen, dein Werk, die Haltung, die du gegen alles behauptest.",
+      "frage": "Siehst du hier die tiefere Ebene, auf der sich alles klärt – oder eine Medaille: die Freiheit von der Frage auf der einen Seite, ihr Gewicht auf der anderen?",
+      "antwort": {
+        "landkarte": {
+          "ruhe": "So gelesen ist der Buddhismus keine weitere Stimme im Streit, sondern die Karte unter den Karten: Alle anderen vermessen, wie ein Ich mit der Welt umgeht – er vermisst, ob es dieses Ich so überhaupt gibt. Der Streit um viel oder wenig Kontrolle löst sich dann nicht, er wird gegenstandslos – so wie die Frage nach dem Rand der Erde gegenstandslos wurde, als die Karte rund wurde. Das kann eine grosse Entlastung sein.",
+          "erschuetterung": "Vielleicht. Aber die tiefere Ebene hat ihren Preis. Wer die Frage auflöst, gewinnt sie nicht – er verlässt sie, und mit ihr alles, was an ihr hing: den Ernst deines Ringens, das Gewicht deiner Entscheidungen, den Stolz auf das, was du gegen Widerstand geworden bist. Die runde Karte hat den Rand der Erde nicht erklärt, sie hat ihn abgeschafft. Ob das Klärung ist oder Verlust, sagt dir die Ebene selbst nicht."
+        },
+        "medaille": {
+          "ruhe": "Du hältst beides fest: die Entlastung, die im Nachlassen des Greifens liegt – und das Gewicht, das nur ein Leben hat, das sein Ringen ernst nimmt. Als Medaille gelesen musst du den Buddhismus nicht widerlegen und Nietzsche nicht aufgeben. Du weisst nur, dass du nie beide Seiten zugleich sehen wirst: Wer loslässt, sieht das Gewicht nicht mehr; wer ringt, nicht die Freiheit. Das ist kein Scheitern – näher kommt hier niemand heran.",
+          "erschuetterung": "Dann ist dies die Medaille, die am meisten kostet. Denn sie liegt nicht zwischen zwei Meinungen, sondern zwischen zwei Weisen, überhaupt jemand zu sein: ein Ich, das sein Leben führt – oder ein Geschehen, das sich führen lässt und auch das noch loslässt. Zwischen ihnen gibt es keinen Kompromiss und keine Mischung; jeder Versuch, beides zu haben, steht schon auf der Seite des Ich. Wenn dich heute etwas von diesem Tisch begleitet, dann vielleicht diese Unruhe."
+        }
+      }
+    }
+  ],
+  "uebersehen": {
+    "zwischen": ["epiktet", "buddhismus"],
+    "text": "Eine Verbindung hast du nicht gezogen – dabei lag sie die ganze Zeit offen da. Epiktet und der Buddhismus scheinen im selben Lager zu stehen: Beide lassen los. Aber sie tun nicht dasselbe. Epiktet gibt die Dinge auf und behält das Ich, das nun gelassener lebt – sein Loslassen ist ein Umbau der Burg. Der Buddhismus fragt, wer darin wohnt, und findet niemanden. Wenn beide recht hätten, müsste Epiktets ganze Übung – die Sorgfalt für das Urteil, das Wollen, die Zustimmung – an einem Ich hängen, das es nicht gibt. Vielleicht ist das eine Ebenentrennung. Vielleicht ist es die Medaille, die du übersehen hast, weil die beiden so friedlich nebeneinander standen."
+  },
+  "hinweis_unkuratiert": "Zu dieser Verbindung hat der Tisch noch nichts zu sagen – deine Setzung bleibt trotzdem stehen. Vielleicht siehst du hier etwas, das er noch nicht sieht.",
+  "kuratiert": "2026-08-08"
+}

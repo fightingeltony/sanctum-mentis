@@ -228,3 +228,79 @@ export interface Lebensfrage {
   kuratiert: string;
   kuratiert_aus_tableaus: string[];
 }
+
+// ─── Denkraum-Tisch Types (Prototyp v2, Beta) ────────────────
+// Formstudie v1 (linearer Korridor) liegt auf Branch denkraum-prototyp-v1.
+// v2 folgt dem Richtungsentscheid in konzept-denkraum.md (Nachtrag 8.8.26):
+// erst Verortung (die Frage wird dem Nutzer gestellt), dann der Tisch
+// (Stimmen als Karten auf einer Fläche, Nutzer zieht Verbindungen und
+// setzt die Medaillen selbst – sein entstehendes Bild ist der Spiegel).
+
+export type Haltung = 'ruhe' | 'erschuetterung'
+export type MedaillenWahl = 'landkarte' | 'medaille'
+
+/** Eine Antwort-Option auf die Lebensfrage – verortet den Nutzer auf dem Tisch */
+export interface VerortungsOption {
+  id: string;
+  label: string;                 // kurze Ich-Antwort, z.B. «Weniger, als ich meine.»
+  echo: string;                  // ein Satz, der die Antwort ausbuchstabiert
+  x: number; y: number;          // Position des Du-Markers auf dem Tisch (0–100)
+  naehe: string[];               // knoten, die neben dieser Position stehen
+  reibung_mit: string[];         // knoten, die diese Position angreifen
+  spiegel: Record<Haltung, string>;  // Panel-Text nach dem Eintreten
+}
+
+/** Eine Stimmen-Karte auf dem Tisch */
+export interface TischKarte {
+  knoten: string;                // knoten-id in der Quelle (Lebensfrage-Stimme oder Tableau-Denker)
+  x: number; y: number;          // Position auf dem Tisch (0–100)
+  farbe: string;                 // Stimm-Tint (oklch)
+  these?: string;                // kuratierte Unterzeile; bei Lebensfragen-Quelle sonst aus der Überschrift
+}
+
+/** Kuratierte Stelle für eine Verbindung zwischen zwei Stimmen */
+export interface TischStelle {
+  id: string;
+  zwischen: [string, string];
+  reibung: string;
+  frage: string;
+  antwort: {
+    landkarte: Record<Haltung, string>;
+    medaille:  Record<Haltung, string>;
+  };
+}
+
+export interface DenkraumTisch {
+  schema: 2;
+  id: string;
+  /** Woher die Stimmen kommen: eine Lebensfrage (Stimmen-Texte) oder ein Tableau (Denker) */
+  quelle: { typ: 'lebensfrage' | 'tableau'; id: string };
+  title: string;
+  theme: { accent: string; accentSoft: string };
+  entwurf?: boolean;
+  verortung: {
+    intro: string;               // «Sechs Stimmen haben geantwortet. Zuerst antwortest du.»
+    frage: string;               // die Lebensfrage, an den Nutzer gerichtet
+    optionen: VerortungsOption[];
+  };
+  haltungsfrage: string;
+  haltungen: Record<Haltung, { label: string; untertitel: string }>;
+  regionen: Array<{ label: string; x: number; y: number; hint?: string }>;  // dezente Flächen-Labels, hint = Tooltip-Erklärung
+  karten: TischKarte[];
+  stellen: TischStelle[];
+  uebersehen: { zwischen: [string, string]; text: string };
+  hinweis_unkuratiert: string;   // Antwort des Werkzeugs auf nicht kuratierte Verbindungen
+  kuratiert: string;
+}
+
+// ─── Denkraum-Tisch: Server-Join-Resultat ────────────────────
+
+export interface TischKarteResolved extends TischKarte {
+  name: string;                  // Lebensfrage: aus der Stimmen-Überschrift · Tableau: Denker-Name
+  these: string;                 // kuratierte Unterzeile bzw. Rest der Überschrift
+  text: string;                  // Lebensfrage: Stimmen-Text · Tableau: lectio_brief oder Version (annotationsfrei)
+}
+
+export interface DenkraumTischResolved extends Omit<DenkraumTisch, 'karten'> {
+  karten: TischKarteResolved[];
+}

@@ -15,9 +15,10 @@ function formatDatum(iso: string): string {
 interface Props {
   lebensfrage: Lebensfrage
   tableauTitles: Record<string, string>
+  denkraumId?: string
 }
 
-export default function LebensfrageViewer({ lebensfrage, tableauTitles }: Props) {
+export default function LebensfrageViewer({ lebensfrage, tableauTitles, denkraumId }: Props) {
   const { title, anker, intro, stimmen, schluss, kuratiert, kuratiert_aus_tableaus } = lebensfrage
 
   return (
@@ -54,6 +55,16 @@ export default function LebensfrageViewer({ lebensfrage, tableauTitles }: Props)
               {para}
             </p>
           ))}
+          {denkraumId && (
+            <Link
+              href={`/denkraum/${denkraumId}`}
+              className="inline-flex items-baseline gap-2 mt-8 font-ui text-[12px] tracking-[0.06em]
+                text-fg-faint hover:text-fg-muted transition-colors no-underline"
+            >
+              Diese Frage als Denkraum durchwandern
+              <span style={{ color: 'var(--accent)' }}>· Beta</span>
+            </Link>
+          )}
         </header>
 
         <Trenner />
