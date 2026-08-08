@@ -12,7 +12,7 @@ Sanctum ist ein Lern-Companion, der Nutzern hilft, Themen *zu Ende zu denken*. V
 ## Tech-Stack
 - **Framework:** Next.js 16 (App Router) + TypeScript
 - **Styling:** Tailwind CSS v4
-- **Fonts:** Marcellus SC (Display, 400), Inter (Body/UI, 400/500/600) – Google Fonts via `next/font`
+- **Fonts:** Marcellus (Display, 400; seit 8.8.26 – davor Marcellus SC, die Kapitälchen-Optik ist bewusst abgeschafft), Inter (Body/UI, 400/500/600) – Google Fonts via `next/font`
 - **Hosting:** Vercel via GitHub
 - **Daten:** JSON-Dateien pro Themengebiet in `data/`
 
@@ -21,6 +21,7 @@ Sanctum ist ein Lern-Companion, der Nutzern hilft, Themen *zu Ende zu denken*. V
 - Modern-minimal als Basis – klare Hierarchie, viel Luft
 - Akademisch-zurückhaltend in Akzenten: Typografie, Farbtöne, Quadranten-Achsen
 - **Typografie-Norm (seit 8.8.26):** Halbgeviertstrich ` – ` als Gedankenstrich (kein Geviertstrich ` — `) und Schweizer Orthografie (ss statt ß) – gilt für alle Inhalte, UI-Texte und Doku; nur `archiv/` bleibt unverändert
+- **Keine Versalien (seit 8.8.26):** kein `text-transform: uppercase`, kein `.toUpperCase()` für Anzeige-Text, keine Kapitälchen-Schrift – auch Titel stehen in Gross-/Kleinschreibung. Hierarchie über Grösse, Letter-Spacing (auf Kleinschreibung: ~0.12–0.16em), Gewicht und Farbe
 - Per-Thema-Akzentfarbe via inline CSS Custom Properties auf dem Wrapper (`--accent`, `--accent-soft`)
 - Kein Dark Mode – alle Themen nutzen `:root`-Tokens
 - Kein "Lehrbuch-aus-den-90ern"-Look
@@ -166,7 +167,7 @@ Sicherheitsnetz auf oberster Ebene – verhindert horizontales Scrollen der gesa
 - Achsenkreuz horizontal+vertikal durch die Mitte
 - Konzept-Positionen 0–100, y mathematisch (y=100 = oben)
 - Marker-Glyph aus `CONCEPT_GLYPH[type]` (Diamond, Symbol etc.), Farbe immer dunkles Sienna
-- Labels in `Marcellus SC bold 0.08em letter-spacing` mit Pergament-Halo (textShadow)
+- Labels in `Marcellus bold 0.08em letter-spacing` mit Pergament-Halo (textShadow)
 - `usePanZoom` Hook für Pan/Pinch/Wheel – generisch verwendet von InfluenceGraph + QuadrantPlot
 
 ## Sternkarte – Gesten- & Atlas-Konvention (Soll-Verhalten, seit 12.6.26)

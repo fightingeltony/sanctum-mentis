@@ -1,10 +1,12 @@
 import type { Metadata, Viewport } from 'next'
-import { Marcellus_SC, Inter } from 'next/font/google'
+import { Marcellus, Inter } from 'next/font/google'
 import ShellCommandPaletteProvider from '@/components/ShellCommandPaletteProvider'
 import RouteViewTransition from '@/components/RouteViewTransition'
 import './globals.css'
 
-const marcellusSC = Marcellus_SC({
+// Marcellus (normale Variante) statt Marcellus SC – Kapitälchen-Optik
+// projektweit abgeschafft (keine Versalien, auch nicht in Titeln; 8.8.26)
+const marcellus = Marcellus({
   weight: ['400'],
   subsets: ['latin'],
   variable: '--font-display',
@@ -57,7 +59,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="de" className={`${marcellusSC.variable} ${inter.variable}`}>
+    <html lang="de" className={`${marcellus.variable} ${inter.variable}`}>
       <body>
         <ShellCommandPaletteProvider>
           {/* EXPERIMENT: Routen-Cross-Fade – Rückbau siehe RouteViewTransition.tsx */}

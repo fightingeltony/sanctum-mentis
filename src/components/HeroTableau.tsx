@@ -104,8 +104,8 @@ export default function HeroTableau({
         <line x1={X0} y1={CY} x2={X1} y2={CY} stroke="oklch(0.35 0.022 65 / 0.46)" strokeWidth={1} />
 
         {/* poles (Y-Achse) + Achsenfrage (X) */}
-        <text x={CX} y={Y0 - 14} textAnchor="middle" fontFamily="'Marcellus SC', serif" fontSize={11} letterSpacing="0.20em" fill="oklch(0.30 0.022 65 / 0.85)">{q.axisY.top.toUpperCase()}</text>
-        <text x={CX} y={Y1 + 24} textAnchor="middle" fontFamily="'Marcellus SC', serif" fontSize={11} letterSpacing="0.20em" fill="oklch(0.30 0.022 65 / 0.85)">{q.axisY.bottom.toUpperCase()}</text>
+        <text x={CX} y={Y0 - 14} textAnchor="middle" fontFamily="'Marcellus', serif" fontSize={11} letterSpacing="0.20em" fill="oklch(0.30 0.022 65 / 0.85)">{q.axisY.top}</text>
+        <text x={CX} y={Y1 + 24} textAnchor="middle" fontFamily="'Marcellus', serif" fontSize={11} letterSpacing="0.20em" fill="oklch(0.30 0.022 65 / 0.85)">{q.axisY.bottom}</text>
         <text x={CX} y={H - 8} textAnchor="middle" fontStyle="italic" fontSize={10} letterSpacing="0.06em" fill="oklch(0.46 0.022 65 / 0.6)">← {q.axisX.label} →</text>
 
         {/* Konzept-Punkte */}
@@ -119,7 +119,7 @@ export default function HeroTableau({
               <rect x={PX - 4} y={PY - 4} width={8} height={8} className="hero-dia" transform={`rotate(45 ${PX} ${PY})`} />
               {labelSet.has(p.id) && (
                 <text x={lx} y={PY} className="hero-name" textAnchor={anchor} dominantBaseline="central">
-                  {p.name.toUpperCase()}
+                  {p.name}
                 </text>
               )}
             </g>
@@ -157,7 +157,7 @@ export default function HeroTableau({
         .hero-dia { fill: var(--accent); fill-opacity: 0.62; }
         .hero-pt.is-new .hero-dia { animation: heroKindle 0.85s ease-out; }
         .hero-name {
-          font-family: 'Marcellus SC', serif; font-size: 9.5px; letter-spacing: 0.07em;
+          font-family: 'Marcellus', serif; font-size: 9.5px; letter-spacing: 0.07em;
           fill: var(--ink); fill-opacity: 0.85;
           paint-order: stroke; stroke: var(--bg-sunk); stroke-width: 3px; stroke-linejoin: round;
         }

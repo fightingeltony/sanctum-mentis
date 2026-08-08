@@ -9,7 +9,7 @@ export default function LandingPage() {
   return (
     <section className="px-8 md:px-12 py-16 md:py-28 max-w-[820px] mx-auto">
 
-      <p className="font-ui text-[11px] tracking-[0.30em] uppercase text-accent mb-6">
+      <p className="font-ui text-[11px] tracking-[0.16em] text-accent mb-6">
         Sanctum Mentis
       </p>
 
@@ -32,7 +32,7 @@ export default function LandingPage() {
       <div className="flex flex-wrap gap-4 mb-12">
         <Link
           href="/themen"
-          className="inline-flex items-center gap-2 px-5 py-3 border font-ui text-[12px] tracking-[0.18em] uppercase
+ className="inline-flex items-center gap-2 px-5 py-3 border font-ui text-[12px] tracking-[0.14em] 
             no-underline transition-colors"
           style={{
             color: 'var(--accent)',
@@ -47,7 +47,7 @@ export default function LandingPage() {
       {/* ── Lebendiges Tableau – selbstspielende Sternkarte ── */}
       {featured && (
         <div className="mb-16">
-          <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-fg-faint mb-3 flex items-center gap-2">
+          <p className="font-ui text-[10px] tracking-[0.15em] text-fg-faint mb-3 flex items-center gap-2">
             <span className="inline-block w-[5px] h-[5px] rounded-full" style={{ background: 'var(--accent)', opacity: 0.7 }} aria-hidden />
             Die Sternkarte · {featured.topic.title}
           </p>
@@ -74,7 +74,7 @@ export default function LandingPage() {
           },
         ].map(item => (
           <div key={item.num} className="flex flex-col gap-2">
-            <span className="font-display text-[12px] tracking-[0.20em] text-gold">
+            <span className="font-display text-[12px] tracking-[0.14em] text-gold">
               {item.num}
             </span>
             <h3 className="font-prose font-medium text-[16px] text-fg">
@@ -139,7 +139,7 @@ export default function LandingPage() {
             </div>
             <Link
               href="/lectios"
-              className="self-start inline-flex items-center gap-2 font-ui text-[11px] tracking-[0.18em] uppercase no-underline"
+ className="self-start inline-flex items-center gap-2 font-ui text-[11px] tracking-[0.14em] no-underline"
               style={{ color: 'var(--accent)' }}
             >
               Lectios öffnen
@@ -187,7 +187,7 @@ export default function LandingPage() {
           </div>
           <Link
             href="/lebensfragen"
-            className="self-start inline-flex items-center gap-2 font-ui text-[11px] tracking-[0.18em] uppercase no-underline"
+ className="self-start inline-flex items-center gap-2 font-ui text-[11px] tracking-[0.14em] no-underline"
             style={{ color: 'var(--accent)' }}
           >
             Lebensfragen öffnen

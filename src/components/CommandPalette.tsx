@@ -141,7 +141,7 @@ export default function CommandPalette({ open, onClose }: Props) {
               className="flex-1 bg-transparent outline-none font-prose text-[16px]
                 text-fg placeholder:text-fg-dim"
             />
-            <kbd className="font-ui text-[9px] tracking-[0.12em] uppercase text-fg-faint
+            <kbd className="font-ui text-[9px] tracking-[0.12em] text-fg-faint
               border border-hairline px-1.5 py-0.5 rounded-[2px] select-none">
               esc
             </kbd>
@@ -180,7 +180,7 @@ export default function CommandPalette({ open, onClose }: Props) {
                       <span className="font-prose font-medium text-[14px] text-fg leading-tight truncate">
                         {entry.name}
                       </span>
-                      <span className="font-ui text-[9px] tracking-[0.14em] uppercase text-fg-faint shrink-0">
+                      <span className="font-ui text-[9px] tracking-[0.14em] text-fg-faint shrink-0">
                         {TYPE_LABEL[entry.type]}
                       </span>
                     </div>
@@ -203,13 +203,13 @@ export default function CommandPalette({ open, onClose }: Props) {
 
           {/* ── Footer ── */}
           <div className="flex items-center gap-4 px-5 py-2.5 border-t border-hairline">
-            <span className="font-ui text-[9px] tracking-[0.12em] uppercase text-fg-faint">
+            <span className="font-ui text-[9px] tracking-[0.12em] text-fg-faint">
               ↑↓ navigieren
             </span>
-            <span className="font-ui text-[9px] tracking-[0.12em] uppercase text-fg-faint">
+            <span className="font-ui text-[9px] tracking-[0.12em] text-fg-faint">
               ↵ öffnen
             </span>
-            <span className="font-ui text-[9px] tracking-[0.12em] uppercase text-fg-faint ml-auto">
+            <span className="font-ui text-[9px] tracking-[0.12em] text-fg-faint ml-auto">
               {allEntries !== null
                 ? `${allEntries.length} Einträge in ${tableauCount} Tableaus`
                 : '…'}

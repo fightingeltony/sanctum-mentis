@@ -10,7 +10,7 @@ export async function GET() {
   const dir = join(process.cwd(), 'src/app/og-image')
 
   const [marcellusData, geistData] = await Promise.all([
-    readFile(join(dir, 'MarcellusSC-Regular.ttf')),
+    readFile(join(dir, 'Marcellus-Regular.ttf')),
     readFile(join(dir, 'Geist-Regular.ttf')),
   ])
 
@@ -104,11 +104,11 @@ export async function GET() {
             Philosophie · Denker · Konzepte
           </div>
 
-          {/* Title – Marcellus SC, mixed case (not all-caps) */}
+          {/* Title – Marcellus (normale Variante, keine Kapitälchen) */}
           <div
             style={{
               fontSize:      92,
-              fontFamily:    'MarcellusSC',
+              fontFamily:    'Marcellus',
               fontWeight:    400,
               color:         '#2C1600',
               letterSpacing: '0.05em',
@@ -167,7 +167,7 @@ export async function GET() {
       height: 630,
       fonts:  [
         {
-          name:   'MarcellusSC',
+          name:   'Marcellus',
           data:   marcellusData,
           weight: 400,
           style:  'normal',

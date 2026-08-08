@@ -31,7 +31,7 @@ export default function ThemenPage() {
   return (
     <div className="px-8 md:px-12 py-12 max-w-[1100px] mx-auto">
 
-      <p className="font-ui text-[11px] tracking-[0.30em] uppercase text-accent mb-3">
+      <p className="font-ui text-[11px] tracking-[0.16em] text-accent mb-3">
         Deine Bibliothek
       </p>
       <h1 className="font-prose font-medium text-[32px] md:text-[40px] text-fg mb-4 leading-tight">
@@ -52,7 +52,7 @@ export default function ThemenPage() {
               {/* ── Spur-Header ── */}
               <div className="flex items-baseline gap-4 mb-7">
                 <h2
-                  className="font-display text-[13px] tracking-[0.22em] uppercase shrink-0"
+ className="font-display text-[13px] tracking-[0.15em] shrink-0"
                   style={{ color: spurColor }}
                 >
                   {SPUR_LABELS[spur]}
@@ -62,7 +62,7 @@ export default function ThemenPage() {
                   style={{ background: spurColor, opacity: 0.28 }}
                   aria-hidden
                 />
-                <span className="font-ui text-[10px] tracking-[0.16em] uppercase text-fg-faint shrink-0">
+                <span className="font-ui text-[10px] tracking-[0.16em] text-fg-faint shrink-0">
                   {items.length} {items.length === 1 ? 'Tableau' : 'Tableaus'}
                 </span>
               </div>
@@ -114,7 +114,7 @@ function TopicCard({ topic }: { topic: LibraryEntry }) {
           {topic.title}
         </span>
         {!available && (
-          <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-fg-dim shrink-0">
+          <span className="font-ui text-[9px] tracking-[0.16em] text-fg-dim shrink-0">
             bald
           </span>
         )}
@@ -130,7 +130,7 @@ function TopicCard({ topic }: { topic: LibraryEntry }) {
         </p>
       )}
       {topic.era && (
-        <p className="font-ui text-[10px] tracking-[0.14em] uppercase text-fg-dim mt-auto pt-2">
+        <p className="font-ui text-[10px] tracking-[0.14em] text-fg-dim mt-auto pt-2">
           {topic.era}
         </p>
       )}

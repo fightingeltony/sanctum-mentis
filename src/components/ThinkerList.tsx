@@ -113,7 +113,7 @@ export default function ThinkerList({
       {/* Context strip */}
       {context && (
         <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-hairline bg-raised mb-6 items-start">
-          <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-gold pt-0.5">
+          <span className="font-ui text-[10px] font-medium tracking-[0.15em] text-gold pt-0.5">
             Lage
           </span>
           <p className="font-body italic text-[15px] text-fg-muted leading-relaxed">
@@ -124,12 +124,12 @@ export default function ThinkerList({
 
       {/* Filter row */}
       <div className="flex items-center gap-2 flex-wrap mb-6">
-        <span className="font-ui text-[10px] tracking-[0.22em] uppercase text-fg-faint mr-1">
+        <span className="font-ui text-[10px] tracking-[0.15em] text-fg-faint mr-1">
           Filter
         </span>
         <button
           onClick={() => setActiveFilters(new Set())}
-          className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors
+ className={`font-ui text-[11px] tracking-[0.14em] px-3 py-1.5 rounded-[3px] border transition-colors
             ${activeFilters.size === 0
               ? 'border-gold-soft text-gold bg-accent-soft'
               : 'border-hairline text-fg-faint hover:text-fg-muted hover:border-hairline-strong'
@@ -141,7 +141,7 @@ export default function ThinkerList({
         {newCount > 0 && (
           <button
             onClick={() => toggleFilter('neu')}
-            className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
+ className={`font-ui text-[11px] tracking-[0.14em] px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
               ${activeFilters.has('neu')
                 ? 'border-gold-soft text-gold bg-accent-soft'
                 : 'border-hairline text-fg-faint hover:text-fg-muted hover:border-hairline-strong'
@@ -155,7 +155,7 @@ export default function ThinkerList({
         {deepenedCount > 0 && (
           <button
             onClick={() => toggleFilter('vertieft')}
-            className={`font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
+ className={`font-ui text-[11px] tracking-[0.14em] px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
               ${activeFilters.has('vertieft')
                 ? 'border-gold-soft text-gold bg-accent-soft'
                 : 'border-hairline text-fg-faint hover:text-fg-muted hover:border-hairline-strong'
@@ -173,7 +173,7 @@ export default function ThinkerList({
             <button
               key={s.id}
               onClick={() => toggleFilter(s.id)}
-              className="font-ui text-[11px] tracking-[0.14em] uppercase px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2"
+ className="font-ui text-[11px] tracking-[0.14em] px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2"
               style={{
                 borderColor: isActive ? s.color : 'var(--hairline)',
                 color: isActive ? s.color : 'var(--fg-faint)',
@@ -213,20 +213,20 @@ export default function ThinkerList({
                   </span>
                   <div className="flex items-baseline gap-2 shrink-0">
                     {t.isNew && (
-                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-gold">Neu</span>
+                      <span className="font-ui text-[9px] tracking-[0.16em] text-gold">Neu</span>
                     )}
                     {t.isDeepened && (
-                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-fg-dim">↑ Vertieft</span>
+                      <span className="font-ui text-[9px] tracking-[0.16em] text-fg-dim">↑ Vertieft</span>
                     )}
                     {school && (
-                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase" style={{ color }}>
+                      <span className="font-ui text-[9px] tracking-[0.16em] " style={{ color }}>
                         {school.label}
                       </span>
                     )}
                   </div>
                 </div>
                 {t.lifespan && (
-                  <span className="font-ui text-[10px] tracking-[0.12em] uppercase text-fg-dim">
+                  <span className="font-ui text-[10px] tracking-[0.12em] text-fg-dim">
                     {t.lifespan}
                   </span>
                 )}
@@ -267,7 +267,7 @@ function GroupedList({
                 {s.glyph}
               </span>
               <span
-                className="font-ui text-[11px] font-medium tracking-[0.20em] uppercase"
+ className="font-ui text-[11px] font-medium tracking-[0.14em] "
                 style={{ color: s.color }}
               >
                 {s.label}
@@ -293,15 +293,15 @@ function GroupedList({
                       {t.name}
                     </span>
                     {t.lifespan && (
-                      <span className="font-ui text-[10px] tracking-[0.10em] uppercase text-fg-dim">
+                      <span className="font-ui text-[10px] tracking-[0.10em] text-fg-dim">
                         {t.lifespan}
                       </span>
                     )}
                     {t.isNew && (
-                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-gold">Neu</span>
+                      <span className="font-ui text-[9px] tracking-[0.16em] text-gold">Neu</span>
                     )}
                     {t.isDeepened && (
-                      <span className="font-ui text-[9px] tracking-[0.16em] uppercase text-fg-dim">↑ Vertieft</span>
+                      <span className="font-ui text-[9px] tracking-[0.16em] text-fg-dim">↑ Vertieft</span>
                     )}
                   </div>
                   <FadingParagraph

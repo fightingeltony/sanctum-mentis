@@ -52,7 +52,7 @@ export default function PfadePage() {
             {/* ── Spur-Header ── */}
             <div className="flex items-baseline gap-4 mb-2">
               <h2
-                className="font-display text-[14px] tracking-[0.20em] shrink-0"
+                className="font-display text-[14px] tracking-[0.14em] shrink-0"
                 style={{ color }}
               >
                 {SPUR_LABELS[spur]}

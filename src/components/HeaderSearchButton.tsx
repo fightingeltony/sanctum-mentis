@@ -9,7 +9,7 @@ export default function HeaderSearchButton() {
   return (
     <button
       onClick={() => palette?.openPalette()}
-      className="flex items-center gap-2 font-ui text-[11px] tracking-[0.16em] uppercase
+ className="flex items-center gap-2 font-ui text-[11px] tracking-[0.16em] 
         text-fg-muted hover:text-fg transition-colors"
       aria-label="Suche öffnen (Cmd+K)"
       title="Cmd+K"

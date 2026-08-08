@@ -111,7 +111,7 @@ h1, h2, h3 { text-wrap: balance; }
 * { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb) transparent; }
 
 /* ── Typography helpers ── */
-.font-display { font-family: var(--font-display), 'Marcellus SC', serif; }
+.font-display { font-family: var(--font-display), 'Marcellus', serif; }
 .font-body    { font-family: var(--font-ui), 'Inter', system-ui, sans-serif; }
 .font-prose   { font-family: var(--font-ui), 'Inter', system-ui, sans-serif; }
 .font-ui      { font-family: var(--font-ui), 'Inter', system-ui, sans-serif; letter-spacing: 0; }
@@ -121,8 +121,7 @@ h1, h2, h3 { text-wrap: balance; }
   font-family: var(--font-ui), 'Inter', system-ui, sans-serif;
   font-size: 10px;
   font-weight: 500;
-  letter-spacing: 0.30em;
-  text-transform: uppercase;
+  letter-spacing: 0.16em;
   color: var(--accent);
 }
 
@@ -315,8 +314,7 @@ h1, h2, h3 { text-wrap: balance; }
   font-family: var(--font-ui), 'Inter', system-ui, sans-serif;
   font-size: 10px;
   font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  letter-spacing: 0.15em;
 }
 .section-label::after {
   content: '';
@@ -469,9 +467,8 @@ svg.sc-mode-school .sc-schoollabels { opacity: 1; }
 
 /* School name text */
 .sc-schoolname {
-  font-family: 'Marcellus SC', serif;
-  font-size: 11px; letter-spacing: .2em;
-  text-transform: uppercase;
+  font-family: 'Marcellus', serif;
+  font-size: 11px; letter-spacing: .14em;
 }
 
 /* Grid & frame */
@@ -480,7 +477,7 @@ svg.sc-mode-school .sc-schoollabels { opacity: 1; }
 .sc-grid  { stroke: oklch(0.35 0.022 65 / 0.16); stroke-width: .6; stroke-dasharray: 2 4; }
 
 /* Pole labels */
-.sc-pole      { font-family: 'Marcellus SC', serif; font-weight: bold; font-size: 12px; letter-spacing: .18em; fill: oklch(0.28 0.022 65 / 0.85); }
+.sc-pole      { font-family: 'Marcellus', serif; font-weight: bold; font-size: 12px; letter-spacing: .14em; fill: oklch(0.28 0.022 65 / 0.85); }
 .sc-pole-hint { font-style: italic; font-size: 9px; letter-spacing: .04em; fill: oklch(0.42 0.022 65 / 0.6); }
 .sc-axisname  { font-style: italic; font-size: 10.5px; letter-spacing: .08em; fill: oklch(0.42 0.022 65 / 0.6); }
 .sc-compass-label { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: .1em; }
@@ -520,7 +517,7 @@ svg.sc-focus .sc-edge-g:not(.sc-lit) .sc-brk  { opacity: .14; }
 .sc-glow  { transition: opacity .3s ease; }
 
 .sc-sname {
-  font-family: 'Marcellus SC', serif;
+  font-family: 'Marcellus', serif;
   font-size: 10px; letter-spacing: .04em; fill: var(--ink);
   paint-order: stroke; stroke: var(--bg-sunk); stroke-width: 3px; stroke-linejoin: round;
   opacity: .74; transition: opacity .4s ease;
@@ -557,7 +554,7 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
 }
 .sc-modeswitch button {
   font-family: var(--font-ui), 'Inter', sans-serif;
-  font-size: 10px; letter-spacing: .16em; text-transform: uppercase;
+ font-size: 10px; letter-spacing: 0.16em; 
   padding: 5px 14px; background: none; border: none; cursor: pointer;
   color: var(--fg-faint); transition: background .2s, color .2s;
 }
@@ -567,7 +564,7 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
 /* Lines toggle */
 .sc-lines-toggle {
   display: flex; align-items: center; gap: 7px;
-  font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+ font-size: 10px; letter-spacing: 0.14em; 
   color: var(--fg-faint); cursor: pointer;
   user-select: none;
 }

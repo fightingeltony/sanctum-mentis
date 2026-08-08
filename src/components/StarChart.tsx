@@ -1369,7 +1369,7 @@ export default function StarChart({
     x: number, baseY: number, anchor: 'start' | 'middle' | 'end',
     label: string, hint: string | undefined, wrapMax: number,
   ) {
-    const lines = wrapLabel(label.toUpperCase(), wrapMax)
+    const lines = wrapLabel(label, wrapMax)
     const multi = lines.length > 1
     return (
       <g>
@@ -1399,7 +1399,7 @@ export default function StarChart({
           x={gx} y={yc} textAnchor="middle" className="sc-pole"
           transform={`rotate(-90,${gx},${yc})`}
         >
-          {label.toUpperCase()}
+          {label}
         </text>
       </g>
     )
@@ -1567,10 +1567,10 @@ export default function StarChart({
                       </text>
                     )}
                     <text x={MW / 2} y={82} textAnchor="middle" className="sc-pole">
-                      {quadrants.axisY.top?.toUpperCase()}
+                      {quadrants.axisY.top}
                     </text>
                     <text x={MW / 2} y={MH - MPAD_Y + 46} textAnchor="middle" className="sc-pole">
-                      {quadrants.axisY.bottom?.toUpperCase()}
+                      {quadrants.axisY.bottom}
                     </text>
                     {quadrants.axisY.bottomHint && (
                       <text x={MW / 2} y={MH - MPAD_Y + 66} textAnchor="middle" className="sc-pole-hint">
@@ -1592,10 +1592,10 @@ export default function StarChart({
                       </text>
                     )}
                     <text x={W / 2} y={PAD_Y - 28} textAnchor="middle" className="sc-pole">
-                      {quadrants.axisY.top?.toUpperCase()}
+                      {quadrants.axisY.top}
                     </text>
                     <text x={W / 2} y={H - PAD_Y + 24} textAnchor="middle" className="sc-pole">
-                      {quadrants.axisY.bottom?.toUpperCase()}
+                      {quadrants.axisY.bottom}
                     </text>
                     {quadrants.axisY.bottomHint && (
                       <text x={W / 2} y={H - PAD_Y + 40} textAnchor="middle" className="sc-pole-hint">
@@ -1810,7 +1810,7 @@ export default function StarChart({
                       ? (allM.length === 1 ? 15 : (18 + allM.length * 6))
                       : (allM.length === 1 ? 18 : (22 + allM.length * 7))
                     const sch = schoolById[sid]
-                    const lines = wrapLabel((sch?.label ?? sid).toUpperCase(), 15)
+                    const lines = wrapLabel(sch?.label ?? sid, 15)
                     const lineSpacing = isMobile ? 15 : 12
                     const baseY = c.y - rr - (isMobile ? 12 : 13) - (lines.length - 1) * lineSpacing
                     return (
@@ -1989,10 +1989,10 @@ function ConceptCartoucheContent({
         gap: 10, padding: '14px 14px 10px', borderBottom: '1px solid var(--hairline)',
       }}>
         <div style={{ minWidth: 0 }}>
-          <p style={{ fontSize: '9.5px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'oklch(0.48 0.08 50)', margin: 0 }}>
+          <p style={{ fontSize: '9.5px', letterSpacing: '0.14em', color: 'oklch(0.48 0.08 50)', margin: 0 }}>
             {CONCEPT_GLYPH[concept.type]} {CONCEPT_LABEL[concept.type]}
           </p>
-          <p style={{ fontFamily: "'Marcellus SC', serif", fontSize: 17, letterSpacing: '0.04em', color: 'var(--fg)', margin: '3px 0 0' }}>
+          <p style={{ fontFamily: "'Marcellus', serif", fontSize: 17, letterSpacing: '0.04em', color: 'var(--fg)', margin: '3px 0 0' }}>
             {concept.name}
           </p>
           <p style={{ fontSize: 10.5, color: 'var(--fg-faint)', marginTop: 4, fontStyle: 'italic' }}>
@@ -2049,10 +2049,10 @@ function CartoucheContent({
         borderBottom: '1px solid var(--hairline)',
       }}>
         <div style={{ minWidth: 0 }}>
-          <p style={{ fontSize: '9.5px', letterSpacing: '0.2em', textTransform: 'uppercase', color: selectedSchool?.color ?? 'var(--accent)', margin: 0 }}>
+          <p style={{ fontSize: '9.5px', letterSpacing: '0.14em', color: selectedSchool?.color ?? 'var(--accent)', margin: 0 }}>
             {selectedSchool?.label ?? ''}
           </p>
-          <p style={{ fontFamily: "'Marcellus SC', serif", fontSize: 17, letterSpacing: '0.04em', color: 'var(--fg)', margin: '3px 0 0' }}>
+          <p style={{ fontFamily: "'Marcellus', serif", fontSize: 17, letterSpacing: '0.04em', color: 'var(--fg)', margin: '3px 0 0' }}>
             {selectedThinker.name}
           </p>
           {selectedThinker.lifespan && (
@@ -2089,7 +2089,7 @@ function CartoucheContent({
             style={{
               width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               padding: '9px 14px', background: 'none', border: 'none', cursor: 'pointer',
-              fontSize: 9.5, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--fg-muted)',
+ fontSize: 9.5, letterSpacing: '0.16em', color: 'var(--fg-muted)',
             }}
           >
             <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
@@ -2127,7 +2127,7 @@ function CartoucheContent({
       {/* Relations */}
       {selectedRelations.length > 0 && (
         <div style={{ padding: '0 14px 14px' }}>
-          <p style={{ fontSize: 9, letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--fg-faint)', margin: '2px 0 8px' }}>
+          <p style={{ fontSize: 9, letterSpacing: '0.14em', color: 'var(--fg-faint)', margin: '2px 0 8px' }}>
             Verbindungen
           </p>
           <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -2147,13 +2147,13 @@ function CartoucheContent({
                   onClick={e => { e.stopPropagation(); selectStar(otherId) }}
                 >
                   <span style={{
-                    fontSize: 9, letterSpacing: '0.12em', textTransform: 'uppercase',
+ fontSize: 9, letterSpacing: '0.12em', 
                     width: 80, flexShrink: 0,
                     color: LINE_COLOR_RESOLVED[edge.type] ?? LINE_COLOR_RESOLVED.influence,
                   }}>
                     {label}
                   </span>
-                  <span style={{ fontFamily: "'Marcellus SC', serif", letterSpacing: '0.02em' }}>
+                  <span style={{ fontFamily: "'Marcellus', serif", letterSpacing: '0.02em' }}>
                     {other.name}
                   </span>
                 </li>

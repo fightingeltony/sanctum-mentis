@@ -123,7 +123,7 @@ export default function TopicViewer({ data, lectios }: Props) {
         </button>
 
         <div className="flex flex-col min-w-0 flex-1">
-          <span className="font-display text-[11px] tracking-[0.18em] uppercase text-fg truncate">
+          <span className="font-display text-[11px] tracking-[0.14em] text-fg truncate">
             {data.topic.title}
           </span>
         </div>
@@ -153,7 +153,7 @@ export default function TopicViewer({ data, lectios }: Props) {
           <Link
             href="/"
             onClick={closeMenu}
-            className="font-ui text-[10px] tracking-[0.22em] uppercase text-fg-faint
+ className="font-ui text-[10px] tracking-[0.15em] text-fg-faint
               hover:text-gold transition-colors no-underline"
           >
             Sanctum · Mentis
@@ -164,7 +164,7 @@ export default function TopicViewer({ data, lectios }: Props) {
               background: 'linear-gradient(90deg, var(--gold) 0%, var(--gold) 18px, var(--hairline) 18px)'
             }}
           />
-          <h1 className="font-display text-[18px] tracking-[0.18em] uppercase text-fg">
+          <h1 className="font-display text-[18px] tracking-[0.14em] text-fg">
             Lern–Companion
           </h1>
         </div>
@@ -174,7 +174,7 @@ export default function TopicViewer({ data, lectios }: Props) {
             href="/"
             onClick={closeMenu}
             className="flex items-center gap-3 py-3 border-b border-hairline
-              font-ui text-[11px] tracking-[0.16em] uppercase text-fg-muted
+ font-ui text-[11px] tracking-[0.16em] text-fg-muted
               hover:text-fg transition-colors no-underline"
           >
             <span className="text-[14px]">⌂</span>
@@ -184,7 +184,7 @@ export default function TopicViewer({ data, lectios }: Props) {
             href="/themen"
             onClick={closeMenu}
             className="flex items-center gap-3 py-3 border-b border-hairline
-              font-ui text-[11px] tracking-[0.16em] uppercase text-fg-muted
+ font-ui text-[11px] tracking-[0.16em] text-fg-muted
               hover:text-fg transition-colors no-underline"
           >
             <span className="text-[14px]">☰</span>
@@ -205,7 +205,7 @@ export default function TopicViewer({ data, lectios }: Props) {
               </p>
             )}
             {data.topic.era && (
-              <p className="font-ui text-[11px] tracking-[0.10em] uppercase text-fg-dim mt-2">
+              <p className="font-ui text-[11px] tracking-[0.10em] text-fg-dim mt-2">
                 {data.topic.era}
               </p>
             )}
@@ -276,7 +276,7 @@ export default function TopicViewer({ data, lectios }: Props) {
                   <span className="flex items-center gap-2 shrink-0">
                     {(l.ton === 'erzählend-erfahrend' || l.ton === 'gemischt') && (
                       <span
-                        className="font-ui text-[9px] tracking-[0.16em] uppercase px-1.5 py-0.5"
+ className="font-ui text-[9px] tracking-[0.16em] px-1.5 py-0.5"
                         style={{
                           color: 'var(--accent)',
                           border: '1px solid color-mix(in oklch, var(--accent) 35%, transparent)',
@@ -301,7 +301,7 @@ export default function TopicViewer({ data, lectios }: Props) {
 
         {levelId === data.topic.complexityLevels && data.topic.synthesis && (
           <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-hairline bg-raised mb-6 items-start">
-            <span className="font-ui text-[10px] font-medium tracking-[0.22em] uppercase text-gold pt-0.5 shrink-0">
+            <span className="font-ui text-[10px] font-medium tracking-[0.15em] text-gold pt-0.5 shrink-0">
               Synthese
             </span>
             <p className="font-body italic text-[15px] text-fg-muted leading-relaxed">
@@ -317,7 +317,7 @@ export default function TopicViewer({ data, lectios }: Props) {
               role="tab"
               aria-selected={tab === t.id}
               onClick={() => setTab(t.id)}
-              className={`pb-3 font-ui text-[11px] tracking-[0.22em] uppercase
+ className={`pb-3 font-ui text-[11px] tracking-[0.15em] 
                 border-b border-transparent -mb-px transition-colors
                 flex items-center gap-2 whitespace-nowrap shrink-0
                 ${tab === t.id
@@ -371,7 +371,7 @@ export default function TopicViewer({ data, lectios }: Props) {
       {/* ── Mobile bottom bar ── */}
       <div className="bottom-tab-bar">
         <div className="slider-strip">
-          <span className="font-display text-[10px] tracking-[0.14em] uppercase text-gold shrink-0 w-[5.5rem]">
+          <span className="font-display text-[10px] tracking-[0.14em] text-gold shrink-0 w-[5.5rem]">
             {state.level.label}
           </span>
           <input

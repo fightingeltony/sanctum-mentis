@@ -17,7 +17,7 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
         <div className="max-w-[1100px] mx-auto px-8 md:px-12 py-5 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-3">
           <Link
             href="/"
-            className="font-display text-[14px] tracking-[0.22em] uppercase text-fg
+ className="font-display text-[14px] tracking-[0.15em] text-fg
               hover:text-gold transition-colors no-underline"
           >
             Sanctum · Mentis
@@ -25,21 +25,21 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
           <nav className="flex items-baseline gap-4 md:gap-6">
             <Link
               href="/themen"
-              className="font-ui text-[11px] tracking-[0.16em] uppercase text-fg-muted
+ className="font-ui text-[11px] tracking-[0.16em] text-fg-muted
                 hover:text-fg transition-colors no-underline"
             >
               Tableaus
             </Link>
             <Link
               href="/lectios"
-              className="font-ui text-[11px] tracking-[0.16em] uppercase text-fg-muted
+ className="font-ui text-[11px] tracking-[0.16em] text-fg-muted
                 hover:text-fg transition-colors no-underline"
             >
               Lectios
             </Link>
             <Link
               href="/lebensfragen"
-              className="font-ui text-[11px] tracking-[0.16em] uppercase text-fg-muted
+ className="font-ui text-[11px] tracking-[0.16em] text-fg-muted
                 hover:text-fg transition-colors no-underline"
             >
               Lebensfragen
@@ -58,7 +58,7 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
             <p className="font-body italic text-[13px] text-fg-dim">
               Sanctum Mentis – eine Bibliothek der grossen Fragen.
             </p>
-            <p className="font-ui text-[10px] tracking-[0.16em] uppercase text-fg-faint">
+            <p className="font-ui text-[10px] tracking-[0.16em] text-fg-faint">
               Alpha
             </p>
           </div>

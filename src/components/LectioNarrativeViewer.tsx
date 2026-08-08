@@ -441,7 +441,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
            und liegt unsichtbar hinter der Stage. */
         :global(.brand) {
           position: fixed; top: 22px; left: 26px; z-index: 6;
-          font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+ font-size: 10px; letter-spacing: 0.14em; 
           color: oklch(0.44 0.03 65);
           display: flex; align-items: center; gap: 6px;
           text-decoration: none; cursor: pointer;
@@ -460,7 +460,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         :global(.brand:hover .exit-arrow) { transform: translateX(-2px); }
         .lc-counter {
           position: fixed; top: 26px; right: 30px; z-index: 6;
-          font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+ font-size: 10px; letter-spacing: 0.15em; 
           color: var(--fg-faint); display: flex; align-items: baseline; gap: 10px;
         }
         .lc-counter .num { font-weight: 600; transition: color .6s; }
@@ -495,14 +495,14 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         }
 
         .eyebrow, .meta {
-          font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase;
+ font-size: 10.5px; letter-spacing: 0.16em; 
           color: var(--voice); margin: 0 0 26px; transition: color .6s;
         }
-        .meta { color: var(--fg-faint); letter-spacing: 0.24em; }
+        .meta { color: var(--fg-faint); letter-spacing: 0.15em; }
 
         /* Schwelle */
         .frage {
-          font-family: var(--font-display), 'Marcellus SC', serif;
+          font-family: var(--font-display), 'Marcellus', serif;
           font-size: clamp(30px, 4.4vw, 56px); line-height: 1.16;
           color: var(--fg); margin: 0; max-width: 18ch;
         }
@@ -522,7 +522,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           color: var(--fg-muted); font-family: inherit; padding: 8px 14px;
         }
         .enter .label {
-          font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase;
+ font-size: 11px; letter-spacing: 0.16em; 
           transition: color .3s;
         }
         .enter:hover .label { color: var(--voice); }
@@ -531,7 +531,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
 
         /* Stimme */
         .v-eyebrow {
-          font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+ font-size: 10px; letter-spacing: 0.15em; 
           color: var(--voice); margin: 0 0 22px; transition: color .6s;
         }
         .niche-wrap { position: relative; margin: 0 0 26px; }
@@ -554,7 +554,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           animation: halo 6.5s ease-in-out infinite;
         }
         .v-name {
-          font-family: var(--font-display), 'Marcellus SC', serif;
+          font-family: var(--font-display), 'Marcellus', serif;
           font-size: clamp(24px, 2.8vw, 34px); letter-spacing: 0.02em;
           color: var(--fg); margin: 0 0 30px; font-weight: 400;
         }
@@ -580,7 +580,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
 
         /* Synthese */
         .kicker {
-          font-family: var(--font-display), 'Marcellus SC', serif;
+          font-family: var(--font-display), 'Marcellus', serif;
           font-size: clamp(22px, 2.7vw, 33px); line-height: 1.4; color: var(--fg);
           margin: 36px auto 0; max-width: 22ch; letter-spacing: 0.008em; text-align: center;
         }
@@ -593,7 +593,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         :global(.btn) {
           display: inline-flex; align-items: center; gap: 9px;
           padding: 13px 22px; font-size: 11px;
-          letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; cursor: pointer;
+ letter-spacing: 0.14em; text-decoration: none; cursor: pointer;
           border: 1px solid var(--hairline-strong); color: var(--fg-muted); background: none;
           transition: border-color .25s, color .25s, background .25s;
         }
@@ -623,7 +623,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           background: none; border: none; cursor: pointer;
           display: inline-flex; flex-direction: column; align-items: center; gap: 7px;
           color: var(--fg-dim); font-family: inherit;
-          font-size: 9.5px; letter-spacing: 0.26em; text-transform: uppercase;
+ font-size: 9.5px; letter-spacing: 0.16em; 
           transition: color .3s, opacity .4s;
           min-width: 56px;
         }

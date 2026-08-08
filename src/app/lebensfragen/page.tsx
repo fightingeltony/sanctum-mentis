@@ -17,13 +17,13 @@ export default function LebensfragenPage() {
       <Link
         href="/"
         className="inline-flex items-center gap-2 font-ui text-[11px] tracking-[0.12em]
-          uppercase no-underline mb-12 transition-colors"
+ no-underline mb-12 transition-colors"
         style={{ color: 'var(--fg-muted)' }}
       >
         ← Sanctum Mentis
       </Link>
 
-      <p className="font-ui text-[11px] tracking-[0.28em] uppercase mb-4"
+      <p className="font-ui text-[11px] tracking-[0.16em] mb-4"
         style={{ color: 'var(--gold)' }}>
         Lebensfragen
       </p>
@@ -48,7 +48,7 @@ export default function LebensfragenPage() {
               border: '1px solid var(--hairline)',
             }}
           >
-            <p className="font-ui text-[10px] tracking-[0.22em] uppercase mb-2 transition-colors"
+            <p className="font-ui text-[10px] tracking-[0.15em] mb-2 transition-colors"
               style={{ color: 'var(--fg-faint)' }}>
               {lf.stimmen.length} Stimmen
             </p>
