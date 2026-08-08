@@ -74,8 +74,8 @@
     }
   },
   "regionen": [
-    { "label": "das Loslassen", "x": 22, "y": 14, "hint": "Die Stimmen hier sagen: Halte weniger fest. Vieles liegt nicht bei dir – und das anzuerkennen befreit." },
-    { "label": "das Ergreifen", "x": 79, "y": 14, "hint": "Die Stimmen hier sagen: Du hast mehr in der Hand, als du zugibst – nimm es." },
+    { "label": "das Loslassen", "x": 22, "y": 6, "hint": "Die Stimmen hier sagen: Halte weniger fest. Vieles liegt nicht bei dir – und das anzuerkennen befreit." },
+    { "label": "das Ergreifen", "x": 79, "y": 6, "hint": "Die Stimmen hier sagen: Du hast mehr in der Hand, als du zugibst – nimm es." },
     { "label": "das Empfangen", "x": 50, "y": 92, "hint": "Die Stimmen hier sagen: Das Entscheidende machst du nicht – es kommt dir zu, wenn du es lässt." },
     { "label": "der Einwand", "x": 9, "y": 78, "hint": "Hier steht die Stimme, die die Frage selbst anzweifelt: Wer ist es denn, der etwas in der Hand hätte?" }
   ],
@@ -85,7 +85,7 @@
     { "knoten": "nietzsche",     "x": 87, "y": 48, "farbe": "oklch(0.42 0.12 350)" },
     { "knoten": "wahres-selbst", "x": 64, "y": 80, "farbe": "oklch(0.48 0.13 55)" },
     { "knoten": "augustinus",    "x": 32, "y": 84, "farbe": "oklch(0.41 0.11 145)" },
-    { "knoten": "buddhismus",    "x": 9,  "y": 46, "farbe": "oklch(0.44 0.11 75)" }
+    { "knoten": "buddhismus",    "x": 14, "y": 46, "farbe": "oklch(0.44 0.11 75)" }
   ],
   "stellen": [
     {

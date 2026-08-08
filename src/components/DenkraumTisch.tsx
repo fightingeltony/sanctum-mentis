@@ -539,10 +539,23 @@ export default function DenkraumTisch({ denkraum }: Props) {
           .karte, .karte.armed { transition: none; transform: translate(-50%, -50%); }
         }
         @media (max-width: 880px) {
-          .werk { grid-template-columns: 1fr; }
-          .tisch { min-height: 62vh; border-right: none; border-bottom: 1px solid var(--hairline); }
-          .panel { max-height: none; }
-          .karte { width: clamp(96px, 26vw, 130px); padding: 9px 8px; }
+          /* Panel als festes Bottom-Sheet (StarChart-Muster): sonst liegt die
+             Antwort auf einen Karten-Tipp unsichtbar unter dem Falz. */
+          .werk { display: block; min-height: 0; }
+          .tisch {
+            min-height: 0;
+            height: calc(100dvh - 58px - 40dvh);
+            border-right: none; border-bottom: 1px solid var(--hairline);
+          }
+          .panel {
+            position: fixed; left: 0; right: 0; bottom: 0; z-index: 8;
+            max-height: 40dvh; overflow-y: auto;
+            border-top: 1px solid var(--hairline-strong);
+            box-shadow: 0 -14px 34px -22px oklch(0.24 0.02 65 / 0.6);
+            padding: 18px 20px calc(14px + env(safe-area-inset-bottom));
+          }
+          .karte { width: clamp(86px, 24vw, 124px); padding: 8px 7px; }
+          .k-name { font-size: 14px; }
           .k-these { display: none; }
         }
       `}</style>
