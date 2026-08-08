@@ -191,5 +191,6 @@ Dieses Dokument ist das *Warum*, nicht das *Wie* und nicht das *Was*.
 - **Schema-Felder der drei Formen** (alle Feld-Definitionen von Tableau / Lectio / Lebensfrage) → `schema-referenz.md` §1–3. Die *begriffliche* Bestimmung der drei Formen (Reichweite, Wohnort, Bau-Regel) steht oben in diesem Dokument.
 - **Wie man eine Lectio baut** → `lectio-anleitung.md` (massgeblich).
 - **Wie man prüft** → `mild-mode.md`, `hard-mode.md`.
+- **Wie zusammengearbeitet wird** (Rollen, Workflow-Regeln, Modelltreue-Anker) → `arbeitsweise.md`.
 
 So bleibt jede Aussage an einem Ort. Der Kanon trägt die Haltung; die Referenz trägt die Mechanik; die Anleitung trägt den Bau.

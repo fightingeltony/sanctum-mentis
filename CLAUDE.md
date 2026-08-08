@@ -106,6 +106,7 @@ Jedes Topic definiert seine eigenen Achsen unter `topic.quadrants`:
 Konzept-Positionen `x`/`y` sind 0–100, mathematische Konvention (y=0 unten, y=100 oben).
 
 ## Wichtige Dateien
+- `arbeitsweise.md` – das Wie der Zusammenarbeit: Rollen (Kurator / Claude / Fable / Prüfer-Chat), Workflow-Regeln (Belegfall vor Kanonisierung, Festschreiben zuletzt), Modelltreue-Prüfpunkte
 - `data/library.json` – Liste aller Themengebiete (für die Bibliothek)
 - `data/das-selbst.json` – Beispiel-Themengebiet (Mild-Modus)
 - `src/lib/types.ts` – Datenmodell
