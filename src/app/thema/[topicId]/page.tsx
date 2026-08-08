@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!data) return {}
 
   const { title, subtitle } = data.topic
-  const description         = subtitle ?? 'Eine Bibliothek der großen Fragen.'
+  const description         = subtitle ?? 'Eine Bibliothek der grossen Fragen.'
 
   return {
     title:       title,

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ═════════════════════════════════════════════════════
-   Sanctum Mentis — Design Tokens (Pergament)
+   Sanctum Mentis – Design Tokens (Pergament)
    ═════════════════════════════════════════════════════ */
 
 :root {
@@ -9,7 +9,7 @@
   --bg:               oklch(0.94 0.022 85);
   --bg-raised:        oklch(0.97 0.018 82);
   --bg-sunk:          oklch(0.91 0.025 80);
-  --bg-deep:          oklch(0.865 0.028 78);   /* tiefstes Pergament — Lectio-Gradient */
+  --bg-deep:          oklch(0.865 0.028 78);   /* tiefstes Pergament – Lectio-Gradient */
   --paper:            oklch(0.945 0.020 82);
 
   --fg:               oklch(0.24 0.022 65);
@@ -55,7 +55,7 @@
 /* ── Tailwind-v4-Theme: Primärtokens als echte Utilities ──
    `inline` ist Pflicht: die Utilities referenzieren var(--…) direkt am
    Element, damit per-Thema-Overrides (inline --accent auf dem Wrapper)
-   weiter durchschlagen. :root bleibt die Quelle — Inline-Styles und
+   weiter durchschlagen. :root bleibt die Quelle – Inline-Styles und
    SVG-CSS nutzen var(--…) weiterhin direkt. Aliase (--surface, --ink, …)
    bewusst nicht dupliziert. */
 @theme inline {
@@ -106,7 +106,7 @@ h1, h2, h3 { text-wrap: balance; }
 ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-thumb-hover); }
 /* Standard-Properties (Firefox u.a.). Hinweis: Chromium ignoriert die
-   ::-webkit-scrollbar-Regeln, sobald scrollbar-color gesetzt ist — dort
+   ::-webkit-scrollbar-Regeln, sobald scrollbar-color gesetzt ist – dort
    rendert die native dünne Scrollbar in denselben Farben. */
 * { scrollbar-width: thin; scrollbar-color: var(--scrollbar-thumb) transparent; }
 
@@ -133,7 +133,7 @@ h1, h2, h3 { text-wrap: balance; }
   min-height: 100dvh;
   max-width: 1400px;
   margin: 0 auto;
-  overflow-x: clip; /* clip not hidden — clips without creating a scroll container, preserves sticky */
+  overflow-x: clip; /* clip not hidden – clips without creating a scroll container, preserves sticky */
 }
 @media (min-width: 768px) {
   .shell { grid-template-columns: 320px 1fr; }
@@ -261,7 +261,7 @@ h1, h2, h3 { text-wrap: balance; }
   }
 }
 
-/* ── Bottom tab bar (mobile only) — contains slider-strip + tabs-row ── */
+/* ── Bottom tab bar (mobile only) – contains slider-strip + tabs-row ── */
 .bottom-tab-bar {
   display: flex;
   flex-direction: column;
@@ -400,7 +400,7 @@ h1, h2, h3 { text-wrap: balance; }
   .wm-pulse-ring { animation: none; opacity: 0; }
 }
 
-/* ── LandingStarChart — Tour-Cursor tap-pulse & Caption fade ── */
+/* ── LandingStarChart – Tour-Cursor tap-pulse & Caption fade ── */
 @keyframes lsc-cursor-tap {
   0%   { transform: scale(1); }
   40%  { transform: scale(0.58); }
@@ -422,7 +422,7 @@ h1, h2, h3 { text-wrap: balance; }
   .lectio-step-enter { opacity: 0; transform: translateY(12px); }
 }
 
-/* Character card hover — only on hover-capable devices, only for living characters */
+/* Character card hover – only on hover-capable devices, only for living characters */
 @media (hover: hover) {
   .character-card.is-alive:hover { background: var(--bg-sunk); }
 }
@@ -433,7 +433,7 @@ h1, h2, h3 { text-wrap: balance; }
   outline-offset: -2px;
 }
 
-/* Command palette — character card highlight flash */
+/* Command palette – character card highlight flash */
 .carta-card-highlight[data-highlight="true"] {
   outline: 2px solid var(--accent);
   outline-offset: -1px;
@@ -449,7 +449,7 @@ h1, h2, h3 { text-wrap: balance; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   StarChart — Sternkarte des Tableaus
+   StarChart – Sternkarte des Tableaus
    ═══════════════════════════════════════════════════════════════ */
 
 :root {
@@ -459,11 +459,11 @@ h1, h2, h3 { text-wrap: balance; }
   --line-rejection:  oklch(0.47 0.14 30);
 }
 
-/* Axis chrome (grid, frame, poles, compass) — fades out in school mode */
+/* Axis chrome (grid, frame, poles, compass) – fades out in school mode */
 .sc-axischrome { transition: opacity .55s ease; }
 svg.sc-mode-school .sc-axischrome { opacity: 0 !important; }
 
-/* School labels — fade in in school mode */
+/* School labels – fade in in school mode */
 .sc-schoollabels { opacity: 0; transition: opacity .55s ease; }
 svg.sc-mode-school .sc-schoollabels { opacity: 1; }
 
@@ -505,7 +505,7 @@ svg.sc-focus .sc-edge-g:not(.sc-lit) .sc-brk  { opacity: .14; }
 .sc-star { cursor: pointer; }
 .sc-star:focus { outline: none; }
 .sc-star:focus-visible .sc-spike {
-  /* Sienna-Akzent-Ring als focus-visible-Indikator — sichtbar auch ohne Hover-Gerät */
+  /* Sienna-Akzent-Ring als focus-visible-Indikator – sichtbar auch ohne Hover-Gerät */
   filter: drop-shadow(0 0 3px oklch(0.52 0.12 50)) drop-shadow(0 0 6px oklch(0.52 0.12 50 / 0.5));
 }
 /* Orphan-Konzept-Marker focus-visible */
@@ -573,7 +573,7 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
 }
 .sc-lines-toggle input { accent-color: var(--accent); cursor: pointer; }
 
-/* ── B: Priority deklutter — hide overlapping labels, reveal on zoom/focus ── */
+/* ── B: Priority deklutter – hide overlapping labels, reveal on zoom/focus ── */
 .sc-sname,
 .sc-slife {
   transition: opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -589,7 +589,7 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
 .sc-star:focus-visible .sc-slife.sc-label-culled {
   opacity: 1 !important;
 }
-/* Hover reveal — only on pointer devices */
+/* Hover reveal – only on pointer devices */
 @media (hover: hover) {
   .sc-star:hover .sc-sname.sc-label-culled,
   .sc-star:hover .sc-slife.sc-label-culled {
@@ -608,7 +608,7 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
   .sc-slife { transition: none; }
 }
 
-/* ── View Transitions (EXPERIMENT, Schritt 3) — reduced-motion: kein
+/* ── View Transitions (EXPERIMENT, Schritt 3) – reduced-motion: kein
    Routen-Cross-Fade. Regel ist ohne das Next-Flag wirkungslos. */
 @media (prefers-reduced-motion: reduce) {
   ::view-transition-group(*),
@@ -640,7 +640,7 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
   .sc-slife   { font-size: 12px; }
   .sc-pole    { font-size: 17px; }
 
-  /* School mode: hide star names — school title labels the cluster, name shows in sheet */
+  /* School mode: hide star names – school title labels the cluster, name shows in sheet */
   svg.sc-mode-school .sc-sname,
   svg.sc-mode-school .sc-slife { opacity: 0 !important; transition: opacity 200ms; }
 }
@@ -677,7 +677,7 @@ svg.sc-focus .sc-star:not(.sc-active):not(.sc-neighbor) .sc-sname     { opacity:
 @starting-style {
   .sc-sheet { transform: translateY(100%); }
 }
-/* Exit — StarChart hält die Auswahl 230ms und setzt data-closing */
+/* Exit – StarChart hält die Auswahl 230ms und setzt data-closing */
 .sc-sheet[data-closing] {
   transform: translateY(100%);
   transition-duration: 220ms;

@@ -3,7 +3,7 @@
   "tableauId": "existenzialismus",
   "title": "Wenn nichts mehr vorgegeben ist",
   "focus": "Die Sinn-Frage des Existenzialismus – von Nietzsches Diagnose über die Wahl, die Antwort und die Verweigerung der Frage",
-  "thesis": "Du weißt, dass dir niemand mehr sagt, wozu du da bist. Diese Lectio führt durch die zentralen Antworten des Existenzialismus auf die Lage – drei davon stehen am Ende nebeneinander, ohne dass eine die anderen einholt: Sartre setzt, Frankl antwortet, Camus bejaht das Sinnlose.",
+  "thesis": "Du weisst, dass dir niemand mehr sagt, wozu du da bist. Diese Lectio führt durch die zentralen Antworten des Existenzialismus auf die Lage – drei davon stehen am Ende nebeneinander, ohne dass eine die anderen einholt: Sartre setzt, Frankl antwortet, Camus bejaht das Sinnlose.",
   "path_type": "narrativ-historisch",
   "ton": "erzählend-erfahrend",
   "level": 2,
@@ -17,7 +17,7 @@
       "narrative": {
         "hook": "Kennst du den Moment, in dem ein Satz, der dich früher getragen hat, plötzlich hohl klingt? Du sprichst ihn noch aus, aber er trägt nichts mehr.",
         "body": [
-          "Nietzsche hat genau das für eine ganze Kultur gesehen, und sein Wort vom Tod Gottes ist weder Triumph noch Provokation, sondern eine kühle Beobachtung: Die große Ordnung, die zweitausend Jahre lang sagte, wozu du da bist, trägt nicht mehr – niemand hat sie widerlegt, sie ist einfach leise geworden. Aber Nietzsche tröstet nicht. Er erfindet keinen Ersatz, an den ohnehin keiner mehr glauben könnte, sondern lässt die Frage in voller Schärfe stehen: Wenn dir keiner mehr sagt, wozu – was machst du dann?"
+          "Nietzsche hat genau das für eine ganze Kultur gesehen, und sein Wort vom Tod Gottes ist weder Triumph noch Provokation, sondern eine kühle Beobachtung: Die grosse Ordnung, die zweitausend Jahre lang sagte, wozu du da bist, trägt nicht mehr – niemand hat sie widerlegt, sie ist einfach leise geworden. Aber Nietzsche tröstet nicht. Er erfindet keinen Ersatz, an den ohnehin keiner mehr glauben könnte, sondern lässt die Frage in voller Schärfe stehen: Wenn dir keiner mehr sagt, wozu – was machst du dann?"
         ],
         "kernel": "Wenn dir keiner mehr sagt, wozu – was machst du dann?",
         "bridge": "Nietzsche ist der Diagnostiker, nicht der Tröster. Er sieht den Verlust, ohne zu beschönigen, und er weigert sich, einen Ersatz zu erfinden, an den niemand mehr wirklich glauben kann. Aber er stellt auch die nächste Frage: Wenn nichts mehr vorgegeben ist, wer fühlt das zuerst, lange bevor die Diagnose ausgesprochen wird? Die Antwort hatte ein anderer schon Jahrzehnte vorher gegeben."
@@ -62,7 +62,7 @@
       "narrative": {
         "hook": "Denk an einen Moment, in dem etwas von dir verlangt wurde – ein Mensch, der dich brauchte, eine Aufgabe, die liegen blieb, wenn du sie nicht tatest.",
         "body": [
-          "Genau das setzt Frankl gegen Sartre: Er bestreitet nicht, dass es keine vorgegebene Sinn-Ordnung mehr gibt – er bestreitet nur, dass du den Sinn deshalb selbst erfinden musst. Sinn, sagt Frankl, kommt von außen auf dich zu, durch diese eine Aufgabe, diesen einen Menschen, diese eine Lage; du findest ihn nicht durch Suchen, sondern durch Antworten. Frankl hat die Konzentrationslager überlebt und dort gesehen, was diese Umkehrung trägt: Wer einen Grund hatte, auf den er antworten konnte – einen Menschen, der wartete, eine Arbeit, die unvollendet war –, der hielt durch. Nicht weil er sich einen Sinn ausdachte, sondern weil einer ihn rief."
+          "Genau das setzt Frankl gegen Sartre: Er bestreitet nicht, dass es keine vorgegebene Sinn-Ordnung mehr gibt – er bestreitet nur, dass du den Sinn deshalb selbst erfinden musst. Sinn, sagt Frankl, kommt von aussen auf dich zu, durch diese eine Aufgabe, diesen einen Menschen, diese eine Lage; du findest ihn nicht durch Suchen, sondern durch Antworten. Frankl hat die Konzentrationslager überlebt und dort gesehen, was diese Umkehrung trägt: Wer einen Grund hatte, auf den er antworten konnte – einen Menschen, der wartete, eine Arbeit, die unvollendet war –, der hielt durch. Nicht weil er sich einen Sinn ausdachte, sondern weil einer ihn rief."
         ],
         "kernel": "du findest ihn nicht durch Suchen, sondern durch Antworten",
         "bridge": "Frankl bestreitet nicht, dass es keine vorgegebenen Sinn-Strukturen gibt. Er bestreitet, dass daraus folgt, dass du den Sinn machst. Sinn, sagt Frankl, ruft dich an – durch eine konkrete Aufgabe, einen konkreten Menschen, eine konkrete Situation. Du findest ihn nicht durch Suchen, sondern durch Antworten. Das ist eine andere Bewegung als bei Sartre – nicht Setzung, sondern Adressierung. Beide haben extreme historische Erfahrungen im Rücken. Beide kommen zu gegensätzlichen Antworten. Und ein dritter Denker hat sich der ganzen Frage verweigert."

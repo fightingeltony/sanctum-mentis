@@ -4,16 +4,16 @@ import { SPUR_LABELS } from '@/lib/spuren'
 import type { Spur } from '@/lib/types'
 import type { LibraryEntry } from '@/lib/data'
 
-// Spur-Reihenfolge — kanonisch wie in library.json und bibliothek-architektur.md
+// Spur-Reihenfolge – kanonisch wie in library.json und bibliothek-architektur.md
 const SPUR_ORDER: Spur[] = ['erkenntnis', 'handlung', 'existenz', 'wandlung', 'menschenbild']
 
-// Kurz-Beschreibung pro Spur — die kuratorische Klammer, sichtbar im Header
+// Kurz-Beschreibung pro Spur – die kuratorische Klammer, sichtbar im Header
 const SPUR_BLURB: Record<Spur, string> = {
-  erkenntnis:   'Was ist Erkennen, wer erkennt, was wird erkannt — die Trias der Erkenntnis.',
-  handlung:     'Vom Wissen zum Tun — was wir sollen und wie wir zusammenleben.',
-  existenz:     'Das gelebte Dasein — Freiheit, Sinn und die Kunst, gut zu leben.',
-  wandlung:     'Wie verändert sich ein Mensch — was heilt, was transformiert, was lässt ihn ein anderer werden.',
-  menschenbild: 'Was ist der Mensch? — die anthropologische Grundfrage, die unter allem Handeln und Erkennen liegt.',
+  erkenntnis:   'Was ist Erkennen, wer erkennt, was wird erkannt – die Trias der Erkenntnis.',
+  handlung:     'Vom Wissen zum Tun – was wir sollen und wie wir zusammenleben.',
+  existenz:     'Das gelebte Dasein – Freiheit, Sinn und die Kunst, gut zu leben.',
+  wandlung:     'Wie verändert sich ein Mensch – was heilt, was transformiert, was lässt ihn ein anderer werden.',
+  menschenbild: 'Was ist der Mensch? – die anthropologische Grundfrage, die unter allem Handeln und Erkennen liegt.',
 }
 
 function groupBySpur(entries: LibraryEntry[]): { spur: Spur; items: LibraryEntry[] }[] {
@@ -39,13 +39,13 @@ export default function ThemenPage() {
       </h1>
       <p className="font-body italic text-[15px] text-fg-muted mb-14 max-w-[58ch]">
         Die Sammlung ordnet sich in {spurCount} Spuren, jede ein Feld von Fragen,
-        das nach und nach wächst. Jedes Thema wird als Tableau ausgestellt —
+        das nach und nach wächst. Jedes Thema wird als Tableau ausgestellt –
         ein Sternbild von Stimmen.
       </p>
 
       <div className="flex flex-col gap-16">
         {grouped.map(({ spur, items }) => {
-          // Header-Farbe aus dem ersten Tableau der Spur — innerhalb des Hue-Bands konsistent
+          // Header-Farbe aus dem ersten Tableau der Spur – innerhalb des Hue-Bands konsistent
           const spurColor = items[0].themeColor
           return (
             <section key={spur}>
@@ -105,7 +105,7 @@ function TopicCard({ topic }: { topic: LibraryEntry }) {
         opacity: available ? 1 : 0.55,
       }}
     >
-      {/* Eyebrow-Spur-Markierung entfällt — der Section-Header trägt die Spur jetzt */}
+      {/* Eyebrow-Spur-Markierung entfällt – der Section-Header trägt die Spur jetzt */}
       <div className="flex items-baseline justify-between gap-3">
         <span
           className="font-display text-[18px] tracking-[0.10em] text-fg"

@@ -56,7 +56,7 @@ export default function ShellLayout({ children }: { children: React.ReactNode })
         <div className="max-w-[1100px] mx-auto px-8 md:px-12 py-8 flex flex-col gap-4">
           <div className="flex flex-col sm:flex-row items-baseline justify-between gap-3">
             <p className="font-body italic text-[13px] text-fg-dim">
-              Sanctum Mentis — eine Bibliothek der großen Fragen.
+              Sanctum Mentis – eine Bibliothek der grossen Fragen.
             </p>
             <p className="font-ui text-[10px] tracking-[0.16em] uppercase text-fg-faint">
               Alpha

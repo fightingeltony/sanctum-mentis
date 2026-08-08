@@ -1,4 +1,4 @@
-# Mild-Modus — Sanctum-Standard für Tableau-Bauten
+# Mild-Modus – Sanctum-Standard für Tableau-Bauten
 
 **Status:** Konvention, gültig seit v2-Etappe (Mai 2026)
 **Anwendungsbereich:** Alle Tableau-Bauten in Sanctum Mentis, sofern nicht explizit anders angegeben.
@@ -9,18 +9,18 @@
 
 Der Mild-Modus ist der **Default-Bauweg** für Sanctum-Tableaus. Er steht zwischen zwei Extremen:
 
-- **Solo-Architekt** (8–12 Knoten, ohne kritische Revision, schnell und intuitiv) — verzichtet auf Prüfung, verliert dadurch oft die Tableau-Stimme.
-- **Volle Schleife** (Architekt → Inquisitor → Architekt, 16+ Knoten, akademische Reife) — produziert vollständige Datensätze, kann aber meditative oder lebensweltliche Stimmen zerstören.
+- **Solo-Architekt** (8–12 Knoten, ohne kritische Revision, schnell und intuitiv) – verzichtet auf Prüfung, verliert dadurch oft die Tableau-Stimme.
+- **Volle Schleife** (Architekt → Inquisitor → Architekt, 16+ Knoten, akademische Reife) – produziert vollständige Datensätze, kann aber meditative oder lebensweltliche Stimmen zerstören.
 
-Mild ist die **bewusst gemäßigte Mitte**: 10–14 Denker, eine Runde milde Selbstprüfung, kein Vollständigkeitsreflex. Mild ist nicht "abgespecktes Voll". Mild ist eine **eigene Methode** mit eigenen Erfolgsbedingungen.
+Mild ist die **bewusst gemässigte Mitte**: 10–14 Denker, eine Runde milde Selbstprüfung, kein Vollständigkeitsreflex. Mild ist nicht "abgespecktes Voll". Mild ist eine **eigene Methode** mit eigenen Erfolgsbedingungen.
 
 ---
 
 ## Sanctum-Vision in einem Satz
 
-Sanctum hilft Nutzern, **ein Thema zu Ende zu denken** — nicht alle Positionen zu kennen. **Verstehbarkeit, nicht Vollständigkeit.**
+Sanctum hilft Nutzern, **ein Thema zu Ende zu denken** – nicht alle Positionen zu kennen. **Verstehbarkeit, nicht Vollständigkeit.**
 
-Jede Bauentscheidung in einem Mild-Tableau muss sich an dieser Vision messen lassen. Wenn ein Knoten nicht hilft, das Thema verstehbar abzuschließen, gehört er nicht ins Tableau — auch wenn er akademisch wichtig wäre.
+Jede Bauentscheidung in einem Mild-Tableau muss sich an dieser Vision messen lassen. Wenn ein Knoten nicht hilft, das Thema verstehbar abzuschliessen, gehört er nicht ins Tableau – auch wenn er akademisch wichtig wäre.
 
 ---
 
@@ -32,13 +32,13 @@ Beim Bau und beim Prüfen eines Mild-Tableaus stelle dich diesen drei Fragen, in
 
 Bevor irgendetwas gebaut wird: Was ist die **Lebensfrage hinter der akademischen Frage**? Welche Frage des Nutzers macht dieses Tableau dringlich? Ist sie formulierbar in einem Satz?
 
-Wenn die Lebensfrage nicht formulierbar ist, ist das Tableau möglicherweise zu früh. Ist sie formulierbar, dann ist sie der innere Maßstab für alle späteren Entscheidungen — sie wird zur Intro-Frage des Tableaus.
+Wenn die Lebensfrage nicht formulierbar ist, ist das Tableau möglicherweise zu früh. Ist sie formulierbar, dann ist sie der innere Massstab für alle späteren Entscheidungen – sie wird zur Intro-Frage des Tableaus.
 
 **Zwei Ankertypen:**
-- **Gewachsen** — eine echte Frage des Kurators, lebensweltlich, persönlich. Ergibt warme, einladende Tableaus (Beispiel: Selbst, Realismus).
-- **Architektonisch** — eine kuratorische Frage, die ein Feld schließt oder eine Gruppe ergänzt. Ergibt nüchternere, strukturell motivierte Tableaus (Beispiel: Ethik als Brücke zur Handlungs-Spur).
+- **Gewachsen** – eine echte Frage des Kurators, lebensweltlich, persönlich. Ergibt warme, einladende Tableaus (Beispiel: Selbst, Realismus).
+- **Architektonisch** – eine kuratorische Frage, die ein Feld schliesst oder eine Gruppe ergänzt. Ergibt nüchternere, strukturell motivierte Tableaus (Beispiel: Ethik als Brücke zur Handlungs-Spur).
 
-Beide sind legitim. Wichtig: Architektonische Anker müssen *als solche markiert* werden — sie verlangen nüchternere Sprache und keine forcierte Lebensweltlichkeit.
+Beide sind legitim. Wichtig: Architektonische Anker müssen *als solche markiert* werden – sie verlangen nüchternere Sprache und keine forcierte Lebensweltlichkeit.
 
 ### 2. Trägt die polare Spannung?
 
@@ -53,16 +53,16 @@ Jedes Tableau braucht eine zentrale Spannung, die durch die Achsen sichtbar wird
 
 ### 3. Trägt die Mild-Disziplin?
 
-Vollständigkeitsreflex ist der größte Feind des Mild-Modus. Vor jedem zusätzlichen Knoten frage:
+Vollständigkeitsreflex ist der grösste Feind des Mild-Modus. Vor jedem zusätzlichen Knoten frage:
 
 - Wird das Tableau durch diesen Knoten **abschlussfähiger** oder nur **vollständiger**?
-- Würde ein Nutzer am Ende sagen: *"Jetzt habe ich verstanden"* — oder eher: *"Jetzt weiß ich, dass es noch mehr gibt"*?
+- Würde ein Nutzer am Ende sagen: *"Jetzt habe ich verstanden"* – oder eher: *"Jetzt weiss ich, dass es noch mehr gibt"*?
 
 Mild zielt auf das erste. Akademische Vollständigkeit ist erlaubt, wo sie hilft. Sie ist nicht das Ziel.
 
 ---
 
-## Tableau-Größen (Richtwerte, keine Regeln)
+## Tableau-Grössen (Richtwerte, keine Regeln)
 
 | Element | Richtwert |
 |---|---|
@@ -77,7 +77,7 @@ Abweichungen nach unten sind okay (Solo-Wurf). Abweichungen deutlich nach oben (
 
 ## Stufen-Verteilung über alle 5 Komplexitäts-Level
 
-**Verteilung der Denker** über die fünf Stufen — als Faustregel:
+**Verteilung der Denker** über die fünf Stufen – als Faustregel:
 
 | Stufe | Anteil | Funktion |
 |---|---|---|
@@ -89,7 +89,7 @@ Abweichungen nach unten sind okay (Solo-Wurf). Abweichungen deutlich nach oben (
 
 **Beispiel Selbst:** 2-1-6-4-2. **Beispiel Ethik v2:** 4-3-3-2-1.
 
-Keine starre Vorgabe — Tableau-spezifische Variationen sind erwartet. Aber alle fünf Stufen müssen mit Inhalt belegt sein. **Wenn der Slider auf L5 nichts mehr zeigt, was er auf L3 nicht schon zeigte, ist das Tableau auf der Tiefe nicht durchgebaut.**
+Keine starre Vorgabe – Tableau-spezifische Variationen sind erwartet. Aber alle fünf Stufen müssen mit Inhalt belegt sein. **Wenn der Slider auf L5 nichts mehr zeigt, was er auf L3 nicht schon zeigte, ist das Tableau auf der Tiefe nicht durchgebaut.**
 
 **Influence-Stufungs-Regel:** Eine Influence-Kante darf nie früher erscheinen als der spätere ihrer Endpunkte. Eine Kante zwischen einem L1-Denker und einem L4-Denker hat firstLevel ≥ 4. Beim Bau validieren, bei v2-Erweiterungen prüfen.
 
@@ -97,7 +97,7 @@ Keine starre Vorgabe — Tableau-spezifische Variationen sind erwartet. Aber all
 
 ## Mehrstufige Texte sind die Regel
 
-**Mild-Modus heißt nicht "ein Text pro Knoten".** Realismus-Konvention und v2-Etappe haben gezeigt: Fast jeder Knoten bekommt **zwei Stufen**, zentrale Hubs **drei**.
+**Mild-Modus heisst nicht "ein Text pro Knoten".** Realismus-Konvention und v2-Etappe haben gezeigt: Fast jeder Knoten bekommt **zwei Stufen**, zentrale Hubs **drei**.
 
 **Faustregel:**
 - **Hubs** (4+ Influences, strukturelle Mitte) → drei Stufen
@@ -116,13 +116,13 @@ L1-Texte sind **didaktisch**: Konzepte einführen, Begriffe erklären, den Knote
 L3–L5-Texte sind **tableau-positionierend**: Wirkungslinien, Streitstellen, Konvergenzen, Hub-Stellung. Nicht den Denker erklären, sondern zeigen, wo er im Feld steht und woran sich andere an ihm abarbeiten.
 
 Diese Tonalitäts-Verschiebung ist nicht starr, sondern tableau-spezifisch:
-- **Analytisch** (Geist, Realismus): präzise, knappe Begriffe — *"Φ ist Tononis formales Maß"*
-- **Lebensweltlich** (Selbst): verwandte Topologien, geteilte Diagnosen — *"Atman, Wahres Selbst und Self meinen verwandte Topologien"*
-- **Kuratorisch-nüchtern** (Ethik): Hub-Stellung, strukturelle Mitte — *"Kant ist nicht eine Position unter anderen"*
+- **Analytisch** (Geist, Realismus): präzise, knappe Begriffe – *"Φ ist Tononis formales Mass"*
+- **Lebensweltlich** (Selbst): verwandte Topologien, geteilte Diagnosen – *"Atman, Wahres Selbst und Self meinen verwandte Topologien"*
+- **Kuratorisch-nüchtern** (Ethik): Hub-Stellung, strukturelle Mitte – *"Kant ist nicht eine Position unter anderen"*
 
 ---
 
-## Annotations-Syntax — `[[Begriff:Erklärung]]`
+## Annotations-Syntax – `[[Begriff:Erklärung]]`
 
 **Einheitliche Form:** Der Begriff steht vor dem Doppelpunkt im Klammer-Inhalt, die Erklärung dahinter:
 
@@ -130,11 +130,11 @@ Diese Tonalitäts-Verschiebung ist nicht starr, sondern tableau-spezifisch:
 Die [[Phronesis:praktische Klugheit, die im Einzelfall erkennt, was zu tun ist]] zeigt sich nur in Erfahrung.
 ```
 
-**Rendering:** Der Begriff erscheint im Fließtext mit gestrichelter Tooltip-Unterstreichung, die Erklärung wird beim Hover/Tap als Tooltip angezeigt.
+**Rendering:** Der Begriff erscheint im Fliesstext mit gestrichelter Tooltip-Unterstreichung, die Erklärung wird beim Hover/Tap als Tooltip angezeigt.
 
 ### Tooltips bis L5
 
-Annotationen gehören **nicht nur** auf L1 (Einsteigerbegriffe), sondern auf **alle Stufen**, wo der Text einen Fachbegriff erstmals einführt, der ohne Erklärung den Leser ausschließen würde.
+Annotationen gehören **nicht nur** auf L1 (Einsteigerbegriffe), sondern auf **alle Stufen**, wo der Text einen Fachbegriff erstmals einführt, der ohne Erklärung den Leser ausschliessen würde.
 
 **Solo-L5-Knoten brauchen besonders viele Tooltips**, weil sie ohne L1-Vorlauf erscheinen und ihre Spezialtermini im Moment der ersten Erwähnung erklären müssen.
 
@@ -143,13 +143,13 @@ Annotationen gehören **nicht nur** auf L1 (Einsteigerbegriffe), sondern auf **a
 Nicht jeder Begriff verdient einen Tooltip. **Pro Tooltip die Frage stellen:** Wird der Leser ohne diese Erklärung den Satz nicht verstehen oder den Text-Cluster verlieren?
 
 - **Wenn ja:** Tooltip setzen.
-- **Wenn nein:** Begriff im Fließtext lassen, Tooltip einsparen.
+- **Wenn nein:** Begriff im Fliesstext lassen, Tooltip einsparen.
 
-Doppelte Tooltips für denselben Begriff in eng benachbarten Texten vermeiden — einmal erklärt, gilt im Tableau-Cluster.
+Doppelte Tooltips für denselben Begriff in eng benachbarten Texten vermeiden – einmal erklärt, gilt im Tableau-Cluster.
 
 ---
 
-## Konzept-Typologie — fünf Glyphen, klare Funktionen
+## Konzept-Typologie – fünf Glyphen, klare Funktionen
 
 Konzept-Knoten haben ein `type`-Feld, das im Frontend als Glyph gerendert wird. Die Typologie ist verbindlich für alle Tableaus seit 23.5.26.
 
@@ -163,25 +163,25 @@ Konzept-Knoten haben ein `type`-Feld, das im Frontend als Glyph gerendert wird. 
 
 ### Beispiele aus dem Bestand (nach Re-Typisierung 23.5.26)
 
-**Axiom ◆** — Cogito, Atman, Anatta, Existenz vor Essenz, Kategorischer Imperativ, Utility, Verantwortung für die Zukunft
+**Axiom ◆** – Cogito, Atman, Anatta, Existenz vor Essenz, Kategorischer Imperativ, Utility, Verantwortung für die Zukunft
 
-**Theory ⌘** — Funktionalismus, Anomaler Monismus, IIT, Predictive Processing, Phänomenales Selbstmodell, Lebens-Geist-Kontinuität, Ego-Tunnel, Free Energy Principle, Individuation, Lebensstil, Welterzeugung, Sinnfeld, Pragmatische Wahrheit, Paradigma und Inkommensurabilität, Tod als Strukturprinzip, Fiktive Endorientierung, Is-Ought-Brücke durch Praxis
+**Theory ⌘** – Funktionalismus, Anomaler Monismus, IIT, Predictive Processing, Phänomenales Selbstmodell, Lebens-Geist-Kontinuität, Ego-Tunnel, Free Energy Principle, Individuation, Lebensstil, Welterzeugung, Sinnfeld, Pragmatische Wahrheit, Paradigma und Inkommensurabilität, Tod als Strukturprinzip, Fiktive Endorientierung, Is-Ought-Brücke durch Praxis
 
-**Concept ❖** — Intentionalität, Qualia, Mary's Room, Chinesisches Zimmer, Phenomenal vs. Access Consciousness, Primäre/sekundäre Qualitäten, Ding an sich, Eudaimonia, Phronesis, Ren, Das Antlitz, Geworfenheit, Absurdität, Ich-Du
+**Concept ❖** – Intentionalität, Qualia, Mary's Room, Chinesisches Zimmer, Phenomenal vs. Access Consciousness, Primäre/sekundäre Qualitäten, Ding an sich, Eudaimonia, Phronesis, Ren, Das Antlitz, Geworfenheit, Absurdität, Ich-Du
 
-**Phenomenon ◎** — Hard Problem, Sein-Sollen-Lücke, Mauvaise foi, Angst
+**Phenomenon ◎** – Hard Problem, Sein-Sollen-Lücke, Mauvaise foi, Angst
 
-**Method ⚡** — Heterophänomenologie, Epoché, Kategorienfehler, Genealogie der Moral
+**Method ⚡** – Heterophänomenologie, Epoché, Kategorienfehler, Genealogie der Moral
 
 ### Klärungen für Grenzfälle
 
-**Gedankenexperimente sind concepts, keine phenomena.** Mary's Room, Chinesisches Zimmer, Zombies sind erfundene Szenarien — begriffliche Werkzeuge, keine beobachtbaren Vorkommnisse. Sie funktionieren *argumentativ wie* Phänomene (sie sollen Intuitionen hervorrufen), aber sie *sind* keine.
+**Gedankenexperimente sind concepts, keine phenomena.** Mary's Room, Chinesisches Zimmer, Zombies sind erfundene Szenarien – begriffliche Werkzeuge, keine beobachtbaren Vorkommnisse. Sie funktionieren *argumentativ wie* Phänomene (sie sollen Intuitionen hervorrufen), aber sie *sind* keine.
 
-**Imperative sind axioms, keine concepts.** "Handle so, dass die Maxime…" (Kant) oder "Handle so, dass die Wirkungen…" (Jonas) sind gesetzte Forderungen, keine Begriffe. Auch wenn der Knoten "Kategorischer Imperativ" oder "Verantwortung für die Zukunft" heißt — sein Inhalt ist eine Setzung.
+**Imperative sind axioms, keine concepts.** "Handle so, dass die Maxime…" (Kant) oder "Handle so, dass die Wirkungen…" (Jonas) sind gesetzte Forderungen, keine Begriffe. Auch wenn der Knoten "Kategorischer Imperativ" oder "Verantwortung für die Zukunft" heisst – sein Inhalt ist eine Setzung.
 
-**Theorie vs. Methode bei Verfahren mit Theorie-Hintergrund** (z.B. Logotherapie, Predictive Processing als kognitive Praxis): Der dominante Aspekt entscheidet. Wenn der Knoten primär "wie funktioniert es" beantwortet → theory. Wenn primär "wie macht man es" → method. Bei Logotherapie ist im Existenzialismus-Tableau die Theorie dominant. In einem Psychotherapie-Tableau wäre dieselbe Sache als method getaggt — Tableau-Kontext entscheidet.
+**Theorie vs. Methode bei Verfahren mit Theorie-Hintergrund** (z.B. Logotherapie, Predictive Processing als kognitive Praxis): Der dominante Aspekt entscheidet. Wenn der Knoten primär "wie funktioniert es" beantwortet → theory. Wenn primär "wie macht man es" → method. Bei Logotherapie ist im Existenzialismus-Tableau die Theorie dominant. In einem Psychotherapie-Tableau wäre dieselbe Sache als method getaggt – Tableau-Kontext entscheidet.
 
-**Phänomen vs. Begriff bei "Angst", "Qualia" und ähnlichen Doppelnatur-Konzepten:** Wenn das Phänomen ohne den Namen existieren würde → phenomenon. Wenn der Knoten spezifisch der Begriff dieses Denkers ist → concept. Angst existiert vor Kierkegaard, Qualia existieren als Erleben vor Nagel — die Knoten sitzen für die Phänomene, nicht für die Begriffe. Geworfenheit ist umgekehrt Heideggers Terminus für eine Lage — der Knoten sitzt für den Begriff, nicht für die nackte Lage.
+**Phänomen vs. Begriff bei "Angst", "Qualia" und ähnlichen Doppelnatur-Konzepten:** Wenn das Phänomen ohne den Namen existieren würde → phenomenon. Wenn der Knoten spezifisch der Begriff dieses Denkers ist → concept. Angst existiert vor Kierkegaard, Qualia existieren als Erleben vor Nagel – die Knoten sitzen für die Phänomene, nicht für die Begriffe. Geworfenheit ist umgekehrt Heideggers Terminus für eine Lage – der Knoten sitzt für den Begriff, nicht für die nackte Lage.
 
 **Streitstellen sind keine Konzepte.** Eine Streitstelle ("Sinn finden vs. Sinn machen", "Realismus vs. Konstruktivismus") ist eine Beziehung zwischen Positionen, kein Knoten. Sie gehört in die Influences als Kante, nicht in die Konzepte. Wenn die räumliche Sichtbarkeit im Quadranten verloren geht, ist das eine Frontend-Aufgabe (Hervorhebung der Critique-Kante), nicht eine Daten-Aufgabe.
 
@@ -195,7 +195,7 @@ Beim Mitschreiben eines neuen Konzept-Knotens immer fragen, in dieser Reihenfolg
 4. Würde es **ohne den Namen existieren**? → phenomenon
 5. Sonst: → concept
 
-Default ist nicht `concept`. Wenn die ersten vier Fragen alle ehrlich mit Nein beantwortet werden, ist concept richtig — sonst nicht.
+Default ist nicht `concept`. Wenn die ersten vier Fragen alle ehrlich mit Nein beantwortet werden, ist concept richtig – sonst nicht.
 
 ---
 
@@ -203,59 +203,59 @@ Default ist nicht `concept`. Wenn die ersten vier Fragen alle ehrlich mit Nein b
 
 Ein Tableau spricht mit **drei Stimmen**, jede mit eigener Funktion. Die Stimmen dürfen nicht ineinanderfallen, sonst entsteht Redundanz.
 
-### `subtitle` — die einladende Stimme
+### `subtitle` – die einladende Stimme
 
-Erscheint in der **Library-Card und im Tableau-Kopf** — die erste Frage, die der Nutzer sieht. Atmosphärisch, einladend. Format: kurze Aussage gefolgt von einer offenen Frage als Echo.
+Erscheint in der **Library-Card und im Tableau-Kopf** – die erste Frage, die der Nutzer sieht. Atmosphärisch, einladend. Format: kurze Aussage gefolgt von einer offenen Frage als Echo.
 
 **Beispiele:**
-- *Das Rätsel im Kopf — Wo wird aus Materie eigentlich Gefühl?* (Geist)
-- *Die Suche nach dem Kern — Wer bist du, wenn du alles weglässt?* (Selbst)
+- *Das Rätsel im Kopf – Wo wird aus Materie eigentlich Gefühl?* (Geist)
+- *Die Suche nach dem Kern – Wer bist du, wenn du alles weglässt?* (Selbst)
 - *Das Gewicht deiner Freiheit.* (Ethik)
 
-### `intro` — die zuspitzende Stimme
+### `intro` – die zuspitzende Stimme
 
 Erscheint im Tableau auf L1 als zweite Eingangsfrage. Direkter, konkrete Du-Frage. Stellt dem Nutzer die Tableau-Spannung am eigenen Leib.
 
 **Beispiele:**
-- *Wenn du Schmerz fühlst — was passiert da eigentlich?* (Geist)
-- *Bin ich ein Kern, den ich freilegen kann — oder ein Muster, das ich gerade bin?* (Selbst)
+- *Wenn du Schmerz fühlst – was passiert da eigentlich?* (Geist)
+- *Bin ich ein Kern, den ich freilegen kann – oder ein Muster, das ich gerade bin?* (Selbst)
 - *Was sollst du tun, wenn es keine einfache Antwort gibt?* (Ethik)
 
-**Wichtig:** Intro nennt **keine Pole**. Sie stellt die Frage, an der sich die Pole abarbeiten — sie nimmt die Synthese nicht vorweg.
+**Wichtig:** Intro nennt **keine Pole**. Sie stellt die Frage, an der sich die Pole abarbeiten – sie nimmt die Synthese nicht vorweg.
 
-### `synthesis` — die landende Stimme
+### `synthesis` – die landende Stimme
 
 Erscheint auf L5. Drei bis fünf Sätze, kuratorisch. Hier wird der Bogen geschlossen, die Spannungen ausformuliert, die Positionen genannt.
 
 ### Du-Konsistenz
 
-Subtitle und Intro sprechen einheitlich **"du"**. Das gewinnt an Direktheit. Die Synthese auf L5 darf anders sprechen (kuratorisch, dritte Person) — aber an der Tür spricht das Tableau persönlich.
+Subtitle und Intro sprechen einheitlich **"du"**. Das gewinnt an Direktheit. Die Synthese auf L5 darf anders sprechen (kuratorisch, dritte Person) – aber an der Tür spricht das Tableau persönlich.
 
 ---
 
-## Tableau / Lectio / Lebensfrage — die drei Formen (Kanon)
+## Tableau / Lectio / Lebensfrage – die drei Formen (Kanon)
 
-> **Kanonische Quelle: `kanon.md`** (Abschnitt „Die drei Formen — Reichweite, Wohnort, Bau-Regel"). Bei Abweichung gilt `kanon.md`. Der Volltext steht hier bewusst mit, damit ein kontextfreier Prüfer-Chat die Definition vor Augen hat — Änderungen aber immer zuerst in `kanon.md`.
+> **Kanonische Quelle: `kanon.md`** (Abschnitt „Die drei Formen – Reichweite, Wohnort, Bau-Regel"). Bei Abweichung gilt `kanon.md`. Der Volltext steht hier bewusst mit, damit ein kontextfreier Prüfer-Chat die Definition vor Augen hat – Änderungen aber immer zuerst in `kanon.md`.
 
 Sanctum kennt drei Formen, in denen Wissen zugänglich wird. Sie sind nicht drei gleichrangige Geschwister nebeneinander, sondern unterscheiden sich in **Reichweite** und **Wohnort**. Wer eine neue Form baut, muss wissen, welche davon er gerade bedient.
 
-### Tableau — die Fläche
+### Tableau – die Fläche
 
-Das Tableau ist die **Karte eines Feldes**. Alle Stimmen eines Themas gleichzeitig sichtbar, räumlich angeordnet, selbstgesteuert begehbar. Es behauptet keinen Pfad — es zeigt das ganze Feld und überlässt dem Nutzer, wohin er geht.
+Das Tableau ist die **Karte eines Feldes**. Alle Stimmen eines Themas gleichzeitig sichtbar, räumlich angeordnet, selbstgesteuert begehbar. Es behauptet keinen Pfad – es zeigt das ganze Feld und überlässt dem Nutzer, wohin er geht.
 
 Das Tableau ist die **Quelle, aus der die beiden anderen Formen schöpfen.** Sowohl Lectio als auch Lebensfrage greifen auf Tableau-Knoten zurück; keine von beiden erzeugt eigenes Stimmen-Material.
 
-### Lectio — Tiefe in *einem* Feld
+### Lectio – Tiefe in *einem* Feld
 
-Die Lectio ist eine **kuratierte Sequenz innerhalb eines einzigen Tableaus.** Sie wohnt im Tableau und verlässt es nie. Sie nimmt 4–8 der vorhandenen Knoten und legt sie in eine Reihenfolge, die einen Bogen trägt — vertikal, ein Feld in die Tiefe.
+Die Lectio ist eine **kuratierte Sequenz innerhalb eines einzigen Tableaus.** Sie wohnt im Tableau und verlässt es nie. Sie nimmt 4–8 der vorhandenen Knoten und legt sie in eine Reihenfolge, die einen Bogen trägt – vertikal, ein Feld in die Tiefe.
 
 - **Reichweite:** ein Tableau.
 - **Wohnort:** *im* Tableau (Discovery im Tableau-Kopf, Route `/lectio/[id]`). **Nicht** als eigene Top-Level-Form in der Bibliothek sichtbar.
 - **Achse:** Tiefe. Sie fragt nicht „was sagen andere Felder dazu", sondern „wie hängt dieses eine Feld in sich zusammen".
 
-### Lebensfrage — Breite *über* Felder
+### Lebensfrage – Breite *über* Felder
 
-Die Lebensfrage ist eine **kuratierte Sammlung quer über mehrere Tableaus.** Sie nimmt eine gelebte Situation („Was tue ich mit Schmerz?", „Wie stelle ich mich zum Tod?") und versammelt dazu Stimmen aus verschiedenen Feldern — horizontal, eine Lebenslage aus mehreren Blickwinkeln beleuchtet.
+Die Lebensfrage ist eine **kuratierte Sammlung quer über mehrere Tableaus.** Sie nimmt eine gelebte Situation („Was tue ich mit Schmerz?", „Wie stelle ich mich zum Tod?") und versammelt dazu Stimmen aus verschiedenen Feldern – horizontal, eine Lebenslage aus mehreren Blickwinkeln beleuchtet.
 
 - **Reichweite:** mehrere Tableaus.
 - **Wohnort:** *neben* der Bibliothek (eigener Bereich, Route `/lebensfragen/[id]`). Sichtbar auf Top-Level, weil sie keinem einzelnen Tableau gehört.
@@ -271,9 +271,9 @@ Die Lebensfrage ist eine **kuratierte Sammlung quer über mehrere Tableaus.** Si
 
 Lectio ist **Tiefe in einem Feld**, Lebensfrage ist **Breite über Felder**, Tableau ist die **Fläche, aus der beide schöpfen.** Diese drei Sätze sind die kürzeste tragfähige Fassung des Kanons.
 
-Daraus folgt die Bau-Regel: Eine Lectio darf nie Tableau-Grenzen überschreiten (sonst wird sie zur Lebensfrage), und eine Lebensfrage muss mindestens zwei Tableaus berühren (sonst ist sie eine Lectio mit falschem Wohnort). Wer beim Bau merkt, dass eine Lectio nach einem fremden Feld greift, baut in Wahrheit eine Lebensfrage — und umgekehrt.
+Daraus folgt die Bau-Regel: Eine Lectio darf nie Tableau-Grenzen überschreiten (sonst wird sie zur Lebensfrage), und eine Lebensfrage muss mindestens zwei Tableaus berühren (sonst ist sie eine Lectio mit falschem Wohnort). Wer beim Bau merkt, dass eine Lectio nach einem fremden Feld greift, baut in Wahrheit eine Lebensfrage – und umgekehrt.
 
-Für den Tableau-Bau heißt das konkret: Ein im Mild-Modus gebautes Tableau ist die **Fläche**. Beim Bau ist nicht zu planen, welche Lectios oder Lebensfragen später daraus schöpfen — das Tableau muss als ganzes Feld tragen, nicht als Vorrat für spätere Pfade. Umgekehrt gilt die schon dokumentierte Disziplin: Knoten bewusst lebensweltlich anschlussfähig schreiben (vgl. `lectio_brief`- und Reserve-Brief-Konvention), damit Lectio und Lebensfrage später ohne Nachbau andocken können. Die Fläche zuerst — die Pfade finden sich danach.
+Für den Tableau-Bau heisst das konkret: Ein im Mild-Modus gebautes Tableau ist die **Fläche**. Beim Bau ist nicht zu planen, welche Lectios oder Lebensfragen später daraus schöpfen – das Tableau muss als ganzes Feld tragen, nicht als Vorrat für spätere Pfade. Umgekehrt gilt die schon dokumentierte Disziplin: Knoten bewusst lebensweltlich anschlussfähig schreiben (vgl. `lectio_brief`- und Reserve-Brief-Konvention), damit Lectio und Lebensfrage später ohne Nachbau andocken können. Die Fläche zuerst – die Pfade finden sich danach.
 
 ---
 
@@ -283,7 +283,7 @@ Für den Tableau-Bau heißt das konkret: Ein im Mild-Modus gebautes Tableau ist 
 
 - **Chat A (Architekt):** Baut das Tableau auf Basis dieses Prompts plus Anker-Klärung mit dem Kurator. Liefert JSON, Begleitnotiz und kuratorische Entscheidungen.
 
-- **Chat B (Prüfer):** Externer Chat, **ohne Projektwissen verknüpft** (sonst wird er zum Inquisitor). Bekommt das fertige JSON, diesen Mild-Prompt und ein bestehendes Tableau als Stilreferenz. Prüft gegen die drei Mild-Prüffragen — knapp, ohne Vollständigkeitsreflex.
+- **Chat B (Prüfer):** Externer Chat, **ohne Projektwissen verknüpft** (sonst wird er zum Inquisitor). Bekommt das fertige JSON, diesen Mild-Prompt und ein bestehendes Tableau als Stilreferenz. Prüft gegen die drei Mild-Prüffragen – knapp, ohne Vollständigkeitsreflex.
 
 - **Architekt arbeitet Befunde ein.**
 
@@ -339,17 +339,17 @@ Knoten haben `x` und `y`-Koordinaten von 0 bis 100. Die Konvention ist **mathema
 - **x = 0** ist links, **x = 100** ist rechts
 - **y = 0** ist **unten** am bottom-Pol der Y-Achse, **y = 100** ist **oben** am top-Pol
 
-Das heißt: Wenn die Y-Achse als `axisY: { top: "Spirituell", bottom: "Wissenschaftlich" }` definiert ist, dann sitzen Knoten mit hohem y (z.B. 88) **oben am spirituellen Pol**, Knoten mit niedrigem y (z.B. 22) **unten am wissenschaftlichen Pol**.
+Das heisst: Wenn die Y-Achse als `axisY: { top: "Spirituell", bottom: "Wissenschaftlich" }` definiert ist, dann sitzen Knoten mit hohem y (z.B. 88) **oben am spirituellen Pol**, Knoten mit niedrigem y (z.B. 22) **unten am wissenschaftlichen Pol**.
 
 **Warnung:** Bei intuitivem Bau gibt es die Versuchung, hohe Y-Werte mit "tieferer/ernsthafterer Position" zu assoziieren und sie deshalb dem dramatischeren Pol zuzuordnen. Das ist falsch. Y folgt der Achsen-Definition, nicht der Dramaturgie.
 
 ### Plausibilitäts-Pflichttest nach Koordinaten-Setzung
 
-Nach dem Setzen aller Koordinaten — und bevor die Begleitnotiz geschrieben wird — folgenden Test durchführen:
+Nach dem Setzen aller Koordinaten – und bevor die Begleitnotiz geschrieben wird – folgenden Test durchführen:
 
 1. Drei **Anker-Knoten** wählen, deren Position in jedem der vier Pole eindeutig sein muss.
 2. Für jeden Anker laut sagen: *"X ist am [Pol]-Pol der [X|Y]-Achse, also müsste seine [x|y]-Koordinate [niedrig | hoch] sein."*
-3. Im JSON nachschauen — wenn auch nur ein Anker auf der falschen Seite sitzt: **systematischer Inversionsverdacht**. Alle anderen Knoten ebenfalls prüfen.
+3. Im JSON nachschauen – wenn auch nur ein Anker auf der falschen Seite sitzt: **systematischer Inversionsverdacht**. Alle anderen Knoten ebenfalls prüfen.
 
 Konkretes Beispiel für ein Existenzialismus-Tableau (Y: Entwurf oben ↔ Geworfenheit unten):
 - Sartre ist *der* Entwurfs-Denker → y muss HOCH sein
@@ -400,10 +400,10 @@ Begleitnotizen sind nicht für die App, sondern für die kuratorische Selbstverg
 
 ## Was Mild nicht ist
 
-- **Nicht "abgespecktes Voll"** — Mild ist eine eigene Methode mit eigenen Erfolgsbedingungen.
-- **Nicht "ohne Prüfung"** — Mild hat eine Runde milde Selbstprüfung gegen die drei Prüffragen.
-- **Nicht "schnell und schlampig"** — Mild verlangt sorgfältige Anker-Klärung, mehrstufige Texte, einheitliche Annotation. Sie ist nicht weniger Arbeit als die volle Schleife, sondern anders fokussiert.
-- **Nicht "ohne Tooltips"** — Mild-Tableaus haben Tooltips über alle fünf Stufen, sparsam aber gezielt.
+- **Nicht "abgespecktes Voll"** – Mild ist eine eigene Methode mit eigenen Erfolgsbedingungen.
+- **Nicht "ohne Prüfung"** – Mild hat eine Runde milde Selbstprüfung gegen die drei Prüffragen.
+- **Nicht "schnell und schlampig"** – Mild verlangt sorgfältige Anker-Klärung, mehrstufige Texte, einheitliche Annotation. Sie ist nicht weniger Arbeit als die volle Schleife, sondern anders fokussiert.
+- **Nicht "ohne Tooltips"** – Mild-Tableaus haben Tooltips über alle fünf Stufen, sparsam aber gezielt.
 
 ---
 

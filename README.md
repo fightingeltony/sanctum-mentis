@@ -1,19 +1,19 @@
 # Sanctum Mentis
 
-Lern-Companion für Philosophie und verwandte Disziplinen. Ein Komplexitäts-Slider (1–5) steuert, wie tief jede Antwort ausfällt — von der Einsteigerkurzfassung bis zur fachlichen Synthese.
+Lern-Companion für Philosophie und verwandte Disziplinen. Ein Komplexitäts-Slider (1–5) steuert, wie tief jede Antwort ausfällt – von der Einsteigerkurzfassung bis zur fachlichen Synthese.
 
 ## Aufbau: Tableaus, Lectios, Lebensfragen
 
 Inhalte sind in drei Formen organisiert (begriffliche Definition in `kanon.md`):
 
-- **Tableau** — die Karte eines Feldes: alle Stimmen einer großen Frage gleichzeitig, räumlich, selbstgesteuert. Jedes Tableau ist ein JSON-Datensatz in `data/`.
-- **Lectio** — ein kuratierter Pfad *durch ein* Tableau (4–8 Stationen), erreichbar über „Geführte Pfade" im Tableau-Kopf (Route `/lectio/[id]`).
-- **Lebensfrage** — eine Sammlung quer *über mehrere* Tableaus zu einer gelebten Lage (Route `/lebensfragen/[id]`).
+- **Tableau** – die Karte eines Feldes: alle Stimmen einer grossen Frage gleichzeitig, räumlich, selbstgesteuert. Jedes Tableau ist ein JSON-Datensatz in `data/`.
+- **Lectio** – ein kuratierter Pfad *durch ein* Tableau (4–8 Stationen), erreichbar über „Geführte Pfade" im Tableau-Kopf (Route `/lectio/[id]`).
+- **Lebensfrage** – eine Sammlung quer *über mehrere* Tableaus zu einer gelebten Lage (Route `/lebensfragen/[id]`).
 
-## Ein Tableau betreten — zwei Ansichten
+## Ein Tableau betreten – zwei Ansichten
 
-1. **Denker** — die Stimmen, gruppiert nach Schule, mit Filter und Such-Palette (Cmd+K).
-2. **Sternkarte** — die Stimmen als Sterne, Einflüsse als Linien, Konzepte im Akkordeon bzw. als Marker, Schulen als Morph-Gruppen. (Die früher getrennten Sichten „Einflüsse" und „Konzepte" sind hier aufgegangen.)
+1. **Denker** – die Stimmen, gruppiert nach Schule, mit Filter und Such-Palette (Cmd+K).
+2. **Sternkarte** – die Stimmen als Sterne, Einflüsse als Linien, Konzepte im Akkordeon bzw. als Marker, Schulen als Morph-Gruppen. (Die früher getrennten Sichten „Einflüsse" und „Konzepte" sind hier aufgegangen.)
 
 Jedes Element trägt mehrere Versions-Strings (Level 1 bis Level 5). Die Engine wählt zur Laufzeit die höchste, die der eingestellte Level zulässt.
 
@@ -33,7 +33,7 @@ Routen-Wechsel (Bibliothek → Tableau → Lectio …) bekommen einen kurzen Cro
 - **Was:** Reacts experimentelle `<ViewTransition>`-Boundary um die Routen-Children,
   aktiviert durch das Next-Flag `experimental.viewTransition` in `next.config.ts`.
 - **Wo:** `src/components/RouteViewTransition.tsx`, eingebunden in `src/app/layout.tsx`.
-  Nur Routen-Wechsel — die Sternkarte behält ihre eigenen Übergänge.
+  Nur Routen-Wechsel – die Sternkarte behält ihre eigenen Übergänge.
 - **Abschalten:** Flag in `next.config.ts` entfernen und in `layout.tsx` den
   `<RouteViewTransition>`-Wrapper durch `{children}` ersetzen. Keine weiteren
   Abhängigkeiten; danach verhält sich die App exakt wie vorher.

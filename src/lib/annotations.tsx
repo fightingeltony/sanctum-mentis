@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 
 function tryInlineSplit(content: string): { term: string; definition: string } | null {
-  // Colon first — explicit [[term:definition]] format; em-dash may appear inside the definition
+  // Colon first – explicit [[term:definition]] format; em-dash may appear inside the definition
   const colonIdx = content.indexOf(':')
   if (colonIdx !== -1) {
     const candidate = content.slice(0, colonIdx).trim()
@@ -11,12 +11,15 @@ function tryInlineSplit(content: string): { term: string; definition: string } |
       return { term: candidate, definition: content.slice(colonIdx + 1).trim() }
     }
   }
-  // Em-dash fallback — for annotations without a colon separator
-  const dashIdx = content.indexOf(' — ')
-  if (dashIdx !== -1) {
-    const candidate = content.slice(0, dashIdx).trim()
-    if (candidate.split(/\s+/).length <= 6) {
-      return { term: candidate, definition: content.slice(dashIdx + 3).trim() }
+  // Gedankenstrich-Fallback – für Annotationen ohne Doppelpunkt-Separator.
+  // Halbgeviertstrich ist die Norm; Geviertstrich bleibt als Altbestand-Schutz.
+  for (const sep of [' – ', ' — ']) {
+    const dashIdx = content.indexOf(sep)
+    if (dashIdx !== -1) {
+      const candidate = content.slice(0, dashIdx).trim()
+      if (candidate.split(/\s+/).length <= 6) {
+        return { term: candidate, definition: content.slice(dashIdx + sep.length).trim() }
+      }
     }
   }
   return null
@@ -112,14 +115,14 @@ export function Annotated({ text }: { text: string; level?: number }) {
 
     const content = part.slice(2, -2)
 
-    // Format A: [[term: definition]] or [[term — definition]] — term inside brackets
+    // Format A: [[term: definition]] or [[term – definition]] – term inside brackets
     const split = tryInlineSplit(content)
     if (split) {
       nodes.push(<AnnotationTooltip key={i} term={split.term} definition={split.definition} />)
       return
     }
 
-    // Format B: term [[definition]] — term is the last word before [[]] in the text
+    // Format B: term [[definition]] – term is the last word before [[]] in the text
     const prev = nodes[nodes.length - 1]
     if (typeof prev === 'string' && prev.trim().length > 0) {
       const trimmed = prev.trimEnd()

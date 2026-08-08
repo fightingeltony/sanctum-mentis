@@ -1,18 +1,18 @@
-# Hard-Mode — Sanctum-Standard für akademisch volle Tableau-Bauten
+# Hard-Mode – Sanctum-Standard für akademisch volle Tableau-Bauten
 
-**Status:** Konvention, gültig seit v2-Etappe (Mai 2026). **Ungetestet — nie in echtem Tableau-Bau verwendet.**
-**Anwendungsbereich:** Tableau-Bauten, bei denen akademische Vollständigkeit als Erfolgsmaßstab gelten muss.
+**Status:** Konvention, gültig seit v2-Etappe (Mai 2026). **Ungetestet – nie in echtem Tableau-Bau verwendet.**
+**Anwendungsbereich:** Tableau-Bauten, bei denen akademische Vollständigkeit als Erfolgsmassstab gelten muss.
 **Default:** Nein. Default ist Mild (`mild-mode.md`).
 
 ---
 
-## Anwendungs-Gatekeeper — drei Tests vor Verwendung
+## Anwendungs-Gatekeeper – drei Tests vor Verwendung
 
 Bevor du Hard-Mode anwendest, prüfe drei Tests. **Alle drei müssen positiv sein**, sonst gehört das Tableau in den Mild-Modus.
 
 ### Test 1: Akademische Erwartung
 
-Würde ein Fachpublikum dieses Tableau auf Vollständigkeit prüfen und akademische Lücken als Schwäche werten? Beispiele: Erkenntnistheorie, Wissenschaftstheorie, Logik, Sprachphilosophie. Gegenbeispiele: Selbst-Findung, Liebe, Achtsamkeit — dort wäre Vollständigkeit nicht die Frage.
+Würde ein Fachpublikum dieses Tableau auf Vollständigkeit prüfen und akademische Lücken als Schwäche werten? Beispiele: Erkenntnistheorie, Wissenschaftstheorie, Logik, Sprachphilosophie. Gegenbeispiele: Selbst-Findung, Liebe, Achtsamkeit – dort wäre Vollständigkeit nicht die Frage.
 
 ### Test 2: Lebensweltliche Stimme entbehrlich
 
@@ -22,7 +22,7 @@ Klassischer Misserfolg: Wenn eine "Landkarte des Selbst" im Hard-Modus gebaut w�
 
 ### Test 3: Anwendungs-Begründung schreibbar
 
-Kannst du in einem Satz begründen, warum dieses Tableau Hard-Mode statt Mild verlangt? Wenn die Begründung nicht aufschreibbar ist, ist sie nicht vorhanden — dann Mild.
+Kannst du in einem Satz begründen, warum dieses Tableau Hard-Mode statt Mild verlangt? Wenn die Begründung nicht aufschreibbar ist, ist sie nicht vorhanden – dann Mild.
 
 **Wenn alle drei Tests positiv:** weiter mit Hard-Mode. **Wenn auch nur einer negativ:** zurück zu `mild-mode.md`.
 
@@ -33,10 +33,10 @@ Kannst du in einem Satz begründen, warum dieses Tableau Hard-Mode statt Mild ve
 Hard-Mode ist die **bewusst harte Methode** für akademisch sensible Tableaus. Er steht zwischen Mild und reiner Inquisitor-Logik:
 
 - **Vollständigkeitsanspruch ist Erfolgsbedingung**, nicht Risiko
-- **Adversarielle Tonalität ist erlaubt** — bei Prüfung und bei Synthese
-- **Größere Datensätze** (16–22 Denker, 12–18 Konzepte, 20+ Influences)
+- **Adversarielle Tonalität ist erlaubt** – bei Prüfung und bei Synthese
+- **Grössere Datensätze** (16–22 Denker, 12–18 Konzepte, 20+ Influences)
 - **Kategorien-Strenge bei Konzepttypen** (Axiom, Theorie, Konzept, Phänomen, Methode)
-- **Stilistische Schärfe vor pädagogischer Wärme** — präzise Sprache, nicht zugängliche
+- **Stilistische Schärfe vor pädagogischer Wärme** – präzise Sprache, nicht zugängliche
 
 Hard-Mode produziert Tableaus, die als wissenschaftliche Referenz dienen können. Er produziert nicht zwingend Tableaus, die lebensweltlich tragen.
 
@@ -44,7 +44,7 @@ Hard-Mode produziert Tableaus, die als wissenschaftliche Referenz dienen können
 
 ## Vier Prüfsteine
 
-Beim Bau und beim Prüfen eines Hard-Mode-Tableaus stelle dich diesen vier Prüfsteinen — strenger und expliziter als die drei Mild-Prüffragen:
+Beim Bau und beim Prüfen eines Hard-Mode-Tableaus stelle dich diesen vier Prüfsteinen – strenger und expliziter als die drei Mild-Prüffragen:
 
 ### 1. Reduktionismus
 
@@ -92,13 +92,13 @@ Hard-Mode-Bewertungen und -Synthesen folgen diesen expliziten Regeln:
 
 - **Keine Höflichkeitsformeln.** "Insgesamt eine starke Arbeit, aber..." ist verboten. Direkt zur Sache.
 - **Wenn ein Punkt stark ist, sage warum, nicht dass.** "Die Wittgenstein-Verortung trägt, weil sie den späten Wittgenstein und das Privatsprachenargument zusammenführt." Nicht: "Wittgenstein ist gut gemacht."
-- **Wenn fünf Schwächen vorhanden sind, nenne fünf — keine künstliche Balance.** Hard-Mode ist nicht diplomatisch.
+- **Wenn fünf Schwächen vorhanden sind, nenne fünf – keine künstliche Balance.** Hard-Mode ist nicht diplomatisch.
 - **Pauschales Lob ist verboten.** "Sehr akademisch fundiert" sagt nichts. "Die Trennung von type-token und token-token-Identität bei Davidson ist sauber, aber die Anomalie-These wird im L3-Text nicht differenziert" sagt etwas.
-- **Vermeide Floskeln wie "Es wäre wünschenswert..." oder "Man könnte erwägen..."** — entweder etwas ist erforderlich, dann sag es; oder es ist Geschmackssache, dann sag das auch.
+- **Vermeide Floskeln wie "Es wäre wünschenswert..." oder "Man könnte erwägen..."** – entweder etwas ist erforderlich, dann sag es; oder es ist Geschmackssache, dann sag das auch.
 
 ---
 
-## Größenrichtwerte
+## Grössenrichtwerte
 
 | Element | Richtwert Mild | Richtwert Hard |
 |---|---|---|
@@ -107,7 +107,7 @@ Hard-Mode-Bewertungen und -Synthesen folgen diesen expliziten Regeln:
 | Schulen | 6–10 | 10–14 |
 | Influences | 12–18 | 20–28 |
 
-Hard-Mode-Tableaus sind größer, weil sie die Komplexität des Feldes vollständig repräsentieren müssen. Wenn ein Hard-Mode-Tableau unter 16 Denker fällt, ist es vermutlich kein Hard-Mode-Material — dann zurück zu Mild.
+Hard-Mode-Tableaus sind grösser, weil sie die Komplexität des Feldes vollständig repräsentieren müssen. Wenn ein Hard-Mode-Tableau unter 16 Denker fällt, ist es vermutlich kein Hard-Mode-Material – dann zurück zu Mild.
 
 ---
 
@@ -117,29 +117,29 @@ Die meisten Sanctum-Konventionen gelten auch im Hard-Mode unverändert. Das sind
 
 ### Konzept-Typologie
 
-Auch im Hard-Mode gilt die fünf-glyphige Typologie (`axiom`, `theory`, `concept`, `phenomenon`, `method`) — siehe `mild-mode.md` Sektion "Konzept-Typologie". Im Hard-Mode tendenziell **strenger** durchgesetzt, weil Hard-Mode-Tableaus oft viele Konzepte und mehrere `axiom`-/`method`-Knoten gleichzeitig haben. Die Differenzierung muss visuell tragen.
+Auch im Hard-Mode gilt die fünf-glyphige Typologie (`axiom`, `theory`, `concept`, `phenomenon`, `method`) – siehe `mild-mode.md` Sektion "Konzept-Typologie". Im Hard-Mode tendenziell **strenger** durchgesetzt, weil Hard-Mode-Tableaus oft viele Konzepte und mehrere `axiom`-/`method`-Knoten gleichzeitig haben. Die Differenzierung muss visuell tragen.
 
 ### Koordinaten-Konvention und Plausibilitätstest
 
-Auch im Hard-Mode gilt die Y-Konvention (y=100 oben, y=0 unten) und der Pflicht-Plausibilitätstest mit drei Anker-Knoten nach Koordinaten-Setzung — siehe `mild-mode.md` Sektion "Koordinaten-Konvention". Im Hard-Mode mit mehr Knoten ist der Test eher noch wichtiger, weil Inversionsbugs schwerer rückgängig zu machen sind.
+Auch im Hard-Mode gilt die Y-Konvention (y=100 oben, y=0 unten) und der Pflicht-Plausibilitätstest mit drei Anker-Knoten nach Koordinaten-Setzung – siehe `mild-mode.md` Sektion "Koordinaten-Konvention". Im Hard-Mode mit mehr Knoten ist der Test eher noch wichtiger, weil Inversionsbugs schwerer rückgängig zu machen sind.
 
-### Annotations-Syntax — `[[Begriff:Erklärung]]`
+### Annotations-Syntax – `[[Begriff:Erklärung]]`
 
-Einheitliche Form mit Doppelpunkt-Trenner. Im Hard-Mode tendenziell **mehr** Tooltips, weil mehr Fachbegriffe vorkommen — aber das Sparsamkeitsprinzip bleibt: nur dort, wo der Begriff den Leser ohne Erklärung ausschließen würde.
+Einheitliche Form mit Doppelpunkt-Trenner. Im Hard-Mode tendenziell **mehr** Tooltips, weil mehr Fachbegriffe vorkommen – aber das Sparsamkeitsprinzip bleibt: nur dort, wo der Begriff den Leser ohne Erklärung ausschliessen würde.
 
 ### Mehrstufige Texte
 
 Auch im Hard-Mode bekommen Hubs drei Stufen, reguläre Knoten zwei, Solo-L5-Knoten eine. Die Methodendisziplin der Mehrstufigkeit ist nicht Mild-spezifisch.
 
-**Tonalität der höheren Stufen im Hard-Mode:** explizit *tableau-positionierend* und *kritisch-kontextualisierend*. L3–L5-Texte sollen die akademische Position des Denkers im Streit des Feldes präzise verorten — wer wird angegriffen, wer wird verteidigt, welche systematische Position wird besetzt.
+**Tonalität der höheren Stufen im Hard-Mode:** explizit *tableau-positionierend* und *kritisch-kontextualisierend*. L3–L5-Texte sollen die akademische Position des Denkers im Streit des Feldes präzise verorten – wer wird angegriffen, wer wird verteidigt, welche systematische Position wird besetzt.
 
 ### Stimm-Hierarchie
 
 Subtitle (einladend), Intro (zuspitzend), Synthese (landend) gelten auch im Hard-Mode. Aber:
 
 - **Subtitle bleibt lebensweltlich.** Auch akademisch sensible Tableaus brauchen einen Türgriff, an dem nicht-akademische Nutzer ankommen.
-- **Intro kann strenger sein.** Du-Form, aber thematisch zugespitzt — *"Wenn alles, was du weißt, durch Begriffe gemacht ist — wie kannst du die Begriffe selbst prüfen?"*
-- **Synthese darf adversariell sein.** Statt "drei Spannungen halten dieses Tableau zusammen" auch: "drei Streitlinien, die nicht aufgelöst werden — und zwei Positionen, die das Feld bis heute spalten."
+- **Intro kann strenger sein.** Du-Form, aber thematisch zugespitzt – *"Wenn alles, was du weisst, durch Begriffe gemacht ist – wie kannst du die Begriffe selbst prüfen?"*
+- **Synthese darf adversariell sein.** Statt "drei Spannungen halten dieses Tableau zusammen" auch: "drei Streitlinien, die nicht aufgelöst werden – und zwei Positionen, die das Feld bis heute spalten."
 
 ### Du-Konsistenz
 
@@ -160,10 +160,10 @@ Identisch zum Mild-Modus. Siehe `mild-mode.md` Abschnitt "Schema-Felder" und "Va
 Wie beim Mild-Modus empfohlen: getrennte Chats für Architekt und Prüfer. Beim Hard-Mode aber mit anderer Prüferrolle:
 
 - **Architekt-Chat:** Baut das Tableau auf Basis dieses Prompts.
-- **Inquisitor-Chat:** Externer Chat, **ohne Projektwissen verknüpft**. Bekommt JSON und diesen Prompt. Prüft gegen die vier Prüfsteine — adversariell, ohne Höflichkeitspuffer.
-- **Architekt arbeitet die Befunde ein** — oder verteidigt explizit, warum ein Inquisitor-Befund nicht umgesetzt wird.
+- **Inquisitor-Chat:** Externer Chat, **ohne Projektwissen verknüpft**. Bekommt JSON und diesen Prompt. Prüft gegen die vier Prüfsteine – adversariell, ohne Höflichkeitspuffer.
+- **Architekt arbeitet die Befunde ein** – oder verteidigt explizit, warum ein Inquisitor-Befund nicht umgesetzt wird.
 
-**Wichtig:** Der Inquisitor wird gegen alle vier Prüfsteine prüfen — auch wenn das bedeutet, lange Listen von Schwächen zu produzieren. Das ist gewollt. Architekt muss aushalten.
+**Wichtig:** Der Inquisitor wird gegen alle vier Prüfsteine prüfen – auch wenn das bedeutet, lange Listen von Schwächen zu produzieren. Das ist gewollt. Architekt muss aushalten.
 
 ---
 
@@ -175,7 +175,7 @@ Beim Start eines Hard-Mode-Architekt-Chats:
 Du baust ein Sanctum-Mentis-Tableau im Hard-Mode. Folge `prompts/hard-mode.md`.
 Anker: [Hier Lebensfrage und akademischer Anker formulieren]
 Achsen-Vorschlag: [Hier X- und Y-Achse benennen]
-Größe: 16–22 Denker, 12–18 Konzepte, 20+ Influences.
+Grösse: 16–22 Denker, 12–18 Konzepte, 20+ Influences.
 Liefere: vollständiges JSON, Begleitnotiz, Versionshistorie.
 ```
 
@@ -207,11 +207,11 @@ welche Felder zu ändern, welche Denker zu ergänzen oder zu streichen, welche
 Kanten umzudeklarieren sind.
 
 Vermeide jede Höflichkeitsformel und jedes pauschale Lob. Wenn ein Punkt stark
-ist, sag warum, nicht dass. Wenn fünf Schwächen vorhanden sind, nenne fünf —
+ist, sag warum, nicht dass. Wenn fünf Schwächen vorhanden sind, nenne fünf –
 keine künstliche Balance.
 ```
 
-Dieser Prompt ist der Inquisitor-Prompt im engeren Sinne. Er funktioniert auch standalone, ohne dass der Inquisitor diese ganze Datei kennen muss — er enthält alles Notwendige in sich.
+Dieser Prompt ist der Inquisitor-Prompt im engeren Sinne. Er funktioniert auch standalone, ohne dass der Inquisitor diese ganze Datei kennen muss – er enthält alles Notwendige in sich.
 
 ---
 
@@ -219,10 +219,10 @@ Dieser Prompt ist der Inquisitor-Prompt im engeren Sinne. Er funktioniert auch s
 
 Hard-Mode-Tableaus brauchen eine ausführlichere Begleitnotiz als Mild-Tableaus. Zusätzlich zur Mild-Standard-Notiz:
 
-1. **Anwendungs-Gatekeeper-Begründung** — warum dieses Tableau Hard-Mode statt Mild verlangt
-2. **Inquisitor-Lauf dokumentieren** — welche Befunde wurden übernommen, welche zurückgewiesen, mit Begründung
-3. **Blinde-Flecken-Diagnose** — welche akademisch wichtigen Positionen wurden bewusst nicht aufgenommen, und warum
-4. **Reduktionismus-Diagnose** — welche Verortungen sind nicht zwingend, und warum die getroffene Wahl trotzdem trägt
+1. **Anwendungs-Gatekeeper-Begründung** – warum dieses Tableau Hard-Mode statt Mild verlangt
+2. **Inquisitor-Lauf dokumentieren** – welche Befunde wurden übernommen, welche zurückgewiesen, mit Begründung
+3. **Blinde-Flecken-Diagnose** – welche akademisch wichtigen Positionen wurden bewusst nicht aufgenommen, und warum
+4. **Reduktionismus-Diagnose** – welche Verortungen sind nicht zwingend, und warum die getroffene Wahl trotzdem trägt
 
 Diese Notizen sind nicht für die App, sondern für die spätere akademische Verteidigung des Tableaus.
 
@@ -230,10 +230,10 @@ Diese Notizen sind nicht für die App, sondern für die spätere akademische Ver
 
 ## Was Hard-Mode nicht ist
 
-- **Nicht "Mild mit mehr Knoten"** — Hard-Mode hat eigene Erfolgsbedingungen und eine eigene Tonalität.
-- **Nicht "akademische Vollständigkeit als Selbstzweck"** — auch im Hard-Mode bleibt Verstehbarkeit ein Ziel. Vollständigkeit, die unverstehbar wird, ist gescheitert.
-- **Nicht "ohne lebensweltlichen Anker"** — auch Hard-Mode-Tableaus haben Subtitle und Intro im Du-Ton. Was anders ist, ist die innere Tiefe, nicht die Eingangstür.
-- **Nicht "ohne Du-Konsistenz"** — siehe oben. Sanctum-Stimme bleibt erhalten.
+- **Nicht "Mild mit mehr Knoten"** – Hard-Mode hat eigene Erfolgsbedingungen und eine eigene Tonalität.
+- **Nicht "akademische Vollständigkeit als Selbstzweck"** – auch im Hard-Mode bleibt Verstehbarkeit ein Ziel. Vollständigkeit, die unverstehbar wird, ist gescheitert.
+- **Nicht "ohne lebensweltlichen Anker"** – auch Hard-Mode-Tableaus haben Subtitle und Intro im Du-Ton. Was anders ist, ist die innere Tiefe, nicht die Eingangstür.
+- **Nicht "ohne Du-Konsistenz"** – siehe oben. Sanctum-Stimme bleibt erhalten.
 
 ---
 
@@ -252,9 +252,9 @@ Aber: Auf L1 sollten sich Hard- und Mild-Tableaus nicht stark unterscheiden. Die
 
 ## Wann nach dem Hard-Mode wieder zu Mild zurückkehren
 
-Wenn ein Tableau-Thema sich beim Bau als anders erweist als bei der Anker-Klärung gedacht — also wenn die Tests des Anwendungs-Gatekeepers im Bauprozess plötzlich nicht mehr alle positiv ausfallen — gehört das Tableau zurück in den Mild-Modus.
+Wenn ein Tableau-Thema sich beim Bau als anders erweist als bei der Anker-Klärung gedacht – also wenn die Tests des Anwendungs-Gatekeepers im Bauprozess plötzlich nicht mehr alle positiv ausfallen – gehört das Tableau zurück in den Mild-Modus.
 
-**Beispiel:** Du beginnst ein Hard-Mode-Tableau zu "Wissenschaftstheorie", merkst aber, dass die zentralen Stimmen (Popper, Kuhn, Feyerabend, Lakatos) sich am besten in einer mittleren Schärfe entfalten — ohne erzwungene Vollständigkeit aller Logik-Positivisten. Dann zurück zu Mild und das Tableau auf 12 Denker schließen.
+**Beispiel:** Du beginnst ein Hard-Mode-Tableau zu "Wissenschaftstheorie", merkst aber, dass die zentralen Stimmen (Popper, Kuhn, Feyerabend, Lakatos) sich am besten in einer mittleren Schärfe entfalten – ohne erzwungene Vollständigkeit aller Logik-Positivisten. Dann zurück zu Mild und das Tableau auf 12 Denker schliessen.
 
 **Es ist kein Versagen, vom Hard-Mode in den Mild-Mode zu wechseln.** Es ist Methoden-Disziplin.
 
@@ -262,7 +262,7 @@ Wenn ein Tableau-Thema sich beim Bau als anders erweist als bei der Anker-Kläru
 
 ## Versionshistorie
 
-- **v1** (19.5.26): Erste Fassung, basierend auf dem etablierten Inquisitor-Prompt aus dem Backlog. Anwendungs-Gatekeeper, vier Prüfsteine, Anti-Höflichkeits-Klauseln, Größenrichtwerte. Ergänzt um die strukturellen Konventionen aus der v2-Etappe (Annotations-Syntax, Mehrstufigkeit, Stimm-Hierarchie), die mit dem Mild-Modus geteilt werden.
+- **v1** (19.5.26): Erste Fassung, basierend auf dem etablierten Inquisitor-Prompt aus dem Backlog. Anwendungs-Gatekeeper, vier Prüfsteine, Anti-Höflichkeits-Klauseln, Grössenrichtwerte. Ergänzt um die strukturellen Konventionen aus der v2-Etappe (Annotations-Syntax, Mehrstufigkeit, Stimm-Hierarchie), die mit dem Mild-Modus geteilt werden.
 
 ---
 
@@ -273,6 +273,6 @@ Dieser Prompt und `mild-mode.md` sind **zwei Modi mit klarer Hierarchie**, nicht
 - **Default ist Mild.**
 - **Hard-Mode hat Begründungspflicht** durch den Anwendungs-Gatekeeper.
 - **Strukturelle Konventionen sind identisch** (Schema, Annotations-Syntax, Stimm-Hierarchie, Du-Konsistenz).
-- **Unterschied liegt in:** Größenanspruch, Tonalität der Prüfung, Vollständigkeitsmaßstab, adversarielle Erlaubnis.
+- **Unterschied liegt in:** Grössenanspruch, Tonalität der Prüfung, Vollständigkeitsmassstab, adversarielle Erlaubnis.
 
-Wer Hard-Mode kennt, muss auch Mild kennen. Wer nur Mild kennt, kann ohne Hard-Mode arbeiten — und tut das in den meisten Fällen.
+Wer Hard-Mode kennt, muss auch Mild kennen. Wer nur Mild kennt, kann ohne Hard-Mode arbeiten – und tut das in den meisten Fällen.

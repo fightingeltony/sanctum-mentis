@@ -191,7 +191,7 @@ export default function CommandPalette({ open, onClose }: Props) {
                       </span>
                       {entry.firstLevel !== undefined && (
                         <span className="font-ui text-[10px] tracking-[0.10em] text-fg-faint">
-                          — L{entry.firstLevel}
+                          – L{entry.firstLevel}
                         </span>
                       )}
                     </div>

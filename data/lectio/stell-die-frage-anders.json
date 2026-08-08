@@ -7,7 +7,7 @@
   "path_type": "destruktiv-aufbauend",
   "level": 3,
   "estimated_minutes": 15,
-  "intro": "Es ist die vielleicht älteste Frage über uns selbst: Ist der Mensch im Grunde gut – oder gefährlich? Fast jeder trägt eine stille Antwort darauf mit sich, und sie färbt, wie er anderen begegnet. Diese Lectio nimmt drei große Antworten ernst, die alle behaupten, den Grund des Menschen zu kennen – und führt dich dann an eine Stelle, an der dieser Grund zu wanken beginnt. Am Ende steht kein Sieger, sondern ein Denker, der aufhört zu fragen, was im Menschen angelegt ist, und anfängt zu fragen, was er aus sich macht.",
+  "intro": "Es ist die vielleicht älteste Frage über uns selbst: Ist der Mensch im Grunde gut – oder gefährlich? Fast jeder trägt eine stille Antwort darauf mit sich, und sie färbt, wie er anderen begegnet. Diese Lectio nimmt drei grosse Antworten ernst, die alle behaupten, den Grund des Menschen zu kennen – und führt dich dann an eine Stelle, an der dieser Grund zu wanken beginnt. Am Ende steht kein Sieger, sondern ein Denker, der aufhört zu fragen, was im Menschen angelegt ist, und anfängt zu fragen, was er aus sich macht.",
   "path": [
     {
       "nodeId": "mengzi",
@@ -27,7 +27,7 @@
     {
       "nodeId": "arendt",
       "nodeType": "thinker",
-      "transition": "Was Arendt im Gerichtssaal dachte, hat die Sozialpsychologie zur selben Zeit im Labor gemessen: Gewöhnliche Menschen verabreichten auf Anweisung scheinbar gefährliche Stromstöße, gewöhnliche Studenten eskalierten in zugewiesenen Rollen. Wenn dieselbe Anlage zum Täter und zum Helfer führt, je nach Lage, dann verschiebt sich der ganze Grund der Frage – weg von dem, was im Menschen sitzt, hin zu dem, in welche Lage er gerät und ob er in ihr noch denkt. Die drei festen Antworten vom Anfang wirken plötzlich, als hätten sie am falschen Ort gegraben. Bleibt eine letzte Stimme – eine, die den Boden nicht wiederherstellt, sondern die Frage umstellt."
+      "transition": "Was Arendt im Gerichtssaal dachte, hat die Sozialpsychologie zur selben Zeit im Labor gemessen: Gewöhnliche Menschen verabreichten auf Anweisung scheinbar gefährliche Stromstösse, gewöhnliche Studenten eskalierten in zugewiesenen Rollen. Wenn dieselbe Anlage zum Täter und zum Helfer führt, je nach Lage, dann verschiebt sich der ganze Grund der Frage – weg von dem, was im Menschen sitzt, hin zu dem, in welche Lage er gerät und ob er in ihr noch denkt. Die drei festen Antworten vom Anfang wirken plötzlich, als hätten sie am falschen Ort gegraben. Bleibt eine letzte Stimme – eine, die den Boden nicht wiederherstellt, sondern die Frage umstellt."
     },
     {
       "nodeId": "kant",
@@ -36,5 +36,5 @@
     }
   ],
   "closing_synthesis": "Fünf Stationen, eine Bewegung vom festen Grund weg. Mengzi sieht im Menschen die guten Keime, Hobbes die Furcht, Augustinus die ererbte Beschädigung – drei Antworten, die alle wissen wollen, was im Menschen angelegt ist. Dann zeigen Arendt und die Experimente der Sozialpsychologie etwas Beunruhigendes: dass dieselbe Anlage zum Helfer und zum Täter führen kann, je nach Lage. Und Kant stellt am Ende nicht die bessere Antwort bereit, sondern eine andere Frage – ob es überhaupt die Anlage ist, auf die es ankommt, oder die Freiheit, die mit ihr umgeht. Was die Lectio dir zurücklässt, ist keine Theorie der Menschennatur. Es ist der Verdacht, dass ›gut oder böse von Natur‹ vielleicht nie die Frage war, die zählt.",
-  "closing_question": "Denk an einen Menschen, den du für ›im Grunde gut‹ oder ›im Grunde schwierig‹ hältst. Woher weißt du das – hast du seine Natur gesehen? Oder die Lagen, in die er geraten ist, und was er in ihnen gemacht hat?"
+  "closing_question": "Denk an einen Menschen, den du für ›im Grunde gut‹ oder ›im Grunde schwierig‹ hältst. Woher weisst du das – hast du seine Natur gesehen? Oder die Lagen, in die er geraten ist, und was er in ihnen gemacht hat?"
 }

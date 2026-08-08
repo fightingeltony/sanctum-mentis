@@ -4,7 +4,7 @@ import { getAllLebensfragen } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'Lebensfragen',
-  description: 'Konkrete Lebensfragen — kuratorische Stimmen-Sammlungen aus mehreren Tableaus.',
+  description: 'Konkrete Lebensfragen – kuratorische Stimmen-Sammlungen aus mehreren Tableaus.',
 }
 
 export default function LebensfragenPage() {
@@ -32,7 +32,7 @@ export default function LebensfragenPage() {
         Wenn eine Frage dich nicht loslässt
       </h1>
       <p className="font-body text-[16px] text-fg-muted leading-relaxed mb-14 max-w-[56ch]">
-        Keine Tableau-Karte, keine Lectio — sondern eine einzige Frage, die aus mehreren
+        Keine Tableau-Karte, keine Lectio – sondern eine einzige Frage, die aus mehreren
         Tableaus beantwortet wird. Neun Stimmen, die sich nicht einig sind.
       </p>
 

@@ -1,5 +1,5 @@
 ﻿/**
- * Sanctum Mentis — Daten-Validierungs-Tests
+ * Sanctum Mentis – Daten-Validierungs-Tests
  *
  * Prüft alle Tableau-JSONs und Lectio-JSONs auf Konsistenz:
  * 1. Lectio nodeId-Referenzen → existierende Knoten im zugehörigen Tableau
@@ -300,10 +300,10 @@ describe('brief-Feld (Legacy) vs. step_brief', () => {
   })
 })
 
-// ─── 9. closing_kernel — Ist-Stand (informativ) ───────────────
+// ─── 9. closing_kernel – Ist-Stand (informativ) ───────────────
 
-describe('closing_kernel — Ist-Stand (informativ)', () => {
-  it('Lectios mit gesetztem closing_kernel — Überblick', () => {
+describe('closing_kernel – Ist-Stand (informativ)', () => {
+  it('Lectios mit gesetztem closing_kernel – Überblick', () => {
     const lectioFiles = getLectioFiles()
     const withKernel: Array<{ id: string; kernel: string }> = []
 
@@ -325,7 +325,7 @@ describe('closing_kernel — Ist-Stand (informativ)', () => {
       ? '\ninfo closing_kernel: kein Eintrag gesetzt (alle leer/fehlend)'
       : '\ninfo closing_kernel gesetzt in ' + withKernel.length + ' Lectio(s):\n' + lines_.join('\n')
     console.info(infoMsg)
-    // Dieser Test schlägt nie fehl — er dient nur der Sichtbarkeit
+    // Dieser Test schlägt nie fehl – er dient nur der Sichtbarkeit
     expect(withKernel.length).toBeGreaterThanOrEqual(0)
   })
 })

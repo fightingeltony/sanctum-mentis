@@ -3,7 +3,7 @@ import { getLandingChartData, LANDING_TOPIC_ID } from '@/lib/data'
 import LandingStarChart from '@/components/LandingStarChart'
 
 export default function LandingPage() {
-  // Schlankes Extrakt statt vollem Tableau — die Volltexte lädt
+  // Schlankes Extrakt statt vollem Tableau – die Volltexte lädt
   // LandingStarChart lazy über /api/landing-topic
   const featured = getLandingChartData(LANDING_TOPIC_ID)
   return (
@@ -18,14 +18,14 @@ export default function LandingPage() {
       </h1>
 
       <p className="font-body text-[clamp(18px,2vw,20px)] text-fg-muted leading-relaxed mb-5 max-w-[60ch]">
-        Bücher, Suchmaschinen, KI — alles Wissen der Welt ist heute zur Hand.
+        Bücher, Suchmaschinen, KI – alles Wissen der Welt ist heute zur Hand.
         Was uns fehlt, ist Kontext. Die Möglichkeit, ein Thema einmal zu Ende
-        zu verstehen — Punkte zu setzen, Erkenntnisse landen zu lassen.
+        zu verstehen – Punkte zu setzen, Erkenntnisse landen zu lassen.
       </p>
       <p className="font-body text-[clamp(18px,2vw,20px)] text-fg-muted leading-relaxed mb-10 max-w-[60ch]">
         Sanctum Mentis macht aus dem Gewirr eine Karte. Jedes Thema der
-        Ideengeschichte wird zu einem Tableau — einem Sternbild von Stimmen,
-        durch das du dich bewegst. Du wählst die Tiefe —
+        Ideengeschichte wird zu einem Tableau – einem Sternbild von Stimmen,
+        durch das du dich bewegst. Du wählst die Tiefe –
         vom Einstieg bis zur Synthese.
       </p>
 
@@ -44,7 +44,7 @@ export default function LandingPage() {
         </Link>
       </div>
 
-      {/* ── Lebendiges Tableau — selbstspielende Sternkarte ── */}
+      {/* ── Lebendiges Tableau – selbstspielende Sternkarte ── */}
       {featured && (
         <div className="mb-16">
           <p className="font-ui text-[10px] tracking-[0.22em] uppercase text-fg-faint mb-3 flex items-center gap-2">
@@ -65,12 +65,12 @@ export default function LandingPage() {
           {
             num: 'II',
             title: 'Die Debatte im Fokus',
-            text: 'Ideen entstehen durch Reibung. Erkenne sofort, wer auf wem aufbaut und wo Weltanschauungen hart aufeinanderprallen — als Linien zwischen den Sternen. Der abstrakte Streit der Denker wird visuell greifbar.',
+            text: 'Ideen entstehen durch Reibung. Erkenne sofort, wer auf wem aufbaut und wo Weltanschauungen hart aufeinanderprallen – als Linien zwischen den Sternen. Der abstrakte Streit der Denker wird visuell greifbar.',
           },
           {
             num: 'III',
             title: 'Wissen räumlich verankert',
-            text: 'Konzepte schweben nicht im luftleeren Raum. Jede Idee ist bei ihrem Denker verortet und dort abrufbar — die wenigen ankerlosen Konzepte erscheinen eigenständig im Feld. Erst im Zusammenhang lässt sich Wissen zu Ende denken.',
+            text: 'Konzepte schweben nicht im luftleeren Raum. Jede Idee ist bei ihrem Denker verortet und dort abrufbar – die wenigen ankerlosen Konzepte erscheinen eigenständig im Feld. Erst im Zusammenhang lässt sich Wissen zu Ende denken.',
           },
         ].map(item => (
           <div key={item.num} className="flex flex-col gap-2">
@@ -150,7 +150,7 @@ export default function LandingPage() {
         </div>
 
         <p className="font-body italic text-[12px] text-fg-faint mt-5">
-          Beide führen durch ein Tableau — komplementär, nicht alternativ.
+          Beide führen durch ein Tableau – komplementär, nicht alternativ.
         </p>
       </div>
 
@@ -181,8 +181,8 @@ export default function LandingPage() {
             <h3 className="font-prose font-medium text-[14px] text-fg mb-2">Die Lebensfrage</h3>
             <p className="font-body text-[13px] text-fg-muted leading-relaxed">
               Karte und Lectio bleiben innerhalb eines Feldes. Manche Fragen aber gehören
-              keinem Feld allein — sie ziehen quer durch die Bibliothek. Eine gelebte Situation
-              — Schmerz, Tod, Freiheit — beleuchtet durch Stimmen aus verschiedenen Feldern.
+              keinem Feld allein – sie ziehen quer durch die Bibliothek. Eine gelebte Situation
+              – Schmerz, Tod, Freiheit – beleuchtet durch Stimmen aus verschiedenen Feldern.
             </p>
           </div>
           <Link

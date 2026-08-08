@@ -1,4 +1,4 @@
-/** Shared types and utilities for the search index — safe to import in Client Components */
+/** Shared types and utilities for the search index – safe to import in Client Components */
 
 export interface SearchEntry {
   type: 'thinker' | 'concept' | 'school' | 'lectio' | 'lebensfrage'
@@ -9,7 +9,7 @@ export interface SearchEntry {
   firstLevel?: number
 }
 
-/** Strips diacritics and lowercases — used for accent-insensitive matching */
+/** Strips diacritics and lowercases – used for accent-insensitive matching */
 export function normalize(str: string): string {
   return str.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase()
 }

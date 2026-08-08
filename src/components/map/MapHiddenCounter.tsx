@@ -1,6 +1,6 @@
 interface Props {
   hidden: number
-  /** "Ort" or "weiterer Ort" — singular form. Plural appends "e". */
+  /** "Ort" or "weiterer Ort" – singular form. Plural appends "e". */
   noun?: { singular: string; plural: string }
   className?: string
 }

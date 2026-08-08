@@ -31,7 +31,7 @@ export default async function LectioPage({ params }: Props) {
   const topicData = getTopic(lectio.tableauId)
   if (!topicData) notFound()
 
-  // Suspense: die Viewer lesen ?von= via useSearchParams() client-seitig —
+  // Suspense: die Viewer lesen ?von= via useSearchParams() client-seitig –
   // Boundary nötig, damit die Seite SSG bleibt (gleiches Muster wie TopicViewer)
   if (lectio.ton === 'erzählend-erfahrend' || lectio.ton === 'gemischt') {
     return (

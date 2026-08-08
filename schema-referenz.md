@@ -1,8 +1,8 @@
-# Sanctum Mentis — Schema-Referenz
+# Sanctum Mentis – Schema-Referenz
 
 **Primärquelle:** `src/lib/types.ts`  
 **Ergänzt aus:** Daten-Gebrauch, Vitest-Suite (`src/lib/__tests__/data-validation.test.ts`)  
-**Zweck:** Nachschlagewerk für Bau und Prüfung — vollständig, kein Tutorial.  
+**Zweck:** Nachschlagewerk für Bau und Prüfung – vollständig, kein Tutorial.  
 **Stand:** 2026-06-14
 
 ---
@@ -38,22 +38,22 @@ TopicData
 |---|---|---|---|
 | `id` | `string` | ✓ | URL-Slug, muss mit Dateiname übereinstimmen (z. B. `"das-selbst"`) |
 | `title` | `string` | ✓ | Langer Titel, z. B. `"Die Landkarte des Selbst"` |
-| `subtitle` | `string?` | — | Einladende Kurzformel für Library-Card und Tableau-Kopf — atmosphärisch, Du-Form |
-| `intro` | `string?` | — | Zuspitzende Du-Frage, sichtbar ab L1 direkt im Tableau — stellt die Spannung am Leib |
-| `era` | `string?` | — | Freier Zeittag, z. B. `"Antike – 21. Jh."` |
-| `theme` | `TopicTheme?` | — | Akzentfarben als CSS-Custom-Property-Werte |
+| `subtitle` | `string?` | – | Einladende Kurzformel für Library-Card und Tableau-Kopf – atmosphärisch, Du-Form |
+| `intro` | `string?` | – | Zuspitzende Du-Frage, sichtbar ab L1 direkt im Tableau – stellt die Spannung am Leib |
+| `era` | `string?` | – | Freier Zeittag, z. B. `"Antike – 21. Jh."` |
+| `theme` | `TopicTheme?` | – | Akzentfarben als CSS-Custom-Property-Werte |
 | `complexityLevels` | `number` | ✓ | Anzahl Level, immer `5` |
 | `quadrants` | `Quadrants` | ✓ | Achsen-Definition für Sternkarte und Konzept-Karte |
-| `graphLayout` | `'manual' \| 'auto'?` | — | Layout-Modus des InfluenceGraph; `'manual'` liest `graphX/Y` aus Thinker-Knoten |
-| `thinkerListStyle` | `'cards' \| 'grouped'?` | — | Darstellungsform der Denker-Liste; `'grouped'` gruppiert nach Schule |
-| `synthesis` | `string?` | — | Kuratorischer Abschlusstext, **nur auf L5 sichtbar** |
+| `graphLayout` | `'manual' \| 'auto'?` | – | Layout-Modus des InfluenceGraph; `'manual'` liest `graphX/Y` aus Thinker-Knoten |
+| `thinkerListStyle` | `'cards' \| 'grouped'?` | – | Darstellungsform der Denker-Liste; `'grouped'` gruppiert nach Schule |
+| `synthesis` | `string?` | – | Kuratorischer Abschlusstext, **nur auf L5 sichtbar** |
 
 #### `TopicTheme`
 
 | Feld | Typ | Bedeutung |
 |---|---|---|
-| `accent` | `string` | Hauptakzentfarbe (oklch), z. B. `"oklch(0.42 0.12 295)"` — als `--accent` injiziert |
-| `accentSoft` | `string` | Gedämpfte Variante mit Transparenz — als `--accent-soft` injiziert |
+| `accent` | `string` | Hauptakzentfarbe (oklch), z. B. `"oklch(0.42 0.12 295)"` – als `--accent` injiziert |
+| `accentSoft` | `string` | Gedämpfte Variante mit Transparenz – als `--accent-soft` injiziert |
 
 **Hinweis:** Tailwind v4 unterstützt `text-[--varname]` nicht. CSS-Custom-Properties immer als `style={{ color: 'var(--accent)' }}` verwenden.
 
@@ -84,7 +84,7 @@ TopicData
 | `label` | `string` | ✓ | Langer Label, z. B. `"Einstieg"`, `"Grundlagen"`, `"Synthese"` |
 | `short` | `string` | ✓ | Kurz-Label, z. B. `"L1"` |
 | `filled` | `boolean` | ✓ | Wird im Frontend gesetzt (Engine), **nicht in den JSON-Daten** |
-| `description` | `string?` | — | Optionale Erklärung des Levels |
+| `description` | `string?` | – | Optionale Erklärung des Levels |
 
 ---
 
@@ -94,14 +94,14 @@ TopicData
 |---|---|---|---|
 | `id` | `string` | ✓ | Bezeichnet die Schule, referenziert in `Thinker.schoolId` |
 | `label` | `string` | ✓ | Anzeigename, z. B. `"Empirismus"` |
-| `color` | `string` | ✓ | Farbe direkt verwendbar (oklch oder hex) — keine globalen CSS-Variablen |
+| `color` | `string` | ✓ | Farbe direkt verwendbar (oklch oder hex) – keine globalen CSS-Variablen |
 | `glyph` | `string` | ✓ | Unicode-Symbol in der Denker-Liste, z. B. `"◈"` |
-| `motto` | `string?` | — | Kurzer charakterisierender Satz |
-| `gx` | `number?` | — | **InfluenceGraph:** x-Position des Schul-Ankers im SVG (auto layout) |
-| `gy` | `number?` | — | **InfluenceGraph:** y-Position des Schul-Ankers im SVG (auto layout) |
-| `labelDir` | `'N'\|'NE'\|'E'\|'SE'\|'S'\|'SW'\|'W'\|'NW'?` | — | **Sternkarte:** Richtung, in die das Schul-Label vom Anker weggedrückt wird (verhindert Label-Kollisionen) |
-| `cluster` | `ClusterDef?` | — | **Sternkarte:** Ellipsen-Hülle um eine Schul-Gruppe im Schulen-Modus |
-| `lectio_brief` | `string?` | — | 2–3-Satz-Ankerpunkt für Lectio-Modus; überschreibt `versions`-Text wenn gesetzt |
+| `motto` | `string?` | – | Kurzer charakterisierender Satz |
+| `gx` | `number?` | – | **InfluenceGraph:** x-Position des Schul-Ankers im SVG (auto layout) |
+| `gy` | `number?` | – | **InfluenceGraph:** y-Position des Schul-Ankers im SVG (auto layout) |
+| `labelDir` | `'N'\|'NE'\|'E'\|'SE'\|'S'\|'SW'\|'W'\|'NW'?` | – | **Sternkarte:** Richtung, in die das Schul-Label vom Anker weggedrückt wird (verhindert Label-Kollisionen) |
+| `cluster` | `ClusterDef?` | – | **Sternkarte:** Ellipsen-Hülle um eine Schul-Gruppe im Schulen-Modus |
+| `lectio_brief` | `string?` | – | 2–3-Satz-Ankerpunkt für Lectio-Modus; überschreibt `versions`-Text wenn gesetzt |
 
 #### `cluster` (Sternkarte-spezifisch)
 
@@ -149,12 +149,12 @@ Mindestens ein `versions`-Eintrag auf `firstLevel` ist Pflicht. Hubs (≥4 Influ
 | `id` | `string` | ✓ | Eindeutiger Bezeichner, als `nodeId` in Lectios referenziert |
 | `name` | `string` | ✓ | Anzeigename |
 | `schoolId` | `string` | ✓ | Referenz auf `School.id` im selben Tableau |
-| `lifespan` | `string?` | — | Lebensdaten, z. B. `"1724–1804"` oder `"~500 v. Chr. –"` |
-| `x` | `number?` | — | Position auf der X-Achse, 0–100; links = Empirisch/Substanz, rechts = Rationalistisch/Prozess (je nach Tableau-Achse) |
-| `y` | `number?` | — | Position auf der Y-Achse, 0–100; **y=100 = oben (top-Pol), y=0 = unten (bottom-Pol)** |
-| `graphX` | `number?` | — | **InfluenceGraph manual layout:** absolute SVG-x-Position des Knotens |
-| `graphY` | `number?` | — | **InfluenceGraph manual layout:** absolute SVG-y-Position des Knotens |
-| `lectio_brief` | `string?` | — | 2–3-Satz-Ankerpunkt für Lectio-Modus; Fallback-Kette: `step_brief` → `lectio_brief` → `versions[level]` |
+| `lifespan` | `string?` | – | Lebensdaten, z. B. `"1724–1804"` oder `"~500 v. Chr. –"` |
+| `x` | `number?` | – | Position auf der X-Achse, 0–100; links = Empirisch/Substanz, rechts = Rationalistisch/Prozess (je nach Tableau-Achse) |
+| `y` | `number?` | – | Position auf der Y-Achse, 0–100; **y=100 = oben (top-Pol), y=0 = unten (bottom-Pol)** |
+| `graphX` | `number?` | – | **InfluenceGraph manual layout:** absolute SVG-x-Position des Knotens |
+| `graphY` | `number?` | – | **InfluenceGraph manual layout:** absolute SVG-y-Position des Knotens |
+| `lectio_brief` | `string?` | – | 2–3-Satz-Ankerpunkt für Lectio-Modus; Fallback-Kette: `step_brief` → `lectio_brief` → `versions[level]` |
 | `firstLevel` | `number` | ✓ | geerbt |
 | `versions` | `Record<number, string>` | ✓ | geerbt; Text kann `[[Begriff:Erklärung]]`-Annotationen enthalten |
 
@@ -169,16 +169,16 @@ Mindestens ein `versions`-Eintrag auf `firstLevel` ist Pflicht. Hubs (≥4 Influ
 | `from` | `string` | ✓ | `Thinker.id` des Ausgangsknotens (Quelle der Beziehung) |
 | `to` | `string` | ✓ | `Thinker.id` des Zielknotens |
 | `type` | `InfluenceType` | ✓ | Art der Beziehung (siehe unten) |
-| `firstLevel` | `number` | ✓ | Muss ≥ `max(from.firstLevel, to.firstLevel)` sein — Kante erscheint nie früher als ihr spätester Endpunkt |
+| `firstLevel` | `number` | ✓ | Muss ≥ `max(from.firstLevel, to.firstLevel)` sein – Kante erscheint nie früher als ihr spätester Endpunkt |
 | `versions` | `Record<number, string>` | ✓ | Beschreibungstext der Beziehung |
 
 #### `InfluenceType`
 
 | Wert | Bedeutung |
 |---|---|
-| `'influence'` | X beeinflusste Y — from = Influencer, to = Beeinflusster; im UI: „Einfluss →/← Einfluss" je nach Perspektive |
-| `'critique'` | Intellektuelle Konfrontation zwischen zwei Positionen. Mehrheitsmuster in den Daten: from = Kritiker, to = Kritisierter (wie `influence`); einzelne Einträge weichen ab. Die StarChart rendert `critique` undirektional als „Kritik" — die from/to-Richtung ist im UI nicht sichtbar und nicht bedeutungstragend; die Beziehung lebt im `versions`-Text. |
-| `'parallel'` | Unabhängige Entwicklung von Ähnlichem — symmetrisch, Richtung bedeutungslos |
+| `'influence'` | X beeinflusste Y – from = Influencer, to = Beeinflusster; im UI: „Einfluss →/← Einfluss" je nach Perspektive |
+| `'critique'` | Intellektuelle Konfrontation zwischen zwei Positionen. Mehrheitsmuster in den Daten: from = Kritiker, to = Kritisierter (wie `influence`); einzelne Einträge weichen ab. Die StarChart rendert `critique` undirektional als „Kritik" – die from/to-Richtung ist im UI nicht sichtbar und nicht bedeutungstragend; die Beziehung lebt im `versions`-Text. |
+| `'parallel'` | Unabhängige Entwicklung von Ähnlichem – symmetrisch, Richtung bedeutungslos |
 | `'rejection'` | Vollständige Ablehnung einer Position. Richtungskonvention in den Daten inkonsistent (nicht bedeutungstragend). Rendert undirektional als „Verwerfung" ohne Richtungsangabe; die Bedeutung lebt im `versions`-Text. |
 
 **Vitest-geprüft:** `from` und `to` müssen gültige Knoten-IDs im Tableau sein (Regel 6).
@@ -194,10 +194,10 @@ Mindestens ein `versions`-Eintrag auf `firstLevel` ist Pflicht. Hubs (≥4 Influ
 | `x` | `number` | ✓ | Position 0–100 auf X-Achse |
 | `y` | `number` | ✓ | Position 0–100 auf Y-Achse (y=100 oben) |
 | `type` | `ConceptType` | ✓ | Glyph-Kategorie (siehe unten) |
-| `schoolId` | `string?` | — | Zugehörige Schule (färbt den Konzept-Marker in deren Farbe) |
-| `primaryThinker` | `string?` | — | `Thinker.id`-Override: Wenn gesetzt, wird das Konzept im Sternkarten-Akkordeon unter diesem Denker eingeklappt statt als Waisen-Marker zu erscheinen. Wenn der Denker nicht sichtbar ist oder `primaryThinker` fehlt, erscheint das Konzept als eigener Marker an x/y. |
-| `labelOffset` | `LabelOffset?` | — | Feinpositionierung des Konzept-Labels in der Sternkarte (verhindert Label-Kollision) |
-| `lectio_brief` | `string?` | — | 2–3-Satz-Ankerpunkt für Lectio-Modus |
+| `schoolId` | `string?` | – | Zugehörige Schule (färbt den Konzept-Marker in deren Farbe) |
+| `primaryThinker` | `string?` | – | `Thinker.id`-Override: Wenn gesetzt, wird das Konzept im Sternkarten-Akkordeon unter diesem Denker eingeklappt statt als Waisen-Marker zu erscheinen. Wenn der Denker nicht sichtbar ist oder `primaryThinker` fehlt, erscheint das Konzept als eigener Marker an x/y. |
+| `labelOffset` | `LabelOffset?` | – | Feinpositionierung des Konzept-Labels in der Sternkarte (verhindert Label-Kollision) |
+| `lectio_brief` | `string?` | – | 2–3-Satz-Ankerpunkt für Lectio-Modus |
 | `firstLevel` | `number` | ✓ | geerbt |
 | `versions` | `Record<number, string>` | ✓ | geerbt |
 
@@ -253,14 +253,14 @@ Lectio
 | `title` | `string` | ✓ | Anzeigename der Lectio |
 | `focus` | `string` | ✓ | Ein-Satz-Beschreibung des kuratorischen Fokus (für Discovery-Karte) |
 | `thesis` | `string` | ✓ | Explizitere Einleitung, sichtbar auf der Lectio-Seite vor `intro` |
-| `path_type` | `string?` | — | Pfad-Typ-Bezeichner: `'narrativ-historisch'`, `'konkurrierend-konfrontativ'`, `'emotional-kumulativ'`, `'destruktiv-aufbauend'`, `'kontemplativ-vertiefend'` — kuratorische Selbst-Beschreibung, kein Render-Schalter |
-| `ton` | `'expositorisch' \| 'erzählend-erfahrend' \| 'gemischt'?` | — | Fehlend = `expositorisch`; steuert welchen Viewer die Lectio bekommt (siehe Render-Pfade unten) |
+| `path_type` | `string?` | – | Pfad-Typ-Bezeichner: `'narrativ-historisch'`, `'konkurrierend-konfrontativ'`, `'emotional-kumulativ'`, `'destruktiv-aufbauend'`, `'kontemplativ-vertiefend'` – kuratorische Selbst-Beschreibung, kein Render-Schalter |
+| `ton` | `'expositorisch' \| 'erzählend-erfahrend' \| 'gemischt'?` | – | Fehlend = `expositorisch`; steuert welchen Viewer die Lectio bekommt (siehe Render-Pfade unten) |
 | `level` | `number` | ✓ | Empfohlenes Einstiegs-Level (1–5); beeinflusst welche Knoten-Texte angezeigt werden |
 | `estimated_minutes` | `number` | ✓ | Geschätzte Lesedauer in Minuten |
 | `intro` | `string` | ✓ | Einleitungstext vor der ersten Station |
 | `path` | `LectioStep[]` | ✓ | Geordnete Stationen des Lesepfads |
 | `closing_synthesis` | `string` | ✓ | Abschluss-Text nach der letzten Station |
-| `closing_kernel` | `string?` | — | Exakter Teilstring des **letzten Absatzes** von `closing_synthesis` → wird hervorgehoben. Constraint: `closing_synthesis.split('\n').filter(Boolean).last.includes(closing_kernel)` |
+| `closing_kernel` | `string?` | – | Exakter Teilstring des **letzten Absatzes** von `closing_synthesis` → wird hervorgehoben. Constraint: `closing_synthesis.split('\n').filter(Boolean).last.includes(closing_kernel)` |
 | `closing_question` | `string` | ✓ | Offene Schlussfrage an den Leser |
 
 **Vitest-geprüft:**
@@ -273,17 +273,17 @@ Lectio
 
 | Feld | Typ | Pflicht | Bedeutung |
 |---|---|---|---|
-| `nodeId` | `string \| string[]` | ✓ | ID(s) des Tableau-Knotens — `string[]` für Doppelstationen (zwei Knoten gleichzeitig) |
+| `nodeId` | `string \| string[]` | ✓ | ID(s) des Tableau-Knotens – `string[]` für Doppelstationen (zwei Knoten gleichzeitig) |
 | `nodeType` | `'thinker' \| 'concept' \| 'school'` | ✓ | Knotentyp (muss mit dem Typ im Tableau übereinstimmen) |
 | `transition` | `string` | ✓ | Übergangstext zur nächsten Station; in erzählenden Lectios inhaltlich identisch mit `narrative.bridge` |
-| `step_brief` | `string?` | — | Überschreibt den Knoten-Text **nur für diese Station** (kein `versions`-Fallback, kein `lectio_brief`). Für Ein-Werk-Lectios, die denselben Knoten mehrfach mit verschiedenem Text zeigen. Nur bei Einzelknoten-Stationen (kein `string[]`-`nodeId`). Annotationsfrei. |
-| `ton` | `'erzählend-erfahrend' \| 'nüchtern-klar' \| 'expositorisch'?` | — | Per-Step-Ton-Override — aktiv bei `Lectio.ton === 'gemischt'`; steuert visuellen Stil der Station |
-| `narrative` | `LectioNarrative?` | — | Erzählende Form; **Rendering-Gate:** Stationen ohne `narrative` werden im `LectioNarrativeViewer` vollständig ignoriert |
-| `image` | `string?` | — | Öffentlicher Bildpfad, z. B. `"/lectio-images/ruhe-oder-rausch/epikur.webp"` — zeigt Bild-Nische im erzählenden Viewer, unabhängig vom Ton (auch `nüchtern-klar` darf, muss aber nicht) |
-| `image_prompt` | `string?` | — | Generierungs-Prompt für das Bild; **nicht im UI verwendet**, nur Datensicherung |
-| `image_status` | `'prompt-neu' \| 'generiert'?` | — | Fortschrittsmarker über mehrere Generierungsläufe hinweg — steuert nicht das Rendering. `image` bleibt leer, bis der Status auf `"generiert"` wechselt |
+| `step_brief` | `string?` | – | Überschreibt den Knoten-Text **nur für diese Station** (kein `versions`-Fallback, kein `lectio_brief`). Für Ein-Werk-Lectios, die denselben Knoten mehrfach mit verschiedenem Text zeigen. Nur bei Einzelknoten-Stationen (kein `string[]`-`nodeId`). Annotationsfrei. |
+| `ton` | `'erzählend-erfahrend' \| 'nüchtern-klar' \| 'expositorisch'?` | – | Per-Step-Ton-Override – aktiv bei `Lectio.ton === 'gemischt'`; steuert visuellen Stil der Station |
+| `narrative` | `LectioNarrative?` | – | Erzählende Form; **Rendering-Gate:** Stationen ohne `narrative` werden im `LectioNarrativeViewer` vollständig ignoriert |
+| `image` | `string?` | – | Öffentlicher Bildpfad, z. B. `"/lectio-images/ruhe-oder-rausch/epikur.webp"` – zeigt Bild-Nische im erzählenden Viewer, unabhängig vom Ton (auch `nüchtern-klar` darf, muss aber nicht) |
+| `image_prompt` | `string?` | – | Generierungs-Prompt für das Bild; **nicht im UI verwendet**, nur Datensicherung |
+| `image_status` | `'prompt-neu' \| 'generiert'?` | – | Fortschrittsmarker über mehrere Generierungsläufe hinweg – steuert nicht das Rendering. `image` bleibt leer, bis der Status auf `"generiert"` wechselt |
 
-**Ablage-Konvention:** Bilder: `public/lectio-images/<lectio-id>/<nodeId>.webp` (~800px Breite, WebP Qualität ~70 — 2k ist Generierungs-, nicht Ablageformat) — bei Doppelstationen (`nodeId` als Array) die Teile mit Bindestrich verbunden, z. B. `marc-aurel-epiktet.webp`.
+**Ablage-Konvention:** Bilder: `public/lectio-images/<lectio-id>/<nodeId>.webp` (~800px Breite, WebP Qualität ~70 – 2k ist Generierungs-, nicht Ablageformat) – bei Doppelstationen (`nodeId` als Array) die Teile mit Bindestrich verbunden, z. B. `marc-aurel-epiktet.webp`.
 
 **Vitest-geprüft:** Alle referenzierten `image`-Pfade müssen in `public/` existieren (Regel 5).
 
@@ -302,10 +302,10 @@ Lectio
 
 | Feld | Typ | Pflicht | Bedeutung |
 |---|---|---|---|
-| `hook` | `string` | ✓ | Einstieg über Alltagserfahrung — persönlich, ohne Denker-Namen |
-| `body` | `string[]` | ✓ | 1–3 Absätze erzählende Lehre — hier sitzt der `kernel` |
+| `hook` | `string` | ✓ | Einstieg über Alltagserfahrung – persönlich, ohne Denker-Namen |
+| `body` | `string[]` | ✓ | 1–3 Absätze erzählende Lehre – hier sitzt der `kernel` |
 | `kernel` | `string` | ✓ | **Exakter Teilstring** aus mindestens einem `body`-Absatz; wird als `<em class="kernel">` hervorgehoben. Constraint: `body.join('\n').includes(kernel)` |
-| `bridge` | `string` | ✓ | Übergang zur nächsten Station — inhaltlich identisch mit `step.transition` (redundante Kopie; Renderer liest `narrative.bridge`, ignoriert `step.transition`) |
+| `bridge` | `string` | ✓ | Übergang zur nächsten Station – inhaltlich identisch mit `step.transition` (redundante Kopie; Renderer liest `narrative.bridge`, ignoriert `step.transition`) |
 
 **Vitest-geprüft:** `kernel ⊆ body.join('\n')` (Regel 2 / describe block 2).
 
@@ -324,7 +324,7 @@ step_brief  →  lectio_brief (aus Knoten)  →  versions[level]
 Für erzählende Stationen:
 
 ```
-narrative.{hook, body, kernel, bridge}  [kein Fallback — step_brief/lectio_brief werden ignoriert]
+narrative.{hook, body, kernel, bridge}  [kein Fallback – step_brief/lectio_brief werden ignoriert]
 ```
 
 ---
@@ -346,17 +346,17 @@ Wird von `getLectiosByTableauId()` geliefert für die Discovery-Karten im Tablea
 
 ## 3. Lebensfragen-Format (`Lebensfrage`)
 
-Nirgends außerhalb von `types.ts` dokumentiert.
+Nirgends ausserhalb von `types.ts` dokumentiert.
 
 | Feld | Typ | Pflicht | Bedeutung |
 |---|---|---|---|
 | `id` | `string` | ✓ | URL-Slug, muss mit Dateiname in `data/lebensfragen/` übereinstimmen |
 | `title` | `string` | ✓ | Anzeigename als Frage, z. B. `"Was tue ich mit Schmerz?"` |
-| `anker` | `string` | ✓ | Ein-Satz-Einstieg — nennt die Frage in direkter Form |
+| `anker` | `string` | ✓ | Ein-Satz-Einstieg – nennt die Frage in direkter Form |
 | `intro` | `string` | ✓ | Längerer Einleitungstext mit konkreter Alltagssituation (kann `\n`-Absätze enthalten) |
 | `stimmen` | `LebensfrageStimme[]` | ✓ | Geordnete Stimmen-Sammlung (Reihenfolge ist kuratorisch, nicht hierarchisch) |
-| `schluss` | `string` | ✓ | Abschluss — benennt Spannungen, gibt keine Lösung; phänomenologische Sprache |
-| `kuratiert` | `string` | ✓ | Datum-String, z. B. `"Mai 2026"` — macht die Lebensfrage zeitlich verortbar |
+| `schluss` | `string` | ✓ | Abschluss – benennt Spannungen, gibt keine Lösung; phänomenologische Sprache |
+| `kuratiert` | `string` | ✓ | Datum-String, z. B. `"Mai 2026"` – macht die Lebensfrage zeitlich verortbar |
 | `kuratiert_aus_tableaus` | `string[]` | ✓ | Array der `Topic.id`s, die berücksichtigt wurden (nicht nur die, aus denen Stimmen stammen) |
 
 ### 3.1 `LebensfrageStimme`
@@ -366,7 +366,7 @@ Nirgends außerhalb von `types.ts` dokumentiert.
 | `aus.tableau` | `string` | ✓ | `Topic.id` des Herkunfts-Tableaus |
 | `aus.knoten` | `string` | ✓ | `Thinker.id` / `Concept.id` des Herkunfts-Knotens im Tableau |
 | `ueberschrift` | `string` | ✓ | Kurze Überschrift der Stimme, z. B. `"Buddhismus: Schmerz und Leid sind nicht dasselbe"` |
-| `text` | `string` | ✓ | Stimmen-Text; **zur Lebensfrage hin neu geschrieben** — kein Copy-Paste aus `versions`; keine `[[Annotationen]]` |
+| `text` | `string` | ✓ | Stimmen-Text; **zur Lebensfrage hin neu geschrieben** – kein Copy-Paste aus `versions`; keine `[[Annotationen]]` |
 
 **Nicht Vitest-geprüft:** Lebensfragen-Daten werden von keiner Vitest-Regel geprüft.
 
@@ -376,16 +376,16 @@ Nirgends außerhalb von `types.ts` dokumentiert.
 
 Annotationen werden in `Thinker.versions`, `Concept.versions`, `Influence.versions` und `Topic.synthesis` verwendet. **Nicht** in `lectio_brief`, `step_brief`, `LebensfrageStimme.text`.
 
-### Format A — Term innerhalb der Klammern
+### Format A – Term innerhalb der Klammern
 
 ```
 "begründet die [[Tugendethik:die Lehre vom guten Charakter als Fundament der Moral]] in der ..."
-"([[Atman:das göttliche, unveränderliche Ich im Vedanta — Sanskrit für ›Selbst‹ oder ›Atem‹]])"
+"([[Atman:das göttliche, unveränderliche Ich im Vedanta – Sanskrit für ›Selbst‹ oder ›Atem‹]])"
 ```
 
-Separator: **Doppelpunkt** (primär), Em-Dash ` — ` (Fallback wenn kein Doppelpunkt). Doppelpunkt wird **vor** Em-Dash geprüft.
+Separator: **Doppelpunkt** (primär), Halbgeviertstrich ` – ` (Fallback wenn kein Doppelpunkt; Alt-Geviertstriche ` — ` werden noch akzeptiert). Doppelpunkt wird **vor** dem Strich geprüft.
 
-### Format B — Term vor den Klammern
+### Format B – Term vor den Klammern
 
 ```
 "der stille Zeuge Atman [[das göttliche, unveränderliche Ich]] hinter allem Erleben"
@@ -412,12 +412,12 @@ Datei: `src/lib/__tests__/data-validation.test.ts`
 | 1 | Lectio `nodeId`-Referenzen | nodeId existiert nicht im zugehörigen Tableau |
 | 2 | `narrative.kernel ⊆ narrative.body` | kernel nicht als Teilstring in `body.join('\n')` |
 | 3 | `closing_kernel ⊆ letzter Absatz von closing_synthesis` | gesetzter kernel nicht im letzten Synthese-Absatz |
-| 4 | (nicht vergeben) | — |
+| 4 | (nicht vergeben) | – |
 | 5 | `step.image`-Existenz in `public/` | referenzierter Bildpfad nicht vorhanden |
 | 6 | `Influence.from/to` sind gültige Knoten-IDs | from/to nicht in Thinker-, Concept- oder School-IDs des Tableaus |
 | 7 | `Concept.primaryThinker` ist nicht-leerer String | primaryThinker gesetzt, aber kein String oder leer |
 | 8 | Legacy-Feld `brief` in `LectioStep` | Irgendeine Station hat `'brief' in step` (statt `step_brief`) |
-| 9 | `closing_kernel`-Überblick | informativ, schlägt nie fehl — zeigt welche Lectios closing_kernel gesetzt haben |
+| 9 | `closing_kernel`-Überblick | informativ, schlägt nie fehl – zeigt welche Lectios closing_kernel gesetzt haben |
 
 **Nicht geprüft:** Lebensfragen-Daten, `school.cluster`, `labelOffset`, Koordinaten-Plausibilität, Schulen-Konvention (Ein-Denker-Schulen), `firstLevel`-Stufungs-Regel für Influences.
 
@@ -434,4 +434,4 @@ Datei: `src/lib/__tests__/data-validation.test.ts`
 | Lectio-Format | nicht aufgeführt | vollständig in types.ts |
 | Lebensfragen-Format | nicht aufgeführt | vollständig in types.ts |
 
-`mild-mode.md` bleibt unverändert — sie ist Prüf-Anleitung, keine Schema-Referenz.
+`mild-mode.md` bleibt unverändert – sie ist Prüf-Anleitung, keine Schema-Referenz.

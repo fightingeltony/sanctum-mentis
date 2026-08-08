@@ -108,7 +108,7 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
 
   const ptrs      = useRef(new Map<number, { x: number; y: number }>())
   const dragStart = useRef({ x: 0, y: 0, tx: 0, ty: 0 })
-  // Pinch start state — absolute, never updated mid-gesture.
+  // Pinch start state – absolute, never updated mid-gesture.
   // Each frame computes directly from here to avoid floating-point drift.
   const pinchStart = useRef({ dist: 0, mx: 0, my: 0, tx: 0, ty: 0, scale: 1 })
   const didMove   = useRef(false)
@@ -168,12 +168,12 @@ export function usePanZoom(svgW: number, svgH: number, opts: Options = {}): PanZ
       const mx     = (a.x + b.x) / 2
       const my     = (a.y + b.y) / 2
 
-      // Absolute computation from pinch-start state — no frame-to-frame
+      // Absolute computation from pinch-start state – no frame-to-frame
       // accumulation, no floating-point drift.
       const { dist: d0, mx: mx0, my: my0, tx: tx0, ty: ty0, scale: s0 } = pinchStart.current
       const factor   = dist / d0
       const newScale = Math.min(Math.max(s0 * factor, minScale), maxScale)
-      // Translation must use the clamped ratio — with the raw factor the
+      // Translation must use the clamped ratio – with the raw factor the
       // content keeps sliding once the scale hits min/max.
       const f        = newScale / s0
       const newTx    = mx - (mx0 - tx0) * f

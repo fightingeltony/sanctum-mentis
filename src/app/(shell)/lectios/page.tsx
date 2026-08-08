@@ -6,10 +6,10 @@ import type { Spur, LectioSummary } from '@/lib/types'
 
 export const metadata: Metadata = {
   title: 'Lectios',
-  description: 'Jeder Pfad beginnt bei einer Frage — vier bis sechs Stationen, ein Bogen, ein offenes Ende.',
+  description: 'Jeder Pfad beginnt bei einer Frage – vier bis sechs Stationen, ein Bogen, ein offenes Ende.',
 }
 
-// Spur-Reihenfolge — kanonisch wie in library.json und bibliothek-architektur.md
+// Spur-Reihenfolge – kanonisch wie in library.json und bibliothek-architektur.md
 const SPUR_ORDER: Spur[] = ['erkenntnis', 'handlung', 'existenz', 'wandlung', 'menschenbild']
 
 interface SpurGroup {
@@ -43,7 +43,7 @@ export default function PfadePage() {
       <p className="font-body italic text-[15px] text-fg-muted mb-14 max-w-[58ch]">
         Eine Lectio ist ein geführter Pfad: einige Stationen, ein Bogen,
         ein offenes Ende. Du beginnst nicht bei einem Fachgebiet,
-        sondern bei einer Frage — und folgst ihr.
+        sondern bei einer Frage – und folgst ihr.
       </p>
 
       <div className="flex flex-col gap-14">

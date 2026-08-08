@@ -3,10 +3,10 @@
   "tableauId": "philosophie-des-geistes",
   "title": "Warum das Rätsel nicht verschwindet",
   "focus": "Hard Problem – Entstehung, Gegenantworten, Diagnose",
-  "thesis": "Das Hard Problem ist keine Wissenslücke, die die Wissenschaft einfach füllen wird. Es ist eine strukturelle Grenze der Außenperspektive – und damit ein Hinweis auf das Wesen unserer Subjektivität.",
+  "thesis": "Das Hard Problem ist keine Wissenslücke, die die Wissenschaft einfach füllen wird. Es ist eine strukturelle Grenze der Aussenperspektive – und damit ein Hinweis auf das Wesen unserer Subjektivität.",
   "level": 2,
   "estimated_minutes": 15,
-  "intro": "Schlag dir einmal leicht mit der Hand auf den Oberschenkel. Da ist ein Geräusch, ein Reiz, eine mechanische Erschütterung. Aber da ist auch ein Gefühl. Warum bleibt es nicht bei der bloßen Datenverarbeitung im Gehirn? Warum leuchtet in dir dieses hässliche oder neutrale ‚Etwas' auf? Das ist das Hard Problem. Wir beginnen unsere Reise dort, wo der moderne Geist sich selbst zum Rätsel wurde.",
+  "intro": "Schlag dir einmal leicht mit der Hand auf den Oberschenkel. Da ist ein Geräusch, ein Reiz, eine mechanische Erschütterung. Aber da ist auch ein Gefühl. Warum bleibt es nicht bei der blossen Datenverarbeitung im Gehirn? Warum leuchtet in dir dieses hässliche oder neutrale ‚Etwas' auf? Das ist das Hard Problem. Wir beginnen unsere Reise dort, wo der moderne Geist sich selbst zum Rätsel wurde.",
 
   "path": [
     {
@@ -17,7 +17,7 @@
     {
       "nodeId": ["ryle", "wittgenstein"],
       "nodeType": "thinker",
-      "transition": "Die Sprachkritik ist heilsam: Sie räumt mit Geistern und Gespenstern auf. Aber spürst du es? Die Verwirrung über das Erleben selbst verschwindet nicht, nur weil wir unsere Sätze korrigieren. Thomas Nagel hat dieses Schweigen der Wissenschaft schließlich gebrochen."
+      "transition": "Die Sprachkritik ist heilsam: Sie räumt mit Geistern und Gespenstern auf. Aber spürst du es? Die Verwirrung über das Erleben selbst verschwindet nicht, nur weil wir unsere Sätze korrigieren. Thomas Nagel hat dieses Schweigen der Wissenschaft schliesslich gebrochen."
     },
     {
       "nodeId": "nagel",
@@ -27,12 +27,12 @@
     {
       "nodeId": ["chalmers", "jackson"],
       "nodeType": "thinker",
-      "transition": "Zwei Argumente, eine Diagnose: Die Außenperspektive der Physik ist niemals vollständig. Etwas bleibt immer draußen vor der Tür. Doch während Chalmers die Mauer errichtet, versucht Daniel Dennett bereits, sie Stein für Stein wieder abzutragen."
+      "transition": "Zwei Argumente, eine Diagnose: Die Aussenperspektive der Physik ist niemals vollständig. Etwas bleibt immer draussen vor der Tür. Doch während Chalmers die Mauer errichtet, versucht Daniel Dennett bereits, sie Stein für Stein wieder abzutragen."
     },
     {
       "nodeId": "dennett",
       "nodeType": "thinker",
-      "transition": "Dennett ist brillant und provokant. Er erklärt das Rätsel nicht, er erklärt es weg. Er behauptet, wir seien einer bloßen Illusion von Tiefe erlegen. Wenn man Dennett liest, fühlt man sich wie eine Maschine – bis man wieder zu Thomas Metzinger kommt, der uns zeigt, wie diese Maschine sich selbst täuscht."
+      "transition": "Dennett ist brillant und provokant. Er erklärt das Rätsel nicht, er erklärt es weg. Er behauptet, wir seien einer blossen Illusion von Tiefe erlegen. Wenn man Dennett liest, fühlt man sich wie eine Maschine – bis man wieder zu Thomas Metzinger kommt, der uns zeigt, wie diese Maschine sich selbst täuscht."
     },
     {
       "nodeId": "metzinger",
@@ -41,7 +41,7 @@
     }
   ],
 
-  "closing_synthesis": "Du stehst nun am Ende des Pfades zwischen drei unversöhnlichen Welten. Dennett sagt, es gibt kein Rätsel – nur eine Verwirrung über Funktionen. Nagel und Jackson sagen, die erste Person ist ein unteilbares Geheimnis. Und Metzinger erklärt dieses Geheimnis als den eleganten Trick einer biologischen Simulation. Das Rätsel ist nicht gelöst. Aber du weißt jetzt, warum es verdient, schwer zu sein.",
+  "closing_synthesis": "Du stehst nun am Ende des Pfades zwischen drei unversöhnlichen Welten. Dennett sagt, es gibt kein Rätsel – nur eine Verwirrung über Funktionen. Nagel und Jackson sagen, die erste Person ist ein unteilbares Geheimnis. Und Metzinger erklärt dieses Geheimnis als den eleganten Trick einer biologischen Simulation. Das Rätsel ist nicht gelöst. Aber du weisst jetzt, warum es verdient, schwer zu sein.",
 
-  "closing_question": "Wenn kein Scanner der Welt jemals dein Schmerzgefühl finden kann – was bedeutet das für die Weise, wie wir einander begegnen? Ist das Leid eines anderen Menschen für dich eine bloße biologische Tatsache oder ein unantastbares Geheimnis?"
+  "closing_question": "Wenn kein Scanner der Welt jemals dein Schmerzgefühl finden kann – was bedeutet das für die Weise, wie wir einander begegnen? Ist das Leid eines anderen Menschen für dich eine blosse biologische Tatsache oder ein unantastbares Geheimnis?"
 }

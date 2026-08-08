@@ -18,7 +18,7 @@ const inter = Inter({
 })
 
 const BASE_URL = 'https://sanctum-mentis.vercel.app'
-const DESCRIPTION = 'Eine Bibliothek der großen Fragen — Kontext, der hilft, ein Thema zu Ende zu denken.'
+const DESCRIPTION = 'Eine Bibliothek der grossen Fragen – Kontext, der hilft, ein Thema zu Ende zu denken.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url:    '/og-image',
         width:  1200,
         height: 630,
-        alt:    'Sanctum Mentis — Eine Bibliothek der großen Fragen',
+        alt:    'Sanctum Mentis – Eine Bibliothek der grossen Fragen',
       },
     ],
   },
@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="de" className={`${marcellusSC.variable} ${inter.variable}`}>
       <body>
         <ShellCommandPaletteProvider>
-          {/* EXPERIMENT: Routen-Cross-Fade — Rückbau siehe RouteViewTransition.tsx */}
+          {/* EXPERIMENT: Routen-Cross-Fade – Rückbau siehe RouteViewTransition.tsx */}
           <RouteViewTransition>
             {children}
           </RouteViewTransition>

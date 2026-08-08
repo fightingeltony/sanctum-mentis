@@ -1,18 +1,18 @@
 // Rand-Artefakt-Gate für Lectio-Bilder (Bild-Stil-Kanon v2, Workflow Schritt 5).
 //
-// Prüft pro Kante den äußeren 10px-Streifen gegen den Streifen 14–24px weiter
+// Prüft pro Kante den äusseren 10px-Streifen gegen den Streifen 14–24px weiter
 // innen. Zwei belegte Artefakt-Formen werden erkannt:
-//   1. Eingebrannter Rahmen/Passepartout: gleichmäßiger Außenstreifen mit
+//   1. Eingebrannter Rahmen/Passepartout: gleichmässiger Aussenstreifen mit
 //      Farbsprung zum Innenbild (outerStd < 18 UND diff > 12).
-//   2. Vollflächig glatter Randstreifen: outerStd < 5 — der Kanon verlangt
+//   2. Vollflächig glatter Randstreifen: outerStd < 5 – der Kanon verlangt
 //      Korn ("slightly grainy"), eine derart glatte Kante ist fast immer
 //      künstlich. Achtung: dunkle glatte Bildinhalte (Vorhang, Schatten)
-//      können hier falsch anschlagen — Verdachtsfälle immer sichten, nie
+//      können hier falsch anschlagen – Verdachtsfälle immer sichten, nie
 //      blind neu generieren.
 //
 // Kalibriert auf 2k-Originale (1856×2304). Auf herunterskalierten Bildern
 // (800px-WebP) schlägt die Uniformitäts-Regel häufiger falsch an, weil das
-// Korn weggeglättet ist — Gate deshalb VOR der WebP-Konvertierung fahren.
+// Korn weggeglättet ist – Gate deshalb VOR der WebP-Konvertierung fahren.
 //
 // Aufruf:  node scripts/check-image-edges.js <bild> [<bild> ...]
 // Exit-Code 1, wenn mindestens ein Bild Verdacht zeigt.
@@ -20,7 +20,7 @@
 const sharp = require('sharp');
 
 async function stats(file, region) {
-  // sharp.stats() ignoriert die Pipeline — extract erst über toBuffer materialisieren
+  // sharp.stats() ignoriert die Pipeline – extract erst über toBuffer materialisieren
   const buf = await sharp(file).extract(region).png().toBuffer();
   const s = await sharp(buf).stats();
   return { mean: s.channels.slice(0, 3).map(c => c.mean), std: s.channels.slice(0, 3).map(c => c.stdev) };
@@ -59,7 +59,7 @@ async function checkFile(file) {
   for (const file of files) {
     console.log(file);
     const flagged = await checkFile(file);
-    console.log(flagged ? '  ERGEBNIS: VERDACHT — sichten!' : '  ERGEBNIS: sauber');
+    console.log(flagged ? '  ERGEBNIS: VERDACHT – sichten!' : '  ERGEBNIS: sauber');
     if (flagged) anyFlagged = true;
   }
   process.exit(anyFlagged ? 1 : 0);

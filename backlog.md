@@ -1,31 +1,31 @@
-# Sanctum Mentis — Backlog
+# Sanctum Mentis – Backlog
 
 ## Zuletzt abgeschlossen
 
 ### [x] Bebilderung `wenn-die-welt-wackelt` abgeschlossen (3.7.26)
 **Datum:** 3.7.26
-**Resultat:** Alle 6 Stationen bebildert (Aristoteles, Berkeley, Kant, Kuhn, Rorty, Gabriel) — 6/6 `image_status: "generiert"`. Kant erstmals mit Bild (nüchtern-klar-Ausnahme, s. `bild-stil-kanon` v2 + `lectio-anleitung.md`). Zwei Randartefakt-Nachbesserungen (Kant/Rorty: eingebrannter Rahmen; Kuhn: ausgeblichene Zone), je mit Full-bleed-/Konsistenz-Zusatz neu generiert. Darstellung im `LectioNarrativeViewer` global vergrößert (Bogen-Nische von 116×146px auf `clamp(230px, 30vw, 300px)`, Variante C) — betrifft alle erzählenden Lectios mit Bildern. Belegfall für `bild-stil-kanon` v2.
+**Resultat:** Alle 6 Stationen bebildert (Aristoteles, Berkeley, Kant, Kuhn, Rorty, Gabriel) – 6/6 `image_status: "generiert"`. Kant erstmals mit Bild (nüchtern-klar-Ausnahme, s. `bild-stil-kanon` v2 + `lectio-anleitung.md`). Zwei Randartefakt-Nachbesserungen (Kant/Rorty: eingebrannter Rahmen; Kuhn: ausgeblichene Zone), je mit Full-bleed-/Konsistenz-Zusatz neu generiert. Darstellung im `LectioNarrativeViewer` global vergrössert (Bogen-Nische von 116×146px auf `clamp(230px, 30vw, 300px)`, Variante C) – betrifft alle erzählenden Lectios mit Bildern. Belegfall für `bild-stil-kanon` v2.
 
-### [x] Lectio `wer-beobachtet` archiviert — Doppelung mit erzählender Neufassung (28.6.26)
+### [x] Lectio `wer-beobachtet` archiviert – Doppelung mit erzählender Neufassung (28.6.26)
 **Datum:** 28.6.26
-**Resultat:** `wer-beobachtet` (expositorisch, Selbst) war inhaltlich dieselbe Lectio wie die erzählende Neufassung `wer-bist-du-wenn-du-alles-weglaesst` — gleiches Tableau, gleiche vier Stimmen (Vedanta · Buddhismus · Jung · Metzinger), gleiche Kernfrage. Der A/B-Vergleich expositorisch ↔ erzählend hat seinen Zweck erfüllt. Nach Konvention archiviert: `data/lectio/wer-beobachtet.json` → `archiv/lectio-expositorisch/wer-beobachtet-expositorisch.json` (7. Vorläufer), abgemeldet aus `data.ts` + `REGISTERED_IDS`. Doku nachgezogen (CLAUDE.md, wo-stehe-ich.md, lectio-anleitung.md). Stand jetzt: 14 registriert, 7 archiviert; Migrations-Tally 8 erzählend / 4 in alter Form. 54 Vitest grün.
+**Resultat:** `wer-beobachtet` (expositorisch, Selbst) war inhaltlich dieselbe Lectio wie die erzählende Neufassung `wer-bist-du-wenn-du-alles-weglaesst` – gleiches Tableau, gleiche vier Stimmen (Vedanta · Buddhismus · Jung · Metzinger), gleiche Kernfrage. Der A/B-Vergleich expositorisch ↔ erzählend hat seinen Zweck erfüllt. Nach Konvention archiviert: `data/lectio/wer-beobachtet.json` → `archiv/lectio-expositorisch/wer-beobachtet-expositorisch.json` (7. Vorläufer), abgemeldet aus `data.ts` + `REGISTERED_IDS`. Doku nachgezogen (CLAUDE.md, wo-stehe-ich.md, lectio-anleitung.md). Stand jetzt: 14 registriert, 7 archiviert; Migrations-Tally 8 erzählend / 4 in alter Form. 54 Vitest grün.
 
 ### [x] Audit-Zyklus H1+H2+H3 abgeschlossen (Stand 16.6.26)
 **Datum:** 16.6.26
-**Resultat:** H1: CLAUDE.md zeigt auf `lectio-anleitung.md` (alle 4 Verweise korrigiert, Versionsangabe entfernt). H2: Lectio-Liste auf 15 registrierte synchronisiert, `annehmen-oder-ueberwinden` ergänzt, expositorische Vergleichsfälle klar markiert. H3: 6 `*-expositorisch`-Vorläufer nach `archiv/lectio-expositorisch/` (Repo-Ebene) verschoben. Vitest Regel 10 (Registrierungs-Parität Datei ↔ LECTIOS) als Netz gegen Wiederkehr. `audit-bestandesaufnahme.md` als Status-Tracker angelegt — ist die maßgebliche Liste für offene Audit-Punkte (nicht in backlog.md doppeln).
+**Resultat:** H1: CLAUDE.md zeigt auf `lectio-anleitung.md` (alle 4 Verweise korrigiert, Versionsangabe entfernt). H2: Lectio-Liste auf 15 registrierte synchronisiert, `annehmen-oder-ueberwinden` ergänzt, expositorische Vergleichsfälle klar markiert. H3: 6 `*-expositorisch`-Vorläufer nach `archiv/lectio-expositorisch/` (Repo-Ebene) verschoben. Vitest Regel 10 (Registrierungs-Parität Datei ↔ LECTIOS) als Netz gegen Wiederkehr. `audit-bestandesaufnahme.md` als Status-Tracker angelegt – ist die massgebliche Liste für offene Audit-Punkte (nicht in backlog.md doppeln).
 
 ### [x] Leere Bild-Nischen im Deploy behoben (Stand 16.6.26)
 **Datum:** 16.6.26
 **Resultat:** 10 referenzierte PNGs aus 3 Lectios committed (`Ruhe oder Rausch` 4×, `Verstehen oder weitergehen` 1×, `Wenn nichts vorgegeben ist` 5×). `lectio-vedanta.png` (Staging, 9 MB, nicht referenziert) bewusst nicht committed. Vitest-Lücke identifiziert: Regel 5 prüft `fs.existsSync` (lokal), nicht git-Tracking → blinde Stelle für uncommitted Bilder, eigenes [ ]-Item.
 
-### [x] Lectio-Anleitung konsolidiert — maßgeblich (Stand 14.6.26)
+### [x] Lectio-Anleitung konsolidiert – massgeblich (Stand 14.6.26)
 **Datum:** 14.6.26
-**Resultat:** `prompts/lectio-anleitung.md` — neue maßgebliche Bau-Anleitung, vereint lectio-mode v1.10, lectio-2.0-richtlinie und Schreib-Skill-Referenz. Bewährt durch vollen Lectio-Bau `annehmen-oder-ueberwinden` (Selbstverhältnis) + zwei closing_kernel-Bauten. `lectio-mode.md` als historische Detailreferenz markiert (v1.11), `lectio-2.0-richtlinie.md` als Archiv. Vier Nachträge in lectio-anleitung.md: Punkt 10.1 closing_kernel-Schreibdisziplin (zwei belegte Fehlerformen), Schluss-Station-bridge-Konvention, Typografie-Warnung Kernels, image_prompt Pflicht / Bild optional.
+**Resultat:** `prompts/lectio-anleitung.md` – neue massgebliche Bau-Anleitung, vereint lectio-mode v1.10, lectio-2.0-richtlinie und Schreib-Skill-Referenz. Bewährt durch vollen Lectio-Bau `annehmen-oder-ueberwinden` (Selbstverhältnis) + zwei closing_kernel-Bauten. `lectio-mode.md` als historische Detailreferenz markiert (v1.11), `lectio-2.0-richtlinie.md` als Archiv. Vier Nachträge in lectio-anleitung.md: Punkt 10.1 closing_kernel-Schreibdisziplin (zwei belegte Fehlerformen), Schluss-Station-bridge-Konvention, Typografie-Warnung Kernels, image_prompt Pflicht / Bild optional.
 **Bewährung (28.6.26):** lectio-anleitung.md bewährt sich auch im Umbau bestehender Lectios, nicht nur im Neubau (Beleg: wenn-die-welt-wackelt, 28.6.).
 
 ### [x] Neue Lectio live: annehmen-oder-ueberwinden (Selbstverhältnis)
 **Datum:** 14.6.26
-**Resultat:** Dritter Belegfall erzählend-erfahrend. Konkurrierend-konfrontativ, L2, 4 Stationen (Rogers → Nietzsche → Marc Aurel → Buddhismus). Abendszene als durchlaufende Figur. Mit image_prompts pro Station. closing_kernel: „Welche, das weißt nur du." — 58/58 Vitest grün, gepusht.
+**Resultat:** Dritter Belegfall erzählend-erfahrend. Konkurrierend-konfrontativ, L2, 4 Stationen (Rogers → Nietzsche → Marc Aurel → Buddhismus). Abendszene als durchlaufende Figur. Mit image_prompts pro Station. closing_kernel: „Welche, das weisst nur du." – 58/58 Vitest grün, gepusht.
 
 ### [x] closing_kernel auf zwei Lectios gesetzt
 **Datum:** 14.6.26
@@ -37,7 +37,7 @@
 
 ### [x] Open Graph / Social Media Metadata
 **Datum:** 19.5.26
-**Resultat:** `src/app/og-image/route.tsx` (Edge-Route) — 1200×630 OG-Image via `next/og` mit Pergament-Hintergrund (#F5EAD0), halbdurchsichtigem Quadranten-Kreuz (Option C hybrid), Eyebrow-Label "Philosophie · Denker · Konzepte", kursive Description, Sienna-Divider, URL-Wasserzeichen. `src/app/layout.tsx`: `metadataBase` = `https://sanctum-mentis.vercel.app`, vollständige `openGraph`- + `twitter`-Metadata, alte Mechanism-Description ersetzt durch Vision-Description *"Eine Bibliothek der großen Fragen — Kontext, der hilft, ein Thema zu Ende zu denken."*, `title.template = '%s | Sanctum Mentis'`. `/thema/[topicId]/page.tsx`: `generateMetadata` — Title = Tableau-Titel, Description = Tableau-Subtitle. `twitter:card = summary_large_image`.
+**Resultat:** `src/app/og-image/route.tsx` (Edge-Route) – 1200×630 OG-Image via `next/og` mit Pergament-Hintergrund (#F5EAD0), halbdurchsichtigem Quadranten-Kreuz (Option C hybrid), Eyebrow-Label "Philosophie · Denker · Konzepte", kursive Description, Sienna-Divider, URL-Wasserzeichen. `src/app/layout.tsx`: `metadataBase` = `https://sanctum-mentis.vercel.app`, vollständige `openGraph`- + `twitter`-Metadata, alte Mechanism-Description ersetzt durch Vision-Description *"Eine Bibliothek der grossen Fragen – Kontext, der hilft, ein Thema zu Ende zu denken."*, `title.template = '%s | Sanctum Mentis'`. `/thema/[topicId]/page.tsx`: `generateMetadata` – Title = Tableau-Titel, Description = Tableau-Subtitle. `twitter:card = summary_large_image`.
 
 ### [x] Achsen-Hints im QuadrantPlot + Y-Achsen-Label
 **Datum:** 19.5.26
@@ -47,50 +47,50 @@
 **Datum:** 19.5.26
 **Resultat:** `src/lib/searchIndex.ts` (neu): `SearchEntry`-Interface, `buildGlobalSearchIndex()` (gecacht, iteriert alle Tableaus), `normalize()` für akzentinsensitive Suche. `src/components/CommandPalette.tsx` (Rewrite): sucht alle 4 Tableaus, alle Knoten unabhängig vom aktiven Level, Footer "X Einträge in Y Tableaus". Treffer-Klick navigiert per `router.push('/thema/[id]?highlight=nodeId&level=N&tab=...')`. `src/components/ShellCommandPaletteProvider.tsx` (neu): globaler Cmd+K/Ctrl+K-Listener als React-Context-Provider, eingebunden in Root-Layout (`src/app/layout.tsx`). `src/components/HeaderSearchButton.tsx` (neu): Client-Component für Shell-Header. `/thema/[topicId]/page.tsx`: `searchParams`-Prop + `initialHighlight/Level/Tab`-Übergabe. `TopicViewer.tsx`: URL-Params auslesen, Level- + Highlight-Effect (setTimeout(0)-Defer).
 
-### [x] Stimm-Hierarchie finalisiert — finales Ensemble der Eingangsfragen
+### [x] Stimm-Hierarchie finalisiert – finales Ensemble der Eingangsfragen
 **Datum:** 19.5.26
-**Resultat:** Zweite Iteration aller vier Tableau-Subtitles und Intros nach externer Gegenprüfung (Gemini). Finales Ensemble: Selbst *"Die Suche nach dem Kern — Wer bist du, wenn du alles weglässt?"* / Geist *"Das Rätsel im Kopf — Wo wird aus Materie eigentlich Gefühl?"* / Realismus *"Wo endet die Welt und wo beginnst du?"* / Ethik *"Das Gewicht deiner Freiheit."* Intros: Geist *"Wenn du Schmerz fühlst — was passiert da eigentlich?"* (unverändert) / Selbst *"Bin ich ein Kern, den ich freilegen kann — oder ein Muster, das ich gerade bin?"* / Realismus *"Kannst du der Welt trauen, oder beginnt sie erst in deinem Kopf?"* / Ethik *"Was sollst du tun, wenn es keine einfache Antwort gibt?"* `data/library.json` synchronisiert. `bibliothek-architektur.md` im Repo auf finalen Stand (Du-Konsistenz-Abschnitt, methodische Notiz, Ensemble-Tabelle).
+**Resultat:** Zweite Iteration aller vier Tableau-Subtitles und Intros nach externer Gegenprüfung (Gemini). Finales Ensemble: Selbst *"Die Suche nach dem Kern – Wer bist du, wenn du alles weglässt?"* / Geist *"Das Rätsel im Kopf – Wo wird aus Materie eigentlich Gefühl?"* / Realismus *"Wo endet die Welt und wo beginnst du?"* / Ethik *"Das Gewicht deiner Freiheit."* Intros: Geist *"Wenn du Schmerz fühlst – was passiert da eigentlich?"* (unverändert) / Selbst *"Bin ich ein Kern, den ich freilegen kann – oder ein Muster, das ich gerade bin?"* / Realismus *"Kannst du der Welt trauen, oder beginnt sie erst in deinem Kopf?"* / Ethik *"Was sollst du tun, wenn es keine einfache Antwort gibt?"* `data/library.json` synchronisiert. `bibliothek-architektur.md` im Repo auf finalen Stand (Du-Konsistenz-Abschnitt, methodische Notiz, Ensemble-Tabelle).
 
 ### [x] v2-Erweiterung aller vier Tableaus + Subtitle-Synchronisation
 **Datum:** 18.–19.5.26
 **Resultat:** Vier Etappen in einer Session: (1) Annotations-Syntax durchgängig auf `[[Begriff:Erklärung]]` mit Doppelpunkt-Trenner. (2) Mehrstufige Texte ergänzt (Mild-Modus-Konvention als Regel). (3) Tooltips über alle Stufen L1–L5 verteilt (vorher konzentriert auf L1–L2). (4) Alle vier Subtitles auf lebensweltliche Fragen umgestellt; `data/library.json` synchronisiert. Sammelbeleg: `v2-erweiterung.md` im Repo-Root.
 
-### [x] Ethik-Tableau — Vollbau + Integration
+### [x] Ethik-Tableau – Vollbau + Integration
 **Datum:** 19.5.26
 **Resultat:** `data/ethik.json` (13 Denker, 10 Konzepte, Kant/Aristoteles/Mill als Hubs). In `src/lib/data.ts` importiert, `data/library.json` als `"available"` freigeschaltet. Verteilter Mild-Modus, Begleitnotiz dokumentiert Kuratorentscheidungen. Bildet Handlungs-Spur neben der Erkenntnis-Trias.
 
-### [x] Das Selbst — Content-Erweiterung
+### [x] Das Selbst – Content-Erweiterung
 **Datum:** 12.5.26
-**Resultat:** Alle 15 Denker und 11 Konzepte auf 4–6 Sätze ausgebaut. L1-Annotationen für Vedanta, Buddhismus, Atman, Anatta. Kurze Einfluss-Einträge (vedanta-buddhismus, buddhismus-jung, jung-metzinger, buddhismus-barrett, jung-ifs) auf 3–4 Sätze erweitert. Meditative Stimme des Tableaus erhalten — kein Inquisitor-Lauf.
+**Resultat:** Alle 15 Denker und 11 Konzepte auf 4–6 Sätze ausgebaut. L1-Annotationen für Vedanta, Buddhismus, Atman, Anatta. Kurze Einfluss-Einträge (vedanta-buddhismus, buddhismus-jung, jung-metzinger, buddhismus-barrett, jung-ifs) auf 3–4 Sätze erweitert. Meditative Stimme des Tableaus erhalten – kein Inquisitor-Lauf.
 
 ### [x] Synthese-Texte auf L5
 **Datum:** 12.5.26
-**Resultat:** `synthesis`-Feld in `Topic`-Schema (types.ts) ergänzt. Block in TopicViewer über Tabs, sichtbar nur auf L5 — identische visuelle Sprache wie Context-Strip (Label "SYNTHESE" gold, kursiver Fließtext). Texte für beide Bestandstableaus geschrieben: Geistphilosophie (Hard Problem / Reduktionismus vs. Irreduzibilität), Das Selbst (Substanz vs. Prozess / westlich vs. östlich).
+**Resultat:** `synthesis`-Feld in `Topic`-Schema (types.ts) ergänzt. Block in TopicViewer über Tabs, sichtbar nur auf L5 – identische visuelle Sprache wie Context-Strip (Label "SYNTHESE" gold, kursiver Fliesstext). Texte für beide Bestandstableaus geschrieben: Geistphilosophie (Hard Problem / Reduktionismus vs. Irreduzibilität), Das Selbst (Substanz vs. Prozess / westlich vs. östlich).
 
-### [x] Realismus und Konstruktivismus — Implementierung
+### [x] Realismus und Konstruktivismus – Implementierung
 **Datum:** 17.5.26
-**Resultat:** `data/realismus-und-konstruktivismus.json` angelegt (13 Denker, 9 Konzepte, 17 Influences, 9 Schools). In `data/library.json` registriert, in `src/lib/data.ts` importiert. Erster echter Mild-Modus-Lauf der Reihe — meditative Stimme, kein Inquisitor-Lauf.
+**Resultat:** `data/realismus-und-konstruktivismus.json` angelegt (13 Denker, 9 Konzepte, 17 Influences, 9 Schools). In `data/library.json` registriert, in `src/lib/data.ts` importiert. Erster echter Mild-Modus-Lauf der Reihe – meditative Stimme, kein Inquisitor-Lauf.
 
-### [x] Mild-Prompt + Verteilter Mild-Modus — Workflow-Dokumentation
+### [x] Mild-Prompt + Verteilter Mild-Modus – Workflow-Dokumentation
 **Datum:** 17.5.26
-**Resultat:** `prompts/mild-mode.md` erstellt (Mild positiv definiert: 10–14 Denker, drei Prüffragen, Architekt-Prüfer-Ablauf). CLAUDE.md um Sektion "Tableau-Bau — Workflow-Konvention" ergänzt. Bedingung für Wiederholbarkeit des verteilten Workflows ist erfüllt.
+**Resultat:** `prompts/mild-mode.md` erstellt (Mild positiv definiert: 10–14 Denker, drei Prüffragen, Architekt-Prüfer-Ablauf). CLAUDE.md um Sektion "Tableau-Bau – Workflow-Konvention" ergänzt. Bedingung für Wiederholbarkeit des verteilten Workflows ist erfüllt.
 
-### [x] Annotation-Tooltip — Rendering-Fix
+### [x] Annotation-Tooltip – Rendering-Fix
 **Datum:** 17.5.26
-**Resultat:** `src/lib/annotations.tsx` vollständig überarbeitet. Zwei Formate unterstützt: (A) `[[term: definition]]` — Term und Definition aus Klammern getrennt; (B) `term [[definition]]` — Term ist das letzte Wort vor `[[]]`, Definition ist der volle Klammer-Inhalt. Tooltip: dunkler Hintergrund (`oklch(0.26)`) statt transparentem Pergament-Look. Behebt: Doppelung (Definition inline + im Tooltip) und unlesbare Darstellung durch gleichen Hintergrund.
+**Resultat:** `src/lib/annotations.tsx` vollständig überarbeitet. Zwei Formate unterstützt: (A) `[[term: definition]]` – Term und Definition aus Klammern getrennt; (B) `term [[definition]]` – Term ist das letzte Wort vor `[[]]`, Definition ist der volle Klammer-Inhalt. Tooltip: dunkler Hintergrund (`oklch(0.26)`) statt transparentem Pergament-Look. Behebt: Doppelung (Definition inline + im Tooltip) und unlesbare Darstellung durch gleichen Hintergrund.
 
 ### [x] Landingpage-Überarbeitung
 **Datum:** 11.5.26
-**Resultat:** Hero-Block mit Vision-Klammer neu geschrieben. "Erste interaktive..."-Behauptung entfernt. "Philosophie und Psychologie" geöffnet zu "Ideengeschichte". Sektion III von Speicher-Metapher befreit, Du-Du-Ton durchgehalten. Footer-Untertitel auf "eine Bibliothek der großen Fragen" umgestellt.
+**Resultat:** Hero-Block mit Vision-Klammer neu geschrieben. "Erste interaktive..."-Behauptung entfernt. "Philosophie und Psychologie" geöffnet zu "Ideengeschichte". Sektion III von Speicher-Metapher befreit, Du-Du-Ton durchgehalten. Footer-Untertitel auf "eine Bibliothek der grossen Fragen" umgestellt.
 
 ### Session 2026-05-10
-- [x] **Mobile Dark-Mode Fix:** `color-scheme: light` in globals.css + Next.js Viewport API — verhindert Chrome Android "Force Dark Mode"
+- [x] **Mobile Dark-Mode Fix:** `color-scheme: light` in globals.css + Next.js Viewport API – verhindert Chrome Android "Force Dark Mode"
 - [x] **Glossar-Modus `[[Annotationen]]`:** `src/lib/annotations.tsx` neu, `Annotated`-Renderer in InfluenceGraph, QuadrantPlot, ThinkerList verdrahtet
-- [x] **QuadrantPlot → Denker-Navigation:** `onThinkerClick`-Callback — Klick auf Denker im Konzept-Panel wechselt direkt zum Denker-Tab mit Highlight
+- [x] **QuadrantPlot → Denker-Navigation:** `onThinkerClick`-Callback – Klick auf Denker im Konzept-Panel wechselt direkt zum Denker-Tab mit Highlight
 - [x] **Content-Erweiterung Philosophie des Geistes:** Alle 16 Denker + 17 Konzept-Beschreibungen auf 4–6 Sätze ausgebaut, L1-Annotationen für Fachbegriffe eingefügt
-- [x] **Das Selbst — 10 neue Einfluss-Kanten (L2–L5):** Auflösung der drei parallelen Cluster (Spiritualität / Psychotherapie / Neurowissenschaft); 13 von 15 Denkern jetzt vernetzt. Meditative Stimme explizit erhalten — kein Inquisitor-Lauf, gezielte Anreicherung. Erste Anwendung des Prinzips "Anreicherung statt Erweiterung".
+- [x] **Das Selbst – 10 neue Einfluss-Kanten (L2–L5):** Auflösung der drei parallelen Cluster (Spiritualität / Psychotherapie / Neurowissenschaft); 13 von 15 Denkern jetzt vernetzt. Meditative Stimme explizit erhalten – kein Inquisitor-Lauf, gezielte Anreicherung. Erste Anwendung des Prinzips "Anreicherung statt Erweiterung".
 - [x] **Build-Fix:** `s`-Flag aus Regex in annotations.tsx entfernt (ES2018-Inkompatibilität im TypeScript-Target)
-- [x] **CLAUDE.md:** Drei neue Konventions-Sektionen ergänzt — Kuratorische Grundlinie, L1-Glossar-Konvention, Schools-Konvention
+- [x] **CLAUDE.md:** Drei neue Konventions-Sektionen ergänzt – Kuratorische Grundlinie, L1-Glossar-Konvention, Schools-Konvention
 - [x] **Repo-Aufräumarbeiten:** Karteileiche `data/erkenntnistheorie.json` gelöscht; README.md Vorlage-Referenz auf `data/das-selbst.json` umgestellt
 
 ### Session 2025-05-09
@@ -100,13 +100,13 @@
   - Entfernt: Putnam
   - Konzept↔Konzept-Kanten in Denker-Kanten integriert (nicht separat modelliert)
   - Einfluss-Mapping: development/opposition/shared_diagnosis → influence/critique/parallel
-  - *Retrospektive: Volle Inquisitor-Schleife hat Vollständigkeit über Verstehbarkeit gestellt — bei zukünftigen Tableaus bewusster prüfen, ob die volle Schleife wirklich passt.*
+  - *Retrospektive: Volle Inquisitor-Schleife hat Vollständigkeit über Verstehbarkeit gestellt – bei zukünftigen Tableaus bewusster prüfen, ob die volle Schleife wirklich passt.*
 - [x] **Bug:** `school.name` → `school.label` in InfluenceGraph, ThinkerList, CommandPalette, types.ts
 - [x] **library.json:** Subtitle Philosophie des Geistes aktualisiert
-- [x] **Stufe 1 — Side-Panel (Frontend):**
+- [x] **Stufe 1 – Side-Panel (Frontend):**
   - InfluenceGraph: 320px-Panel rechts, Canvas schrumpft; Ausgehende+Eingehende Einflüsse als klickbare Links
   - QuadrantPlot: 300px-Panel rechts, Canvas schrumpft; Konzept-Typ-Badge + "Aus dieser Schule"
-  - **Mobile (< 640px): altes Design** — Detail-Karte unterhalb des Canvas (`sm:hidden`), kein Side-Panel; ist eine bewusste Entscheidung und soll so bleiben
+  - **Mobile (< 640px): altes Design** – Detail-Karte unterhalb des Canvas (`sm:hidden`), kein Side-Panel; ist eine bewusste Entscheidung und soll so bleiben
 
 ---
 
@@ -115,44 +115,44 @@
 ### [x] Glossar-Modus auf L1
 **Status:** entschieden 10.5.26
 **Entscheidung:** Inline-Annotationen im `summary`-Feld via `[[doppelte eckige Klammern]]`.
-- Ein `summary`-Feld pro Knoten — keine Duplikate
+- Ein `summary`-Feld pro Knoten – keine Duplikate
 - Annotationen in `[[...]]` eingebettet
 - Frontend L1: Annotationen sichtbar rendern (klein, kursiv)
 - Frontend L2+: Annotationen per Regex entfernen (`/\[\[.*?\]\]/g` → leer)
 - Skaliert über alle Tableaus ohne Pflegekosten
 
-**Abgegrenzt:** `summary_l1` + `summary_default` abgelehnt — 33 Paare in Geistphilosophie allein, skaliert nicht.
+**Abgegrenzt:** `summary_l1` + `summary_default` abgelehnt – 33 Paare in Geistphilosophie allein, skaliert nicht.
 Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lectio-Modus, nicht des summary-Feldes.
 **Nächster Schritt:** Schema und Frontend umsetzen beim nächsten Tableau-Bau.
 
 ---
 
-### [x] Side-Panel "Tiefenbohrung" — Stufe 1
+### [x] Side-Panel "Tiefenbohrung" – Stufe 1
 **Status:** abgeschlossen 10.5.26
 **Umgesetzt:**
 - InfluenceGraph: 320px-Panel rechts, Canvas schrumpft; ausgehende + eingehende Kanten als klickbare Links mit Navigation zwischen Knoten
 - QuadrantPlot: 300px-Panel rechts; Konzept-Typ-Badge + "Aus dieser Schule" mit `onThinkerClick`-Navigation zum Denker-Tab
 - `Annotated`-Renderer in allen drei Komponenten verdrahtet (ThinkerList, InfluenceGraph, QuadrantPlot)
 - Content-Erweiterung Philosophie des Geistes: 4–6 Sätze pro Knoten, L1-Annotationen für Fachbegriffe
-- Mobile: Detail-Karte unterhalb Canvas (`sm:hidden`) — bewusste Entscheidung, bleibt so
+- Mobile: Detail-Karte unterhalb Canvas (`sm:hidden`) – bewusste Entscheidung, bleibt so
 **Nächster Schritt:** Zweites Tableau (Das Selbst) mit gleicher Tiefe ausbauen, dann über Stufe 2 entscheiden.
 
 ---
 
 ### [x] Synthese-Texte auf L5 einführen
-**Status:** implementiert 12.5.26 — Duplikat-Eintrag, abgehakt 14.6.26 (vgl. [x]-Eintrag weiter oben)
+**Status:** implementiert 12.5.26 – Duplikat-Eintrag, abgehakt 14.6.26 (vgl. [x]-Eintrag weiter oben)
 
 ---
 
 ### [x] Lebensweltliche Eingangs-Anker prüfen
 **Status:** implementiert 19.5.26
 **Kontext:** Tableau-Subtitles sind teilweise akademisch formuliert. Die Sanctum-Vision verlangt lebensweltliche Anker, die einen Nutzer bei einer Frage abholen, die er selbst hat.
-**Resultat:** `topic.intro`-Feld eingeführt (optional, immer sichtbar, kursiv in Akzentfarbe). Alle vier Tableaus befüllt — finale Texte nach zweiter Iteration: vgl. "Stimm-Hierarchie finalisiert"-Eintrag oben.
+**Resultat:** `topic.intro`-Feld eingeführt (optional, immer sichtbar, kursiv in Akzentfarbe). Alle vier Tableaus befüllt – finale Texte nach zweiter Iteration: vgl. "Stimm-Hierarchie finalisiert"-Eintrag oben.
 
-### [x] Subtitle-Synchronisation — eine einzige Quelle
+### [x] Subtitle-Synchronisation – eine einzige Quelle
 **Status:** implementiert 19.5.26
-**Kontext:** Library-Card und Topic-JSON pflegten teilweise abweichende Subtitle-Texte (insbesondere Ethik: Library "Was sollen wir tun?", JSON leer). Außerdem waren alle vier Subtitles noch akademisch-deskriptiv statt lebensweltlich.
-**Resultat:** Alle vier Tableau-Subtitles in zwei Iterationen überarbeitet (lebensweltlich, einladend, Du-Ton). Finale Ensemble-Texte dokumentiert in `bibliothek-architektur.md` (Repo-Root). `data/library.json` als einzige Quelle synchronisiert. Stimm-Hierarchie-Konvention in `prompts/mild-mode.md` aufgenommen. — Finale Subtitle-Texte: vgl. "Stimm-Hierarchie finalisiert"-Eintrag oben.
+**Kontext:** Library-Card und Topic-JSON pflegten teilweise abweichende Subtitle-Texte (insbesondere Ethik: Library "Was sollen wir tun?", JSON leer). Ausserdem waren alle vier Subtitles noch akademisch-deskriptiv statt lebensweltlich.
+**Resultat:** Alle vier Tableau-Subtitles in zwei Iterationen überarbeitet (lebensweltlich, einladend, Du-Ton). Finale Ensemble-Texte dokumentiert in `bibliothek-architektur.md` (Repo-Root). `data/library.json` als einzige Quelle synchronisiert. Stimm-Hierarchie-Konvention in `prompts/mild-mode.md` aufgenommen. – Finale Subtitle-Texte: vgl. "Stimm-Hierarchie finalisiert"-Eintrag oben.
 
 ---
 
@@ -164,22 +164,22 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ### [x] Stufen-Wechsel-Indikator
 **Status:** implementiert 19.5.26
-**Kontext:** Beim Slider-Wechsel gab es kein Signal wenn ein bestehender Knoten einen tieferen Text bekommt — nur `NEU` für neue Knoten.
-**Resultat:** Zwei komplementäre Signale: (1) `↑ Vertieft`-Tag auf der Karte + Filter-Button (permanent, für Denker mit `firstLevel < levelId && versions[levelId]` existiert). (2) Fade-Animation (400ms opacity+translateY) bei jedem Textwechsel — auch für neue Knoten. Beides in `ThinkerList.tsx`, `isDeepened` in `complexityEngine.ts`.
+**Kontext:** Beim Slider-Wechsel gab es kein Signal wenn ein bestehender Knoten einen tieferen Text bekommt – nur `NEU` für neue Knoten.
+**Resultat:** Zwei komplementäre Signale: (1) `↑ Vertieft`-Tag auf der Karte + Filter-Button (permanent, für Denker mit `firstLevel < levelId && versions[levelId]` existiert). (2) Fade-Animation (400ms opacity+translateY) bei jedem Textwechsel – auch für neue Knoten. Beides in `ThinkerList.tsx`, `isDeepened` in `complexityEngine.ts`.
 
 ---
 
 ### [ ] Library-Architektur sichtbar machen
 **Status:** identifiziert 19.5.26, zurückgestellt bis Politische Philosophie live
-**Kontext:** Die vier Tableaus bilden keine zufällige Liste — sie ordnen sich in zwei Gruppen: Erkenntnis-Trias (Geist / Selbst / Realismus: Akt, Subjekt, Objekt der Erkenntnis) und Handlungs-Spur (Ethik + geplant: Politische Philosophie). Diese Architektur ist kuratorische Entscheidung — sichtbar machen würde der Library-Page eine zweite Bedeutungsebene geben.
+**Kontext:** Die vier Tableaus bilden keine zufällige Liste – sie ordnen sich in zwei Gruppen: Erkenntnis-Trias (Geist / Selbst / Realismus: Akt, Subjekt, Objekt der Erkenntnis) und Handlungs-Spur (Ethik + geplant: Politische Philosophie). Diese Architektur ist kuratorische Entscheidung – sichtbar machen würde der Library-Page eine zweite Bedeutungsebene geben.
 **Umsetzungsoptionen:** Trennende Kapitelmarkierungen / zwei Reihen mit klarer Bedeutung / implizite Anordnung durch Position und Abstand.
 **Bedingung:** Lohnt erst, wenn Handlungs-Spur mindestens zwei live Tableaus hat (also Politische Philosophie live). Eine Gruppe aus einem Tableau ist keine Gruppe.
 **Referenz:** `bibliothek-architektur.md` im Repo-Root.
 **Nächster Schritt:** Nach zweitem Handlungs-Tableau aufnehmen.
-**Update 23.5.26:** Implizite Spur-Sichtbarkeit umgesetzt — Farb-Architektur als Familien-Signal, Spur-Reihenfolge in library.json, Eyebrow-Markierung pro Card (Spur-Name in Spur-Farbe, uppercase, 11px). Explizite Sichtbarkeits-Lösung (Section-Header / Trennstriche / Spur-Filter) bleibt offen, ausgelöst sobald alle Spuren mindestens zwei Tableaus tragen.
-**Update 29.5.26:** Bedingung erfüllt — alle drei Spuren haben nun ≥2 Tableaus (Erkenntnis 3, Handlung 2, Existenz 2). Explizite Sichtbarkeits-Lösung kann jetzt umgesetzt werden.
-**Update 31.5.26:** Bedingung wieder gebrochen — vierte Spur (Wandlung) hat nur 1 Tableau. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt auch für vier Spuren.
-**Update 31.5.26 (später):** Gut/Böse eröffnet **fünfte Spur (Menschenbild, hue 345)**. Bedingung weiterhin nicht erfüllt — jetzt *zwei* Ein-Tableau-Spuren (Wandlung + Menschenbild). Section-Header warten, bis beide ≥2 Tableaus haben.
+**Update 23.5.26:** Implizite Spur-Sichtbarkeit umgesetzt – Farb-Architektur als Familien-Signal, Spur-Reihenfolge in library.json, Eyebrow-Markierung pro Card (Spur-Name in Spur-Farbe, uppercase, 11px). Explizite Sichtbarkeits-Lösung (Section-Header / Trennstriche / Spur-Filter) bleibt offen, ausgelöst sobald alle Spuren mindestens zwei Tableaus tragen.
+**Update 29.5.26:** Bedingung erfüllt – alle drei Spuren haben nun ≥2 Tableaus (Erkenntnis 3, Handlung 2, Existenz 2). Explizite Sichtbarkeits-Lösung kann jetzt umgesetzt werden.
+**Update 31.5.26:** Bedingung wieder gebrochen – vierte Spur (Wandlung) hat nur 1 Tableau. Implizite Hybrid-Lösung (Farbe, Reihenfolge, Eyebrow) trägt auch für vier Spuren.
+**Update 31.5.26 (später):** Gut/Böse eröffnet **fünfte Spur (Menschenbild, hue 345)**. Bedingung weiterhin nicht erfüllt – jetzt *zwei* Ein-Tableau-Spuren (Wandlung + Menschenbild). Section-Header warten, bis beide ≥2 Tableaus haben.
 **Update 1.6.26:** Verwandlung live → Wandlung-Spur hat jetzt **2 Tableaus** (hue 152 + 156). Section-Header-Bedingung für Wandlung-Spur erfüllt. Noch fehlend: zweites Menschenbild-Tableau.
 **Update 1.6.26 (Selbstverhältnis):** Existenz-Spur auf **vier Tableaus** gewachsen (Begegnung 35 · Existenzialismus 45 · Lebenskunst 65 · Selbstverhältnis 71).
 **Nächster Schritt:** Section-Header implementieren sobald auch Menschenbild ≥2 Tableaus hat. Oder schon jetzt für Wandlung allein einschalten und Menschenbild nachziehen lassen.
@@ -188,7 +188,7 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ### [x] Stimm-Hierarchie als Konvention in `prompts/mild-mode.md`
 **Status:** implementiert 19.5.26
-**Resultat:** Neue Sektion "Stimm-Hierarchie — drei Stimmen pro Tableau" in `prompts/mild-mode.md`. Tabelle (Subtitle / Intro / Synthese), Prüffragen, Personalpronomen-Kompass. Referenzdokument: `bibliothek-architektur.md` im Repo-Root.
+**Resultat:** Neue Sektion "Stimm-Hierarchie – drei Stimmen pro Tableau" in `prompts/mild-mode.md`. Tabelle (Subtitle / Intro / Synthese), Prüffragen, Personalpronomen-Kompass. Referenzdokument: `bibliothek-architektur.md` im Repo-Root.
 
 ---
 
@@ -199,7 +199,7 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] Logbuch-Tab (Tab IV) — Zweck klären
+### [ ] Logbuch-Tab (Tab IV) – Zweck klären
 **Status:** identifiziert 14.5.26, Zweck offen
 **Kontext:** Vierter Tab in Carta Librorum, bei Sanctum fehlend. Mögliche Zwecke: Lese-Spur, Bookmarking, persönliche Notizen, erste Form von Lectio.
 **Nächster Schritt:** Beobachten, ob Bedarf entsteht. Aktuell nicht priorisieren.
@@ -208,7 +208,7 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ### [ ] UI-Tonart-Vergleich Sanctum vs. Carta
 **Status:** Beobachtung 14.5.26
-**Kontext:** Carta nutzt narrative Tab-Namen ("Personen", "Beziehungen") und zugängliche Beschreibungen. Sanctum nutzt akademische Tab-Namen ("Denker", "Einflüsse") und definitorische Beschreibungen — präzise, aber kühler. Frage: Tab-Namen lebensweltlicher? "Stimmen" statt "Denker"? "Gespräche" statt "Einflüsse"?
+**Kontext:** Carta nutzt narrative Tab-Namen ("Personen", "Beziehungen") und zugängliche Beschreibungen. Sanctum nutzt akademische Tab-Namen ("Denker", "Einflüsse") und definitorische Beschreibungen – präzise, aber kühler. Frage: Tab-Namen lebensweltlicher? "Stimmen" statt "Denker"? "Gespräche" statt "Einflüsse"?
 **Risiko:** Marken-Verschiebung Richtung Self-Help. Sanctum braucht den akademischen Anker.
 **Tendenz:** Keine vorschnellen Umbenennungen. Tab-Namen lassen wie sie sind. Schulen-Namen beim nächsten Tableau (Ethik) bewusst prüfen.
 **Nächster Schritt:** Beim nächsten Tableau Schulen-Namen prüfen. Tab-Frage in den Hinterkopf legen.
@@ -217,14 +217,14 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ### [ ] Schulen-Labels im Geist-Tableau überarbeiten
 **Status:** identifiziert 14.5.26
-**Kontext:** Filter des Geist-Tableaus zeigt akademisches Vokabular pur als ersten Eingang: *Substanzdualismus, Logischer Behaviorismus, Eliminativer Materialismus, Heterophänomenologie...* Das Selbst hat "Vedanta", "Buddhismus"; Realismus hat "Klassischer Empirismus", "Pragmatismus" — beides zugänglicher. Geist ist der akademische Ausreißer an der Tür.
+**Kontext:** Filter des Geist-Tableaus zeigt akademisches Vokabular pur als ersten Eingang: *Substanzdualismus, Logischer Behaviorismus, Eliminativer Materialismus, Heterophänomenologie...* Das Selbst hat "Vedanta", "Buddhismus"; Realismus hat "Klassischer Empirismus", "Pragmatismus" – beides zugänglicher. Geist ist der akademische Ausreisser an der Tür.
 **Vorschlag:** Schulen-Labels mit lebensweltlicheren Bezeichnungen ergänzen. "Substanzdualismus" → "Geist und Körper als zwei Welten". "Eliminativer Materialismus" → "Alltagspsychologie als Irrtum". JSON bleibt akademisch korrekt, Label wird erfahrbar.
-**Aufwand:** Gering — einmaliger Pass durch die Schools-Liste.
+**Aufwand:** Gering – einmaliger Pass durch die Schools-Liste.
 **Nächster Schritt:** Beim nächsten Geist-Tableau-Pass aufnehmen, eventuell zusammen mit polarem Eingang.
 
 ---
 
-### [ ] Side-Panel "Tiefenbohrung" — Stufe 2
+### [ ] Side-Panel "Tiefenbohrung" – Stufe 2
 **Status:** diskutiert 10.5.26, abhängig von Stufe 1 + zweitem Tableau
 **Kontext:** Knotentyp-spezifische Layouts. Gedankenexperimente brauchen Schritt-für-Schritt-Reveal (Setup → Frage → Antwort → Schluss); Theorien brauchen Kernthese + Hauptargument + Hauptkritik; Methoden brauchen Ziel + Schritte + Limitationen.
 **Schema-Implikation:** Optionale Felder `argument_structure`, `kernthese`, `kritik` zusätzlich zu `summary`.
@@ -234,13 +234,13 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 ---
 
 ### [ ] Modi-System für Tableau-Produktion
-**Status:** konzeptionell verstanden 10.5.26, nicht codifiziert — Mild neuer Default
+**Status:** konzeptionell verstanden 10.5.26, nicht codifiziert – Mild neuer Default
 **Kontext:** Nicht jedes Thema braucht die volle Architekt-Inquisitor-Schleife. Manche Themen verlieren durch akademische Vollständigkeit ihre Stimme (Beispiel: Landkarte des Selbst hat meditativen Charakter, der durch Inquisitor-Lauf zerstört würde). Andere Themen verlangen sie (Geistphilosophie, Erkenntnistheorie).
-**Retrospektive:** Die Erweiterung von 13 auf 16 Denker in Geistphilosophie hat den Datensatz vollständiger gemacht, aber nicht abschlussfähiger — bei zukünftigen Tableaus bewusst vorprüfen, ob die volle Schleife wirklich passt.
+**Retrospektive:** Die Erweiterung von 13 auf 16 Denker in Geistphilosophie hat den Datensatz vollständiger gemacht, aber nicht abschlussfähiger – bei zukünftigen Tableaus bewusst vorprüfen, ob die volle Schleife wirklich passt.
 **Drei Modi:**
 - Solo-Architekt: 8–12 Knoten, ohne kritische Revision, schnell und intuitiv
-- Mild: Architekt baut, eine Runde milde Selbstprüfung, ohne vollen Vollständigkeitsanspruch — **neuer Default**
-- Volle Schleife: Architekt → Inquisitor → Architekt, akademische Reife, 16+ Knoten — bewusste Ausnahme
+- Mild: Architekt baut, eine Runde milde Selbstprüfung, ohne vollen Vollständigkeitsanspruch – **neuer Default**
+- Volle Schleife: Architekt → Inquisitor → Architekt, akademische Reife, 16+ Knoten – bewusste Ausnahme
 
 **Implikation für Library:** `complexity_mode`-Feld im `meta`-Block jedes Tableaus, plus `intended_audience`. Macht die Verschiedenheit der Tableaus zu einem Feature, nicht zu einer Inkonsistenz.
 **Nächster Schritt:** In zukünftigen Tableau-Prompts den gewünschten Modus explizit nennen. Meta-Felder bei nächster Schema-Erweiterung mit aufnehmen.
@@ -248,53 +248,53 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 ---
 
 ### [x] Mild-Prompt als Repo-Standard
-**Status:** implementiert 17.5.26 (v1), aktualisiert 19.5.26 (v2) — `prompts/mild-mode.md`
-**Kontext:** Im Backlog gab es keinen ausformulierten Mild-Modus-Prompt — nur die negative Definition ("nicht volle Schleife"). Aus der Realismus-Konversation ist ein erster Prompt entstanden, der Mild positiv definiert: 10–14 Denker, drei Prüffragen, kein Vollständigkeitsreflex. Hat sich am realen Bau bewährt.
+**Status:** implementiert 17.5.26 (v1), aktualisiert 19.5.26 (v2) – `prompts/mild-mode.md`
+**Kontext:** Im Backlog gab es keinen ausformulierten Mild-Modus-Prompt – nur die negative Definition ("nicht volle Schleife"). Aus der Realismus-Konversation ist ein erster Prompt entstanden, der Mild positiv definiert: 10–14 Denker, drei Prüffragen, kein Vollständigkeitsreflex. Hat sich am realen Bau bewährt.
 **v2 (19.5.26):** Erheblich ausgebaut nach v2-Etappe. Neu: Mehrstufige Texte als Regel, Tonalitäts-Verschiebung L1→L5, Tooltips bis L5, einheitliche Annotations-Syntax, Stimm-Hierarchie (Subtitle/Intro/Synthese), Du-Konsistenz, Achsen-Hints im Schema, Influence-Stufungs-Regel, Validierungs-Checkliste, Ankertypen (gewachsen/architektonisch), Versionshistorie.
 
 ---
 
 ### [x] Hard-Prompt als Repo-Standard
-**Status:** implementiert 19.5.26 (v1) — `prompts/hard-mode.md`
+**Status:** implementiert 19.5.26 (v1) – `prompts/hard-mode.md`
 **Kontext:** Gegenstück zu `mild-mode.md` für akademisch sensible Tableaus. Ergibt sich aus dem etablierten Inquisitor-Prompt-Konzept im Backlog, jetzt als vollständiger Baustandard ausformuliert.
-**Inhalt:** Anwendungs-Gatekeeper (drei Tests, alle müssen positiv sein), vier Prüfsteine (Reduktionismus, Kategorienfehler, Blinde Flecken, Logik der Kanten), Anti-Höflichkeits-Klauseln, Größenrichtwerte (16–22 Denker), Architekt-Prompt und Inquisitor-Prompt als copy-paste-fähige Startblöcke, Begleitnotiz-Format. Strukturelle Konventionen (Stimm-Hierarchie, Du-Konsistenz, Achsen-Hints, Annotations-Syntax) mit Mild-Modus identisch. CLAUDE.md um Hard-Modus-Sektion ergänzt.
+**Inhalt:** Anwendungs-Gatekeeper (drei Tests, alle müssen positiv sein), vier Prüfsteine (Reduktionismus, Kategorienfehler, Blinde Flecken, Logik der Kanten), Anti-Höflichkeits-Klauseln, Grössenrichtwerte (16–22 Denker), Architekt-Prompt und Inquisitor-Prompt als copy-paste-fähige Startblöcke, Begleitnotiz-Format. Strukturelle Konventionen (Stimm-Hierarchie, Du-Konsistenz, Achsen-Hints, Annotations-Syntax) mit Mild-Modus identisch. CLAUDE.md um Hard-Modus-Sektion ergänzt.
 
 ---
 
 ### [x] Verteilter Mild-Modus: Architekt + Prüfer in getrennten Chats
 **Status:** als Workflow-Konvention in CLAUDE.md aufgenommen 17.5.26
-**Kontext:** Statt Architekt-Inquisitor-Schleife in einer Instanz: Architekt baut in Chat A, neuer Chat B prüft frisch gegen Mild-Prompt + JSON + Stilreferenz, Architekt arbeitet Befunde in Chat A ein. Prüfer kontaminationsfrei — er hat den Bauprozess nicht miterlebt. Wichtig: Prüfer *nicht* im Projektwissen platzieren, sonst verwandelt der Backlog-Kontext ihn zurück in einen Inquisitor.
+**Kontext:** Statt Architekt-Inquisitor-Schleife in einer Instanz: Architekt baut in Chat A, neuer Chat B prüft frisch gegen Mild-Prompt + JSON + Stilreferenz, Architekt arbeitet Befunde in Chat A ein. Prüfer kontaminationsfrei – er hat den Bauprozess nicht miterlebt. Wichtig: Prüfer *nicht* im Projektwissen platzieren, sonst verwandelt der Backlog-Kontext ihn zurück in einen Inquisitor.
 **Vorteile:** Saubere Mild-Schleife, keine Selbsttäuschung, dokumentierte Bauentscheidungen.
-**Beobachtung aus Realismus-Bau (14.5.26):** Prüfer-Output disziplinierter als erwartet — drei Fragen, präzise, keine Vollständigkeitskritik. Eingriff 3 (L3-Version für Sinnfeld) wurde berechtigt zurückgewiesen — Prüfer kannte Konvention der Reihe besser als der vorschlagende Architekt. Bedingung für Wiederholbarkeit: Mild-Prompt muss als Datei existieren, sonst wird Methode jedes Mal neu erfunden.
-**Abschluss:** Workflow in CLAUDE.md unter "Tableau-Bau — Workflow-Konvention" dokumentiert.
+**Beobachtung aus Realismus-Bau (14.5.26):** Prüfer-Output disziplinierter als erwartet – drei Fragen, präzise, keine Vollständigkeitskritik. Eingriff 3 (L3-Version für Sinnfeld) wurde berechtigt zurückgewiesen – Prüfer kannte Konvention der Reihe besser als der vorschlagende Architekt. Bedingung für Wiederholbarkeit: Mild-Prompt muss als Datei existieren, sonst wird Methode jedes Mal neu erfunden.
+**Abschluss:** Workflow in CLAUDE.md unter "Tableau-Bau – Workflow-Konvention" dokumentiert.
 
 ---
 
-### [x] Lectio-Modus — von Nice-to-Have zu Kernfeature
-**Status:** vollständig implementiert und live, Stand 22.5.26 — aktualisiert 6.6.26
+### [x] Lectio-Modus – von Nice-to-Have zu Kernfeature
+**Status:** vollständig implementiert und live, Stand 22.5.26 – aktualisiert 6.6.26
 **Kontext:** Geführte Tour durchs Tableau (zeitliche Sequenz statt räumlicher Karte). Frontend live (`/lectio/[id]`), Discovery-Abschnitt in Tableau-Köpfen, `lectio_brief`-Schema, progressives Reveal mit Fade-in.
 **Skripte im Repo (14 live):**
-- `hard-problem` — Geist, narrativ-historisch, L2, 6 Stationen
-- `wer-beobachtet` — Selbst, konkurrierend-konfrontativ, L3, 4 Stationen
-- `findest-du-oder-machst-du` — Selbst, dialektisch-revidierend, L3, 5 Stationen (via path[].brief)
-- `wenn-die-welt-wackelt` — Realismus, emotional-kumulativ, L2, 6 Stationen
-- `warum-sollst-du` — Ethik, destruktiv-aufbauend, L2, 4 Stationen
-- `wenn-nichts-vorgegeben` — Existenzialismus, narrativ-historisch, L2, 5 Stationen
-- `warum-gehorchst-du` — Politische Philosophie, L3, 5 Stationen
-- `ruhe-oder-rausch` — Lebenskunst, L2, 4 Stationen
-- `der-weg-des-menschen` — Begegnung, kontemplativ-vertiefend, L2, 4 Stationen (Ein-Werk-Lectio, step_brief)
-- `ist-der-andere-hoelle-oder-heimat` — Begegnung, konkurrierend-konfrontativ, L3, 4 Stationen
-- `verstehen-oder-weitergehen` — Wandlung, narrativ-historisch, L3, 5 Stationen (alle step_brief)
-- `stell-die-frage-anders` — Gut/Böse, destruktiv-aufbauend, L3, 5 Stationen (alle lectio_brief)
-- `wer-bist-du-wenn-du-alles-weglaesst` — Selbst, konkurrierend-konfrontativ, L2, 4 Stationen (**ton: erzählend-erfahrend** — erster Test-Fall, neue Render-Form `LectioNarrativeViewer`)
-- `vom-wissen-zum-glauben` — Verwandlung, konkurrierend-konfrontativ, L3, 6 Stationen (**ton: erzählend-erfahrend** — zweiter Belegfall; Augustinus→Stoa→Rilke→Eckhart→James→Jung; Tonwechsel bei James ausdrücklich markiert; durchlaufende Figur: die Glaswand)
-**Methode:** `prompts/lectio-mode.md` v1.9 — zehn methodische Entscheidungen. Schema-Erweiterungen: `step_brief` (pro-Station-Text), `path_type` (Datenwert), `ton` (expositorisch / erzählend-erfahrend), `LectioNarrative`-Interface (hook/body/kernel/bridge).
-**Lectio-Prosa (8.6.26):** `prompts/schreib-skill-lectio.md` (neu) — Satzrhythmus-Variation, Fehler-Katalog, Before/After-Beispiele. `prompts/lectio-2.0-richtlinie.md` aktualisiert: Regel 1+4 auf Rhythmus-Fokus, Stakkato-Warnung, Schreib-Skill als vorgelagerte Instanz. Beide erzählend-erfahrend-Lectios rhythmisch überarbeitet.
+- `hard-problem` – Geist, narrativ-historisch, L2, 6 Stationen
+- `wer-beobachtet` – Selbst, konkurrierend-konfrontativ, L3, 4 Stationen
+- `findest-du-oder-machst-du` – Selbst, dialektisch-revidierend, L3, 5 Stationen (via path[].brief)
+- `wenn-die-welt-wackelt` – Realismus, emotional-kumulativ, L2, 6 Stationen
+- `warum-sollst-du` – Ethik, destruktiv-aufbauend, L2, 4 Stationen
+- `wenn-nichts-vorgegeben` – Existenzialismus, narrativ-historisch, L2, 5 Stationen
+- `warum-gehorchst-du` – Politische Philosophie, L3, 5 Stationen
+- `ruhe-oder-rausch` – Lebenskunst, L2, 4 Stationen
+- `der-weg-des-menschen` – Begegnung, kontemplativ-vertiefend, L2, 4 Stationen (Ein-Werk-Lectio, step_brief)
+- `ist-der-andere-hoelle-oder-heimat` – Begegnung, konkurrierend-konfrontativ, L3, 4 Stationen
+- `verstehen-oder-weitergehen` – Wandlung, narrativ-historisch, L3, 5 Stationen (alle step_brief)
+- `stell-die-frage-anders` – Gut/Böse, destruktiv-aufbauend, L3, 5 Stationen (alle lectio_brief)
+- `wer-bist-du-wenn-du-alles-weglaesst` – Selbst, konkurrierend-konfrontativ, L2, 4 Stationen (**ton: erzählend-erfahrend** – erster Test-Fall, neue Render-Form `LectioNarrativeViewer`)
+- `vom-wissen-zum-glauben` – Verwandlung, konkurrierend-konfrontativ, L3, 6 Stationen (**ton: erzählend-erfahrend** – zweiter Belegfall; Augustinus→Stoa→Rilke→Eckhart→James→Jung; Tonwechsel bei James ausdrücklich markiert; durchlaufende Figur: die Glaswand)
+**Methode:** `prompts/lectio-mode.md` v1.9 – zehn methodische Entscheidungen. Schema-Erweiterungen: `step_brief` (pro-Station-Text), `path_type` (Datenwert), `ton` (expositorisch / erzählend-erfahrend), `LectioNarrative`-Interface (hook/body/kernel/bridge).
+**Lectio-Prosa (8.6.26):** `prompts/schreib-skill-lectio.md` (neu) – Satzrhythmus-Variation, Fehler-Katalog, Before/After-Beispiele. `prompts/lectio-2.0-richtlinie.md` aktualisiert: Regel 1+4 auf Rhythmus-Fokus, Stakkato-Warnung, Schreib-Skill als vorgelagerte Instanz. Beide erzählend-erfahrend-Lectios rhythmisch überarbeitet.
 **Erzählend-Badge (8.6.26):** Lectio-Karten in TopicViewer + Schwelle-Metazeile in LectioNarrativeViewer zeigen `Erzählend` bei ton: erzählend-erfahrend.
 **lectio_brief-Felder (ca. 40 total):** Geist (8), Selbst (4+), Realismus (6), Ethik (4), Existenzialismus (5+2), Politik (5), Lebenskunst (4), Begegnung (6), Wandlung (0, alles step_brief), Gut/Böse (5)
 **Navigation (6.6.26):** `LectioNarrativeViewer` hat sichtbaren Zurück-Button (Footer drei Spalten: ← zurück · Dots · weiter →) + Brand als Exit-Link (Border-Box, top-left) zurück zum Tableau.
 **Partnerin-Feedback ✓ (8.6.26):** Erzählend-erfahrend-Ton bestätigt. Zwei Belegfälle vorhanden.
-**Nächster Schritt:** lectio-mode v1.10 schreiben — erzählend-erfahrend als fünften kanonisierten Ton aufnehmen.
+**Nächster Schritt:** lectio-mode v1.10 schreiben – erzählend-erfahrend als fünften kanonisierten Ton aufnehmen.
 **Folgearbeit:**
 - Tableau-übergreifende Lectios (Schema-Erweiterung: tableauId als Array)
 - Bei Bedarf weitere Lectios pro Tableau
@@ -303,49 +303,49 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ### [ ] L1 als Einstiegs-Tour, nicht als Anfänger-Stufe
 **Status:** diskutiert 14.5.26, entschieden für Prüfung
-**Kontext:** L1 ist aktuell historisch befüllt — frühe Denker bekommen L1-Texte, späte erst auf höheren Stufen. Das macht L1 zur frühe-Denker-Stufe, nicht zur Einsteiger-Stufe. Nicht-Akademiker steigen thematisch ein, nicht historisch.
-**Verschiebung:** L1 als kuratierte Einstiegs-Tour — fünf bis sieben Knoten, die zusammen einen verständlichen Bogen ergeben. Auswahl folgt didaktischer Logik, nicht historischer.
+**Kontext:** L1 ist aktuell historisch befüllt – frühe Denker bekommen L1-Texte, späte erst auf höheren Stufen. Das macht L1 zur frühe-Denker-Stufe, nicht zur Einsteiger-Stufe. Nicht-Akademiker steigen thematisch ein, nicht historisch.
+**Verschiebung:** L1 als kuratierte Einstiegs-Tour – fünf bis sieben Knoten, die zusammen einen verständlichen Bogen ergeben. Auswahl folgt didaktischer Logik, nicht historischer.
 **Implikation für Geist-Tableau:** Aktuelle L1-Auswahl (Descartes, Ryle, Wittgenstein) trägt einen Einsteiger vermutlich nicht. Chalmers (Hard Problem) und Nagel wären zugänglicher.
-**Verhältnis zu Lectio:** L1 als Einstiegs-Tour ist Lectio-light — kuratorische Arbeit ohne Frontend-Aufwand.
-**Nächster Schritt:** Selbsttest am Geist-Tableau — auf L1 stellen, drei Knoten lesen, prüfen ob der Einstieg trägt.
+**Verhältnis zu Lectio:** L1 als Einstiegs-Tour ist Lectio-light – kuratorische Arbeit ohne Frontend-Aufwand.
+**Nächster Schritt:** Selbsttest am Geist-Tableau – auf L1 stellen, drei Knoten lesen, prüfen ob der Einstieg trägt.
 
 ---
 
 ### [ ] Default-Stufe und Stufen-Navigation prüfen
 **Status:** Beobachtung 14.5.26
-**Kontext:** Wenn Tableaus auf L2/L3 öffnen, landen Nicht-Akademiker direkt in akademischer Sprache ohne das Sicherheitsnetz von L1. L1 wird zur Option, die man bewusst wählen muss — statt zum natürlichen Eingang.
+**Kontext:** Wenn Tableaus auf L2/L3 öffnen, landen Nicht-Akademiker direkt in akademischer Sprache ohne das Sicherheitsnetz von L1. L1 wird zur Option, die man bewusst wählen muss – statt zum natürlichen Eingang.
 **Tendenz:** Default auf L1; wer mehr will, schiebt hoch.
 **Nächster Schritt:** Tatsächliche Default-Einstellung im Code prüfen. Kleine technische Reparatur, wenn nötig.
 
 ---
 
-### [x] Polare Eingangs-Karte — kuratorische Signatur erkannt
+### [x] Polare Eingangs-Karte – kuratorische Signatur erkannt
 **Status:** durch `topic.intro`-Feld umgesetzt 19.5.26
-**Kontext:** Selbstbeobachtung als Nutzer: Was funktioniert ist ein Einstieg mit polaren Gegenthesen — Atman gegen Anatta, Realismus gegen Konstruktivismus. Das Geist-Tableau hat das nicht — Eingang über Descartes als Gründungsvater, Spannungen entfalten sich erst später. Könnte erklären, warum Geist mehr Kopfschmerzen macht als die anderen beiden.
-**Resultat:** Intro-Feld löst den lebensweltlichen Anker ohne explizite Pol-Nennung — es stellt die Frage, an der sich die Pole abarbeiten, nennt die Pole aber nicht. Auflösung bleibt der Synthese vorbehalten. Explizite Pol-Nennung optional für künftige Tableaus.
+**Kontext:** Selbstbeobachtung als Nutzer: Was funktioniert ist ein Einstieg mit polaren Gegenthesen – Atman gegen Anatta, Realismus gegen Konstruktivismus. Das Geist-Tableau hat das nicht – Eingang über Descartes als Gründungsvater, Spannungen entfalten sich erst später. Könnte erklären, warum Geist mehr Kopfschmerzen macht als die anderen beiden.
+**Resultat:** Intro-Feld löst den lebensweltlichen Anker ohne explizite Pol-Nennung – es stellt die Frage, an der sich die Pole abarbeiten, nennt die Pole aber nicht. Auflösung bleibt der Synthese vorbehalten. Explizite Pol-Nennung optional für künftige Tableaus.
 
 ---
 
 ### [x] Frage hinter der Frage als viertes Eingangs-Element
-**Status:** implementiert 19.5.26 via `topic.intro`-Feld — zusammengelegt mit "Lebensweltliche Eingangs-Anker"
+**Status:** implementiert 19.5.26 via `topic.intro`-Feld – zusammengelegt mit "Lebensweltliche Eingangs-Anker"
 **Kontext:** Das `intro`-Feld löst beide Items in einem: lebensweltlicher Anker + Frage hinter der Frage. Alle vier Tableaus befüllt. Synthese bleibt auf L5.
 
 ---
 
 ### [ ] Synthese-Sichtbarkeit von L1 aus
 **Status:** Idee 14.5.26
-**Kontext:** Synthese-Text ist auf L5 sichtbar. Nutzer, die vor dem Detail einen Vogelblick wollen, können ihn einen Klick entfernt erreichen — aber nicht sehen, dass er verfügbar ist.
-**Risiko:** Synthese-vorab lesen kann den pädagogischen Bogen kaputtmachen — Auflösung vor dem Streit.
-**Tendenz:** Vorsichtig — nicht früher anzeigen, eher Verfügbarkeit auf L5 deutlicher machen. Oder den polaren Eingang (Item oben) als Alternative.
+**Kontext:** Synthese-Text ist auf L5 sichtbar. Nutzer, die vor dem Detail einen Vogelblick wollen, können ihn einen Klick entfernt erreichen – aber nicht sehen, dass er verfügbar ist.
+**Risiko:** Synthese-vorab lesen kann den pädagogischen Bogen kaputtmachen – Auflösung vor dem Streit.
+**Tendenz:** Vorsichtig – nicht früher anzeigen, eher Verfügbarkeit auf L5 deutlicher machen. Oder den polaren Eingang (Item oben) als Alternative.
 **Nächster Schritt:** In Verbindung mit polarer Eingangs-Karte denken.
 
 ---
 
 ### [ ] Frage-Architektur (Sanctum Quaestiones)
 **Status:** Idee 10.5.26, nicht jetzt umsetzen
-**Kontext:** Lebensfragen ("Was ist Liebe?", "Wie gehe ich mit Verlust um?", "Wie finde ich zu mir selbst?") als Anker, der Knoten aus mehreren Tableaus quer zusammenzieht. Andere Architektur als die Feld-orientierten Tableaus — *horizontal* statt *vertikal*. Nicht ein anderes Projekt, sondern eine zweite Sicht auf denselben Datenkern.
-**Verhältnis zu Lectio:** Lectio-Modus ist die natürliche technische Form dafür — geführter Pfad durch Knoten, nur Tableau-übergreifend.
-**Persona:** Coach (eigene Buch-Arbeit zu Transformationsprozess, Psychologie + Spiritualität + Mythologie) — Menschen, die selbst an inneren Synthesen arbeiten, sind die natürliche Nutzergruppe.
+**Kontext:** Lebensfragen ("Was ist Liebe?", "Wie gehe ich mit Verlust um?", "Wie finde ich zu mir selbst?") als Anker, der Knoten aus mehreren Tableaus quer zusammenzieht. Andere Architektur als die Feld-orientierten Tableaus – *horizontal* statt *vertikal*. Nicht ein anderes Projekt, sondern eine zweite Sicht auf denselben Datenkern.
+**Verhältnis zu Lectio:** Lectio-Modus ist die natürliche technische Form dafür – geführter Pfad durch Knoten, nur Tableau-übergreifend.
+**Persona:** Coach (eigene Buch-Arbeit zu Transformationsprozess, Psychologie + Spiritualität + Mythologie) – Menschen, die selbst an inneren Synthesen arbeiten, sind die natürliche Nutzergruppe.
 **Voraussetzung:** Mindestens fünf bis sieben Tableaus mit lebensweltlich relevanten Knoten.
 **Nächster Schritt:** Im Hinterkopf behalten; beim Tableau-Aufbau bewusst Knoten produzieren, die später für Frage-Architektur nutzbar sind (lebensweltliche Konzepte, ethische Implikationen, praktische Anwendungen).
 
@@ -355,13 +355,13 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 **Status:** vorgeschlagen 10.5.26, mittelfristig
 **Kontext:** Aktuell zwei Tableaus, flache Struktur. Ab fünf bis zehn Tableaus wird Strukturierung nötig.
 **Optionen:**
-- A) Flache Liste mit Tags ("Philosophie", "Psychologie", "Spiritualität") — flexibel, aber bei vielen Tableaus unübersichtlich
-- B) Kategorien als Hauptebene, Tableaus darin — klar navigierbar, aber Mehrfach-Zugehörigkeit schwierig
-- C) Kuratierte Pfade plus Bibliothek — lädt zum Eintauchen ein, höherer Pflegeaufwand
+- A) Flache Liste mit Tags ("Philosophie", "Psychologie", "Spiritualität") – flexibel, aber bei vielen Tableaus unübersichtlich
+- B) Kategorien als Hauptebene, Tableaus darin – klar navigierbar, aber Mehrfach-Zugehörigkeit schwierig
+- C) Kuratierte Pfade plus Bibliothek – lädt zum Eintauchen ein, höherer Pflegeaufwand
 
-**Trias-Einsicht (14.5.26):** Mit Realismus-und-Konstruktivismus entsteht eine implizite Trias: Geist (Werkzeug — wie funktioniert Bewusstsein?), Selbst (Beobachter — wer erlebt?), Bühne (Realität — was ist da draußen?). Ethik wäre das fehlende vierte Element: Was tue ich, wenn ich verstanden habe, was Geist, Selbst und Welt sind?
-**Tendenz:** Pragmatisch B implementieren, langfristig zu C entwickeln. Landingpage "Ideengeschichte" als Oberbegriff einführen — breit genug für Ethik, Politische Theorie, kontemplative Traditionen.
-**Nächster Schritt:** Erst Ethik bauen (schließt die Trias), dann Library-Architektur Option B mit Werkzeug/Beobachter/Bühne/Handlung als impliziter Klammer.
+**Trias-Einsicht (14.5.26):** Mit Realismus-und-Konstruktivismus entsteht eine implizite Trias: Geist (Werkzeug – wie funktioniert Bewusstsein?), Selbst (Beobachter – wer erlebt?), Bühne (Realität – was ist da draussen?). Ethik wäre das fehlende vierte Element: Was tue ich, wenn ich verstanden habe, was Geist, Selbst und Welt sind?
+**Tendenz:** Pragmatisch B implementieren, langfristig zu C entwickeln. Landingpage "Ideengeschichte" als Oberbegriff einführen – breit genug für Ethik, Politische Theorie, kontemplative Traditionen.
+**Nächster Schritt:** Erst Ethik bauen (schliesst die Trias), dann Library-Architektur Option B mit Werkzeug/Beobachter/Bühne/Handlung als impliziter Klammer.
 
 ---
 
@@ -377,7 +377,7 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
   }
 ]
 ```
-**Nächster Schritt:** Bei nächstem Tableau-Bau pilotieren — `related_topics` als Standardfeld mit aufnehmen.
+**Nächster Schritt:** Bei nächstem Tableau-Bau pilotieren – `related_topics` als Standardfeld mit aufnehmen.
 
 ---
 
@@ -391,10 +391,10 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ### [ ] Schools-Schema: Konsistenzprinzip
 **Status:** Beobachtung 10.5.26, kein konkretes Item
-**Kontext:** Bei Geistphilosophie-Implementierung wurde sichtbar, dass `schools` als 1:1 zu Denkern befüllt war (Implementierungsmuster aus Landkarte des Selbst, kein konzeptuelles Prinzip). Korrigiert auf Prinzip: "Schulen sind Denker-Traditionen, denen mehrere Denker angehören können — nicht umetikettierte Personen."
-**Implikation:** Bei künftigen Tableaus bewusst prüfen — sind die Schulen tatsächlich Traditionen oder umetikettierte Personen?
+**Kontext:** Bei Geistphilosophie-Implementierung wurde sichtbar, dass `schools` als 1:1 zu Denkern befüllt war (Implementierungsmuster aus Landkarte des Selbst, kein konzeptuelles Prinzip). Korrigiert auf Prinzip: "Schulen sind Denker-Traditionen, denen mehrere Denker angehören können – nicht umetikettierte Personen."
+**Implikation:** Bei künftigen Tableaus bewusst prüfen – sind die Schulen tatsächlich Traditionen oder umetikettierte Personen?
 **Nächster Schritt:** Beim nächsten Tableau-Bau aktiv beachten. Eventuell beide Bestandstableaus retrospektiv prüfen.
-**Audit (eine Quelle):** Die offene, aktuelle Fassung dieses Punktes — 61 Solo-Schulen über 12 Tableaus, Entscheidung „nachschärfen vs. `topic.meta`-Ausnahmen" noch offen — wird als **M1** in `audit-bestandesaufnahme.md` geführt. Dort, nicht hier, ist die maßgebliche offene Liste.
+**Audit (eine Quelle):** Die offene, aktuelle Fassung dieses Punktes – 61 Solo-Schulen über 12 Tableaus, Entscheidung „nachschärfen vs. `topic.meta`-Ausnahmen" noch offen – wird als **M1** in `audit-bestandesaufnahme.md` geführt. Dort, nicht hier, ist die massgebliche offene Liste.
 
 ---
 
@@ -402,64 +402,64 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ### [ ] Zweite Selbstverhältnis-Lectio: Werk/Gabe-Diagonale
 **Status:** vorgemerkt 14.6.26
-**Kontext:** Der erste Selbstverhältnis-Bau (Annehmen/Überwinden) hat bewusst an der Gabe-Diagonale vorbeigefügt — Foucault (Selbstpraktiken), Hadot (Übung als Weg), Wahres Selbst als Begriff, Almaas bringen die ankerlose Konstruktion des Kerns zentral. Das ist ein eigener Bogen.
+**Kontext:** Der erste Selbstverhältnis-Bau (Annehmen/Überwinden) hat bewusst an der Gabe-Diagonale vorbeigefügt – Foucault (Selbstpraktiken), Hadot (Übung als Weg), Wahres Selbst als Begriff, Almaas bringen die ankerlose Konstruktion des Kerns zentral. Das ist ein eigener Bogen.
 **Nächster Schritt:** Anker prüfen; Bau nach dem nächsten Tableau oder als eigenständige Session.
 
 ### [ ] Vitest Regel 5 verbessern: fs.existsSync → git-Tracking-Prüfung
 **Status:** identifiziert 16.6.26
-**Kontext:** Regel 5 prüft Bild-Existenz mit `fs.existsSync` gegen das lokale Filesystem. Dateien, die lokal vorhanden aber nicht committed sind, erscheinen grün — im Deploy fehlen sie. Das war der Grund für die leeren Bild-Nischen. Sauberere Lösung: gegen `git ls-files` prüfen, damit uncommitted Bilder sofort auffallen.
-**Nächster Schritt:** Regel 5 in `data-validation.test.ts` umschreiben — `git ls-files --error-unmatch <path>` oder `git ls-files` + Set-Check statt `fs.existsSync`.
+**Kontext:** Regel 5 prüft Bild-Existenz mit `fs.existsSync` gegen das lokale Filesystem. Dateien, die lokal vorhanden aber nicht committed sind, erscheinen grün – im Deploy fehlen sie. Das war der Grund für die leeren Bild-Nischen. Sauberere Lösung: gegen `git ls-files` prüfen, damit uncommitted Bilder sofort auffallen.
+**Nächster Schritt:** Regel 5 in `data-validation.test.ts` umschreiben – `git ls-files --error-unmatch <path>` oder `git ls-files` + Set-Check statt `fs.existsSync`.
 
 ### [ ] Zehnte Vitest-Regel: bridge === transition (Doppelung ungesichert)
 **Status:** identifiziert 14.6.26
-**Kontext:** `narrative.bridge` und `step.transition` tragen wortgleichen Inhalt — gewollte Doppelung, solange beide Render-Pfade leben. Wird derzeit von Hand gepflegt; Build prüft Konsistenz nicht. Wenn die Werte auseinanderdriften, zeigen Narrative-Viewer und expositorischer Viewer verschiedene Übergangstexte ohne Fehler.
+**Kontext:** `narrative.bridge` und `step.transition` tragen wortgleichen Inhalt – gewollte Doppelung, solange beide Render-Pfade leben. Wird derzeit von Hand gepflegt; Build prüft Konsistenz nicht. Wenn die Werte auseinanderdriften, zeigen Narrative-Viewer und expositorischer Viewer verschiedene Übergangstexte ohne Fehler.
 **Nächster Schritt:** Als Vitest-Regel ergänzen (Regel 10: bridge === transition für alle Stationen mit beiden Feldern). Erst nach vollständiger Migration obsolet.
 
 ### [ ] Notiz closing_kernel: dritter Fall ausstehend
 **Status:** Tendenz dokumentiert 14.6.26, noch kein Kanon
-**Kontext:** „Spezifischste offene Beobachtung vor allgemeinster Erlaubnis" — aus zwei Fällen als Tendenz destilliert, nicht als Regel kanonisiert. Wartet auf dritten unabhängigen Fall zur Bestätigung oder Verwerfung. Notiz steht in lectio-anleitung.md Punkt 10.1.
+**Kontext:** „Spezifischste offene Beobachtung vor allgemeinster Erlaubnis" – aus zwei Fällen als Tendenz destilliert, nicht als Regel kanonisiert. Wartet auf dritten unabhängigen Fall zur Bestätigung oder Verwerfung. Notiz steht in lectio-anleitung.md Punkt 10.1.
 **Nächster Schritt:** Beim nächsten closing_kernel-Bau bewusst prüfen; danach Kanon-Entscheidung.
 
 ### [ ] Feinschliff & Code-Hygiene (aus `wo-stehe-ich.md` übernommen 27.6.26)
-**Status:** offen — kleinteilige Rest-Posten, beim Konsolidieren der Standort-Dateien hierher gezogen (vorher nur in `wo-stehe-ich.md`).
+**Status:** offen – kleinteilige Rest-Posten, beim Konsolidieren der Standort-Dateien hierher gezogen (vorher nur in `wo-stehe-ich.md`).
 **Kuratorisch:**
 - 4 `lectio_brief`-Felder in `findest-du-oder-machst-du` befüllen.
 - `data/gut-und-boese.json`: vier Influences gegen Konzept-IDs prüfen (Endpunkte korrekt?).
 **Code-Hygiene:**
-- StarChart-Gestenschicht auf `usePanZoom` migrieren (handimplementiert; vgl. CLAUDE.md „Sternkarte — Gesten- & Atlas-Konvention").
+- StarChart-Gestenschicht auf `usePanZoom` migrieren (handimplementiert; vgl. CLAUDE.md „Sternkarte – Gesten- & Atlas-Konvention").
 - a11y-Reste: Slider und Akkordeon auf Tastaturbedienung / `:focus-visible` prüfen.
 - Staging-PNGs konvertieren/optimieren (z.B. `lectio-vedanta.png`, 9 MB), bevor sie eingebunden werden.
 
-### [ ] Tableau-Bau-Anleitung — fehlt
+### [ ] Tableau-Bau-Anleitung – fehlt
 **Status:** Bestandsbefund 14.6.26
-**Kontext:** Es gibt mild-mode.md und hard-mode.md als Tableau-Prompts, aber keine eigenständige Bau-Anleitung analog zu lectio-anleitung.md. Zwei vollständige Begleitnotizen (existenzialismus-begleitnotiz.md, gut-und-boese-begleitnotiz.md) enthalten die Prozess-Erkenntnisse bereits — sie müssen nur destilliert werden.
+**Kontext:** Es gibt mild-mode.md und hard-mode.md als Tableau-Prompts, aber keine eigenständige Bau-Anleitung analog zu lectio-anleitung.md. Zwei vollständige Begleitnotizen (existenzialismus-begleitnotiz.md, gut-und-boese-begleitnotiz.md) enthalten die Prozess-Erkenntnisse bereits – sie müssen nur destilliert werden.
 **Nächster Schritt:** Beim nächsten Tableau-Bau mitschreiben; nach dem Bau aus den zwei Begleitnotizen destillieren.
 
-### [x] Lebensfragen-Bau-Anleitung — erstellt (Status KANDIDAT)
-**Status:** erstellt 26.6.26 — **KANDIDAT, noch nicht maßgeblich**
+### [x] Lebensfragen-Bau-Anleitung – erstellt (Status KANDIDAT)
+**Status:** erstellt 26.6.26 – **KANDIDAT, noch nicht massgeblich**
 **Kontext:** Vier Lebensfragen existierten, kein Bau-Standard.
-**Resultat:** `prompts/lebensfrage-anleitung.md` aus den vier bestehenden Lebensfragen destilliert (Regel/Freiheit/Notiz-Trennung analog `lectio-anleitung.md`). Wird erst MASSGEBLICH, wenn ein echter Lebensfragen-Bau sie geprüft hat (Belegfall vor Kanonisierung) — bis dahin bleiben die drei „Notiz, kein Kanon"-Punkte offen.
-**Nächster Schritt:** Erster Bewährungsfall ist die Lebensfrage `kontrollieren` („Was habe ich wirklich in der Hand?", live seit 27.6.) — Prüfung gegen die Anleitung steht aus; danach Kanonisierungs-Entscheidung.
+**Resultat:** `prompts/lebensfrage-anleitung.md` aus den vier bestehenden Lebensfragen destilliert (Regel/Freiheit/Notiz-Trennung analog `lectio-anleitung.md`). Wird erst MASSGEBLICH, wenn ein echter Lebensfragen-Bau sie geprüft hat (Belegfall vor Kanonisierung) – bis dahin bleiben die drei „Notiz, kein Kanon"-Punkte offen.
+**Nächster Schritt:** Erster Bewährungsfall ist die Lebensfrage `kontrollieren` („Was habe ich wirklich in der Hand?", live seit 27.6.) – Prüfung gegen die Anleitung steht aus; danach Kanonisierungs-Entscheidung.
 
-### [x] Grundhaltung/Kanon braucht eigenen Ort — kanon.md
+### [x] Grundhaltung/Kanon braucht eigenen Ort – kanon.md
 **Status:** erledigt 27.6.26 (kanon.md angelegt 17.6., kanonische Blöcke konsolidiert 27.6.)
-**Kontext:** „Bibliothek mit Haltung, ohne Wahrheitsanspruch" war 3× eingebettet (bibliothek-architektur.md, lectio-anleitung.md, mild-mode.md) — kein eigener kanonischer Ort.
-**Resultat:** `kanon.md` ist die Single Source. Die kanonischen Blöcke (Grundhaltung; Die drei Formen — Reichweite/Wohnort/Bau-Regel; Stimm-Hierarchie; Du-Konsistenz) leben dort. Die Bau-Anleitungen (mild-mode, lectio-anleitung, lebensfrage-anleitung) führen den Volltext nur noch als selbsttragende Arbeitskopie mit „Kanonische Quelle: kanon.md"-Header. `bibliothek-architektur.md` nach `archiv/` verschoben (Status-Rumpf veraltet, Kanon gesichert).
+**Kontext:** „Bibliothek mit Haltung, ohne Wahrheitsanspruch" war 3× eingebettet (bibliothek-architektur.md, lectio-anleitung.md, mild-mode.md) – kein eigener kanonischer Ort.
+**Resultat:** `kanon.md` ist die Single Source. Die kanonischen Blöcke (Grundhaltung; Die drei Formen – Reichweite/Wohnort/Bau-Regel; Stimm-Hierarchie; Du-Konsistenz) leben dort. Die Bau-Anleitungen (mild-mode, lectio-anleitung, lebensfrage-anleitung) führen den Volltext nur noch als selbsttragende Arbeitskopie mit „Kanonische Quelle: kanon.md"-Header. `bibliothek-architektur.md` nach `archiv/` verschoben (Status-Rumpf veraltet, Kanon gesichert).
 
 ### [ ] Prozess-Erkenntnisse fürs Rollen-Briefing
 **Status:** vorgemerkt 14.6.26
-**Kontext:** Zwei Erkenntnisse aus der Session-Serie, noch nicht systematisch festgehalten: (a) Bau-Chat braucht Ziel-Datei(en) von Anfang an + Ankunft der Grundlagen als lesbaren Inhalt verifizieren, nicht nur als Datei-Abgabe; (b) drei Rollen statt sechs Chats — Bauen / Prüfen / Ausführen, Rolle bestimmt das Briefing.
+**Kontext:** Zwei Erkenntnisse aus der Session-Serie, noch nicht systematisch festgehalten: (a) Bau-Chat braucht Ziel-Datei(en) von Anfang an + Ankunft der Grundlagen als lesbaren Inhalt verifizieren, nicht nur als Datei-Abgabe; (b) drei Rollen statt sechs Chats – Bauen / Prüfen / Ausführen, Rolle bestimmt das Briefing.
 **Nächster Schritt:** In einem Prozess-Dokument festhalten; beim nächsten Lectio-Bau aktiv anwenden.
 
-### [ ] Pfad-Typ-Definition — Wann ist ein neuer Typ destilliert?
+### [ ] Pfad-Typ-Definition – Wann ist ein neuer Typ destilliert?
 **Status:** Methoden-Beobachtung 23.5.26
-**Kontext:** Beim Existenzialismus-Lectio-Bau wurde erstmals versucht, einen neuen Pfad-Typ ("existenziell-zugespitzt") *vor* der Lectio zu postulieren. Nach Prüfung zurückgenommen — die Lectio war narrativ-historisch.
+**Kontext:** Beim Existenzialismus-Lectio-Bau wurde erstmals versucht, einen neuen Pfad-Typ ("existenziell-zugespitzt") *vor* der Lectio zu postulieren. Nach Prüfung zurückgenommen – die Lectio war narrativ-historisch.
 **Methoden-Klarstellung:** Pfad-Typen werden destilliert aus *überraschenden* Lectios, nicht beim Bau postuliert. Wenn ein Bau das vorhandene Vokabular nicht braucht, ist das ein Signal.
 **Nächster Schritt:** Bei nächstem Lectio-Bau diese Disziplin aktiv anwenden. Falls neuer Pfad-Typ entsteht → `prompts/lectio-mode.md` v1.9.
 
 ---
 
-### [ ] Lectio-Methoden-Klarstellung — narrativ-historisch ≠ chronologisch streng
+### [ ] Lectio-Methoden-Klarstellung – narrativ-historisch ≠ chronologisch streng
 **Status:** identifiziert 23.5.26 in zweiter Prüfrunde Existenzialismus
 **Kontext:** Die Existenzialismus-Lectio stellt Nietzsche vor Kierkegaard, obwohl Kierkegaard historisch früher ist. Phänomenologisch trägt die Reihenfolge (hörbare Diagnose vor älterer, weniger sichtbarer Vorform), und der Übergangstext macht die Versetzung explizit. Aber das Label "narrativ-historisch" suggeriert strenge Chronologie.
 **Methoden-Klarstellung für v1.9:** Narrativ-historische Pfade dürfen historisch leicht versetzt sein, wenn die Versetzung im Übergangstext explizit gemacht wird.
@@ -467,50 +467,50 @@ Eigenständige L1-Stimme (andere Beispiele, andere Tonlage) ist Aufgabe des Lect
 
 ---
 
-### [ ] lectio_brief-Schreibdisziplin — Reserve-Briefs mit Dokumentation
+### [ ] lectio_brief-Schreibdisziplin – Reserve-Briefs mit Dokumentation
 **Status:** identifiziert 23.5.26 in zweiter Prüfrunde Existenzialismus
-**Kontext:** Beim Existenzialismus-Bau wurden 7 lectio_briefs für 5 Lectio-Stationen geschrieben — 2 "Reserve-Briefs" (Heidegger → Tod-Lectio, Dostojewski → Freiheits-Lectio). Legitim, aber in der ersten Begleitnotiz nicht dokumentiert.
+**Kontext:** Beim Existenzialismus-Bau wurden 7 lectio_briefs für 5 Lectio-Stationen geschrieben – 2 "Reserve-Briefs" (Heidegger → Tod-Lectio, Dostojewski → Freiheits-Lectio). Legitim, aber in der ersten Begleitnotiz nicht dokumentiert.
 **Methoden-Klarstellung:** Reserve-Briefs sind erlaubt, wenn (a) das Material trägt, (b) die künftige Lectio im Backlog steht, (c) der Reserve-Brief in der Begleitnotiz explizit dokumentiert wird.
 **Nächster Schritt:** Bei nächstem Tableau-Bau anwenden. Konvention in `lectio-mode.md` v1.9 aufnehmen.
 
 ---
 
 ### [x] Stufen-Gedächtnis pro Tableau (Variante B)
-**Status:** entschieden 28.6.26 — Variante B, vollständig spezifiziert
+**Status:** entschieden 28.6.26 – Variante B, vollständig spezifiziert
 
-**Problem:** Die Stufe wird derzeit global gemerkt. Wer einmal irgendwo auf L5 war, betritt danach jedes Tableau auf L5 — auch ein fremdes, frisch angesehenes. Der sanfte L1-Einstieg gilt nur beim allerersten App-Besuch. Trägt zur Einstiegs-Überforderung bei.
+**Problem:** Die Stufe wird derzeit global gemerkt. Wer einmal irgendwo auf L5 war, betritt danach jedes Tableau auf L5 – auch ein fremdes, frisch angesehenes. Der sanfte L1-Einstieg gilt nur beim allerersten App-Besuch. Trägt zur Einstiegs-Überforderung bei.
 
-**Entscheidung:** Variante B — Stufe gehört zum einzelnen Tableau, nicht zum Nutzer. Konkret:
+**Entscheidung:** Variante B – Stufe gehört zum einzelnen Tableau, nicht zum Nutzer. Konkret:
 
 - Stand wird pro Tableau gehalten, nicht global.
 - Erst-Eintritt ohne gemerkten Stand → L1 (bewusst gesetzt; sonst rutscht es zu C zurück).
-- Dauer: nur Sitzung — Reload/neuer Besuch öffnet wieder auf L1; innerhalb der Sitzung bleibt der Stand pro Tableau erhalten.
+- Dauer: nur Sitzung – Reload/neuer Besuch öffnet wieder auf L1; innerhalb der Sitzung bleibt der Stand pro Tableau erhalten.
 
-**Verworfen:** A (immer L1 — zu starr für Tiefleser), C (global — der aktuelle Fehler).
+**Verworfen:** A (immer L1 – zu starr für Tiefleser), C (global – der aktuelle Fehler).
 
-**Nächster Schritt:** Claude-Code-Faden — Eingriff an der Stelle, wo die Stufe initialisiert wird (global → pro-Tableau-Schlüssel, sitzungsweit, Default L1). Klein; Entscheidung steht.
+**Nächster Schritt:** Claude-Code-Faden – Eingriff an der Stelle, wo die Stufe initialisiert wird (global → pro-Tableau-Schlüssel, sitzungsweit, Default L1). Klein; Entscheidung steht.
 
 ---
 
-### [ ] Verortungs-Instrument — einfache Fragen pro Tableau, Standort statt Etikett
+### [ ] Verortungs-Instrument – einfache Fragen pro Tableau, Standort statt Etikett
 **Status:** durchgespielt 27.6.26 (Belegfall Existenzialismus, von Hand), Resonanz offen
 
-**Herkunft:** Anregung eines Kollegen („ein paar einfache Fragen pro Thema, danach eine Auswahl von Denkern, die gleich oder anders denken — Bestätigung oder andere Sichten"). Trifft punktgenau die im Kanon schon angelegte Designfrage.
+**Herkunft:** Anregung eines Kollegen („ein paar einfache Fragen pro Thema, danach eine Auswahl von Denkern, die gleich oder anders denken – Bestätigung oder andere Sichten"). Trifft punktgenau die im Kanon schon angelegte Designfrage.
 
-**Kanon-Verknüpfung:** kanon.md → „Folgerung: Verortung als Einladung, nicht als Urteil". Maßgebliche Leitlinie, nicht neu zu erfinden. Kernsatz: nicht „du bist ein Stoiker" (Etikett, geliehene Identität), sondern „bei dieser Frage stehst du nah bei diesen, fern von jenen — und jetzt ist es an dir". Das Instrument ist nur haltungstreu, wenn das Fern-von genauso einladend ausfällt wie das Nah-bei.
+**Kanon-Verknüpfung:** kanon.md → „Folgerung: Verortung als Einladung, nicht als Urteil". Massgebliche Leitlinie, nicht neu zu erfinden. Kernsatz: nicht „du bist ein Stoiker" (Etikett, geliehene Identität), sondern „bei dieser Frage stehst du nah bei diesen, fern von jenen – und jetzt ist es an dir". Das Instrument ist nur haltungstreu, wenn das Fern-von genauso einladend ausfällt wie das Nah-bei.
 
-**Architektur-Kern (löst die Pflege-Sorge):** Texte hängen NICHT an Antwortkombinationen, sondern an den Knoten — die existieren schon. Verortungs-Rechner, kein Kombinations-Textwerk: vier Antworten → Koordinate auf den zwei Achsen → Distanz zu den x/y-Werten der Knoten → nah/fern. Gelesen werden die vorhandenen versions/lectio_brief. Keine neuen Texte pro Denker, keine pro Kombination.
+**Architektur-Kern (löst die Pflege-Sorge):** Texte hängen NICHT an Antwortkombinationen, sondern an den Knoten – die existieren schon. Verortungs-Rechner, kein Kombinations-Textwerk: vier Antworten → Koordinate auf den zwei Achsen → Distanz zu den x/y-Werten der Knoten → nah/fern. Gelesen werden die vorhandenen versions/lectio_brief. Keine neuen Texte pro Denker, keine pro Kombination.
 
 Falsch (verworfen): Text pro Kombination → 16 × 12 Tableaus, unpflegbar.
-Richtig: zweite Tür ins selbe Tableau, analog zur Lectio — ordnet Vorhandenes, erzeugt nichts. Reichweite: ein Tableau.
+Richtig: zweite Tür ins selbe Tableau, analog zur Lectio – ordnet Vorhandenes, erzeugt nichts. Reichweite: ein Tableau.
 
-**Pflegeaufwand (real, klein):** Pro tauglichem Tableau genau VIER Fragen, einmalig (wie subtitle/intro/synthesis). Einzige neue Arbeit — und nicht trivial: schlechte Frage verortet falsch.
+**Pflegeaufwand (real, klein):** Pro tauglichem Tableau genau VIER Fragen, einmalig (wie subtitle/intro/synthesis). Einzige neue Arbeit – und nicht trivial: schlechte Frage verortet falsch.
 
-**Belegfall Existenzialismus (von Hand):** Achsen Bejahung↔Verzweiflung / Entwurf↔Geworfenheit. Testnutzer landete bei Bejahung + leicht geworfen. Nah: Nietzsche, Sartre (Bestätigung, dünn). Fern: Frankl (Sinn von außen, frontaler Widerspruch zu „mache ihn selbst"), Camus (Absurdes aushalten statt füllen — Gegenrichtung). Befund: das Fern-von zog. Kurator: „glaube ich das wirklich?" → haltungstreu, Anlass zur Selbstbefragung, kein Etikett. Modelltreue gewahrt.
+**Belegfall Existenzialismus (von Hand):** Achsen Bejahung↔Verzweiflung / Entwurf↔Geworfenheit. Testnutzer landete bei Bejahung + leicht geworfen. Nah: Nietzsche, Sartre (Bestätigung, dünn). Fern: Frankl (Sinn von aussen, frontaler Widerspruch zu „mache ihn selbst"), Camus (Absurdes aushalten statt füllen – Gegenrichtung). Befund: das Fern-von zog. Kurator: „glaube ich das wirklich?" → haltungstreu, Anlass zur Selbstbefragung, kein Etikett. Modelltreue gewahrt.
 
 **Offene Risiken / vor Kanonisierung:**
 
-- Grob-Verortung: vier Fragen sind wenig. n=1 stimmte — braucht zweiten Belegfall an anderem Tableau (Belegfall vor Kanonisierung). Kandidat: weichere Achsen, um die Eignungsgrenze zu finden.
+- Grob-Verortung: vier Fragen sind wenig. n=1 stimmte – braucht zweiten Belegfall an anderem Tableau (Belegfall vor Kanonisierung). Kandidat: weichere Achsen, um die Eignungsgrenze zu finden.
 - Achsen-Eignung: klare Pole verorten glatt, weiche evtl. zickig. Nur dort bauen, wo es trägt.
 - Knoten ohne x/y: Randstimmen fallen aus. Bestand prüfen, kein Neuaufwand.
 - Neue Produktklasse: erstes Instrument mit Nutzer-Eingabe statt nur Lesen. An einem Tableau erproben, bevor Methode.
@@ -521,27 +521,27 @@ Richtig: zweite Tür ins selbe Tableau, analog zur Lectio — ordnet Vorhandenes
 
 ---
 
-### [ ] Michi-Feedback nach Lectio-Fix (28.6.26) — UX, Renderer, Bild, Tableau
+### [ ] Michi-Feedback nach Lectio-Fix (28.6.26) – UX, Renderer, Bild, Tableau
 **Status:** gesammelt 28.6.26; Herkunft: Leser-Feedback (Michi) nach dem `wenn-die-welt-wackelt`-Fix
-- **Navigations-Einstieg zu den geführten Pfaden prominenter** — Leser fand die Lectio erst nach vielen Klicks. *In Arbeit* — aktiver Bau-Auftrag; mit Fertigstellung erledigt.
-- **Renderer: transition/bridge visuell sichtbarer absetzen** — ein Leser überliest die Überleitung zwischen den Stationen. Kein Texteingriff (die Übergänge bleiben, sie sind gut), reine Darstellungsfrage im `LectioNarrativeViewer`.
-- **Bild-/Begriffs-Stimmigkeit in den Lectio-Bildern** — „man merkt, dass ein Begriff steht, der wahrscheinlich, aber nicht der passendste ist". Gehört zum Bild-Stil-Kanon-Strang, eigene Arbeit — kein Einzel-Fix.
-- **Descartes/Cogito als möglicher Knoten im Realismus/Konstruktivismus-Tableau prüfen** — eigenständige Tableau-Frage, *nicht* als Nachtrag zur Lectio. Abzugrenzen vom Descartes-Kontext in „Quellen der Erkenntnis" (Themen-Backlog).
+- **Navigations-Einstieg zu den geführten Pfaden prominenter** – Leser fand die Lectio erst nach vielen Klicks. *In Arbeit* – aktiver Bau-Auftrag; mit Fertigstellung erledigt.
+- **Renderer: transition/bridge visuell sichtbarer absetzen** – ein Leser überliest die Überleitung zwischen den Stationen. Kein Texteingriff (die Übergänge bleiben, sie sind gut), reine Darstellungsfrage im `LectioNarrativeViewer`.
+- **Bild-/Begriffs-Stimmigkeit in den Lectio-Bildern** – „man merkt, dass ein Begriff steht, der wahrscheinlich, aber nicht der passendste ist". Gehört zum Bild-Stil-Kanon-Strang, eigene Arbeit – kein Einzel-Fix.
+- **Descartes/Cogito als möglicher Knoten im Realismus/Konstruktivismus-Tableau prüfen** – eigenständige Tableau-Frage, *nicht* als Nachtrag zur Lectio. Abzugrenzen vom Descartes-Kontext in „Quellen der Erkenntnis" (Themen-Backlog).
 **Nächster Schritt:** Navigation zuerst (läuft). Renderer, Bild-Kanon und Descartes-Prüfung je als eigener Schritt.
 
 ### [ ] Bild-Durchgang restliche Lectios nach Kanon-v2-Methode
 **Status:** identifiziert 3.7.26; Stand 3.7. abends: `warum-sollst-du` und `ruhe-oder-rausch` fertig (Grabungs- bzw. Stille→Aufriss-Kurve)
-**Kontext:** `wenn-die-welt-wackelt` ist der erste vollständige Belegfall für `bild-stil-kanon` (v2) — alle 6 Stationen neu bebildert, Kant erstmals mit Bild. Noch auf altem Prompt-Stand: `verstehen-oder-weitergehen` (freud), `vom-wissen-zum-glauben` (6 Alt-WebPs auf Repo-Ebene, alte Ablage) und `wenn-nichts-vorgegeben` (5 Bilder).
-**Befund Rand-Check (3.7.):** `scripts/check-image-edges.js` markiert `freud` und alle 5 `wenn-nichts-vorgegeben`-Bilder als Rahmen-Verdacht (Alt-Generationen vor den Full-bleed-Prompts) — beim Durchgang ersetzen, nicht einzeln flicken.
+**Kontext:** `wenn-die-welt-wackelt` ist der erste vollständige Belegfall für `bild-stil-kanon` (v2) – alle 6 Stationen neu bebildert, Kant erstmals mit Bild. Noch auf altem Prompt-Stand: `verstehen-oder-weitergehen` (freud), `vom-wissen-zum-glauben` (6 Alt-WebPs auf Repo-Ebene, alte Ablage) und `wenn-nichts-vorgegeben` (5 Bilder).
+**Befund Rand-Check (3.7.):** `scripts/check-image-edges.js` markiert `freud` und alle 5 `wenn-nichts-vorgegeben`-Bilder als Rahmen-Verdacht (Alt-Generationen vor den Full-bleed-Prompts) – beim Durchgang ersetzen, nicht einzeln flicken.
 **Nächster Schritt:** Pro Lectio zuerst Gefühlskurve bestimmen (kuratorisch), dann Prompts schreiben, Gemini-Test, Higgsfield-Produktion (Ablage: 800px-WebP q70, Rand-Check am 2k-Original).
-**Offener Methodenpunkt:** Kurvenform bei konkurrierend-konfrontativen Pfaden (nächster Belegfall) — bislang am emotional-kumulativen und destruktiv-aufbauenden Pfadtyp belegt.
+**Offener Methodenpunkt:** Kurvenform bei konkurrierend-konfrontativen Pfaden (nächster Belegfall) – bislang am emotional-kumulativen und destruktiv-aufbauenden Pfadtyp belegt.
 
 ---
 
-### [ ] Kuratorische Geste — die sichtbare Stimme des Fragers (Aufschreiben, nicht bauen)
-**Status:** gewachsener Denk-Strang, 28.6.26 — Kurator-Arbeit, kein Bau
-**Kontext:** Der Wunsch, als *Frager* neben den Denkern zu stehen — eine sichtbare kuratorische Stimme statt neutraler Vermittlung. Dazu die Ahnung, dass Sanctum die Werkstatt für ein späteres Buch ist. Das Medaillen-Bild als erster Beleg dieser Geste.
-**Charakter:** Aufschreiben, nicht bauen — Aufgabe des Kurators mit dem Blatt. Kein Code, kein Feature; reift, bis die Form klar ist. Verwandt mit dem Kurator-Bewegungs-Strang (Wissen vom Kopf über das Herz in den Bauch, s.u.) und der Grundhaltung „Bibliothek mit Haltung, ohne Wahrheitsanspruch" (`kanon.md`).
+### [ ] Kuratorische Geste – die sichtbare Stimme des Fragers (Aufschreiben, nicht bauen)
+**Status:** gewachsener Denk-Strang, 28.6.26 – Kurator-Arbeit, kein Bau
+**Kontext:** Der Wunsch, als *Frager* neben den Denkern zu stehen – eine sichtbare kuratorische Stimme statt neutraler Vermittlung. Dazu die Ahnung, dass Sanctum die Werkstatt für ein späteres Buch ist. Das Medaillen-Bild als erster Beleg dieser Geste.
+**Charakter:** Aufschreiben, nicht bauen – Aufgabe des Kurators mit dem Blatt. Kein Code, kein Feature; reift, bis die Form klar ist. Verwandt mit dem Kurator-Bewegungs-Strang (Wissen vom Kopf über das Herz in den Bauch, s.u.) und der Grundhaltung „Bibliothek mit Haltung, ohne Wahrheitsanspruch" (`kanon.md`).
 **Nächster Schritt:** vom Kurator ausformulieren; kein Backlog-Bau ausgelöst.
 
 ---
@@ -550,9 +550,9 @@ Richtig: zweite Tür ins selbe Tableau, analog zur Lectio — ordnet Vorhandenes
 
 ### [x] Vision-Klammer ergänzen
 **Status:** vorgeschlagen 10.5.26, dringend
-**Kontext:** Aktuelle Landingpage hat drei klar formulierte Feature-Sektionen (Komplexität auf Abruf / Debatte im Fokus / Wissen räumlich verankert), aber keine Vision-Sektion. Die Diagnose, die Sanctum eigentlich bewegt — *"Wir haben alles Wissen der Welt zur Hand, was uns fehlt ist Kontext, die Möglichkeit ein Thema zu Ende zu verstehen"* — taucht nirgends auf.
+**Kontext:** Aktuelle Landingpage hat drei klar formulierte Feature-Sektionen (Komplexität auf Abruf / Debatte im Fokus / Wissen räumlich verankert), aber keine Vision-Sektion. Die Diagnose, die Sanctum eigentlich bewegt – *"Wir haben alles Wissen der Welt zur Hand, was uns fehlt ist Kontext, die Möglichkeit ein Thema zu Ende zu verstehen"* – taucht nirgends auf.
 **Tonart-Beispiel:**
-> *Wir leben in einer Zeit, in der alles Wissen der Welt zur Hand ist. Bücher, Suchmaschinen, KI. Was uns fehlt, ist Kontext. Die Möglichkeit, ein Thema einmal zu Ende zu verstehen — Punkte zu setzen, Erkenntnisse landen zu lassen. Sanctum Mentis macht aus dem Gewirr eine Karte.*
+> *Wir leben in einer Zeit, in der alles Wissen der Welt zur Hand ist. Bücher, Suchmaschinen, KI. Was uns fehlt, ist Kontext. Die Möglichkeit, ein Thema einmal zu Ende zu verstehen – Punkte zu setzen, Erkenntnisse landen zu lassen. Sanctum Mentis macht aus dem Gewirr eine Karte.*
 
 **Nächster Schritt:** Tonart-Beispiel als Ausgangspunkt nehmen, eigene Formulierung finden, dann implementieren.
 
@@ -560,7 +560,7 @@ Richtig: zweite Tür ins selbe Tableau, analog zur Lectio — ordnet Vorhandenes
 
 ### [x] "Erste interaktive..."-Behauptung zurücknehmen
 **Status:** vorgeschlagen 10.5.26
-**Kontext:** Die Behauptung *"Sanctum Mentis ist das erste interaktive Navigationssystem für Philosophie und Psychologie"* ist faktisch angreifbar — es gibt mehrere akademische Vorgängerprojekte (Phaidra, PhilPapers-Mapping). Ein vorgebildeter Nutzer verliert sofort Vertrauen.
+**Kontext:** Die Behauptung *"Sanctum Mentis ist das erste interaktive Navigationssystem für Philosophie und Psychologie"* ist faktisch angreifbar – es gibt mehrere akademische Vorgängerprojekte (Phaidra, PhilPapers-Mapping). Ein vorgebildeter Nutzer verliert sofort Vertrauen.
 **Mögliche Varianten:**
 - *"Sanctum Mentis kartiert die klügsten Konzepte der Geschichte..."*
 - *"Sanctum Mentis ist ein neues Navigationssystem für die Ideengeschichte..."*
@@ -572,17 +572,17 @@ Richtig: zweite Tür ins selbe Tableau, analog zur Lectio — ordnet Vorhandenes
 
 ### [x] "Philosophie und Psychologie" thematisch öffnen
 **Status:** vorgeschlagen 10.5.26
-**Kontext:** Aktuelle Landingpage definiert Sanctum als *"Navigationssystem für Philosophie und Psychologie"*. Das zementiert das Produkt zu früh — Sanctum kann legitim auch Tableaus zu Ethik, Politischer Theorie, Wissenschaftstheorie, kontemplativen Traditionen produzieren.
-**Vorschlag:** *"Ideengeschichte"* als Oberbegriff einführen — breit genug für alles, was Sanctum jemals tun wird, ohne abstrakt zu werden.
+**Kontext:** Aktuelle Landingpage definiert Sanctum als *"Navigationssystem für Philosophie und Psychologie"*. Das zementiert das Produkt zu früh – Sanctum kann legitim auch Tableaus zu Ethik, Politischer Theorie, Wissenschaftstheorie, kontemplativen Traditionen produzieren.
+**Vorschlag:** *"Ideengeschichte"* als Oberbegriff einführen – breit genug für alles, was Sanctum jemals tun wird, ohne abstrakt zu werden.
 **Nächster Schritt:** Gemeinsam mit Vision-Klammer überarbeiten.
 
 ---
 
-### [x] Sektion III "Wissen räumlich verankert" — Tonbruch beheben
+### [x] Sektion III "Wissen räumlich verankert" – Tonbruch beheben
 **Status:** vorgeschlagen 10.5.26
 **Kontext:** Aktueller Erklärtext: *"...damit dein Gehirn das 'Big Picture' intuitiv abspeichern kann."* Speicher-Metapher bricht den Ton; *"Big Picture"* in Anführungszeichen wirkt unsicher; bricht aus dem Du-Du-Muster der anderen Sektionen aus.
 **Vorschlag:**
-> *"Konzepte schweben nicht länger im luftleeren Raum. Jede Idee findet ihren Platz im Koordinatensystem — und du siehst, wie sie zusammenhängt mit den anderen. Erst dort, im Zusammenhang, lässt sich Wissen zu Ende denken."*
+> *"Konzepte schweben nicht länger im luftleeren Raum. Jede Idee findet ihren Platz im Koordinatensystem – und du siehst, wie sie zusammenhängt mit den anderen. Erst dort, im Zusammenhang, lässt sich Wissen zu Ende denken."*
 
 **Nächster Schritt:** Erklärtext überarbeiten.
 
@@ -590,7 +590,7 @@ Richtig: zweite Tür ins selbe Tableau, analog zur Lectio — ordnet Vorhandenes
 
 ### [x] "Direkt zur Erkenntnistheorie"-Button anpassen
 **Status:** erledigt 10.5.26
-**Umgesetzt:** Option A — Button zeigt jetzt auf "Philosophie des Geistes".
+**Umgesetzt:** Option A – Button zeigt jetzt auf "Philosophie des Geistes".
 **Nächster Schritt:** Option C (*"Empfohlener Einstieg"*) sobald mehrere Tableaus existieren.
 
 ---
@@ -607,16 +607,16 @@ Richtig: zweite Tür ins selbe Tableau, analog zur Lectio — ordnet Vorhandenes
 
 **Risiken:** Reduktionismus-Falle, Auswahlproblem (welche Linse?), Spoiler-Logik, Charakter-Mismatch.
 **Voraussetzung:** Sanctum hat ein Tableau zu Archetypen oder mythologischen Strukturen.
-**Strategischer Wert:** Hoch — validiert die Engine als Cross-Domain-Werkzeug.
+**Strategischer Wert:** Hoch – validiert die Engine als Cross-Domain-Werkzeug.
 **Nächster Schritt:** Im Hinterkopf behalten. Konkret werden, sobald ein Sanctum-Tableau zu Archetypen existiert.
 
 ---
 
 ---
 
-### [x] Farb-Architektur der Sammlung — eine Farbe pro Spur
-**Status:** implementiert 23.5.26 — drei Hue-Bänder (Erkenntnis 220°–290° kühl, Handlung 15°–55° warm, Existenz 110°–160° erdig). Alle 5 Tableau-JSONs + library.json aktualisiert. Konvention in `bibliothek-architektur.md` dokumentiert. Reserve für 2–3 weitere Spuren (Magenta, Cyan, Gelb).
-**Update 30.5.26 — Existenz-Palette festgelegt.** Auslöser: drei Existenz-Tableaus, keines sauber im Korridor. Finale Staffelung im warmen Band (35–70°):
+### [x] Farb-Architektur der Sammlung – eine Farbe pro Spur
+**Status:** implementiert 23.5.26 – drei Hue-Bänder (Erkenntnis 220°–290° kühl, Handlung 15°–55° warm, Existenz 110°–160° erdig). Alle 5 Tableau-JSONs + library.json aktualisiert. Konvention in `bibliothek-architektur.md` dokumentiert. Reserve für 2–3 weitere Spuren (Magenta, Cyan, Gelb).
+**Update 30.5.26 – Existenz-Palette festgelegt.** Auslöser: drei Existenz-Tableaus, keines sauber im Korridor. Finale Staffelung im warmen Band (35–70°):
   Begegnung 35 · Existenzialismus 45 · Lebenskunst 65   (L 0.42–0.44, C 0.11–0.12)
 Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialismus 0.42/0.10/45 als final bestätigt (Platzhalter-Markierung entfernen). Lebenskunst L 0.45→0.44. library.json themeColor an die drei JSON-Akzente angeglichen. Begründung + kanonische Werte in begegnung-aenderung.md / farb-sitzung-existenz.md.
 
@@ -624,21 +624,21 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 
 ### [ ] Cross-Reference Predictive Processing (Geist ↔ Selbst)
 **Status:** identifiziert 23.5.26 als Befund der Side-Quest beim Existenzialismus-Bau
-**Kontext:** Predictive Processing / Free Energy Principle ist in beiden Tableaus doppelt anwesend — Geist hat `predictive-processing` als Theorie-Knoten, Selbst hat `free-energy` plus Friston als Denker. Nutzer sehen die Doppelanwesenheit nicht.
+**Kontext:** Predictive Processing / Free Energy Principle ist in beiden Tableaus doppelt anwesend – Geist hat `predictive-processing` als Theorie-Knoten, Selbst hat `free-energy` plus Friston als Denker. Nutzer sehen die Doppelanwesenheit nicht.
 **Instrument:** Nicht Konzept-Echo (das wäre Konzept-in-A / Denker-in-B), sondern `related_topics`-Cross-Reference.
 **Nächster Schritt:** Bei Implementation von `related_topics` als ersten Anwendungsfall pilotieren.
 ## Themen-Backlog
 
 ### [x] Realismus und Konstruktivismus
 **Status:** implementiert 17.5.26 (Architekt-Wurf 14.5.26, milde Prüfung durchlaufen)
-**Anker:** Der Streit um Boden. Gabriel aufgeschnappt — schmale epistemische Inkarnation einer größeren Lebensfrage.
-**Modus:** Mild — 13 Denker, 9 Konzepte, 17 Influences, 9 Schools. Erster echter Mild-Lauf der Reihe.
+**Anker:** Der Streit um Boden. Gabriel aufgeschnappt – schmale epistemische Inkarnation einer grösseren Lebensfrage.
+**Modus:** Mild – 13 Denker, 9 Konzepte, 17 Influences, 9 Schools. Erster echter Mild-Lauf der Reihe.
 
 ---
 
 ### [x] Existenzialismus
 **Status:** implementiert 23.5.26 (Mild-Modus, verteilter Architekt-Prüfer-Workflow, zweite Prüfrunde)
-**Anker:** Gewachsen — *"Was tust du mit deiner Freiheit, wenn niemand dir soll?"* — Vorarbeit seit Monaten: Buber, Kierkegaard-Angst-Begriff.
+**Anker:** Gewachsen – *"Was tust du mit deiner Freiheit, wenn niemand dir soll?"* – Vorarbeit seit Monaten: Buber, Kierkegaard-Angst-Begriff.
 **Ergebnis:** 13 Denker (Sartre + Heidegger je 7 Einfluss-Kanten als Hubs), 9 Konzepte, 7 Schulen, 20 Influences. Lectio `wenn-nichts-vorgegeben` (narrativ-historisch, L2, 5 Stationen: Nietzsche → Kierkegaard → Sartre → Frankl → Camus). Konzept-Echo-Pattern erstmals systematisch angewendet: *Fiktive Endorientierung* mit Adler-Verweis. Eröffnet **Existenz-Spur** der Sammlung.
 **Achsen:** X = Bejahung ↔ Verzweiflung, Y = Entwurf ↔ Geworfenheit. Buber peripher (x=25, y=72) als markierte Randstimme.
 **7 lectio_briefs:** 5 Lectio-Stationen (Nietzsche, Kierkegaard, Sartre, Frankl, Camus) + 2 Reserve (Heidegger → geplante Tod-Lectio, Dostojewski → ggf. Freiheits-Lectio).
@@ -647,35 +647,35 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 ---
 
 ### [x] Lebenskunst
-**Status:** implementiert 29.5.26 (Mild-Modus, Architekt-Entwurf — Anker-Dokument in `lebenskunst-anker.md`)
-**Anker:** Gewachsen — *"Wie lebst du, dass dein Leben dir gelingt?"* — Epikur-Schuld aus Tod-Lebensfrage getilgt (`aus: lebenskunst/epikur` jetzt gültig).
-**Ergebnis:** 14 Denker (Aristoteles, Marc Aurel, Epikur als Hubs), 8 Konzepte, 6 Schulen. Spur: Existenz (hue 65, amber-gold). Zweites Existenz-Tableau — Bedingung für explizite Library-Sichtbarkeit erfüllt.
+**Status:** implementiert 29.5.26 (Mild-Modus, Architekt-Entwurf – Anker-Dokument in `lebenskunst-anker.md`)
+**Anker:** Gewachsen – *"Wie lebst du, dass dein Leben dir gelingt?"* – Epikur-Schuld aus Tod-Lebensfrage getilgt (`aus: lebenskunst/epikur` jetzt gültig).
+**Ergebnis:** 14 Denker (Aristoteles, Marc Aurel, Epikur als Hubs), 8 Konzepte, 6 Schulen. Spur: Existenz (hue 65, amber-gold). Zweites Existenz-Tableau – Bedingung für explizite Library-Sichtbarkeit erfüllt.
 **Achsen:** X = Lust/Genuss ↔ Tugend/Haltung · Y = Selbstgenügsamkeit/Rückzug ↔ Weltzuwendung/Tätigkeit. Vier Ecken klar besetzt: Epikur (Lust+Rückzug), Aristoteles (Tugend+Welt), Stoa (Tugend+Rückzug), Montaigne/Mill/Csíkszentmihályi (Lust+Welt).
-**Wandernde Knoten:** Aristoteles, Stoa, Nietzsche erscheinen in Ethik und Existenzialismus mit verschobenem Akzent — erster systematischer Einsatz des `related_topics`-Musters.
-**Methoden-Signal (v2.3):** Y-Inversions-Bug ist nun 4× aufgetreten. Pre-Liefer-Validator muss Achsen-Konvention aus einem bekannt-korrekten Referenz-Knoten kalibrieren (z.B. Kant=Individuum=y72 im Politik-Tableau), nicht aus Label-Intuition — sonst kodiert er denselben Vorzeichenfehler.
+**Wandernde Knoten:** Aristoteles, Stoa, Nietzsche erscheinen in Ethik und Existenzialismus mit verschobenem Akzent – erster systematischer Einsatz des `related_topics`-Musters.
+**Methoden-Signal (v2.3):** Y-Inversions-Bug ist nun 4× aufgetreten. Pre-Liefer-Validator muss Achsen-Konvention aus einem bekannt-korrekten Referenz-Knoten kalibrieren (z.B. Kant=Individuum=y72 im Politik-Tableau), nicht aus Label-Intuition – sonst kodiert er denselben Vorzeichenfehler.
 **Nächster Schritt:** Lectio planen (Kandidat: destruktiv-aufbauend oder konkurrierend-konfrontativ um die Ataraxie-Frage).
 
 ---
 
 ### [x] Begegnung (Der Andere)
 **Status:** implementiert 30.5.26 (Mild-Modus, externe Prüfung bestanden)
-**Anker:** Gewachsen — „Werde ich erst am Anderen zu mir selbst — und ist der Andere dabei Geschenk oder Zumutung?" Aus mehrtägigem Nachdenken über Bubers „Weg des Menschen".
+**Anker:** Gewachsen – „Werde ich erst am Anderen zu mir selbst – und ist der Andere dabei Geschenk oder Zumutung?" Aus mehrtägigem Nachdenken über Bubers „Weg des Menschen".
 **Ergebnis:** 11 Denker (Buber als Haupt-Hub 6 Kanten/3 Stufen, Sartre als negativer Gegen-Hub), 8 Konzepte, 5 Schulen, 13 Influences. Spur: Existenz (hue 35). Drittes Existenz-Tableau.
-**Achsen:** X = Der Einzelne ist der Grund ↔ Die Beziehung ist der Grund · Y = Geschenk (nährend) ↔ Zumutung (bedrohlich). Quadranten-Verteilung 6/2/2/1 — Q1 (Einzelner+Geschenk) bewusst dünn (nur Aristoteles), als dritte Spannung in der Synthese verarbeitet: „Wer den Einzelnen zum Grund macht, dem wird der Andere fast zwangsläufig zur Grenze."
+**Achsen:** X = Der Einzelne ist der Grund ↔ Die Beziehung ist der Grund · Y = Geschenk (nährend) ↔ Zumutung (bedrohlich). Quadranten-Verteilung 6/2/2/1 – Q1 (Einzelner+Geschenk) bewusst dünn (nur Aristoteles), als dritte Spannung in der Synthese verarbeitet: „Wer den Einzelnen zum Grund macht, dem wird der Andere fast zwangsläufig zur Grenze."
 **Wandernde Knoten (related_topics, Bestand unangetastet):** Buber, Marcel, Sartre, de Beauvoir → existenzialismus · Rogers → das-selbst · Aristoteles → ethik/lebenskunst. Kein gedoppelter Knoten.
 **Schul-Ausnahme:** tugendethik-der-freundschaft = Ein-Denker-Schule (nur Aristoteles), bewusst, dokumentiert in topic.meta.schoolExceptions (Cicero/De Amicitia als künftige zweite Stimme).
 **Prüfbefund (extern):** Reifstes Tableau der Serie, Koordinatentest auf Anhieb bestanden, keine Strukturfehler. Einziger Fund war die Farb-Einordnung → Farb-Sitzung (s.u.).
-**Bau-Panne (nachträglich):** levels-Format war falsch ({"level":N} statt {"id":N, "short":"LN"}) — von Code gefixt. Auslöser für JSON-Validator-Item (s.u.).
+**Bau-Panne (nachträglich):** levels-Format war falsch ({"level":N} statt {"id":N, "short":"LN"}) – von Code gefixt. Auslöser für JSON-Validator-Item (s.u.).
 
 ---
 
 ### [x] Lectio „Wo bist du?" (Der Weg des Menschen)
 **Status:** implementiert 30.5.26, externe Prüfung bestanden
 **Tableau:** begegnung · **Pfad-Typ:** kontemplativ-vertiefend (NEU, erster Fall) · L2, 4 Stationen, ~16 Min.
-**Form:** Erste Ein-Werk-Lectio der Sammlung — drei Stationen durch DENSELBEN Buber-Knoten (je eine Stufe von „Der Weg des Menschen": Wo bist du? → Umkehr/Sammlung → bei sich beginnen, nicht bei sich enden), dann Doppelstation Marcel+Rogers als Zeugen der Wende.
-**Schema-Erweiterung:** Feld `step_brief` auf LectioStep — überschreibt den Knoten-Text pro Station, damit derselbe Knoten dreimal verschiedenen Text zeigt. Engine-Priorität: step_brief → lectio_brief → versions[level] → Fallback.
-**Anker:** Gewachsen aus der Retraite-Erfahrung des Kurators — „Wo bist du?" als berührendster Moment, und die Einsicht, dass Begegnung übers offene Herz läuft, nicht über die Logik (offene Türen einrennen). closing_question kehrt zum „Wo bist du?" zurück (Zirkel-Signatur), gewendet ins Handeln.
-**Methoden-Disziplin (Befund #2):** Pfad-Typ kontemplativ-vertiefend wird NICHT sofort in lectio-mode kanonisiert — nur ein Fall. Aufnahme (dann v1.10) wartet auf einen zweiten, unabhängigen kontemplativ-vertiefenden Bau. lectio-mode bleibt v1.9.
+**Form:** Erste Ein-Werk-Lectio der Sammlung – drei Stationen durch DENSELBEN Buber-Knoten (je eine Stufe von „Der Weg des Menschen": Wo bist du? → Umkehr/Sammlung → bei sich beginnen, nicht bei sich enden), dann Doppelstation Marcel+Rogers als Zeugen der Wende.
+**Schema-Erweiterung:** Feld `step_brief` auf LectioStep – überschreibt den Knoten-Text pro Station, damit derselbe Knoten dreimal verschiedenen Text zeigt. Engine-Priorität: step_brief → lectio_brief → versions[level] → Fallback.
+**Anker:** Gewachsen aus der Retraite-Erfahrung des Kurators – „Wo bist du?" als berührendster Moment, und die Einsicht, dass Begegnung übers offene Herz läuft, nicht über die Logik (offene Türen einrennen). closing_question kehrt zum „Wo bist du?" zurück (Zirkel-Signatur), gewendet ins Handeln.
+**Methoden-Disziplin (Befund #2):** Pfad-Typ kontemplativ-vertiefend wird NICHT sofort in lectio-mode kanonisiert – nur ein Fall. Aufnahme (dann v1.10) wartet auf einen zweiten, unabhängigen kontemplativ-vertiefenden Bau. lectio-mode bleibt v1.9.
 
 ---
 
@@ -683,22 +683,22 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 **Status:** implementiert 31.5.26
 **Pfad-Typ:** konkurrierend-konfrontativ · L3 · 4 Stationen · ~15 Min.
 **Stationen:** Sartre → Hegel → Buber+Marcel → Lévinas. Schreitet die Diagonal-Achse des Tableaus ab (Zumutung ↔ Geschenk). Alle vier Stationen mit dichten lectio_brief-Feldern (Sartre, Hegel, Lévinas neu; Marcel ersetzt nach Prüfer-Empfehlung). Station 1 zusätzlich via step_brief in der Lectio-Datei.
-**Gegentyp zur stillen „Wo bist du?"** — die beiden Begegnung-Lectios ergänzen sich (kontemplativ vs. konfrontativ).
+**Gegentyp zur stillen „Wo bist du?"** – die beiden Begegnung-Lectios ergänzen sich (kontemplativ vs. konfrontativ).
 
 ---
 
-### [x] Das Selbstverhältnis — viertes Existenz-Tableau
+### [x] Das Selbstverhältnis – viertes Existenz-Tableau
 **Status:** live 1.6.26 (Mild-Modus, zwei Prüfrunden)
-**Anker:** *„Wenn du an dir leidest — ist die Antwort, dich anzunehmen, oder dich zu überwinden?"*
+**Anker:** *„Wenn du an dir leidest – ist die Antwort, dich anzunehmen, oder dich zu überwinden?"*
 **Ergebnis:** 11 Denker, 8 Konzepte, 8 Schulen, 14 Influences. Existenz-Spur (hue 71). Achsen: Annehmen↔Überwinden / Gabe↔Errungen. Zwei Quersteller (Buddhismus: ontologisch; IFS: Multiplizität) plus Metzinger (L5, naturalistisch). Stufenverteilung L1–L5 vollständig belegt. Adler gestrichen (Achsen-Konsistenz), `bedingungslose-wertschaetzung` gestrichen (Rogers-Schlagseite). Synthese: „Sie teilen keine Schule, nur die Frage."
 **Nebennutzen:** Existenz-Spur hat jetzt **vier Tableaus** (Begegnung 35 · Existenzialismus 45 · Lebenskunst 65 · Selbstverhältnis 71).
 
 ---
 
-### [x] Verwandlung — zweites Wandlung-Tableau
+### [x] Verwandlung – zweites Wandlung-Tableau
 **Status:** implementiert 1.6.26 (Mild-Modus, externe Prüfung bestanden)
-**Anker:** Gewachsen — *„Was muss geschehen, damit ein Mensch nicht repariert, sondern ein anderer wird?"* Rilkes „Du mußt dein Leben ändern" als innerer Ankerpunkt.
-**Abgrenzung:** Wandlung (erstes Tableau) fragt *Was heilt?* — Verwandlung fragt *Was verwandelt grundlegend?* Trennlinie Reparatur vs. Metamorphose. Weitet die Spur von „therapeutisch" auf „allgemein".
+**Anker:** Gewachsen – *„Was muss geschehen, damit ein Mensch nicht repariert, sondern ein anderer wird?"* Rilkes „Du musst dein Leben ändern" als innerer Ankerpunkt.
+**Abgrenzung:** Wandlung (erstes Tableau) fragt *Was heilt?* – Verwandlung fragt *Was verwandelt grundlegend?* Trennlinie Reparatur vs. Metamorphose. Weitet die Spur von „therapeutisch" auf „allgemein".
 **Ergebnis:** 10 Denker (Rilke als **erster Dichter-Knoten der Sammlung**, Eckhart als Scharnier-Hub mit Kantengrad 4), 6 Konzepte, 8 Schulen (eine Drei-Denker-Schule: `kontemplative-tradition`), 13 Influences. Achsen: Krise↔Praxis / Selbst-getrieben↔Welt-getroffen. Hue 156 (Staffelung innerhalb des Wandlung-Bands 150–160°). Alle 5 Stufen belegt; L1–L2 mit zwei Influence-Kanten aktiv (rilke→james L1, james→frankl L2).
 **Externe Prüfung:** „strukturell und tonal das sauberste Tableau der Serie." Y-Achse + Tolle-Ton unabhängig bestätigt. Ein Befund eingearbeitet: zwei Ein-Denker-Schulen zu `kontemplative-tradition` zusammengelegt.
 **Dichter-Knoten-Pattern etabliert:** Stimme über `lectio_brief` + atmosphärische versions, Schule als bewusste Ein-Denker-Ausnahme (`lebensdichtung`). Wiederverwendbar für künftige nicht-argumentierende Stimmen.
@@ -707,49 +707,49 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 
 ---
 
-### [x] Wandlung — Tableau + erste Lectio
+### [x] Wandlung – Tableau + erste Lectio
 **Status:** implementiert 31.5.26 (Mild-Modus, externe Prüfung bestanden)
-**Anker:** Gewachsen — *"Was muss geschehen, damit ein Mensch ein anderer wird?"* — aus eigener Transformationsarbeit, trifft Moniques Wortfeld (Veränderungsprozess).
-**Tableau:** 11 Denker, 8 Konzepte, 8 Schulen, 25 Annotationen. Hubs: Freud/Rogers/Perls/Kabat-Zinn (je Kantengrad 4, je 3 Textstufen). Achsen: Verstehen↔Erfahren / individuell↔relational. Spur: Wandlung (hue 152, erdig-grün) — **vierte Sammlungs-Spur eröffnet**.
-**Abgrenzungen:** Wandlung prozessual (wie verändert sich ein Mensch), Selbst ontologisch (was IST das Selbst). Jung/Kohut/IFS bewusst nicht übernommen. Relationale Pol maßvoll gehalten (grenzt von Begegnung ab).
-**Lectio:** `verstehen-oder-weitergehen` — narrativ-historisch, L3, 5 Stationen: Freud → van der Kolk → Adler → Rogers → Prochaska/DiClemente. Alle via step_brief. Bogen: von ›woher kommt mein Leiden?‹ zu ›wohin will ich?‹ — gebrochen durch das Stufenmodell am Ende.
+**Anker:** Gewachsen – *"Was muss geschehen, damit ein Mensch ein anderer wird?"* – aus eigener Transformationsarbeit, trifft Moniques Wortfeld (Veränderungsprozess).
+**Tableau:** 11 Denker, 8 Konzepte, 8 Schulen, 25 Annotationen. Hubs: Freud/Rogers/Perls/Kabat-Zinn (je Kantengrad 4, je 3 Textstufen). Achsen: Verstehen↔Erfahren / individuell↔relational. Spur: Wandlung (hue 152, erdig-grün) – **vierte Sammlungs-Spur eröffnet**.
+**Abgrenzungen:** Wandlung prozessual (wie verändert sich ein Mensch), Selbst ontologisch (was IST das Selbst). Jung/Kohut/IFS bewusst nicht übernommen. Relationale Pol massvoll gehalten (grenzt von Begegnung ab).
+**Lectio:** `verstehen-oder-weitergehen` – narrativ-historisch, L3, 5 Stationen: Freud → van der Kolk → Adler → Rogers → Prochaska/DiClemente. Alle via step_brief. Bogen: von ›woher kommt mein Leiden?‹ zu ›wohin will ich?‹ – gebrochen durch das Stufenmodell am Ende.
 **Bibliotheks-Bedingung:** Library-Sichtbarkeits-Bedingung wieder gebrochen (vierte Spur mit 1 Tableau). Explizite Section-Header warten bis Wandlung-Spur ein zweites Tableau hat.
 
 ---
 
-### [x] Gut und Böse — Tableau + erste Lectio
+### [x] Gut und Böse – Tableau + erste Lectio
 **Status:** implementiert 31.5.26 (Mild-Modus, externe Prüfung bestanden)
-**Anker:** Gewachsen — *"Was ist der Mensch überhaupt, dass er zu beidem fähig ist?"* Achsen anthropologisch, nicht normativ → eröffnet **fünfte Sammlungs-Spur: Menschenbild** (hue 345, Magenta).
-**Abgrenzung zu Ethik:** Ethik fragt *Was soll ich tun?* — Gut/Böse fragt *Was ist der Mensch?* Verschiedene Fragen, legitim nebeneinander. Spur-Entscheidung am Material gefällt.
+**Anker:** Gewachsen – *"Was ist der Mensch überhaupt, dass er zu beidem fähig ist?"* Achsen anthropologisch, nicht normativ → eröffnet **fünfte Sammlungs-Spur: Menschenbild** (hue 345, Magenta).
+**Abgrenzung zu Ethik:** Ethik fragt *Was soll ich tun?* – Gut/Böse fragt *Was ist der Mensch?* Verschiedene Fragen, legitim nebeneinander. Spur-Entscheidung am Material gefällt.
 **Ergebnis:** 11 Denker, Achsen: Menschenbild X = von Natur aus gut ↔ von Natur aus böse / Y = individuell-ontologisch ↔ sozial-situativ. Spur: Menschenbild (hue 345). 5 lectio_briefs (Mengzi, Hobbes, Augustinus, Arendt, Kant).
-**Lectio:** `stell-die-frage-anders` — destruktiv-aufbauend, L3, 5 Stationen (Mengzi → Hobbes → Augustinus → Arendt → Kant). Alle Stationen via lectio_brief. Begleitnotiz: `gut-und-boese-begleitnotiz.md`.
-**Bibliotheks-Bedingung:** Library-Sichtbarkeits-Bedingung weiterhin nicht erfüllt — jetzt zwei Ein-Tableau-Spuren (Wandlung + Menschenbild). Explizite Section-Header warten bis beide Spuren ≥2 Tableaus haben.
+**Lectio:** `stell-die-frage-anders` – destruktiv-aufbauend, L3, 5 Stationen (Mengzi → Hobbes → Augustinus → Arendt → Kant). Alle Stationen via lectio_brief. Begleitnotiz: `gut-und-boese-begleitnotiz.md`.
+**Bibliotheks-Bedingung:** Library-Sichtbarkeits-Bedingung weiterhin nicht erfüllt – jetzt zwei Ein-Tableau-Spuren (Wandlung + Menschenbild). Explizite Section-Header warten bis beide Spuren ≥2 Tableaus haben.
 
 ---
 
-### [x] Einsamkeit — Lebensfrage (priorisiert)
-**Status:** live 1.6.26 — Route `/lebensfragen/einsamkeit`
+### [x] Einsamkeit – Lebensfrage (priorisiert)
+**Status:** live 1.6.26 – Route `/lebensfragen/einsamkeit`
 **Form:** Lebensfrage (tableau-übergreifend, analog zu „Was tue ich mit Schmerz?")
 **Anker:** Lebensweltlich sehr hoch. Brücke zwischen Existenz-Spur (Heidegger, Sartre, Buber), Selbst-Tableau (Kohut, IFS) und Wandlung (Rilke als einziger Gegenpol).
-**Stimmen:** Heidegger (das Man / Vereinzelung), Sartre (Freiheit isoliert), Buber (fehlendes Zwischen), Winnicott (Spur früh fehlenden Haltens), Fromm (Mangel als Antrieb), Rilke (Einsamkeit hüten — einziger Gegenpol).
-**Dreipolige Spannung:** Mangel (Buber/Winnicott) · Grundverfassung (Heidegger/Sartre) · Bedingung (Rilke) — Fromm als Brücke.
-**Nebennutzen:** War die zweite Lebensfrage — hat die Library-Sektion-Bedingung erfüllt. Sektion „Ein Weg quer hindurch" ist live (vier Lebensfragen).
+**Stimmen:** Heidegger (das Man / Vereinzelung), Sartre (Freiheit isoliert), Buber (fehlendes Zwischen), Winnicott (Spur früh fehlenden Haltens), Fromm (Mangel als Antrieb), Rilke (Einsamkeit hüten – einziger Gegenpol).
+**Dreipolige Spannung:** Mangel (Buber/Winnicott) · Grundverfassung (Heidegger/Sartre) · Bedingung (Rilke) – Fromm als Brücke.
+**Nebennutzen:** War die zweite Lebensfrage – hat die Library-Sektion-Bedingung erfüllt. Sektion „Ein Weg quer hindurch" ist live (vier Lebensfragen).
 
 ---
 
 ### [x] Rilke als fehlender Knoten
 **Status:** gelöst 1.6.26 im Verwandlung-Tableau
-**Ergebnis:** Rilke ist Hub im Verwandlung-Tableau (x:28, y:16 — Krise × Welt-getroffen, Hub mit Kantengrad 4, drei Textstufen). Schule `lebensdichtung` als bewusste Ein-Denker-Ausnahme. L5-Pointe: „Du mußt dein Leben ändern" ist reinste Passivität als Imperativ — unterläuft die Y-Achse. **Dichter-Knoten-Pattern etabliert** — wiederverwendbar für Hölderlin, Celan etc. Rilke ist als Quelle auch für Einsamkeit-Lebensfrage verfügbar (`aus: {tableau: verwandlung, knoten: rilke}`).
+**Ergebnis:** Rilke ist Hub im Verwandlung-Tableau (x:28, y:16 – Krise × Welt-getroffen, Hub mit Kantengrad 4, drei Textstufen). Schule `lebensdichtung` als bewusste Ein-Denker-Ausnahme. L5-Pointe: „Du musst dein Leben ändern" ist reinste Passivität als Imperativ – unterläuft die Y-Achse. **Dichter-Knoten-Pattern etabliert** – wiederverwendbar für Hölderlin, Celan etc. Rilke ist als Quelle auch für Einsamkeit-Lebensfrage verfügbar (`aus: {tableau: verwandlung, knoten: rilke}`).
 
 ---
 
 ### [ ] JSON-Validator beim Build (Tableau + Lectio)
 **Status:** identifiziert 30.5.26, ausgelöst durch levels-Format-Panne im Begegnung-Bau
-**Problem:** JSONs werden per `as unknown as TopicData` eingebunden — tsc prüft die Struktur nicht. Feld-Mismatches (level vs. id), fehlende Pflichtfelder und tote Referenzen brechen erst still im Browser. Der levels-Bug (Slider zeigte keine Stufen) war der erste sichtbare Fall; dieselbe blinde Stelle gilt für quadrants, versions-Keys, schoolId, influence-Endpunkte.
+**Problem:** JSONs werden per `as unknown as TopicData` eingebunden – tsc prüft die Struktur nicht. Feld-Mismatches (level vs. id), fehlende Pflichtfelder und tote Referenzen brechen erst still im Browser. Der levels-Bug (Slider zeigte keine Stufen) war der erste sichtbare Fall; dieselbe blinde Stelle gilt für quadrants, versions-Keys, schoolId, influence-Endpunkte.
 **Lösung (drei Prüfklassen in einem Tool):**
 1. **Schema (zod):** Tableau-/Lectio-JSON gegen ein zod-Schema, abgeleitet aus/synchron mit types.ts. Ersetzt `as unknown as`. Fängt level↔id und fehlende Felder.
 2. **Referenz-Integrität:** jede schoolId → existierende Schule, jeder influence-Endpunkt → existierender Knoten, jeder Lectio-nodeId → Tableau-Knoten, kuratiert_aus_tableaus == genutzte aus.tableau. (Genau die Checks, die in der Session manuell liefen.)
-3. **Koordinaten-Plausibilität:** Y-Konvention gegen einen BEKANNT-KORREKTEN Anker-Knoten kalibrieren (nicht gegen Label-Intuition — sonst kodiert der Validator den Y-Inversions-Bug mit). Der Bug ist 4× aufgetreten; dieser Check verhindert den 5.
+3. **Koordinaten-Plausibilität:** Y-Konvention gegen einen BEKANNT-KORREKTEN Anker-Knoten kalibrieren (nicht gegen Label-Intuition – sonst kodiert der Validator den Y-Inversions-Bug mit). Der Bug ist 4× aufgetreten; dieser Check verhindert den 5.
 **Bündelt:** die früheren losen Prüfer-Vorschläge „mechanischer Koordinaten-Validator" (Lebenskunst-Review) und „Schul-Heuristik: Schule = geteilte Begründungsstruktur, nicht geteiltes Thema" (Begegnung-Review). Letztere als Lint-Warnung bei Ein-Denker-Schulen.
 **Konkreter Beleg aus Session 31.5.26:** Die manuellen Checks beim Wandlung-Bau (Referenz-Integrität aller 12 Influence-Kanten, Hub==dreistufig für 4 Hubs, Y-Plausibilität gegen bekannte Anker, Annotationszahl 25) sind exakt die vier Prüfklassen, die der Validator automatisieren soll. Jeder neue Tableau-Bau läuft denselben manuellen Aufwand. Das ist der Aufwand, der einmalig in Tooling verwandelt werden müsste.
 **Läuft beim Build, nicht zur Laufzeit.**
@@ -758,29 +758,29 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 
 ### [ ] Quellen der Erkenntnis (Arbeitstitel)
 **Status:** Skizze 27.5.26
-**Anker:** "Welcher meiner Quellen darf ich glauben?" — die lebensweltliche Erkenntnisfrage. Nicht akademisch-abstrakt (das ist Realismus/Konstruktivismus), sondern als persönliche Frage: Vertraue ich dem Verstand, dem Bauch, dem Input von außen? Vier Dimensionen: epistemisch (Urteile über die Welt), intuitiv (Bauchgefühl), moralisch (ethische Entscheidungen), introspektiv (Selbstwahrnehmung).
-**Kuratorische Position (27.5.26):** "Ich würde nachdenken, das Bauchgefühl aber versuchen miteinzubeziehen." — eine gewichtete Doppelbewegung: Verstand zuerst, Bauch bewusst dazu. Dieser Anker ist der Ausgangspunkt, von dem aus das Tableau gebaut werden kann.
+**Anker:** "Welcher meiner Quellen darf ich glauben?" – die lebensweltliche Erkenntnisfrage. Nicht akademisch-abstrakt (das ist Realismus/Konstruktivismus), sondern als persönliche Frage: Vertraue ich dem Verstand, dem Bauch, dem Input von aussen? Vier Dimensionen: epistemisch (Urteile über die Welt), intuitiv (Bauchgefühl), moralisch (ethische Entscheidungen), introspektiv (Selbstwahrnehmung).
+**Kuratorische Position (27.5.26):** "Ich würde nachdenken, das Bauchgefühl aber versuchen miteinzubeziehen." – eine gewichtete Doppelbewegung: Verstand zuerst, Bauch bewusst dazu. Dieser Anker ist der Ausgangspunkt, von dem aus das Tableau gebaut werden kann.
 **Achsen-Skizze (drei Alternativen, noch offen):**
-- Skizze 1: X = Innen (Intuition/Gefühl) ↔ Außen (Input/Logik) · Y = Selbstbezug (Wer bin ich?) ↔ Weltbezug (Was ist wahr?) — Stichprobentest zeigt: Y nicht trennscharf, viele Denker haben eine Theorie, die beides erklärt
-- Skizze 2: X = Innen ↔ Außen · Y = Vertrauen (Quelle verlässlich) ↔ Skepsis (Quelle täuscht) — möglicherweise trennschärfer
-- Skizze 3: X = Innen ↔ Außen · Y = Methode (aktives Erkennen) ↔ Geschehen (empfangenes Wissen)
-**Mögliche Denker:** Descartes (cogito, Innen-Selbst), Hume (Empirismus, Außen), Locke (tabula rasa), Kant (Vermittlung), Husserl (Phänomenologie, Innen-Welt), Wittgenstein (öffentliche Kriterien, Außen), Damasio (somatische Marker, Innen), Gigerenzer (Heuristiken), Jung (Individuation, Innen-Selbst), Hood (Selbst als Illusion, Skepsis), Pyrrhon/Sextus Empiricus (antike Skepsis), William James (Pragmatismus) — Auswahl beim Bau verdichten.
+- Skizze 1: X = Innen (Intuition/Gefühl) ↔ Aussen (Input/Logik) · Y = Selbstbezug (Wer bin ich?) ↔ Weltbezug (Was ist wahr?) – Stichprobentest zeigt: Y nicht trennscharf, viele Denker haben eine Theorie, die beides erklärt
+- Skizze 2: X = Innen ↔ Aussen · Y = Vertrauen (Quelle verlässlich) ↔ Skepsis (Quelle täuscht) – möglicherweise trennschärfer
+- Skizze 3: X = Innen ↔ Aussen · Y = Methode (aktives Erkennen) ↔ Geschehen (empfangenes Wissen)
+**Mögliche Denker:** Descartes (cogito, Innen-Selbst), Hume (Empirismus, Aussen), Locke (tabula rasa), Kant (Vermittlung), Husserl (Phänomenologie, Innen-Welt), Wittgenstein (öffentliche Kriterien, Aussen), Damasio (somatische Marker, Innen), Gigerenzer (Heuristiken), Jung (Individuation, Innen-Selbst), Hood (Selbst als Illusion, Skepsis), Pyrrhon/Sextus Empiricus (antike Skepsis), William James (Pragmatismus) – Auswahl beim Bau verdichten.
 **Abgrenzung:** Lebensweltlich-persönlich (welchen meiner Quellen traue ich?) vs. Realismus/Konstruktivismus (akademisch-ontologisch: was ist real?). Knotenüberschneidungen (Hume, Kant) über Cross-Reference, nicht dopppeln.
 **Verhältnis zu anderen Tableaus:** Erkenntnis-Spur. Überlappt mit Realismus, peripher mit Selbst (Introspektion) und Geist (First/Third-Person).
 **Offene Voraussetzungen vor Bau:**
-- Y-Achse entscheiden — Skizze 2 oder 3 nach Stichprobentest mit den Hauptdenkern
-- Akademisch oder lebensweltlich klären: philosophische Tradition (Hume, Kant, Husserl) oder praktische Frage (Bauchgefühl, Intuition, Heuristiken) — beides ohne Spannung geht nicht
+- Y-Achse entscheiden – Skizze 2 oder 3 nach Stichprobentest mit den Hauptdenkern
+- Akademisch oder lebensweltlich klären: philosophische Tradition (Hume, Kant, Husserl) oder praktische Frage (Bauchgefühl, Intuition, Heuristiken) – beides ohne Spannung geht nicht
 **Modus:** Zu prüfen, eventuell volle Schleife wegen persönlicher Ankerhärte.
 **Nächster Schritt:** Y-Achse per Stichprobentest entscheiden, dann Bau-Entscheidung treffen.
 
 ---
 
-### [ ] Wesen und Verhalten — mögliche neue Lebensfrage
-**Status:** resonanz- und verfügbarkeitsgeprüft 28.6.26 — wartet auf Vorklärung des Kurators, dann frischer Bau-Chat
-**Anker:** Das Verhältnis von Wesen und Verhalten — was jemand *ist* gegenüber dem, was er *tut*.
-**Verfügbarkeit (genug Stimmen):** Foucault, Hadot, Wahres Selbst, Nietzsche, Vedanta, Buddhismus, Sartre — quer über Selbst/Selbstverhältnis vorhanden.
-**Offene Vorklärung (vor Bau, kuratorisch):** Drei Schichten sauber trennen — (1) empirisches Wesen (Charakter, Disposition), (2) metaphysisches Wesen (ein „wahres Selbst"?), (3) das Verhältnis der beiden. Erst wenn die drei Schichten geklärt sind, wird gebaut.
-**Nächster Schritt:** Kurator klärt die drei Schichten vor; dann frischer Bau-Chat. Ob als Lebensfrage (tableau-übergreifend) oder eigenes Tableau — beim Vorklären mitentscheiden.
+### [ ] Wesen und Verhalten – mögliche neue Lebensfrage
+**Status:** resonanz- und verfügbarkeitsgeprüft 28.6.26 – wartet auf Vorklärung des Kurators, dann frischer Bau-Chat
+**Anker:** Das Verhältnis von Wesen und Verhalten – was jemand *ist* gegenüber dem, was er *tut*.
+**Verfügbarkeit (genug Stimmen):** Foucault, Hadot, Wahres Selbst, Nietzsche, Vedanta, Buddhismus, Sartre – quer über Selbst/Selbstverhältnis vorhanden.
+**Offene Vorklärung (vor Bau, kuratorisch):** Drei Schichten sauber trennen – (1) empirisches Wesen (Charakter, Disposition), (2) metaphysisches Wesen (ein „wahres Selbst"?), (3) das Verhältnis der beiden. Erst wenn die drei Schichten geklärt sind, wird gebaut.
+**Nächster Schritt:** Kurator klärt die drei Schichten vor; dann frischer Bau-Chat. Ob als Lebensfrage (tableau-übergreifend) oder eigenes Tableau – beim Vorklären mitentscheiden.
 
 ---
 
@@ -795,38 +795,38 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 
 ### [x] Ethik
 **Status:** implementiert 19.5.26 (Mild-Modus, verteilter Architekt-Prüfer-Workflow)
-**Anker:** Schließt die Erkenntnis-Trias (Geist/Selbst/Bühne) durch eine Handlungsdimension — bewusst architektonisch gesetzt, nicht aus persönlichem Anker gewachsen. Das ist dokumentierte kuratorische Entscheidung.
+**Anker:** Schliesst die Erkenntnis-Trias (Geist/Selbst/Bühne) durch eine Handlungsdimension – bewusst architektonisch gesetzt, nicht aus persönlichem Anker gewachsen. Das ist dokumentierte kuratorische Entscheidung.
 **Ergebnis:** 13 Denker (Aristoteles, Kant, Mill als Hubs), 10 Konzepte, 4 Achsen (Begründungsquelle / Geltungsbereich). Verteilter Mild-Modus: Begleitnotiz und v2-Erweiterung (Sammelbeleg) im Repo.
 
 ---
 
 ### [ ] Typologien
 **Status:** Idee 10.5.26
-**Anker:** Persönlichkeitstypologien als verschiedene Theorien dessen, was Persönlichkeit *ist* — nicht als kommerzielle Test-Werkzeuge.
+**Anker:** Persönlichkeitstypologien als verschiedene Theorien dessen, was Persönlichkeit *ist* – nicht als kommerzielle Test-Werkzeuge.
 **Achsen-Skizze:**
 - X: Statisch (Typ als Wesensmerkmal) ↔ Prozessual (Typ als Entwicklungsdynamik)
 - Y: Empirisch-deskriptiv ↔ Phänomenologisch-erfahrungsnah
 
 **Mögliche Knoten:** Jung, Briggs/Myers, Costa/McCrae (Big Five), Ichazo, Naranjo, Riso/Hudson (Enneagramm), Galen, Hippokrates; ggf. ayurvedische und chinesische Traditionen.
-**Modus:** Volle Schleife — kuratorisch riskant, braucht Inquisitor-Sorgfalt.
+**Modus:** Volle Schleife – kuratorisch riskant, braucht Inquisitor-Sorgfalt.
 **Lebensweltlichkeit:** Sehr hoch.
 **Risiken:** Kommerzialisiertes Feld, Wissenschaftlichkeitsstreit, Identifikations-Falle.
-**Voraussetzung:** Eigene Position klären — was ist überhaupt ein "Persönlichkeitstyp"? Werkzeug oder Wesen?
+**Voraussetzung:** Eigene Position klären – was ist überhaupt ein "Persönlichkeitstyp"? Werkzeug oder Wesen?
 **Verhältnis zu Landkarte des Selbst:** Verwandt, aber andere Frage (taxonomisch vs. ontologisch).
 **Nächster Schritt:** Anker prüfen, Voraussetzungs-Frage beantworten.
 
 ---
 
 ### Weitere Themen-Kandidaten (notiert, nicht ausgearbeitet)
-- **Religions- und Theologiegeschichte** — höchste strukturelle Passung
-- **Theorien der Liebe / Beziehungsmodelle** — massentauglich
-- **Modelle der Aufmerksamkeit / Achtsamkeit** — zeitgemäß
-- **Architekturkritik / Stadtplanung** — Anschluss an Alltag
-- **Schulen der Psychotherapie** — Anschluss an Landkarte des Selbst
-- **Wissenschaftstheorie** — verbindet sich gut mit Geistphilosophie
-- **Ethik** — klassisches Tableau-Material
-- **Politische Theorie** — klassisch, aber politisch aufgeladen
-- **Archetypen oder mythologische Strukturen** — Voraussetzung für Cross-App-Verkörperung
+- **Religions- und Theologiegeschichte** – höchste strukturelle Passung
+- **Theorien der Liebe / Beziehungsmodelle** – massentauglich
+- **Modelle der Aufmerksamkeit / Achtsamkeit** – zeitgemäss
+- **Architekturkritik / Stadtplanung** – Anschluss an Alltag
+- **Schulen der Psychotherapie** – Anschluss an Landkarte des Selbst
+- **Wissenschaftstheorie** – verbindet sich gut mit Geistphilosophie
+- **Ethik** – klassisches Tableau-Material
+- **Politische Theorie** – klassisch, aber politisch aufgeladen
+- **Archetypen oder mythologische Strukturen** – Voraussetzung für Cross-App-Verkörperung
 
 ---
 
@@ -834,9 +834,9 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 
 ### [ ] User-Test mit zwei Personen aus der Persona
 **Status:** Methode 14.5.26
-**Kontext:** Fabian ist bisher der einzige Datenpunkt für UX-Beurteilung. Selbstbeobachtung ist wertvoll, aber unzureichend — "ist es zu textlastig?" oder "ist die Navigation klar?" lässt sich nicht aus eigenem Lesen beantworten.
+**Kontext:** Fabian ist bisher der einzige Datenpunkt für UX-Beurteilung. Selbstbeobachtung ist wertvoll, aber unzureichend – "ist es zu textlastig?" oder "ist die Navigation klar?" lässt sich nicht aus eigenem Lesen beantworten.
 **Methode:** Person aus Persona einladen (Coach, Psychologie/Spiritualität/Philosophie-Hintergrund). App geben, nicht erklären. Daneben sitzen, schweigen. Beobachten: Wo klicken sie? Wo zögern sie? Wann verlieren sie den Faden? Nach 20–30 Minuten knappe Nachbesprechung.
-**Risiko:** Falsche Personenauswahl — es muss jemand aus der Sanctum-Persona sein, kein technisch interessierter Bekannter ("Sieht cool aus!") und kein akademischer Philosoph ("Hier fehlt aber Dummett").
+**Risiko:** Falsche Personenauswahl – es muss jemand aus der Sanctum-Persona sein, kein technisch interessierter Bekannter ("Sieht cool aus!") und kein akademischer Philosoph ("Hier fehlt aber Dummett").
 **Nächster Schritt:** Nach Ethik-Bau zwei Personen einladen. Eventuell den Coach, der schon Feedback gegeben hat.
 
 ---
@@ -853,7 +853,7 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 
 ### Archetypen-Tableau aus Peterson-Impuls
 **Datum:** 14.5.26
-**Grund:** Reaktiver Impuls aus aktuellem Lesen. Das Archetypen-Tableau im Backlog bleibt offen — aber erst wenn der Anker eigenständig gewachsen ist, nicht aus einem Buch-Impuls heraus.
+**Grund:** Reaktiver Impuls aus aktuellem Lesen. Das Archetypen-Tableau im Backlog bleibt offen – aber erst wenn der Anker eigenständig gewachsen ist, nicht aus einem Buch-Impuls heraus.
 
 ### Typologie-Tableau auf Basis von Insider-Korrelationen
 **Datum:** 14.5.26
@@ -861,61 +861,61 @@ Begegnung von Platzhalter (0.48/0.10/25) auf 0.43/0.12/35 gezogen. Existenzialis
 
 ### Neuer Realismus als eigenständiges Tableau
 **Datum:** 10.5.26
-**Grund:** Zu schmal — Neuer Realismus ist eine Strömung, vergleichbar mit "Predictive Processing" oder "Funktionalismus" in Geistphilosophie. Solche Strömungen sind Knoten, keine Tableau-Themen. Außerdem Aktualitätsproblem: noch keine akademische Sedimentierung. Gabriel sitzt sinnvoll als L5-Knoten in einem Tableau "Realismus und Konstruktivismus".
+**Grund:** Zu schmal – Neuer Realismus ist eine Strömung, vergleichbar mit "Predictive Processing" oder "Funktionalismus" in Geistphilosophie. Solche Strömungen sind Knoten, keine Tableau-Themen. Ausserdem Aktualitätsproblem: noch keine akademische Sedimentierung. Gabriel sitzt sinnvoll als L5-Knoten in einem Tableau "Realismus und Konstruktivismus".
 ### Kopf-Herz-Bauch
 **Status:** Tendenz C methodisch umgesetzt 22.5.26, als Sehnsucht offen
-**Kontext:** Aktuelle Sanctum-Architektur ist kopflastig. Tableaus organisieren Wissen, Lectio führt durch Wissen — beides kognitive Modi. Die persönliche Bewegung des Kurators (Wissen muss vom Kopf über das Herz in den Bauch wandern) ist im Tool nicht explizit abgebildet.
+**Kontext:** Aktuelle Sanctum-Architektur ist kopflastig. Tableaus organisieren Wissen, Lectio führt durch Wissen – beides kognitive Modi. Die persönliche Bewegung des Kurators (Wissen muss vom Kopf über das Herz in den Bauch wandern) ist im Tool nicht explizit abgebildet.
 **Drei mögliche Antworten:**
 - A) Herz/Bauch als Tableau-Ebenen (vermutlich überladen)
 - B) Herz/Bauch als zusätzliche Eintritte in die Bibliothek (Frage-Architektur deckt das teilweise ab)
 - C) Herz/Bauch im Lectio-Modus integrieren (geführte Tour als Brücke vom Verstehen zum Verkörpern)
 
-**Tendenz C umgesetzt:** Lectio integriert die Bewegung *implizit* über die Schlussfrage und die Konvention "Offener Ausgang" (`prompts/lectio-mode.md` Punkt 10). Bewusste Entscheidung gegen ein `resonance`-Schema-Feld — die Bewegung lebt in der Stimme, nicht in Tags. Die Closing Question öffnet eine Tür zum Fühlen, ohne dahinter Therapie zu verkaufen.
-**Als Sehnsucht offen:** Falls Außenfeedback zeigt, dass die implizite Form nicht reicht, bleibt eine explizitere Brücke vom Verstehen zur Handlung denkbar.
-**Nächster Schritt:** Außenfeedback zu Lectios sammeln. Beobachten, ob die Schlussfragen die emotionale Öffnung tatsächlich leisten oder ob es mehr braucht.
+**Tendenz C umgesetzt:** Lectio integriert die Bewegung *implizit* über die Schlussfrage und die Konvention "Offener Ausgang" (`prompts/lectio-mode.md` Punkt 10). Bewusste Entscheidung gegen ein `resonance`-Schema-Feld – die Bewegung lebt in der Stimme, nicht in Tags. Die Closing Question öffnet eine Tür zum Fühlen, ohne dahinter Therapie zu verkaufen.
+**Als Sehnsucht offen:** Falls Aussenfeedback zeigt, dass die implizite Form nicht reicht, bleibt eine explizitere Brücke vom Verstehen zur Handlung denkbar.
+**Nächster Schritt:** Aussenfeedback zu Lectios sammeln. Beobachten, ob die Schlussfragen die emotionale Öffnung tatsächlich leisten oder ob es mehr braucht.
 
 ---
 
 ### Lebensfragen als Sanctum-Form
-**Status:** Soft Launch 26.5.26 — Weg B umgesetzt, Library-Sektion zurückgestellt
-**Kontext:** Mögliche dritte Sanctum-Form neben Tableau und Lectio: tableau-übergreifende, frageorientierte Pfade ("Wie sollst du mit Tieren umgehen?"), die Stimmen aus mehreren Tableaus versammeln. Praktische Brücke vom Verstehen zur Handlung — Tierethik als möglicher erster Test.
+**Status:** Soft Launch 26.5.26 – Weg B umgesetzt, Library-Sektion zurückgestellt
+**Kontext:** Mögliche dritte Sanctum-Form neben Tableau und Lectio: tableau-übergreifende, frageorientierte Pfade ("Wie sollst du mit Tieren umgehen?"), die Stimmen aus mehreren Tableaus versammeln. Praktische Brücke vom Verstehen zur Handlung – Tierethik als möglicher erster Test.
 **Problem:** Tableau-übergreifende dynamische Register sind pflegerisch fragil. Jede neue Tableau-Erweiterung würde alle bestehenden Lebensfragen veralten. Bei drei Lebensfragen okay, bei zehn wird es zur Last.
 **Mögliche Auswege:**
-- A) Lebensfragen ganz aufgeben — Brücke vom Verstehen zur Handlung passiert implizit beim Leser (jetzige Form)
-- B) Als kuratorische Pfade analog zu Lectios bauen — selektiv, statisch, neue Versionen bei Bedarf (nicht dynamisches Register)
-- C) Sehr selektive dynamische Register mit Pflege-Disziplin — max. 3–4 Lebensfragen, klare Pflege-Regel bei neuen Tableaus
+- A) Lebensfragen ganz aufgeben – Brücke vom Verstehen zur Handlung passiert implizit beim Leser (jetzige Form)
+- B) Als kuratorische Pfade analog zu Lectios bauen – selektiv, statisch, neue Versionen bei Bedarf (nicht dynamisches Register)
+- C) Sehr selektive dynamische Register mit Pflege-Disziplin – max. 3–4 Lebensfragen, klare Pflege-Regel bei neuen Tableaus
 
-**Entscheidung:** Weg B umgesetzt. "Was tue ich mit Schmerz?" als erste Lebensfrage live — Route `/lebensfragen/schmerz`, `LebensfrageViewer`-Komponente, statisch geladene Stimmen aus drei Tableaus.
-**Stand 1.6.26:** Vier Lebensfragen live (Schmerz · Tod · Einsamkeit · Veränderung). Library-Sektion „Ein Weg quer hindurch" bereits vorhanden und befüllt — Footer-Link-Phase abgeschlossen. Kein weiterer UI-Schritt nötig.
+**Entscheidung:** Weg B umgesetzt. "Was tue ich mit Schmerz?" als erste Lebensfrage live – Route `/lebensfragen/schmerz`, `LebensfrageViewer`-Komponente, statisch geladene Stimmen aus drei Tableaus.
+**Stand 1.6.26:** Vier Lebensfragen live (Schmerz · Tod · Einsamkeit · Veränderung). Library-Sektion „Ein Weg quer hindurch" bereits vorhanden und befüllt – Footer-Link-Phase abgeschlossen. Kein weiterer UI-Schritt nötig.
 
 ---
 
 ### Game B als Material
 **Status:** wartet auf passendes Tableau 22.5.26
-**Kontext:** Eigene Auseinandersetzung des Kurators mit der Metakrise (Schmachtenberger, Hanzi Freinacht, McGilchrist, Whitehead-Buber als relationale Ontologie). Ein Manifest, das eine Position formuliert — nicht eine Sammlung von Positionen.
-**Eignung als eigenes Tableau:** Nicht geeignet. Zu thesen-haltig, kein echter Antagonismus innerhalb des Materials, würde gegen Konvention "Offener Ausgang" (bibliothek-architektur.md) verstoßen — wäre Verkündigung, nicht Karte.
+**Kontext:** Eigene Auseinandersetzung des Kurators mit der Metakrise (Schmachtenberger, Hanzi Freinacht, McGilchrist, Whitehead-Buber als relationale Ontologie). Ein Manifest, das eine Position formuliert – nicht eine Sammlung von Positionen.
+**Eignung als eigenes Tableau:** Nicht geeignet. Zu thesen-haltig, kein echter Antagonismus innerhalb des Materials, würde gegen Konvention "Offener Ausgang" (bibliothek-architektur.md) verstossen – wäre Verkündigung, nicht Karte.
 **Mögliche Anschluss-Tableaus, in denen Game B als Schule oder Stimme vorkäme:**
 - Prozessphilosophie vs. Substanzphilosophie (Whitehead, Buber, Merleau-Ponty, McGilchrist)
 - Metamodernismus als Epoche (knüpft an Realismus-Lectio "Wenn die Welt zu wackeln beginnt" an)
 - Komplexitätstheorie und ihre philosophischen Konsequenzen (Moloch, Systemdenken, Schmachtenberger)
 - Relationale Ethik (knüpft an Ethik-Tableau mit Levinas an)
 
-**Game B als Schule:** Mehrere Vertreter (Schmachtenberger, Freinacht, Vervaeke) — also tatsächlich Tradition, nicht Einzelposition. Würde Schools-Konvention erfüllen.
-**Nächster Schritt:** Beim nächsten Tableau-Bau (Existenzialismus oder später) prüfen, ob eine der genannten Richtungen als Anker tragfähig ist. Game B nicht als eigenständiges Projekt planen — als Knoten in einem größeren Feld denken.
+**Game B als Schule:** Mehrere Vertreter (Schmachtenberger, Freinacht, Vervaeke) – also tatsächlich Tradition, nicht Einzelposition. Würde Schools-Konvention erfüllen.
+**Nächster Schritt:** Beim nächsten Tableau-Bau (Existenzialismus oder später) prüfen, ob eine der genannten Richtungen als Anker tragfähig ist. Game B nicht als eigenständiges Projekt planen – als Knoten in einem grösseren Feld denken.
 
 ---
 
 ### Persönlicher Resonanzcheck
-Bevor ein Thema gebaut wird, prüfen — was treibt mich? Reaktive Themen ("hab heute davon gelesen") sind dünner als gewachsene ("beschäftigt mich seit Monaten").
+Bevor ein Thema gebaut wird, prüfen – was treibt mich? Reaktive Themen ("hab heute davon gelesen") sind dünner als gewachsene ("beschäftigt mich seit Monaten").
 
 ### Modus-Bewusstheit
 Nicht jedes Tableau muss durch die volle Architekt-Inquisitor-Schleife. Die Library wird stärker, wenn Verschiedenheit der Tableaus *kuratiert* ist statt zufällig.
 
 ### Anreicherung statt Erweiterung
-Manche Datensätze brauchen mehr Beziehungen, nicht mehr Knoten. Die Operation "Influence-Anreicherung" ist additiv, schmal und stilerhaltend — geeignet für Datensätze, deren Stimme stimmt, aber deren Netz dünn ist.
+Manche Datensätze brauchen mehr Beziehungen, nicht mehr Knoten. Die Operation "Influence-Anreicherung" ist additiv, schmal und stilerhaltend – geeignet für Datensätze, deren Stimme stimmt, aber deren Netz dünn ist.
 
 ### Resonanzcheck vor jedem Tableau-Bau
-Nicht jedes strukturell fehlende Tableau muss gebaut werden. Vor dem Bau strikt prüfen — was treibt mich? Reaktiv (Buchimpuls, architektonische Vollständigkeit) ist dünner als gewachsen (beschäftigt mich seit Monaten, trifft eine persönliche Frage). Tableaus ohne persönlichen Anker können gut gebaut werden — aber Bewusstsein darüber ist Teil der kuratorischen Reife. Sanctum darf solche Tableaus haben, es muss nur ehrlich darüber sein.
+Nicht jedes strukturell fehlende Tableau muss gebaut werden. Vor dem Bau strikt prüfen – was treibt mich? Reaktiv (Buchimpuls, architektonische Vollständigkeit) ist dünner als gewachsen (beschäftigt mich seit Monaten, trifft eine persönliche Frage). Tableaus ohne persönlichen Anker können gut gebaut werden – aber Bewusstsein darüber ist Teil der kuratorischen Reife. Sanctum darf solche Tableaus haben, es muss nur ehrlich darüber sein.
 
 ### Datensatz vs. Produkt
 Ein guter Datensatz ist nicht gleich ein gutes Produkt. Side-Panel, Glossar und Synthese-Texte entscheiden, ob die Datensatzqualität auch im Frontend ankommt.
@@ -938,9 +938,9 @@ Bei Bedarf am Ende eines Diskussions-Chats Claude bitten: *"Fass mir die Backlog
 
 ## Anmerkung zum Status dieser Datei
 
-Diese Datei **ist** das Repo-Backlog — die einzige, git-getrackte Backlog-Quelle (es gibt kein separates „eigentliches" Backlog daneben). Sie sammelt abgeschlossene Arbeit, offene Feature-/Build-/Tooling-Items, das Themen-Reservoir und die Methoden-Prinzipien.
+Diese Datei **ist** das Repo-Backlog – die einzige, git-getrackte Backlog-Quelle (es gibt kein separates „eigentliches" Backlog daneben). Sie sammelt abgeschlossene Arbeit, offene Feature-/Build-/Tooling-Items, das Themen-Reservoir und die Methoden-Prinzipien.
 
-**Abgegrenzt:** Offene **Audit-/Hygiene-Punkte** (Korrektheit, Doku-Drift, Konventionsbrüche) leben in `audit-bestandesaufnahme.md` — *eine Quelle*, hier nicht doppeln.
+**Abgegrenzt:** Offene **Audit-/Hygiene-Punkte** (Korrektheit, Doku-Drift, Konventionsbrüche) leben in `audit-bestandesaufnahme.md` – *eine Quelle*, hier nicht doppeln.
 
 Wird ein aktualisierter Backlog-Stand aus einer Diskussion eingespeist, lautet der typische Prompt:
 

@@ -2,7 +2,7 @@
 
 import { useCommandPalette } from './ShellCommandPaletteProvider'
 
-/** Search icon for the shell header — opens the global CommandPalette */
+/** Search icon for the shell header – opens the global CommandPalette */
 export default function HeaderSearchButton() {
   const palette = useCommandPalette()
 

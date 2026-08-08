@@ -1,8 +1,8 @@
 'use client'
 
-// LandingStarChart — selbstspielende Sternkarte für die Landing-Page.
+// LandingStarChart – selbstspielende Sternkarte für die Landing-Page.
 // Als Server-Prop kommt nur das schlanke Extrakt (getLandingChartData:
-// Geometrie + Versions-Schlüssel, Texte geleert) — die Volltexte werden
+// Geometrie + Versions-Schlüssel, Texte geleert) – die Volltexte werden
 // lazy über /api/landing-topic geholt, bevor die Tour startet.
 // data.ts ist server-only.
 
@@ -16,7 +16,7 @@ import type { TopicData, Level } from '@/lib/types'
 // ─── Props ───────────────────────────────────────────────────────────────────
 
 interface Props {
-  /** Schlankes Extrakt aus getLandingChartData — strukturell ein TopicData */
+  /** Schlankes Extrakt aus getLandingChartData – strukturell ein TopicData */
   data: TopicData
 }
 
@@ -33,7 +33,7 @@ export default function LandingStarChart({ data: extract }: Props) {
   // ── Volldaten lazy nachladen ──────────────────────────────────────────────
   // Das Extrakt rendert die Karte pixelgleich (Positionen, Labels, Linien);
   // nur Cartouche-/Akkordeon-Texte brauchen die Volldaten. Die Tour wartet,
-  // bis der Fetch abgeschlossen ist (settled — auch bei Fehler startet sie,
+  // bis der Fetch abgeschlossen ist (settled – auch bei Fehler startet sie,
   // dann mit leeren Texten als Fallback).
   const [fullData, setFullData] = useState<TopicData | null>(null)
   const [dataSettled, setDataSettled] = useState(false)
@@ -78,7 +78,7 @@ export default function LandingStarChart({ data: extract }: Props) {
 
   // ── Tour helpers ──────────────────────────────────────────────────────────
 
-  // tWait is NOT a useCallback — it's defined locally inside runTour
+  // tWait is NOT a useCallback – it's defined locally inside runTour
   // so it can close over the local handle `h` instead of tourRef.current.
 
   const cancelTour = useCallback(() => {
@@ -102,7 +102,7 @@ export default function LandingStarChart({ data: extract }: Props) {
     cursorRef.current.style.opacity = '0.92'
   }, [])
 
-  // Tap animation — remove/re-add class to re-trigger
+  // Tap animation – remove/re-add class to re-trigger
   const tap = useCallback(() => {
     const c = cursorRef.current
     if (!c) return
@@ -137,7 +137,7 @@ export default function LandingStarChart({ data: extract }: Props) {
     if (cursorRef.current) cursorRef.current.style.opacity = '0'
   }, [])
 
-  // Dispatch a trusted-less click on an element — works on SVG <g> too
+  // Dispatch a trusted-less click on an element – works on SVG <g> too
   const dispatch = useCallback((el: Element | null) => {
     if (!el) return
     el.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }))
@@ -154,13 +154,13 @@ export default function LandingStarChart({ data: extract }: Props) {
     if (prefersReducedMotion.current) { setLevelId(4); return }
     if (!wrapRef.current) return
 
-    // Fix #1: Generation-token pattern — each invocation owns its LOCAL handle.
+    // Fix #1: Generation-token pattern – each invocation owns its LOCAL handle.
     // Cancel any previous tour first, then install the new handle.
     cancelTour()
     const h: TourHandle = { cancel: false, timers: new Set() }
     tourRef.current = h
 
-    // tWait closes over h — never touches tourRef.current
+    // tWait closes over h – never touches tourRef.current
     const tWait = (ms: number): Promise<void> =>
       new Promise(res => {
         const id = setTimeout(() => { h.timers.delete(id); res() }, ms)
@@ -191,7 +191,7 @@ export default function LandingStarChart({ data: extract }: Props) {
         setLevelId(n)
         const lvl: Level | undefined = data.levels.find(l => l.id === n)
         const shortName = lvl ? lvl.label : `Level ${n}`
-        say(`Stufe ${RN[n - 1] ?? String(n)} · ${shortName} — der Inhalt wächst mit`)
+        say(`Stufe ${RN[n - 1] ?? String(n)} · ${shortName} – der Inhalt wächst mit`)
         await tWait(n === 1 ? 900 : 1050); g()
       }
       await tWait(550); g()
@@ -224,7 +224,7 @@ export default function LandingStarChart({ data: extract }: Props) {
       await tWait(2100); g()
 
       // 5 · Schliessen + Schulen-Modus
-      say('Zurück — und in den Schulen-Modus')
+      say('Zurück – und in den Schulen-Modus')
       const closeBtn = qs('[data-sc-close]')
       moveCursorTo(closeBtn)
       await tWait(600); g()
@@ -262,7 +262,7 @@ export default function LandingStarChart({ data: extract }: Props) {
       setTourRunning(false)
       setTourDone(true)
       if (!userPausedRef.current) {
-        // Loop — use runTourRef to avoid the forward-reference lint error
+        // Loop – use runTourRef to avoid the forward-reference lint error
         const loopId = setTimeout(() => runTourRef.current(), 600)
         h.timers.add(loopId)
       }
@@ -298,7 +298,7 @@ export default function LandingStarChart({ data: extract }: Props) {
     }
   }, [handleUserInteract])
 
-  // ── IntersectionObserver — start/stop tour on visibility ─────────────────
+  // ── IntersectionObserver – start/stop tour on visibility ─────────────────
   useEffect(() => {
     if (prefersReducedMotion.current) {
       setLevelId(4)
@@ -311,7 +311,7 @@ export default function LandingStarChart({ data: extract }: Props) {
       entries => {
         const entry = entries[0]
         if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
-          // dataSettled: Tour erst starten, wenn die Volldaten da sind —
+          // dataSettled: Tour erst starten, wenn die Volldaten da sind –
           // sonst scrollte die Cartouche-Station durch leeren Text
           if (!wasVisible && !userPausedRef.current && dataSettled) {
             wasVisible = true
@@ -320,7 +320,7 @@ export default function LandingStarChart({ data: extract }: Props) {
         } else {
           if (wasVisible) {
             wasVisible = false
-            // Left viewport mid-tour — cancel, restart when back (unless user paused)
+            // Left viewport mid-tour – cancel, restart when back (unless user paused)
             if (!userPausedRef.current) {
               cancelTour()
             }
@@ -340,14 +340,14 @@ export default function LandingStarChart({ data: extract }: Props) {
   }, [data, dataSettled, runTour, cancelTour])
 
   // ── Play button handler ───────────────────────────────────────────────────
-  // Fix #2: read from ref, not React state — avoids stale-closure race
+  // Fix #2: read from ref, not React state – avoids stale-closure race
   const handlePlayPause = useCallback(() => {
     if (!tourRef.current.cancel) {
-      // Tour is currently running — pause it
+      // Tour is currently running – pause it
       cancelTour()
       userPausedRef.current = true
     } else {
-      // Tour is stopped — (re)start it
+      // Tour is stopped – (re)start it
       userPausedRef.current = false
       runTour()
     }
@@ -419,7 +419,7 @@ export default function LandingStarChart({ data: extract }: Props) {
           aria-label="Komplexitäts-Level"
         />
 
-        {/* Play/Pause Button — ausgeblendet bei reduced-motion */}
+        {/* Play/Pause Button – ausgeblendet bei reduced-motion */}
         {!rmq && (
           <button
             data-lsc-play
@@ -446,7 +446,7 @@ export default function LandingStarChart({ data: extract }: Props) {
         )}
       </div>
 
-      {/* ── Caption overlay — absolut unten-mittig über der Stage ── */}
+      {/* ── Caption overlay – absolut unten-mittig über der Stage ── */}
       {/* Fix #3: top is set dynamically by say() against [data-sc-stage] bounds */}
       <div
         ref={captionRef}
@@ -468,13 +468,13 @@ export default function LandingStarChart({ data: extract }: Props) {
           transition: 'opacity 350ms cubic-bezier(0.22, 1, 0.36, 1), transform 350ms cubic-bezier(0.22, 1, 0.36, 1)',
           maxWidth: '80%',
           textAlign: 'center',
-          // kein nowrap — auf Mobile darf die Pille mehrzeilig umbrechen
+          // kein nowrap – auf Mobile darf die Pille mehrzeilig umbrechen
           overflowWrap: 'break-word',
           fontFamily: 'var(--font-ui), Inter, system-ui, sans-serif',
         }}
       />
 
-      {/* ── Fake cursor — Pergament-Ring-Optik ── */}
+      {/* ── Fake cursor – Pergament-Ring-Optik ── */}
       {!rmq && (
         <div
           ref={cursorRef}

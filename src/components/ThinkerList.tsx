@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import type { Thinker, School, Level } from '@/lib/types'
 import { Annotated } from '@/lib/annotations'
 
-/** Fades in whenever `text` changes — covers both new thinkers and level-up text updates.
+/** Fades in whenever `text` changes – covers both new thinkers and level-up text updates.
  *  key={text} remountet den Absatz; die @starting-style-Transition von
  *  .thinker-text-fade (globals.css) spielt bei jedem Mount. */
 function FadingParagraph({ text, level, className, style }: {
@@ -38,7 +38,7 @@ export default function ThinkerList({
   thinkers, schools, context, currentLevel, levelAction,
   listStyle = 'grouped', highlightId, onHighlightDone,
 }: Props) {
-  // Erstansicht: „Alle" — der Besucher sieht das volle Feld als ersten Eindruck.
+  // Erstansicht: „Alle" – der Besucher sieht das volle Feld als ersten Eindruck.
   // (Auch nach URL/localStorage-Restore: das löst kein levelAction-Signal aus.)
   const [activeFilters, setActiveFilters] = useState<Set<string>>(
     () => new Set()

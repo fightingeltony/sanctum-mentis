@@ -41,7 +41,7 @@ export default function LectioViewer({ lectio, topicData }: Props) {
     <div className="min-h-screen" style={{ background: 'var(--bg)' }}>
       <div className="max-w-[680px] mx-auto px-5 sm:px-8 py-12 sm:py-16">
 
-        {/* ── Back link — zur Herkunft (Lectio-Übersicht oder Tableau) ── */}
+        {/* ── Back link – zur Herkunft (Lectio-Übersicht oder Tableau) ── */}
         <Link
           href={backHref}
           className="inline-flex items-center gap-2 font-ui text-[12px] tracking-[0.06em]
@@ -79,7 +79,7 @@ export default function LectioViewer({ lectio, topicData }: Props) {
             ~{lectio.estimated_minutes} Min
           </p>
 
-          {/* Intro — Lectio-Stimme */}
+          {/* Intro – Lectio-Stimme */}
           <LectioVoice text={lectio.intro} />
         </header>
 
@@ -141,13 +141,13 @@ export default function LectioViewer({ lectio, topicData }: Props) {
                 ))}
               </div>
 
-              {/* Transition text — Lectio-Stimme */}
+              {/* Transition text – Lectio-Stimme */}
               <LectioVoice text={step.transition} className="mb-2" />
 
-              {/* Threshold — only at frontier */}
+              {/* Threshold – only at frontier */}
               {isFrontier && (
                 <Threshold
-                  label={isLastStep ? "Den Bogen schließen" : "Bereit für den nächsten Gedanken?"}
+                  label={isLastStep ? "Den Bogen schliessen" : "Bereit für den nächsten Gedanken?"}
                   onAdvance={advance}
                 />
               )}

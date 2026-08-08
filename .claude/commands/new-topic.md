@@ -1,4 +1,4 @@
-# /new-topic — Neues Themengebiet anlegen
+# /new-topic – Neues Themengebiet anlegen
 
 Du legst ein neues Themengebiet für Sanctum Mentis an. Das sind drei Schritte: JSON-Datei erstellen, in library.json registrieren, in data.ts importieren.
 
@@ -9,16 +9,16 @@ Der User übergibt: `$ARGUMENTS`
 Extrahiere daraus: Titel des Themengebiets, ggf. erste Ideen für Denker oder Achsen.
 
 **Pflichtfelder die du brauchst:**
-- `title` — Anzeigename, z.B. "Bewusstsein & Kognition"
-- `id` — slug, z.B. "bewusstsein" (lowercase, Bindestrich statt Leerzeichen)
-- `subtitle` — ein Satz der das Thema beschreibt
-- `axisX` — linke und rechte Beschriftung (z.B. "Empirisch" ↔ "Rationalistisch")
-- `axisY` — obere und untere Beschriftung (z.B. "Universell" ↔ "Kontextuell")
-- `accent` — Akzentfarbe als oklch(), z.B. `oklch(0.42 0.14 250)` für Blau-Violett
+- `title` – Anzeigename, z.B. "Bewusstsein & Kognition"
+- `id` – slug, z.B. "bewusstsein" (lowercase, Bindestrich statt Leerzeichen)
+- `subtitle` – ein Satz der das Thema beschreibt
+- `axisX` – linke und rechte Beschriftung (z.B. "Empirisch" ↔ "Rationalistisch")
+- `axisY` – obere und untere Beschriftung (z.B. "Universell" ↔ "Kontextuell")
+- `accent` – Akzentfarbe als oklch(), z.B. `oklch(0.42 0.14 250)` für Blau-Violett
 
-Was fehlt, frag nach — alles auf einmal.
+Was fehlt, frag nach – alles auf einmal.
 
-## Schritt 1 — data/<id>.json anlegen
+## Schritt 1 – data/<id>.json anlegen
 
 Erstelle `data/<id>.json` mit dieser Vorlage:
 
@@ -60,7 +60,7 @@ Erstelle `data/<id>.json` mit dieser Vorlage:
 }
 ```
 
-## Schritt 2 — data/library.json ergänzen
+## Schritt 2 – data/library.json ergänzen
 
 Lies `data/library.json` und füge einen neuen Eintrag hinzu:
 
@@ -74,7 +74,7 @@ Lies `data/library.json` und füge einen neuen Eintrag hinzu:
 }
 ```
 
-## Schritt 3 — src/lib/data.ts registrieren
+## Schritt 3 – src/lib/data.ts registrieren
 
 Lies `src/lib/data.ts`. Dort gibt es ein Import-Pattern und eine TOPICS-Map. Füge hinzu:
 
@@ -93,6 +93,6 @@ Zeige eine Zusammenfassung:
 
 ## Was du NICHT tust
 
-- Keine Denker, Schulen oder Konzepte in die neue Datei eintragen — das ist Aufgabe von `/add-thinker`
+- Keine Denker, Schulen oder Konzepte in die neue Datei eintragen – das ist Aufgabe von `/add-thinker`
 - `accentSoft` ist immer `accent` + ` / 0.15` in der oklch-Schreibweise: `oklch(0.42 0.14 250 / 0.15)`
-- Status ist immer `"available"` — nie `"coming"` für ein gerade angelegtes Topic
+- Status ist immer `"available"` – nie `"coming"` für ein gerade angelegtes Topic

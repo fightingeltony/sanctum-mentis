@@ -1,9 +1,9 @@
-# Audit & Bestandesaufnahme — Sanctum Mentis
+# Audit & Bestandesaufnahme – Sanctum Mentis
 
 **Stand:** 2026-06-17 · **Art:** Status-Tracker (fortgeschrieben aus Audit 2026-06-16)
 **Methode:** Inventar über `data/`, `data/lectio/`, `data/lebensfragen/`, `src/`, `prompts/` und 15 Wurzel-MD-Dateien; Abgleich Code ↔ Daten ↔ Dokumentation.
 
-> **Dies ist die maßgebliche Liste der offenen Audit-Punkte — nicht zusätzlich in `backlog.md` führen (eine Quelle).**
+> **Dies ist die massgebliche Liste der offenen Audit-Punkte – nicht zusätzlich in `backlog.md` führen (eine Quelle).**
 
 ---
 
@@ -11,50 +11,50 @@
 
 | Ebene | Menge | Bemerkung |
 |---|---|---|
-| Topic-Tableaus (`data/*.json`) | 12 | alle in `library.json` + `data.ts` registriert — **konsistent** |
-| Lectio-Dateien | 21 | 15 aktiv in `data/lectio/` + 6 archiviert in `archiv/lectio-expositorisch/` — siehe H3 (✅ erledigt) |
-| Lebensfragen (`data/lebensfragen/*.json`) | 4 | alle 4 registriert — konsistent |
-| Source-Dateien (`src/`) | 41 | — |
+| Topic-Tableaus (`data/*.json`) | 12 | alle in `library.json` + `data.ts` registriert – **konsistent** |
+| Lectio-Dateien | 21 | 15 aktiv in `data/lectio/` + 6 archiviert in `archiv/lectio-expositorisch/` – siehe H3 (✅ erledigt) |
+| Lebensfragen (`data/lebensfragen/*.json`) | 4 | alle 4 registriert – konsistent |
+| Source-Dateien (`src/`) | 41 | – |
 | Prompt-Dokumente (`prompts/`) | 6 | davon 4 zum Thema Lectio (überlappend) |
-| MD-Dateien im Wurzelverzeichnis | 15 | Konventionen, Status, Begleitnotizen — vermischt |
+| MD-Dateien im Wurzelverzeichnis | 15 | Konventionen, Status, Begleitnotizen – vermischt |
 
-Topic-Größen (Denker/Konzepte/Schulen/Einflüsse): Tableaus liegen meist im Mild-Korridor (10–16 Denker), einzelne im Hard-Bereich (`philosophie-des-geistes` 16/17/15/17).
+Topic-Grössen (Denker/Konzepte/Schulen/Einflüsse): Tableaus liegen meist im Mild-Korridor (10–16 Denker), einzelne im Hard-Bereich (`philosophie-des-geistes` 16/17/15/17).
 
 ---
 
 ## 2. Befunde nach Priorität
 
-### 🔴 Hoch — wirken auf Korrektheit / führen Mitarbeitende (und Claude) in die Irre
+### 🔴 Hoch – wirken auf Korrektheit / führen Mitarbeitende (und Claude) in die Irre
 
 **H1 · CLAUDE.md verweist auf die falsche, veraltete Lectio-Konvention.**
 
-✅ **ERLEDIGT (2026-06-16):** CLAUDE.md verweist jetzt durchgehend auf `prompts/lectio-anleitung.md` (MASSGEBLICH). `lectio-mode.md` nur noch als „historische Detailreferenz erhalten, aber abgelöst" erwähnt. Versionsangabe „v1.9" entfernt. Kein Verweis auf lectio-mode mehr als gültig/maßgeblich.
+✅ **ERLEDIGT (2026-06-16):** CLAUDE.md verweist jetzt durchgehend auf `prompts/lectio-anleitung.md` (MASSGEBLICH). `lectio-mode.md` nur noch als „historische Detailreferenz erhalten, aber abgelöst" erwähnt. Versionsangabe „v1.9" entfernt. Kein Verweis auf lectio-mode mehr als gültig/massgeblich.
 
-*(Ursprünglicher Befund: CLAUDE.md Z. 137, 193, 210, 224 nannte durchgehend `prompts/lectio-mode.md` als maßgeblich und schrieb „aktuell v1.9". `lectio-anleitung.md` wurde in CLAUDE.md kein einziges Mal erwähnt.)*
+*(Ursprünglicher Befund: CLAUDE.md Z. 137, 193, 210, 224 nannte durchgehend `prompts/lectio-mode.md` als massgeblich und schrieb „aktuell v1.9". `lectio-anleitung.md` wurde in CLAUDE.md kein einziges Mal erwähnt.)*
 
 ---
 
 **H2 · CLAUDE.md-Liste „Bestehende Lectios" stimmt nicht mit dem geladenen Bestand überein.**
 
-✅ **ERLEDIGT (2026-06-16):** Liste synchronisiert — `annehmen-oder-ueberwinden` (Selbstverhältnis, erzählend-erfahrend) ergänzt; `warum-gehorchst-du-expositorisch` als „derzeit nicht in `data.ts` registriert, Status offen (siehe H3)" gekennzeichnet statt als live behauptet. Liste trägt jetzt Zähler „15 registriert in `data.ts`".
+✅ **ERLEDIGT (2026-06-16):** Liste synchronisiert – `annehmen-oder-ueberwinden` (Selbstverhältnis, erzählend-erfahrend) ergänzt; `warum-gehorchst-du-expositorisch` als „derzeit nicht in `data.ts` registriert, Status offen (siehe H3)" gekennzeichnet statt als live behauptet. Liste trägt jetzt Zähler „15 registriert in `data.ts`".
 
 *(Ursprünglicher Befund: `warum-gehorchst-du-expositorisch` als live gelistet, aber in `data.ts` nicht registriert; `annehmen-oder-ueberwinden` registriert und live, aber in CLAUDE.md komplett fehlend.)*
 
 ---
 
-**H3 · Sechs verwaiste Lectio-Dateien — Status ungeklärt.**
+**H3 · Sechs verwaiste Lectio-Dateien – Status ungeklärt.**
 
-✅ **ERLEDIGT (2026-06-16):** 6 expositorische Vorläufer nach `archiv/lectio-expositorisch/` (Repo-Ebene, außerhalb von `data/lectio/`) verschoben — Inhalt unverändert, nicht gelöscht. Aktiver Ordner `data/lectio/` enthält jetzt genau die 15 registrierten Lectios. Neue Vitest-Regel 10 (Registrierungs-Parität Datei ↔ LECTIOS) verhindert Wiederkehr: rot bei jeder unregistrierten Datei in `data/lectio/`. CLAUDE.md + Audit aktualisiert.
+✅ **ERLEDIGT (2026-06-16):** 6 expositorische Vorläufer nach `archiv/lectio-expositorisch/` (Repo-Ebene, ausserhalb von `data/lectio/`) verschoben – Inhalt unverändert, nicht gelöscht. Aktiver Ordner `data/lectio/` enthält jetzt genau die 15 registrierten Lectios. Neue Vitest-Regel 10 (Registrierungs-Parität Datei ↔ LECTIOS) verhindert Wiederkehr: rot bei jeder unregistrierten Datei in `data/lectio/`. CLAUDE.md + Audit aktualisiert.
 
-*(Ursprünglicher Befund: `der-weg-des-menschen-expositorisch`, `ist-der-andere-hoelle-oder-heimat-expositorisch`, `ruhe-oder-rausch-expositorisch`, `verstehen-oder-weitergehen-expositorisch`, `warum-gehorchst-du-expositorisch`, `wenn-nichts-vorgegeben-expositorisch` — alte Vorläufer der erzählend umgebauten Lectios.)*
+*(Ursprünglicher Befund: `der-weg-des-menschen-expositorisch`, `ist-der-andere-hoelle-oder-heimat-expositorisch`, `ruhe-oder-rausch-expositorisch`, `verstehen-oder-weitergehen-expositorisch`, `warum-gehorchst-du-expositorisch`, `wenn-nichts-vorgegeben-expositorisch` – alte Vorläufer der erzählend umgebauten Lectios.)*
 
 ---
 
-### 🟡 Mittel — Konventionsbruch / Doppelung, kein akuter Fehler
+### 🟡 Mittel – Konventionsbruch / Doppelung, kein akuter Fehler
 
 **M1 · Schools-Konvention wird breit verletzt, ohne dokumentierte Ausnahme.**
 
-🟡 **ENTSCHEIDUNG OFFEN — ⚠️ NICHT automatisch „korrigieren".** Solo-Schulen können bewusste Konstruktion sein (vgl. das ankerlose Wahre Selbst, Einzelpositionen im Hard-Mode-Tableau). Daten nicht an die Regel anpassen, ohne kuratorisches Urteil. Zu entscheiden: Konvention nachschärfen/relativieren **oder** bewusste Ausnahmen in `topic.meta` festschreiben. Kuratorisch, eigener wacher Faden — betrifft 61 Solo-Schulen über 12 Tableaus (sauberstes: `begegnung` mit 1/5, kritischstes: `das-selbst` mit 12/13).
+🟡 **ENTSCHEIDUNG OFFEN – ⚠️ NICHT automatisch „korrigieren".** Solo-Schulen können bewusste Konstruktion sein (vgl. das ankerlose Wahre Selbst, Einzelpositionen im Hard-Mode-Tableau). Daten nicht an die Regel anpassen, ohne kuratorisches Urteil. Zu entscheiden: Konvention nachschärfen/relativieren **oder** bewusste Ausnahmen in `topic.meta` festschreiben. Kuratorisch, eigener wacher Faden – betrifft 61 Solo-Schulen über 12 Tableaus (sauberstes: `begegnung` mit 1/5, kritischstes: `das-selbst` mit 12/13).
 
 *(Solo-Schulen / Schulen gesamt je Topic: das-selbst 12/13 · philosophie-des-geistes 14/15 · ethik 8/10 · politische-philosophie 8/10 · realismus-und-konstruktivismus 7/9 · verwandlung 7/8 · selbstverhaeltnis 6/8 · wandlung 5/8 · gut-und-boese + lebenskunst 4/7 bzw. 4/6 · existenzialismus 3/7 · begegnung 1/5)*
 
@@ -62,13 +62,13 @@ Topic-Größen (Denker/Konzepte/Schulen/Einflüsse): Tableaus liegen meist im Mi
 
 **M2 · Lectio-Dokumentation ist ein vierfach überlappender Stapel.**
 
-🟢 **HYGIENE:** Archiv-Dateien (`lectio-mode.md` v1.11, `lectio-2.0-richtlinie.md`) nach `prompts/archiv/` verschieben; ~10 Verweise in anderen MD-Dateien auf `lectio-anleitung.md` umbiegen. `schreib-skill-lectio.md` bleibt (Handwerk-Companion, kein Konflikt). Cowork-Kandidat. Eigener Faden — nicht in diesem Durchgang.
+🟢 **HYGIENE:** Archiv-Dateien (`lectio-mode.md` v1.11, `lectio-2.0-richtlinie.md`) nach `prompts/archiv/` verschieben; ~10 Verweise in anderen MD-Dateien auf `lectio-anleitung.md` umbiegen. `schreib-skill-lectio.md` bleibt (Handwerk-Companion, kein Konflikt). Cowork-Kandidat. Eigener Faden – nicht in diesem Durchgang.
 
 ---
 
-### 🟢 Niedrig — Hygiene & kuratorische Abgrenzung (kein Bug)
+### 🟢 Niedrig – Hygiene & kuratorische Abgrenzung (kein Bug)
 
-**N1 · Thematische Nähe-Cluster — Abgrenzung prüfen.**
+**N1 · Thematische Nähe-Cluster – Abgrenzung prüfen.**
 
 🟢 **HYGIENE / kuratorisch:** Mehrere Tableaus inhaltlich dicht beieinander (wandlung ↔ verwandlung; das-selbst ↔ selbstverhaeltnis; ethik ↔ gut-und-boese). Abgrenzungssätze je Paar in `library.json`-`desc` oder `bibliothek-architektur.md` festhalten. Niedrige Priorität.
 
@@ -82,16 +82,16 @@ Topic-Größen (Denker/Konzepte/Schulen/Einflüsse): Tableaus liegen meist im Mi
 
 **N3 · Mögliche Schema-Doppelquelle.**
 
-🟢 **HYGIENE:** `schema-referenz.md` im Kopf als „abgeleitet aus `src/lib/types.ts` (Single Source of Truth)" kennzeichnen. Einzeiler — verhindert Drift-Risiko bei zwei Quellen.
+🟢 **HYGIENE:** `schema-referenz.md` im Kopf als „abgeleitet aus `src/lib/types.ts` (Single Source of Truth)" kennzeichnen. Einzeiler – verhindert Drift-Risiko bei zwei Quellen.
 
 ---
 
 ## 3. Was sauber ist (zur Beruhigung)
 
-- Topic-Registrierung: `library.json` ↔ `data.ts` ↔ Dateien — 12/12 stimmig.
+- Topic-Registrierung: `library.json` ↔ `data.ts` ↔ Dateien – 12/12 stimmig.
 - Lebensfragen: 4/4 stimmig.
 - `begegnung` ist das schulkonventions-sauberste Tableau (1/5 Solo).
-- Klare `server-only`-Trennung in `data.ts`, separater client-sicherer `searchTypes.ts` — Architektur-Disziplin sichtbar eingehalten.
+- Klare `server-only`-Trennung in `data.ts`, separater client-sicherer `searchTypes.ts` – Architektur-Disziplin sichtbar eingehalten.
 
 ---
 
@@ -99,21 +99,21 @@ Topic-Größen (Denker/Konzepte/Schulen/Einflüsse): Tableaus liegen meist im Mi
 
 Erstbesucher-Durchgang (mobil, nur Live-Oberfläche) durch Landing → Bibliothek → Sternkarte → Lectio → Lebensfrage → Suche. Vier kuratorische Befunde (A–D).
 
-**EA1 · Sofort-Fixes (drei kleine UI-Bugs)** — 13.6.26 committed:
+**EA1 · Sofort-Fixes (drei kleine UI-Bugs)** – 13.6.26 committed:
 ✅ „4 St." → „4 Stationen" auf Lectio-Karten (`TopicViewer.tsx:283`)
 ✅ Tour-Caption bricht mobil um statt abzuschneiden (`LandingStarChart.tsx:447` `overflowWrap: break-word`)
 ✅ Neu-Filter: Erstansicht = „Alle", levelAction-Signal für nutzerinitiertes Hochstufen (`ThinkerList.tsx`)
 
 **EA-A · Tableau-Begriff vereinheitlichen (höchste Prio)**
-✅ **ERLEDIGT 2026-06-17:** Vokabular vereinheitlicht: „Tableau — ein Sternbild von Stimmen" auf der Landing als Einführungsstelle; H2 und Fußzeile „durch jedes Tableau"; Nav-Header „Themen" → „Tableaus"; Bibliotheks-Untertitel mit Tableau-Einführung. Bildwelt als kosmisch festgelegt (→ `kanon.md`, neuer Abschnitt „Das Vokabular der drei Formen"). Spur-Zahl gleichzeitig von hartkodiert „drei" auf dynamisch (`grouped.length`) migriert.
+✅ **ERLEDIGT 2026-06-17:** Vokabular vereinheitlicht: „Tableau – ein Sternbild von Stimmen" auf der Landing als Einführungsstelle; H2 und Fusszeile „durch jedes Tableau"; Nav-Header „Themen" → „Tableaus"; Bibliotheks-Untertitel mit Tableau-Einführung. Bildwelt als kosmisch festgelegt (→ `kanon.md`, neuer Abschnitt „Das Vokabular der drei Formen"). Spur-Zahl gleichzeitig von hartkodiert „drei" auf dynamisch (`grouped.length`) migriert.
 
 **EA-C · „Lectio" vs. „Geführte Pfade" angleichen**
-✅ **GEKLÄRT 2026-06-17 (mitbeantwortet durch EA-A):** Lectio bleibt Eigenname, wird auf der Landing bei erster Begegnung eingeführt. „Geführte Pfade" in `TopicViewer.tsx:239` ist eine beschreibende Überschrift für die Lectio-Liste im Tableau — kein Widerspruch, kein Änderungsbedarf.
+✅ **GEKLÄRT 2026-06-17 (mitbeantwortet durch EA-A):** Lectio bleibt Eigenname, wird auf der Landing bei erster Begegnung eingeführt. „Geführte Pfade" in `TopicViewer.tsx:239` ist eine beschreibende Überschrift für die Lectio-Liste im Tableau – kein Widerspruch, kein Änderungsbedarf.
 
-**EA-B · Lebensfragen-Zugang** — 🟡 **TEILERLEDIGT**
-✅ Kleiner Fix erledigt 2026-07-03: Nav-Link „Lebensfragen" im Header neben „Tableaus" und „Lectios" (`src/app/(shell)/layout.tsx`). Größere Frage bleibt offen: Navigationsrang der Lebensfragen (Haupteingang?). Entscheidung ausständig.
+**EA-B · Lebensfragen-Zugang** – 🟡 **TEILERLEDIGT**
+✅ Kleiner Fix erledigt 2026-07-03: Nav-Link „Lebensfragen" im Header neben „Tableaus" und „Lectios" (`src/app/(shell)/layout.tsx`). Grössere Frage bleibt offen: Navigationsrang der Lebensfragen (Haupteingang?). Entscheidung ausständig.
 
-**EA-D · Lebensfrage vs. Lectio unterscheidbarer** — 🟢 **OFFEN / Niedrig**
+**EA-D · Lebensfrage vs. Lectio unterscheidbarer** – 🟢 **OFFEN / Niedrig**
 Herkunftszeile pro Stimme andeuten („Buddhismus · aus Das Selbst"). Kuratorisch, kein Muss.
 
 ---
@@ -123,7 +123,7 @@ Herkunftszeile pro Stimme andeuten („Buddhismus · aus Das Selbst"). Kuratoris
 1. ~~**H1 + H2**~~ ✅ erledigt 2026-06-16
 2. ~~**H3**~~ ✅ erledigt 2026-06-16
 3. ~~**EA-A + EA-C + Sofort-Fixes**~~ ✅ erledigt 2026-06-17
-4. **EA-B** — ~~Lebensfragen ins Header-Menü (kleiner Fix)~~ ✅ erledigt 2026-07-03 · Navigationsrang-Entscheidung offen.
-5. **M2** — Lectio-Doku-Stapel aufräumen (Archiv-Ordner), ~10 Verweise umbiegen.
-6. **M1** — Schools-Konvention als bewusste Entscheidung klären (nachschärfen vs. `topic.meta` füllen).
-7. **EA-D, N1–N3** — Hygiene, wenn Zeit ist.
+4. **EA-B** – ~~Lebensfragen ins Header-Menü (kleiner Fix)~~ ✅ erledigt 2026-07-03 · Navigationsrang-Entscheidung offen.
+5. **M2** – Lectio-Doku-Stapel aufräumen (Archiv-Ordner), ~10 Verweise umbiegen.
+6. **M1** – Schools-Konvention als bewusste Entscheidung klären (nachschärfen vs. `topic.meta` füllen).
+7. **EA-D, N1–N3** – Hygiene, wenn Zeit ist.

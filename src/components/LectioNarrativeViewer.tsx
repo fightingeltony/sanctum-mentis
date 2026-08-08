@@ -83,7 +83,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
     const saved = parseInt(localStorage.getItem(storageKey(lectio.id)) ?? '', 10)
     if (!isNaN(saved) && saved >= 0 && saved < totalStations) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
-      setIdx(saved)    // Client-only init from localStorage — runs once on mount
+      setIdx(saved)    // Client-only init from localStorage – runs once on mount
       setActive(saved)
     }
   }, [totalStations, lectio.id])
@@ -105,7 +105,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
   // Tastatur
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      // Buttons/Links nicht kapern — sonst sind Dots, weiter/zurück und
+      // Buttons/Links nicht kapern – sonst sind Dots, weiter/zurück und
       // der Verlassen-Link per Enter/Space unbedienbar.
       if (e.target instanceof HTMLElement && e.target.closest('a, button, input, [role="button"]')) return
       if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
@@ -170,7 +170,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
       {/* Grain overlay */}
       <div aria-hidden className="grain" />
 
-      {/* Exit — zurück zur Herkunft (Lectio-Übersicht oder Tableau) */}
+      {/* Exit – zurück zur Herkunft (Lectio-Übersicht oder Tableau) */}
       <Link href={exitHref} className="brand" aria-label={vonLectios ? 'Zurück zur Lectio-Übersicht' : 'Zurück zum Tableau'}>
         <span className="exit-arrow" aria-hidden>←</span>
         <span className="brand-text">Verlassen</span>
@@ -255,7 +255,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           const displayName = thinkerMatch?.name ?? conceptMatch?.name ?? schoolMatch?.label
             ?? (nodeId.charAt(0).toUpperCase() + nodeId.slice(1).replace(/-/g, ' '))
 
-          // nüchtern-klar darf ein Bild haben (muss nicht) — die Nische zeigt sich
+          // nüchtern-klar darf ein Bild haben (muss nicht) – die Nische zeigt sich
           // allein danach, ob step.image gesetzt ist, nicht mehr nach Ton.
           const showNiche = !!step.image
 
@@ -284,7 +284,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
                     <div className="halo" aria-hidden />
                     <div className="niche">
                       {/* eager wie das frühere <img>: die Crossfade-Stage hält
-                          Stationen gestapelt/geclippt — lazy würde nie triggern */}
+                          Stationen gestapelt/geclippt – lazy würde nie triggern */}
                       <Image
                         src={step.image!}
                         alt=""
@@ -392,7 +392,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
 
       </div>{/* /stage */}
 
-      {/* Fuß: zurück · Dots · weiter */}
+      {/* Fuss: zurück · Dots · weiter */}
       <div className="lc-foot">
         <div className="foot-row">
           <button
@@ -428,7 +428,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
       </div>
 
       <style jsx>{`
-        /* Stage ist position:fixed — body braucht kein overflow:hidden */
+        /* Stage ist position:fixed – body braucht kein overflow:hidden */
 
         .grain {
           position: fixed; inset: 0; z-index: 0; pointer-events: none;
@@ -436,7 +436,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
         }
 
-        /* :global — styled-jsx scoped keine Komponenten (next/link),
+        /* :global – styled-jsx scoped keine Komponenten (next/link),
            nur native Elemente. Ohne :global bleibt der Link ungestylt
            und liegt unsichtbar hinter der Stage. */
         :global(.brand) {
@@ -471,7 +471,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         }
         .station {
           position: absolute; left: 0; right: 0; bottom: 0;
-          top: 60px; /* unterhalb Header — Content scrollt nie in die Chrome-Zone */
+          top: 60px; /* unterhalb Header – Content scrollt nie in die Chrome-Zone */
           display: block; overflow-y: scroll; overflow-x: hidden;
           -webkit-overflow-scrolling: touch; touch-action: pan-y;
           opacity: 0; visibility: hidden;
@@ -589,7 +589,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           display: flex; gap: 14px; margin-top: 48px;
           flex-wrap: wrap; justify-content: center;
         }
-        /* :global — der "Zur Landkarte"-CTA ist ein next/link (s.o. bei .brand) */
+        /* :global – der "Zur Landkarte"-CTA ist ein next/link (s.o. bei .brand) */
         :global(.btn) {
           display: inline-flex; align-items: center; gap: 9px;
           padding: 13px 22px; font-size: 11px;
@@ -603,7 +603,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           background: oklch(0.36 0.12 295); border-color: oklch(0.36 0.12 295); color: var(--paper);
         }
 
-        /* Fuß */
+        /* Fuss */
         .lc-foot {
           position: fixed; left: 0; right: 0; bottom: 0; z-index: 6;
           padding: 52px 0 26px;
@@ -668,8 +668,8 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           .station { transition: none; }
         }
         @media (max-width: 640px) {
-          /* .niche skaliert bereits über clamp() im Basis-Rule mit — kein
-             fixer Mobile-Override mehr nötig (Zwischengröße-Variante) */
+          /* .niche skaliert bereits über clamp() im Basis-Rule mit – kein
+             fixer Mobile-Override mehr nötig (Zwischengrösse-Variante) */
           .station { top: 52px; }
           .station-inner { padding: 28px 22px 200px; }
           :global(.brand) { top: 14px; left: 14px; padding: 4px 9px; font-size: 9px; }

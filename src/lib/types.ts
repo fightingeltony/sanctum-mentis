@@ -1,16 +1,16 @@
-// Sanctum Mentis — Core Type Definitions
-// Lern-Companion: Denker, Konzepte, Schulen, Einflüsse — gefiltert nach Komplexitäts-Level.
+// Sanctum Mentis – Core Type Definitions
+// Lern-Companion: Denker, Konzepte, Schulen, Einflüsse – gefiltert nach Komplexitäts-Level.
 
-/** Sammlungs-Spur — kuratorische Architektur-Ebene */
+/** Sammlungs-Spur – kuratorische Architektur-Ebene */
 export type Spur = 'erkenntnis' | 'handlung' | 'existenz' | 'wandlung' | 'menschenbild'
 
-/** Themen-spezifisches Theme — wird als CSS-Variablen injiziert */
+/** Themen-spezifisches Theme – wird als CSS-Variablen injiziert */
 export interface TopicTheme {
   accent:     string;
   accentSoft: string;
 }
 
-/** Quadranten-Achsen — definieren den 2D-Raum für Konzepte und Denker */
+/** Quadranten-Achsen – definieren den 2D-Raum für Konzepte und Denker */
 export interface Quadrants {
   axisX: {
     label: string;
@@ -102,7 +102,7 @@ export interface Influence extends Versioned {
 
 /** Konzept-Kategorien für Filterung im QuadrantPlot */
 export type ConceptType =
-  | 'axiom'        // Unumstößliches Fundament, nicht weiter ableitbar (Atman, Cogito)
+  | 'axiom'        // Unumstössliches Fundament, nicht weiter ableitbar (Atman, Cogito)
   | 'theory'       // Komplexes Erklärungsgebäude oder Modell (Ego-Tunnel, Individuation)
   | 'concept'      // Spezifischer Begriff / Bauelement innerhalb einer Theorie (Tabula rasa)
   | 'phenomenon'   // Beobachtung oder beschreibbarer Zustand (Induktionsproblem, Flow)
@@ -160,11 +160,11 @@ export interface LectioStep {
   step_brief?: string;   // überschreibt den Knoten-Text NUR für diese Station
                          // (Ein-Werk-Lectio: derselbe Knoten an mehreren Stationen
                          // mit verschiedenem Text). Annotationsfrei, wie lectio_brief.
-                         // Nur für Einzelknoten-Stationen — nicht bei Doppelstationen.
+                         // Nur für Einzelknoten-Stationen – nicht bei Doppelstationen.
   ton?: 'erzählend-erfahrend' | 'nüchtern-klar' | 'expositorisch'; // per-Step-Ton (Lectio 2.0 / gemischt)
-  narrative?: LectioNarrative;  // erzählende Form — alle Steps in 'gemischt'-Lectios tragen narrative
+  narrative?: LectioNarrative;  // erzählende Form – alle Steps in 'gemischt'-Lectios tragen narrative
   image?: string;         // öffentlicher Bildpfad, z.B. /lectio-images/…/lectio-epikur.png
-  image_prompt?: string;  // Generierungs-Prompt (nicht im UI verwendet — nur Datensicherung)
+  image_prompt?: string;  // Generierungs-Prompt (nicht im UI verwendet – nur Datensicherung)
   image_status?: 'prompt-neu' | 'generiert';  // Pipeline-Status: Prompt steht vs. Bild abgelegt.
                          // Steuert nur die Generierungs-Buchführung, nicht das Rendering
                          // (das UI-Gate ist allein `!!step.image`).
@@ -180,7 +180,7 @@ export interface Lectio {
   thesis: string;
   path_type?: string;    // u.a. 'narrativ-historisch', 'konkurrierend-konfrontativ',
                          // 'emotional-kumulativ', 'destruktiv-aufbauend',
-                         // 'kontemplativ-vertiefend' — bisher implizit, jetzt benennbar
+                         // 'kontemplativ-vertiefend' – bisher implizit, jetzt benennbar
   ton?: 'expositorisch' | 'erzählend-erfahrend' | 'gemischt';  // fehlendes Feld = expositorisch
                          // 'gemischt' = per-Step ton-Felder aktiv (Lectio 2.0)
   level: number;

@@ -3,12 +3,12 @@
   "tableauId": "verwandlung",
   "title": "Wann wird aus Wissen Glauben?",
   "focus": "Sechs Stimmen zu dem Widerspruch zwischen Wissen und Glauben – erzählt von einem Moment her, den jeder kennt: das Gute, das nicht ankommt",
-  "thesis": "Jemand sagt etwas Gutes über dich, und du hörst es – aber es bleibt hinter einer Glaswand hängen. Du weißt, dass es stimmt, und glaubst es trotzdem nicht. Sechs Stimmen schauen auf dieses Paradox – etwas zu wissen, ohne es glauben zu können – und deuten es verschieden. Welche von ihnen deinen Weg beschreibt, ist deine eigene Antwort darauf, wie aus einem toten Satz ein lebendiger wird.",
+  "thesis": "Jemand sagt etwas Gutes über dich, und du hörst es – aber es bleibt hinter einer Glaswand hängen. Du weisst, dass es stimmt, und glaubst es trotzdem nicht. Sechs Stimmen schauen auf dieses Paradox – etwas zu wissen, ohne es glauben zu können – und deuten es verschieden. Welche von ihnen deinen Weg beschreibt, ist deine eigene Antwort darauf, wie aus einem toten Satz ein lebendiger wird.",
   "path_type": "konkurrierend-konfrontativ",
   "ton": "erzählend-erfahrend",
   "level": 3,
   "estimated_minutes": 13,
-  "intro": "Jemand sagt etwas Gutes über dich – dass du das gut gemacht hast, dass du ein guter Mensch bist, dass du geliebt wirst –, und du hörst es, du nickst, vielleicht sagst du danke. Aber es kommt nicht an. Es bleibt irgendwo hängen, wie hinter einer Glaswand zwischen dem Ohr und der Stelle, wo es ankommen müsste, und obwohl du weißt, dass es freundlich gemeint ist, vielleicht sogar, dass es stimmt, glaubst du es trotzdem nicht. Diesen Widerspruch kennst du: Du weißt, dass es stimmt, und glaubst es trotzdem nicht. Sechs Stimmen schauen darauf, und jede sieht etwas anderes. Du musst keiner recht geben – schau, welche deinen Weg kennt.",
+  "intro": "Jemand sagt etwas Gutes über dich – dass du das gut gemacht hast, dass du ein guter Mensch bist, dass du geliebt wirst –, und du hörst es, du nickst, vielleicht sagst du danke. Aber es kommt nicht an. Es bleibt irgendwo hängen, wie hinter einer Glaswand zwischen dem Ohr und der Stelle, wo es ankommen müsste, und obwohl du weisst, dass es freundlich gemeint ist, vielleicht sogar, dass es stimmt, glaubst du es trotzdem nicht. Diesen Widerspruch kennst du: Du weisst, dass es stimmt, und glaubst es trotzdem nicht. Sechs Stimmen schauen darauf, und jede sieht etwas anderes. Du musst keiner recht geben – schau, welche deinen Weg kennt.",
   "path": [
     {
       "nodeId": "augustinus",
@@ -17,7 +17,7 @@
       "narrative": {
         "hook": "Bleib einen Moment bei dieser Glaswand. Du willst das Gute glauben und kommst trotzdem nicht hindurch – und es ist nicht so, dass du es nicht versuchtest. Du willst, und im selben Atemzug willst du nicht.",
         "body": [
-          "Augustinus kannte diesen gespaltenen Willen so genau, dass er ihm einen Namen gab: Ich will, und ich will zugleich nicht. Jahrelang wollte er ein anderer werden und hinderte sich im selben Moment daran, und kein noch so großes Mehr an Anstrengung löste den Knoten. Dann, im Garten, eine spielende Kinderstimme, ein aufgeschlagenes Buch, ein einzelner Satz – und die Glaswand war fort. Was sein Wille über Jahre nicht hatte erzwingen können, geschah in einem einzigen Augenblick. Und doch, sagt er, hatte all das Ringen davor genau darauf hingearbeitet."
+          "Augustinus kannte diesen gespaltenen Willen so genau, dass er ihm einen Namen gab: Ich will, und ich will zugleich nicht. Jahrelang wollte er ein anderer werden und hinderte sich im selben Moment daran, und kein noch so grosses Mehr an Anstrengung löste den Knoten. Dann, im Garten, eine spielende Kinderstimme, ein aufgeschlagenes Buch, ein einzelner Satz – und die Glaswand war fort. Was sein Wille über Jahre nicht hatte erzwingen können, geschah in einem einzigen Augenblick. Und doch, sagt er, hatte all das Ringen davor genau darauf hingearbeitet."
         ],
         "kernel": "Was sein Wille über Jahre nicht hatte erzwingen können, geschah in einem einzigen Augenblick.",
         "bridge": "Augustinus' Lösung kam wie ein Blitz. Die nächste Stimme glaubt nicht an Blitze. Sie glaubt an Wiederholung."
@@ -34,9 +34,9 @@
           "Epiktet war ein Sklave und Mark Aurel ein Kaiser, und doch lehrten beide dasselbe: Verwandlung ist kein Ereignis, sondern eine Übung. Jeden Tag dieselbe schlichte Unterscheidung – was steht in meiner Macht und was nicht, mein eigenes Urteil über mich oder das Urteil der anderen. Wer das wieder und wieder einübt, wird allmählich ein anderer. Nicht im Durchbruch, sondern in tausend unscheinbaren Wiederholungen, bis aus der Übung eine zweite Natur geworden ist."
         ],
         "kernel": "bis aus der Übung eine zweite Natur geworden ist.",
-        "bridge": "Üben kann man nur, was in der eigenen Macht steht. Die dritte Stimme sagt: Das Entscheidende steht gerade nicht in deiner Macht – es kommt von außen."
+        "bridge": "Üben kann man nur, was in der eigenen Macht steht. Die dritte Stimme sagt: Das Entscheidende steht gerade nicht in deiner Macht – es kommt von aussen."
       },
-      "transition": "Üben kann man nur, was in der eigenen Macht steht. Die dritte Stimme sagt: Das Entscheidende steht gerade nicht in deiner Macht – es kommt von außen."
+      "transition": "Üben kann man nur, was in der eigenen Macht steht. Die dritte Stimme sagt: Das Entscheidende steht gerade nicht in deiner Macht – es kommt von aussen."
     },
     {
       "nodeId": "rilke",
@@ -45,9 +45,9 @@
       "narrative": {
         "hook": "Denk an den Moment, in dem es einmal doch durchkam – und an dem du selbst vermutlich nichts getan hast. Jemand sah dich an, hielt dich, und für einen Augenblick war die Glaswand einfach weg.",
         "body": [
-          "Rilke hat genau das beschrieben, in einem Gedicht über eine antike Statue, der der Kopf fehlt. Sie hat keine Augen und sieht dich trotzdem an, und aus dem alten Stein bricht ein Satz hervor, mit dem niemand gerechnet hat: Du mußt dein Leben ändern. Nicht weil du es dir vorgenommen hättest, sondern weil etwas dich so getroffen hat, dass kein Zurück mehr bleibt. Manchmal wird das Gute nicht geglaubt, weil du dich dafür entschieden hast – sondern weil ein Mensch, ein Blick, eine Liebe die Glaswand von außen einschlägt."
+          "Rilke hat genau das beschrieben, in einem Gedicht über eine antike Statue, der der Kopf fehlt. Sie hat keine Augen und sieht dich trotzdem an, und aus dem alten Stein bricht ein Satz hervor, mit dem niemand gerechnet hat: Du musst dein Leben ändern. Nicht weil du es dir vorgenommen hättest, sondern weil etwas dich so getroffen hat, dass kein Zurück mehr bleibt. Manchmal wird das Gute nicht geglaubt, weil du dich dafür entschieden hast – sondern weil ein Mensch, ein Blick, eine Liebe die Glaswand von aussen einschlägt."
         ],
-        "kernel": "weil ein Mensch, ein Blick, eine Liebe die Glaswand von außen einschlägt.",
+        "kernel": "weil ein Mensch, ein Blick, eine Liebe die Glaswand von aussen einschlägt.",
         "bridge": "Getroffenwerden kann man nicht erzwingen. Aber kann man etwas tun, damit es geschehen kann? Die vierte Stimme antwortet: ja – aufhören zu drücken."
       },
       "transition": "Getroffenwerden kann man nicht erzwingen. Aber kann man etwas tun, damit es geschehen kann? Die vierte Stimme antwortet: ja – aufhören zu drücken."
@@ -73,7 +73,7 @@
       "narrative": {
         "hook": "Hier wechselt der Ton. Die fünfte Stimme kommt nicht aus einem Kloster, sondern aus dem Labor, und sie stellt die nüchterne Frage, die alle vorigen offengelassen haben.",
         "body": [
-          "William James sammelte hunderte Berichte von Menschen, die sich von Grund auf gewandelt hatten, und er fragte nicht, ob ihr Glaube wahr war oder woher er kam, sondern allein: Was hat sich in ihrem Leben tatsächlich verändert? Eine echte Verwandlung erkennt man für James nicht an ihrer Quelle, sondern an ihren Früchten. Ob das Gute wirklich in dir angekommen ist, zeigt sich dann nicht im Gefühl eines einzelnen Augenblicks, sondern daran, ob du danach anders lebst. Das ist die kühlste der sechs Stimmen und zugleich die ehrlichste: Sie verspricht dir keinen Durchbruch, sie gibt dir einen Maßstab."
+          "William James sammelte hunderte Berichte von Menschen, die sich von Grund auf gewandelt hatten, und er fragte nicht, ob ihr Glaube wahr war oder woher er kam, sondern allein: Was hat sich in ihrem Leben tatsächlich verändert? Eine echte Verwandlung erkennt man für James nicht an ihrer Quelle, sondern an ihren Früchten. Ob das Gute wirklich in dir angekommen ist, zeigt sich dann nicht im Gefühl eines einzelnen Augenblicks, sondern daran, ob du danach anders lebst. Das ist die kühlste der sechs Stimmen und zugleich die ehrlichste: Sie verspricht dir keinen Durchbruch, sie gibt dir einen Massstab."
         ],
         "kernel": "ob du danach anders lebst.",
         "bridge": "James prüft den einzelnen Umschwung. Die letzte Stimme zoomt heraus und sieht etwas anderes: kein Ereignis, sondern ein ganzes Leben."
@@ -95,6 +95,6 @@
       "transition": "Sechs Stimmen, eine Glaswand. Keine hat das letzte Wort."
     }
   ],
-  "closing_synthesis": "Ein gutes Wort, das hinter einer Glaswand hängenbleibt, und sechs Deutungen, wie es doch ankommt: durch einen Umschwung, den der Wille nicht erzwingt, auf den er aber jahrelang hinarbeitet (Augustinus); durch tägliche Übung, bis das Glas dünn wird (Stoa); weil etwas von außen dich trifft und kein Zurück mehr lässt (Rilke); indem das Erzwingen nachlässt und ein Raum entsteht (Eckhart); daran erkennbar, ob du danach anders lebst (James); über ein ganzes Leben, in dem all diese Wege ineinandergreifen (Jung). Du musst dich nicht für eine entscheiden. Auffällig ist nur, wohin sie zeigen: Drei der Stimmen lösen die Glaswand nicht durch mehr Anstrengung, sondern durch ein Nachlassen des Anstrengens, und zwei andere fragen gar nicht, wie das Glas durchlässig wird, sondern woran du es merken würdest. Welche Stimme du gerade brauchst, hängt vielleicht weniger von der richtigen Lehre ab als davon, wo du gerade stehst.",
+  "closing_synthesis": "Ein gutes Wort, das hinter einer Glaswand hängenbleibt, und sechs Deutungen, wie es doch ankommt: durch einen Umschwung, den der Wille nicht erzwingt, auf den er aber jahrelang hinarbeitet (Augustinus); durch tägliche Übung, bis das Glas dünn wird (Stoa); weil etwas von aussen dich trifft und kein Zurück mehr lässt (Rilke); indem das Erzwingen nachlässt und ein Raum entsteht (Eckhart); daran erkennbar, ob du danach anders lebst (James); über ein ganzes Leben, in dem all diese Wege ineinandergreifen (Jung). Du musst dich nicht für eine entscheiden. Auffällig ist nur, wohin sie zeigen: Drei der Stimmen lösen die Glaswand nicht durch mehr Anstrengung, sondern durch ein Nachlassen des Anstrengens, und zwei andere fragen gar nicht, wie das Glas durchlässig wird, sondern woran du es merken würdest. Welche Stimme du gerade brauchst, hängt vielleicht weniger von der richtigen Lehre ab als davon, wo du gerade stehst.",
   "closing_question": "Wenn dir das nächste Mal jemand etwas Gutes sagt und es hinter der Glaswand hängenbleibt – was, glaubst du, müsste geschehen, damit es ankommt: mehr üben, getroffen werden, oder das Erzwingen nachlassen?"
 }

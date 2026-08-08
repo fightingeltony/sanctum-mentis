@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 import { readFile }     from 'fs/promises'
 import { join }         from 'path'
 
-// Node runtime — fonts via fs.readFile, can be statically pre-rendered
+// Node runtime – fonts via fs.readFile, can be statically pre-rendered
 export const dynamic     = 'force-static'
 export const contentType = 'image/png'
 
@@ -54,7 +54,7 @@ export async function GET() {
           }}
         />
 
-        {/* Scatter dots — starmap suggestion */}
+        {/* Scatter dots – starmap suggestion */}
         {/* Top-left quadrant */}
         <div style={{ position: 'absolute', top: '22%',  left:  '18%', width: '5px', height: '5px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.28)' }} />
         <div style={{ position: 'absolute', top: '35%',  left:  '28%', width: '3px', height: '3px', borderRadius: '50%', backgroundColor: 'rgba(139, 82, 30, 0.18)' }} />
@@ -104,7 +104,7 @@ export async function GET() {
             Philosophie · Denker · Konzepte
           </div>
 
-          {/* Title — Marcellus SC, mixed case (not all-caps) */}
+          {/* Title – Marcellus SC, mixed case (not all-caps) */}
           <div
             style={{
               fontSize:      92,
@@ -129,7 +129,7 @@ export async function GET() {
             }}
           />
 
-          {/* Tagline — italic, Geist */}
+          {/* Tagline – italic, Geist */}
           <div
             style={{
               fontSize:   28,

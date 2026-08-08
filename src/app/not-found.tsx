@@ -10,7 +10,7 @@ export default function NotFound() {
         Nicht gefunden
       </h1>
       <p className="font-body text-[17px] leading-relaxed" style={{ color: 'var(--fg-muted)' }}>
-        Diese Seite gibt es nicht — oder noch nicht.
+        Diese Seite gibt es nicht – oder noch nicht.
       </p>
       <Link
         href="/"

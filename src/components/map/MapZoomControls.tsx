@@ -14,7 +14,7 @@ export function MapZoomControls({ onZoomIn, onZoomOut, onReset }: Props) {
   `
   return (
     <div className="absolute top-3 right-3 flex flex-col gap-1 z-[2000]" onPointerDown={e => e.stopPropagation()}>
-      <button className={btn} onClick={onZoomIn}  aria-label="Vergrößern">+</button>
+      <button className={btn} onClick={onZoomIn}  aria-label="Vergrössern">+</button>
       <button className={btn} onClick={onZoomOut} aria-label="Verkleinern">−</button>
       <button className={btn} onClick={onReset}   aria-label="Zurücksetzen"
         style={{ fontSize: '10px', letterSpacing: '0.05em' }}>

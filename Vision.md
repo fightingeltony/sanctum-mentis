@@ -1,19 +1,19 @@
 # Kuratorische Linie
 
-Sanctum Mentis ist ein Solo-Projekt — kuratiert, gepflegt 
+Sanctum Mentis ist ein Solo-Projekt – kuratiert, gepflegt 
 und weitergedacht von Fabian (Schweiz).
 
 ## Was Sanctum eigentlich tut
 
 Wir haben heute alles Wissen der Welt zur Hand. Was uns fehlt, 
-ist Kontext — die Möglichkeit, ein Thema einmal zu Ende zu 
+ist Kontext – die Möglichkeit, ein Thema einmal zu Ende zu 
 verstehen, Punkte zu setzen, Erkenntnisse landen zu lassen. 
 Sanctum macht aus dem Gewirr eine Karte.
 
-## Maßstäbe
+## Massstäbe
 
-- **Verstehen-Abschließen** ist der Hauptmaßstab. Sanctum hilft 
-  Themen abzuschließen, nicht alle Positionen zu kennen.
+- **Verstehen-Abschliessen** ist der Hauptmassstab. Sanctum hilft 
+  Themen abzuschliessen, nicht alle Positionen zu kennen.
 - **Mild-Modus** ist Default. Akademische Vollständigkeit nur 
   als bewusste Ausnahme, wenn das Thema sie verlangt.
 - **Meditative Tonart** vor akademischer Strenge. Im Zweifel 
@@ -24,16 +24,16 @@ Sanctum macht aus dem Gewirr eine Karte.
 
 ## Persönlicher Hintergrund
 
-Sanctum entsteht parallel zu eigener Transformationsarbeit —
+Sanctum entsteht parallel zu eigener Transformationsarbeit –
 Psychologie, Spiritualität, Mythologie. Das prägt die kuratorischen Entscheidungen: 
 Tableaus zielen auf Menschen, die selbst an inneren Synthesen 
 arbeiten, nicht auf akademische Vollständigkeit.
 
 ## Verwandte Dokumente
 
-- `kanon.md` — das kuratorische Selbstverständnis: Grundhaltung, die drei Formen, Stimm-Hierarchie (Single Source)
-- `CLAUDE.md` — Datenmodell, technische Konventionen
-- `schema-referenz.md` — die Schema-Felder aller drei Formen
-- `backlog.md` — Roadmap, Themen-Reservoir, Methoden-Prinzipien
-- `audit-bestandesaufnahme.md` — offene Audit- und Hygiene-Punkte (Status-Tracker)
-- `README.md` — Tech-Stack, Installation
+- `kanon.md` – das kuratorische Selbstverständnis: Grundhaltung, die drei Formen, Stimm-Hierarchie (Single Source)
+- `CLAUDE.md` – Datenmodell, technische Konventionen
+- `schema-referenz.md` – die Schema-Felder aller drei Formen
+- `backlog.md` – Roadmap, Themen-Reservoir, Methoden-Prinzipien
+- `audit-bestandesaufnahme.md` – offene Audit- und Hygiene-Punkte (Status-Tracker)
+- `README.md` – Tech-Stack, Installation

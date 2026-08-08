@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
     // sanfter Cross-Fade bei Routen-Wechseln (Bibliothek → Tableau → Lectio).
     // Aktiviert React's <ViewTransition>-Boundary in src/app/layout.tsx
     // (RouteViewTransition). Abschalten: dieses Flag entfernen UND den
-    // RouteViewTransition-Wrapper in layout.tsx auf {children} zurückbauen —
+    // RouteViewTransition-Wrapper in layout.tsx auf {children} zurückbauen –
     // keine weiteren Abhängigkeiten. Doku: README «View Transitions».
     viewTransition: true,
   },

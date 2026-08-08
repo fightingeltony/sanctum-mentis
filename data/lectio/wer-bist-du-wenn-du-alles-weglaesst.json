@@ -3,12 +3,12 @@
   "tableauId": "das-selbst",
   "title": "Wer bist du, wenn du alles weglässt?",
   "focus": "Vier Stimmen zur Frage nach dem Kern – erzählt von einem einzigen Moment her, den alle vier verschieden deuten",
-  "thesis": "Es gibt einen Moment, in dem du dich beim Scrollen ertappst – und für eine Sekunde nicht weißt, wer da gerade gescrollt hat. Vier Traditionen schauen auf genau diesen Moment und sehen vier verschiedene Dinge. Welche sich für dich richtig anfühlt, ist deine eigene Antwort auf die Frage, ob du einen Kern hast.",
+  "thesis": "Es gibt einen Moment, in dem du dich beim Scrollen ertappst – und für eine Sekunde nicht weisst, wer da gerade gescrollt hat. Vier Traditionen schauen auf genau diesen Moment und sehen vier verschiedene Dinge. Welche sich für dich richtig anfühlt, ist deine eigene Antwort auf die Frage, ob du einen Kern hast.",
   "path_type": "konkurrierend-konfrontativ",
   "ton": "erzählend-erfahrend",
   "level": 2,
   "estimated_minutes": 9,
-  "intro": "Ein gewöhnlicher Abend, du liegst auf dem Sofa, und der Daumen wischt übers Handy – ein Video, ein Bild, weiter, und längst weißt du nicht mehr, was du vor zehn Sekunden gesehen hast. Dann, mitten in der Bewegung, hältst du inne: Was mache ich hier eigentlich? Für eine Sekunde bist du nicht mehr der, der scrollt. Sondern der, der es bemerkt. Dann wischt der Daumen weiter, und der Moment ist vorbei – aber diesen kleinen Riss kennst du. Vier Stimmen schauen darauf, und jede sieht etwas anderes. Du musst keiner recht geben. Lies langsam, und schau, welche von dir spricht.",
+  "intro": "Ein gewöhnlicher Abend, du liegst auf dem Sofa, und der Daumen wischt übers Handy – ein Video, ein Bild, weiter, und längst weisst du nicht mehr, was du vor zehn Sekunden gesehen hast. Dann, mitten in der Bewegung, hältst du inne: Was mache ich hier eigentlich? Für eine Sekunde bist du nicht mehr der, der scrollt. Sondern der, der es bemerkt. Dann wischt der Daumen weiter, und der Moment ist vorbei – aber diesen kleinen Riss kennst du. Vier Stimmen schauen darauf, und jede sieht etwas anderes. Du musst keiner recht geben. Lies langsam, und schau, welche von dir spricht.",
   "path": [
     {
       "nodeId": "vedanta",
@@ -16,7 +16,7 @@
       "narrative": {
         "hook": "Bleib einen Moment bei diesem Innehalten. Der Daumen ruht, und etwas in dir hat sich vom Scrollen gelöst und schaut zu – ruhig, unbeteiligt, als wäre es nie mitgewischt. Es war schon da, bevor du zum Handy griffst.",
         "body": [
-          "Die Vedanta-Tradition Indiens macht aus diesem Zusehenden eine schwindelerregende Behauptung. Es ist nicht dein privater Kern, nicht das, was dich von allen anderen unterscheidet – im Gegenteil. Es ist in jedem Menschen dasselbe, und es ist eins mit dem Grund von allem, was überhaupt ist. Gehst du ganz nach innen, hinter alle Gedanken und Rollen, findest du dort nicht dich, wie du gehofft hast. Du findest etwas, das größer ist als du, in dem dein einzelnes Ich verschwindet wie ein Tropfen, der ins Meer fällt und merkt: Ich war immer schon Meer."
+          "Die Vedanta-Tradition Indiens macht aus diesem Zusehenden eine schwindelerregende Behauptung. Es ist nicht dein privater Kern, nicht das, was dich von allen anderen unterscheidet – im Gegenteil. Es ist in jedem Menschen dasselbe, und es ist eins mit dem Grund von allem, was überhaupt ist. Gehst du ganz nach innen, hinter alle Gedanken und Rollen, findest du dort nicht dich, wie du gehofft hast. Du findest etwas, das grösser ist als du, in dem dein einzelnes Ich verschwindet wie ein Tropfen, der ins Meer fällt und merkt: Ich war immer schon Meer."
         ],
         "kernel": "ein Tropfen, der ins Meer fällt und merkt: Ich war immer schon Meer.",
         "bridge": "Vielleicht zieht dich das an, vielleicht ist es dir zu weit weg – beides ist eine Antwort. Die nächste Stimme schaut auf denselben Moment und bestreitet, dass dort überhaupt ein Zeuge ist."
@@ -42,7 +42,7 @@
       "narrative": {
         "hook": "Die ersten beiden streiten, ob jetzt, in diesem Moment, ein Kern zu finden ist. Die dritte Stimme dreht die Frage um. Vielleicht ist der Kern nichts, was du schon hast – sondern etwas, das erst wird.",
         "body": [
-          "Stell dir denselben Menschen auf dem Sofa vor, dreißig Jahre später. Vieles, was ihn heute Abend zum Handy greifen ließ – die Unruhe, das Ausweichen –, wird er durchgestanden haben, dazu Verluste, Krisen, Jahre, in denen er sich mit Seiten von sich abgeben musste, die er lange nicht sehen wollte. Und gut möglich, dass er mit sechzig nicht glatter geworden ist, aber ganzer. Genau das meinte C. G. Jung: Über ein ganzes Leben bildet sich ein Zentrum heraus, größer als das alltägliche Ich, das hier gerade scrollt. Es liegt nicht fertig unter allem, wie Vedanta will. Es ist kein Ausgangspunkt, zu dem man zurückkehrt, sondern ein Ziel, auf das man ein Leben lang zugeht, ohne je ganz anzukommen."
+          "Stell dir denselben Menschen auf dem Sofa vor, dreissig Jahre später. Vieles, was ihn heute Abend zum Handy greifen liess – die Unruhe, das Ausweichen –, wird er durchgestanden haben, dazu Verluste, Krisen, Jahre, in denen er sich mit Seiten von sich abgeben musste, die er lange nicht sehen wollte. Und gut möglich, dass er mit sechzig nicht glatter geworden ist, aber ganzer. Genau das meinte C. G. Jung: Über ein ganzes Leben bildet sich ein Zentrum heraus, grösser als das alltägliche Ich, das hier gerade scrollt. Es liegt nicht fertig unter allem, wie Vedanta will. Es ist kein Ausgangspunkt, zu dem man zurückkehrt, sondern ein Ziel, auf das man ein Leben lang zugeht, ohne je ganz anzukommen."
         ],
         "kernel": "Es ist kein Ausgangspunkt, zu dem man zurückkehrt, sondern ein Ziel, auf das man ein Leben lang zugeht, ohne je ganz anzukommen.",
         "bridge": "Der Kern ist nicht gegeben, sagt Jung. Er wird. Die vierte Stimme nimmt ihn wieder weg, und sie kommt aus einer ganz anderen Welt als die drei davor."

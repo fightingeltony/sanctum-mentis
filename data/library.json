@@ -2,23 +2,23 @@
   {
     "id": "das-selbst",
     "title": "Die Landkarte des Selbst",
-    "subtitle": "Die Suche nach dem Kern — Wer bist du, wenn du alles weglässt?",
+    "subtitle": "Die Suche nach dem Kern – Wer bist du, wenn du alles weglässt?",
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.42 0.12 295)",
     "status": "available",
     "spur": "erkenntnis",
-    "desc": "Von Vedanta bis Karl Friston — wie 3000 Jahre Denken das Ich als Essenz, Struktur, Simulation oder Fluss begreifen.",
+    "desc": "Von Vedanta bis Karl Friston – wie 3000 Jahre Denken das Ich als Essenz, Struktur, Simulation oder Fluss begreifen.",
     "tags": ["Identität", "Bewusstsein", "Neurowissenschaft", "Spiritualität"]
   },
   {
     "id": "philosophie-des-geistes",
     "title": "Philosophie des Geistes",
-    "subtitle": "Das Rätsel im Kopf — Wo wird aus Materie eigentlich Gefühl?",
+    "subtitle": "Das Rätsel im Kopf – Wo wird aus Materie eigentlich Gefühl?",
     "era": "17. Jh. – Gegenwart",
     "themeColor": "oklch(0.44 0.13 240)",
     "status": "available",
     "spur": "erkenntnis",
-    "desc": "Von Descartes' Ghost in the Machine bis Chalmers' Hard Problem — die zentralen Positionen zur Frage, ob und wie Materie denkt und fühlt.",
+    "desc": "Von Descartes' Ghost in the Machine bis Chalmers' Hard Problem – die zentralen Positionen zur Frage, ob und wie Materie denkt und fühlt.",
     "tags": ["Bewusstsein", "Qualia", "Dualismus", "Kognitionswissenschaft"]
   },
   {
@@ -29,7 +29,7 @@
     "themeColor": "oklch(0.42 0.11 165)",
     "status": "available",
     "spur": "erkenntnis",
-    "desc": "Von Aristoteles bis Markus Gabriel — wie Denker durch die Jahrhunderte stritten, ob die Welt unabhängig von uns existiert oder immer schon unsere Konstruktion ist.",
+    "desc": "Von Aristoteles bis Markus Gabriel – wie Denker durch die Jahrhunderte stritten, ob die Welt unabhängig von uns existiert oder immer schon unsere Konstruktion ist.",
     "tags": ["Erkenntnistheorie", "Realismus", "Konstruktivismus", "Wissenschaftsphilosophie"]
   },
   {
@@ -40,7 +40,7 @@
     "themeColor": "oklch(0.42 0.10 45)",
     "status": "available",
     "spur": "existenz",
-    "desc": "Von Kierkegaard bis Camus — wie man lebt, wenn nichts vorgegeben ist und der Sinn nicht gefunden, sondern gemacht werden muss.",
+    "desc": "Von Kierkegaard bis Camus – wie man lebt, wenn nichts vorgegeben ist und der Sinn nicht gefunden, sondern gemacht werden muss.",
     "tags": ["Freiheit", "Sinn", "Angst", "Absurdität"]
   },
   {
@@ -51,40 +51,40 @@
     "themeColor": "oklch(0.44 0.12 128)",
     "status": "available",
     "spur": "handlung",
-    "desc": "Von Hobbes' Leviathan bis Rawls' Schleier des Nichtwissens — und den Stimmen, die fragen, ob Herrschaft überhaupt das Zentrum der Politik ist.",
+    "desc": "Von Hobbes' Leviathan bis Rawls' Schleier des Nichtwissens – und den Stimmen, die fragen, ob Herrschaft überhaupt das Zentrum der Politik ist.",
     "tags": ["Vertrag", "Gerechtigkeit", "Freiheit", "Macht"]
   },
   {
     "id": "lebenskunst",
     "title": "Lebenskunst",
-    "subtitle": "Die Kunst, gut zu leben — wann gelingt dir dein Leben?",
+    "subtitle": "Die Kunst, gut zu leben – wann gelingt dir dein Leben?",
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.44 0.11 65)",
     "status": "available",
     "spur": "existenz",
-    "desc": "Von Epikurs Garten bis zur Flow-Forschung — wie die großen Schulen das gelingende Leben dachten: Lust oder Tugend, Rückzug oder Tätigkeit.",
+    "desc": "Von Epikurs Garten bis zur Flow-Forschung – wie die grossen Schulen das gelingende Leben dachten: Lust oder Tugend, Rückzug oder Tätigkeit.",
     "tags": ["Glück", "Stoa", "Epikur", "gutes Leben"]
   },
   {
     "id": "begegnung",
     "title": "Begegnung",
-    "subtitle": "Der Andere — wirst du erst an ihm zu dir selbst?",
+    "subtitle": "Der Andere – wirst du erst an ihm zu dir selbst?",
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.43 0.12 35)",
     "status": "available",
     "spur": "existenz",
-    "desc": "Von Aristoteles' Freundschaft bis Lévinas' Antlitz — ob der Andere dich erst zu dir selbst macht oder deine Freiheit bedroht, ob er Geschenk ist oder Zumutung.",
+    "desc": "Von Aristoteles' Freundschaft bis Lévinas' Antlitz – ob der Andere dich erst zu dir selbst macht oder deine Freiheit bedroht, ob er Geschenk ist oder Zumutung.",
     "tags": ["Der Andere", "Anerkennung", "Beziehung", "Intersubjektivität"]
   },
   {
     "id": "selbstverhaeltnis",
     "title": "Das Selbstverhältnis",
-    "subtitle": "Die Haltung zu dir selbst — sollst du dich nehmen, wie du bist, oder werden, der du sein könntest?",
+    "subtitle": "Die Haltung zu dir selbst – sollst du dich nehmen, wie du bist, oder werden, der du sein könntest?",
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.43 0.11 71)",
     "status": "available",
     "spur": "existenz",
-    "desc": "Von Rogers bis Nietzsche, von Kabat-Zinn bis Metzinger — ob du dich annehmen oder überwinden sollst, und ob das Selbst überhaupt eine Gabe ist oder ein Werk.",
+    "desc": "Von Rogers bis Nietzsche, von Kabat-Zinn bis Metzinger – ob du dich annehmen oder überwinden sollst, und ob das Selbst überhaupt eine Gabe ist oder ein Werk.",
     "tags": ["Selbstannahme", "Selbstüberwindung", "Identität", "Psychologie"]
   },
   {
@@ -95,40 +95,40 @@
     "themeColor": "oklch(0.45 0.12 100)",
     "status": "available",
     "spur": "handlung",
-    "desc": "Tugendethik, Deontologie, Konsequentialismus — und ihre modernen Varianten.",
+    "desc": "Tugendethik, Deontologie, Konsequentialismus – und ihre modernen Varianten.",
     "tags": ["Tugend", "Pflicht", "Folgen"]
   },
   {
     "id": "gut-und-boese",
     "title": "Gut und Böse",
-    "subtitle": "Die Frage vor allen Fragen — bist du von Natur aus gut?",
+    "subtitle": "Die Frage vor allen Fragen – bist du von Natur aus gut?",
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.43 0.11 345)",
     "status": "available",
     "spur": "menschenbild",
-    "desc": "Von Mengzi bis zur Kooperationsforschung — ob der Mensch von Natur gut, gefährdet oder formbar ist, und ob das überhaupt die richtige Frage ist.",
+    "desc": "Von Mengzi bis zur Kooperationsforschung – ob der Mensch von Natur gut, gefährdet oder formbar ist, und ob das überhaupt die richtige Frage ist.",
     "tags": ["Menschennatur", "gut und böse", "Anthropologie", "Erbsünde"]
   },
   {
     "id": "wandlung",
     "title": "Wandlung",
-    "subtitle": "Wandlung — Was muss geschehen, damit ein Mensch ein anderer wird?",
+    "subtitle": "Wandlung – Was muss geschehen, damit ein Mensch ein anderer wird?",
     "era": "19. Jh. – Gegenwart",
     "themeColor": "oklch(0.43 0.11 152)",
     "status": "available",
     "spur": "wandlung",
-    "desc": "Von Freud bis Kabat-Zinn — was Therapie, Achtsamkeit und Körperarbeit über Veränderung wissen: Einsicht, Erfahrung, Beziehung.",
+    "desc": "Von Freud bis Kabat-Zinn – was Therapie, Achtsamkeit und Körperarbeit über Veränderung wissen: Einsicht, Erfahrung, Beziehung.",
     "tags": ["Therapie", "Transformation", "Heilung", "Veränderung"]
   },
   {
     "id": "verwandlung",
     "title": "Verwandlung",
-    "subtitle": "Verwandlung — Was verwandelt einen Menschen von Grund auf?",
+    "subtitle": "Verwandlung – Was verwandelt einen Menschen von Grund auf?",
     "era": "Antike – Gegenwart",
     "themeColor": "oklch(0.43 0.11 156)",
     "status": "available",
     "spur": "wandlung",
-    "desc": "Von Rilke bis Jung — Krise oder Praxis, Getroffenwerden oder Wollen: was einen Menschen nicht repariert, sondern grundlegend verwandelt.",
+    "desc": "Von Rilke bis Jung – Krise oder Praxis, Getroffenwerden oder Wollen: was einen Menschen nicht repariert, sondern grundlegend verwandelt.",
     "tags": ["Krise", "Praxis", "Metamorphose", "Rilke"]
   }
 ]

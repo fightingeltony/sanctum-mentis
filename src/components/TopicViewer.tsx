@@ -15,23 +15,23 @@ type Tab = 'denker' | 'sternkarte'
 const VALID_TABS = ['denker', 'sternkarte'] as const
 
 /**
- * Stufen-Gedächtnis pro Tableau — sitzungsweit, in-memory (Variante B, 28.6.26).
+ * Stufen-Gedächtnis pro Tableau – sitzungsweit, in-memory (Variante B, 28.6.26).
  * Modul-globale Map: überlebt client-seitige Navigation (Tableau A → B → A behält A's
  * Stand), wird aber bei Hard-Reload mit der JS-Laufzeit geleert → Default L1.
- * Bewusst KEIN localStorage/sessionStorage — keine Persistenz über die Sitzung hinaus.
+ * Bewusst KEIN localStorage/sessionStorage – keine Persistenz über die Sitzung hinaus.
  */
 const levelMemory = new Map<string, number>()
 
 interface Props {
   data: TopicData
-  /** Lectios for this tableau — shown as guided-path discovery in the header */
+  /** Lectios for this tableau – shown as guided-path discovery in the header */
   lectios?: LectioSummary[]
 }
 
 export default function TopicViewer({ data, lectios }: Props) {
   const searchParams = useSearchParams()
 
-  // Read URL params client-side — keeps the page as SSG
+  // Read URL params client-side – keeps the page as SSG
   const rawTab    = searchParams.get('tab') ?? undefined
   const rawLevel  = searchParams.get('level') ?? undefined
   const rawHighlight = searchParams.get('highlight') ?? undefined
@@ -57,13 +57,13 @@ export default function TopicViewer({ data, lectios }: Props) {
     if (initialLevel !== undefined && !isNaN(initialLevel) && initialLevel >= 1) {
       const n = Math.min(initialLevel, data.topic.complexityLevels)
       // eslint-disable-next-line react-hooks/set-state-in-effect
-      setLevelId(n) // Client-only init from URL param — runs once on mount, not cascading
+      setLevelId(n) // Client-only init from URL param – runs once on mount, not cascading
       levelMemory.set(data.topic.id, n)
     } else {
       const saved = levelMemory.get(data.topic.id)
       if (saved !== undefined) {
         const n = Math.min(saved, data.topic.complexityLevels)
-        if (n >= 1) setLevelId(n) // Client-only init from session memory — runs once on mount
+        if (n >= 1) setLevelId(n) // Client-only init from session memory – runs once on mount
       }
     }
   }, [data.topic.id, data.topic.complexityLevels, initialLevel])
@@ -71,7 +71,7 @@ export default function TopicViewer({ data, lectios }: Props) {
   /* ── Tab + highlight from URL params ── */
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    if (initialTab) setTab(initialTab) // Client-only init from URL param — runs once on mount
+    if (initialTab) setTab(initialTab) // Client-only init from URL param – runs once on mount
     if (initialHighlight) {
       // Defer highlight until level has re-rendered so the card is in the DOM
       const t = setTimeout(() => setHighlightId(initialHighlight), 0)
@@ -128,7 +128,7 @@ export default function TopicViewer({ data, lectios }: Props) {
           </span>
         </div>
 
-        {/* Search button — opens the global palette via context */}
+        {/* Search button – opens the global palette via context */}
         <button
           onClick={() => palette?.openPalette()}
           className="flex items-center justify-center w-8 h-8 text-fg-dim

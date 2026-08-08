@@ -47,7 +47,7 @@ export default function LevelSlider({ levels, value, onChange }: Props) {
           <button
             key={l.id}
             onClick={() => onChange(l.id)}
-            title={l.filled ? l.label : `${l.label} — noch nicht ausgearbeitet`}
+            title={l.filled ? l.label : `${l.label} – noch nicht ausgearbeitet`}
             className={`font-ui text-[9px] tracking-[0.10em] uppercase transition-colors
               ${l.id === value ? 'text-gold' : l.filled ? 'text-fg-dim hover:text-fg-muted' : 'text-fg-dim opacity-35'}`}
           >

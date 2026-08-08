@@ -8,18 +8,18 @@ import { CONCEPT_GLYPH, CONCEPT_LABEL } from '@/lib/conceptTypes'
 // ─── Zoom-Konstanten ─────────────────────────────────────────
 const ZOOM_MIN = 1
 const ZOOM_MAX = 3.4
-// Konter-Skalierungs-Dämpfung: Stern-Körper schrumpfen mit k^-DAMP statt 1/k —
+// Konter-Skalierungs-Dämpfung: Stern-Körper schrumpfen mit k^-DAMP statt 1/k –
 // Labels/Glyphen wachsen netto mit k^(1-DAMP) sanft mit (bei k=3.4 ≈ ×1.5),
 // während die Positionen mit vollem k spreizen. Lesbar bei Maximalzoom,
 // Deklutter gewinnt trotzdem (Spreizung wächst schneller als die Labels).
 const BODY_DAMP = 0.65
 
-// ─── Constants — Desktop ──────────────────────────────────────
+// ─── Constants – Desktop ──────────────────────────────────────
 const W = 980, H = 760, PAD_X = 200, PAD_Y = 80
 const mapX = (x: number) => PAD_X + (x / 100) * (W - 2 * PAD_X)
 const mapY = (y: number) => H - PAD_Y - (y / 100) * (H - 2 * PAD_Y)
 
-// ─── Constants — Mobile (portrait) ───────────────────────────
+// ─── Constants – Mobile (portrait) ───────────────────────────
 const MW = 640, MH = 884, MPAD_X = 64, MPAD_Y = 128
 const mMapX = (x: number) => MPAD_X + (x / 100) * (MW - 2 * MPAD_X)
 const mMapY = (y: number) => MH - MPAD_Y - (y / 100) * (MH - 2 * MPAD_Y)
@@ -31,7 +31,7 @@ const LINE_COLOR_RESOLVED: Record<string, string> = {
   critique:  'oklch(0.46 0.10 45)',
   rejection: 'oklch(0.47 0.14 30)',
 }
-// Styles per type — aligned with Tab-II legend:
+// Styles per type – aligned with Tab-II legend:
 // influence=solid, critique=dotted, parallel=long-dash, rejection=short-dash+break
 const DASH: Record<string, string | undefined> = {
   influence: undefined,
@@ -80,7 +80,7 @@ type Pos = { x: number; y: number }
 // ─── Collision-free label placement (axis mode) ───────────────
 //
 // Default side: x > 55 → left, else → right.
-// Then: 3 greedy passes — if a label's bounding box overlaps any
+// Then: 3 greedy passes – if a label's bounding box overlaps any
 // neighbour's, try flipping to the other side. Keep flip only if
 // the alternative has fewer (or zero) conflicts.
 //
@@ -134,7 +134,7 @@ function computeAxisLabelSides(
     }, 0)
   }
 
-  // 3 greedy passes — resolve label-label collisions
+  // 3 greedy passes – resolve label-label collisions
   for (let pass = 0; pass < 3; pass++) {
     for (const id of ids) {
       const cur = countConflicts(id, sides[id])
@@ -145,7 +145,7 @@ function computeAxisLabelSides(
     }
   }
 
-  // Final boundary enforcement — SVG clipping is worse than label-label overlap.
+  // Final boundary enforcement – SVG clipping is worse than label-label overlap.
   // If the greedy passes pushed a label beyond the SVG edge, flip it back.
   const svgW_ = isMobile ? MW : W
   const margin = 8
@@ -193,7 +193,7 @@ function computeSchoolLayout(thinkers: Thinker[]): {
   return { present, centers, layout }
 }
 
-// Mobile: 2-column grid — robust on narrow portrait screens
+// Mobile: 2-column grid – robust on narrow portrait screens
 function computeMobileSchoolLayout(thinkers: Thinker[]): {
   present: string[]
   centers: Record<string, Pos & { col: number }>
@@ -327,7 +327,7 @@ export default function StarChart({
   const dragRef   = useRef<{ x: number; y: number; tx: number; ty: number } | null>(null)
   const pinchRef  = useRef<{ dist: number; mx: number; my: number; tx: number; ty: number; scale: number } | null>(null)
   const didMoveRef = useRef(false)
-  // true sobald die Gesten-Sequenz je 2 Finger hatte — verhindert, dass das Heben des
+  // true sobald die Gesten-Sequenz je 2 Finger hatte – verhindert, dass das Heben des
   // zweiten Pinch-Fingers als Tap zählt (Phantom-Deselect/-Doppeltipp), und garantiert
   // den Deklutter-Pass am Pinch-Ende. Wird beim Erreichen von 0 Pointern verbraucht.
   const hadPinchRef = useRef(false)
@@ -356,14 +356,14 @@ export default function StarChart({
   // Debounce timer for wheel-end detection
   const wheelVisTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   // Stable ref-as-callback for updateLabelVisibility (defined later in the component).
-  // Render-time ref write (see deselectRef pattern) — intentional, eslint-disable not needed.
+  // Render-time ref write (see deselectRef pattern) – intentional, eslint-disable not needed.
   const updateLabelVisibilityRef = useRef<() => void>(() => {})
-  // Convenience trampoline — stable identity, calls the current implementation.
+  // Convenience trampoline – stable identity, calls the current implementation.
   const updateLabelVisibility = () => updateLabelVisibilityRef.current()
 
-  // ── cancelKinetics — stops momentum decay or double-tap tween ──
+  // ── cancelKinetics – stops momentum decay or double-tap tween ──
   // Declared early (before morph/wheel handlers) because it's called by both.
-  // Plain function (not useCallback): only reads stable refs — never stale.
+  // Plain function (not useCallback): only reads stable refs – never stale.
   const cancelKinetics = () => {
     if (kineticsRaf.current) { cancelAnimationFrame(kineticsRaf.current); kineticsRaf.current = null }
     velRef.current.vx = 0
@@ -447,10 +447,10 @@ export default function StarChart({
     [thinkers],
   )
 
-  // Collision-free label sides for axis mode — recomputed when visible
+  // Collision-free label sides for axis mode – recomputed when visible
   // thinkers or breakpoint changes. Stored in ref so applyLabelSides
   // (a useCallback) can always read the latest value without being
-  // recreated — same pattern as deselectRef.
+  // recreated – same pattern as deselectRef.
   const axisLabelSides = useMemo(
     () => computeAxisLabelSides(thinkers, isMobile),
     [thinkers, isMobile],
@@ -530,7 +530,7 @@ export default function StarChart({
         : drawn
       posRef.current[t.id] = { ...target }
     })
-    // Orphan concept positions — axis mode only (school mode hides concept markers)
+    // Orphan concept positions – axis mode only (school mode hides concept markers)
     if (modeRef.current === 'axis') {
       orphanConcepts.forEach(c => {
         if (c.x === undefined || c.y === undefined) return
@@ -685,7 +685,7 @@ export default function StarChart({
         morphRafRef.current = requestAnimationFrame(frame)
       } else {
         morphRafRef.current = null
-        // Morph ended — update label visibility after positions are final
+        // Morph ended – update label visibility after positions are final
         updateLabelVisibility()
       }
     }
@@ -716,10 +716,10 @@ export default function StarChart({
     // ── A: Counter-scale entire .sc-star-body groups (gedämpft, BODY_DAMP) ──
     // Ein Transform pro .sc-star-body <g>: translate + scale(k^-DAMP) um den drawnPos-Anker.
     // Spike, Glow, Ring, Unread-Dot, Name und Lebensdaten wachsen dadurch netto nur sanft
-    // mit k^(1-DAMP) — lesbar bei Maximalzoom, ohne dass die Spreizung verloren geht.
-    // The outer .sc-star group carries the morph translate (dx,dy) — that composes cleanly.
+    // mit k^(1-DAMP) – lesbar bei Maximalzoom, ohne dass die Spreizung verloren geht.
+    // The outer .sc-star group carries the morph translate (dx,dy) – that composes cleanly.
     // The transparent touch-target circle is a sibling of .sc-star-body and deliberately
-    // NOT counter-scaled, so it grows with zoom (larger tap area at high zoom — intended).
+    // NOT counter-scaled, so it grows with zoom (larger tap area at high zoom – intended).
     const k = ps.scale
     const bodyCache = bodyElemsRef.current
     thinkers.forEach(t => {
@@ -773,7 +773,7 @@ export default function StarChart({
   const zoomOut   = useCallback(() => { panRef.current.scale *= 0.8;  applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
   const zoomReset = useCallback(() => { panRef.current = { scale: 1, tx: 0, ty: 0 }; applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
 
-  // ── B: Priority deklutter — hide overlapping labels, reveal on zoom ──
+  // ── B: Priority deklutter – hide overlapping labels, reveal on zoom ──
   // Runs ONLY at rest (after gestures/tweens end), never during live pan/pinch frames.
   // Uses getBoundingClientRect for ground-truth measurements that include counter-scaling,
   // label-side placement, and morph position automatically.
@@ -870,12 +870,12 @@ export default function StarChart({
       const lifeRect = life?.getBoundingClientRect() ?? null
       const block    = unionRect(nameRect, lifeRect)
       if (!block || (block.right - block.left < 0.5 && block.bottom - block.top < 0.5)) {
-        // Zero-size rect means element is not rendered / has no geometry yet — skip
+        // Zero-size rect means element is not rendered / has no geometry yet – skip
         continue
       }
 
       // D: anchor labels (firstLevel === 1) are never culled, even if they overlap a foreign
-      // glyph — anchors take priority. But we still need to exempt the own-star glyph from
+      // glyph – anchors take priority. But we still need to exempt the own-star glyph from
       // the obstacle list while testing this label's collision. We do this by temporarily
       // removing the own-star's glyph rect. The glyph rects were pushed in thinker order, so
       // we find and exclude the one belonging to this star by matching the spike element.
@@ -923,7 +923,7 @@ export default function StarChart({
       }
     }
 
-    // Orphan concept labels — lowest priority
+    // Orphan concept labels – lowest priority
     orphanConcepts.forEach(c => {
       const el = conceptLabelElemsRef.current[c.id]
       if (!el) return
@@ -957,7 +957,7 @@ export default function StarChart({
       ps.tx = mx - (mx - ps.tx) * (ps.scale / old)
       ps.ty = my - (my - ps.ty) * (ps.scale / old)
       applyZoom()
-      // Debounced visibility pass — ~160ms after the last wheel event
+      // Debounced visibility pass – ~160ms after the last wheel event
       if (wheelVisTimerRef.current) clearTimeout(wheelVisTimerRef.current)
       wheelVisTimerRef.current = setTimeout(updateLabelVisibility, 160)
     }
@@ -986,9 +986,9 @@ export default function StarChart({
     }
   }, [applyZoom])
 
-  // Pointer handlers — single-finger pan + two-finger pinch
+  // Pointer handlers – single-finger pan + two-finger pinch
   const onStagePointerDown = useCallback((e: React.PointerEvent) => {
-    // [data-nopan] = cartouche / zoom buttons — never pan/pinch there
+    // [data-nopan] = cartouche / zoom buttons – never pan/pinch there
     if ((e.target as Element).closest('[data-nopan]')) return
     const stage = stageRef.current
     if (!stage) return
@@ -999,12 +999,12 @@ export default function StarChart({
     const r   = stage.getBoundingClientRect()
     const pos = { x: e.clientX - r.left, y: e.clientY - r.top }
 
-    // Always register the pointer — pinch needs both fingers tracked regardless of landing target
+    // Always register the pointer – pinch needs both fingers tracked regardless of landing target
     ptrsRef.current.set(e.pointerId, pos)
     didMoveRef.current = false
 
     if (ptrsRef.current.size === 1) {
-      // Feature A: dragRef always initialized — even on nodes.
+      // Feature A: dragRef always initialized – even on nodes.
       // Tap-vs-drag distinction is done by the 5px threshold in onStagePointerMove,
       // not by the landing target. React onClick on nodes still fires for real taps
       // because we only setPointerCapture *after* the threshold is crossed.
@@ -1014,7 +1014,7 @@ export default function StarChart({
       velRef.current = { vx: 0, vy: 0, t: performance.now() }
     }
     if (ptrsRef.current.size === 2) {
-      // Two fingers always mean pinch — regardless of what is under either finger
+      // Two fingers always mean pinch – regardless of what is under either finger
       hadPinchRef.current = true   // merkt sich den Pinch über die GANZE Gesten-Sequenz (bis size 0)
       const [a, b] = [...ptrsRef.current.values()]
       pinchRef.current = {
@@ -1024,12 +1024,12 @@ export default function StarChart({
       }
       dragRef.current = null
       // Capture both pointers so move/up events keep arriving even if fingers slide off the element.
-      // setPointerCapture throws InvalidPointerId for synthetic/already-ended pointers — swallow defensively.
-      try { stage.setPointerCapture(e.pointerId) } catch { /* synthetic pointer — ignore */ }
+      // setPointerCapture throws InvalidPointerId for synthetic/already-ended pointers – swallow defensively.
+      try { stage.setPointerCapture(e.pointerId) } catch { /* synthetic pointer – ignore */ }
       // Also capture the other pointer that was already down
       for (const [pid] of ptrsRef.current) {
         if (pid !== e.pointerId) {
-          try { stage.setPointerCapture(pid) } catch { /* synthetic pointer — ignore */ }
+          try { stage.setPointerCapture(pid) } catch { /* synthetic pointer – ignore */ }
         }
       }
     }
@@ -1049,7 +1049,7 @@ export default function StarChart({
       const dist    = Math.hypot(b.x - a.x, b.y - a.y)
       const mx      = (a.x + b.x) / 2, my = (a.y + b.y) / 2
       const { dist: d0, mx: mx0, my: my0, tx: tx0, ty: ty0, scale: s0 } = pinchRef.current
-      // Faktor am Zoom-Limit clampen, BEVOR er in die Translation einfliesst —
+      // Faktor am Zoom-Limit clampen, BEVOR er in die Translation einfliesst –
       // sonst driftet die Karte weiter, wenn der Zoom längst am Anschlag steht.
       const newScale = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, s0 * (dist / d0)))
       const eff      = newScale / s0
@@ -1062,16 +1062,16 @@ export default function StarChart({
       if (!didMoveRef.current && Math.hypot(dx, dy) < 5) return
 
       // Feature A: on first threshold crossing, capture this pointer so that
-      // subsequent pointerup/click events are re-targeted to the stage element —
+      // subsequent pointerup/click events are re-targeted to the stage element –
       // this prevents React's onClick on star/edge/concept elements from firing
       // after a drag that happened to start on a node.
       if (!didMoveRef.current) {
-        try { stage.setPointerCapture(e.pointerId) } catch { /* synthetic — ignore */ }
+        try { stage.setPointerCapture(e.pointerId) } catch { /* synthetic – ignore */ }
       }
 
       didMoveRef.current  = true
 
-      // Feature B: smooth velocity estimate — exponential moving average
+      // Feature B: smooth velocity estimate – exponential moving average
       // Measure velocity from (post-clamp) pan delta / time to correctly handle boundary bounce.
       const now   = performance.now()
       const dt    = now - velRef.current.t
@@ -1112,9 +1112,9 @@ export default function StarChart({
         suppressClickRef.current = true
         setTimeout(() => { suppressClickRef.current = false }, 0)
       }
-      // Deselect only when tapping on empty canvas — not on a node/edge/concept.
+      // Deselect only when tapping on empty canvas – not on a node/edge/concept.
       // After a capture-redirect drag that started on a node, e.target is the stage element,
-      // so closest('.sc-star,...') returns null — but didMove=true → wasTap=false → no deselect.
+      // so closest('.sc-star,...') returns null – but didMove=true → wasTap=false → no deselect.
       const onNode = !!(e.target as Element).closest('.sc-star, .sc-edge-hit, .sc-concept-marker')
       if (wasTap && !hadPinch && !suppressClickRef.current && !onNode) deselectRef.current()
 
@@ -1138,20 +1138,20 @@ export default function StarChart({
               kineticsRaf.current = requestAnimationFrame(decay)
             } else {
               kineticsRaf.current = null
-              // Momentum ended — run visibility pass (pan only, scale unchanged)
+              // Momentum ended – run visibility pass (pan only, scale unchanged)
               updateLabelVisibility()
             }
           }
           kineticsRaf.current = requestAnimationFrame(decay)
         } else {
-          // Low-velocity drag: no momentum, but we still released — update visibility
+          // Low-velocity drag: no momentum, but we still released – update visibility
           updateLabelVisibility()
         }
       } else if (wasDrag && reduce) {
         // Reduced motion: no momentum animation, update immediately
         updateLabelVisibility()
       } else if (wasPinch || hadPinch) {
-        // Pinch ended — scale may have changed, update immediately.
+        // Pinch ended – scale may have changed, update immediately.
         // hadPinch deckt den Normalfall ab (2→1→0: das letzte Up sieht size===1).
         updateLabelVisibility()
       }
@@ -1196,7 +1196,7 @@ export default function StarChart({
                 kineticsRaf.current = requestAnimationFrame(tween)
               } else {
                 kineticsRaf.current = null
-                // Double-tap tween ended — update label visibility
+                // Double-tap tween ended – update label visibility
                 updateLabelVisibility()
               }
             }
@@ -1210,7 +1210,7 @@ export default function StarChart({
     applyZoom()
   }, [applyZoom])
 
-  // ── Focus / hover (imperative — no re-renders) ────────────
+  // ── Focus / hover (imperative – no re-renders) ────────────
   const clearFocus = useCallback(() => {
     if (selectedRef.current) return
     svgRef.current?.classList.remove('sc-focus')
@@ -1272,9 +1272,9 @@ export default function StarChart({
     Object.values(starGRefs.current).forEach(g => g?.classList.remove('sc-active', 'sc-neighbor'))
   }, [])
 
-  // Sheet-Exit: auf Mobile das Schließen 230ms verzögern, damit das
+  // Sheet-Exit: auf Mobile das Schliessen 230ms verzögern, damit das
   // Bottom-Sheet per [data-closing]-Transition hinausgleiten kann statt
-  // hart zu unmounten. Desktop und reduced-motion schließen sofort.
+  // hart zu unmounten. Desktop und reduced-motion schliessen sofort.
   const [sheetClosing, setSheetClosing] = useState(false)
   const sheetCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const cancelSheetClose = useCallback(() => {
@@ -1389,7 +1389,7 @@ export default function StarChart({
     )
   }
 
-  // Vertical pole — mobile X-poles rotated -90° into side gutters.
+  // Vertical pole – mobile X-poles rotated -90° into side gutters.
   // No wrapping (dy direction flips after rotation → overlap) and no hint (gutter too narrow).
   function renderPoleVertical(gx: number, label: string) {
     const yc = MH / 2
@@ -1466,7 +1466,7 @@ export default function StarChart({
 
       {/* ── Lede ── */}
       <p style={{ margin: '0 0 6px', padding: '0 2px', fontSize: 11.5, lineHeight: 1.55, color: 'var(--fg-dim)', fontStyle: 'italic' }}>
-        {thinkers.length} Denker an ihren Positionen — Konzepte beim Antippen, Schulen im Schulen-Modus.
+        {thinkers.length} Denker an ihren Positionen – Konzepte beim Antippen, Schulen im Schulen-Modus.
       </p>
 
       {/* ── Stage ── */}
@@ -1501,7 +1501,7 @@ export default function StarChart({
               didMoveRef.current = false
             } else if (ptrsRef.current.size === 0) {
               dragRef.current = null
-              // Geste ist beendet (vom System abgebrochen) — Pinch-Gedächtnis löschen
+              // Geste ist beendet (vom System abgebrochen) – Pinch-Gedächtnis löschen
               // und Sichtbarkeit für den erreichten Zoom-Stand aktualisieren.
               const hadPinch = hadPinchRef.current
               hadPinchRef.current = false
@@ -1677,7 +1677,7 @@ export default function StarChart({
                 })}
               </g>
 
-              {/* Concept markers — orphans only, axis mode only */}
+              {/* Concept markers – orphans only, axis mode only */}
               {mode === 'axis' && (
                 <g>
                   {orphanConcepts.map(c => {
@@ -1698,9 +1698,9 @@ export default function StarChart({
                           if (e.key === ' ')     { e.preventDefault(); e.stopPropagation(); selectConcept(c.id) }
                         }}
                       >
-                        {/* Wide touch / pointer target — sibling of body, NOT counter-scaled (stays large at zoom) */}
+                        {/* Wide touch / pointer target – sibling of body, NOT counter-scaled (stays large at zoom) */}
                         <circle cx={cx} cy={cy} r={isMobile ? 22 : 14} fill="transparent"/>
-                        {/* Marker body — counter-scaled in applyZoom around (cx,cy) */}
+                        {/* Marker body – counter-scaled in applyZoom around (cx,cy) */}
                         <g
                           data-cx={cx}
                           data-cy={cy}
@@ -1799,7 +1799,7 @@ export default function StarChart({
                 })}
               </g>
 
-              {/* School name labels — only visible in school mode */}
+              {/* School name labels – only visible in school mode */}
               <g className="sc-schoollabels" pointerEvents="none">
                 {activeSchoolLayout.present
                   .filter(sid => visibleSchoolIds.has(sid))
@@ -1834,7 +1834,7 @@ export default function StarChart({
             </svg>
           </div>
 
-          {/* ── Zoom controls — desktop only; mobile uses pinch ── */}
+          {/* ── Zoom controls – desktop only; mobile uses pinch ── */}
           {!isMobile && <div
             data-nopan
             style={{
@@ -1847,7 +1847,7 @@ export default function StarChart({
             <ZoomButton label="Zurücksetzen" icon="⟲"  onClick={e => { e.stopPropagation(); zoomReset() }} small/>
           </div>}
 
-          {/* ── Desktop cartouche — hidden on mobile (replaced by bottom-sheet) ── */}
+          {/* ── Desktop cartouche – hidden on mobile (replaced by bottom-sheet) ── */}
           {!isMobile && (selectedThinker || selectedConcept) && (
             <aside
               data-nopan
@@ -1884,7 +1884,7 @@ export default function StarChart({
           )}
         </div>
 
-        {/* ── Legend / counter — below the plate ── */}
+        {/* ── Legend / counter – below the plate ── */}
         <div style={{
           display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between',
           flexWrap: 'wrap', gap: '6px 18px', padding: '10px 2px 2px',
@@ -1894,7 +1894,7 @@ export default function StarChart({
               ? `${visibleCount} von ${totalThinkers} Sternen sichtbar · ${hiddenCount} im Dunst`
               : `Alle ${totalThinkers} Sterne sichtbar`}
           </div>
-          {/* Konzept-Typ-Legende — nur im Karte-Modus (Schulen-Modus zeigt keine Konzepte) */}
+          {/* Konzept-Typ-Legende – nur im Karte-Modus (Schulen-Modus zeigt keine Konzepte) */}
           {mode === 'axis' && (
             <div className="sc-typelegend">
               <button
@@ -1935,7 +1935,7 @@ export default function StarChart({
         <>
           <div className="sc-sheet-scrim" data-closing={sheetClosing || undefined} onClick={deselect} aria-hidden />
           <div className="sc-sheet" data-closing={sheetClosing || undefined} role="dialog" aria-label={selectedThinker ? selectedThinker.name : selectedConcept?.name} onClick={e => e.stopPropagation()}>
-            {/* Drag handle — fixed at top, not scrolled */}
+            {/* Drag handle – fixed at top, not scrolled */}
             <div style={{ flex: '0 0 auto', display: 'flex', justifyContent: 'center', padding: '10px 0 4px' }}>
               <div style={{ width: 36, height: 4, borderRadius: 2, background: 'var(--hairline-strong)' }} />
             </div>
@@ -2070,16 +2070,16 @@ function CartoucheContent({
           ✕
         </button>
       </div>
-      {/* Scroll wrapper — desktop: maxHeight caps everything below header; sheet: outer handles it */}
+      {/* Scroll wrapper – desktop: maxHeight caps everything below header; sheet: outer handles it */}
       <div data-sc-cart-scroll style={isSheet ? {} : { maxHeight: 340, overflowY: 'auto' as const }}>
       {/* Body */}
       <div style={{ padding: '13px 14px 12px', fontSize: 13, lineHeight: 1.62, color: 'var(--fg-muted)' }}>
         {selectedContent
           ? <Annotated text={selectedContent} level={levelId}/>
-          : <span style={{ color: 'var(--fg-dim)', fontStyle: 'italic' }}>—</span>
+          : <span style={{ color: 'var(--fg-dim)', fontStyle: 'italic' }}>–</span>
         }
       </div>
-      {/* Anchored concepts — accordion */}
+      {/* Anchored concepts – accordion */}
       {anchoredConcepts.length > 0 && (
         <div style={{ borderTop: '2px solid var(--hairline-strong)' }}>
           <button

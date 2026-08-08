@@ -1,7 +1,7 @@
 'use client'
 
 /*
- * HeroTableau — lebendige Tableau-Miniatur für die Landing Page.
+ * HeroTableau – lebendige Tableau-Miniatur für die Landing Page.
  * Läuft den Komplexitäts-Level langsam von Minimum → Maximum (Loop) und füllt
  * dabei das Quadranten-Feld Band für Band. Macht die Kernmechanik sichtbar,
  * statt sie nur zu behaupten. Pausiert bei Hover, respektiert prefers-reduced-motion.
@@ -127,7 +127,7 @@ export default function HeroTableau({
         })}
       </svg>
 
-      {/* Mini-Slider — die Mechanik sichtbar gemacht */}
+      {/* Mini-Slider – die Mechanik sichtbar gemacht */}
       <div className="flex flex-col gap-2">
         <div className="relative flex h-3 items-center">
           <span className="absolute inset-x-0 h-px" style={{ background: 'var(--hairline-strong)' }} />

@@ -56,7 +56,7 @@ export function getTopic(id: string): TopicData | null {
 // Schlanker TopicData-Abzug für die selbstspielende Landing-Sternkarte.
 // Geometrie und Versions-SCHLÜSSEL bleiben erhalten (Sichtbarkeit,
 // isNew/isDeepened und Linien pro Level bleiben identisch), die Texte
-// werden durch ein Leerzeichen ersetzt — sie machen ~85% des Payloads aus.
+// werden durch ein Leerzeichen ersetzt – sie machen ~85% des Payloads aus.
 // Die Volltexte holt LandingStarChart lazy über /api/landing-topic,
 // bevor die Tour startet (gleiches Muster wie der Suchindex).
 
