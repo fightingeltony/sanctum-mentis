@@ -41,6 +41,8 @@ Diese Wahl ist kein Nebenschalter, sie ist der erste philosophische Akt. Und sie
 
 Damit das Werkzeug lehrt und nicht nur schmeichelt, muss es im Erschütterungs-Modus auch **Medaillen zeigen, die der Nutzer übersehen hat** – nicht nur die bestätigen, die er selbst setzt. Sonst ist es ein Spiegel, der schmeichelt (bestätigt Vorannahmen), statt einer, der überrascht ("hier *ist* ein Widerspruch, den ich nicht sehen wollte"). Wie genau das Werkzeug *führt, ohne zu verraten* – den Blick schärft, ohne die Antwort vorzugeben – ist die zentrale ungelöste Design-Frage. Sie ist kuratorisch, nicht technisch.
 
+*Festgehalten (14.8.26, bestätigter Entscheid):* Im Tisch-Beta heisst das der Knopf «Was übersehe ich?» – und er wohnt bewusst **nur in der Erschütterung**. Die Ruhe stört nicht ungefragt; wer die Zumutung will, wählt sie. Seit dem Haltungswechsel am Tisch steht der Weg dorthin auch dem Ruhe-Nutzer jederzeit offen.
+
 ## Geschlossen im Bau, unendlich im Erleben
 
 Der frühere Reiz "unendlich wachsender Baum" war der falsche – das automatisch Wachsende wäre gerade der hohle Teil. Die bessere Auflösung: Das Werkzeug darf **geschlossen** sein (endliche, kuratierte, prüfbare Karten und von Hand gesetzte mögliche Medaillen-Stellen – so gut wie eine fertige Lectio) und ist trotzdem **jedes Mal neu im Erleben**, weil die Haltung, mit der der Nutzer eintritt, sich ändert. Das Wachsende ist nicht im System – es ist im Menschen, der sich ändert.
