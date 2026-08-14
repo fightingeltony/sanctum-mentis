@@ -44,7 +44,7 @@ export interface Level {
   id: number;
   label: string;       // "Einstieg", "Vertiefung", "Synthese", …
   short: string;       // "L1", "L2", …
-  filled: boolean;
+  filled?: boolean;    // wird aus den Daten berechnet (levelsWithFilled) – im JSON nicht pflegen
   description?: string;
 }
 

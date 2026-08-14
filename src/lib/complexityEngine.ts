@@ -72,6 +72,26 @@ export function computeLevelState(data: TopicData, levelId: number): LevelState 
   return { level, thinkers, influences, concepts, context };
 }
 
+/**
+ * Level mit berechnetem `filled`: Eine Stufe gilt als ausgearbeitet, wenn
+ * irgendein Inhalt (Denker, Konzept, Einfluss) auf genau dieser Stufe
+ * einsetzt oder eine neue Version trägt. Das JSON-Feld `filled` wird nicht
+ * gepflegt (Stand 8/26: überall false oder fehlend) und darum ignoriert.
+ */
+export function levelsWithFilled(data: TopicData): Level[] {
+  const authored = new Set<number>();
+  const collect = (items: Versioned[]) => {
+    for (const item of items) {
+      authored.add(item.firstLevel);
+      for (const k of Object.keys(item.versions)) authored.add(Number(k));
+    }
+  };
+  collect(data.thinkers);
+  collect(data.concepts);
+  collect(data.influences);
+  return data.levels.map(l => ({ ...l, filled: authored.has(l.id) }));
+}
+
 /** Anzahl noch nicht freigeschalteter Konzepte. */
 export function getHiddenConceptsCount(data: TopicData, level: number): number {
   return data.concepts.filter(c => !isVisible(c, level)).length;

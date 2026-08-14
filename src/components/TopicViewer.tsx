@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import type { TopicData, LectioSummary } from '@/lib/types'
-import { computeLevelState } from '@/lib/complexityEngine'
+import { computeLevelState, levelsWithFilled } from '@/lib/complexityEngine'
 import LevelSlider from './LevelSlider'
 import ThinkerList from './ThinkerList'
 import StarChart from './StarChart'
@@ -99,6 +99,7 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
   }, [menuOpen])
 
   const state = useMemo(() => computeLevelState(data, levelId), [data, levelId])
+  const levels = useMemo(() => levelsWithFilled(data), [data])
 
   const tabs: { id: Tab; label: string; mobileLabel: string; numeral: string; count: number | null }[] = [
     { id: 'denker',     label: 'Denker',    mobileLabel: 'Denker', numeral: 'I',  count: state.thinkers.length },
@@ -215,7 +216,7 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
           <div>
             <p className="section-label mb-4">Komplexitäts-Level</p>
             <LevelSlider
-              levels={data.levels}
+              levels={levels}
               value={levelId}
               onChange={handleLevelChange}
             />
@@ -383,8 +384,13 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
       {/* ── Mobile bottom bar ── */}
       <div className="bottom-tab-bar">
         <div className="slider-strip">
-          <span className="font-display text-[10px] tracking-[0.14em] text-gold shrink-0 w-[5.5rem]">
-            {state.level.label}
+          <span className="flex flex-col shrink-0 w-[5.5rem]">
+            <span className="font-ui text-[8.5px] tracking-[0.12em] text-fg-dim">
+              Komplexität
+            </span>
+            <span className="font-display text-[10px] tracking-[0.14em] text-gold">
+              {state.level.label}
+            </span>
           </span>
           <input
             type="range"

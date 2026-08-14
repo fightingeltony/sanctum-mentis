@@ -1891,7 +1891,7 @@ export default function StarChart({
         }}>
           <div style={{ fontStyle: 'italic', fontSize: 11, color: 'var(--fg-dim)', paddingTop: 4 }}>
             {hiddenCount > 0
-              ? `${visibleCount} von ${totalThinkers} Sternen sichtbar · ${hiddenCount} im Dunst`
+              ? `${visibleCount} von ${totalThinkers} Sternen sichtbar · ${hiddenCount} im Dunst – höhere Komplexität holt sie hervor`
               : `Alle ${totalThinkers} Sterne sichtbar`}
           </div>
           {/* Konzept-Typ-Legende – nur im Karte-Modus (Schulen-Modus zeigt keine Konzepte) */}
