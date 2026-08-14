@@ -110,8 +110,8 @@ Erstbesucher-Durchgang (mobil, nur Live-Oberfläche) durch Landing → Bibliothe
 **EA-C · „Lectio" vs. „Geführte Pfade" angleichen**
 ✅ **GEKLÄRT 2026-06-17 (mitbeantwortet durch EA-A):** Lectio bleibt Eigenname, wird auf der Landing bei erster Begegnung eingeführt. „Geführte Pfade" in `TopicViewer.tsx:239` ist eine beschreibende Überschrift für die Lectio-Liste im Tableau – kein Widerspruch, kein Änderungsbedarf.
 
-**EA-B · Lebensfragen-Zugang** – 🟡 **TEILERLEDIGT**
-✅ Kleiner Fix erledigt 2026-07-03: Nav-Link „Lebensfragen" im Header neben „Tableaus" und „Lectios" (`src/app/(shell)/layout.tsx`). Grössere Frage bleibt offen: Navigationsrang der Lebensfragen (Haupteingang?). Entscheidung ausständig.
+**EA-B · Lebensfragen-Zugang** – ✅ **ERLEDIGT (entschieden 2026-08-14)**
+✅ Kleiner Fix erledigt 2026-07-03: Nav-Link „Lebensfragen" im Header neben „Tableaus" und „Lectios" (`src/app/(shell)/layout.tsx`). Navigationsrang entschieden 2026-08-14: bleibt wie ist (Nav-Eintrag + Landing-Karte), kein Haupteingang-Ausbau. Im selben Entscheid: Lectios bleiben Top-Level als Zugangs-Schaufenster – Kanon-Nachtrag in `kanon.md` (Lectio-Abschnitt), Herkunfts-Tableau auf den `/lectios`-Karten ergänzt.
 
 **EA-D · Lebensfrage vs. Lectio unterscheidbarer** – 🟢 **OFFEN / Niedrig**
 Herkunftszeile pro Stimme andeuten („Buddhismus · aus Das Selbst"). Kuratorisch, kein Muss.
@@ -123,7 +123,7 @@ Herkunftszeile pro Stimme andeuten („Buddhismus · aus Das Selbst"). Kuratoris
 1. ~~**H1 + H2**~~ ✅ erledigt 2026-06-16
 2. ~~**H3**~~ ✅ erledigt 2026-06-16
 3. ~~**EA-A + EA-C + Sofort-Fixes**~~ ✅ erledigt 2026-06-17
-4. **EA-B** – ~~Lebensfragen ins Header-Menü (kleiner Fix)~~ ✅ erledigt 2026-07-03 · Navigationsrang-Entscheidung offen.
+4. ~~**EA-B**~~ ✅ erledigt: Header-Menü 2026-07-03, Navigationsrang-Entscheidung 2026-08-14 (bleibt wie ist).
 5. **M2** – Lectio-Doku-Stapel aufräumen (Archiv-Ordner), ~10 Verweise umbiegen.
 6. **M1** – Schools-Konvention als bewusste Entscheidung klären (nachschärfen vs. `topic.meta` füllen).
 7. **EA-D, N1–N3** – Hygiene, wenn Zeit ist.

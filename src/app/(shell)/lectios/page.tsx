@@ -15,7 +15,7 @@ const SPUR_ORDER: Spur[] = ['erkenntnis', 'handlung', 'existenz', 'wandlung', 'm
 interface SpurGroup {
   spur: Spur
   color: string
-  items: LectioSummary[]
+  items: (LectioSummary & { tableauTitle: string })[]
 }
 
 function groupLectiosBySpur(): SpurGroup[] {
@@ -25,7 +25,9 @@ function groupLectiosBySpur(): SpurGroup[] {
       return {
         spur,
         color: tableaus[0]?.themeColor ?? 'var(--accent)',
-        items: tableaus.flatMap(t => getLectiosByTableauId(t.id)),
+        items: tableaus.flatMap(t =>
+          getLectiosByTableauId(t.id).map(l => ({ ...l, tableauTitle: t.title }))
+        ),
       }
     })
     .filter(group => group.items.length > 0)
@@ -81,9 +83,14 @@ export default function PfadePage() {
                     >
                       →
                     </span>
-                    <span className="font-prose text-[16px] md:text-[17px] leading-snug text-fg
-                      transition-colors group-hover:text-accent">
-                      {l.title}
+                    <span className="min-w-0">
+                      <span className="block font-prose text-[16px] md:text-[17px] leading-snug text-fg
+                        transition-colors group-hover:text-accent">
+                        {l.title}
+                      </span>
+                      <span className="block font-ui text-[10.5px] tracking-[0.04em] text-fg-faint mt-0.5">
+                        aus {l.tableauTitle}
+                      </span>
                     </span>
                   </span>
                   <span className="font-ui text-[11px] text-fg-faint shrink-0">

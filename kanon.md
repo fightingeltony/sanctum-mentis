@@ -2,7 +2,7 @@
 
 **Zweck:** Das Selbstverständnis von Sanctum – *warum* die Bibliothek so ist, wie sie ist. Nicht *wie* man baut (das steht in `lectio-anleitung.md` und den Bau-Anleitungen), nicht *welche Felder* es gibt (das steht in `schema-referenz.md`), sondern die Haltung darunter. Dies ist der Ort, an dem die Grundhaltung wohnt, die bisher mehrfach in Prüf-Prompts eingebettet lag.
 
-**Stand:** 2026-06-17
+**Stand:** 2026-08-14 (Kern 2026-06-17; Nachtrag Lectio-Schaufenster)
 
 ---
 
@@ -98,6 +98,8 @@ Die Lectio ist eine **kuratierte Sequenz innerhalb eines einzigen Tableaus.** Si
 - **Wohnort:** *im* Tableau (Discovery im Tableau-Kopf, Route `/lectio/[id]`). **Nicht** als eigene Top-Level-Form in der Bibliothek sichtbar.
 - **Achse:** Tiefe. Sie fragt nicht „was sagen andere Felder dazu", sondern „wie hängt dieses eine Feld in sich zusammen".
 
+*Nachtrag (2026-08-14):* Es gibt ein Sammel-Schaufenster `/lectios` samt Nav-Eintrag – entstanden am 2.7.26 als Auffindbarkeits-Entscheid (eine Frage wählen, ohne das Fachgebiet zu raten). Das Schaufenster ist ein **Zugang, kein Wohnort**: Jede Karte dort nennt ihr Herkunfts-Tableau, und die Lectio bleibt Ausschnitt ihres einen Feldes. Der Satz oben gilt weiter für die *Form* – die Bibliothek stellt Tableaus aus, nicht Lectios; das Schaufenster ist eine Tür, kein Regal.
+
 ### Lebensfrage – Breite *über* Felder
 
 Die Lebensfrage ist eine **kuratierte Sammlung quer über mehrere Tableaus.** Sie nimmt eine gelebte Situation („Was tue ich mit Schmerz?", „Wie stelle ich mich zum Tod?") und versammelt dazu Stimmen aus verschiedenen Feldern – horizontal, eine Lebenslage aus mehreren Blickwinkeln beleuchtet.
@@ -111,7 +113,7 @@ Die Lebensfrage ist eine **kuratierte Sammlung quer über mehrere Tableaus.** Si
 | Form | Reichweite | Achse | Wohnort | sichtbar als |
 |---|---|---|---|---|
 | **Tableau** | ein Feld, ganz | Fläche | Bibliothek | Library-Card |
-| **Lectio** | Ausschnitt *eines* Feldes | Tiefe (vertikal) | *im* Tableau | Discovery im Tableau-Kopf |
+| **Lectio** | Ausschnitt *eines* Feldes | Tiefe (vertikal) | *im* Tableau | Discovery im Tableau-Kopf · Schaufenster `/lectios` |
 | **Lebensfrage** | Ausschnitt *über* Felder | Breite (horizontal) | *neben* der Bibliothek | eigener Bereich |
 
 Lectio ist **Tiefe in einem Feld**, Lebensfrage ist **Breite über Felder**, Tableau ist die **Fläche, aus der beide schöpfen.** Diese drei Sätze sind die kürzeste tragfähige Fassung des Kanons.
