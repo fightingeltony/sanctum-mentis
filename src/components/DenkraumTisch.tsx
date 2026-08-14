@@ -270,14 +270,17 @@ export default function DenkraumTisch({ denkraum }: Props) {
             const [a, b] = panel.key.split('|')
             const ka = karteByKnoten.get(a), kb = karteByKnoten.get(b)
             const stelle = stelleByKey.get(panel.key)
+            const istUebersehen = !stelle && panel.key === uebersehenKey
             if (!ka || !kb) return null
             return (
               <>
-                <p className="p-eyebrow">Eine Verbindung</p>
+                <p className="p-eyebrow">{istUebersehen ? 'Die übersehene Verbindung' : 'Eine Verbindung'}</p>
                 <h2 className="serif p-name">{ka.name} <span className="gegen">↔</span> {kb.name}</h2>
                 {stelle
                   ? <p className="p-text">{stelle.reibung}</p>
-                  : <p className="p-text kursiv">{denkraum.hinweis_unkuratiert}</p>
+                  : istUebersehen
+                    ? <p className="p-text">{denkraum.uebersehen.text}</p>
+                    : <p className="p-text kursiv">{denkraum.hinweis_unkuratiert}</p>
                 }
                 {bilderErklaeren && (
                   <p className="p-bilder">
@@ -311,6 +314,13 @@ export default function DenkraumTisch({ denkraum }: Props) {
                 {stelle && wahl !== 'offen' && (
                   <p className="p-text antwort" key={`${panel.key}-${wahl}-${h}`}>
                     {stelle.antwort[wahl][h]}
+                  </p>
+                )}
+                {!stelle && wahl !== 'offen' && (
+                  <p className="p-text antwort kursiv" key={`${panel.key}-${wahl}`}>
+                    {wahl === 'landkarte'
+                      ? 'Festgehalten als Landkarte: Für dich reden die beiden über Verschiedenes.'
+                      : 'Festgehalten als Medaille: Für dich bleibt der Widerspruch stehen.'}
                   </p>
                 )}
                 <button className="loesen" onClick={() => loeseVerbindung(panel.key)}>
@@ -349,7 +359,7 @@ export default function DenkraumTisch({ denkraum }: Props) {
           )}
 
           <div className="p-fuss">
-            {haltung === 'erschuetterung' && panel.typ !== 'uebersehen' && (
+            {haltung === 'erschuetterung' && panel.typ !== 'uebersehen' && !uebersehenGezogen && (
               <button className="fuss-btn" onClick={zeigeUebersehen}>
                 Was übersehe ich?
               </button>
@@ -359,6 +369,9 @@ export default function DenkraumTisch({ denkraum }: Props) {
                 ◦ Zurück zum Stand
               </button>
             )}
+            <button className="fuss-btn" onClick={() => { setArmed(null); setPhase('haltung') }}>
+              ◦ Haltung wechseln
+            </button>
           </div>
         </aside>
 
