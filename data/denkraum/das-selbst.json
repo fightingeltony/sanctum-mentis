@@ -9,7 +9,7 @@
   },
   "entwurf": true,
   "verortung": {
-    "intro": "Sechs Stimmen liegen hier auf dem Tisch. Aber zuerst antwortest du.",
+    "intro": "Sieben Stimmen liegen hier auf dem Tisch. Aber zuerst antwortest du.",
     "frage": "Bin ich ein Kern, den ich freilegen kann – oder ein Muster, das ich gerade bin?",
     "optionen": [
       {
@@ -29,10 +29,10 @@
         "label": "Ich finde keinen festen Kern.",
         "echo": "Wenn ich hinschaue, finde ich Gedanken und Gefühle – aber keinen, dem sie gehören.",
         "x": 72, "y": 32,
-        "naehe": ["buddhismus", "metzinger"],
+        "naehe": ["buddhismus", "metzinger", "barrett"],
         "reibung_mit": ["vedanta", "jung"],
         "spiegel": {
-          "ruhe": "Du stehst beim Strom – Buddhismus und Metzinger stehen dir bei: kein Kern, nur Bewegung, und das ist keine Verlustmeldung. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert.",
+          "ruhe": "Du stehst beim Strom – Buddhismus, Metzinger und Barrett stehen dir bei: kein Kern, nur Bewegung, und das ist keine Verlustmeldung. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert.",
           "erschuetterung": "Du stehst beim Strom – und die Gegenseite fragt, wen du da eigentlich übersiehst. Das Vedanta würde sagen: Irgendwer bemerkt doch gerade den Strom. Zieh eine Verbindung zu denen, die dir widersprechen – oder weich ihnen aus, das sagt auch etwas."
         }
       },
@@ -76,7 +76,7 @@
   "regionen": [
     { "label": "der Kern", "x": 42, "y": 5, "hint": "Die Stimmen hier sagen: In dir ist etwas Bleibendes – du musst es nicht machen, nur finden." },
     { "label": "der Strom", "x": 84, "y": 34, "hint": "Die Stimmen hier sagen: Es gibt keinen festen Kern – du bist Bewegung, und das ist keine schlechte Nachricht." },
-    { "label": "das Werden", "x": 44, "y": 90, "hint": "Die Stimmen hier sagen: Das Selbst wächst – in Beziehungen, Krisen, Therapie." },
+    { "label": "das Werden", "x": 20, "y": 94, "hint": "Die Stimmen hier sagen: Das Selbst wächst – in Beziehungen, Krisen, Therapie." },
     { "label": "die Vermessung", "x": 78, "y": 92, "hint": "Hier vermisst die Wissenschaft das Selbst – und findet ein Modell im Gehirn, keinen Kern." }
   ],
   "karten": [
@@ -85,7 +85,8 @@
     { "knoten": "ifs",        "x": 28, "y": 38, "farbe": "oklch(0.42 0.10 230)", "these": "Du bist viele Teile – und etwas, das sie halten kann" },
     { "knoten": "jung",       "x": 32, "y": 62, "farbe": "oklch(0.42 0.12 135)", "these": "Etwas in dir will ganz werden – in Träumen und Krisen meldet es sich" },
     { "knoten": "rogers",     "x": 14, "y": 84, "farbe": "oklch(0.43 0.10 195)", "these": "In dir arbeitet ein Zug zum Wachsen – wenn du ihn lässt" },
-    { "knoten": "metzinger",  "x": 74, "y": 70, "farbe": "oklch(0.40 0.10 240)", "these": "Dein Ich ist ein Modell deines Gehirns – täuschend echt" }
+    { "knoten": "metzinger",  "x": 74, "y": 70, "farbe": "oklch(0.40 0.10 240)", "these": "Dein Ich ist ein Modell deines Gehirns – täuschend echt" },
+    { "knoten": "barrett",    "x": 48, "y": 90, "farbe": "oklch(0.41 0.11 265)", "these": "Dein Gehirn konstruiert dein Erleben – Moment für Moment" }
   ],
   "stellen": [
     {

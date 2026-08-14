@@ -17,7 +17,7 @@ Fable (Claude Code) spielt die Liste dann mechanisch ein. Nicht Genanntes bleibt
 
 ## Was dieser Tisch ist (Kontext in fünf Sätzen)
 
-Der zweite Denkraum-Tisch – diesmal nicht aus einer Lebensfrage, sondern direkt aus dem Tableau «Die Landkarte des Selbst» gespeist. Zuerst beantwortet der Nutzer die Frage des Tableaus selbst (Verortung, vier Ich-Antworten) und wählt eine Haltung (Ruhe = sehen, wer neben ihm steht / Erschütterung = sehen, wer ihm widerspricht). Dann liegt der Tisch vor ihm: sechs Denker als Karten, an ihren echten Sternkarten-Positionen, er selbst als Marker mitten darunter. Er tippt zwei Denker an, zieht eine Verbindung und entscheidet: **Landkarte** (verschiedene Ebenen, die Spannung klärt sich) oder **Medaille** (ein echter Widerspruch, er bleibt). Die Denker-Texte selbst kommen aus dem Tableau und sind hier NICHT enthalten – kuratiert sind die Rahmen-, Stand- und Stellen-Texte unten.
+Der zweite Denkraum-Tisch – diesmal nicht aus einer Lebensfrage, sondern direkt aus dem Tableau «Die Landkarte des Selbst» gespeist. Zuerst beantwortet der Nutzer die Frage des Tableaus selbst (Verortung, vier Ich-Antworten) und wählt eine Haltung (Ruhe = sehen, wer neben ihm steht / Erschütterung = sehen, wer ihm widerspricht). Dann liegt der Tisch vor ihm: sieben Denker als Karten, an ihren echten Sternkarten-Positionen, er selbst als Marker mitten darunter. Er tippt zwei Denker an, zieht eine Verbindung und entscheidet: **Landkarte** (verschiedene Ebenen, die Spannung klärt sich) oder **Medaille** (ein echter Widerspruch, er bleibt). Die Denker-Texte selbst kommen aus dem Tableau und sind hier NICHT enthalten – kuratiert sind die Rahmen-, Stand- und Stellen-Texte unten.
 
 Grundhaltung (kanon.md): ausstellen und spiegeln, nie verkünden. Das Werkzeug behauptet keine Widersprüche – es fragt.
 
@@ -45,7 +45,7 @@ Der erste Bildschirm. `label` = die kurze Ich-Antwort auf der Karte, `echo` = de
 | Adresse | Ort | Aktueller Text |
 |---|---|---|
 | **T1** | Seitentitel (Serif, gross) | Die Landkarte des Selbst |
-| **V1** | Einleitungszeile | Sechs Stimmen liegen hier auf dem Tisch. Aber zuerst antwortest du. |
+| **V1** | Einleitungszeile | Sieben Stimmen liegen hier auf dem Tisch. Aber zuerst antwortest du. |
 | **V2** | Die Frage selbst (Serif) | Bin ich ein Kern, den ich freilegen kann – oder ein Muster, das ich gerade bin? |
 | **O1.label** | Antwort-Karte 1 (Kern) | Da ist etwas, das bleibt. |
 | **O1.echo** | darunter | So vieles hat sich verändert, seit ich denken kann – und trotzdem erkenne ich mich wieder. |
@@ -75,7 +75,7 @@ Je Verortung × Haltung. Ruhe benennt die Nachbarn, Erschütterung die Widerspre
 |---|---|---|
 | **S1.ruhe** | Kern · Ruhe | Du stehst beim bleibenden Kern – das Vedanta ist dein Nachbar: Den stillen Zeugen in dir musst du nicht herstellen, nur wiederfinden. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert. |
 | **S1.ersch** | Kern · Erschütterung | Du stehst beim bleibenden Kern – und zwei Stimmen auf diesem Tisch halten genau das für eine Täuschung. Der Buddhismus würde fragen: Hast du diesen Kern je gefunden – oder nur das Gefühl, es müsse ihn geben? Zieh eine Verbindung zu denen, die dir widersprechen – oder weich ihnen aus, das sagt auch etwas. |
-| **S2.ruhe** | Strom · Ruhe | Du stehst beim Strom – Buddhismus und Metzinger stehen dir bei: kein Kern, nur Bewegung, und das ist keine Verlustmeldung. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert. |
+| **S2.ruhe** | Strom · Ruhe | Du stehst beim Strom – Buddhismus, Metzinger und Barrett stehen dir bei: kein Kern, nur Bewegung, und das ist keine Verlustmeldung. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert. |
 | **S2.ersch** | Strom · Erschütterung | Du stehst beim Strom – und die Gegenseite fragt, wen du da eigentlich übersiehst. Das Vedanta würde sagen: Irgendwer bemerkt doch gerade den Strom. Zieh eine Verbindung zu denen, die dir widersprechen – oder weich ihnen aus, das sagt auch etwas. |
 | **S3.ruhe** | Werden · Ruhe | Du stehst beim Werden – Jung und Rogers stehen neben dir: Das Selbst ist kein Fund, sondern ein Wachsen, und es hat eine Richtung. Sieh dich um, und zieh eine Verbindung, wo es dich interessiert. |
 | **S3.ersch** | Werden · Erschütterung | Du stehst beim Werden – und zwei Stimmen fragen, wer da eigentlich wächst. Metzinger würde sagen: Dein Werden ist ein Modell, das sich selbst fortschreibt. Zieh eine Verbindung zu denen, die dir widersprechen – oder weich ihnen aus, das sagt auch etwas. |
@@ -96,6 +96,7 @@ Je Verortung × Haltung. Ruhe benennt die Nachbarn, Erschütterung die Widerspre
 | **K4** | These-Zeile Jung | Etwas in dir will ganz werden – in Träumen und Krisen meldet es sich |
 | **K5** | These-Zeile Rogers | In dir arbeitet ein Zug zum Wachsen – wenn du ihn lässt |
 | **K6** | These-Zeile Metzinger | Dein Ich ist ein Modell deines Gehirns – täuschend echt |
+| **K7** | These-Zeile Barrett | Dein Gehirn konstruiert dein Erleben – Moment für Moment |
 
 ## Block 5 · Die drei kuratierten Stellen
 
@@ -143,4 +144,4 @@ Adressen: **ST1** = Vedanta↔Buddhismus (zeuge-oder-stille), **ST2** = Jung↔M
 
 ---
 
-*Nicht Teil dieser Übergabe: die sechs Denker-Texte selbst (sie kommen aus dem committeten Tableau das-selbst – lectio_brief bzw. Stufe 3) und die geteilten UI-Mikrotexte (U1–U16 im ersten Textbuch).*
+*Nicht Teil dieser Übergabe: die sieben Denker-Texte selbst (sie kommen aus dem committeten Tableau das-selbst – lectio_brief bzw. Stufe 3) und die geteilten UI-Mikrotexte (U1–U16 im ersten Textbuch).*
