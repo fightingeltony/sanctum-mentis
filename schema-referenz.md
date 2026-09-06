@@ -368,7 +368,7 @@ Nirgends ausserhalb von `types.ts` dokumentiert.
 | `ueberschrift` | `string` | ✓ | Kurze Überschrift der Stimme, z. B. `"Buddhismus: Schmerz und Leid sind nicht dasselbe"` |
 | `text` | `string` | ✓ | Stimmen-Text; **zur Lebensfrage hin neu geschrieben** – kein Copy-Paste aus `versions`; keine `[[Annotationen]]` |
 
-**Nicht Vitest-geprüft:** Lebensfragen-Daten werden von keiner Vitest-Regel geprüft.
+**Vitest-geprüft:** `aus.tableau`/`aus.knoten` müssen existieren, `kuratiert_aus_tableaus` muss den genutzten Tableaus entsprechen (Regel 20).
 
 ---
 
@@ -418,8 +418,25 @@ Datei: `src/lib/__tests__/data-validation.test.ts`
 | 7 | `Concept.primaryThinker` ist nicht-leerer String | primaryThinker gesetzt, aber kein String oder leer |
 | 8 | Legacy-Feld `brief` in `LectioStep` | Irgendeine Station hat `'brief' in step` (statt `step_brief`) |
 | 9 | `closing_kernel`-Überblick | informativ, schlägt nie fehl – zeigt welche Lectios closing_kernel gesetzt haben |
+| 10 | Registrierungs-Parität Lectios | Datei in `data/lectio/` ohne LECTIOS-Eintrag oder umgekehrt |
 
-**Nicht geprüft:** Lebensfragen-Daten, `school.cluster`, `labelOffset`, Koordinaten-Plausibilität, Schulen-Konvention (Ein-Denker-Schulen), `firstLevel`-Stufungs-Regel für Influences.
+Datei: `src/lib/__tests__/data-integrity.test.ts` (seit 6.9.26)
+
+| Regel | Was wird geprüft | Schlägt fehl wenn |
+|---|---|---|
+| 11 | Typografie-Norm in allen Datenstrings (ausser `image_prompt`) | Geviertstrich `—` oder `ß` |
+| 12 | Tableau-Struktur | `topic.id` ≠ Dateiname · doppelte IDs je Sammlung oder Denker ∩ Konzepte · unbekannte `schoolId` · `firstLevel`/`versions`-Schlüssel ausserhalb 1…`complexityLevels` · keine `versions[firstLevel]` · Koordinaten ausserhalb 0–100 · `levels` ≠ 1…n · `filled` im JSON |
+| 13 | `Concept.primaryThinker` zeigt auf einen Denker | weder im Tableau noch in einem `related_topics`-Tableau (Anker ausserhalb erlaubt, Entscheid 6.9.26) |
+| 14 | `Influence.from/to` sind Thinker- oder Concept-IDs | Schul-ID als Endpunkt oder Selbstbezug (Konzepte erlaubt seit 6.9.26) |
+| 15 | Annotationen `[[…]]` wohlgeformt | unbalancierte oder verschachtelte Klammern, leerer Term oder leere Definition (Parser-Logik wie `annotations.tsx`) |
+| 16 | `image_status`-Parität | `image` ohne `generiert` · `generiert` ohne `image` · `image_prompt` ohne `image` und ohne `prompt-neu` · unbekannter Wert |
+| 17 | `step_brief` nur auf Einzelknoten | Doppelstation (Array-`nodeId`) trägt `step_brief` |
+| 18 | Erzähl-Konventionen | `narrative.bridge` ≠ `transition` · `ton: gemischt` mit Station ohne `ton` |
+| 19 | Registrierungs-Parität Tableaus / Lebensfragen / Denkräume | `library.json` (available) ≠ `data/*.json` ≠ `TOPICS` · Dateien ≠ `LEBENSFRAGEN` / `DENKRAEUME` in `data.ts` |
+| 20 | Lebensfragen-Stimmen haben eine Tableau-Heimat | `aus.tableau` oder `aus.knoten` existiert nicht · `kuratiert_aus_tableaus` ≠ genutzte Tableaus |
+| 21 | Denkraum-Tisch referenziell vollständig | Quelle fehlt · Karte nicht in Quelle · Stelle/Übersehen/Verortung zeigt auf unbekannte Karte · Haltung (`ruhe`/`erschuetterung`) fehlt · Stelle doppelt kuratiert |
+
+**Nicht geprüft:** `school.cluster`, `labelOffset`, Schulen-Konvention (Ein-Denker-Schulen – kuratorische Entscheidung, siehe Audit M1), `firstLevel`-Stufungs-Regel für Influences, Modelltreue der Texte.
 
 ---
 
