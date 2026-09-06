@@ -376,6 +376,7 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
               levelId={levelId}
               levels={data.levels}
               quadrants={data.topic.quadrants}
+              topicId={data.topic.id}
             />
           </div>
         )}

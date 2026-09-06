@@ -41,6 +41,10 @@ const DASH: Record<string, string | undefined> = {
 }
 
 const RKEY = 'sanctum-stern-read'
+// Gelesen-Status pro Tableau: 29 Denker-IDs kommen in mehreren Tableaus vor
+// (aristoteles, rogers, sartre, …) – ein globaler Schlüssel würde Aristoteles
+// in Ethik als gelesen markieren, sobald man ihn in Lebenskunst geöffnet hat.
+const readKeyFor = (topicId: string) => `${RKEY}:${topicId}`
 
 const TYPE_FILTERS: Array<{
   type:       string
@@ -292,12 +296,15 @@ interface Props {
   levelId:     number
   levels:      Level[]
   quadrants:   Quadrants
+  topicId:     string          // namespaced den Gelesen-Status (Denker-IDs wiederholen sich über Tableaus)
+  readTracking?: boolean       // false → nichts in localStorage schreiben (Landing-Tour)
 }
 
 // ─── Component ────────────────────────────────────────────────
 
 export default function StarChart({
   thinkers, influences, allThinkers, schools, concepts, levelId, quadrants,
+  topicId, readTracking = true,
 }: Props) {
 
   const [mode,               setMode]             = useState<'axis' | 'school'>('axis')
@@ -472,12 +479,13 @@ export default function StarChart({
 
   // ── Load read set ─────────────────────────────────────────
   useEffect(() => {
+    if (!readTracking) return
     try {
-      const saved = JSON.parse(localStorage.getItem(RKEY) || '[]') as string[]
+      const saved = JSON.parse(localStorage.getItem(readKeyFor(topicId)) || '[]') as string[]
       // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage hydration on mount; SSR-safe pattern (no localStorage during SSR)
       setReadSet(new Set(saved))
     } catch { /* storage unavailable */ }
-  }, [])
+  }, [topicId, readTracking])
 
   // ── Imperative: update star transforms ───────────────────
   const updateStarTransforms = useCallback(() => {
@@ -612,116 +620,6 @@ export default function StarChart({
     })
   }, [thinkers, activeSchoolLayout, isMobile])
 
-  // ── Update drawnPos when thinkers/level/isMobile change ──
-  useEffect(() => {
-    const newDrawn: Record<string, Pos> = {}
-    thinkers.forEach(t => {
-      if (t.x !== undefined && t.y !== undefined) {
-        newDrawn[t.id] = {
-          x: isMobile ? mMapX(t.x) : mapX(t.x),
-          y: isMobile ? mMapY(t.y) : mapY(t.y),
-        }
-      }
-    })
-    drawnPosRef.current = newDrawn
-    // Invalidate element caches so applyZoom/updateLabelVisibility pick up new DOM elements
-    bodyElemsRef.current = {}
-    labelElemsRef.current = {}
-    conceptBodyElemsRef.current = {}
-    conceptLabelElemsRef.current = {}
-    syncPositions()
-    applyLabelSides(modeRef.current)
-    thinkers.forEach(t => {
-      const g = starGRefs.current[t.id]
-      if (g) {
-        const k = `${t.id}:${contentKeyFor(t, levelId)}`
-        g.classList.toggle('sc-unread', !readSet.has(k))
-      }
-    })
-    // Schedule visibility pass after paint (DOM must be up-to-date)
-    requestAnimationFrame(() => { updateLabelVisibility() })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [thinkers, levelId, isMobile])
-
-  // ── Re-run declutter once webfonts arrive (first visit: Marcellus swaps in
-  //    after the initial pass and shifts label metrics) ──────────────────────
-  useEffect(() => {
-    let stale = false
-    document.fonts?.ready?.then(() => {
-      if (!stale) requestAnimationFrame(() => { updateLabelVisibility() })
-    })
-    return () => { stale = true }
-  }, [])
-
-  // ── Update unread state when readSet changes ──────────────
-  useEffect(() => {
-    thinkers.forEach(t => {
-      const g = starGRefs.current[t.id]
-      if (!g) return
-      const k = `${t.id}:${contentKeyFor(t, levelId)}`
-      g.classList.toggle('sc-unread', !readSet.has(k))
-    })
-  }, [readSet, levelId, thinkers])
-
-  // ── Reset pan/zoom on breakpoint change ───────────────────
-  useEffect(() => {
-    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
-    panRef.current = { scale: 1, tx: 0, ty: 0 }
-    const camera = cameraRef.current
-    if (camera) { camera.style.transform = 'translate(0px,0px) scale(1)' }
-  }, [isMobile])
-
-  // ── Morph animation ───────────────────────────────────────
-  const morph = useCallback((to: 'axis' | 'school') => {
-    if (to === modeRef.current) return
-    cancelKinetics()
-    modeRef.current = to
-    setMode(to)
-    svgRef.current?.classList.toggle('sc-mode-school', to === 'school')
-    applyLabelSides(to)
-    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduce) { syncPositions(); requestAnimationFrame(updateLabelVisibility); return }
-    const starts:  Record<string, Pos> = {}
-    const targets: Record<string, Pos> = {}
-    thinkers.forEach(t => {
-      const cur = posRef.current[t.id]
-      if (!cur) return
-      starts[t.id] = { ...cur }
-      const drawn = drawnPosRef.current[t.id]
-      targets[t.id] = to === 'school'
-        ? (activeSchoolLayout.layout[t.id] ?? drawn ?? cur)
-        : (drawn ?? cur)
-    })
-    const dur = 820
-    const t0  = performance.now()
-    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
-    function frame(now: number) {
-      const k = Math.min(1, (now - t0) / dur)
-      const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2
-      thinkers.forEach(t => {
-        const s = starts[t.id], tg = targets[t.id]
-        if (!s || !tg) return
-        posRef.current[t.id] = { x: s.x + (tg.x - s.x) * e, y: s.y + (tg.y - s.y) * e }
-      })
-      updateStarTransforms()
-      renderEdges()
-      if (k < 1) {
-        morphRafRef.current = requestAnimationFrame(frame)
-      } else {
-        morphRafRef.current = null
-        // Morph ended – update label visibility after positions are final
-        updateLabelVisibility()
-      }
-    }
-    morphRafRef.current = requestAnimationFrame(frame)
-  }, [thinkers, activeSchoolLayout, syncPositions, applyLabelSides, updateStarTransforms, renderEdges])
-
-  // Cleanup rAF on unmount
-  useEffect(() => () => {
-    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
-    if (kineticsRaf.current)  cancelAnimationFrame(kineticsRaf.current)
-  }, [])
-
   // ── Pan / zoom ────────────────────────────────────────────
   const applyZoom = useCallback(() => {
     const ps     = panRef.current
@@ -792,6 +690,123 @@ export default function StarChart({
     })
   // applyZoom closes over thinkers for counter-scaling; recreated when thinkers changes.
   }, [thinkers])
+
+  // ── Update drawnPos when thinkers/level/isMobile change ──
+  useEffect(() => {
+    const newDrawn: Record<string, Pos> = {}
+    thinkers.forEach(t => {
+      if (t.x !== undefined && t.y !== undefined) {
+        newDrawn[t.id] = {
+          x: isMobile ? mMapX(t.x) : mapX(t.x),
+          y: isMobile ? mMapY(t.y) : mapY(t.y),
+        }
+      }
+    })
+    drawnPosRef.current = newDrawn
+    // Invalidate element caches so applyZoom/updateLabelVisibility pick up new DOM elements
+    bodyElemsRef.current = {}
+    labelElemsRef.current = {}
+    conceptBodyElemsRef.current = {}
+    conceptLabelElemsRef.current = {}
+    syncPositions()
+    // Konter-Skalierung neu setzen: neu gemountete Körper tragen sonst bei
+    // Zoom ≠ 1 keinen Transform, bestehende einen veralteten, bis zur nächsten Geste.
+    applyZoom()
+    applyLabelSides(modeRef.current)
+    thinkers.forEach(t => {
+      const g = starGRefs.current[t.id]
+      if (g) {
+        const k = `${t.id}:${contentKeyFor(t, levelId)}`
+        g.classList.toggle('sc-unread', !readSet.has(k))
+      }
+    })
+    // Schedule visibility pass after paint (DOM must be up-to-date)
+    requestAnimationFrame(() => { updateLabelVisibility() })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [thinkers, levelId, isMobile])
+
+  // ── Re-run declutter once webfonts arrive (first visit: Marcellus swaps in
+  //    after the initial pass and shifts label metrics) ──────────────────────
+  useEffect(() => {
+    let stale = false
+    document.fonts?.ready?.then(() => {
+      if (!stale) requestAnimationFrame(() => { updateLabelVisibility() })
+    })
+    return () => { stale = true }
+  }, [])
+
+  // ── Update unread state when readSet changes ──────────────
+  useEffect(() => {
+    thinkers.forEach(t => {
+      const g = starGRefs.current[t.id]
+      if (!g) return
+      const k = `${t.id}:${contentKeyFor(t, levelId)}`
+      g.classList.toggle('sc-unread', !readSet.has(k))
+    })
+  }, [readSet, levelId, thinkers])
+
+  // ── Reset pan/zoom on breakpoint change ───────────────────
+  useEffect(() => {
+    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
+    panRef.current = { scale: 1, tx: 0, ty: 0 }
+    // applyZoom statt nur Kamera-Reset: entfernt auch die Konter-Skalierung
+    // der Stern-Körper, die sonst bei Zoom 1 geschrumpft und versetzt blieben.
+    applyZoom()
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- nur beim Breakpoint-Wechsel, nicht bei jeder applyZoom-Neuerzeugung (thinkers)
+  }, [isMobile])
+
+  // ── Morph animation ───────────────────────────────────────
+  const morph = useCallback((to: 'axis' | 'school') => {
+    if (to === modeRef.current) return
+    cancelKinetics()
+    modeRef.current = to
+    setMode(to)
+    svgRef.current?.classList.toggle('sc-mode-school', to === 'school')
+    applyLabelSides(to)
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reduce) { syncPositions(); requestAnimationFrame(updateLabelVisibility); return }
+    const starts:  Record<string, Pos> = {}
+    const targets: Record<string, Pos> = {}
+    thinkers.forEach(t => {
+      const cur = posRef.current[t.id]
+      if (!cur) return
+      starts[t.id] = { ...cur }
+      const drawn = drawnPosRef.current[t.id]
+      targets[t.id] = to === 'school'
+        ? (activeSchoolLayout.layout[t.id] ?? drawn ?? cur)
+        : (drawn ?? cur)
+    })
+    const dur = 820
+    const t0  = performance.now()
+    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
+    function frame(now: number) {
+      const k = Math.min(1, (now - t0) / dur)
+      const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2
+      thinkers.forEach(t => {
+        const s = starts[t.id], tg = targets[t.id]
+        if (!s || !tg) return
+        posRef.current[t.id] = { x: s.x + (tg.x - s.x) * e, y: s.y + (tg.y - s.y) * e }
+      })
+      updateStarTransforms()
+      renderEdges()
+      if (k < 1) {
+        morphRafRef.current = requestAnimationFrame(frame)
+      } else {
+        morphRafRef.current = null
+        // Morph ended – update label visibility after positions are final
+        updateLabelVisibility()
+      }
+    }
+    morphRafRef.current = requestAnimationFrame(frame)
+  }, [thinkers, activeSchoolLayout, syncPositions, applyLabelSides, updateStarTransforms, renderEdges])
+
+  // Cleanup rAF on unmount
+  useEffect(() => () => {
+    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
+    if (kineticsRaf.current)  cancelAnimationFrame(kineticsRaf.current)
+  }, [])
+
+  // ── Pan / zoom ────────────────────────────────────────────
 
   const zoomIn    = useCallback(() => { panRef.current.scale *= 1.25; applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
   const zoomOut   = useCallback(() => { panRef.current.scale *= 0.8;  applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
@@ -1276,15 +1291,16 @@ export default function StarChart({
 
   // ── Read tracking ─────────────────────────────────────────
   const markRead = useCallback((t: Thinker) => {
+    if (!readTracking) return   // Landing-Tour: Auswahl ist kein Lesen des Nutzers
     const key = `${t.id}:${contentKeyFor(t, levelId)}`
     setReadSet(prev => {
       if (prev.has(key)) return prev
       const next = new Set(prev)
       next.add(key)
-      try { localStorage.setItem(RKEY, JSON.stringify([...next])) } catch { /* noop */ }
+      try { localStorage.setItem(readKeyFor(topicId), JSON.stringify([...next])) } catch { /* noop */ }
       return next
     })
-  }, [levelId])
+  }, [levelId, topicId, readTracking])
 
   // ── Select / deselect ─────────────────────────────────────
   const deselectNow = useCallback(() => {

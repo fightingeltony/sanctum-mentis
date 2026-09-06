@@ -388,6 +388,8 @@ export default function LandingStarChart({ data: extract }: Props) {
         levelId={levelId}
         levels={data.levels}
         quadrants={data.topic.quadrants}
+        topicId={data.topic.id}
+        readTracking={false}
       />
 
       {/* ── Steuerzeile: Slider + Level-Name + Play-Button ── */}
