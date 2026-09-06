@@ -13,6 +13,7 @@
     {
       "nodeId": "nietzsche",
       "nodeType": "thinker",
+      "image_status": "generiert",
       "image": "/lectio-images/wenn-nichts-vorgegeben/nietzsche.webp",
       "narrative": {
         "hook": "Kennst du den Moment, in dem ein Satz, der dich früher getragen hat, plötzlich hohl klingt? Du sprichst ihn noch aus, aber er trägt nichts mehr.",
@@ -28,6 +29,7 @@
     {
       "nodeId": "kierkegaard",
       "nodeType": "thinker",
+      "image_status": "generiert",
       "image": "/lectio-images/wenn-nichts-vorgegeben/kierkegaard.webp",
       "narrative": {
         "hook": "Stell dir vor, du stehst vor einer Entscheidung, die dein Leben verändert, und niemand kann sie dir abnehmen – kein Ratgeber, keine Regel, keine Stimme, die dir vorher garantiert, dass es gut ausgeht.",
@@ -43,6 +45,7 @@
     {
       "nodeId": "sartre",
       "nodeType": "thinker",
+      "image_status": "generiert",
       "image": "/lectio-images/wenn-nichts-vorgegeben/sartre.webp",
       "narrative": {
         "hook": "Du wartest manchmal insgeheim darauf, dass jemand kommt und dir sagt, was das Richtige ist. Sartre sagt: Niemand kommt.",
@@ -58,6 +61,7 @@
     {
       "nodeId": "frankl",
       "nodeType": "thinker",
+      "image_status": "generiert",
       "image": "/lectio-images/wenn-nichts-vorgegeben/frankl.webp",
       "narrative": {
         "hook": "Denk an einen Moment, in dem etwas von dir verlangt wurde – ein Mensch, der dich brauchte, eine Aufgabe, die liegen blieb, wenn du sie nicht tatest.",
@@ -73,6 +77,7 @@
     {
       "nodeId": "camus",
       "nodeType": "thinker",
+      "image_status": "generiert",
       "image": "/lectio-images/wenn-nichts-vorgegeben/camus.webp",
       "narrative": {
         "hook": "Du kennst die Tage, die einander gleichen – aufstehen, arbeiten, schlafen, und am nächsten Morgen wieder von vorn. Irgendwann meldet sich die Frage: wozu das alles eigentlich?",

@@ -13,6 +13,7 @@
     {
       "nodeId": "freud",
       "nodeType": "thinker",
+      "image_status": "generiert",
       "image": "/lectio-images/verstehen-oder-weitergehen/freud.webp",
       "narrative": {
         "hook": "Du kennst den Reflex, wenn etwas an dir nicht stimmt: ›Das muss doch irgendwo herkommen.‹ Du fängst an zu graben, als läge die Lösung dort, wo das Problem einmal begann.",
@@ -39,6 +40,7 @@
       },
       "step_brief": "Van der Kolk hat mit der Trauma-Forschung gezeigt, was Freuds Erben übersahen: Manche Wunden sitzen nicht im Gedächtnis, sondern im Körper – im Nervensystem, das in Daueralarm steht, lange nachdem der Verstand alles begriffen hat. Darum hilft Reden traumatisierten Menschen oft erstaunlich wenig. Das Trauma sitzt unterhalb der Sprache. Heilung läuft hier nicht über Einsicht, sondern über den Körper: über Atem, Bewegung, neue Erfahrungen von Sicherheit. Van der Kolk bleibt rückwärtsgewandt wie Freud – es geht noch immer um die Vergangenheit –, aber er bricht mit dem Glauben, dass Verstehen genügt.",
       "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture – no glossy render, no vector cleanness, no digital sheen. Subject: a taut, weathered rope still pulled tight long after the hand that pulled it is gone, anchored to old stone – tension held in the body of a thing, beneath any words. Generous empty space, calm but quietly strained mood. Vertical composition (portrait, roughly 4:5), the taut rope slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
+      "image_status": "prompt-neu",
       "transition": "Damit ist die erste Stimme erschüttert, aber noch nicht verlassen: Es geht weiter um das Woher, nur nicht mehr ums Verstehen. Den eigentlichen Schwenk macht erst jemand, der die Blickrichtung umdreht – weg von der Ursache, hin zum Ziel. Und das tat, früh und fast unbemerkt, ein Abtrünniger aus Freuds eigenem Kreis."
     },
     {
@@ -54,6 +56,7 @@
       },
       "step_brief": "Adler, Freuds früher Weggefährte, brach mit ihm in genau diesem Punkt. Für Adler ist der Mensch nicht von seiner Vergangenheit geschoben, sondern von Zielen gezogen. Wir fragen zu oft ›warum bin ich so geworden?‹ – und zu selten ›wohin will ich eigentlich?‹. Jeder entwickelt früh einen Lebensstil, eine Strategie, mit Minderwertigkeit umzugehen und dazuzugehören; aber dieser Stil ist auf eine Zukunft gerichtet, nicht in der Kindheit festgenagelt. Heilung heisst für Adler: erkennen, wohin man strebt, und diese Richtung auf die anderen hin öffnen. Hier kippt der Bogen – von rückwärts nach vorwärts.",
       "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture – no glossy render, no vector cleanness, no digital sheen. Subject: a single young plant on a windowsill, its whole body leaning and reaching toward an open window and the light beyond – drawn forward by what lies ahead, not pushed from behind. Generous empty space, calm and quietly forward-leaning mood. Vertical composition (portrait, roughly 4:5), the leaning plant slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
+      "image_status": "prompt-neu",
       "transition": "Adler dreht den Blick um, aber er bleibt ein Deutender – er will die Richtung noch verstehen. Die radikalste Form der zweiten Stimme verzichtet sogar darauf. Sie sagt: Du musst gar nichts mehr ausgraben, weder Ursache noch Ziel. Schaff die Bedingungen, unter denen Wachstum von selbst geschieht."
     },
     {
@@ -69,6 +72,7 @@
       },
       "step_brief": "Rogers vertraut auf eine Kraft, die in jedem Menschen wirkt: die Aktualisierungstendenz, den eingebauten Zug zu wachsen, sobald die Bedingungen stimmen – wie eine Pflanze zum Licht. Man muss den Menschen nicht aufschlüsseln oder reparieren. Man muss ihm echte Wertschätzung, Einfühlung und Ehrlichkeit entgegenbringen, und die Bewegung beginnt von selbst. Das ist die zweite Stimme in ihrer reinsten Form: nicht das Woher, nicht einmal das Wohin als Plan – sondern das Weitergehen, ermöglicht durch eine tragende Beziehung. Verstehen ist hier fast nebensächlich geworden.",
       "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum, slightly more generous and nourishing here. Muted, desaturated palette bedded in parchment warmth. Tangible texture – no glossy render, no vector cleanness, no digital sheen. Subject: a tended garden bed in soft full light, soil warm and watered, a few seedlings rising on their own – conditions made right so that growth simply happens. Generous empty space, calm and quietly trusting mood. Vertical composition (portrait, roughly 4:5), the seedlings slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
+      "image_status": "prompt-neu",
       "transition": "Von Freud bis Rogers sieht es aus wie ein sauberer Weg: von der vergrabenen Vergangenheit zur offenen Zukunft, vom Durchschauen zum Weitergehen. Man möchte den Bogen hier schliessen und sagen: Seht, die Therapie ist erwachsen geworden. Aber eine letzte Stimme tritt aus der Reihe heraus und sieht auf das Ganze – und sie macht den geraden Weg krumm."
     },
     {
@@ -84,6 +88,7 @@
       },
       "step_brief": "Prochaska und DiClemente haben nicht gefragt, welche Schule recht hat, sondern wie Veränderung überhaupt abläuft – quer durch alle Verfahren. Ihr Befund ist nüchtern: Wandlung ist kein Pfeil. Sie verläuft in Stufen – vom Noch-gar-nicht-Sehen über das ambivalente Erwägen zur Handlung und zur Aufrechterhaltung – und fast immer gehört der Rückfall dazu, nicht als Scheitern, sondern als normaler Teil der Schleife. Damit löst sich der ganze Bogen, den wir gerade gegangen sind, auf eine demütige Weise auf: Es geht nicht darum, ob du verstehst, woher es kommt, oder weisst, wohin du willst. Es geht darum, auf welcher Stufe du gerade stehst – und dass du wieder zurückfallen darfst, ohne von vorn zu beginnen.",
       "image_prompt": "Atmospheric still image for a contemplative philosophy library. Soft, warm, dim light falling from one side, like candlelight in a quiet sanctum. Muted, desaturated palette bedded in parchment warmth. Tangible texture – no glossy render, no vector cleanness, no digital sheen. Subject: a worn spiral stair of stone seen from above, circling downward and around rather than descending straight – the same turns passed more than once, progress that loops. Restrained, plain, almost diagrammatic in its quiet – sober rather than dramatic. Generous empty space, calm and matter-of-fact mood. Vertical composition (portrait, roughly 4:5), the spiral slightly off-center, holding together within a tall narrow niche. NOT illustrative, NOT a portrait, NO face, NO diagram, NO text, NO symbols that explain. It evokes an atmosphere, it does not depict a thesis. Painterly, analog, slightly grainy. Fine-art photography meets old fresco.",
+      "image_status": "prompt-neu",
       "transition": null
     }
   ],

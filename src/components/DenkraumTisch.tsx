@@ -71,13 +71,15 @@ export default function DenkraumTisch({ denkraum }: Props) {
 
   const loeseVerbindung = (key: string) => {
     setVerbindungen(v => {
-      const { [key]: _weg, ...rest } = v
+      const rest = { ...v }
+      delete rest[key]
       return rest
     })
     setPanel({ typ: 'start' })
   }
 
   const zeigeUebersehen = () => {
+    setArmed(null)
     setUebersehenAktiv(true)
     setPanel({ typ: 'uebersehen' })
   }
@@ -122,7 +124,7 @@ export default function DenkraumTisch({ denkraum }: Props) {
               <button
                 key={k}
                 className="option"
-                onClick={() => { setHaltung(k); setPhase('tisch'); setPanel({ typ: 'start' }) }}
+                onClick={() => { setHaltung(k); setUebersehenAktiv(false); setPhase('tisch'); setPanel({ typ: 'start' }) }}
               >
                 <span className="o-label">{denkraum.haltungen[k].label}</span>
                 <span className="o-echo">{denkraum.haltungen[k].untertitel}</span>

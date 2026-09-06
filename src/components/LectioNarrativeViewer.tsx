@@ -108,9 +108,26 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
       // Buttons/Links nicht kapern – sonst sind Dots, weiter/zurück und
       // der Verlassen-Link per Enter/Space unbedienbar.
       if (e.target instanceof HTMLElement && e.target.closest('a, button, input, [role="button"]')) return
-      if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+      // Scrollbare Station: Space/Pfeil-runter/-hoch scrollen zuerst den
+      // Inhalt zu Ende, bevor sie die Station wechseln (wie der Touch-Swipe).
+      // Die Station hat keinen Fokus, darum scrollen wir sie selbst.
+      const el = stationRefs.current[idx]
+      const scrollable = el ? el.scrollHeight > el.clientHeight + 6 : false
+      const atBottom = el ? el.scrollTop + el.clientHeight >= el.scrollHeight - 6 : true
+      const atTop = el ? el.scrollTop <= 0 : true
+      const scrollStation = (dy: number) =>
+        el?.scrollBy({ top: dy, behavior: reducedMotion.current ? 'auto' : 'smooth' })
+      if (e.key === 'ArrowDown' || e.key === ' ') {
+        e.preventDefault()
+        if (scrollable && !atBottom && el) scrollStation(e.key === ' ' ? el.clientHeight * 0.85 : 64)
+        else next()
+      } else if (e.key === 'ArrowRight' || e.key === 'Enter') {
         e.preventDefault(); next()
-      } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault()
+        if (scrollable && !atTop && el) scrollStation(-64)
+        else prev()
+      } else if (e.key === 'ArrowLeft') {
         e.preventDefault(); prev()
       } else if (e.key === 'Home') {
         show(0)
@@ -118,7 +135,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
     }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
-  }, [next, prev, show])
+  }, [idx, next, prev, show])
 
   // Touch-Swipe
   useEffect(() => {
@@ -139,6 +156,20 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
     }
   }, [idx, next, prev])
 
+  // Knoten-Name aus topicData; Konzepte und Schulen werden ebenfalls aufgelöst.
+  // Doppelstationen (Array-nodeId) zeigen beide Stimmen.
+  const resolveName = (id: string): string => {
+    const thinker = topicData?.thinkers.find(t => t.id === id)
+    if (thinker) return thinker.name
+    const concept = topicData?.concepts?.find(c => c.id === id)
+    if (concept) return concept.name
+    const school = topicData?.schools.find(s => s.id === id)
+    if (school) return school.label
+    return id.replace(/-/g, ' ')
+  }
+  const stationName = (nodeId: string | string[]): string =>
+    (Array.isArray(nodeId) ? nodeId : [nodeId]).map(resolveName).join(' · ')
+
   // Counter-Text
   const voiceIdx = idx - 1 // 0-based within voices; negative for Schwelle
   const isSchwelle = idx === 0
@@ -149,7 +180,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
     ? 'Schwelle'
     : isSynthese
     ? 'Synthese'
-    : (voiceSteps[voiceIdx] ? String(voiceSteps[voiceIdx].nodeId) : '')
+    : (voiceSteps[voiceIdx] ? stationName(voiceSteps[voiceIdx].nodeId) : '')
 
   const activeVoiceColor = isVoice && voiceIdx >= 0
     ? VOICE_COLORS[String(voiceSteps[voiceIdx].nodeId)] ?? 'var(--accent)'
@@ -248,12 +279,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           const isActive = active === stationIdx
           const ordinal = ORDINAL[vi] ?? `${vi + 1}.`
 
-          // Denker-Name aus topicData; Konzepte und Schulen werden ebenfalls aufgelöst
-          const thinkerMatch = topicData?.thinkers.find(t => t.id === nodeId)
-          const conceptMatch = !thinkerMatch ? topicData?.concepts?.find(c => c.id === nodeId) : undefined
-          const schoolMatch = !thinkerMatch && !conceptMatch ? topicData?.schools.find(s => s.id === nodeId) : undefined
-          const displayName = thinkerMatch?.name ?? conceptMatch?.name ?? schoolMatch?.label
-            ?? (nodeId.charAt(0).toUpperCase() + nodeId.slice(1).replace(/-/g, ' '))
+          const displayName = stationName(step.nodeId)
 
           // nüchtern-klar darf ein Bild haben (muss nicht) – die Nische zeigt sich
           // allein danach, ob step.image gesetzt ist, nicht mehr nach Ton.
@@ -261,7 +287,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
 
           return (
             <section
-              key={nodeId}
+              key={`station-${stationIdx}`}
               ref={el => { stationRefs.current[stationIdx] = el }}
               className={`station voice${isActive ? ' active' : ''}${showNiche ? '' : ' nuchtern'}`}
               style={{ ['--voice' as string]: voiceColor }}

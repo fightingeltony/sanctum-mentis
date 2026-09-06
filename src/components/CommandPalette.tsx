@@ -52,7 +52,12 @@ export default function CommandPalette({ open, onClose }: Props) {
     setIndexError(false)
     fetchIndex()
       .then(entries => setAllEntries(entries))
-      .catch(() => setIndexError(true))
+      .catch(() => {
+        // Beim nächsten Öffnen erneut versuchen – sonst bleibt die Suche
+        // nach einem einmaligen Netzwerkfehler bis zum Reload tot.
+        hasFetched.current = false
+        setIndexError(true)
+      })
   }, [open])
 
   /* Close on Escape */
