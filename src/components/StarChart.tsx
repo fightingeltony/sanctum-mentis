@@ -815,8 +815,25 @@ export default function StarChart({
 
   // ── Pan / zoom ────────────────────────────────────────────
 
-  const zoomIn    = useCallback(() => { panRef.current.scale *= 1.25; applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
-  const zoomOut   = useCallback(() => { panRef.current.scale *= 0.8;  applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
+  // Zoom-Buttons ankern auf der Bühnenmitte (transformOrigin ist 0 0 – ohne
+  // Korrektur der Translation zöge jeder Klick die Karte in die linke obere Ecke).
+  const zoomBy = useCallback((factor: number) => {
+    const ps = panRef.current
+    const stage = stageRef.current
+    const k0 = ps.scale
+    const k1 = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, k0 * factor))
+    if (stage && k1 !== k0) {
+      const { width, height } = stage.getBoundingClientRect()
+      const cx = width / 2, cy = height / 2
+      ps.tx = cx - (cx - ps.tx) * (k1 / k0)
+      ps.ty = cy - (cy - ps.ty) * (k1 / k0)
+    }
+    ps.scale = k1
+    applyZoom()
+    requestAnimationFrame(updateLabelVisibility)
+  }, [applyZoom])
+  const zoomIn    = useCallback(() => zoomBy(1.25), [zoomBy])
+  const zoomOut   = useCallback(() => zoomBy(0.8),  [zoomBy])
   const zoomReset = useCallback(() => { panRef.current = { scale: 1, tx: 0, ty: 0 }; applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
 
   // ── B: Priority deklutter – hide overlapping labels, reveal on zoom ──
@@ -1036,6 +1053,9 @@ export default function StarChart({
   const onStagePointerDown = useCallback((e: React.PointerEvent) => {
     // [data-nopan] = cartouche / zoom buttons – never pan/pinch there
     if ((e.target as Element).closest('[data-nopan]')) return
+    // Rechts-/Mittelklick: kein Pan – und kein pointerup, wenn das Kontextmenü
+    // aufgeht (macOS). Der Pointer bliebe sonst als Phantom in ptrsRef liegen.
+    if (e.pointerType === 'mouse' && e.button !== 0) return
     const stage = stageRef.current
     if (!stage) return
 
@@ -1095,6 +1115,7 @@ export default function StarChart({
       const dist    = Math.hypot(b.x - a.x, b.y - a.y)
       const mx      = (a.x + b.x) / 2, my = (a.y + b.y) / 2
       const { dist: d0, mx: mx0, my: my0, tx: tx0, ty: ty0, scale: s0 } = pinchRef.current
+      if (!(d0 > 0)) return   // zwei Finger auf demselben Punkt: 0/0 wäre NaN und bliebe im Zoom hängen
       // Faktor am Zoom-Limit clampen, BEVOR er in die Translation einfliesst –
       // sonst driftet die Karte weiter, wenn der Zoom längst am Anschlag steht.
       const newScale = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, s0 * (dist / d0)))
@@ -1136,6 +1157,38 @@ export default function StarChart({
       }
     }
   }, [applyZoom])
+
+  // Phantom-Pointer ausräumen: ein Pointer, der vor der 5px-Schwelle (also ohne
+  // Capture) ausserhalb der Bühne losgelassen wird, oder ein Fensterwechsel
+  // mitten in der Geste, hinterlässt sonst einen Eintrag in ptrsRef – der nächste
+  // einzelne Finger zählt dann als zweiter und jede Bewegung wird zum Pinch.
+  useEffect(() => {
+    const evict = (id: number) => {
+      if (!ptrsRef.current.delete(id)) return
+      pinchRef.current = null
+      if (ptrsRef.current.size === 1) {
+        const [rem] = [...ptrsRef.current.values()]
+        dragRef.current = { x: rem.x, y: rem.y, tx: panRef.current.tx, ty: panRef.current.ty }
+        didMoveRef.current = false
+      } else if (ptrsRef.current.size === 0) {
+        dragRef.current = null
+        didMoveRef.current = false
+        hadPinchRef.current = false
+      }
+    }
+    const onWinUp = (e: PointerEvent) => evict(e.pointerId)
+    const onBlur = () => {
+      for (const id of [...ptrsRef.current.keys()]) evict(id)
+    }
+    window.addEventListener('pointerup', onWinUp)
+    window.addEventListener('pointercancel', onWinUp)
+    window.addEventListener('blur', onBlur)
+    return () => {
+      window.removeEventListener('pointerup', onWinUp)
+      window.removeEventListener('pointercancel', onWinUp)
+      window.removeEventListener('blur', onBlur)
+    }
+  }, [])
 
   const onStagePointerUp = useCallback((e: React.PointerEvent) => {
     const wasTap      = ptrsRef.current.size === 1 && !didMoveRef.current
