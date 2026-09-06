@@ -426,6 +426,15 @@ export default function StarChart({
     return m
   }, [concepts, visibleThinkerIds])
 
+  // anchorOf: Konzept-ID → Anker-Denker (nur sichtbare Anker). Einflüsse dürfen
+  // auf Konzepte zeigen (Entscheid 6.9.26): Waisen haben eine eigene Position,
+  // Kanten zu angebundenen Konzepten enden am Anker-Stern.
+  const anchorOf = useMemo(() => {
+    const m: Record<string, string> = {}
+    Object.entries(anchoredByThinker).forEach(([tid, cs]) => cs.forEach(c => { m[c.id] = tid }))
+    return m
+  }, [anchoredByThinker])
+
   const adjacency = useMemo(() => {
     const adj: Record<string, Array<{
       edgeId:  string
@@ -487,15 +496,30 @@ export default function StarChart({
     })
   }, [thinkers])
 
+  // Kanten-Refs: React hängt Kind-Refs VOR dem Eltern-Ref an. Legt das Kind
+  // den Eintrag nicht selbst an, bleiben line/hit beim ersten Mount leer und
+  // die Linien erscheinen erst nach dem nächsten Re-Render (Hover, Level).
+  const edgeRef = (eid: string) => {
+    if (!edgeRefs.current[eid]) edgeRefs.current[eid] = { g: null, line: null, hit: null, brk: [null, null] }
+    return edgeRefs.current[eid]
+  }
+
   // ── Imperative: redraw edge Bézier paths ─────────────────
   const renderEdges = useCallback(() => {
     influences.forEach(inf => {
       const eid  = `${inf.from}→${inf.to}`
       const refs = edgeRefs.current[eid]
       if (!refs) return
-      const A = posRef.current[inf.from]
-      const B = posRef.current[inf.to]
+      const at = (id: string) => posRef.current[id] ?? (anchorOf[id] ? posRef.current[anchorOf[id]] : undefined)
+      const A = at(inf.from)
+      const B = at(inf.to)
       if (!A || !B) return
+      if (A.x === B.x && A.y === B.y) {
+        // beide Enden am selben Stern (Konzept und sein Anker) – nichts zu zeichnen
+        refs.line?.setAttribute('d', '')
+        refs.hit ?.setAttribute('d', '')
+        return
+      }
       const x1 = A.x, y1 = A.y, x2 = B.x, y2 = B.y
       const dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy) || 1
       const ux = dx / len, uy = dy / len, px = -uy, py = ux
@@ -518,7 +542,7 @@ export default function StarChart({
         })
       }
     })
-  }, [influences])
+  }, [influences, anchorOf])
 
   // ── Snap positions to target without animation ────────────
   const syncPositions = useCallback(() => {
@@ -1632,12 +1656,7 @@ export default function StarChart({
                       key={eid}
                       className="sc-edge-g"
                       style={typeVisible ? undefined : { display: 'none' }}
-                      ref={el => {
-                        if (!edgeRefs.current[eid]) {
-                          edgeRefs.current[eid] = { g: null, line: null, hit: null, brk: [null, null] }
-                        }
-                        edgeRefs.current[eid].g = el
-                      }}
+                      ref={el => { edgeRef(eid).g = el }}
                     >
                       <path
                         className="sc-edge"
@@ -1647,7 +1666,7 @@ export default function StarChart({
                         strokeLinecap="round"
                         strokeDasharray={dash}
                         vectorEffect="non-scaling-stroke"
-                        ref={el => { if (edgeRefs.current[eid]) edgeRefs.current[eid].line = el }}
+                        ref={el => { edgeRef(eid).line = el }}
                       />
                       {inf.type === 'rejection' && (
                         <>
@@ -1655,20 +1674,20 @@ export default function StarChart({
                             className="sc-brk"
                             stroke={col}
                             vectorEffect="non-scaling-stroke"
-                            ref={el => { if (edgeRefs.current[eid]) edgeRefs.current[eid].brk[0] = el }}
+                            ref={el => { edgeRef(eid).brk[0] = el }}
                           />
                           <line
                             className="sc-brk"
                             stroke={col}
                             vectorEffect="non-scaling-stroke"
-                            ref={el => { if (edgeRefs.current[eid]) edgeRefs.current[eid].brk[1] = el }}
+                            ref={el => { edgeRef(eid).brk[1] = el }}
                           />
                         </>
                       )}
                       <path
                         className="sc-edge-hit"
                         vectorEffect="non-scaling-stroke"
-                        ref={el => { if (edgeRefs.current[eid]) edgeRefs.current[eid].hit = el }}
+                        ref={el => { edgeRef(eid).hit = el }}
                         onMouseEnter={() => focusEdge(eid, inf.from, inf.to)}
                         onMouseLeave={clearFocus}
                       />

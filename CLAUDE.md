@@ -73,7 +73,7 @@ Seit 3.7.26 sind die Primärtokens als echte Utilities verfügbar (`@theme inlin
 | Denker           | `Thinker`    | Philosoph, Theoretiker – gehört zu einer Schule      |
 | Schule           | `School`     | Strömung mit Farbe und Glyph (Empirismus, …)         |
 | Konzept          | `Concept`    | Prinzip, Methode, Argument, Unterscheidung – verortet im Quadranten-Raum |
-| Einfluss         | `Influence`  | Beziehung zwischen Denkern (influence/critique/parallel/rejection) |
+| Einfluss         | `Influence`  | Beziehung zwischen Denkern (influence/critique/parallel/rejection); Konzepte als Endpunkt erlaubt (seit 6.9.26) |
 
 ## Schools-Konvention
 

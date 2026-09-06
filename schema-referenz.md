@@ -166,8 +166,8 @@ Mindestens ein `versions`-Eintrag auf `firstLevel` ist Pflicht. Hubs (≥4 Influ
 
 | Feld | Typ | Pflicht | Bedeutung |
 |---|---|---|---|
-| `from` | `string` | ✓ | `Thinker.id` des Ausgangsknotens (Quelle der Beziehung) |
-| `to` | `string` | ✓ | `Thinker.id` des Zielknotens |
+| `from` | `string` | ✓ | `Thinker.id` (oder `Concept.id`) des Ausgangsknotens (Quelle der Beziehung) |
+| `to` | `string` | ✓ | `Thinker.id` (oder `Concept.id`) des Zielknotens – Konzepte als Endpunkt sind erlaubt (Entscheid 6.9.26); die Sternkarte zeichnet Kanten zu Waisen-Konzepten am Marker, zu angebundenen Konzepten am Anker-Stern |
 | `type` | `InfluenceType` | ✓ | Art der Beziehung (siehe unten) |
 | `firstLevel` | `number` | ✓ | Muss ≥ `max(from.firstLevel, to.firstLevel)` sein – Kante erscheint nie früher als ihr spätester Endpunkt |
 | `versions` | `Record<number, string>` | ✓ | Beschreibungstext der Beziehung |
