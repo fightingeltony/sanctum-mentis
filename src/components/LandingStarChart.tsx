@@ -386,7 +386,6 @@ export default function LandingStarChart({ data: extract }: Props) {
         schools={data.schools}
         concepts={state.concepts}
         levelId={levelId}
-        levels={data.levels}
         quadrants={data.topic.quadrants}
         topicId={data.topic.id}
         readTracking={false}

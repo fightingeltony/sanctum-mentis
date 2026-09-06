@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
-import type { Thinker, Influence, School, Quadrants, Level, Concept } from '@/lib/types'
+import type { Thinker, Influence, School, Quadrants, Concept } from '@/lib/types'
 import { Annotated } from '@/lib/annotations'
 import { CONCEPT_GLYPH, CONCEPT_LABEL } from '@/lib/conceptTypes'
 
@@ -294,7 +294,6 @@ interface Props {
   schools:     School[]
   concepts:    ConceptWithDesc[]
   levelId:     number
-  levels:      Level[]
   quadrants:   Quadrants
   topicId:     string          // namespaced den Gelesen-Status (Denker-IDs wiederholen sich über Tableaus)
   readTracking?: boolean       // false → nichts in localStorage schreiben (Landing-Tour)
@@ -338,7 +337,6 @@ export default function StarChart({
   // zweiten Pinch-Fingers als Tap zählt (Phantom-Deselect/-Doppeltipp), und garantiert
   // den Deklutter-Pass am Pinch-Ende. Wird beim Erreichen von 0 Pointern verbraucht.
   const hadPinchRef = useRef(false)
-  const suppressClickRef = useRef(false)
   const deselectRef = useRef<() => void>(() => {})
 
   // ── Kinetics (momentum + double-tap tween) ────────────────
@@ -734,6 +732,15 @@ export default function StarChart({
     })
     return () => { stale = true }
   }, [])
+
+  // ── Mobile-Sheet: Fokus beim Öffnen auf den Schliessen-Button ─
+  const sheetRef = useRef<HTMLDivElement | null>(null)
+  const sheetOpen = isMobile && !!selected
+  useEffect(() => {
+    if (!sheetOpen) return
+    const btn = sheetRef.current?.querySelector<HTMLElement>('[data-sc-close]')
+    btn?.focus({ preventScroll: true })
+  }, [sheetOpen])
 
   // ── Update unread state when readSet changes ──────────────
   useEffect(() => {
@@ -1148,14 +1155,12 @@ export default function StarChart({
       const hadPinch = hadPinchRef.current
       hadPinchRef.current = false
       if (didMoveRef.current || wasDrag || hadPinch) {
-        suppressClickRef.current = true
-        setTimeout(() => { suppressClickRef.current = false }, 0)
       }
       // Deselect only when tapping on empty canvas – not on a node/edge/concept.
       // After a capture-redirect drag that started on a node, e.target is the stage element,
       // so closest('.sc-star,...') returns null – but didMove=true → wasTap=false → no deselect.
       const onNode = !!(e.target as Element).closest('.sc-star, .sc-edge-hit, .sc-concept-marker')
-      if (wasTap && !hadPinch && !suppressClickRef.current && !onNode) deselectRef.current()
+      if (wasTap && !hadPinch && !onNode) deselectRef.current()
 
       // Feature B: momentum decay on drag release
       const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -1969,7 +1974,7 @@ export default function StarChart({
       {isMobile && (selectedThinker || selectedConcept) && (
         <>
           <div className="sc-sheet-scrim" data-closing={sheetClosing || undefined} onClick={deselect} aria-hidden />
-          <div className="sc-sheet" data-closing={sheetClosing || undefined} role="dialog" aria-label={selectedThinker ? selectedThinker.name : selectedConcept?.name} onClick={e => e.stopPropagation()}>
+          <div className="sc-sheet" data-closing={sheetClosing || undefined} role="dialog" aria-modal="true" aria-label={selectedThinker ? selectedThinker.name : selectedConcept?.name} onClick={e => e.stopPropagation()} ref={sheetRef}>
             {/* Drag handle – fixed at top, not scrolled */}
             <div style={{ flex: '0 0 auto', display: 'flex', justifyContent: 'center', padding: '10px 0 4px' }}>
               <div style={{ width: 36, height: 4, borderRadius: 2, background: 'var(--hairline-strong)' }} />
@@ -2135,7 +2140,7 @@ function CartoucheContent({
               )}
               Konzepte · {anchoredConcepts.length}
             </span>
-            <span style={{ fontSize: 12, fontWeight: 600, transition: 'transform 200ms', transform: conceptsOpen ? 'rotate(180deg)' : 'none', color: 'var(--fg-muted)' }}>▾</span>
+            <span className="sc-acc-arrow" style={{ fontSize: 12, fontWeight: 600, transform: conceptsOpen ? 'rotate(180deg)' : 'none', color: 'var(--fg-muted)' }}>▾</span>
           </button>
           <div
             className={'sc-collapse' + (conceptsOpen ? '' : ' sc-collapse-closed')}
@@ -2178,8 +2183,12 @@ function CartoucheContent({
               return (
                 <li
                   key={edgeId}
+                  className="sc-rel"
+                  role="button"
+                  tabIndex={0}
                   style={{ display: 'flex', alignItems: 'baseline', gap: 8, fontSize: 12, color: 'var(--fg-muted)', cursor: 'pointer' }}
                   onClick={e => { e.stopPropagation(); selectStar(otherId) }}
+                  onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); selectStar(otherId) } }}
                 >
                   <span style={{
  fontSize: 9, letterSpacing: '0.12em', 

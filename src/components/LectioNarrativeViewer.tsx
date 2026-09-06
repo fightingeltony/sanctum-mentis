@@ -80,7 +80,9 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
   // localStorage initialisieren
   useEffect(() => {
     reducedMotion.current = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const saved = parseInt(localStorage.getItem(storageKey(lectio.id)) ?? '', 10)
+    let raw: string | null = null
+    try { raw = localStorage.getItem(storageKey(lectio.id)) } catch { /* Storage gesperrt */ }
+    const saved = parseInt(raw ?? '', 10)
     if (!isNaN(saved) && saved >= 0 && saved < totalStations) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
       setIdx(saved)    // Client-only init from localStorage – runs once on mount
@@ -93,7 +95,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
     setIdx(clamped)
     setActive(clamped)
     setRevealKey(k => k + 1)
-    localStorage.setItem(storageKey(lectio.id), String(clamped))
+    try { localStorage.setItem(storageKey(lectio.id), String(clamped)) } catch { /* Storage gesperrt */ }
     // scroll to top for active station
     const el = stationRefs.current[clamped]
     if (el) el.scrollTop = 0
@@ -288,6 +290,8 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           return (
             <section
               key={`station-${stationIdx}`}
+              id={`station-${stationIdx}`}
+              role="tabpanel"
               ref={el => { stationRefs.current[stationIdx] = el }}
               className={`station voice${isActive ? ' active' : ''}${showNiche ? '' : ' nuchtern'}`}
               style={{ ['--voice' as string]: voiceColor }}
@@ -429,13 +433,27 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
             <span className="arr-l" aria-hidden>↑</span>
             <span>zurück</span>
           </button>
-          <div className="dots" role="tablist" aria-label="Stationen">
+          <div
+            className="dots"
+            role="tablist"
+            aria-label="Stationen"
+            onKeyDown={e => {
+              if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return
+              e.preventDefault(); e.stopPropagation()
+              const target = e.key === 'Home' ? 0 : e.key === 'End' ? totalStations - 1
+                : Math.max(0, Math.min(totalStations - 1, idx + (e.key === 'ArrowRight' ? 1 : -1)))
+              show(target)
+              e.currentTarget.querySelectorAll<HTMLButtonElement>('button')[target]?.focus()
+            }}
+          >
             {Array.from({ length: totalStations }).map((_, i) => (
               <button
                 key={i}
                 role="tab"
                 aria-selected={i === idx}
-                aria-label={`Station ${i + 1}`}
+                aria-controls={`station-${i}`}
+                tabIndex={i === idx ? 0 : -1}
+                aria-label={i === 0 ? 'Schwelle' : i === totalStations - 1 ? 'Synthese' : `Station ${i}: ${stationName(voiceSteps[i - 1].nodeId)}`}
                 onClick={e => { e.stopPropagation(); show(i) }}
               >
                 <span className="mark" />
@@ -477,13 +495,16 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           background: oklch(0.44 0.03 65 / 0.05);
           transition: color .25s, border-color .25s, background .25s;
         }
-        :global(.brand:hover) {
-          color: oklch(0.30 0.04 65);
-          border-color: oklch(0.44 0.03 65 / 0.65);
-          background: oklch(0.44 0.03 65 / 0.10);
+        @media (hover: hover) {
+          :global(.brand:hover) {
+            color: oklch(0.30 0.04 65);
+            border-color: oklch(0.44 0.03 65 / 0.65);
+            background: oklch(0.44 0.03 65 / 0.10);
+          }
+          :global(.brand:hover .exit-arrow) { transform: translateX(-2px); }
         }
+        :global(.brand:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
         :global(.exit-arrow) { font-size: 11px; line-height: 1; transition: transform .25s; }
-        :global(.brand:hover .exit-arrow) { transform: translateX(-2px); }
         .lc-counter {
           position: fixed; top: 26px; right: 30px; z-index: 6;
  font-size: 10px; letter-spacing: 0.15em; 
@@ -551,7 +572,8 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
  font-size: 11px; letter-spacing: 0.16em; 
           transition: color .3s;
         }
-        .enter:hover .label { color: var(--voice); }
+        @media (hover: hover) { .enter:hover .label { color: var(--voice); } }
+        .enter:focus-visible { outline: 2px solid var(--voice); outline-offset: 4px; border-radius: 3px; }
         .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--voice); }
         .breath { animation: breathe 4.6s ease-in-out infinite; }
 
@@ -623,11 +645,16 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           border: 1px solid var(--hairline-strong); color: var(--fg-muted); background: none;
           transition: border-color .25s, color .25s, background .25s;
         }
-        :global(.btn:hover) { border-color: var(--accent); color: var(--accent); }
         :global(.btn.solid) { border-color: var(--accent); color: var(--paper); background: var(--accent); }
-        :global(.btn.solid:hover) {
-          background: oklch(0.36 0.12 295); border-color: oklch(0.36 0.12 295); color: var(--paper);
+        @media (hover: hover) {
+          :global(.btn:hover) { border-color: var(--accent); color: var(--accent); }
+          :global(.btn.solid:hover) {
+            background: color-mix(in oklch, var(--accent) 82%, black);
+            border-color: color-mix(in oklch, var(--accent) 82%, black);
+            color: var(--paper);
+          }
         }
+        :global(.btn:focus-visible) { outline: 2px solid var(--accent); outline-offset: 3px; }
 
         /* Fuss */
         .lc-foot {
@@ -653,16 +680,19 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
           transition: color .3s, opacity .4s;
           min-width: 56px;
         }
-        .weiter:hover, .zurueck:hover { color: var(--voice); }
+        @media (hover: hover) { .weiter:hover, .zurueck:hover { color: var(--voice); } }
+        .weiter:focus-visible, .zurueck:focus-visible { outline: 2px solid var(--voice); outline-offset: 4px; border-radius: 3px; }
         .arr { animation: nudge 3.6s ease-in-out infinite; }
         .arr-l { animation: nudge-up 3.6s ease-in-out infinite; }
         .weiter.hide, .zurueck.hide { opacity: 0; pointer-events: none; }
 
-        .dots { flex: 1; display: flex; justify-content: center; align-items: center; gap: 12px; }
+        .dots { flex: 1; display: flex; justify-content: center; align-items: center; gap: 4px; }
         .dots button {
-          width: 8px; height: 8px; padding: 0; border: none; background: none;
-          cursor: pointer; display: grid; place-items: center;
+          /* 8px-Punkt in einer 24px-Trefffläche – Touch und Fokusring brauchen Raum */
+          width: 24px; height: 24px; padding: 0; border: none; background: none;
+          cursor: pointer; display: grid; place-items: center; border-radius: 50%;
         }
+        .dots button:focus-visible { outline: 2px solid var(--voice); outline-offset: 1px; }
         .mark {
           width: 6px; height: 6px; border-radius: 50%;
           background: var(--hairline-strong);
@@ -672,7 +702,7 @@ export default function LectioNarrativeViewer({ lectio, topicData }: Props) {
         .dots button[aria-selected="true"] .mark {
           background: var(--voice); width: 18px; border-radius: 3px;
         }
-        .dots button:hover .mark { background: var(--fg-faint); }
+        @media (hover: hover) { .dots button:hover .mark { background: var(--fg-faint); } }
 
         @keyframes breathe { 0%,100% { opacity: 0.55; } 50% { opacity: 1; } }
         @keyframes halo {

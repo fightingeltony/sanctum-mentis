@@ -44,7 +44,7 @@ TopicData
 | `theme` | `TopicTheme?` | – | Akzentfarben als CSS-Custom-Property-Werte |
 | `complexityLevels` | `number` | ✓ | Anzahl Level, immer `5` |
 | `quadrants` | `Quadrants` | ✓ | Achsen-Definition für Sternkarte und Konzept-Karte |
-| `graphLayout` | `'manual' \| 'auto'?` | – | Layout-Modus des InfluenceGraph; `'manual'` liest `graphX/Y` aus Thinker-Knoten |
+| `graphLayout` | `'manual' \| 'auto'?` | – | **Historisch** (InfluenceGraph entfernt, in der Sternkarte aufgegangen) – wird von keiner Komponente mehr gelesen |
 | `thinkerListStyle` | `'cards' \| 'grouped'?` | – | Darstellungsform der Denker-Liste; `'grouped'` gruppiert nach Schule |
 | `synthesis` | `string?` | – | Kuratorischer Abschlusstext, **nur auf L5 sichtbar** |
 
@@ -97,8 +97,8 @@ TopicData
 | `color` | `string` | ✓ | Farbe direkt verwendbar (oklch oder hex) – keine globalen CSS-Variablen |
 | `glyph` | `string` | ✓ | Unicode-Symbol in der Denker-Liste, z. B. `"◈"` |
 | `motto` | `string?` | – | Kurzer charakterisierender Satz |
-| `gx` | `number?` | – | **InfluenceGraph:** x-Position des Schul-Ankers im SVG (auto layout) |
-| `gy` | `number?` | – | **InfluenceGraph:** y-Position des Schul-Ankers im SVG (auto layout) |
+| `gx` | `number?` | – | **Historisch** (InfluenceGraph entfernt) – x-Position des Schul-Ankers, wird nicht mehr gelesen |
+| `gy` | `number?` | – | **Historisch** (InfluenceGraph entfernt) – y-Position des Schul-Ankers, wird nicht mehr gelesen |
 | `labelDir` | `'N'\|'NE'\|'E'\|'SE'\|'S'\|'SW'\|'W'\|'NW'?` | – | **Sternkarte:** Richtung, in die das Schul-Label vom Anker weggedrückt wird (verhindert Label-Kollisionen) |
 | `cluster` | `ClusterDef?` | – | **Sternkarte:** Ellipsen-Hülle um eine Schul-Gruppe im Schulen-Modus |
 | `lectio_brief` | `string?` | – | 2–3-Satz-Ankerpunkt für Lectio-Modus; überschreibt `versions`-Text wenn gesetzt |
@@ -152,8 +152,8 @@ Mindestens ein `versions`-Eintrag auf `firstLevel` ist Pflicht. Hubs (≥4 Influ
 | `lifespan` | `string?` | – | Lebensdaten, z. B. `"1724–1804"` oder `"~500 v. Chr. –"` |
 | `x` | `number?` | – | Position auf der X-Achse, 0–100; links = Empirisch/Substanz, rechts = Rationalistisch/Prozess (je nach Tableau-Achse) |
 | `y` | `number?` | – | Position auf der Y-Achse, 0–100; **y=100 = oben (top-Pol), y=0 = unten (bottom-Pol)** |
-| `graphX` | `number?` | – | **InfluenceGraph manual layout:** absolute SVG-x-Position des Knotens |
-| `graphY` | `number?` | – | **InfluenceGraph manual layout:** absolute SVG-y-Position des Knotens |
+| `graphX` | `number?` | – | **Historisch** (InfluenceGraph entfernt) – wird nicht mehr gelesen |
+| `graphY` | `number?` | – | **Historisch** (InfluenceGraph entfernt) – wird nicht mehr gelesen |
 | `lectio_brief` | `string?` | – | 2–3-Satz-Ankerpunkt für Lectio-Modus; Fallback-Kette: `step_brief` → `lectio_brief` → `versions[level]` |
 | `firstLevel` | `number` | ✓ | geerbt |
 | `versions` | `Record<number, string>` | ✓ | geerbt; Text kann `[[Begriff:Erklärung]]`-Annotationen enthalten |

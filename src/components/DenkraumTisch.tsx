@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import type { DenkraumTischResolved, Haltung, MedaillenWahl } from '@/lib/types'
 
@@ -83,6 +83,14 @@ export default function DenkraumTisch({ denkraum }: Props) {
     setUebersehenAktiv(true)
     setPanel({ typ: 'uebersehen' })
   }
+
+  // Escape entwaffnet eine gewählte Karte – bisher ging das nur per Klick ins Leere.
+  useEffect(() => {
+    if (armed === null) return
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setArmed(null) }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [armed])
 
   // ── Phase 1: Die Frage an dich ──
   if (phase === 'verortung') {
@@ -220,6 +228,7 @@ export default function DenkraumTisch({ denkraum }: Props) {
                 key={k.knoten}
                 className={`karte${armed === k.knoten ? ' armed' : ''}${markiere ? (h === 'ruhe' ? ' nah' : ' reibung') : ''}`}
                 style={{ left: `${k.x}%`, top: `${k.y}%`, ['--voice' as string]: k.farbe }}
+                aria-pressed={armed === k.knoten}
                 onClick={e => { e.stopPropagation(); klickKarte(k.knoten) }}
               >
                 <span className="k-name serif">{k.name}</span>
@@ -240,8 +249,9 @@ export default function DenkraumTisch({ denkraum }: Props) {
           )}
         </div>
 
-        {/* Panel */}
-        <aside className="panel">
+        {/* Panel – wechselt bei jedem Tipp den Inhalt; unter 880px liegt es als
+            Bottom-Sheet unter dem Falz, darum als Live-Region ansagen */}
+        <aside className="panel" role="region" aria-label="Spiegel" aria-live="polite">
           {panel.typ === 'start' && option && (
             <>
               <p className="p-eyebrow">Wo du stehst</p>
@@ -413,7 +423,8 @@ export default function DenkraumTisch({ denkraum }: Props) {
           border-bottom: 1px dotted var(--fg-dim);
           transition: color .25s, border-color .25s;
         }
-        .region:hover, .region.offen { color: var(--fg-muted); border-bottom-color: var(--accent); }
+        .region.offen { color: var(--fg-muted); border-bottom-color: var(--accent); }
+        @media (hover: hover) { .region:hover { color: var(--fg-muted); border-bottom-color: var(--accent); } }
         .region:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
         .linien-anfasser {
@@ -434,7 +445,7 @@ export default function DenkraumTisch({ denkraum }: Props) {
           box-shadow: 0 10px 22px -18px oklch(0.24 0.02 65 / 0.55);
           transition: border-color .25s, box-shadow .25s, transform .25s;
         }
-        .karte:hover { border-color: var(--voice); }
+        @media (hover: hover) { .karte:hover { border-color: var(--voice); } }
         .karte:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
         .karte.armed {
           border-color: var(--accent);
@@ -529,7 +540,7 @@ export default function DenkraumTisch({ denkraum }: Props) {
           border: 1px solid var(--hairline-strong); border-radius: 3px; text-align: center;
           transition: border-color .25s, background .25s;
         }
-        .wahl:hover { border-color: var(--accent); }
+        @media (hover: hover) { .wahl:hover { border-color: var(--accent); } }
         .wahl:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
         .wahl[aria-pressed="true"] { border-color: var(--accent); background: var(--accent-soft); }
         .w-label { font-size: 12.5px; letter-spacing: 0.14em; font-weight: 500; color: var(--fg); }
@@ -541,7 +552,8 @@ export default function DenkraumTisch({ denkraum }: Props) {
           font-size: 11.5px; letter-spacing: 0.1em; color: var(--fg-dim);
           padding: 6px 0; text-align: left; transition: color .25s;
         }
-        .loesen:hover, .fuss-btn:hover, .zurueck-klein:hover { color: var(--accent); }
+        @media (hover: hover) { .loesen:hover, .fuss-btn:hover, .zurueck-klein:hover { color: var(--accent); } }
+        .loesen:focus-visible, .fuss-btn:focus-visible, .zurueck-klein:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
         .p-fuss {
           margin-top: auto; padding-top: 18px;
           display: flex; flex-direction: column; gap: 2px;
@@ -603,7 +615,8 @@ function Rahmen({ exitHref, children }: { exitHref: string; children: React.Reac
           border-radius: 3px; padding: 5px 11px;
           transition: color .25s, border-color .25s;
         }
-        :global(.verlassen:hover) { color: var(--fg-muted); border-color: var(--accent); }
+        @media (hover: hover) { :global(.verlassen:hover) { color: var(--fg-muted); border-color: var(--accent); } }
+        :global(.verlassen:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
         .kopf-meta {
           font-size: 11px; letter-spacing: 0.16em; color: var(--fg-dim);
         }
@@ -648,7 +661,7 @@ function PhasenStil() {
         border: 1px solid var(--hairline-strong); border-radius: 3px;
         transition: border-color .25s, background .25s;
       }
-      .phase .option:hover { border-color: var(--accent); }
+      @media (hover: hover) { .phase .option:hover { border-color: var(--accent); } }
       .phase .option:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
       .phase .o-label {
         font-family: var(--font-display), 'Marcellus', serif;
@@ -663,7 +676,8 @@ function PhasenStil() {
         font-family: inherit; font-size: 11.5px; letter-spacing: 0.1em;
         color: var(--fg-dim); transition: color .25s;
       }
-      .phase .zurueck-klein:hover { color: var(--accent); }
+      @media (hover: hover) { .phase .zurueck-klein:hover { color: var(--accent); } }
+      .phase .zurueck-klein:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
     `}</style>
   )
 }

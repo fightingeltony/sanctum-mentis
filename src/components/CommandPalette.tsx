@@ -60,6 +60,19 @@ export default function CommandPalette({ open, onClose }: Props) {
       })
   }, [open])
 
+  /* Fokus-Falle: Tab bleibt im Dialog */
+  const dialogRef = useRef<HTMLDivElement>(null)
+  const trapTab = (e: React.KeyboardEvent) => {
+    if (e.key !== 'Tab' || !dialogRef.current) return
+    const focusables = dialogRef.current.querySelectorAll<HTMLElement>(
+      'input, button, a[href], [tabindex]:not([tabindex="-1"])',
+    )
+    if (focusables.length === 0) return
+    const first = focusables[0], last = focusables[focusables.length - 1]
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus() }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus() }
+  }
+
   /* Close on Escape */
   useEffect(() => {
     if (!open) return
@@ -126,11 +139,16 @@ export default function CommandPalette({ open, onClose }: Props) {
       onClick={onClose}
     >
       <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Suche"
         className="w-full max-w-[580px] mx-4 border border-hairline-strong rounded-[6px] overflow-hidden"
         style={{ background: 'var(--bg-raised)', boxShadow: '0 24px 64px oklch(0.15 0.020 65 / 0.30)' }}
         onClick={e => e.stopPropagation()}
+        onKeyDown={trapTab}
       >
-        <Command shouldFilter={false} loop>
+        <Command shouldFilter={false} loop label="Suche">
 
           {/* ── Search input ── */}
           <div
