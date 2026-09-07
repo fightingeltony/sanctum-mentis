@@ -419,7 +419,7 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
                     onClick={() => { handleLevelChange(nextLevel.id); focusContent() }}
                     className="min-h-11 px-4 py-2 border border-hairline rounded font-ui text-[13px] text-fg-muted hover:bg-raised active:bg-raised focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
                   >
-                    Auf {nextLevel.short} weiterdenken
+                    Auf ‹{nextLevel.label}› weiterlesen
                   </button>
                 )}
               </div>
