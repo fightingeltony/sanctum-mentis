@@ -51,6 +51,7 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
   // 'up' fokussiert die Denker-Liste auf Neu/Vertieft, 'down' öffnet zurück auf „Alle".
   const [levelAction, setLevelAction] = useState<{ dir: 'up' | 'down'; tick: number } | null>(null)
   const levelTick = useRef(0)
+  const contentRef = useRef<HTMLElement>(null)
 
   const palette = useCommandPalette()
 
@@ -100,6 +101,18 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
 
   const state = useMemo(() => computeLevelState(data, levelId), [data, levelId])
   const levels = useMemo(() => levelsWithFilled(data), [data])
+  const entry = levelId === 1 ? data.topic.entry : undefined
+  const entryMode = !!entry
+  const intro = entry?.intro ?? data.topic.intro
+  const nextLevel = levels.find(l => l.id > levelId)
+
+  // Die Einstiegs-Buttons verschwinden beim Wechsel. Der Fokus bleibt beim Inhalt.
+  function focusContent() {
+    requestAnimationFrame(() => {
+      contentRef.current?.focus({ preventScroll: true })
+      contentRef.current?.scrollIntoView({ behavior: 'instant', block: 'start' })
+    })
+  }
 
   const tabs: { id: Tab; label: string; mobileLabel: string; numeral: string; count: number | null }[] = [
     { id: 'denker',     label: 'Denker',    mobileLabel: 'Denker', numeral: 'I',  count: state.thinkers.length },
@@ -121,6 +134,73 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
 
   const activeIdx = Math.max(0, data.levels.findIndex(l => l.id === levelId))
   const fillPct   = data.levels.length > 1 ? (activeIdx / (data.levels.length - 1)) * 100 : 0
+
+  const guidedPaths = ((lectios && lectios.length > 0) || denkraumId) && (
+    <div className={entryMode ? 'mb-6' : 'px-4 sm:px-5 mb-6'}>
+      <p
+        className="font-ui text-[11px] tracking-[0.06em] mb-2"
+        style={{ color: 'var(--accent)' }}
+      >
+        Geführte Pfade
+      </p>
+      <div className="flex flex-col gap-2">
+        {lectios?.map(l => (
+          <Link
+            key={l.id}
+            href={`/lectio/${l.id}`}
+            className={`flex justify-between gap-3 px-3 py-2.5 rounded
+              no-underline transition-colors group hover:bg-raised ${entryMode ? 'flex-col items-start sm:flex-row sm:items-center' : 'items-center'}`}
+            style={{ border: '1px solid var(--hairline)' }}
+          >
+            <span className="flex items-center gap-2 min-w-0">
+              <span
+                className="shrink-0 transition-transform group-hover:translate-x-0.5"
+                style={{ color: 'var(--accent)' }}
+              >
+                →
+              </span>
+              <span
+                className={`font-body text-[14px] leading-snug ${entryMode ? '' : 'truncate'}`}
+                style={{ color: 'var(--fg)' }}
+              >
+                {l.title}
+              </span>
+            </span>
+            <span className="flex items-center gap-2 shrink-0">
+              {(l.ton === 'erzählend-erfahrend' || l.ton === 'gemischt') && (
+                <span
+ className="font-ui text-[9px] tracking-[0.16em] px-1.5 py-0.5"
+                  style={{
+                    color: 'var(--accent)',
+                    border: '1px solid color-mix(in oklch, var(--accent) 35%, transparent)',
+                    borderRadius: '2px',
+                  }}
+                >
+                  Erzählend
+                </span>
+              )}
+              <span
+                className="font-ui text-[11px] tracking-[0.02em]"
+                style={{ color: 'var(--fg-faint)' }}
+              >
+                {l.stationCount} Stationen · ~{l.estimated_minutes} Min
+              </span>
+            </span>
+          </Link>
+        ))}
+      </div>
+      {denkraumId && (
+        <Link
+          href={`/denkraum/${denkraumId}`}
+          className="inline-flex items-baseline gap-2 mt-3 font-ui text-[12px] tracking-[0.06em]
+            text-fg-faint hover:text-fg-muted transition-colors no-underline"
+        >
+          Dieses Feld als Denkraum durchdenken
+          <span style={{ color: 'var(--accent)' }}>· Beta</span>
+        </Link>
+      )}
+    </div>
+  )
 
   return (
     <div className="shell">
@@ -245,83 +325,18 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
       </aside>
 
       {/* ── Main content ── */}
-      <main className="main-content min-w-0">
+      <main ref={contentRef} tabIndex={-1} className="main-content min-w-0 focus-visible:outline-2 focus-visible:outline-accent">
 
-        {data.topic.intro && (
+        {intro && (
           <p
             className="font-body italic text-[17px] leading-relaxed px-4 sm:px-5 mb-5"
             style={{ color: 'var(--accent)' }}
           >
-            {data.topic.intro}
+            {intro}
           </p>
         )}
 
-        {((lectios && lectios.length > 0) || denkraumId) && (
-          <div className="px-4 sm:px-5 mb-6">
-            <p
-              className="font-ui text-[11px] tracking-[0.06em] mb-2"
-              style={{ color: 'var(--accent)' }}
-            >
-              Geführte Pfade
-            </p>
-            <div className="flex flex-col gap-2">
-              {lectios?.map(l => (
-                <Link
-                  key={l.id}
-                  href={`/lectio/${l.id}`}
-                  className="flex items-center justify-between gap-3 px-3 py-2.5 rounded
-                    no-underline transition-colors group hover:bg-raised"
-                  style={{ border: '1px solid var(--hairline)' }}
-                >
-                  <span className="flex items-center gap-2 min-w-0">
-                    <span
-                      className="shrink-0 transition-transform group-hover:translate-x-0.5"
-                      style={{ color: 'var(--accent)' }}
-                    >
-                      →
-                    </span>
-                    <span
-                      className="font-body text-[14px] leading-snug truncate"
-                      style={{ color: 'var(--fg)' }}
-                    >
-                      {l.title}
-                    </span>
-                  </span>
-                  <span className="flex items-center gap-2 shrink-0">
-                    {(l.ton === 'erzählend-erfahrend' || l.ton === 'gemischt') && (
-                      <span
- className="font-ui text-[9px] tracking-[0.16em] px-1.5 py-0.5"
-                        style={{
-                          color: 'var(--accent)',
-                          border: '1px solid color-mix(in oklch, var(--accent) 35%, transparent)',
-                          borderRadius: '2px',
-                        }}
-                      >
-                        Erzählend
-                      </span>
-                    )}
-                    <span
-                      className="font-ui text-[11px] tracking-[0.02em]"
-                      style={{ color: 'var(--fg-faint)' }}
-                    >
-                      {l.stationCount} Stationen · ~{l.estimated_minutes} Min
-                    </span>
-                  </span>
-                </Link>
-              ))}
-            </div>
-            {denkraumId && (
-              <Link
-                href={`/denkraum/${denkraumId}`}
-                className="inline-flex items-baseline gap-2 mt-3 font-ui text-[12px] tracking-[0.06em]
-                  text-fg-faint hover:text-fg-muted transition-colors no-underline"
-              >
-                Dieses Feld als Denkraum durchdenken
-                <span style={{ color: 'var(--accent)' }}>· Beta</span>
-              </Link>
-            )}
-          </div>
-        )}
+        {!entryMode && guidedPaths}
 
         {levelId === data.topic.complexityLevels && data.topic.synthesis && (
           <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-hairline bg-raised mb-6 items-start">
@@ -377,9 +392,38 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
               currentLevel={state.level}
               levelAction={levelAction}
               listStyle={data.topic.thinkerListStyle}
+              entryMode={entryMode}
               highlightId={highlightId}
               onHighlightDone={() => setHighlightId(null)}
             />
+          </div>
+        )}
+        {entry && tab === 'denker' && (
+          <div className="px-4 sm:px-5 mt-4 mb-8">
+            <div className="border-t border-hairline pt-6 mb-8">
+              <h2 className="font-prose text-[21px] leading-snug text-fg mb-3">
+                {entry.reflection}
+              </h2>
+              <p className="font-body text-[14px] leading-relaxed text-fg-muted mb-5">
+                Du kannst den Gegensatz auf der Sternkarte ansehen oder auf der nächsten Stufe genauer lesen und weitere Stimmen entdecken.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <button
+                  onClick={() => { setTab('sternkarte'); focusContent() }}
+                  className="min-h-11 px-4 py-2 border border-gold-soft rounded font-ui text-[13px] text-accent bg-accent-soft hover:bg-raised active:bg-raised focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                >
+                  Auf der Sternkarte ansehen
+                </button>
+                {nextLevel && (
+                  <button
+                    onClick={() => { handleLevelChange(nextLevel.id); focusContent() }}
+                    className="min-h-11 px-4 py-2 border border-hairline rounded font-ui text-[13px] text-fg-muted hover:bg-raised active:bg-raised focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+                  >
+                    Auf {nextLevel.short} weiterdenken
+                  </button>
+                )}
+              </div>
+            </div>
           </div>
         )}
         {tab === 'sternkarte' && (
@@ -392,8 +436,14 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
               concepts={state.concepts}
               levelId={levelId}
               quadrants={data.topic.quadrants}
+              preferLevelText={entryMode}
               topicId={data.topic.id}
             />
+          </div>
+        )}
+        {entryMode && (
+          <div className="px-4 sm:px-5 mb-8">
+            {guidedPaths}
           </div>
         )}
       </main>
