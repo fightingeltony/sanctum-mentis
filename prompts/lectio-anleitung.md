@@ -784,7 +784,7 @@ Feld greift, baut in Wahrheit eine Lebensfrage – und umgekehrt.
 Diese Anleitung führt zusammen:
 - **`archiv/prompts/lectio-mode.md` (v1.10)** – Gerüst: zehn methodische Entscheidungen, Schema,
   Pfad-Typen, Grössen-Richtwerte, Kanon-Block.
-- **`lectio-2.0-richtlinie.md`** – Ton-Schicht: Nahbarkeit, erzählend-erfahrender Ton,
+- **`archiv/prompts/lectio-2.0-richtlinie.md`** – Ton-Schicht: Nahbarkeit, erzählend-erfahrender Ton,
   stationsweiser Ton-Wechsel, Bild-Prüfschritt.
 - **`schreib-skill-lectio.md`** – Handwerk: Satzrhythmus (bleibt eigenständige Datei,
   verbindlich vorgelagert).

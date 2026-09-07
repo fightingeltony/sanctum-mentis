@@ -62,7 +62,7 @@ Topic-Grössen (Denker/Konzepte/Schulen/Einflüsse): Tableaus liegen meist im Mi
 
 **M2 · Lectio-Dokumentation ist ein vierfach überlappender Stapel.**
 
-🟢 **HYGIENE:** Archiv-Dateien (`lectio-mode.md` v1.11, `lectio-2.0-richtlinie.md`) nach `prompts/archiv/` verschieben; ~10 Verweise in anderen MD-Dateien auf `lectio-anleitung.md` umbiegen. `schreib-skill-lectio.md` bleibt (Handwerk-Companion, kein Konflikt). Cowork-Kandidat. Eigener Faden – nicht in diesem Durchgang.
+✅ **ERLEDIGT (2026-09-06):** Beide Vorläufer liegen in `archiv/prompts/` (`lectio-mode.md` v1.11, `lectio-2.0-richtlinie.md`); `prompts/` enthält nur noch gültige Anleitungen. Lebende Verweise (CLAUDE.md, `lectio-anleitung.md` Herkunft) zeigen auf den Archivpfad. Datierte Erwähnungen in Backlog, Begleitnotizen und Feedback-Runde bleiben als Protokoll unverändert. `schreib-skill-lectio.md` bleibt (Handwerk-Companion, kein Konflikt).
 
 ---
 
@@ -124,6 +124,6 @@ Herkunftszeile pro Stimme andeuten („Buddhismus · aus Das Selbst"). Kuratoris
 2. ~~**H3**~~ ✅ erledigt 2026-06-16
 3. ~~**EA-A + EA-C + Sofort-Fixes**~~ ✅ erledigt 2026-06-17
 4. ~~**EA-B**~~ ✅ erledigt: Header-Menü 2026-07-03, Navigationsrang-Entscheidung 2026-08-14 (bleibt wie ist).
-5. **M2** – Lectio-Doku-Stapel aufräumen (Archiv-Ordner), ~10 Verweise umbiegen.
+5. ~~**M2**~~ ✅ erledigt 2026-09-06 (Archiv-Ordner, lebende Verweise umgebogen).
 6. **M1** – Schools-Konvention als bewusste Entscheidung klären (nachschärfen vs. `topic.meta` füllen).
 7. **EA-D, N1–N3** – Hygiene, wenn Zeit ist.

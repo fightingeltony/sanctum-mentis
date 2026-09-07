@@ -7,8 +7,17 @@ export const metadata: Metadata = {
   description: 'Konkrete Lebensfragen – kuratorische Stimmen-Sammlungen aus mehreren Tableaus.',
 }
 
+const ZAHLWORT = ['null', 'eine', 'zwei', 'drei', 'vier', 'fünf', 'sechs', 'sieben', 'acht', 'neun', 'zehn', 'elf', 'zwölf']
+const zahlwort = (n: number) => ZAHLWORT[n] ?? String(n)
+const gross = (w: string) => w.charAt(0).toLocaleUpperCase('de-CH') + w.slice(1)
+
 export default function LebensfragenPage() {
   const lebensfragen = getAllLebensfragen()
+  const counts = lebensfragen.map(lf => lf.stimmen.length)
+  const min = Math.min(...counts), max = Math.max(...counts)
+  const stimmenText = min === max
+    ? `${gross(zahlwort(max))} Stimmen`
+    : `${gross(zahlwort(min))} bis ${zahlwort(max)} Stimmen`
 
   return (
     <div className="max-w-[820px] mx-auto px-8 md:px-12 py-16 md:py-24">
@@ -33,7 +42,7 @@ export default function LebensfragenPage() {
       </h1>
       <p className="font-body text-[16px] text-fg-muted leading-relaxed mb-14 max-w-[56ch]">
         Keine Tableau-Karte, keine Lectio – sondern eine einzige Frage, die aus mehreren
-        Tableaus beantwortet wird. Neun Stimmen, die sich nicht einig sind.
+        Tableaus beantwortet wird. {stimmenText}, die sich nicht einig sind.
       </p>
 
       {/* ── Cards ── */}

@@ -130,6 +130,7 @@ export default function ThinkerList({
         </span>
         <button
           onClick={() => setActiveFilters(new Set())}
+          aria-pressed={activeFilters.size === 0}
  className={`font-ui text-[11px] tracking-[0.14em] px-3 py-1.5 rounded-[3px] border transition-colors
             ${activeFilters.size === 0
               ? 'border-gold-soft text-gold bg-accent-soft'
@@ -142,6 +143,7 @@ export default function ThinkerList({
         {newCount > 0 && (
           <button
             onClick={() => toggleFilter('neu')}
+            aria-pressed={activeFilters.has('neu')}
  className={`font-ui text-[11px] tracking-[0.14em] px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
               ${activeFilters.has('neu')
                 ? 'border-gold-soft text-gold bg-accent-soft'
@@ -156,6 +158,7 @@ export default function ThinkerList({
         {deepenedCount > 0 && (
           <button
             onClick={() => toggleFilter('vertieft')}
+            aria-pressed={activeFilters.has('vertieft')}
  className={`font-ui text-[11px] tracking-[0.14em] px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2
               ${activeFilters.has('vertieft')
                 ? 'border-gold-soft text-gold bg-accent-soft'
@@ -174,6 +177,7 @@ export default function ThinkerList({
             <button
               key={s.id}
               onClick={() => toggleFilter(s.id)}
+              aria-pressed={isActive}
  className="font-ui text-[11px] tracking-[0.14em] px-3 py-1.5 rounded-[3px] border transition-colors flex items-center gap-2"
               style={{
                 borderColor: isActive ? s.color : 'var(--hairline)',

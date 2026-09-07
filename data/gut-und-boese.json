@@ -39,32 +39,27 @@
     {
       "id": 1,
       "label": "Einstieg",
-      "short": "L1",
-      "filled": false
+      "short": "L1"
     },
     {
       "id": 2,
       "label": "Grundlagen",
-      "short": "L2",
-      "filled": false
+      "short": "L2"
     },
     {
       "id": 3,
       "label": "Vertiefung",
-      "short": "L3",
-      "filled": false
+      "short": "L3"
     },
     {
       "id": 4,
       "label": "Analyse",
-      "short": "L4",
-      "filled": false
+      "short": "L4"
     },
     {
       "id": 5,
       "label": "Synthese",
-      "short": "L5",
-      "filled": false
+      "short": "L5"
     }
   ],
   "schools": [

@@ -11,8 +11,8 @@ export default function HeaderSearchButton() {
       onClick={() => palette?.openPalette()}
  className="flex items-center gap-2 font-ui text-[11px] tracking-[0.16em] 
         text-fg-muted hover:text-fg transition-colors"
-      aria-label="Suche öffnen (Cmd+K)"
-      title="Cmd+K"
+      aria-label="Suche öffnen (Cmd+K oder Ctrl+K)"
+      title="Cmd+K / Ctrl+K"
     >
       <svg width="13" height="13" viewBox="0 0 15 15" fill="none" stroke="currentColor" strokeWidth="1.5">
         <circle cx="6.5" cy="6.5" r="4.5" />

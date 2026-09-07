@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react'
-import type { Thinker, Influence, School, Quadrants, Level, Concept } from '@/lib/types'
+import type { Thinker, Influence, School, Quadrants, Concept } from '@/lib/types'
 import { Annotated } from '@/lib/annotations'
 import { CONCEPT_GLYPH, CONCEPT_LABEL } from '@/lib/conceptTypes'
 
@@ -41,6 +41,10 @@ const DASH: Record<string, string | undefined> = {
 }
 
 const RKEY = 'sanctum-stern-read'
+// Gelesen-Status pro Tableau: 29 Denker-IDs kommen in mehreren Tableaus vor
+// (aristoteles, rogers, sartre, …) – ein globaler Schlüssel würde Aristoteles
+// in Ethik als gelesen markieren, sobald man ihn in Lebenskunst geöffnet hat.
+const readKeyFor = (topicId: string) => `${RKEY}:${topicId}`
 
 const TYPE_FILTERS: Array<{
   type:       string
@@ -290,16 +294,18 @@ interface Props {
   schools:     School[]
   concepts:    ConceptWithDesc[]
   levelId:     number
-  levels:      Level[]
   quadrants:   Quadrants
   /** Kuratierter Einstieg: derselbe Stufentext wie in der Denker-Liste. */
   preferLevelText?: boolean
+  topicId:     string          // namespaced den Gelesen-Status (Denker-IDs wiederholen sich über Tableaus)
+  readTracking?: boolean       // false → nichts in localStorage schreiben (Landing-Tour)
 }
 
 // ─── Component ────────────────────────────────────────────────
 
 export default function StarChart({
-  thinkers, influences, allThinkers, schools, concepts, levelId, quadrants, preferLevelText = false,
+  thinkers, influences, allThinkers, schools, concepts, levelId, quadrants,
+  topicId, readTracking = true, preferLevelText = false,
 }: Props) {
 
   const [mode,               setMode]             = useState<'axis' | 'school'>('axis')
@@ -333,7 +339,6 @@ export default function StarChart({
   // zweiten Pinch-Fingers als Tap zählt (Phantom-Deselect/-Doppeltipp), und garantiert
   // den Deklutter-Pass am Pinch-Ende. Wird beim Erreichen von 0 Pointern verbraucht.
   const hadPinchRef = useRef(false)
-  const suppressClickRef = useRef(false)
   const deselectRef = useRef<() => void>(() => {})
 
   // ── Kinetics (momentum + double-tap tween) ────────────────
@@ -428,6 +433,15 @@ export default function StarChart({
     return m
   }, [concepts, visibleThinkerIds])
 
+  // anchorOf: Konzept-ID → Anker-Denker (nur sichtbare Anker). Einflüsse dürfen
+  // auf Konzepte zeigen (Entscheid 6.9.26): Waisen haben eine eigene Position,
+  // Kanten zu angebundenen Konzepten enden am Anker-Stern.
+  const anchorOf = useMemo(() => {
+    const m: Record<string, string> = {}
+    Object.entries(anchoredByThinker).forEach(([tid, cs]) => cs.forEach(c => { m[c.id] = tid }))
+    return m
+  }, [anchoredByThinker])
+
   const adjacency = useMemo(() => {
     const adj: Record<string, Array<{
       edgeId:  string
@@ -465,12 +479,13 @@ export default function StarChart({
 
   // ── Load read set ─────────────────────────────────────────
   useEffect(() => {
+    if (!readTracking) return
     try {
-      const saved = JSON.parse(localStorage.getItem(RKEY) || '[]') as string[]
+      const saved = JSON.parse(localStorage.getItem(readKeyFor(topicId)) || '[]') as string[]
       // eslint-disable-next-line react-hooks/set-state-in-effect -- localStorage hydration on mount; SSR-safe pattern (no localStorage during SSR)
       setReadSet(new Set(saved))
     } catch { /* storage unavailable */ }
-  }, [])
+  }, [topicId, readTracking])
 
   // ── Imperative: update star transforms ───────────────────
   const updateStarTransforms = useCallback(() => {
@@ -489,15 +504,30 @@ export default function StarChart({
     })
   }, [thinkers])
 
+  // Kanten-Refs: React hängt Kind-Refs VOR dem Eltern-Ref an. Legt das Kind
+  // den Eintrag nicht selbst an, bleiben line/hit beim ersten Mount leer und
+  // die Linien erscheinen erst nach dem nächsten Re-Render (Hover, Level).
+  const edgeRef = (eid: string) => {
+    if (!edgeRefs.current[eid]) edgeRefs.current[eid] = { g: null, line: null, hit: null, brk: [null, null] }
+    return edgeRefs.current[eid]
+  }
+
   // ── Imperative: redraw edge Bézier paths ─────────────────
   const renderEdges = useCallback(() => {
     influences.forEach(inf => {
       const eid  = `${inf.from}→${inf.to}`
       const refs = edgeRefs.current[eid]
       if (!refs) return
-      const A = posRef.current[inf.from]
-      const B = posRef.current[inf.to]
+      const at = (id: string) => posRef.current[id] ?? (anchorOf[id] ? posRef.current[anchorOf[id]] : undefined)
+      const A = at(inf.from)
+      const B = at(inf.to)
       if (!A || !B) return
+      if (A.x === B.x && A.y === B.y) {
+        // beide Enden am selben Stern (Konzept und sein Anker) – nichts zu zeichnen
+        refs.line?.setAttribute('d', '')
+        refs.hit ?.setAttribute('d', '')
+        return
+      }
       const x1 = A.x, y1 = A.y, x2 = B.x, y2 = B.y
       const dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy) || 1
       const ux = dx / len, uy = dy / len, px = -uy, py = ux
@@ -520,7 +550,7 @@ export default function StarChart({
         })
       }
     })
-  }, [influences])
+  }, [influences, anchorOf])
 
   // ── Snap positions to target without animation ────────────
   const syncPositions = useCallback(() => {
@@ -589,116 +619,6 @@ export default function StarChart({
       if (life) { life.setAttribute('x', String(drawnCx + ldx)); life.setAttribute('text-anchor', anc) }
     })
   }, [thinkers, activeSchoolLayout, isMobile])
-
-  // ── Update drawnPos when thinkers/level/isMobile change ──
-  useEffect(() => {
-    const newDrawn: Record<string, Pos> = {}
-    thinkers.forEach(t => {
-      if (t.x !== undefined && t.y !== undefined) {
-        newDrawn[t.id] = {
-          x: isMobile ? mMapX(t.x) : mapX(t.x),
-          y: isMobile ? mMapY(t.y) : mapY(t.y),
-        }
-      }
-    })
-    drawnPosRef.current = newDrawn
-    // Invalidate element caches so applyZoom/updateLabelVisibility pick up new DOM elements
-    bodyElemsRef.current = {}
-    labelElemsRef.current = {}
-    conceptBodyElemsRef.current = {}
-    conceptLabelElemsRef.current = {}
-    syncPositions()
-    applyLabelSides(modeRef.current)
-    thinkers.forEach(t => {
-      const g = starGRefs.current[t.id]
-      if (g) {
-        const k = `${t.id}:${contentKeyFor(t, levelId, preferLevelText)}`
-        g.classList.toggle('sc-unread', !readSet.has(k))
-      }
-    })
-    // Schedule visibility pass after paint (DOM must be up-to-date)
-    requestAnimationFrame(() => { updateLabelVisibility() })
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [thinkers, levelId, isMobile, preferLevelText])
-
-  // ── Re-run declutter once webfonts arrive (first visit: Marcellus swaps in
-  //    after the initial pass and shifts label metrics) ──────────────────────
-  useEffect(() => {
-    let stale = false
-    document.fonts?.ready?.then(() => {
-      if (!stale) requestAnimationFrame(() => { updateLabelVisibility() })
-    })
-    return () => { stale = true }
-  }, [])
-
-  // ── Update unread state when readSet changes ──────────────
-  useEffect(() => {
-    thinkers.forEach(t => {
-      const g = starGRefs.current[t.id]
-      if (!g) return
-      const k = `${t.id}:${contentKeyFor(t, levelId, preferLevelText)}`
-      g.classList.toggle('sc-unread', !readSet.has(k))
-    })
-  }, [readSet, levelId, thinkers, preferLevelText])
-
-  // ── Reset pan/zoom on breakpoint change ───────────────────
-  useEffect(() => {
-    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
-    panRef.current = { scale: 1, tx: 0, ty: 0 }
-    const camera = cameraRef.current
-    if (camera) { camera.style.transform = 'translate(0px,0px) scale(1)' }
-  }, [isMobile])
-
-  // ── Morph animation ───────────────────────────────────────
-  const morph = useCallback((to: 'axis' | 'school') => {
-    if (to === modeRef.current) return
-    cancelKinetics()
-    modeRef.current = to
-    setMode(to)
-    svgRef.current?.classList.toggle('sc-mode-school', to === 'school')
-    applyLabelSides(to)
-    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduce) { syncPositions(); requestAnimationFrame(updateLabelVisibility); return }
-    const starts:  Record<string, Pos> = {}
-    const targets: Record<string, Pos> = {}
-    thinkers.forEach(t => {
-      const cur = posRef.current[t.id]
-      if (!cur) return
-      starts[t.id] = { ...cur }
-      const drawn = drawnPosRef.current[t.id]
-      targets[t.id] = to === 'school'
-        ? (activeSchoolLayout.layout[t.id] ?? drawn ?? cur)
-        : (drawn ?? cur)
-    })
-    const dur = 820
-    const t0  = performance.now()
-    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
-    function frame(now: number) {
-      const k = Math.min(1, (now - t0) / dur)
-      const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2
-      thinkers.forEach(t => {
-        const s = starts[t.id], tg = targets[t.id]
-        if (!s || !tg) return
-        posRef.current[t.id] = { x: s.x + (tg.x - s.x) * e, y: s.y + (tg.y - s.y) * e }
-      })
-      updateStarTransforms()
-      renderEdges()
-      if (k < 1) {
-        morphRafRef.current = requestAnimationFrame(frame)
-      } else {
-        morphRafRef.current = null
-        // Morph ended – update label visibility after positions are final
-        updateLabelVisibility()
-      }
-    }
-    morphRafRef.current = requestAnimationFrame(frame)
-  }, [thinkers, activeSchoolLayout, syncPositions, applyLabelSides, updateStarTransforms, renderEdges])
-
-  // Cleanup rAF on unmount
-  useEffect(() => () => {
-    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
-    if (kineticsRaf.current)  cancelAnimationFrame(kineticsRaf.current)
-  }, [])
 
   // ── Pan / zoom ────────────────────────────────────────────
   const applyZoom = useCallback(() => {
@@ -771,8 +691,151 @@ export default function StarChart({
   // applyZoom closes over thinkers for counter-scaling; recreated when thinkers changes.
   }, [thinkers])
 
-  const zoomIn    = useCallback(() => { panRef.current.scale *= 1.25; applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
-  const zoomOut   = useCallback(() => { panRef.current.scale *= 0.8;  applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
+  // ── Update drawnPos when thinkers/level/isMobile change ──
+  useEffect(() => {
+    const newDrawn: Record<string, Pos> = {}
+    thinkers.forEach(t => {
+      if (t.x !== undefined && t.y !== undefined) {
+        newDrawn[t.id] = {
+          x: isMobile ? mMapX(t.x) : mapX(t.x),
+          y: isMobile ? mMapY(t.y) : mapY(t.y),
+        }
+      }
+    })
+    drawnPosRef.current = newDrawn
+    // Invalidate element caches so applyZoom/updateLabelVisibility pick up new DOM elements
+    bodyElemsRef.current = {}
+    labelElemsRef.current = {}
+    conceptBodyElemsRef.current = {}
+    conceptLabelElemsRef.current = {}
+    syncPositions()
+    // Konter-Skalierung neu setzen: neu gemountete Körper tragen sonst bei
+    // Zoom ≠ 1 keinen Transform, bestehende einen veralteten, bis zur nächsten Geste.
+    applyZoom()
+    applyLabelSides(modeRef.current)
+    thinkers.forEach(t => {
+      const g = starGRefs.current[t.id]
+      if (g) {
+        const k = `${t.id}:${contentKeyFor(t, levelId, preferLevelText)}`
+        g.classList.toggle('sc-unread', !readSet.has(k))
+      }
+    })
+    // Schedule visibility pass after paint (DOM must be up-to-date)
+    requestAnimationFrame(() => { updateLabelVisibility() })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [thinkers, levelId, isMobile, preferLevelText])
+
+  // ── Re-run declutter once webfonts arrive (first visit: Marcellus swaps in
+  //    after the initial pass and shifts label metrics) ──────────────────────
+  useEffect(() => {
+    let stale = false
+    document.fonts?.ready?.then(() => {
+      if (!stale) requestAnimationFrame(() => { updateLabelVisibility() })
+    })
+    return () => { stale = true }
+  }, [])
+
+  // ── Mobile-Sheet: Fokus beim Öffnen auf den Schliessen-Button ─
+  const sheetRef = useRef<HTMLDivElement | null>(null)
+  const sheetOpen = isMobile && !!selected
+  useEffect(() => {
+    if (!sheetOpen) return
+    const btn = sheetRef.current?.querySelector<HTMLElement>('[data-sc-close]')
+    btn?.focus({ preventScroll: true })
+  }, [sheetOpen])
+
+  // ── Update unread state when readSet changes ──────────────
+  useEffect(() => {
+    thinkers.forEach(t => {
+      const g = starGRefs.current[t.id]
+      if (!g) return
+      const k = `${t.id}:${contentKeyFor(t, levelId, preferLevelText)}`
+      g.classList.toggle('sc-unread', !readSet.has(k))
+    })
+  }, [readSet, levelId, thinkers, preferLevelText])
+
+  // ── Reset pan/zoom on breakpoint change ───────────────────
+  useEffect(() => {
+    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
+    panRef.current = { scale: 1, tx: 0, ty: 0 }
+    // applyZoom statt nur Kamera-Reset: entfernt auch die Konter-Skalierung
+    // der Stern-Körper, die sonst bei Zoom 1 geschrumpft und versetzt blieben.
+    applyZoom()
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- nur beim Breakpoint-Wechsel, nicht bei jeder applyZoom-Neuerzeugung (thinkers)
+  }, [isMobile])
+
+  // ── Morph animation ───────────────────────────────────────
+  const morph = useCallback((to: 'axis' | 'school') => {
+    if (to === modeRef.current) return
+    cancelKinetics()
+    modeRef.current = to
+    setMode(to)
+    svgRef.current?.classList.toggle('sc-mode-school', to === 'school')
+    applyLabelSides(to)
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reduce) { syncPositions(); requestAnimationFrame(updateLabelVisibility); return }
+    const starts:  Record<string, Pos> = {}
+    const targets: Record<string, Pos> = {}
+    thinkers.forEach(t => {
+      const cur = posRef.current[t.id]
+      if (!cur) return
+      starts[t.id] = { ...cur }
+      const drawn = drawnPosRef.current[t.id]
+      targets[t.id] = to === 'school'
+        ? (activeSchoolLayout.layout[t.id] ?? drawn ?? cur)
+        : (drawn ?? cur)
+    })
+    const dur = 820
+    const t0  = performance.now()
+    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
+    function frame(now: number) {
+      const k = Math.min(1, (now - t0) / dur)
+      const e = k < 0.5 ? 2 * k * k : 1 - Math.pow(-2 * k + 2, 2) / 2
+      thinkers.forEach(t => {
+        const s = starts[t.id], tg = targets[t.id]
+        if (!s || !tg) return
+        posRef.current[t.id] = { x: s.x + (tg.x - s.x) * e, y: s.y + (tg.y - s.y) * e }
+      })
+      updateStarTransforms()
+      renderEdges()
+      if (k < 1) {
+        morphRafRef.current = requestAnimationFrame(frame)
+      } else {
+        morphRafRef.current = null
+        // Morph ended – update label visibility after positions are final
+        updateLabelVisibility()
+      }
+    }
+    morphRafRef.current = requestAnimationFrame(frame)
+  }, [thinkers, activeSchoolLayout, syncPositions, applyLabelSides, updateStarTransforms, renderEdges])
+
+  // Cleanup rAF on unmount
+  useEffect(() => () => {
+    if (morphRafRef.current) cancelAnimationFrame(morphRafRef.current)
+    if (kineticsRaf.current)  cancelAnimationFrame(kineticsRaf.current)
+  }, [])
+
+  // ── Pan / zoom ────────────────────────────────────────────
+
+  // Zoom-Buttons ankern auf der Bühnenmitte (transformOrigin ist 0 0 – ohne
+  // Korrektur der Translation zöge jeder Klick die Karte in die linke obere Ecke).
+  const zoomBy = useCallback((factor: number) => {
+    const ps = panRef.current
+    const stage = stageRef.current
+    const k0 = ps.scale
+    const k1 = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, k0 * factor))
+    if (stage && k1 !== k0) {
+      const { width, height } = stage.getBoundingClientRect()
+      const cx = width / 2, cy = height / 2
+      ps.tx = cx - (cx - ps.tx) * (k1 / k0)
+      ps.ty = cy - (cy - ps.ty) * (k1 / k0)
+    }
+    ps.scale = k1
+    applyZoom()
+    requestAnimationFrame(updateLabelVisibility)
+  }, [applyZoom])
+  const zoomIn    = useCallback(() => zoomBy(1.25), [zoomBy])
+  const zoomOut   = useCallback(() => zoomBy(0.8),  [zoomBy])
   const zoomReset = useCallback(() => { panRef.current = { scale: 1, tx: 0, ty: 0 }; applyZoom(); requestAnimationFrame(updateLabelVisibility) }, [applyZoom])
 
   // ── B: Priority deklutter – hide overlapping labels, reveal on zoom ──
@@ -992,6 +1055,9 @@ export default function StarChart({
   const onStagePointerDown = useCallback((e: React.PointerEvent) => {
     // [data-nopan] = cartouche / zoom buttons – never pan/pinch there
     if ((e.target as Element).closest('[data-nopan]')) return
+    // Rechts-/Mittelklick: kein Pan – und kein pointerup, wenn das Kontextmenü
+    // aufgeht (macOS). Der Pointer bliebe sonst als Phantom in ptrsRef liegen.
+    if (e.pointerType === 'mouse' && e.button !== 0) return
     const stage = stageRef.current
     if (!stage) return
 
@@ -1051,6 +1117,7 @@ export default function StarChart({
       const dist    = Math.hypot(b.x - a.x, b.y - a.y)
       const mx      = (a.x + b.x) / 2, my = (a.y + b.y) / 2
       const { dist: d0, mx: mx0, my: my0, tx: tx0, ty: ty0, scale: s0 } = pinchRef.current
+      if (!(d0 > 0)) return   // zwei Finger auf demselben Punkt: 0/0 wäre NaN und bliebe im Zoom hängen
       // Faktor am Zoom-Limit clampen, BEVOR er in die Translation einfliesst –
       // sonst driftet die Karte weiter, wenn der Zoom längst am Anschlag steht.
       const newScale = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, s0 * (dist / d0)))
@@ -1093,6 +1160,38 @@ export default function StarChart({
     }
   }, [applyZoom])
 
+  // Phantom-Pointer ausräumen: ein Pointer, der vor der 5px-Schwelle (also ohne
+  // Capture) ausserhalb der Bühne losgelassen wird, oder ein Fensterwechsel
+  // mitten in der Geste, hinterlässt sonst einen Eintrag in ptrsRef – der nächste
+  // einzelne Finger zählt dann als zweiter und jede Bewegung wird zum Pinch.
+  useEffect(() => {
+    const evict = (id: number) => {
+      if (!ptrsRef.current.delete(id)) return
+      pinchRef.current = null
+      if (ptrsRef.current.size === 1) {
+        const [rem] = [...ptrsRef.current.values()]
+        dragRef.current = { x: rem.x, y: rem.y, tx: panRef.current.tx, ty: panRef.current.ty }
+        didMoveRef.current = false
+      } else if (ptrsRef.current.size === 0) {
+        dragRef.current = null
+        didMoveRef.current = false
+        hadPinchRef.current = false
+      }
+    }
+    const onWinUp = (e: PointerEvent) => evict(e.pointerId)
+    const onBlur = () => {
+      for (const id of [...ptrsRef.current.keys()]) evict(id)
+    }
+    window.addEventListener('pointerup', onWinUp)
+    window.addEventListener('pointercancel', onWinUp)
+    window.addEventListener('blur', onBlur)
+    return () => {
+      window.removeEventListener('pointerup', onWinUp)
+      window.removeEventListener('pointercancel', onWinUp)
+      window.removeEventListener('blur', onBlur)
+    }
+  }, [])
+
   const onStagePointerUp = useCallback((e: React.PointerEvent) => {
     const wasTap      = ptrsRef.current.size === 1 && !didMoveRef.current
     const wasDrag     = ptrsRef.current.size === 1 && didMoveRef.current
@@ -1111,14 +1210,12 @@ export default function StarChart({
       const hadPinch = hadPinchRef.current
       hadPinchRef.current = false
       if (didMoveRef.current || wasDrag || hadPinch) {
-        suppressClickRef.current = true
-        setTimeout(() => { suppressClickRef.current = false }, 0)
       }
       // Deselect only when tapping on empty canvas – not on a node/edge/concept.
       // After a capture-redirect drag that started on a node, e.target is the stage element,
       // so closest('.sc-star,...') returns null – but didMove=true → wasTap=false → no deselect.
       const onNode = !!(e.target as Element).closest('.sc-star, .sc-edge-hit, .sc-concept-marker')
-      if (wasTap && !hadPinch && !suppressClickRef.current && !onNode) deselectRef.current()
+      if (wasTap && !hadPinch && !onNode) deselectRef.current()
 
       // Feature B: momentum decay on drag release
       const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -1254,15 +1351,16 @@ export default function StarChart({
 
   // ── Read tracking ─────────────────────────────────────────
   const markRead = useCallback((t: Thinker) => {
+    if (!readTracking) return   // Landing-Tour: Auswahl ist kein Lesen des Nutzers
     const key = `${t.id}:${contentKeyFor(t, levelId, preferLevelText)}`
     setReadSet(prev => {
       if (prev.has(key)) return prev
       const next = new Set(prev)
       next.add(key)
-      try { localStorage.setItem(RKEY, JSON.stringify([...next])) } catch { /* noop */ }
+      try { localStorage.setItem(readKeyFor(topicId), JSON.stringify([...next])) } catch { /* noop */ }
       return next
     })
-  }, [levelId, preferLevelText])
+  }, [levelId, topicId, readTracking, preferLevelText])
 
   // ── Select / deselect ─────────────────────────────────────
   const deselectNow = useCallback(() => {
@@ -1634,12 +1732,7 @@ export default function StarChart({
                       key={eid}
                       className="sc-edge-g"
                       style={typeVisible ? undefined : { display: 'none' }}
-                      ref={el => {
-                        if (!edgeRefs.current[eid]) {
-                          edgeRefs.current[eid] = { g: null, line: null, hit: null, brk: [null, null] }
-                        }
-                        edgeRefs.current[eid].g = el
-                      }}
+                      ref={el => { edgeRef(eid).g = el }}
                     >
                       <path
                         className="sc-edge"
@@ -1649,7 +1742,7 @@ export default function StarChart({
                         strokeLinecap="round"
                         strokeDasharray={dash}
                         vectorEffect="non-scaling-stroke"
-                        ref={el => { if (edgeRefs.current[eid]) edgeRefs.current[eid].line = el }}
+                        ref={el => { edgeRef(eid).line = el }}
                       />
                       {inf.type === 'rejection' && (
                         <>
@@ -1657,20 +1750,20 @@ export default function StarChart({
                             className="sc-brk"
                             stroke={col}
                             vectorEffect="non-scaling-stroke"
-                            ref={el => { if (edgeRefs.current[eid]) edgeRefs.current[eid].brk[0] = el }}
+                            ref={el => { edgeRef(eid).brk[0] = el }}
                           />
                           <line
                             className="sc-brk"
                             stroke={col}
                             vectorEffect="non-scaling-stroke"
-                            ref={el => { if (edgeRefs.current[eid]) edgeRefs.current[eid].brk[1] = el }}
+                            ref={el => { edgeRef(eid).brk[1] = el }}
                           />
                         </>
                       )}
                       <path
                         className="sc-edge-hit"
                         vectorEffect="non-scaling-stroke"
-                        ref={el => { if (edgeRefs.current[eid]) edgeRefs.current[eid].hit = el }}
+                        ref={el => { edgeRef(eid).hit = el }}
                         onMouseEnter={() => focusEdge(eid, inf.from, inf.to)}
                         onMouseLeave={clearFocus}
                       />
@@ -1936,7 +2029,7 @@ export default function StarChart({
       {isMobile && (selectedThinker || selectedConcept) && (
         <>
           <div className="sc-sheet-scrim" data-closing={sheetClosing || undefined} onClick={deselect} aria-hidden />
-          <div className="sc-sheet" data-closing={sheetClosing || undefined} role="dialog" aria-label={selectedThinker ? selectedThinker.name : selectedConcept?.name} onClick={e => e.stopPropagation()}>
+          <div className="sc-sheet" data-closing={sheetClosing || undefined} role="dialog" aria-modal="true" aria-label={selectedThinker ? selectedThinker.name : selectedConcept?.name} onClick={e => e.stopPropagation()} ref={sheetRef}>
             {/* Drag handle – fixed at top, not scrolled */}
             <div style={{ flex: '0 0 auto', display: 'flex', justifyContent: 'center', padding: '10px 0 4px' }}>
               <div style={{ width: 36, height: 4, borderRadius: 2, background: 'var(--hairline-strong)' }} />
@@ -2102,7 +2195,7 @@ function CartoucheContent({
               )}
               Konzepte · {anchoredConcepts.length}
             </span>
-            <span style={{ fontSize: 12, fontWeight: 600, transition: 'transform 200ms', transform: conceptsOpen ? 'rotate(180deg)' : 'none', color: 'var(--fg-muted)' }}>▾</span>
+            <span className="sc-acc-arrow" style={{ fontSize: 12, fontWeight: 600, transform: conceptsOpen ? 'rotate(180deg)' : 'none', color: 'var(--fg-muted)' }}>▾</span>
           </button>
           <div
             className={'sc-collapse' + (conceptsOpen ? '' : ' sc-collapse-closed')}
@@ -2145,8 +2238,12 @@ function CartoucheContent({
               return (
                 <li
                   key={edgeId}
+                  className="sc-rel"
+                  role="button"
+                  tabIndex={0}
                   style={{ display: 'flex', alignItems: 'baseline', gap: 8, fontSize: 12, color: 'var(--fg-muted)', cursor: 'pointer' }}
                   onClick={e => { e.stopPropagation(); selectStar(otherId) }}
+                  onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); selectStar(otherId) } }}
                 >
                   <span style={{
  fontSize: 9, letterSpacing: '0.12em', 
@@ -2168,3 +2265,4 @@ function CartoucheContent({
     </>
   )
 }
+

@@ -37,11 +37,11 @@
     }
   },
   "levels": [
-    { "id": 1, "label": "Einstieg", "short": "L1", "filled": false },
-    { "id": 2, "label": "Grundlagen", "short": "L2", "filled": false },
-    { "id": 3, "label": "Vertiefung", "short": "L3", "filled": false },
-    { "id": 4, "label": "Analyse", "short": "L4", "filled": false },
-    { "id": 5, "label": "Synthese", "short": "L5", "filled": false }
+    { "id": 1, "label": "Einstieg", "short": "L1" },
+    { "id": 2, "label": "Grundlagen", "short": "L2" },
+    { "id": 3, "label": "Vertiefung", "short": "L3" },
+    { "id": 4, "label": "Analyse", "short": "L4" },
+    { "id": 5, "label": "Synthese", "short": "L5" }
   ],
   "schools": [
     { "id": "psychoanalyse", "label": "Psychoanalyse", "color": "oklch(0.42 0.11 145)", "glyph": "Ψ", "gx": -290, "gy": -210, "labelDir": "NW" },

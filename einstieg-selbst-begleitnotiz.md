@@ -38,11 +38,12 @@ Ein unabhängiger Prüfer hat die fünf neuen L1-Texte gegengelesen. Eingearbeit
 
 ## Technische Prüfung
 
-- 55 bestehende Vitest-Tests bestanden; Produktionsbuild inklusive TypeScript und 42 statischen Seiten erfolgreich. Der erste Build scheiterte am eingeschränkten Google-Fonts-Zugriff, der erneute Lauf mit Netzwerkzugriff bestand.
-- ESLint: keine Fehler, eine bereits bestehende Warnung zu `_weg` in `DenkraumTisch.tsx`.
+- Nach Integration von Claudes aktuellem `main` (`064d009`): 233 Vitest-Tests bestanden, TypeScript und ESLint ohne Fehler oder Warnungen. Die vorherige Warnung im Denkraum ist durch die integrierte Hygiene-Runde behoben.
+- Produktionsbuild inklusive TypeScript und 43 statischen Ausgaben erfolgreich. Der Build läuft mit Netzwerkzugriff für die bestehenden Google Fonts.
 - Datenvergleich gegen den Ausgangsstand: Nur `topic.entry` und die L1/L2-Fassungen der fünf genannten Knoten geändert; andere Knoten, bestehende höhere Versionen und Metadaten unverändert.
 - Browserprüfung auf Desktop sowie mit 390 und 320 Pixeln Viewport-Breite: lesbare Umbrüche, vollständige L1-Pfadtitel und keine horizontale Seitenüberbreite bei 320 Pixeln.
 - L1 → L2 zeigt Jung als neu und die beiden Einstiegsstimmen als vertieft. Rückweg zu L1, Sternkarten-Wechsel per Enter, Stufentext im mobilen Sternkarten-Panel, Konzept-Akkordeon und Begriffserklärung per Enter geprüft.
+- Nach Integration von `064d009` auf einem frischen Dev-Server erneut geprüft: L1-Einstieg, Sternkarten-Wechsel und Anzeige des L1-Texts im Vedanta-Panel. Claudes Tab-Semantik, Gelesen-Status pro Tableau und Gestenkorrekturen bleiben integriert.
 
 Das ist eine responsive Browserprüfung, kein Test der Pinch- und Pan-Gesten auf einem echten Touch-Gerät.
 

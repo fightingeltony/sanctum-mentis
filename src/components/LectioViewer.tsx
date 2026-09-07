@@ -27,7 +27,8 @@ export default function LectioViewer({ lectio, topicData }: Props) {
     const el = stepRefs.current[revealed - 1]
     if (!el) return
     const top = el.getBoundingClientRect().top + window.scrollY - window.innerHeight * 0.25
-    window.scrollTo({ top, behavior: 'smooth' })
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    window.scrollTo({ top, behavior: reduce ? 'auto' : 'smooth' })
   }, [revealed])
 
   function advance() {
@@ -308,18 +309,11 @@ function Threshold({
           onClick={onAdvance}
           className="font-ui text-[13px] tracking-[0.04em] px-6 py-3
             border transition-colors min-h-[44px] focus-visible:outline-none
-            focus-visible:ring-2"
+            focus-visible:ring-2 bg-transparent hover:bg-accent-soft"
           style={{
             color: 'var(--accent)',
             borderColor: 'var(--accent)',
-            background: 'transparent',
             outlineColor: 'var(--accent)',
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = 'var(--accent-soft)'
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLButtonElement).style.background = 'transparent'
           }}
         >
           {label}

@@ -97,10 +97,12 @@ export type InfluenceType =
   | 'parallel'     // entwickelten unabhängig Ähnliches
   | 'rejection'    // Verwerfung; from/to undirektional (siehe schema-referenz.md)
 
-/** Eine Beziehung zwischen zwei Denkern */
+/** Eine Beziehung zwischen zwei Knoten – in der Regel Denker, Konzepte sind
+ *  als Endpunkt erlaubt (Entscheid 6.9.26). Die Sternkarte zeichnet Kanten zu
+ *  Waisen-Konzepten an deren Marker, zu angebundenen Konzepten am Anker-Stern. */
 export interface Influence extends Versioned {
-  from: string;       // Thinker.id
-  to:   string;       // Thinker.id
+  from: string;       // Thinker.id oder Concept.id
+  to:   string;       // Thinker.id oder Concept.id
   type: InfluenceType;
 }
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useCallback, useContext, useEffect, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
 import dynamic from 'next/dynamic'
 
 const CommandPalette = dynamic(() => import('./CommandPalette'), { ssr: false })
@@ -20,14 +20,26 @@ export default function ShellCommandPaletteProvider({ children }: { children: Re
   const [open, setOpen]           = useState(false)
   const [everOpened, setEverOpened] = useState(false)
 
-  const openPalette  = useCallback(() => { setOpen(true); setEverOpened(true) }, [])
+  // Fokus-Rückweg: den Öffner merken, bevor das Suchfeld per autoFocus den Fokus nimmt
+  const openerRef = useRef<HTMLElement | null>(null)
+  const rememberOpener = () => { openerRef.current = document.activeElement as HTMLElement | null }
+
+  const openPalette  = useCallback(() => { rememberOpener(); setOpen(true); setEverOpened(true) }, [])
   const closePalette = useCallback(() => setOpen(false), [])
+
+  useEffect(() => {
+    if (open) return
+    const opener = openerRef.current
+    openerRef.current = null
+    if (opener && opener.isConnected && opener !== document.body) opener.focus({ preventScroll: true })
+  }, [open])
 
   /* Global Cmd+K / Ctrl+K shortcut */
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault()
+        rememberOpener()
         setOpen(prev => {
           if (!prev) setEverOpened(true)
           return !prev

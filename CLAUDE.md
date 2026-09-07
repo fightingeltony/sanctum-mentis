@@ -73,7 +73,7 @@ Seit 3.7.26 sind die Primärtokens als echte Utilities verfügbar (`@theme inlin
 | Denker           | `Thinker`    | Philosoph, Theoretiker – gehört zu einer Schule      |
 | Schule           | `School`     | Strömung mit Farbe und Glyph (Empirismus, …)         |
 | Konzept          | `Concept`    | Prinzip, Methode, Argument, Unterscheidung – verortet im Quadranten-Raum |
-| Einfluss         | `Influence`  | Beziehung zwischen Denkern (influence/critique/parallel/rejection) |
+| Einfluss         | `Influence`  | Beziehung zwischen Denkern (influence/critique/parallel/rejection); Konzepte als Endpunkt erlaubt (seit 6.9.26) |
 
 ## Schools-Konvention
 
@@ -117,8 +117,8 @@ Konzept-Positionen `x`/`y` sind 0–100, mathematische Konvention (y=0 unten, y=
 - `src/components/TopicViewer.tsx` – Top-Level-Container
 - `src/components/StarChart.tsx` – Sternkarten-Tab (Denker als Sterne, Einflüsse als Linien, Konzepte im Akkordeon/als Waisen-Marker, Schulen-Morph). Trägt `data-`-Anker (data-star-id, data-sc-mode, …), über die die Landing-Tour sie steuert – beim Ändern nicht entfernen
 - `src/components/LandingStarChart.tsx` – selbstspielende Sternkarten-Tour auf der Landing (DOM-Director über die data-Anker, pausiert bei isTrusted-Interaktion, reduced-motion → statisch L4)
-- `src/components/QuadrantPlot.tsx` – 4-Quadranten-SVG-Karte (basierend auf WesterosMap-Muster)
-- `src/components/InfluenceGraph.tsx` – Beziehungs-Graph (kann auto/manual layout)
+- `src/hooks/usePanZoom.ts` – generischer Pan/Pinch/Wheel-Hook, derzeit ohne Importer (QuadrantPlot und InfluenceGraph sind in der Sternkarte aufgegangen). Vor einer Migration der StarChart-Gesten darauf muss der Hook `hadPinch` und die `[data-nopan]`-Ausnahme bekommen – sonst bricht die Zwei-Finger-Regel unten
+- `src/lib/__tests__/data-validation.test.ts` + `data-integrity.test.ts` – Vitest-Datenregeln 1–21 (Tabelle in `schema-referenz.md` Abschnitt 5)
 
 ## Mobile Layout – Verbindliche CSS-Regeln (geerbt von Carta Librorum)
 
@@ -136,7 +136,7 @@ Sicherheitsnetz auf oberster Ebene – verhindert horizontales Scrollen der gesa
 
 ### Checkliste neues Themengebiet
 - [ ] JSON in `data/` anlegen, in `library.json` registrieren, in `src/lib/data.ts` importieren
-- [ ] Quadranten-Achsen im `topic.quadrants` definieren – sie steuern den QuadrantPlot
+- [ ] Quadranten-Achsen im `topic.quadrants` definieren – sie steuern die Sternkarte
 - [ ] Schul-Farben direkt als `school.color` (oklch) – keine globalen CSS-Variablen mehr nötig
 - [ ] Karten-Pulsanimation (`wm-pulse-ring`) ist global vorhanden – gilt automatisch
 - [ ] (Optional) Bei Lectio-Vorausschau: `lectio_brief`-Felder beim Knoten mitschreiben (siehe `prompts/lectio-anleitung.md`)
@@ -161,18 +161,18 @@ Sicherheitsnetz auf oberster Ebene – verhindert horizontales Scrollen der gesa
 - Kein Scroll-Hijacking
 - Keine Auto-Play-Animationen ohne Stopp-Möglichkeit
 
-## QuadrantPlot – Render-Konvention
+## Sternkarte – Render-Konvention (geerbt vom QuadrantPlot)
 
-- Stage: 980×760 SVG mit `PAD_X = 200` / `PAD_Y = 80` Margin (breite Seitenränder für Achsen-Labels ausserhalb des Rahmens)
+- Stage Desktop: 980×760 SVG mit `PAD_X = 200` / `PAD_Y = 80` Margin (breite Seitenränder für Achsen-Labels ausserhalb des Rahmens); Mobile 640×884 mit `MPAD_X = 64` / `MPAD_Y = 128`
 - Achsenkreuz horizontal+vertikal durch die Mitte
-- Konzept-Positionen 0–100, y mathematisch (y=100 = oben)
-- Marker-Glyph aus `CONCEPT_GLYPH[type]` (Diamond, Symbol etc.), Farbe immer dunkles Sienna
-- Labels in `Marcellus bold 0.08em letter-spacing` mit Pergament-Halo (textShadow)
-- `usePanZoom` Hook für Pan/Pinch/Wheel – generisch verwendet von InfluenceGraph + QuadrantPlot
+- Denker- und Konzept-Positionen 0–100, y mathematisch (y=100 = oben)
+- Waisen-Konzepte (ohne sichtbaren Anker) als eigener Marker mit Glyph aus `CONCEPT_GLYPH[type]`, angebundene Konzepte im Akkordeon ihres Denkers
+- Einflüsse dürfen auf Konzepte zeigen (seit 6.9.26): Kante zum Waisen-Marker bzw. zum Anker-Stern
+- Gelesen-Status pro Tableau in localStorage (`sanctum-stern-read:<topicId>`); die Landing-Tour rendert mit `readTracking={false}`
 
 ## Sternkarte – Gesten- & Atlas-Konvention (Soll-Verhalten, seit 12.6.26)
 
-Die StarChart-Gestenschicht ist handimplementiert (Migration auf `usePanZoom` ist geplante Hygiene) – bei jedem Umbau MUSS dieses Verhalten erhalten bleiben:
+Die StarChart-Gestenschicht ist handimplementiert (eine Migration auf `usePanZoom` wäre Hygiene, der Hook kann die Pinch-Semantik unten aber noch nicht) – bei jedem Umbau MUSS dieses Verhalten erhalten bleiben:
 
 - **Zwei Finger heissen immer Pinch** – egal was unter den Fingern liegt (nur `[data-nopan]` ausgenommen). Faktor wird VOR der Translation geclampt (`ZOOM_MIN`/`ZOOM_MAX`), sonst driftet die Karte am Anschlag. `hadPinchRef` merkt sich den Pinch über die ganze Gesten-Sequenz – das Heben des zweiten Fingers ist kein Tap.
 - **Pan ab überall:** 5px-Schwelle trennt Tap (Auswahl) von Drag (Pan); ab der Schwelle Pointer-Capture aufs Stage-Element → kein Fehl-Select nach echtem Ziehen. Momentum per exponentiellem Decay (τ=325ms), Doppeltipp-Zoom ×2.2/zurück (nur Touch, nicht auf Nodes). Kinetik bricht bei pointerdown/wheel/pinch/morph/unmount ab. `prefers-reduced-motion`: kein Momentum, keine Tweens.
@@ -234,7 +234,7 @@ Ergänzend zu Tableau-Bauten gibt es Lectios – geführte Pfade durch ein Table
 
 > **Bild-Pipeline Lectio (Workflow-Standard):** Generiert wird in 2k (Arbeits-/Archivqualität). 2k-Master bleiben **ausserhalb von `public/`** – lokal im gitignorierten `arbeitsbilder/`-Ordner parken. Abgelegt im Repo wird ausschliesslich die Auslieferungsversion: **~800 px längste Kante, WebP q70** (sharp: `resize({width:800,height:800,fit:'inside'})`), unter `public/lectio-images/<lectio-id>/<nodeId>.webp` (bei Doppelstationen die nodeId-Teile mit Bindestrich verbunden). Anzeige läuft über `next/image` (Bogen-Nische im LectioNarrativeViewer). Derselbe Ablage-Absatz steht in `prompts/bild-stil-kanon.md` (Workflow Punkt 4) – bei Änderung beide mitziehen.
 
-> **Wartung:** Wird eine Anleitung massgeblich gesetzt oder eine Lectio registriert/entfernt, hier den Anleitungs-Verweis und die Lectio-Liste mitziehen. Die Registrierungs-Parität (Datei ↔ `data.ts`) prüft Vitest automatisch (Regel 10); der Anleitungs-Verweis ist manuell. Bei neuer Lectio auch `REGISTERED_IDS` in `data-validation.test.ts` ergänzen.
+> **Wartung:** Wird eine Anleitung massgeblich gesetzt oder eine Lectio registriert/entfernt, hier den Anleitungs-Verweis und die Lectio-Liste mitziehen. Die Registrierungs-Parität (Datei ↔ `data.ts`) prüft Vitest automatisch (Regel 10); der Anleitungs-Verweis ist manuell. Bei neuer Lectio auch `REGISTERED_IDS` in `data-validation.test.ts` ergänzen. Seit 6.9.26 prüft `data-integrity.test.ts` (Regeln 11–21, Tabelle in `schema-referenz.md` Abschnitt 5) zusätzlich Typografie-Norm, Tableau-Struktur, Anker- und Einfluss-Referenzen, Annotationen, `image_status`-Parität, Lebensfragen- und Denkraum-Referenzen sowie die Registrierung von Tableaus, Lebensfragen und Denkräumen.
 
 **Bestehende Lectios (14 registriert in `data.ts`):** `hard-problem` (Geist) · `findest-du-oder-machst-du` (Selbst) · `wenn-die-welt-wackelt` (Realismus) · `warum-sollst-du` (Ethik – destruktiv-aufbauend, **ton: gemischt**, L2, 4 Stationen: Kant→Hume→Nietzsche→Levinas; abgelöst die expositorische Fassung, archiviert 2.7.) · `wenn-nichts-vorgegeben` (Existenzialismus) · `warum-gehorchst-du` (Politische Philosophie) · `ruhe-oder-rausch` (Lebenskunst) · `der-weg-des-menschen` (Begegnung – Ein-Werk-Lectio, kontemplativ-vertiefend) · `ist-der-andere-hoelle-oder-heimat` (Begegnung – konkurrierend-konfrontativ) · `verstehen-oder-weitergehen` (Wandlung – narrativ-historisch) · `stell-die-frage-anders` (Gut und Böse – destruktiv-aufbauend) · `wer-bist-du-wenn-du-alles-weglaesst` (Selbst – konkurrierend-konfrontativ, **ton: erzählend-erfahrend** – erster Test des erzählenden Tons, Vergleichsfall zur archivierten expositorischen Fassung `wer-beobachtet`, s.u.) · `vom-wissen-zum-glauben` (Verwandlung – erzählend-erfahrend, L3, 6 Stationen: Augustinus→Stoa→Rilke→Eckhart→James→Jung) · `annehmen-oder-ueberwinden` (Selbstverhältnis – konkurrierend-konfrontativ, **ton: erzählend-erfahrend**, L2, 4 Stationen: Rogers→Nietzsche→Marc Aurel→Buddhismus).
 

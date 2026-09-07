@@ -119,6 +119,19 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
     { id: 'sternkarte', label: 'Sternkarte', mobileLabel: 'Stern', numeral: 'II', count: null },
   ]
 
+  // ARIA-Tabs: Pfeiltasten wandern zwischen den Tabs, Fokus folgt (roving tabindex).
+  const onTablistKey = (e: React.KeyboardEvent<HTMLElement>) => {
+    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return
+    e.preventDefault()
+    const i = tabs.findIndex(t => t.id === tab)
+    const next = e.key === 'Home' ? 0
+      : e.key === 'End' ? tabs.length - 1
+      : (i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length
+    setTab(tabs[next].id)
+    const btn = e.currentTarget.querySelector<HTMLElement>(`[data-tab-id="${tabs[next].id}"]`)
+    btn?.focus()
+  }
+
   const activeIdx = Math.max(0, data.levels.findIndex(l => l.id === levelId))
   const fillPct   = data.levels.length > 1 ? (activeIdx / (data.levels.length - 1)) * 100 : 0
 
@@ -136,10 +149,8 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
             key={l.id}
             href={`/lectio/${l.id}`}
             className={`flex justify-between gap-3 px-3 py-2.5 rounded
-              no-underline transition-colors group ${entryMode ? 'flex-col items-start sm:flex-row sm:items-center' : 'items-center'}`}
+              no-underline transition-colors group hover:bg-raised ${entryMode ? 'flex-col items-start sm:flex-row sm:items-center' : 'items-center'}`}
             style={{ border: '1px solid var(--hairline)' }}
-            onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.background = 'var(--bg-raised)'}
-            onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.background = 'transparent'}
           >
             <span className="flex items-center gap-2 min-w-0">
               <span
@@ -218,7 +229,7 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
           onClick={() => palette?.openPalette()}
           className="flex items-center justify-center w-8 h-8 text-fg-dim
             hover:text-fg transition-colors"
-          aria-label="Suche öffnen (Cmd+K)"
+          aria-label="Suche öffnen (Cmd+K oder Ctrl+K)"
         >
           <svg width="15" height="15" viewBox="0 0 15 15" fill="none" stroke="currentColor" strokeWidth="1.5">
             <circle cx="6.5" cy="6.5" r="4.5" />
@@ -249,9 +260,9 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
               background: 'linear-gradient(90deg, var(--gold) 0%, var(--gold) 18px, var(--hairline) 18px)'
             }}
           />
-          <h1 className="font-display text-[18px] tracking-[0.14em] text-fg">
-            Lern–Companion
-          </h1>
+          <p className="font-display text-[18px] tracking-[0.14em] text-fg">
+            Lern-Companion
+          </p>
         </div>
 
         <nav className="flex flex-col">
@@ -279,11 +290,11 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
 
         <div className="hidden md:flex flex-col gap-4">
           <div className="flex flex-col gap-1">
-            <h2
+            <h1
               className="font-prose text-[24px] font-medium leading-tight text-fg mt-1.5"
             >
               {data.topic.title}
-            </h2>
+            </h1>
             {data.topic.subtitle && (
               <p className="font-body italic text-[15px] text-fg-muted">
                 {data.topic.subtitle}
@@ -338,14 +349,18 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
           </div>
         )}
 
-        <nav className="tabbar-desktop" role="tablist">
+        <nav className="tabbar-desktop" role="tablist" aria-label="Ansichten" onKeyDown={onTablistKey}>
           {tabs.map(t => (
             <button
               key={t.id}
               role="tab"
+              id={`tab-${t.id}-desktop`}
+              data-tab-id={t.id}
               aria-selected={tab === t.id}
+              aria-controls={`tabpanel-${t.id}`}
+              tabIndex={tab === t.id ? 0 : -1}
               onClick={() => setTab(t.id)}
- className={`pb-3 font-ui text-[11px] tracking-[0.15em] 
+              className={`pb-3 font-ui text-[11px] tracking-[0.15em]
                 border-b border-transparent -mb-px transition-colors
                 flex items-center gap-2 whitespace-nowrap shrink-0
                 ${tab === t.id
@@ -359,7 +374,7 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
               </span>
               <span>{t.label}</span>
               {t.count !== null && (
-                <span className={`font-prose italic text-[12px] tracking-normal normal-case
+                <span className={`font-prose italic text-[12px] tracking-normal
                   ${tab === t.id ? 'text-gold-soft' : 'text-fg-dim'}`}>
                   {t.count}
                 </span>
@@ -369,17 +384,19 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
         </nav>
 
         {tab === 'denker' && (
-          <ThinkerList
-            thinkers={state.thinkers}
-            schools={data.schools}
-            context={state.context}
-            currentLevel={state.level}
-            levelAction={levelAction}
-            listStyle={data.topic.thinkerListStyle}
-            entryMode={entryMode}
-            highlightId={highlightId}
-            onHighlightDone={() => setHighlightId(null)}
-          />
+          <div id="tabpanel-denker" role="tabpanel" aria-labelledby="tab-denker-desktop">
+            <ThinkerList
+              thinkers={state.thinkers}
+              schools={data.schools}
+              context={state.context}
+              currentLevel={state.level}
+              levelAction={levelAction}
+              listStyle={data.topic.thinkerListStyle}
+              entryMode={entryMode}
+              highlightId={highlightId}
+              onHighlightDone={() => setHighlightId(null)}
+            />
+          </div>
         )}
         {entry && tab === 'denker' && (
           <div className="px-4 sm:px-5 mt-4 mb-8">
@@ -410,7 +427,7 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
           </div>
         )}
         {tab === 'sternkarte' && (
-          <div className="px-4 sm:px-5 py-4">
+          <div id="tabpanel-sternkarte" role="tabpanel" aria-labelledby="tab-sternkarte-desktop" className="px-4 sm:px-5 py-4">
             <StarChart
               thinkers={state.thinkers}
               allThinkers={data.thinkers}
@@ -418,9 +435,9 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
               schools={data.schools}
               concepts={state.concepts}
               levelId={levelId}
-              levels={data.levels}
               quadrants={data.topic.quadrants}
               preferLevelText={entryMode}
+              topicId={data.topic.id}
             />
           </div>
         )}
@@ -451,16 +468,21 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
             value={activeIdx}
             onChange={e => handleLevelChange(data.levels[parseInt(e.target.value)].id)}
             aria-label="Komplexität"
+            aria-valuetext={`${state.level.short} ${state.level.label}`}
             style={{ '--slider-fill': `${fillPct}%` } as React.CSSProperties}
           />
         </div>
 
-        <nav className="tabs-row flex" role="tablist" aria-label="Tabs">
+        <nav className="tabs-row flex" role="tablist" aria-label="Ansichten" onKeyDown={onTablistKey}>
           {tabs.map(t => (
             <button
               key={t.id}
               role="tab"
+              id={`tab-${t.id}-mobile`}
+              data-tab-id={t.id}
               aria-selected={tab === t.id}
+              aria-controls={`tabpanel-${t.id}`}
+              tabIndex={tab === t.id ? 0 : -1}
               onClick={() => setTab(t.id)}
               className="bottom-tab-btn"
             >
@@ -473,7 +495,7 @@ export default function TopicViewer({ data, lectios, denkraumId }: Props) {
                 {t.mobileLabel}
               </span>
               {t.count !== null && (
-                <span className={`font-prose italic text-[9px] tracking-normal normal-case transition-colors
+                <span className={`font-prose italic text-[9px] tracking-normal transition-colors
                   ${tab === t.id ? 'text-gold-soft' : 'text-fg-dim'}`}>
                   {t.count}
                 </span>

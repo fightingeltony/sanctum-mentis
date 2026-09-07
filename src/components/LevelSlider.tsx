@@ -38,6 +38,7 @@ export default function LevelSlider({ levels, value, onChange }: Props) {
         value={activeIdx}
         onChange={e => onChange(levels[parseInt(e.target.value)].id)}
         aria-label="Komplexitäts-Level"
+        aria-valuetext={`${levels[activeIdx]?.short ?? ''} ${levels[activeIdx]?.label ?? ''}`.trim()}
         style={{ '--slider-fill': `${fillPct}%` } as React.CSSProperties}
       />
 
@@ -47,6 +48,8 @@ export default function LevelSlider({ levels, value, onChange }: Props) {
           <button
             key={l.id}
             onClick={() => onChange(l.id)}
+            aria-current={l.id === value ? 'true' : undefined}
+            aria-label={l.filled ? l.label : `${l.label} – noch nicht ausgearbeitet`}
             title={l.filled ? l.label : `${l.label} – noch nicht ausgearbeitet`}
  className={`font-ui text-[9px] tracking-[0.10em] transition-colors
               ${l.id === value ? 'text-gold' : l.filled ? 'text-fg-dim hover:text-fg-muted' : 'text-fg-dim opacity-35'}`}

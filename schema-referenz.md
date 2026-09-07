@@ -45,7 +45,7 @@ TopicData
 | `theme` | `TopicTheme?` | – | Akzentfarben als CSS-Custom-Property-Werte |
 | `complexityLevels` | `number` | ✓ | Anzahl Level, immer `5` |
 | `quadrants` | `Quadrants` | ✓ | Achsen-Definition für Sternkarte und Konzept-Karte |
-| `graphLayout` | `'manual' \| 'auto'?` | – | Layout-Modus des InfluenceGraph; `'manual'` liest `graphX/Y` aus Thinker-Knoten |
+| `graphLayout` | `'manual' \| 'auto'?` | – | **Historisch** (InfluenceGraph entfernt, in der Sternkarte aufgegangen) – wird von keiner Komponente mehr gelesen |
 | `thinkerListStyle` | `'cards' \| 'grouped'?` | – | Darstellungsform der Denker-Liste; `'grouped'` gruppiert nach Schule |
 | `synthesis` | `string?` | – | Kuratorischer Abschlusstext, **nur auf L5 sichtbar** |
 
@@ -98,8 +98,8 @@ TopicData
 | `color` | `string` | ✓ | Farbe direkt verwendbar (oklch oder hex) – keine globalen CSS-Variablen |
 | `glyph` | `string` | ✓ | Unicode-Symbol in der Denker-Liste, z. B. `"◈"` |
 | `motto` | `string?` | – | Kurzer charakterisierender Satz |
-| `gx` | `number?` | – | **InfluenceGraph:** x-Position des Schul-Ankers im SVG (auto layout) |
-| `gy` | `number?` | – | **InfluenceGraph:** y-Position des Schul-Ankers im SVG (auto layout) |
+| `gx` | `number?` | – | **Historisch** (InfluenceGraph entfernt) – x-Position des Schul-Ankers, wird nicht mehr gelesen |
+| `gy` | `number?` | – | **Historisch** (InfluenceGraph entfernt) – y-Position des Schul-Ankers, wird nicht mehr gelesen |
 | `labelDir` | `'N'\|'NE'\|'E'\|'SE'\|'S'\|'SW'\|'W'\|'NW'?` | – | **Sternkarte:** Richtung, in die das Schul-Label vom Anker weggedrückt wird (verhindert Label-Kollisionen) |
 | `cluster` | `ClusterDef?` | – | **Sternkarte:** Ellipsen-Hülle um eine Schul-Gruppe im Schulen-Modus |
 | `lectio_brief` | `string?` | – | 2–3-Satz-Ankerpunkt für Lectio-Modus; überschreibt `versions`-Text wenn gesetzt |
@@ -153,8 +153,8 @@ Mindestens ein `versions`-Eintrag auf `firstLevel` ist Pflicht. Hubs (≥4 Influ
 | `lifespan` | `string?` | – | Lebensdaten, z. B. `"1724–1804"` oder `"~500 v. Chr. –"` |
 | `x` | `number?` | – | Position auf der X-Achse, 0–100; links = Empirisch/Substanz, rechts = Rationalistisch/Prozess (je nach Tableau-Achse) |
 | `y` | `number?` | – | Position auf der Y-Achse, 0–100; **y=100 = oben (top-Pol), y=0 = unten (bottom-Pol)** |
-| `graphX` | `number?` | – | **InfluenceGraph manual layout:** absolute SVG-x-Position des Knotens |
-| `graphY` | `number?` | – | **InfluenceGraph manual layout:** absolute SVG-y-Position des Knotens |
+| `graphX` | `number?` | – | **Historisch** (InfluenceGraph entfernt) – wird nicht mehr gelesen |
+| `graphY` | `number?` | – | **Historisch** (InfluenceGraph entfernt) – wird nicht mehr gelesen |
 | `lectio_brief` | `string?` | – | 2–3-Satz-Ankerpunkt für Lectio-Modus; Fallback-Kette: `step_brief` → `lectio_brief` → `versions[level]` |
 | `firstLevel` | `number` | ✓ | geerbt |
 | `versions` | `Record<number, string>` | ✓ | geerbt; Text kann `[[Begriff:Erklärung]]`-Annotationen enthalten |
@@ -167,8 +167,8 @@ Mindestens ein `versions`-Eintrag auf `firstLevel` ist Pflicht. Hubs (≥4 Influ
 
 | Feld | Typ | Pflicht | Bedeutung |
 |---|---|---|---|
-| `from` | `string` | ✓ | `Thinker.id` des Ausgangsknotens (Quelle der Beziehung) |
-| `to` | `string` | ✓ | `Thinker.id` des Zielknotens |
+| `from` | `string` | ✓ | `Thinker.id` (oder `Concept.id`) des Ausgangsknotens (Quelle der Beziehung) |
+| `to` | `string` | ✓ | `Thinker.id` (oder `Concept.id`) des Zielknotens – Konzepte als Endpunkt sind erlaubt (Entscheid 6.9.26); die Sternkarte zeichnet Kanten zu Waisen-Konzepten am Marker, zu angebundenen Konzepten am Anker-Stern |
 | `type` | `InfluenceType` | ✓ | Art der Beziehung (siehe unten) |
 | `firstLevel` | `number` | ✓ | Muss ≥ `max(from.firstLevel, to.firstLevel)` sein – Kante erscheint nie früher als ihr spätester Endpunkt |
 | `versions` | `Record<number, string>` | ✓ | Beschreibungstext der Beziehung |
@@ -369,7 +369,7 @@ Nirgends ausserhalb von `types.ts` dokumentiert.
 | `ueberschrift` | `string` | ✓ | Kurze Überschrift der Stimme, z. B. `"Buddhismus: Schmerz und Leid sind nicht dasselbe"` |
 | `text` | `string` | ✓ | Stimmen-Text; **zur Lebensfrage hin neu geschrieben** – kein Copy-Paste aus `versions`; keine `[[Annotationen]]` |
 
-**Nicht Vitest-geprüft:** Lebensfragen-Daten werden von keiner Vitest-Regel geprüft.
+**Vitest-geprüft:** `aus.tableau`/`aus.knoten` müssen existieren, `kuratiert_aus_tableaus` muss den genutzten Tableaus entsprechen (Regel 20).
 
 ---
 
@@ -419,8 +419,25 @@ Datei: `src/lib/__tests__/data-validation.test.ts`
 | 7 | `Concept.primaryThinker` ist nicht-leerer String | primaryThinker gesetzt, aber kein String oder leer |
 | 8 | Legacy-Feld `brief` in `LectioStep` | Irgendeine Station hat `'brief' in step` (statt `step_brief`) |
 | 9 | `closing_kernel`-Überblick | informativ, schlägt nie fehl – zeigt welche Lectios closing_kernel gesetzt haben |
+| 10 | Registrierungs-Parität Lectios | Datei in `data/lectio/` ohne LECTIOS-Eintrag oder umgekehrt |
 
-**Nicht geprüft:** Lebensfragen-Daten, `school.cluster`, `labelOffset`, Koordinaten-Plausibilität, Schulen-Konvention (Ein-Denker-Schulen), `firstLevel`-Stufungs-Regel für Influences.
+Datei: `src/lib/__tests__/data-integrity.test.ts` (seit 6.9.26)
+
+| Regel | Was wird geprüft | Schlägt fehl wenn |
+|---|---|---|
+| 11 | Typografie-Norm in allen Datenstrings (ausser `image_prompt`) | Geviertstrich `—` oder `ß` |
+| 12 | Tableau-Struktur | `topic.id` ≠ Dateiname · doppelte IDs je Sammlung oder Denker ∩ Konzepte · unbekannte `schoolId` · `firstLevel`/`versions`-Schlüssel ausserhalb 1…`complexityLevels` · keine `versions[firstLevel]` · Koordinaten ausserhalb 0–100 · `levels` ≠ 1…n · `filled` im JSON |
+| 13 | `Concept.primaryThinker` zeigt auf einen Denker | weder im Tableau noch in einem `related_topics`-Tableau (Anker ausserhalb erlaubt, Entscheid 6.9.26) |
+| 14 | `Influence.from/to` sind Thinker- oder Concept-IDs | Schul-ID als Endpunkt oder Selbstbezug (Konzepte erlaubt seit 6.9.26) |
+| 15 | Annotationen `[[…]]` wohlgeformt | unbalancierte oder verschachtelte Klammern, leerer Term oder leere Definition (Parser-Logik wie `annotations.tsx`) |
+| 16 | `image_status`-Parität | `image` ohne `generiert` · `generiert` ohne `image` · `image_prompt` ohne `image` und ohne `prompt-neu` · unbekannter Wert |
+| 17 | `step_brief` nur auf Einzelknoten | Doppelstation (Array-`nodeId`) trägt `step_brief` |
+| 18 | Erzähl-Konventionen | `narrative.bridge` ≠ `transition` · `ton: gemischt` mit Station ohne `ton` |
+| 19 | Registrierungs-Parität Tableaus / Lebensfragen / Denkräume | `library.json` (available) ≠ `data/*.json` ≠ `TOPICS` · Dateien ≠ `LEBENSFRAGEN` / `DENKRAEUME` in `data.ts` |
+| 20 | Lebensfragen-Stimmen haben eine Tableau-Heimat | `aus.tableau` oder `aus.knoten` existiert nicht · `kuratiert_aus_tableaus` ≠ genutzte Tableaus |
+| 21 | Denkraum-Tisch referenziell vollständig | Quelle fehlt · Karte nicht in Quelle · Stelle/Übersehen/Verortung zeigt auf unbekannte Karte · Haltung (`ruhe`/`erschuetterung`) fehlt · Stelle doppelt kuratiert |
+
+**Nicht geprüft:** `school.cluster`, `labelOffset`, Schulen-Konvention (Ein-Denker-Schulen – kuratorische Entscheidung, siehe Audit M1), `firstLevel`-Stufungs-Regel für Influences, Modelltreue der Texte.
 
 ---
 
