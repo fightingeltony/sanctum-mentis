@@ -30,13 +30,14 @@ interface Props {
   currentLevel: Level
   levelAction?: { dir: 'up' | 'down'; tick: number } | null
   listStyle?: 'cards' | 'grouped'
+  entryMode?: boolean
   highlightId?: string | null
   onHighlightDone?: () => void
 }
 
 export default function ThinkerList({
   thinkers, schools, context, currentLevel, levelAction,
-  listStyle = 'grouped', highlightId, onHighlightDone,
+  listStyle = 'grouped', entryMode = false, highlightId, onHighlightDone,
 }: Props) {
   // Erstansicht: „Alle" – der Besucher sieht das volle Feld als ersten Eindruck.
   // (Auch nach URL/localStorage-Restore: das löst kein levelAction-Signal aus.)
@@ -86,7 +87,7 @@ export default function ThinkerList({
     })
   }
 
-  const filtered = activeFilters.size === 0
+  const filtered = entryMode || activeFilters.size === 0
     ? thinkers
     : thinkers.filter(t =>
         (activeFilters.has('neu') && t.isNew) ||
@@ -103,15 +104,15 @@ export default function ThinkerList({
     <div className="tab-content">
 
       {/* View header */}
-      <div className="flex items-end justify-between gap-6 mb-6 flex-wrap">
+      {!entryMode && <div className="flex items-end justify-between gap-6 mb-6 flex-wrap">
         <span className="font-display text-2xl tracking-[0.10em] text-fg">Denker</span>
         <span className="font-body italic text-[14px] text-fg-faint whitespace-nowrap">
           Komplexität: {currentLevel.label}
         </span>
-      </div>
+      </div>}
 
       {/* Context strip */}
-      {context && (
+      {!entryMode && context && (
         <div className="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-2 sm:gap-5 px-4 sm:px-5 py-4 border border-hairline bg-raised mb-6 items-start">
           <span className="font-ui text-[10px] font-medium tracking-[0.15em] text-gold pt-0.5">
             Lage
@@ -123,7 +124,7 @@ export default function ThinkerList({
       )}
 
       {/* Filter row */}
-      <div className="flex items-center gap-2 flex-wrap mb-6">
+      {!entryMode && <div className="flex items-center gap-2 flex-wrap mb-6">
         <span className="font-ui text-[10px] tracking-[0.15em] text-fg-faint mr-1">
           Filter
         </span>
@@ -186,12 +187,32 @@ export default function ThinkerList({
             </button>
           )
         })}
-      </div>
+      </div>}
 
       {sorted.length === 0 ? (
         <p className="py-14 text-center font-body italic text-fg-dim text-sm">
           Auf diesem Komplexitäts-Level sind noch keine Denker freigeschaltet.
         </p>
+      ) : entryMode ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-4 sm:px-5 py-6">
+          {sorted.map(t => (
+            <section
+              key={t.id}
+              ref={el => { if (el) cardRefs.current.set(t.id, el) }}
+              aria-labelledby={`entry-${t.id}`}
+              className="carta-card-highlight"
+            >
+              <h2 id={`entry-${t.id}`} className="font-prose font-medium text-[21px] text-fg mb-3">
+                {t.name}
+              </h2>
+              <FadingParagraph
+                text={t.description}
+                level={currentLevel.id}
+                className="font-body text-[16px] leading-relaxed text-fg-muted"
+              />
+            </section>
+          ))}
+        </div>
       ) : listStyle === 'grouped' ? (
         <GroupedList thinkers={filtered} schools={visibleSchools} cardRefs={cardRefs} level={currentLevel.id} />
       ) : (

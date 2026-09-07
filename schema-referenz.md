@@ -40,6 +40,7 @@ TopicData
 | `title` | `string` | ✓ | Langer Titel, z. B. `"Die Landkarte des Selbst"` |
 | `subtitle` | `string?` | – | Einladende Kurzformel für Library-Card und Tableau-Kopf – atmosphärisch, Du-Form |
 | `intro` | `string?` | – | Zuspitzende Du-Frage, sichtbar ab L1 direkt im Tableau – stellt die Spannung am Leib |
+| `entry` | `{ intro: string; reflection: string }?` | – | Optionaler L1-Einstieg (Belegfall Selbst): eigene Einstiegsfrage, ungefilterte Stimmen ohne Schulgruppen und Neu-Badges, offene Reflexionsfrage; bestehende Pfade folgen nach den Stimmen. Ab L2 gilt die normale Ansicht. |
 | `era` | `string?` | – | Freier Zeittag, z. B. `"Antike – 21. Jh."` |
 | `theme` | `TopicTheme?` | – | Akzentfarben als CSS-Custom-Property-Werte |
 | `complexityLevels` | `number` | ✓ | Anzahl Level, immer `5` |

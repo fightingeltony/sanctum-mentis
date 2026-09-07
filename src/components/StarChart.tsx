@@ -229,18 +229,18 @@ function computeMobileSchoolLayout(thinkers: Thinker[]): {
 }
 
 // Content key: which version to show at this level; drives read-state tracking
-function contentKeyFor(t: Thinker, levelId: number): string {
+function contentKeyFor(t: Thinker, levelId: number, preferLevelText = false): string {
   const vk = Object.keys(t.versions).map(Number).sort((a, b) => a - b)
   const deeper = vk.filter(k => k <= levelId && k > t.firstLevel)
   if (deeper.length) return String(deeper[deeper.length - 1])
-  if (t.lectio_brief) return 'brief'
+  if (t.lectio_brief && !preferLevelText) return 'brief'
   const le = vk.filter(k => k <= levelId)
   if (le.length) return String(le[le.length - 1])
   return vk.length ? String(vk[0]) : 'x'
 }
 
-function contentFor(t: Thinker, levelId: number): string {
-  const k = contentKeyFor(t, levelId)
+function contentFor(t: Thinker, levelId: number, preferLevelText = false): string {
+  const k = contentKeyFor(t, levelId, preferLevelText)
   if (k === 'brief') return t.lectio_brief ?? ''
   return t.versions[Number(k)] ?? t.lectio_brief ?? ''
 }
@@ -292,12 +292,14 @@ interface Props {
   levelId:     number
   levels:      Level[]
   quadrants:   Quadrants
+  /** Kuratierter Einstieg: derselbe Stufentext wie in der Denker-Liste. */
+  preferLevelText?: boolean
 }
 
 // ─── Component ────────────────────────────────────────────────
 
 export default function StarChart({
-  thinkers, influences, allThinkers, schools, concepts, levelId, quadrants,
+  thinkers, influences, allThinkers, schools, concepts, levelId, quadrants, preferLevelText = false,
 }: Props) {
 
   const [mode,               setMode]             = useState<'axis' | 'school'>('axis')
@@ -610,14 +612,14 @@ export default function StarChart({
     thinkers.forEach(t => {
       const g = starGRefs.current[t.id]
       if (g) {
-        const k = `${t.id}:${contentKeyFor(t, levelId)}`
+        const k = `${t.id}:${contentKeyFor(t, levelId, preferLevelText)}`
         g.classList.toggle('sc-unread', !readSet.has(k))
       }
     })
     // Schedule visibility pass after paint (DOM must be up-to-date)
     requestAnimationFrame(() => { updateLabelVisibility() })
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [thinkers, levelId, isMobile])
+  }, [thinkers, levelId, isMobile, preferLevelText])
 
   // ── Re-run declutter once webfonts arrive (first visit: Marcellus swaps in
   //    after the initial pass and shifts label metrics) ──────────────────────
@@ -634,10 +636,10 @@ export default function StarChart({
     thinkers.forEach(t => {
       const g = starGRefs.current[t.id]
       if (!g) return
-      const k = `${t.id}:${contentKeyFor(t, levelId)}`
+      const k = `${t.id}:${contentKeyFor(t, levelId, preferLevelText)}`
       g.classList.toggle('sc-unread', !readSet.has(k))
     })
-  }, [readSet, levelId, thinkers])
+  }, [readSet, levelId, thinkers, preferLevelText])
 
   // ── Reset pan/zoom on breakpoint change ───────────────────
   useEffect(() => {
@@ -1252,7 +1254,7 @@ export default function StarChart({
 
   // ── Read tracking ─────────────────────────────────────────
   const markRead = useCallback((t: Thinker) => {
-    const key = `${t.id}:${contentKeyFor(t, levelId)}`
+    const key = `${t.id}:${contentKeyFor(t, levelId, preferLevelText)}`
     setReadSet(prev => {
       if (prev.has(key)) return prev
       const next = new Set(prev)
@@ -1260,7 +1262,7 @@ export default function StarChart({
       try { localStorage.setItem(RKEY, JSON.stringify([...next])) } catch { /* noop */ }
       return next
     })
-  }, [levelId])
+  }, [levelId, preferLevelText])
 
   // ── Select / deselect ─────────────────────────────────────
   const deselectNow = useCallback(() => {
@@ -1348,7 +1350,7 @@ export default function StarChart({
   // ── Cartouche data ────────────────────────────────────────
   const selectedThinker   = selected ? thinkerById[selected]           : null
   const selectedSchool    = selectedThinker ? schoolById[selectedThinker.schoolId] : null
-  const selectedContent   = selectedThinker ? contentFor(selectedThinker, levelId) : ''
+  const selectedContent   = selectedThinker ? contentFor(selectedThinker, levelId, preferLevelText) : ''
   const selectedRelations = selected ? (adjacency[selected] ?? []) : []
   const selectedConcept   = selectedConceptId
     ? orphanConcepts.find(c => c.id === selectedConceptId) ?? null
@@ -2166,4 +2168,3 @@ function CartoucheContent({
     </>
   )
 }
-
