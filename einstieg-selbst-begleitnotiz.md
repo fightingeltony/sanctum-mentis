@@ -2,6 +2,8 @@
 
 Stand: 7.9.2026. Lokaler Belegfall, noch nicht mit externen Lesern geprüft.
 
+Nachtrag nach dem Merge von PR #1: Fabian hat die Leitfrage als Frage nach einem individuellen, unverwechselbaren Kern und dessen Beständigkeit oder Entwicklung präzisiert. Die Eignung von Advaita/Buddhismus als Einstieg in diese Frage ist erneut offen. [Leitfrage und Review-Auftrag an Claude](selbst-leitfrage-review.md) dokumentiert den Befund und einen Textvorschlag. Die folgende Notiz beschreibt die bisherige Umsetzung; ihre L1-Inhaltsprüfung ist keine Freigabe dieser übergreifenden Rahmung.
+
 ## Absicht und Umfang
 
 Auf L1 sollen Besucher den Gegensatz zwischen dem bleibenden Selbst der hier vertretenen Advaita-Tradition und der buddhistischen Nicht-Selbst-Lehre in eigenen Worten ausdrücken können. Erst danach wählen sie, ob sie räumlich erkunden, genauer lesen oder einem geführten Pfad folgen möchten.
